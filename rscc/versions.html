@@ -1,0 +1,229 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<title>Remote service control center - versions</title>
+</head>
+<body background="../equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#9999ff">
+
+<hr>
+<a href="index.html"><-- Return to the RSCC main page</a>
+<hr>
+
+<h1 align="center">RSCC Version history</h1>
+<table align="center" border=1>
+<tr>
+<th align="center">Date<th align="center">Version<th>Type<th align="center">Changes
+<tr>
+<td>14-05-2009</td><td align="center">6.3</td><td>Fix</td><td>Fixed a bug that prevented it from adding an extra privilege to a user account in win2000 when required.</td>
+<tr>
+<td>          </td><td></td><td>New</td><td>Newer windows versions are now correctly named in the about screen.</td>
+<tr>
+<td>31-10-2008</td><td align="center">6.2</td><td>New</td><td>Logfile analysing extended with OGR-NG support.</td>
+<tr>
+<td>08-05-2006</td><td align="center">6.1</td><td>Fix</td><td>The manual addition of computers works again. I think I may have hit a compiler bug here.</td>
+<tr>
+<td>          </td><td></td><td>Chg</td><td>The computer names are added in lowercase after the network scan.</td>
+<tr>
+<td>          </td><td></td><td>New</td><td>The old network scan options can be selected if desired. Although they are much slower, they do allow to work on computers in another domain, and the new routines don't. If someone needs this functionality it can now be selected at the cost of speed.</td>
+<tr>
+<td>05-05-2006</td><td align="center">6.0</td><td>Chg</td><td>Changed the network behaviour using the NetServerEnum() API call. This makes the network scan much faster, and computers that are switched off for a while will not slow the program down much more. Since this does not work for local systems not in a domain a configuration option to revert to the old behaviour is included.</td>
+<tr>
+<td>28-04-2006</td><td align="center">5.8</td><td>Chg</td><td>Changed the source code with some #ifdef's to make it compile cleanly under CBuilder 3 and up. No functional changes or bugfixes.</td>
+<tr>
+<td>24-04-2006</td><td align="center">5.7</td><td>New</td><td>Extra selection options to select if either clients and/or proxies can be stopped.</td>
+<tr>
+<td>          </td><td>                  </td><td>Fix</td><td>Fixed a privilege error message with XP: XP doesn't require special privileges to run a process as another user as win2000 does.</td>
+<tr>
+<td>24-05-2004</td><td align="center">5.6</td><td>Fix</td><td>Fixed a bug in the proxy RC5 logfilename resolving.</td>
+<tr>
+<td>20-05-2004</td><td align="center">5.5</td><td>Chg</td><td>Made the user interface for running as another user more intuitive.</td>
+<tr>
+<td>18-05-2004</td><td align="center">5.4</td><td>Fix</td><td>Fixed a bug in the client logfilename resolving.</td>
+<tr>
+<td>          </td><td>                  </td><td>New</td><td>XP doesn't report as Win2000 5.1 anymore in the About screen. Running on XP is still not supported until I can test it properly.</td>
+<tr>
+<td>          </td><td>                  </td><td>New</td><td>Updated logfile viewing with OGR Phase2 options.</td>
+<tr>
+<td>01-10-2003</td><td align="center">5.3</td><td>Fix</td><td>Applied the previous fix to the scan network function too.</td>
+<tr>
+<td>02-07-2003</td><td align="center">5.2</td><td>Fix</td><td>Adding computernames by hand now works when the new name partially overlaps with an existing one.</td>
+<tr>
+<td>26-02-2003</td><td align="center">5.1</td><td>New</td><td>The lines shown from the proxy logfile when RC5 lines are selected now depend on the selected contest.</td>
+<tr>
+<td>17-12-2002</td><td align="center">5.0</td><td>New</td><td>Services can now be started and stopped on preset times. Separate times can be selected for weekdays and weekends (saturday and sunday). This might be handy in environments where the service should not run during office hours.</td>
+<tr>
+<td>          </td><td align="center">   </td><td>Fix</td><td>The new function added 12-12-2002 worked only half for RC5-72.</td>
+<tr>
+<td>13-12-2002</td><td align="center">4.12</td><td>Fix</td><td>The new function added 12-12-2002 didn't work for RC5-72.</td>
+<tr>
+<td>12-12-2002</td><td align="center">4.11</td><td>New</td><td>It is now possible to select which RC5 challenge runs when viewing RC5 lines in the proxy logfile.</td>
+<tr>
+<td>03-12-2002</td><td align="center">4.10</td><td>Fix</td><td>Using UNC paths for the logfile in the inifile now works.</td>
+<tr>
+<td>          </td><td> </td><td>Fix</td><td>Error message when Lsa functions fail corrected.</td>
+<tr>
+<td>02-04-2001</td><td align="center">4.9</td><td>Fix</td><td>Updating the statusinformation while running the network scan would remove the indicator. Fixed.</td>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>Both client and proxy are installed with Tcpip dependence..</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Menuoptions that don't work for the proxy are disabled when the proxy is selected.</td>
+<tr>
+<td>30-03-2001</td><td align="center">4.8</td><td>Fix</td><td>Running a service under an account name with an empty password would fail.</td>
+<tr>
+<td>15-03-2001</td><td align="center">4.7</td><td>Fix</td><td>When a program close was canceled when a logfile form was open the program would crash.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Open forms with logfile or debug files are added to the "Window" menu.</td>
+<tr>
+<td>28-02-2001</td><td align="center">4.6</td><td>Fix</td><td>When the selected keyfield from the perproxy was changed this change would not take effect until next program start.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>The menuitems to select which proxy logfile to view are back.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Added menuitems to check and uncheck all computers.</td>
+<tr>
+<td>26-02-2001</td><td align="center">4.5</td><td>Fix</td><td>Fixed a memory leak when rscc closes.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>The destination path in the default setup can now be chosen with a decent directory selector.</td>
+<tr>
+<td>25-02-2001</td><td align="center">4.4</td><td>New</td><td>RSCC maintains now 2 lists of computers, one with clients and one with proxies. This should make switching faster (no updates on computers that are not running one of the services).</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Peter Conrad implemented a non-modal logfile view. You can now continue working while the logfile view is open. Thanks Peter!</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>It is now possible to edit the default inifile from within rscc. Non-existing files will be created when they are saved.</td>
+<tr>
+<td>25-01-2001</td><td align="center">4.3</td><td>New</td><td>If the program has unsufficient rights to run in another user context, the program asks if it can try to add this right to the useraccount. You should have administrative rights for this action to succeed, and it requires a logoff/login to take effect.</td>
+<tr>
+<td>18-01-2001</td><td align="center">4.2</td><td>Chg</td><td>When scanning the network for NT computers, computers that are not part of the domain don't generate an errormessage anymore.</td>
+<tr>
+<td>01-01-2001</td><td align="center">4.1</td><td>Fix</td><td>When shutting down a locally running proxy the unnecessary error messages are gone.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>When no configuration data is found and the client and/or proxy is locally installed the local settings will be used as defaults.</td>
+<tr>
+<td>28-12-2000</td><td align="center">4.0</td><td>New</td><td>Program settings are mostly gone from the menu and the bottom panel and moved to a separate window.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>RSCC can now write debug information in a logfile.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>RSCC can now scan the network for NT machines only (this is a configuration option).</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>2 buttons are gone and timing settings moved to a separate window - rscc now fits on a 800x600 desktop. (For those who like that).</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Rowselect on the listview can be switched on/off.</td>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>When updating or scanning the network the info screen does not lay on top of all windows anymore.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>A locally running proxy (version 319c or above) can be triggered to reload, connect or shutdown, even if not running as a service.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>A remote service can be paused and continued after pause.</td>
+<tr>
+<td>20-11-2000</td><td align="center">3.10</td><td>Fix</td><td>The client logfile name is determined now with the code for the upcomming 464 client. If no client logfile is found with the matching name the old behaviour (find any matching filename) is invoked.</td>
+<tr>
+<td>16-11-2000</td><td align="center">3.9</td> <td>Fix</td><td>The name of client logfile is now also good when you use "w" instead of "weekly" as period, or "m", etc.</td>
+<tr>
+<td>15-11-2000</td><td align="center">3.8</td> <td>Fix</td><td>The name of the client logfiles is now determined with the same code that the client uses (thanks Cyrus), so if multiple logfiles exist always the correct one is loaded.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Reload service configuration option added. The proxy as of version 319c does not yet support this, the client does.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Menu items to tell the client to flush, fetch or update its buffers. This will be supported by the upcomming 464 client.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Menu items to make the proxy connect with the keyservers. This is not yet supported by the proxy as of version 319c.</td>
+<tr>
+<td>07-11-2000</td><td align="center">3.7</td> <td>Chg</td><td>All operations - install, remove, start, stop, configure, edit ini now only work if the computername is BOTH selected AND checkboxed.</td>
+<tr>
+<td>          </td><td> </td><td>Fix</td><td>Fixed a memory leak in the reinstall procedure.</td>
+<tr>
+<td>03-11-2000</td><td align="center">3.6</td> <td>Fix</td><td>When trying to start a service on a computer that does not have it installed the program doesn't wait for a timeout anymore.</td>
+<tr>
+<td>          </td><td> </td><td>Fix</td><td>Start service on boot/install is now correctly communicated from the defaults form to the configuraton data.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>When reinstalling a service the bufferfiles are moved to the new location if this location differs from the previous location.</td>
+<tr>
+<td>02-11-2000</td><td align="center">3.5</td> <td>Fix</td><td>Title of the 4rth column in the listview is now visible again after program start, previously only after you switched from client to proxy or vice versa.</td>
+<tr>
+<td>          </td><td> </td><td>Fix</td><td>Entering an empty pasword on program start does not hide the warning messagebox after the password screen anymore.</td>
+<tr>
+<td>          </td><td> </td><td>Imp</td><td>If deleting an executable or inifile fails when removing or updating a service the warning message now tells on which computer it fails.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Cancel option when closing the program through the title bar and the settings have changed.</td>
+<tr>
+<td>25-10-2000</td><td align="center">3.4</td> <td>Fix</td><td>The accountinfo form can now cope with passwords of 127 chars, formerly only with 63 chars (Win2000 can have them this long). Since I got no complains I guessed noone has used such long passwords. :-)</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>You can hide the buttons and the program settings panel below via the menu.</td>
+<tr>
+<td>21-10-2000</td><td align="center">3.3</td> <td>Imp</td><td>Login data in memory is now cleared before the program exits. Maybe a bit paranoid but better safe than sorry.</td>
+<tr>
+<td>17-10-2000</td><td align="center">3.2</td> <td>Fix</td><td>Empty login data is now also saved (allowing one to delete the information).</td>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>The helptext is updated.</td>
+<tr>
+<td>16-10-2000</td><td align="center">3.1</td> <td>New</td><td>If the settings have changed and you exit via the caption bar, the program asks if you want to save settings.</td>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>The simple cipher is gone and replaced by RC5 with a fixed key. Further the way the keys are saved has changed, preventing someone from getting the key length from the stored values. This requires anyone who has saved login information in the inifile to enter this data again.</td>
+<tr>
+<td>          </td><td> </td><td>Fix</td><td>The Base64 routines could not handle binary data with \0's. Now they can.</td>
+<tr>
+<td>10-10-2000</td><td align="center">3.0</td> <td>New</td><td>The login data can now be saved RC5 encrypted with a user supplied password.</td>
+<tr>
+<td>04-10-2000</td><td align="center">2.7</td> <td>Fix</td><td>The filename of a rotating proxy logfile is now determined from the time in UTC and not the localtime.</td>
+<tr>
+<td>15-09-2000</td><td align="center">2.6</td> <td>Fix</td><td>Configuring a service on multiple computers in a row (select multiple computers and then press configure) now works correctly if you have permissions on some but not all computers. Versions 2.4 and 2.5 would give a read-only configure screen after encountering the first computer you had no write access to.</td>
+<tr>
+<td>          </td><td> </td><td>Imp</td><td>The program now compiles without any warnings.</td>
+<tr>
+<td>14-09-2000</td><td align="center">2.5</td> <td>Fix</td><td>Restoring from the tray icon popup menu now works correctly (previously it didn't bring the rogram to the foreground).</td>
+<tr>
+<td>          </td><td> </td><td>Imp</td><td>When viewing the logs, the cursor starts at the bottom of the form.</td>
+<tr>
+<td>13-09-2000</td><td align="center">2.4</td> <td>New</td><td>Viewing the service config on remote computers is now also possible without domain admin rights (changing them is not possible of course).</td>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>Some source code cleanup, resulting in fewer and les cryptic error messages in case of insufficient access rights.</tr>
+<tr>
+<td>08-09-2000</td><td align="center">2.3</td> <td>Fix</td><td>The way the thread for updating the status info was implemented could cause a program deadlock. The thread is now replaced by a timer.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Right-clicking on the system tray icon now gives a popup menu.</tr>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Menu item added to save the program settings.</tr>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>When no inifile is found, the default is now <b>not</b> to scan the network. Got too many complains about the slowness of this scan. :-(</td>
+<tr>
+<td>07-09-2000</td><td align="center">2.2</td> <td>Fix</td><td>Logfile name is now also correct for non-daily rotating proxy logfiles.</td>
+<tr>
+<td>06-09-2000</td><td align="center">2.1</td> <td>New</td><td>View logfile option added. For proxy logfiles the number of sent blocks/stubs is also calculated when selected.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>The program can now be minimized to the system tray.</td>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>The checkboxes for the behaviour on program start are moved to the main menu. They are now checkable menu options.</td>
+<tr>
+<td>24-08-2000</td><td align="center">2.0</td> <td>Fix</td><td>A non existing directory structure of several levels deep is now correctly created when a service is installed.</td>
+<tr>
+<td>18-08-2000</td><td align="center">1.9</td> <td>Fix</td><td>Solved a timeout error when installing a service without starting it after installation (the program would wait for the service to start anyway).</td>
+<tr>
+<td>          </td><td> </td><td>Imp</td><td>If the destination dir does not exist it will be created on service install.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Distinguished between updating and reinstalling a service.</td>
+<tr>
+<td>          </td><td> </td><td>New</td><td>Updating the status of all checked computers at program start is now optional.</td>
+<tr>
+<td>          </td><td> </td><td>Chg</td><td>The buttons are now positioned on top.</td>
+<tr>
+<td>17-07-2000</td><td align="center">1.8</td> <td>Fix</td><td>Solved the annoying "File not found" bug when removing/updating multiple computers.</td>
+<tr border="0">
+<td>          </td><td>   </td> <td>Imp</td><td>Integrated the helpfile within the executable, no separate helpfile needed anymore.</td>
+<tr border="0">
+<td>          </td><td>   </td> <td>Imp</td><td>Clicking on the listview columns sorts the view alphabetically on that column.</td>
+<tr>
+<td>14-07-2000</td><td align="center">1.7</td> <td>Fix</td><td>Solved a bug that sometimes prevented the client version number from being displayed.</td>
+<tr border="0">
+<td>          </td><td>   </td> <td>Imp</td><td>Added a client update option.</td>
+<tr>
+<td>11-07-2000</td><td align="center">1.6</td> <td>-</td><td>First public release.</td>
+<tr>
+<td>Many</td><td align-"center">1.0 - 1.5</td><td>-</td> <td width="80%">Internal test releases. These were never put online and I didn't keep logs of what changed.</td>
+<tr>
+</table>
+
+<hr>
+<a href="index.html"><-- Return to the RSCC main page</a>
+<hr>
+
+</body>
+</html>
+

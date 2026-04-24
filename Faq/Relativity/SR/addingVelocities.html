@@ -1,0 +1,227 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Adding Velocities</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>By Don Koks, 2022.</p>
+<p><br></p>
+
+
+
+<h1>How do you add velocities&mdash;relativistically and otherwise?</h1>
+
+<p>As any missile designer will tell you, adding velocities is generally more subtle than most people think.&nbsp; The reason
+is that the idea of adding velocities is actually very rich, and contains details that must be understood fully.
+
+<p>Here's an example.&nbsp; Suppose we have three point-sized objects, $A, B, C$, each of which might be moving relative to the
+others.&nbsp; The usual velocity addition that we are all raised on says "The velocity (vector) of $C$ relative to $A$ equals
+the velocity of $C$ relative to $B$ plus the velocity of $B$ relative to $A$".&nbsp; We can write this using bold-faced vector
+notation as
+\begin{equation}\label{simple-addition}
+  \boldsymbol{v}_{CA} = \boldsymbol{v}_{CB} + \boldsymbol{v}_{BA}\,.
+\end{equation}
+This is sufficient for school exercises, which always use point-sized objects; but out there in the big wide world of non
+point-sized objects, things are not so simple.&nbsp; First, whenever we specify a velocity, we must indicate who measured
+it.&nbsp; That is the meaning of the word "frame": we must indicate the relevant frame.&nbsp; Note that frames are <em>not</em>
+coordinates; rather, the word "frame" means "the observer who measures the velocity".&nbsp; In simple examples or exercises, we
+usually measure all the velocities in a single frame.&nbsp; We'll indicate this frame by a superscript, and so write equation
+\eqref{simple-addition} more properly as
+\begin{equation}\label{addition-with-frame-specified}
+  \boldsymbol{v}^F_{CA} = \boldsymbol{v}^F_{CB} + \boldsymbol{v}^F_{BA}\,,
+\end{equation}
+where $F$ is the frame in which the velocity has been specified.&nbsp; It could be the frame of any of $A$, $B$, or $C$, or it
+might be some other frame.&nbsp; Equation \eqref{addition-with-frame-specified} is what we are really applying when we depict
+velocity vectors as arrows, adding them tip to tail.&nbsp; It is the "per unit time" version of adding <em>infinitesimal
+displacements</em> in tip-to-tail fashion.&nbsp; That idea is fundamental to how we portray space, and it can always be done in
+a given frame.&nbsp; So \eqref{addition-with-frame-specified} is always true&mdash;even in relativity!&nbsp; (We'll get to that
+later.)&nbsp; But it is <em>not</em> the answer to the questions that are most often asked about adding velocities in
+relativity.</p>
+
+<p>To see how things get more complicated even outside relativity, suppose that $A$ and $C$ are at rest relative to each other,
+and suppose that $B$ is no long point sized; instead, $B$ is a spinning satellite.&nbsp; We know, say, the velocity of $B$
+(i.e., of its centre of mass) relative to $A$, as measured by $A$&mdash;"in the frame of $A$": $\boldsymbol{v}^A_{BA}$.&nbsp;
+Typically, we might also know the velocity of $C$ relative to $B$ as measured by $B$ (not as measured by $A$):
+$\boldsymbol{v}^B_{CB}$.&nbsp; We want to know the velocity of $C$ relative to $A$ as measured by $A$, or
+$\boldsymbol{v}^A_{CA}$:
+\begin{equation}\label{velocities-known-and-unknown}
+\boldsymbol{v}^A_{BA} \text{ and } \boldsymbol{v}^B_{CB} \text{ are known.  What is } \boldsymbol{v}^A_{CA}\text{ ?}
+\end{equation}
+Now we don't have enough information to write \eqref{addition-with-frame-specified}, because the superscripts of the velocities
+in \eqref{velocities-known-and-unknown} are not all the same: we cannot just add $\boldsymbol{v}^B_{CB}$ to
+$\boldsymbol{v}^A_{BA}$.</p>
+
+<p>To see that more fully, suppose that $A$, the centre of mass of $B$, and $C$ are all at rest relative to each other.&nbsp;
+In that case, $\boldsymbol{v}^A_{BA} = \boldsymbol{v}^A_{CA} = \boldsymbol{0}$.&nbsp; But $B$ is spinning, and so it measures
+$C$ to be moving in a circle relative to $B$; hence $\boldsymbol{v}^B_{CB}$ is a non-zero function of time.&nbsp; For this
+situation, it's clear that
+\begin{equation}\label{spinning-satellite}
+  \boldsymbol{v}^A_{CA} \ne \boldsymbol{v}^B_{CB} + \boldsymbol{v}^A_{BA}\,.
+\end{equation}
+We might have expected that, since unlike the situation in \eqref{addition-with-frame-specified}, the superscripts in
+\eqref{spinning-satellite} are not all the same.&nbsp; But we can certainly say
+\begin{equation}\label{spinning-satellite-1}
+  \boldsymbol{v}^A_{CA} = \boldsymbol{v}^A_{CB} + \boldsymbol{v}^A_{BA}\,.
+\end{equation}
+Typically then, we will use the known $\boldsymbol{v}^B_{CB}$ to calculate the unknown $\boldsymbol{v}^A_{CB}$.&nbsp; Outside
+the subject of relativity, if $B$ is not changing its orientation in $A$'s frame, then things are easy, because then for any
+points $P, Q$, we have
+\begin{equation}\label{non-spinning-satellite}
+  \boldsymbol{v}^A_{PQ} = \boldsymbol{v}^B_{PQ}\,.
+\end{equation}
+But even outside relativity, the orientation of $B$ <em>is</em> often changing in the frame of $A$; and then
+$\boldsymbol{v}^A_{PQ} \ne \boldsymbol{v}^B_{PQ}$ and we have some work to do.&nbsp; Such a frame change is an advanced
+exercise that requires knowledge of the time-dependent orientation of the satellite $B$ relative to $A$, and you can find it
+done almost exclusively in engineering books on vehicle motion.&nbsp; (Strangely, few physicists and even fewer mathematicians
+are ever introduced to this subject.)&nbsp; Be aware that such analyses can be difficult to understand in those books, for at
+least three reasons.&nbsp; The first reason is that engineers are usually calculating with computers; but computers can only
+work with numbers, and so engineers must choose a <em>coordinate system</em> to quantify the vectors.&nbsp; Those coordinates
+needn't be related to the frame.&nbsp; Yes, expressing a velocity in coordinates needs <em>four</em> pieces of information to
+be included in the notation of the velocity vector: the identity of point "1" whose velocity is required relative to point "2",
+in frame "3", expressed using coordinates "4"!&nbsp; So, you must be adept at changing coordinates.&nbsp; (Which just goes to
+show: never use the widespread expression "coordinate frame", because coordinates and frames are different things, whose
+distinct meanings must be appreciated to understand this subject.)&nbsp; The second reason that these books can be hard to read
+is that most use all manner of complicated notation to encapsulate those four pieces of information, and some are more
+successful at doing that than others.&nbsp; And the third reason is that the authors of those books were also raised on the
+simplistic equation \eqref{simple-addition}, and so are sometimes just a little bid muddled themselves.</p><br><br>
+
+
+
+<h2>The Relativistic Case</h2>
+
+<p>We will only treat the special-relativistic case, and only use inertial frames.&nbsp; The only other well-defined frame in
+special relativity is the uniformly accelerated frame, which involves a level of difficulty that is outside the aim of this
+FAQ.&nbsp; Also, in general relativity, the notion of velocity becomes somewhat ill defined.</p>
+
+In special relativity, we tend not to focus on equation \eqref{addition-with-frame-specified} because we seldom have all of its
+terms.&nbsp; Instead, typically we must answer the question in \eqref{velocities-known-and-unknown}.&nbsp; Forget about
+rotating satellites: rotation in relativity has always been a very difficult subject.&nbsp; Here we'll just treat <em>inertial
+observers</em> $A$ and $B$ as points, and ask how the three velocities in \eqref{velocities-known-and-unknown} are
+related.&nbsp; In fact, let's even forget about the full three spatial dimensions, since the point of this FAQ is to explain
+where the standard expression for "velocity addition" in introductory relativity texts comes from&mdash;and that expression
+usually uses a single space dimension <em>and</em> fixed velocities.&nbsp; So we'll be content to do likewise, and will drop the
+bold font for the velocities.</p>
+
+<p>In that case, picture observer $A$ who says "$B$ is moving relative to me with velocity $v^A_{BA}$ equal to some $u$".&nbsp;
+Likewise, $B$ says "$C$ is moving relative to me (along the same single direction, of course) with velocity $v^B_{CB}$ equal to
+some $v$".&nbsp; Observer $A$ now asks "What will I measure to be the velocity of $C$ relative to me, $v^A_{CA}$?".&nbsp; This
+is called "adding velocities in relativity", but you can see that we're not adding velocities <em>in a single frame</em> [like
+\eqref{addition-with-frame-specified}] at all; instead we are addressing \eqref{velocities-known-and-unknown}.&nbsp; We know
+that outside relativity, for the spinning-$B$ case, \eqref{spinning-satellite} says that we cannot simply add such
+velocities.&nbsp; Within relativity, even though nothing is spinning here, it turns out that we still cannot turn
+\eqref{spinning-satellite} into an equality: we just cannot  add $v^B_{CB}$  and $v^A_{BA}$   to get $v^A_{CA}$.&nbsp; The reason
+is that in relativity, because different frames measure time and space differently, we cannot generally replace
+$\boldsymbol{v}^B_{CB}$ with $\boldsymbol{v}^A_{CB}$ by saying that they are equal like we did above in
+\eqref{non-spinning-satellite} for the non-relativistic non-spinning case.</p>
+
+<p>Instead, in relativity we give observer $A$ one set of coordinates (say cartesian $t,x$) and observer $B$ another set of
+coordinates (say cartesian $t',x'$).&nbsp; These are not just any old cartesian coordinates; they are special in that $A$ gives
+a single value of $t$ to all events that $A$ says are simultaneous, and likewise $B$ gives a single value of $t'$ to all events
+that $B$ says are simultaneous.&nbsp; If $A$ and $B$ are moving relative to each other, then they have different standards of
+simultaneity: their frames really are distinct.&nbsp; Switching frames is now a matter of switching coordinates; and for that,
+we rely on the Lorentz transform, which you can find derived in all introductory textbooks on relativity.&nbsp; When $B$ moves
+relative to $A$ with a fixed velocity $u$ in $A$'s $x$ direction, the Lorentz transform says
+\begin{equation}
+  t' = \gamma(t - ux/c^2) + \text{constant},\quad x' = \gamma(x - ut) + \text{constant},
+\end{equation}
+where $c$ is the speed of light in an inertial frame, and $\gamma \equiv 1/\sqrt{1-u^2/c^2}$.&nbsp; Equivalently, the inverse
+of this is
+\begin{equation}\label{lorentz-transform}
+  t = \gamma(t' + ux'/c^2) + \text{constant},\quad x = \gamma(x' + ut') + \text{constant}.
+\end{equation}</p>
+
+<p>Now consider that $A$ (who uses coordinates $t,x$) says that $C$ undergoes a displacement $\mathrm{d}x$ in a time
+$\mathrm{d}t$, whereas $B$ (who uses primed coordinates) says that $C$ undergoes a displacement $\mathrm{d}x'$ in a time
+$\mathrm{d}t'$.&nbsp; It follows that
+\begin{equation}
+  v^A_{CA} = \mathrm{d}x/\mathrm{d}t\,,\quad v^B_{CB} = \mathrm{d}x'/\mathrm{d}t' = v\,,\quad v^A_{BA} = u\,.
+\end{equation}
+We require $\mathrm{d}x/\mathrm{d}t$.&nbsp; To get at that, consider writing the infinitesimal version of \eqref{lorentz-transform}:
+\begin{equation}\label{lorentz-infinitesimal}
+  \mathrm{d}t = \gamma(\mathrm{d}t' + u\,\mathrm{d}x'/c^2)\,,\quad \mathrm{d}x = \gamma(\mathrm{d}x' + u\,\mathrm{d}t')\,.
+\end{equation}
+Dividing the second expression in \eqref{lorentz-infinitesimal} by the first gives
+\begin{equation}\label{combining-velocities}
+  {\mathrm{d}x\over\mathrm{d}t} = {\mathrm{d}x' + u\,\mathrm{d}t'\over \mathrm{d}t' + u\,\mathrm{d}x'/c^2}
+    = {\mathrm{d}x'/\mathrm{d}t' + u\over 1 + u(\mathrm{d}x'/\mathrm{d}t')/c^2} = {v + u\over 1 + uv/c^2}\,.
+\end{equation}
+Let's put \eqref{combining-velocities} into words in a sort of transitive construction that acts as a prompt to getting the solution:
+<ul>
+  <li>$A$ says "$B$ has velocity $u$ relative to me".
+  <li>$B$ says "$C$ has velocity $v$ relative to me".
+  <li>Then $A$ says "$C$ has velocity ${u\,+\,v\over 1\,+\,uv/c^2}$ relative to me".
+</ul>
+Na&#239;vely, we might've thought that the combined velocity would be $u+v$, but that isn't quite right.&nbsp; It <em>is</em>
+almost correct when $u$ and $v$ are much less than $c$.&nbsp; For example, when $A$ says that $B$ is moving at velocity
+$u=0.01c$ (relative to $A$), and $B$ says that $C$ is moving at velocity $v=0.02c$ (relative to $B$), then $A$ says that $C$ is
+moving with a velocity (relative to $A$) of
+\begin{equation}
+  {u + v\over 1 + uv/c^2} = {0.01c + 0.02c\over 1.0002} \simeq 0.029994c \simeq 0.03c\,.
+\end{equation}
+But when $u = v = 0.9c$, their combined velocity is
+\begin{equation}
+  {u + v\over 1 + uv/c^2} = {0.9c + 0.9c\over 1.81} \simeq 0.99448c\,.
+\end{equation}
+You can play around with the numbers to ascertain that the <em>speed</em> $|(u + v)/(1 + uv/c^2)|$ can never be greater than
+$c$.</p>
+
+<p>On another note, let's return to \eqref{addition-with-frame-specified}, which, remember, is also true in relativity.&nbsp
+Set frame $F$ to $A$ and rearrange to give
+\begin{equation}
+  \boldsymbol{v}^A_{CB} = \boldsymbol{v}^A_{CA} - \boldsymbol{v}^A_{BA}\,.
+\end{equation}
+In one dimension (thus dropping the bold font), suppose that $A$ (an inertial observer) says that $B$ is a particle moving to
+the right of $A$ (the positive $x$ direction) with speed 60% that of light: $v^A_{BA} = 0.6c$.&nbsp; Also, $A$ says that $C$ is
+a particle moving to the left of $A$ with the same speed: $v^A_{CA} = -0.6c$.&nbsp; Then $A$ says that $C$ moves relative to
+$B$ with velocity
+\begin{equation}\label{speed-is-1.2c}
+v^A_{CB} = v^A_{CA} - v^A_{BA} = -0.6c - 0.6c = -1.2c\,.
+\end{equation}
+Einstein would have had no problem with this speed being greater than $c$, because \eqref{speed-is-1.2c} does not say that
+either <em>particle</em> claims that the other is moving away with speed $1.2c$.&nbsp; Einstein said that nothing can move with
+speed greater than $c$ relative to us in our frame when we are inertial; but that's a different scenario to the above
+two-particle case.&nbsp; There, $A$ is not saying that anything is moving relative to $A$ at a speed of $1.2c$; remember, $A$
+has already said that $B$ and $C$ have speeds of $0.6c$ relative to $A$.&nbsp; Rather, $A$ is saying that one particle is
+moving relative to <em>the other</em> (not $A$) at a speed of $1.2c$.&nbsp; And that's okay; Einstein would have no problem
+with it.&nbsp; This idea trips many people up.&nbsp If you always ascertain who is doing the measuring (i.e., which frame is
+which, or "what are the superscripts?"), you will always get things right.</p>
+
+<p>And out of interest, just how fast does each particle claim that the other is moving?&nbsp; Describe the scenario as follows:
+<ul>
+  <li>$C$ says "$A$ has velocity $0.6c$ relative to me".
+  <li>$A$ says "$B$ has velocity $0.6c$ relative to me".
+  <li>Then $C$ says "$B$ has velocity $(0.6c+0.6c)/1.36 \simeq 0.88c$ relative to me".
+</ul>
+Now swap the roles of $B$ and $C$:
+<ul>
+  <li>$B$ says "$A$ has velocity $-0.6c$ relative to me".
+  <li>$A$ says "$C$ has velocity $-0.6c$ relative to me".
+  <li>Then $B$ says "$C$ has velocity $(-0.6c - 0.6c)/1.36 \simeq -0.88c$ relative to me".
+</ul>
+As expected, these speeds of $0.88c$ are less than $c$, as required by Einstein.
+
+
+<p><br></p>
+
+</body>
+</html>

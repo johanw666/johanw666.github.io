@@ -1,0 +1,43 @@
+Sci.physics.fusion is for discussing fusion and fusion related topics.
+Technically this is a movement of a newsgroup alt.fusion to an area of
+wider distribution.  The goal is to make fusion related articles
+available to everyone and to curtail the cross posting to sci.physics.
+The group is to be unmoderated.
+
+I think this is pretty clear, although newcomers might need the
+clarification that since alt.fusion was created to divert traffic on
+cold fusion to a single location, "cold fusion" is covered by this
+charter as "fusion related".  Given the history of this group and the
+wide variety of theories and speculations that appear here, there is
+no question that we tolerate just about anything as long as it *is*
+related to fusion.
+
+Further, the charter is explicit about reduction of cross posting,
+making it clear that if an article is fusion related it should appear
+in s.p.f and *not* in sci.physics.  And vice versa.
+
+-- 
+
+James A. Carr http://www.scri.fsu.edu/~jac
+
+
+[Ed's note:]
+
+Quoted from the original charter:
+---------------------------------
+
+Posters to this newsgroup are welcome to discuss fusion in stars, in
+tokamaks, in ball lightning, in test-tubes, etc.  But there has
+traditionally been a strong emphasis on "cold fusion", as the
+newsgroup was formed primarily to channel the large amount of Usenet
+traffic caused by the famous Pons & Fleischmann news conference in
+March '89 (see Q2.1) announcing this phenomenon.
+
+"Fusion related topics" have included research funding for hot & cold
+fusion, accurate calorimetry techniques, nuclear instrumentation, and
+the sociology of scientists' response to the cold-fusion work.
+
+Like any unmoderated newsgroup, we rely on your self-restraint to keep
+the "signal-to-noise ratio" high.  Remember your netiquette.  If you
+have been flamed, please consider whether (1) a private e-mail is
+appropriate, or (2) a response is really necessary at all.

@@ -1,0 +1,148 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Astrophysics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="16">16. Astrophysics</a></h1>
+<h2><a name="16.">16.1 Determination of distances</a></h2>
+
+<p>The <em>parallax</em> is mostly used to determine distances in nearby space. The parallax is the angular difference between two measurements of the position of the object from different view-points. If the annual parallax is given by \(p\), the distance \(R\) of the object is given by \(R=a/\sin(p)\), in which \(a\) is the radius of the Earth&rsquo;s orbit. The <em>clusterparallax</em> is used to determine the distance of a group of stars by using their motion w.r.t. a fixed background. The tangential velocity \(v_{\rm t}\) and the radial velocity \(v_{\rm r}\) of the stars along the sky are given by</p>
+
+<p>\[v_{\rm r}=V\cos(\theta)~~~,~~~v_{\rm t}=V\sin(\theta)=\omega R\]</p>
+
+<p>where \(\theta\) is the angle between the star and the <em>point of convergence</em> and \(\hat{R}\) the distance in pc. This results, with \(v_{\rm t}=v_{\rm r}\tan(\theta)\), in:</p>
+
+<p>\[R=\frac{v_{\rm r}\tan(\theta)}{\omega}~\Rightarrow~\hat{R}=\frac{1''}{p}\] where \(p\) is the parallax in arc seconds. The parallax is then given by \[p=\frac{4.74\mu}{v_{\rm r}\tan(\theta)}\]</p>
+
+<p align="center"><img alt="Period vs magnitude for variable stars" style="width: 417px; height: 279px;" width="417px" height="279px" src="figure161.jpg" />
+</p>
+
+<p>with \(\mu\) the proper motion of the star in \(''\)/yr. A method to determine the distance of objects which are somewhat further away, like galaxies and star clusters, uses the period-Brightness relation for Cepheids. This relation is shown in the above figure for different types of stars.</p>
+
+<h2><a name="16.2">16.2 Brightness and magnitudes</a></h2>
+
+<p>The <em>brightness</em> is the total radiated energy per unit of time. Earth receives \(s_0=1.374\) kW/m\(^2\) from the Sun. Hence, the brightness of the Sun is given by \(L_\odot=4\pi r^2s_0=3.82\cdot10^{26}\) W. It is also given by:</p>
+
+<p>\[L_\odot=4\pi R_\odot^2\int\limits_0^\infty \pi F_\nu d\nu\]</p>
+
+<p>where \(\pi F_\nu\) is the monochromatic radiation flux. At the position of an observer this is \(\pi f_\nu\), with \(f_\nu=(R/r)^2F_\nu\) if absorption is ignored. If \(A_\nu\) is the fraction of the flux which reaches Earth&rsquo;s surface, the transmission factor is given by \(R_\nu\) and the surface of the detector is given by \(\pi a^2\), then the apparent brightness \(b\) is given by:</p>
+
+<p>\[b=\pi a^2\int\limits_0^\infty f_\nu A_\nu R_\nu d\nu\]</p>
+
+<p>The <em>magnitude</em> \(m\) is defined by:</p>
+
+<p>\[\frac{b_1}{b_2}=(100)^{\frac{1}{5}(m_2-m_1)}=(2.512)^{m_2-m_1}\]</p>
+
+<p>because the human eye perceives light intensities logaritmicaly. From this follows that \(m_2-m_1=2.5\cdot^{10}\log(b_1/b_2)\), or: \(m=-2.5\cdot^{10}\log(b)+C\). The apparent brightness of a star if this star would be at a distance of 10 pc is called the <em>absolute brightness</em> \(B\): \(B/b=(\hat{r}/10)^2\). The absolute magnitude is then given by \(M=-2.5\cdot^{10}\log(B)+C\), or: \(M=5+m-5\cdot^{10}\log(\hat{r})\). When an interstellar absorption of \(10^{-4}\)/pc is taken into account one finds:</p>
+
+<p>\[M=(m-4\cdot10^{-4}\hat{r})+5-5\cdot^{10}\log(\hat{r})\]</p>
+
+<p>If a detector detects all radiation emitted by a source one would measure the <em>absolute bolometric magnitude</em>. If the <em>bolometric correction</em> \(BC\) is given by</p>
+
+<p>\[BC=2.5\cdot^{10}\log\left(\frac{\mbox{Energy flux received}}{\mbox{Energy flux detected}}\right)= 2.5\cdot^{10}\log\left(\frac{\int f_\nu d\nu}{\int f_\nu A_\nu R_\nu d\nu}\right)\]</p>
+
+<p>then: \(M_b=M_V-BC\) where \(M_V\) is the visual magnitude. Further&nbsp;\[M_b=-2.5\cdot^{10}\log\left(\frac{L}{L_\odot}\right)+4.72\]</p>
+
+<h2><a name="16.3">16.3 Radiation and stellar atmospheres</a></h2>
+
+<p>The radiation energy passing through a surface \(dA\) is \(dE=I_\nu(\theta,\varphi)\cos(\theta)d\nu d\Omega dAdt\), where \(I_\mu\) is the <em>monochromatical intensity</em>&nbsp;\( Wm^{-2} sr^{-1} Hz^{-1} \)].</p>
+
+<p>When there is no absorption the quantity \(I_\nu\) is independent of the distance to the source. Planck&rsquo;s law holds for a black body:</p>
+
+<p>\[I_\nu(T)\equiv B_\nu(T)=\frac{c}{4\pi}w_\nu(T)=\frac{2h\nu^3}{c^2}\frac{1}{\exp(h\nu/kT)-1}\]</p>
+
+<p>The radiation transport through a layer can then be written as: \[\frac{dI_\nu}{ds}=-I_\nu\kappa_\nu+j_\nu\] Here, \(j_\nu\) is the <em>coefficient of emission</em> and \(\kappa_\nu\) the <em>coefficient of absorption</em>. \(\int ds\) is the thickness of the layer. The <em>optical thickness</em> \(\tau_\nu\) of the layer is given by \(\tau_\nu=\int\kappa_\nu ds\). The layer is optically thin if \(\tau_\nu\ll1\), the layer is optically thick if \(\tau_\nu\gg1\). For a stellar atmosphere in LTE: \(j_\nu=\kappa_\nu B_\nu(T)\). Then also :</p>
+
+<p>\[I_\nu(s)=I_\nu(0){\rm e}^{-\tau_\nu}+B_\nu(T)(1-{\rm e}^{-\tau_\nu})\]</p>
+
+<h2><a name="16.4">16.4 Composition and evolution of stars</a></h2>
+
+<p>The structure of a star is described by the following equations:</p>
+
+<p>\[\begin{aligned} \frac{dM(r)}{dr}&amp;=&amp;4\pi\varrho(r)r^2\\ \frac{dp(r)}{dr}&amp;=&amp;-\frac{GM(r)\varrho(r)}{r^2}\\ \frac{L(r)}{dr}&amp;=&amp;4\pi\varrho(r)\varepsilon(r)r^2\\ \left(\frac{dT(r)}{dr}\right)_{\rm rad}&amp;=&amp;-\frac{3}{4}\frac{L(r)}{4\pi r^2}\frac{\kappa(r)}{4\sigma T^3(r)}~,~~\mbox{(Eddington), or}\\ \left(\frac{dT(r)}{dr}\right)_{\rm conv}&amp;=&amp;\frac{T(r)}{p(r)}\frac{\gamma-1}{\gamma}\frac{dp(r)}{dr}~,~~\mbox{(convective energy transport)}\end{aligned}\]</p>
+
+<p>Further, for stars of the solar type, the composing plasma can be described as an ideal gas:</p>
+
+<p>\[p(r)=\frac{\varrho(r)kT(r)}{\mu m_{\rm H}}\]</p>
+
+<p>where \(\mu\) is the average molecular mass, usually well approximated by:</p>
+
+<p>\[\mu=\frac{\varrho}{nm_{\rm H}}=\frac{1}{2X+\frac{3}{4}Y+\mbox{$\frac{1}{2}$}Z}\]</p>
+
+<p>where \(X\) is the mass fraction of H, \(Y\) the mass fraction of He and \(Z\) the mass fraction of the other elements. Further :</p>
+
+<p>\[\kappa(r)=f(\varrho(r),T(r),\mbox{composition})~~\mbox{and}~~ \varepsilon(r)=g(\varrho(r),T(r),\mbox{composition})\]</p>
+
+<p>Convection will occur when the star meets the <em>Schwartzschild criterium</em>:</p>
+
+<p>\[\left(\frac{dT}{dr}\right)_{\rm conv}&lt;\left(\frac{dT}{dr}\right)_{\rm rad}\]</p>
+
+<p>Otherwise the energy transfer takes place by radiation. For stars in quasi-hydrostatic equilibrium&nbsp;the approximations \(r=R\), \(M(r)=M\), \(dM/dr=M/R\), \(\kappa\sim\varrho\) and \(\varepsilon\sim\varrho T^\mu\) hold (this last assumption is only valid for stars on the main sequence). For pp-chains holds \(\mu\approx5\) and for the CNO chains holds \(\mu=12\) tot 18. It can be derived that \(L\sim M^3\): the <em>mass-brightness relation</em>. Further: \(L\sim R^4\sim T^8_{\rm eff}\). This results in the equation for the main sequence in the <em>Hertzsprung-Russell diagram</em>:</p>
+
+<p>\[^{10}\log(L)=8\cdot^{10}\log(T_{\rm eff})+\mbox{constant}\]</p>
+
+<h2><a name="16.5">16.5 Energy production in stars</a></h2>
+
+<p>The net reaction from which most stars gain their energy is: \(\rm 4{}^1H\rightarrow{}^4He+2e^++2\nu_{\rm e}+\gamma\).<br />
+This reaction produces 26.72 MeV. Two reaction chains are responsible for this reaction. The slowest, speed-limiting reaction is shown in boldface. The energy between brackets is the energy carried away by the neutrino.</p>
+
+<ol>
+    <li>The proton-proton chain can be divided into two subchains:<br />
+    \(\bf ^1H+p^+\rightarrow{}^2D+e^++\nu_{\bf e}\), and then \(\rm ^2D+p\rightarrow{}^3He+\gamma\).
+    <ol>
+        <li>pp1: \(\rm ^3He+^3He\rightarrow2p^++{}^4He\). There is 26.21 + (0.51) MeV released.</li>
+        <li>pp2: \(\rm ^3He+\alpha\rightarrow{}^7Be+\gamma\)
+        <ol>
+            <li>\(\rm ^7Be+e^-\rightarrow{^7Li}+\nu\), then \(\rm ^7Li+p^+\rightarrow2 ^4He+\gamma\). 25.92 + (0.80) MeV.</li>
+            <li>\(\rm ^7Be+p^+\rightarrow{^8B}+\gamma\), then \(\rm ^8B+e^+\rightarrow2^4He+\overline{\nu}\). 19.5 + (7.2) MeV.</li>
+        </ol>
+
+        <p>Both \(^7\)Be chains become more important with raising \(T\).</p>
+        </li>
+    </ol>
+    </li>
+    <li>The CNO cycle. The first chain releases 25.03 + (1.69) MeV, the second 24.74 + (1.98) MeV. The reactions are shown below.
+</ol>
+
+<p>
+<table align="center" border=0>
+<tr>
+<td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">\(\longrightarrow\)</td><td style="text-align:center">\(\searrow\)</td><td style="text-align:center"></td>
+<tr>
+<td style="text-align:center">\(\nearrow\)</td><td style="text-align:center">\(\rightarrow\)</td><td style="text-align:center">\(\rm~^{15}N+p^+\rightarrow\alpha+^{12}C\)</td><td style="text-align:center"></td><td style="text-align:center">\(\rm^{15}N+p^+\rightarrow~^{16}O+\gamma\)</td>
+<tr>
+<td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">\(\downarrow\)</td><td style="text-align:center"></td><td style="text-align:center">\(\downarrow\)</td>
+<tr>
+<td style="text-align:center">\(\rm^{15}O+e^+\rightarrow~^{15}N+\overline{\nu}\)</td><td style="text-align:center"></td><td style="text-align:center">\(\rm^{12}C+p^+\rightarrow{}^{13}N+\gamma\)</td><td style="text-align:center"></td><td style="text-align:center">\(\rm^{16}O+p^+\rightarrow~^{17}F+\gamma\)</td>
+<tr>
+<td style="text-align:center">\(\uparrow\)</td><td style="text-align:center"></td><td style="text-align:center">\(\downarrow\)</td><td style="text-align:center"></td><td style="text-align:center">\(\downarrow\)</td>
+<tr>
+<td style="text-align:center">\(\bf ^{14}N+p^+\rightarrow~^{15}O+\gamma\)</td><td style="text-align:center"></td><td style="text-align:center">\(\rm^{13}N\rightarrow~^{13}C+e^++\nu\)</td><td style="text-align:center"></td><td style="text-align:center">\(\rm^{17}F\rightarrow~^{17}O+e^++\nu\)</td>
+<tr>
+<td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">\(\downarrow\)</td><td style="text-align:center"></td><td style="text-align:center">\(\downarrow\)</td>
+<tr>
+<td style="text-align:center">\(\nwarrow\)</td><td style="text-align:center">\(\leftarrow\)</td><td style="text-align:center">\(\rm ^{13}C+p^+\rightarrow{}^{14}N+\gamma\)</td><td style="text-align:center"></td><td style="text-align:center">\(\rm^{17}O+p^+\rightarrow\alpha+{}^{14}N\)</td>
+<tr>
+<td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center">\(\longleftarrow\)</td><td style="text-align:center">\(\swarrow\)</td><td style="text-align:center"></td>
+<tr>
+</table>
+</p>
+
+</body>
+</head>

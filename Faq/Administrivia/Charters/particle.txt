@@ -1,0 +1,22 @@
+Newsgroups line:
+sci.physics.particle	Particle physics discussions.
+ 
+
+CHARTER
+
+The sci.physics.particle newsgroup provides a common forum to discuss
+all aspects of particle physics, theories and experiments.
+
+Topics of discussions are, but not limited to:
+- Pre Standard Model
+- Standard Model
+- Beyond Standard Model
+ 
+RATIONALE
+
+Particle physics is a very active region of physics, theoretically
+as well as experimentally.  But there is no general forum to
+discuss this field.  Sci.physics is too general a forum, whereas
+sci.physics.accelerators is mainly discussing particle accelerators and
+the physics of beams. Some laboratories in the world do have their
+own newsgroups but are not generally carried by many sites.

@@ -1,0 +1,122 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Statistical physics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="7">7. Statistical physics</a></h1>
+<h2><a name="7.1">7.1 Degrees of freedom</a></h2>
+
+<p>A molecule consisting of \(n\) atoms has \(s=3n\) degrees of freedom. There are 3 translational degrees of freedom, a linear molecule has \(s=3n-5\) vibrational degrees of freedom and a non-linear molecule \(s=3n-6\). A linear molecule has 2 rotational degrees of freedom and a non-linear molecule 3.</p>
+
+<p>Because vibrational degrees of freedom account for both kinetic and potential energy they count double. So, for linear molecules this results in a total of \(s=6n-5\). For non-linear molecules this gives \(s=6n-6\). The average energy of a molecule in thermodynamic equilibrium is \(\left\langle E_{\rm tot} \right\rangle=\frac{1}{2}skT\). Each degree of freedom of a molecule has in principle the same energy: the <em>principle of equipartition</em>.</p>
+
+<p>The rotational and vibrational energy of a molecule are:</p>
+
+<p>\[W_{\rm rot}=\frac{\hbar^2}{2I}l(l+1)=Bl(l+1)~,~~W_{\rm vib}=(v+\mbox{$\frac{1}{2}$})\hbar\omega_0\]</p>
+
+<p>The vibrational levels are excited if \(kT\approx\hbar\omega\), the rotational levels of a hetronuclear molecule are excited if \(kT\approx2B\). For homonuclear molecules additional selection rules apply so the rotational levels are well coupled if \(kT\approx6B\).</p>
+
+<h2><a name="7.2">7.2 The energy distribution function</a></h2>
+
+<p>The general form of the equilibrium velocity distribution function is<br />
+\(P(v_x,v_y,v_z)dv_xdv_ydv_z=P(v_x)dv_x\cdot P(v_y)dv_y\cdot P(v_z)dv_z\) with</p>
+
+<p>\[P(v_i)dv_i=\frac{1}{\alpha\sqrt{\pi}}\exp\left(-\frac{v_i^2}{\alpha^2}\right)dv_i\]</p>
+
+<p>where \(\alpha=\sqrt{2kT/m}\) is the <em>most probable velocity</em> of a particle. The average velocity is given by \(\left\langle v \right\rangle=2\alpha/\sqrt{\pi}\), and \(\left\langle v^2 \right\rangle=\frac{3}{2}\alpha^2\). The distribution as a function of the absolute value of the velocity is given by:</p>
+
+<p>\[\frac{dN}{dv}=\frac{4N}{\alpha^3\sqrt{\pi}}~v^2\exp\left(-\frac{mv^2}{2kT}\right)\]</p>
+
+<p>The general form of the energy distribution function then becomes:</p>
+
+<p>\[P(E)dE=\frac{c(s)}{kT}\left(\frac{E}{kT}\right)^{\frac{1}{2}s-1}\exp\left(-\frac{E}{kT}\right)dE\]</p>
+
+<p>where \(c(s)\) is a normalization constant, given by:</p>
+
+<ol>
+    <li>Even \(s\): \(s=2l\): \(\displaystyle c(s)=\frac{1}{(l-1)!}\)</li>
+    <li>Odd \(s\): \(s=2l+1\): \(\displaystyle c(s)=\frac{2^l}{\sqrt{\pi}(2l-1)!!}\)</li>
+</ol>
+
+<h2><a name="7.3">7.3 Pressure on a wall</a></h2>
+
+<p>The number of molecules that collides with a wall with surface \(A\) within a time \(\tau\) is given by:</p>
+
+<p>\[\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int d^3N=\int\limits_0^\infty \int\limits_0^\pi \int\limits_0^{2\pi} nAv\tau\cos(\theta)P(v,\theta,\varphi)dvd\theta d\varphi\]</p>
+
+<p>From this follows for the particle flux on the wall: \(\Phi=\frac{1}{4}n\left\langle v \right\rangle\). For the pressure on the wall it then follows that:</p>
+
+<p>\[d^3p=\frac{2mv\cos(\theta)d^3N}{A\tau}~,~~\mbox{so}~~p=\frac{2}{3}n\left\langle E \right\rangle\]</p>
+
+<h2><a name="7.4">7.4 The equation of state</a></h2>
+
+<p>If intermolecular forces and the volume of the molecules can be neglected then for gases from \(p=\frac{2}{3}n\left\langle E \right\rangle\) and \(\left\langle E \right\rangle=\frac{3}{2}kT\) can be derived:</p>
+
+<p>\[pV=n_sRT=\frac{1}{3}Nm\left\langle v^2 \right\rangle\]</p>
+
+<p>Here, \(n_s\) is the number of <em>moles</em> particles and \(N\) is the total number of particles within volume \(V\). If the molecular&nbsp;volume and the intermolecular forces cannot be neglected the <em>Van der Waals</em> equation can be derived:</p>
+
+<p>\[\left(p+\frac{an_s^2}{V^2}\right)(V-bn_s)=n_sRT\]</p>
+
+<p>There is an isotherm&nbsp;with a horizontal point of inflection. In the <em>Van der Waals</em> equation this corresponds with the <em>critical temperature, pressure</em> and <em>volume</em> of the gas. This is the upper limit of the area of coexistence between liquid and vapor. From \(dp/dV=0\) and \(d^2p/dV^2=0\) follows:</p>
+
+<p>\[T_{\rm cr}=\frac{8a}{27bR}~,~~p_{\rm cr}=\frac{a}{27b^2}~,~~V_{\rm cr}=3bn_s\]</p>
+
+<p>At the critical point: \(p_{\rm cr}V_{m,\rm cr}/RT_{\rm cr}=\frac{3}{8}\), which differs from the value of 1 which follows from the ideal gas law.</p>
+
+<p>Scaled using&nbsp;the critical quantities, with \(p^*:=p/p_{\rm cr}\), \(T^*=T/T_{\rm cr}\) and \(V_m^*=V_m/V_{m,\rm cr}\) with \(V_m:=V/n_s\) one obtains:</p>
+
+<p>\[\left(p^*+\frac{3}{(V_m^*)^2}\right)\left(V_m^*-\mbox{$\frac{1}{3}$}\right)= \mbox{$\frac{8}{3}$}T^*\]</p>
+
+<p>Gases behave the same for equal values of the reduced quantities: the <em>law of the corresponding states</em>. A <em>virial expansion </em>can be used for an even more accurate picture:</p>
+
+<p>\[p(T,V_m)=RT\left(\frac{1}{V_m}+\frac{B(T)}{V_m^2}+\frac{C(T)}{V_m^3}+\cdots\right)\]</p>
+
+<p>The <em>Boyle temperature</em> \(T_{\rm B}\) is the temperature for which the 2nd virial coefficient is 0. In a Van der Waals gas, this happens at \(T_{\rm B}=a/Rb\). The <em>inversion temperature</em> \(T_{\rm i}=2T_{\rm B}\).</p>
+
+<p>An equation of state for solids and liquids is given by:</p>
+
+<p>\[\frac{V}{V_0}=1+\gamma_p\Delta T-\kappa_T\Delta p= 1+\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{p}\Delta T+\frac{1}{V}\left(\frac{\partial V}{\partial p}\right)_{T}\Delta p\]</p>
+
+<h2><a name="7.5">7.5 Collisions between molecules</a></h2>
+
+<p>The collision probability of a particle in a gas that is translated over a distance \(dx\) is given by \(n\sigma dx\), where \(\sigma\) is the <em>cross section</em>. The mean free path is given by \(\displaystyle\ell=\frac{v_1}{nu\sigma}\) with \(u=\sqrt{v_1^2+v_2^2}\) the relative velocity between the particles. If \(m_1\ll m_2\) then: \(\displaystyle\frac{u}{v_1}=\sqrt{1+\frac{m_1}{m_2}}\), so \(\displaystyle\ell=\frac{1}{n\sigma}\). If \(m_1=m_2\) then: \(\displaystyle\ell=\frac{1}{n\sigma\sqrt{2}}\). This means that the average time between two collisions is given by \(\displaystyle\tau=\frac{1}{n\sigma v}\). If the molecules are approximated by hard spheres the cross section is: \(\sigma=\frac{1}{4}\pi(D_1^2+D_2^2)\). The average distance between two molecules is \(0.55n^{-1/3}\). Collisions between molecules and small particles in a solution result in &nbsp;<em>Brownian motion</em>. For the average motion of a particle with radius \(R\) it can be derived that: \(\left\langle x_i^2 \right\rangle=\frac{1}{3}\left\langle r^2 \right\rangle=kTt/3\pi\eta R\).</p>
+
+<p>A gas is called a <em>Knudsen gas</em> if \(\ell\gg\) the volume&nbsp;of the gas, something that can easily occur at low pressures. The equilibrium condition for a vessel which has a hole with surface area \(A\) in it if&nbsp;\(\ell\gg\sqrt{A/\pi}\) is: \(n_1\sqrt{T_1}=n_2\sqrt{T_2}\). Together with the general gas law follows: \(p_1/\sqrt{T_1}=p_2/\sqrt{T_2}\).</p>
+
+<p>If two plates slide along each other at a distance \(d\) with velocity \(w_x\) the <em>viscosity</em> \(\eta\) is given by: \(\displaystyle F_x=\eta\frac{Aw_x}{d}\). The velocity profile between the plates is in that case given by \(w(z)=zw_x/d\). It can be derived that \(\eta=\frac{1}{3}\varrho\ell\left\langle v \right\rangle\) where \(v\) is the <em>thermal velocity</em>.</p>
+
+<p>The heat conductance in a non-moving gas is described by: \(\displaystyle\frac{dQ}{dt}=\kappa A\left(\frac{T_2-T_1}{d}\right)\), which results in a temperature profile \(T(z)=T_1+z(T_2-T_1)/d\). It can be derived that \(\kappa=\frac{1}{3}C_{mV}n\ell\left\langle v \right\rangle/N_{\rm A}\). Also: \(\kappa=C_V\eta\). A better expression for \(\kappa\) can be obtained with the <em>Eucken correction</em>: \(\kappa=(1+9R/4c_{mV})C_V\cdot\eta\) with an error \(&lt;\)5%.</p>
+
+<h2><a name="7.6">7.6 Interaction between molecules</a></h2>
+
+<p>For dipole interaction between molecules it can be derived that \(U\sim-1/r^6\). If the distance between two molecules approaches the molecular diameter \(D\) a repulsing force between the electron clouds appears. This force can be described by \(U_{\rm rep}\sim\exp(-\gamma r)\) or \(V_{\rm rep}=+C_s/r^s\) with \(12\leq s\leq20\). This results in the <em>Lennard-Jones</em> potential for intermolecular forces:</p>
+
+<p>\[U_{\rm LJ}=4\epsilon\left[\left(\frac{D}{r}\right)^{12}-\left(\frac{D}{r}\right)^6\right]\]</p>
+
+<p>with a minimum \(\epsilon\) at \(r=r_{\rm m}\) the following holds: \(D\approx0.89r_{\rm m}\). For the Van der Waals coefficients \(a\) and \(b\) and using critical quantities: \(a=5.275 N_{\rm A}^2D^3\epsilon\), \(b=1.3N_{\rm A}D^3\), \(kT_{\rm kr}=1.2\epsilon\) and \(V_{\rm m,kr}=3.9N_{\rm A}D^3\).</p>
+
+<p>A simpler model for intermolecular forces assumes a potential \(U(r)=\infty\) for \(r&lt;D\), \(U(r)=U_{\rm LJ}\) for \(D\leq r\leq3D\) and \(U(r)=0\) for \(r\geq3D\). This gives for the potential energy of one molecule: \(\displaystyle E_{\rm pot}=\int_D^{3D}U(r)F(r)dr\) with \(F(r)\) the spatial distribution function in spherical coordinates, which for a homogeneous distribution is given by: \(F(r)dr=4n\pi r^2dr\).</p>
+
+<p>Some useful mathematical relations are:</p>
+
+<p>\[\int\limits_0^\infty x^n{\rm e}^{-x}dx=n!~~,~~ \int\limits_0^\infty x^{2n}{\rm e}^{-x^2}dx=\frac{(2n)!\sqrt{\pi}}{n!2^{2n+1}}~~,~~ \int\limits_0^\infty x^{2n+1}{\rm e}^{-x^2}dx=\mbox{$\frac{1}{2}$}n!\]</p>
+
+</body>
+</html>

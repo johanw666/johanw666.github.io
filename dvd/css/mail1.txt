@@ -1,0 +1,285 @@
+
+From frank@funcom.com Tue Nov  9 13:22:51 1999
+Date: Wed, 27 Oct 1999 08:55:01 +0200 (CEST)
+From: Frank Andrew Stevenson <frank@funcom.com>
+To: livid-dev@livid.on.openprojects.net
+Subject: [Livid-dev] Successfull attack on CSS algorithm
+
+
+Hi, I am a new member to this list, in fact I subscribed just today,
+in order to send this message, and answer to followups.
+
+My main interest in this is purely cryptographical, so I have little
+or no knowledge of the problems associated with CSS. What I have done
+is device an attack that will recover a CSS key with a complexity of
+2^16 and as little as 6 known output bytes. This should reduce the
+keyrecovery time from ~17 hours to a fraction of a second.
+
+The CSS algorith is fataly flawed. A divide and conquer attack is
+possible by guessing the 16 unknown bits of LFSR1. LFSR1 is then
+clocked 4 times, and the known keystream bytes are then used to
+reconstruct the state of LFSR2. The whole cipher is then clocked 
+another 2-6 times to validate the key. If the key is correct LFSR2 is
+clocked backwards 4 times to retrieve the initial state. The fine
+details can be found in the source code below.
+
+I hope this mail isn't too long, but I have included source for
+a complete cracker which works as follows:
+
+hippopotamus:~/pc/temp> scramble 3e 4c 13 2e 9c
+Doing encryption
+Keystate at start: 13e 4c 01385c2b
+output: 80 18 e2 cc c1 21 85 0d 9f 8c 
+
+This produces the 10 first bytes of the keystream for
+the given key, and also dumps the initial keystate.
+
+hippopotamus:~/pc/temp> time scramble 80 18 e2 cc c1 21 85 0d 9f 8c
+Attempting crack
+Candidate: 13e 4c 01385c2b
+0.090u 0.000s 0:00.10 90.0%     0+0k 0+0io 87pf+0w
+
+With 10 bytes as input, the initial state is here recovered in
+1/10th of a second on a PPro200.  
+
+  frank
+
+
+---------- The following is C code for the attack --------
+
+/********************************************************
+ *
+ *  The Divide and conquer attack
+ *
+ *  Deviced and written by Frank A. Stevenson 26 Oct 1999
+ *
+ *  ( frank@funcom.com )
+ *  Released under the GPL license
+ *
+ ********************************************************/
+
+#define KEYSTREAMBYTES 10
+
+static unsigned char invtab4[256];
+
+void CSScracker( unsigned char* pStream ) {
+  unsigned int t1,t2,t3,t4,t5,t6;
+  unsigned int nTry;
+  unsigned int vCandidate;
+  int i;
+  unsigned int j;
+
+  /* Test that CSStab4 is a permutation */
+  memset( invtab4, 0, 256 );
+  for( i = 0 ; i < 256 ; i++ ) invtab4[ CSStab4[i] ] = 1; 
+  for( i = 0 ; i < 256 ; i++ ) if( invtab4[ i ] != 1 ) {
+    printf( "Permutation error\n" );
+    exit( -1 );
+  }
+
+  /* initialize the inverse of table4 */
+  for( i = 0 ; i < 256 ; i++ ) invtab4[ CSStab4[i] ] = i;
+
+  for( nTry = 0 ; nTry < 65536 ; nTry++ ) {
+    t1 = nTry >> 8 | 0x100;
+    t2 = nTry & 0xff;
+    t3 = 0;   /* not needed */
+    t5 = 0;
+
+    /* iterate cipher 4 times to reconstruct LFSR2 */
+    for( i = 0 ; i < 4 ; i++ ) {
+      /* advance LFSR1 normaly */
+      t4=CSStab2[t2]^CSStab3[t1];
+      t2=t1>>1;
+      t1=((t1&1)<<8)^t4;
+      t4=CSStab5[t4];
+      /* deduce t6 & t5 */
+      t6 = pStream[ i ];    
+      if( t5 ) t6 = ( t6 + 0xff )&0x0ff;
+      if( t6 < t4 ) t6 += 0x100;
+      t6 -= t4;
+      t5 += t6 + t4;
+      t6 = invtab4[ t6 ];
+      /* printf( "%02x/%02x ", t4, t6 ); */
+      /* feed / advance t3 / t5 */
+      t3 = (t3 << 8) | t6;
+      t5 >>= 8;
+    }
+
+    vCandidate = t3;
+
+    /* iterate 6 more times to validate candidate key */
+    for( ; i < KEYSTREAMBYTES ; i++ ) {
+      t4=CSStab2[t2]^CSStab3[t1];
+      t2=t1>>1;
+      t1=((t1&1)<<8)^t4;
+      t4=CSStab5[t4];
+      t6=(((((((t3>>3)^t3)>>1)^t3)>>8)^t3)>>5)&0xff;
+      t3=(t3<<8)|t6;
+      t6=CSStab4[t6];
+      t5+=t6+t4;
+      if( (t5 & 0xff) != pStream[i] ) break;
+      t5>>=8;
+    }
+
+    if( i == KEYSTREAMBYTES ) {
+      /* Do 4 backwards steps of iterating t3 to deduce initial state */
+      t3 = vCandidate;
+      for( i = 0 ; i < 4 ; i++ ) {
+        t1 = t3 & 0xff;
+        t3 = ( t3 >> 8 );
+        /* easy to code, and fast enough bruteforce search for byte
+shifted in */
+        for( j=0 ; j < 256 ; j++ ) {
+          t3 = (t3 & 0x1ffff) | ( j << 17 );
+          t6=(((((((t3>>3)^t3)>>1)^t3)>>8)^t3)>>5)&0xff;
+          if( t6 == t1 ) break;  
+	}
+      }
+      printf( "Candidate: %03x %02x %08x\n", 0x100|(nTry>>8),nTry&0x0ff,
+t3 );
+    }
+
+  }
+
+}
+
+  
+----------- Following is a complete cracker -------------------
+------ compiles with VC++ / gcc linux, runs  on x86 ----------- 
+
+
+begin 640 scramble.c.Z
+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
+%*;,]"A:%
+`
+end
+
+
+This sentence is unique in this respect; it can safely
+be attributed to my employer, Funcom Oslo AS.
+E3D2BCADBEF8C82F A5891D2B6730EA1B PGPmail preferred, finger for key
+There is no place like N59 50.558' E010 50.870'. (WGS84)
+ 
+
+
+
+_______________________________________________
+Livid-dev maillist  -  Livid-dev@livid.on.openprojects.net
+http://livid.on.openprojects.net/mailman/listinfo/livid-dev

@@ -1,0 +1,38 @@
+Newsgroups line:
+sci.physics.cond-matter	Condensed matter physics, theory and experiment.
+
+
+RATIONALE
+
+This is the rationale for the proposal as submitted by the proponent.
+
+    This group should be created because of the huge unmet demand by Usenet
+    readers and other Internet users for a group devoted to condensed
+    matter and solid state physics.  It is a huge field in the real world
+    (the largest within physics) and this group can provide a forum for both
+    experts to discuss current developments and for non-physicists
+    interested in discussing aspects related to condensed matter physics.
+
+CHARTER
+
+This is the newsgroup charter as submitted by the proponent.
+
+    sci.physics.cond-matter
+       This newsgroup is focused on discussion of matters pertaining to
+       experimental and theoretical condensed matter physics, the study of
+       the physics of various properties of liquid- and solid-phase matter.
+       These properties include, but are not limited to, structural,
+       electronic, mechanical, thermodynamic, magnetic, and optical
+       properties.  In addition, the important topics of phase transitions,
+       superfluidity, and critical phenomena are to be discussed.  Although
+       discussion should be specifically physics-oriented, it is expected
+       that scientists in the arenas of chemistry, engineering, fluid
+       dynamics, and materials science will also be very interested in this
+       forum.  But discussion of solid state electronics, which has come
+       to mean something unrelated to physics, is not what this group is for.
+
+       Experimental techniques and theoretical and mathematical approaches to
+       condensed matter problems are a fundamental part of this group.
+       Additionally, questions from readers and general comments about the
+       direction of condensed matter research are also welcome.
+

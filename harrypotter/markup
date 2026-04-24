@@ -1,0 +1,35 @@
+#!/bin/sh
+
+unzip -aa HarryPotter_txt.zip
+
+echo "Compiling conversion tool"
+gcc -o converthp converthp.c
+
+echo "converting HarryPotter 1"
+converthp HarryPotter1.txt HarryPotter1-1.txt
+echo "converting HarryPotter 2"
+converthp HarryPotter2.txt HarryPotter2-1.txt
+echo "converting HarryPotter 3"
+converthp HarryPotter3.txt HarryPotter3-1.txt
+echo "converting HarryPotter 4"
+converthp HarryPotter4.txt HarryPotter4-1.txt
+echo "converting HarryPotter 5"
+converthp HarryPotter5.txt HarryPotter5-1.txt
+
+echo "Folding HarryPotter 1"
+fold -w 78 -s HarryPotter1-1.txt > Harry_Potter_1.txt
+echo "Folding HarryPotter 2"
+fold -w 78 -s HarryPotter2-1.txt > Harry_Potter_2.txt
+echo "Folding HarryPotter 3"
+fold -w 78 -s HarryPotter3-1.txt > Harry_Potter_3.txt
+echo "Folding HarryPotter 4"
+fold -w 78 -s HarryPotter4-1.txt > Harry_Potter_4.txt
+echo "Folding HarryPotter 5"
+fold -w 78 -s HarryPotter5-1.txt > Harry_Potter_5.txt
+
+echo "Removing temporary files"
+rm HarryPotter?-1.txt
+rm converthp
+
+echo "Ready."
+

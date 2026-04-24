@@ -1,0 +1,215 @@
+<html>
+<head>
+<title>Bell's Spaceship Paradox</title>
+<meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.weburbia.com/safe/ratings.htm&quot; l r (s 0))">
+<meta name="copyright" content="this document is copyright as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Updated by Michael Weiss, 2017.<br>
+New version by Don Koks, 2014.<br>
+Original by Michael Weiss, 1995.</p>
+<p><br></p>
+
+
+<h1>Bell's Spaceship Paradox</h1>
+
+<p>John Bell described this special relativity paradox in the essay "How to teach special relativity" in his
+collection <i>Speakable and Unspeakable in Quantum Mechanics</i>.&nbsp; The puzzle was actually invented by Edmond
+Dewan and Michael Beran <a href="#dewan">[1]</a>, but it's generally known as Bell's Spaceship Paradox.</p>
+
+<p>Bell considered two rocket ships connected by a string, with both having the same acceleration in the inertial
+"lab frame", with one ship trailing the other and both moving along one line.&nbsp; The ships start out at rest in
+the lab.&nbsp; Their accelerations in the lab frame are required always to be equal, but these accelerations can
+vary with time.&nbsp; Because the ships always maintain equal accelerations in the lab frame, their speeds will be
+equal at all times in the lab, and so they'll remain a constant distance apart in the lab.&nbsp; But after a time
+they will acquire a high speed, at which point we ask what has become of the idea of the distance between them
+being Lorentz contracted.&nbsp; The actual paradox posed by Dewan & Beran and by Bell was that the string should
+eventually snap.&nbsp; But why should it snap, if the ships are maintaining a constant separation?</p>
+
+<p> The string is really window dressing.&nbsp; So are the rockets.&nbsp; At heart this is purely a kinematical
+problem about moving points.&nbsp; We'll discuss the ships and string at the end of this entry.&nbsp; We'll use the
+word "rocket" for its cinematic value, but you should think of the rockets as mere points for now.&nbsp; To repeat
+the setup in the stripped-down version: the rockets start accelerating at <i>t = 0</i> in the lab frame; they
+maintain equal accelerations at all times <em>according to the lab frame</em>; and we will set their lab
+accelerations to be such that according to the rocket inhabitants, the acceleration that they feel (their weight,
+if you like), is constant.&nbsp; (Clearly they cannot maintain a constant acceleration indefinitely <em>in the lab
+frame</em>, without eventually exceeding the speed of light!&nbsp; But it <em>is</em> possible to have them
+accelerate in the lab indefinitely in such a way that they always feel the same acceleration.)&nbsp; On the one
+hand, it seems that their separation must remain constant.&nbsp; On the other hand, it seems that this separation
+should Lorentz-contract.&nbsp; That's the paradox.</p>
+
+<p> Before we start to analyse the above scenario, note that the Lorentz contraction factor refers to measurements
+made in <em>inertial</em> frames.&nbsp; (See <a href="../acceleration.html">Can Special Relativity Handle
+Acceleration?</a> and <a href="../clock.html">Does a clock's acceleration affect its timing rate?</a>  for a brief
+discussion of inertial versus accelerated frames.)&nbsp; We assume that the lab frame is inertial.</p>
+
+In the lab frame, the rockets remain a constant distance apart.&nbsp; Relativity says that the distance between two
+rockets is contracted from the "proper distance", when measured by an inertial observer whom they move past at some
+fraction <i>v</i> of the speed of light: it's contracted by the gamma factor &gamma; = (1 &minus;
+<i>v</i><sup>2</sup>) <sup>&minus;1/2</sup> (in units where <i>c</i> = 1).&nbsp; The proper distance between the
+rockets is the distance between them in the frame in which they are both at rest.&nbsp; But there is actually no
+inertial frame in which the rockets are always at rest, and so we can't define any "proper separation" for
+them.&nbsp; That means we won't find that any simple expression holds for length contraction.&nbsp; But there is at
+least an approximate notion of the proper separation of the rockets, and we'll find that this is approximately
+&gamma; times their lab separation.&nbsp; So their approximate proper separation increases by roughly &gamma; as
+the rockets move, and the result is then reduced by &gamma; as measured by the lab observer, who thus does measure
+a Lorentz contraction back to the lab separation.&nbsp; The rockets' proper separation&mdash;inasmuch as it can be
+defined&mdash;is set by &gamma;; but &gamma; is constantly increasing as the rockets speed up, so their proper
+separation must increase over time.</p>
+
+<p>What is this approximate proper separation, and how can it be increasing as the rockets accelerate?&nbsp; I'll
+sketch the solution without providing any of the mathematics.&nbsp; Doing everything quantitatively is certainly
+enlightening, but because the rockets are accelerating, the details are not simple enough to put into this FAQ
+entry without obscuring the main issues.</p>
+
+<img src="spacetime.png" align=left border=0 height=420 hspace=0 vspace=10>
+<p>The picture at left is a schematic of the spacetime scenario, drawn in the lab frame.</p>
+
+<p>The key concept we need is the notion of a <i>momentarily comoving inertial frame</i> (MCIF for short); that's an
+inertial frame that "for an instant" matches the velocity of a moving point.&nbsp; Mathematically, it's an inertial
+frame constructed by finding the tangent to the world line of the point, and using that as its time axis.&nbsp; The
+space axis&mdash;the line of simultaneity&mdash;is then constructed by the usual synchronisation method of SR.&nbsp;
+See <a href="../clock.html">Does a clock's acceleration affect its timing rate?</a> for more details.</p>
+
+<p>The blue curve in the picture is the world line of the trailing rocket, and the red curve is the world line
+of the leading rocket.&nbsp; Their separation in the lab is a constant <i>L</i>.&nbsp; Focus now on event A.&nbsp;
+The dotted blue line passing through A is the space axis for the MCIF at A.&nbsp; The blue rocket regards
+(measures) all events on this line as being simultaneous with A.&nbsp; In particular, the blue rocket says that
+event B is simultaneous with A.&nbsp; The two rockets' clocks both read zero when they started out, so we see here
+that the blue (trailing) rocket measures the red (leading) rocket to be ageing quickly.&nbsp; On the other hand,
+the red rocket doesn't say that A and B are simultaneous.&nbsp; If it draws all the events that <i>it</i> measures
+as simultaneous with B, these events form the dotted red line, and this line crosses the blue world line at event
+C.&nbsp; So the red rocket says that event C is simultaneous with B, and, as a result, it measures the blue rocket
+to be ageing very slowly.&nbsp; The factors by which the rockets each measure the other to be ageing relative to
+themselves are not inverses of each other.&nbsp; For example, the blue rocket might say that the red rocket is
+ageing twice as fast as blue, while the red rocket says that the blue rocket is ageing far more slowly than one
+half as fast as red.&nbsp; You can see the reason for these strange-sounding numbers by studying the diagram.</p>
+
+<p>The distance that the blue rocket measures from A to B is <em>approximately</em> &gamma;<i>L</i> (in fact, it's
+somewhat more than &gamma;<i>L</i>).&nbsp; But if we ask the blue rocket to re-measure the distance from itself to
+the red rocket at a later time marked by event P, then the line of simultaneity will have changed: it will be the
+upper dotted blue line.&nbsp; This is <em>not</em> parallel to the lower dotted blue line, and this line crosses
+the red world line at event Q.&nbsp; The distance PQ will be larger than distance AB, and so the blue rocket will
+conclude that the red rocket is actually pulling away from it.&nbsp; Given that blue measures the distance to red
+to be approximately &gamma;<i>L</i>, we can see that the separation <i>L</i> measured in the lab is indeed more or
+less a Lorentz contraction of &gamma;<i>L</i> back to <i>L</i>.&nbsp; But I say "more or less" because this lack of
+shared agreement on which events are simultaneous means that the two rockets don't form a frame of their own, and
+so we can't talk about transforming one frame to another with a simple Lorentz contraction.</p>  As we noted
+already, the MCIFs for the blue and red rocket do not match up nicely.</p>
+
+<p>To recap:
+<ul>
+<li>In the <em>lab frame</em>, the rockets maintain a constant separation.</li>
+<li>In the <em>MCIFs</em> (note the plural!) of the trailing rocket, the separation is steadily increasing.</li>
+<li>Likewise for the MCIFs of the leading rocket.</li>
+<li>The discrepancies between the descriptions are reconciled by the different notions of simultaneity.
+</ul>
+
+<img src="rindler.png" align=left border=0 height=420 hspace=0 vspace=10>
+
+<p>Is it possible to change the motion of one rocket so that the pair will form a frame?&nbsp; Yes, it is.&nbsp;
+The red and blue curves are hyperbolae, and in the first figure they have different asymptotes as they accelerate
+ever closer to the speed of light.&nbsp; (Note that they will always outrun light beams that approach from the left
+of those asymptotes.)&nbsp; In the second diagram, we've changed the accelerations so the two hyperbolae have the
+<em>same</em> asymptote.&nbsp; For that pair of rockets, it turns out that the red rocket <em>will</em> say that
+event A is simultaneous with event B, and the rockets will not measure each other to be drifting apart.&nbsp; This
+is remarkable, and in fact it forms the basis of Einstein's Equivalence Principle.&nbsp; Both rockets can agree on
+the simultaneity of all events, and as such can construct one meaningful set of coordinates that both can use to
+describe the world in identical terms.&nbsp; They form a <i>uniformly accelerated frame</i>, also known as a
+<i>Rindler frame</i>.&nbsp; The key to constructing such a frame is that its observers <em>don't</em> all have the
+same acceleration at the same lab times (although each observer does feel a constant acceleration).&nbsp; Even so,
+they <em>do</em> all measure themselves to be at rest relative to each other, and they all agree on the timing and
+simultaneity of events.</p>
+
+<p>A study of how different observers accelerate to form a frame in which they can agree on simultaneity and can
+all set their clocks to a common time is not trivial, mathematically speaking.&nbsp; In basic special relativity
+when we consider inertial frames, we always assume that these frames have been inertial <em>forever</em>; we don't
+ask how they got to be moving that way.&nbsp; And that's fine.&nbsp; In the same way, it's best to make the second
+diagram symmetrical across the x-axis, so the rockets accelerate from infinitely far in the past to infinitely far
+into the future.&nbsp; Also, instead of just two hyperbolae, a Rindler frame has a continuous family of hyperbolae,
+filling out the so-called <em>Rindler wedge</em>: the region between the half-lines at plus and minus 45 degrees
+emanating from the origin.</p>
+
+
+<h2>What about the String?</h2>
+
+<p>Both Dewan and Beran and also Bell spoke of the rockets being constructed identically, and following identical
+acceleration programs.&nbsp; They conclude that the separation of the rockets in the lab frame will remain
+constant.&nbsp; Now, if we have a real string connecting the rockets, this no longer follows: the tension in the
+string will exert a force on both rockets, trying to reduce the acceleration of the leading rocket and to increase
+that of the trailing rocket.&nbsp; In the limit of an "infinitely strong string" (Hooke's constant infinity), the
+rockets would form a Rindler pair.&nbsp; In the limit of an infinitely weak string, they would maintain a constant
+separation, either because the string immediately breaks or because it stretches while exerting zero tension
+(Hooke's constant 0).</p>
+
+<p>What would actually happen?&nbsp; That depends on how realistically we want to model the situation.&nbsp; The
+Dewan&ndash;Beran scenario comes from inserting a physically realistic string into physically unrealistic
+kinematics.&nbsp; Let's start with the dynamics of a single particle (i.e., a mass point), and then increase the
+reality quotient bit by bit.</p>
+
+<p>For a single particle, the so-called <i>proper acceleration</i> is the acceleration as measured in a momentarily
+comoving inertial frame.&nbsp; If <i>g'</i> is the proper acceleration and <i>g</i> is the acceleration as measured in
+the lab frame, then computation shows that <i>g = g'</i>/&gamma;<sup>3</sup>.&nbsp; If <i>m'</i> is the rest mass of
+the point and <i>m</i> is its relativistic mass (the mass as measured in the lab frame), then <i>m =
+&gamma;m'</i>.&nbsp; So using good old <i>F = ma</i>, we conclude that a so-called <i>proper force F'</i> corresponds
+to a force <i>F = F'</i>/&gamma;<sup>2</sup>, as measured by the lab observers.&nbsp; It turns out that real forces
+such as electromagnetic forces do follow this transformation rule.</p>
+
+<p>We can model our string as a chain of particles, with the front of the chain attached to the leading
+rocket, and the end of the chain attached to the trailing rocket.&nbsp; For the simplest analysis, we just
+<em>assume</em> that the points follow certain paths through spacetime, and calculate the forces needed.&nbsp; In the
+Dewan&ndash;Beran scenario, all the points have the same constant proper acceleration at all times, so the same
+constant proper force is needed for each.&nbsp; This doesn't seem like a problem.&nbsp; But note that the points keep
+getting farther and farther apart, indefinitely, as seen by the MCIFs.&nbsp; If we impose the physical assumption that
+no real string can stretch indefinitely, we conclude that the string eventually breaks.</p>
+
+<p>If we opt for even more realism, we need a model of the cohesive forces.&nbsp; The simplest is surely Hooke's
+law; but something more complicated is needed if you want to incorporate an elastic limit.&nbsp; (Pure
+electromagnetism won't give you this; quantum mechanics is also needed.)&nbsp; We also need to consider the
+acceleration forces from the rocket engines, and how forces are transmitted down the string.&nbsp; To keep things
+fairly simple, let's take the case where the leading rocket is <em>towing</em> the trailing rocket, and discuss it
+qualitatively.</p>
+
+<p>When the lead rocket fires its engines, the first particle of the string acquires an acceleration.&nbsp; The
+increasing separation induces an acceleration in the second particle, and so on down the line.&nbsp; Even in
+newtonian mechanics we'd have a pulse traveling down the string.&nbsp; Mathematically, we end up with what are
+called transient solutions to a wave equation; when these die out, we have the so-called steady-state solution.</p>
+
+<p>In the <em>newtonian</em> case, the steady state has all the particles relatively at rest, and so all have the
+same acceleration.&nbsp; The net force on each particle must be the same, or rather proportional to its mass.&nbsp;
+There is a caveat, though: if the elastic limit between a pair of particles is exceeded before reaching the steady
+state, then the string snaps.&nbsp; Whether this happens, of course, depends on all sorts of details.&nbsp; If you
+try to tow a car with thin cotton thread, it will break!&nbsp; With a heavy cable, probably not!</p>
+
+<p>Our relativistic variant tells a similar story, but with a twist.&nbsp; The steady state now looks like a
+Rindler family of hyperbolae.&nbsp; The particles farther back must have <em>greater</em> acceleration than the
+ones in front.&nbsp; If we impose the boundary condition that the last particle (attached to the trailing
+spaceship) must have the <em>same</em> proper acceleration as the leading spaceship, then no steady-state
+solution exists.</p>
+
+<p>In a sense, the Dewan&ndash;Beran&ndash;Bell scenario has a newtonian counterpart.&nbsp; Suppose we have a truck
+towing a car.&nbsp; Suppose we assume the truck and car each have constant acceleration, with
+<i>g</i><sub>truck</sub> > <i>g</i><sub>car</sub>.&nbsp; Then the chain between them must either stretch
+indefinitely, or finally break.&nbsp; No surprise there!&nbsp; The relativity variant packs a punch because of the
+unfamiliar kinematics of SR.</p>
+
+<p><em>To see all the details of how different observers must accelerate to form a uniformly accelerated
+frame, see Chapter 7 of "Explorations in Mathematical Physics" by D. Koks (Springer, 2006).</em></p>
+
+<h3>References:</h3>
+
+<p><a name="dewan">[1]</a> Edmond Dewan and Michael Beran, <i>Note on stress effects due to relativistic
+contraction</i>, American Journal of Physics, March 1959, pages 517&ndash;518.
+
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a>
+
+<p><br></p>
+
+</body>
+</html>

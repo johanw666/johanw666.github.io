@@ -1,0 +1,493 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Differential equations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="4">4. Differential equations</a></h1>
+<h2><a name="4.1">4.1 Linear differential equations</a></h2>
+<h3><a name="4.1.1">4.1.1 First order linear DE</a></h3>
+The general solution of a linear differential equation is given by
+$y_{\rm A}=y_{\rm H}+y_{\rm P}$, where $y_{\rm H}$ is the solution of the
+<em>homogeneous equation</em> and $y_{\rm P}$ is a <em>particular solution</em>.
+<p>
+A first order differential equation is given by: $y'(x)+a(x)y(x)=b(x)$.
+Its homogeneous equation is $y'(x)+a(x)y(x)=0$.
+<p>
+The solution of the homogeneous equation is given by
+\[
+y_{\rm H}=k\exp\left(\int a(x)dx\right)
+\]
+Suppose that $a(x)=a=$constant.
+<p>
+Substitution of $\exp(\lambda x)$ in the homogeneous equation leads to the
+<em>characteristic equation</em> $\lambda+a=0\Rightarrow\lambda=-a$.
+<p>
+Suppose $b(x)=\alpha\exp(\mu x)$. Than one can distinguish two cases:
+<ol>
+<li>$\lambda\neq\mu$: a particular solution is: $y_{\rm P}=\exp(\mu x)$</li>
+<li>$\lambda=\mu$: a particular solution is: $y_{\rm P}=x\exp(\mu x)$</li>
+</ol>
+<p>
+When a DE is solved by <em>variation of parameters</em> one writes:
+$y_{\rm P}(x)=y_{\rm H}(x)f(x)$, and than one solves $f(x)$ from this.
+
+<h3><a name="4.1.2">4.1.2 Second order linear DE</a></h3>
+A differential equation of the second order with constant coefficients is given
+by: $y''(x)+ay'(x)+by(x)=c(x)$. If $c(x)=c=$constant there exists a particular
+solution $y_{\rm P}=c/b$.
+<p>
+Substitution of $y=\exp(\lambda x)$ leads to the characteristic equation
+$\lambda^2+a\lambda+b=0$.
+<p>
+There are now 2 possibilities:
+<ol>
+<li>$\lambda_1\neq\lambda_2$: than $y_{\rm H}=\alpha\exp(\lambda_1 x)+\beta\exp(\lambda_2 x)$.</li>
+<li>$\lambda_1=\lambda_2=\lambda$: than $y_{\rm H}=(\alpha +\beta x)\exp(\lambda x)$.</li>
+</ol>
+<p>
+If $c(x)=p(x)\exp(\mu x)$ where $p(x)$ is a polynomial there are 3 possibilities:
+<ol>
+<li>$\lambda_1,\lambda_2\neq\mu$: $y_{\rm P}=q(x)\exp(\mu x)$.</li>
+<li>$\lambda_1=\mu,\lambda_2\neq\mu$: $y_{\rm P}=xq(x)\exp(\mu x)$.</li>
+<li>$\lambda_1=\lambda_2=\mu$: $y_{\rm P}=x^2q(x)\exp(\mu x)$.</li>
+</ol>
+where $q(x)$ is a polynomial of the same order as $p(x)$.
+<p>
+When: $y''(x)+\omega^2y(x)=\omega f(x)$ and $y(0)=y'(0)=0$ follows:
+$y(x)=\int\limits_0^xf(x)\sin(\omega(x-t))dt$.
+
+<h3><a name="4.1.3">4.1.3 The Wronskian</a></h3>
+We start with the LDE $y''(x)+p(x)y'(x)+q(x)y(x)=0$ and the two initial conditions
+$y(x_0)=K_0$ and $y'(x_0)=K_1$. When $p(x)$ and $q(x)$ are continuous on the open
+interval $I$ there exists a unique solution $y(x)$ on this interval.
+<p>
+The general solution can than be written as $y(x)=c_1y_1(x)+c_2y_2(x)$ and
+$y_1$ and $y_2$ are linear independent. These are also <em>all</em> solutions of the LDE.
+<p>
+The <em>Wronskian</em> is defined by:
+\[
+W(y_1,y_2)=
+\left|\begin{array}{cc}
+y_1&y_2\\
+y'_1&y'_2
+\end{array}\right|=y_1y'_2-y_2y'_1
+\]
+<p>
+$y_1$ and $y_2$ are linear independent if and only if on the interval
+$I$ when $\exists x_0\in I$ so that holds:
+$W(y_1(x_0),y_2(x_0))=0$.
+
+<h3><a name="4.1.4">4.1.4 Power series substitution</a></h3>
+When a series $y=\sum a_nx^n$ is substituted in the LDE with constant
+coefficients $y''(x)+py'(x)+qy(x)=0$ this leads to:
+\[
+\sum_n\left[n(n-1)a_nx^{n-2}+pna_nx^{n-1}+qa_nx^n\right]=0
+\]
+Setting coefficients for equal powers of $x$ equal gives:
+\[
+(n+2)(n+1)a_{n+2}+p(n+1)a_{n+1}+qa_n=0
+\]
+This gives a general relation between the coefficients. Special cases are
+$n=0,1,2$.
+
+<h3><a name="4.2">4.2 Some special cases</a></h3>
+<h3><a name="4.2.1">4.2.1 Frobenius' method</a></h3>
+Given the LDE
+\[
+\frac{d^2y(x)}{dx^2}+\frac{b(x)}{x}\frac{dy(x)}{dx}+\frac{c(x)}{x^2}y(x)=0
+\]
+with $b(x)$ and $c(x)$ analytical at $x=0$. This LDE has at least one solution
+of the form
+\[
+y_i(x)=x^{r_i}\sum_{n=0}^\infty a_nx^n~~~\mbox{with}~~i=1,2
+\]
+with $r$ real or complex and chosen so that $a_0\neq0$. When one expands $b(x)$
+and $c(x)$ as $b(x)=b_0+b_1x+b_2x^2+...$ and $c(x)=c_0+c_1x+c_2x^2+...$, it
+follows for $r$:
+\[
+r^2+(b_0-1)r+c_0=0
+\]
+There are now 3 possibilities:
+<ol>
+<li>$r_1=r_2$: than $y(x)=y_1(x)\ln|x|+y_2(x)$.</li>
+<li>$r_1-r_2\in I\hspace{-1mm}N$: than $y(x)=ky_1(x)\ln|x|+y_2(x)$.</li>
+<li>$r_1-r_2\neq Z\hspace{-1ex}Z$: than $y(x)=y_1(x)+y_2(x)$.</li>
+</ol>
+
+<h3><a name="4.2.2">4.2.2 Euler</a></h3>
+Given the LDE
+\[
+x^2\frac{d^2y(x)}{dx^2}+ax\frac{dy(x)}{dx}+by(x)=0
+\]
+Substitution of $y(x)=x^r$ gives an equation for $r$: $r^2+(a-1)r+b=0$. From
+this one gets two solutions $r_1$ and $r_2$. There are now 2 possibilities:
+<ol>
+<li>$r_1\neq r_2$: than $y(x)=C_1x^{r1}+C_2x^{r_2}$.</li>
+<li>$r_1=r_2=r$: than $y(x)=(C_1\ln(x)+C_2)x^r$.</li>
+</ol>
+
+<h3><a name="4.2.3">4.2.3 Legendre's DE</a></h3>
+Given the LDE
+\[
+(1-x^2)\frac{d^2y(x)}{dx^2}-2x\frac{dy(x)}{dx}+n(n-1)y(x)=0
+\]
+The solutions of this equation are given by $y(x)=aP_n(x)+by_2(x)$
+where the <em>Legendre polynomials</em> $P(x)$ are defined by:
+\[
+P_n(x)=\frac{d^n}{dx^n}\left(\frac{(1-x^2)^n}{2^n n!}\right)
+\]
+For these holds: $\|P_n\|^2=2/(2n+1)$.
+
+<h3><a name="4.2.4">4.2.4 The associated Legendre equation</a></h3>
+This equation follows from the $\theta$-dependent part of the wave equation
+$\nabla^2\Psi=0$ by substitution of $\xi=\cos(\theta)$. Than follows:
+\[
+(1-\xi^2)\frac{d}{d\xi}\left((1-\xi^2)\frac{dP(\xi)}{d\xi}\right)+
+[C(1-\xi^2)-m^2]P(\xi)=0
+\]
+Regular solutions exists only if $C=l(l+1)$. They are of the form:
+\[
+P_l^{|m|}(\xi)=(1-\xi^2)^{m/2}\frac{d^{|m|}P^0(\xi)}{d\xi^{|m|}}=
+\frac{(1-\xi^2)^{|m|/2}}{2^ll!}\frac{d^{|m|+l}}{d\xi^{|m|+l}}(\xi^2-1)^l
+\]
+For $|m|>l$ is $P_l^{|m|}(\xi)=0$.
+Some properties of $P_l^0(\xi)$ zijn:
+\[
+\int\limits_{-1}^1P_l^0(\xi)P_{l'}^0(\xi)d\xi=\frac{2}{2l+1}\delta_{ll'}~~~,~~~
+\sum_{l=0}^\infty P_l^0(\xi)t^l=\frac{1}{\sqrt{1-2\xi t+t^2}}
+\]
+This polynomial can be written as:
+\[
+P_l^0(\xi)=\frac{1}{\pi}\int\limits_0^\pi(\xi+\sqrt{\xi^2-1}\cos(\theta))^ld\theta
+\]
+
+<h3><a name="4.2.5">4.2.5 Solutions for Bessel's equation</a></h3>
+Given the LDE
+\[
+x^2\frac{d^2y(x)}{dx^2}+x\frac{dy(x)}{dx}+(x^2-\nu^2)y(x)=0
+\]
+also called <em>Bessel's equation</em>, and the Bessel functions of the first kind
+\[
+J_\nu(x)=x^\nu\sum_{m=0}^\infty\frac{(-1)^mx^{2m}}{2^{2m+\nu}m!\Gamma(\nu+m+1)}
+\]
+for $\nu:=n\in I\hspace{-1mm}N$ this becomes:
+\[
+J_n(x)=x^n\sum_{m=0}^\infty\frac{(-1)^mx^{2m}}{2^{2m+n}m!(n+m)!}
+\]
+When $\nu\neq Z\hspace{-1ex}Z$ the solution is given by $y(x)=aJ_\nu(x)+bJ_{-\nu}(x)$.
+But because for $n\in Z\hspace{-1ex}Z$ holds: $J_{-n}(x)=(-1)^nJ_n(x)$, this does not
+apply to integers. The general solution of Bessel's equation is given by
+$y(x)=aJ_\nu(x)+bY_\nu(x)$, where $Y_\nu$ are the <em>Bessel functions of the
+second kind</em>:
+\[
+Y_\nu(x)=\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu\pi)}~~~\mbox{and}~~~
+Y_n(x)=\lim_{\nu\rightarrow n}Y_\nu(x)
+\]
+The equation $x^2y''(x)+xy'(x)-(x^2+\nu^2)y(x)=0$ has the modified
+Bessel functions of the first kind $I_\nu(x)=i^{-\nu}J_\nu(ix)$ as solution,
+and also solutions $K_\nu=\pi[I_{-\nu}(x)-I_\nu(x)]/[2\sin(\nu\pi)]$.
+<p>
+Sometimes it can be convenient to write the solutions of Bessel's equation in
+terms of the Hankel functions
+\[
+H^{(1)}_n(x)=J_n(x)+iY_n(x)~~,~~H^{(2)}_n(x)=J_n(x)-iY_n(x)
+\]
+
+<h3><a name="4.2.6">4.2.6 Properties of Bessel functions</a></h3>
+Bessel functions are orthogonal with respect to the weight function $p(x)=x$.
+<p>
+$J_{-n}(x)=(-1)^nJ_n(x)$. The Neumann functions $N_m(x)$ are definied as:
+\[
+N_m(x)=\frac{1}{2\pi}J_m(x)\ln(x)+\frac{1}{x^m}\sum_{n=0}^\infty \alpha_nx^{2n}
+\]
+The following holds: $\lim\limits_{x\rightarrow0}J_m(x)=x^m$,
+$\lim\limits_{x\rightarrow0}N_m(x)=x^{-m}$ for $m\neq0$,
+$\lim\limits_{x\rightarrow0}N_0(x)=\ln(x)$.
+\[
+\lim_{r\rightarrow\infty}H(r)=\frac{{\rm e}^{\pm ikr}{\rm e}^{i\omega t}}{\sqrt{r}}~~,~~
+\lim_{x\rightarrow\infty}J_n(x)=\sqrt{\frac{2}{\pi x}}\cos(x-x_n)~~,~~
+\lim_{x\rightarrow\infty}J_{-n}(x)=\sqrt{\frac{2}{\pi x}}\sin(x-x_n)
+\]
+with $x_n=\frac{1}{2}\pi(n+\frac{1}{2})$.
+\[
+J_{n+1}(x)+J_{n-1}(x)=\frac{2n}{x}J_n(x)~~,~~J_{n+1}(x)-J_{n-1}(x)=-2\frac{dJ_n(x)}{dx}
+\]
+The following integral relations hold:
+\[
+J_m(x)=\frac{1}{2\pi}\int\limits_0^{2\pi}\exp[i(x\sin(\theta)-m\theta)]d\theta=
+\frac{1}{\pi}\int\limits_0^\pi\cos(x\sin(\theta)-m\theta)d\theta
+\]
+
+<h3><a name="4.2.7">4.2.7 Laguerre's equation</a></h3>
+Given the LDE
+\[
+x\frac{d^2y(x)}{dx^2}+(1-x)\frac{dy(x)}{dx}+ny(x)=0
+\]
+Solutions of this equation are the Laguerre polynomials $L_n(x)$:
+\[
+L_n(x)=\frac{{\rm e}^x}{n!}\frac{d^n}{dx^n}\left(x^n{\rm e}^{-x}\right)=
+\sum_{m=0}^\infty\frac{(-1)^m}{m!}{n\choose m}x^m
+\]
+
+<h3><a name="4.2.8">4.2.8 The associated Laguerre equation</a></h3>
+Given the LDE
+\[
+\frac{d^2y(x)}{dx^2}+\left(\frac{m+1}{x}-1\right)\frac{dy(x)}{dx}+\left(\frac{n+\frac{1}{2}(m+1)}{x}\right)y(x)=0
+\]
+Solutions of this equation are the associated Laguerre polynomials $L_n^m(x)$:
+\[
+L_n^m(x)=\frac{(-1)^mn!}{(n-m)!}{\rm e}^{-x}x^{-m}\frac{d^{n-m}}{dx^{n-m}}\left({\rm e}^{-x}x^n\right)
+\]
+
+<h3><a name="4.2.9">4.2.9 Hermite</a></h3>
+The differential equations of Hermite are:
+\[
+\frac{d^2 {\rm H}_n(x)}{dx^2}-2x\frac{d{\rm H}_n(x)}{dx}+2n{\rm H}_n(x)=0~~\mbox{and}~~
+\frac{d^2{\rm He}_n(x)}{dx^2}-x\frac{d{\rm He}_n(x)}{dx}+n{\rm He}_n(x)=0
+\]
+Solutions of these equations are the Hermite polynomials, given by:
+\[
+{\rm H}_n(x)=(-1)^n\exp\left(\frac{1}{2}x^2\right)\frac{d^n(\exp(-\frac{1}{2}x^2))}{dx^n}=2^{n/2}{\rm He}_n(x\sqrt{2})
+\]
+\[
+{\rm He}_n(x)=(-1)^n(\exp\left(x^2\right)\frac{d^n(\exp(-x^2))}{dx^n}=2^{-n/2}{\rm He}_n(x/\sqrt{2})
+\]
+
+<h3><a name="4.2.10">4.2.10 Chebyshev</a></h3>
+The LDE
+\[
+(1-x^2)\frac{d^2U_n(x)}{dx^2}-3x\frac{dU_n(x)}{dx}+n(n+2)U_n(x)=0
+\]
+has solutions of the form
+\[
+U_n(x)=\frac{\sin[(n+1)\arccos(x)]}{\sqrt{1-x^2}}
+\]
+The LDE
+\[
+(1-x^2)\frac{d^2T_n(x)}{dx^2}-x\frac{dT_n(x)}{dx}+n^2T_n(x)=0
+\]
+has solutions $T_n(x)=\cos(n\arccos(x))$.
+
+<h3><a name="4.2.11">4.2.11 Weber</a></h3>
+The LDE $W''_n(x)+(n+\frac{1}{2}-\frac{1}{4} x^2)W_n(x)=0$ has solutions:
+$W_n(x)={\rm He}_n(x)\exp(-\frac{1}{4} x^2)$.
+
+<h2><a name="4.3">4.3 Non-linear differential equations</a></h2>
+Some non-linear differential equations and a solution are:
+\[
+\begin{array}{lll}
+y'=a\sqrt{y^2+b^2}&~~~~&y=b\sinh(a(x-x_0))\\
+y'=a\sqrt{y^2-b^2}&~~~~&y=b\cosh(a(x-x_0))\\
+y'=a\sqrt{b^2-y^2}&~~~~&y=b\cos(a(x-x_0))\\
+y'=a(y^2+b^2)     &~~~~&y=b\tan(a(x-x_0))\\
+y'=a(y^2-b^2)     &~~~~&y=b\coth(a(x-x_0))\\
+y'=a(b^2-y^2)     &~~~~&y=b\tanh(a(x-x_0))\\
+\displaystyle y'=ay\left(\frac{b-y}{b}\right)&~~~~&\displaystyle y=\frac{b}{1+Cb\exp(-ax)}
+\end{array}
+\]
+
+<h2><a name="4.4">4.4 Sturm-Liouville equations</a></h2>
+Sturm-Liouville equations are second order LDE's of the form:
+\[
+-\frac{d}{dx}\left(p(x)\frac{dy(x)}{dx}\right)+q(x)y(x)=\lambda m(x)y(x)
+\]
+The boundary conditions are chosen so that the operator
+\[
+L=-\frac{d}{dx}\left(p(x)\frac{d}{dx}\right)+q(x)
+\]
+is Hermitean. The normalization function $m(x)$ must satisfy
+\[
+\int\limits_a^bm(x)y_i(x)y_j(x)dx=\delta_{ij}
+\]
+When $y_1(x)$ and $y_2(x)$ are two linear independent solutions one can write
+the Wronskian in this form:
+\[
+W(y_1,y_2)=\left|\begin{array}{cc}y_1&y_2\\ y_1'&y_2' \end{array}\right|=
+\frac{C}{p(x)}
+\]
+where $C$ is constant. By changing to another dependent variable $u(x)$,
+given by: $u(x)=y(x)\sqrt{p(x)}$, the LDE transforms into the
+<em>normal form</em>:
+\[
+\frac{d^2u(x)}{dx^2}+I(x)u(x)=0~~~\mbox{with}~~~
+I(x)=\frac{1}{4}\left(\frac{p'(x)}{p(x)}\right)^2-\frac{1}{2}\frac{p''(x)}{p(x)}-\frac{q(x)-\lambda m(x)}{p(x)}
+\]
+If $I(x)>0$, than $y''/y<0$ and the solution has an oscillatory behaviour,
+if $I(x)<0$, than $y''/y>0$ and the solution has an exponential behaviour.
+
+<h2><a name="4.5">4.5 Linear partial differential equations</a></h2>
+<h3><a name="4.5.1">4.5.1 General</a></h3>
+The <em>normal derivative</em> is defined by:
+\[
+\frac{\partial u}{\partial n}=(\vec{\nabla}u,\vec{n})
+\]
+A frequently used solution method for PDE's is <em>separation of variables</em>:
+one assumes that the solution can be written as $u(x,t)=X(x)T(t)$. When this
+is substituted two ordinary DE's for $X(x)$ and $T(t)$ are obtained.
+
+<h3><a name="4.5.2">4.5.2 Special cases</a></h3>
+<h4><a name="4.5.2.1">4.5.2.1 The wave equation</a></h4>
+The <em>wave equation</em> in 1 dimension is given by
+\[
+\frac{\partial^2u}{\partial t^2}=c^2\frac{\partial^2u}{\partial x^2}
+\]
+When the initial conditions $u(x,0)=\varphi(x)$ and
+$\partial u(x,0)/\partial t=\Psi(x)$ apply, the general solution is given by:
+\[
+u(x,t)=\frac{1}{2}\left[\varphi(x+ct)+\varphi(x-ct)\right]+\frac{1}{2c}
+\int\limits_{x-ct}^{x+ct}\Psi(\xi)d\xi
+\]
+
+<h4><a name="4.5.2.2">4.5.2.2 The diffusion equation</a></h4>
+The <em>diffusion equation</em> is:
+\[
+\frac{\partial u}{\partial t}=D\nabla^2u
+\]
+Its solutions can be written in terms of the propagators $P(x,x',t)$. These
+have the property that $P(x,x',0)=\delta(x-x')$. In 1 dimension it reads:
+\[
+P(x,x',t)=\frac{1}{2\sqrt{\pi Dt}}\exp\left(\frac{-(x-x')^2}{4Dt}\right)
+\]
+In 3 dimensions it reads:
+\[
+P(x,x',t)=\frac{1}{8(\pi Dt)^{3/2}}\exp\left(\frac{-(\vec{x}-\vec{x}')^2}{4Dt}\right)
+\]
+With initial condition $u(x,0)=f(x)$ the solution is:
+\[
+u(x,t)=\int\limits_{\cal G}f(x')P(x,x',t)dx'
+\]
+The solution of the equation
+\[
+\frac{\partial u}{\partial t}-D\frac{\partial^2u}{\partial x^2}=g(x,t)
+\]
+is given by
+\[
+u(x,t)=\int dt' \int dx'g(x',t')P(x,x',t-t')
+\]
+
+<h4><a name="4.5.2.3">4.5.2.3 The equation of Helmholtz</a></h4>
+The equation of Helmholtz is obtained by substitution of
+$u(\vec{x},t)=v(\vec{x})\exp(i\omega t)$ in the wave equation. This gives
+for $v$:
+\[
+\nabla^2v(\vec{x},\omega)+k^2v(\vec{x},\omega)=0
+\]
+This gives as solutions for $v$:
+<ol>
+<li>In cartesian coordinates: substitution of
+$v=A\exp(i\vec{k}\cdot\vec{x})$ gives:
+\[
+v(\vec{x})=\int\cdots\int A(k){\rm e}^{i\vec{k}\cdot\vec{x}}dk
+\]
+with the integrals over $\vec{k}^2=k^2$.
+\item In polar coordinates:
+\[
+v(r,\varphi)=\sum_{m=0}^\infty(A_mJ_m(kr)+B_mN_m(kr)){\rm e}^{im\varphi}
+\]
+</li>
+<li>In spherical coordinates:
+\[
+v(r,\theta,\varphi)=\sum_{l=0}^\infty\sum_{m=-l}^l[A_{lm}J_{l+\frac{1}{2}}(kr)+B_{lm}J_{-l-\frac{1}{2}}(kr)]\frac{Y(\theta,\varphi)}{\sqrt{r}}
+\]
+</li>
+</ol>
+<p>
+
+<h3><a name="4.5.3">4.5.3 Potential theory and Green's theorem</a></h3>
+Subject of the potential theory are the <em>Poisson equation</em>
+$\nabla^2u=-f(\vec{x})$ where $f$ is a given function, and the <em>Laplace
+equation</em> $\nabla^2u=0$. The solutions of these can often be interpreted as
+a potential. The solutions of Laplace's equation are called <em>harmonic functions</em>.
+<p>
+When a vector field $\vec{v}$ is given by $\vec{v}={\rm grad}\varphi$
+holds:
+\[
+\int\limits_a^b(\vec{v},\vec{t})ds=\varphi(\vec{b})-\varphi(\vec{a})
+\]
+In this case there exist functions $\varphi$ and $\vec{w}$ so that
+$\vec{v}={\rm grad}\varphi+{\rm curl}\vec{w}$.
+<p>
+The <em>field lines</em> of the field $\vec{v}(\vec{x})$ follow from:
+\[
+\dot{\vec{x}}(t)=\lambda\vec{v}(\vec{x})
+\]
+The <em>first theorem of Green</em> is:
+\[
+\iiint\limits_{\cal\!\!\! G}[u\nabla^2v+(\nabla u,\nabla v)]d^3V=\mathop{\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc}\limits_{\cal\!\!\! S}u\frac{\partial v}{\partial n}d^2A
+\]
+The <em>second theorem of Green</em> is:
+\[
+\iiint\limits_{\cal\!\!\! G}[u\nabla^2v-v\nabla^2u]d^3V=\mathop{\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc}\limits_{\cal\!\!\! S}\left(u\frac{\partial v}{\partial n}-v\frac{\partial u}{\partial n}\right)d^2A
+\]
+A harmonic function which is 0 on the boundary of an area is also 0 within that
+area. A harmonic function with a normal derivative of 0 on the boundary of an
+area is constant within that area.
+<p>
+The <em>Dirichlet problem</em> is:
+\[
+\nabla^2u(\vec{x})=-f(\vec{x})~~,~~\vec{x}\in R~~,~~u(\vec{x})=g(\vec{x})~~\mbox{for all}~~\vec{x}\in S.
+\]
+It has a unique solution.
+<p>
+The <em>Neumann problem</em> is:
+\[
+\nabla^2u(\vec{x})=-f(\vec{x})~~,~~\vec{x}\in R~~,~~\frac{\partial u(\vec{x})}{\partial n}=h(\vec{x})~~\mbox{for all}~~\vec{x}\in S.
+\]
+The solution is unique except for a constant. The solution exists if:
+\[
+-\iiint\limits_{\!\!\!R}f(\vec{x})d^3V=\mathop{\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc}_{\!\!\!S}h(\vec{x})d^2A
+\]
+A <em>fundamental solution</em> of the Laplace equation satisfies:
+\[
+\nabla^2u(\vec{x})=-\delta(\vec{x})
+\]
+This has in 2 dimensions in polar coordinates the following solution:
+\[
+u(r)=\frac{\ln(r)}{2\pi}
+\]
+This has in 3 dimensions in spherical coordinates the following solution:
+\[
+u(r)=\frac{1}{4\pi r}
+\]
+The equation $\nabla^2v=-\delta(\vec{x}-\vec{\xi})$ has the solution
+\[
+v(\vec{x})=\frac{1}{4\pi|\vec{x}-\vec{\xi}|}
+\]
+After substituting this in Green's 2nd theorem and applying the sieve
+property of the $\delta$ function one can derive Green's 3rd theorem:
+\[
+u(\vec{\xi})=-\frac{1}{4\pi}\iiint\limits_R\frac{\nabla^2u}{r}d^3V+
+\frac{1}{4\pi}\mathop{\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc}\limits_S\left[\frac{1}{r}\frac{\partial u}{\partial n}-u\frac{\partial}{\partial n}\left(\frac{1}{r}\right)\right]d^2A
+\]
+The <em>Green function</em> $G(\vec{x},\vec{\xi})$ is defined by:
+$\nabla^2G=-\delta(\vec{x}-\vec{\xi})$, and on boundary $S$ holds
+$G(\vec{x},\vec{\xi})=0$. Than $G$ can be written as:
+\[
+G(\vec{x},\vec{\xi})=\frac{1}{4\pi|\vec{x}-\vec{\xi}|}+g(\vec{x},\vec{\xi})
+\]
+Than $g(\vec{x},\vec{\xi})$ is a solution of Dirichlet's problem. The solution
+of Poisson's equation $\nabla^2u=-f(\vec{x})$ when on the boundary $S$ holds:
+$u(\vec{x})=g(\vec{x})$, is:
+\[
+u(\vec{\xi})=\iiint\limits_RG(\vec{x},\vec{\xi})f(\vec{x})d^3V-
+\mathop{\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc}\limits_Sg(\vec{x})\frac{\partial G(\vec{x},\vec{\xi})}{\partial n}d^2A
+\]
+
+</body>
+</head>

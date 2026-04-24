@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Which Way Will my Bathtub Drain?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Slight update 2022 by DK.<br>
+Original by Matthew Feinstein.</p>
+<p><br></p>
+
+
+<h1>Which Way Will my Bathtub Drain?</h1>
+
+<p>Question: Does my bathtub drain differently depending on whether I live in the northern
+or southern hemisphere?</p>
+
+<p>Answer: No.&nbsp; There is a real effect, but it is far too small to be relevant when
+you pull the plug in your bathtub.</p>
+
+<p>Because Earth rotates, a fluid that flows along Earth's surface feels a
+"Coriolis" acceleration perpendicular to its velocity.&nbsp; In the northern
+hemisphere, Coriolis acceleration makes low-pressure storm systems spin counterclockwise;
+but in the southern hemisphere, such storm systems spin clockwise because the direction of the
+Coriolis acceleration is reversed.&nbsp; This large-scale meteorological effect leads to
+the speculation that the small-scale bathtub vortex that you see when you pull the plug
+from the drain spins one way in the northern hemisphere and the other way in the southern
+hemisphere.</p>
+
+<p>But this effect is <em>very</em> weak for bathtub-scale fluid motions.&nbsp; The order of magnitude of the Coriolis
+acceleration can be estimated from size of the "Rossby number" (see reference 1 below).&nbsp; The effect of the Coriolis
+acceleration on your bathtub vortex is <em>very</em> small.&nbsp; To detect its effect in your bathtub, you would have to get
+out and wait until the motion in the water is far less than one rotation per day.&nbsp; This would require removing thermal
+currents, vibration, and any other sources of noise.&nbsp; Under such conditions, never occurring in a typical home, you
+<em>would</em> see an effect.&nbsp; To see what trouble it takes to actually see that effect, see reference 2 below.&nbsp; It
+discusses experiments that have been done in both the northern and southern hemispheres, which verify that under <em>very
+carefully controlled</em> conditions, bathtubs do drain in opposite directions due to the Coriolis acceleration from the
+Earth's rotation.</p>
+
+<p>Coriolis accelerations are significant when the Rossby number is <em>small</em>.&nbsp; So, suppose we assume a Rossby number
+of 0.1 and a bathtub-vortex length scale of 0.1 metres.&nbsp; The Rossby number is defined as
+<pre style="font-size: 24px">
+       Rossby number = v/(2 L &omega;) ,
+</pre>
+where <em>v</em> is the speed of a fluid element, <em>L</em> is the scale of the fluid motion (assumed to be about 0.1 m
+above), and &omega; is Earth's rotation speed of one rotation per day, or about 10<sup>&minus;4</sup> radians/second.&nbsp;
+Solving the above equation for the fluid speed <em>v</em>, we find that the Coriolis acceleration in a bathtub is significant
+for fluid speeds of less than 2 &times; 10<sup>&minus;6</sup> metres/second.&nbsp; This is a very small speed.&nbsp; How small
+is it?</p>
+
+<p>Well, we can take the analysis a step further and calculate another, more famous dimensionless parameter, the Reynolds
+number:
+<pre style="font-size: 24px">
+        Reynolds number = L v density/viscosity .
+</pre>
+
+<p>Assuming that physicists bathe in hot water, we have <em>L</em> = 0.1 metres as above, <em>v</em> = 2 &times;
+10<sup>&minus;6</sup> metres/second, density = 10<sup>3</sup> kg/m<sup>3</sup>, and viscosity equals about 8 &times;
+10<sup>&minus;4</sup> pascal seconds.&nbsp; So the Reynolds number is about 0.25, which is very low.</p>
+
+<p>Now, life at low Reynolds numbers is different from life at high Reynolds
+numbers.&nbsp; In particular, at low Reynolds numbers, fluid physics is dominated by
+friction and diffusion, rather than by inertia.&nbsp; That is, at low Reynolds numbers, the
+time it would take for a small piece of fluid to move a significant distance due to an
+acceleration, is greater than the time it takes for that piece to break up due to
+diffusion.</p>
+
+<p>Ideas about which way a bathtub will drain have also been cited for giving the direction water circulates when you flush a
+toilet.&nbsp; This is surely nonsense.&nbsp; In this case, the water rotates in the direction determined by the pipe that
+carries the water from the cistern to the bowl.</p>
+
+<h3>References:</h3>
+
+<p>1.&nbsp J. Pedlosky, "Geophysical Fluid Dynamics", Section 1.2.</p>
+
+<p>2.&nbsp L.M. Trefethen et al., Nature <b>207</b>, 1084&ndash;5 (1965).</p>
+
+<br><br>
+
+</body>
+</html>

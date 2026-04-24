@@ -1,0 +1,225 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Relativity</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="3">3. Relativity</a></h1>
+
+<h2><a name="3.1">3.1 Special relativity</a></h2>
+<h3><a name="3.1.1">3.1.1 The Lorentz transformation</a></h3>
+
+<p>The Lorentz transformation \((\vec{x}\,',t')=(\vec{x}\,'(\vec{x},t),t'(\vec{x},t))\) leaves the wave equation invariant if \(c\) is invariant:</p>
+
+<p>\[\frac{\partial^2 }{\partial x^2}+\frac{\partial^2 }{\partial y^2}+\frac{\partial^2 }{\partial z^2}-\frac{1}{c^2}\frac{\partial^2 }{\partial t^2}= \frac{\partial^2 }{\partial x'^2}+\frac{\partial^2 }{\partial y'^2}+\frac{\partial^2 }{\partial z'^2}-\frac{1}{c^2}\frac{\partial^2 }{\partial t'^2}\]</p>
+
+<p>This transformation can also be found when \(ds^2=ds'^2\) is demanded. The general form of the Lorentz transformation is given by:&nbsp;</p>
+
+<p>\[ \vec{x}\;'=\vec{x} + \frac{(\gamma-1)(\vec{x}\cdot \vec{v}\; ) \vec{v}}{|v|^2}-\gamma\vec{v}t&nbsp; ~~,~~ t'=\gamma\left(t-\frac{\vec{x}\cdot\vec{v}}{c^2}\right) \]</p>
+
+<p>where</p>
+
+<p>\[\gamma=\frac{1}{\sqrt{1-\frac{\displaystyle v^2}{\displaystyle c^2}}}\]</p>
+
+<p>The velocity difference \(\vec{v}\,'\) between two observers transforms according to:</p>
+
+<p>\[\vec{v}\,'=\left(\gamma\left(1-\frac{\vec{v}_1\cdot\vec{v}_2}{c^2}\right)\right)^{-1} \left(\vec{v}_2+(\gamma-1)\frac{\vec{v}_1\cdot\vec{v}_2}{v_1^2}\vec{v}_1-\gamma\vec{v}_1\right)\]</p>
+
+<p>If the velocity is parallel to the \(x\)-axis, this becomes \(y'=y\), \(z'=z\) and:</p>
+
+<p>\[\begin{aligned} &amp;&amp;x'=\gamma(x-vt)~,~~~x=\gamma(x'+vt')\\ &amp;&amp;t'=\gamma\left(t-\displaystyle\frac{xv}{c^2}\right)~,~~~t=\gamma\left(t'+\displaystyle\frac{x'v}{c^2}\right)~,~~~ v'=\frac{\displaystyle v_2-v_1}{\displaystyle 1-\frac{v_1v_2}{c^2}}\end{aligned}\]</p>
+
+<p>If \(\vec{v}=v\vec{e}_x\) holds:</p>
+
+<p>\[p'_x=\gamma\left(p_x-\frac{\beta W}{c}\right)~,~~~W'=\gamma(W-vp_x)\] With \(\beta=v/c\) the electric field of a moving charge is given by:</p>
+
+<p>\[\vec{E}=\frac{Q}{4\pi\varepsilon_0r^2}\frac{(1-\beta^2)\vec{e}_{r}}{(1-\beta^2\sin^2(\theta))^{3/2}}\]</p>
+
+<p>The electromagnetic field transforms according to:</p>
+
+<p>\[\vec{E}'=\gamma(\vec{E}+\vec{v}\times\vec{B}\,)~~,~~~ \vec{B}'=\gamma\left(\vec{B}-\frac{\vec{v}\times\vec{E}}{c^2}\right)\]</p>
+
+<p>Length, mass and time transform according to: \(\Delta t_{\rm r}=\gamma\Delta t_{\rm 0}\), \(m_{\rm r}=\gamma m_0\), \(l_{\rm r}=l_0/\gamma\), with \( {\rm 0} \) labeling the quantities in a co-moving reference frame and \({\rm r}\) labeling the quantities in a frame moving with velocity \(v\) w.r.t. it. The proper time \(\tau\) is defined as: \(d\tau^2=ds^2/c^2\), so \(\Delta\tau=\Delta t/\gamma\). Energy and momentum are: \(W=m_{\rm r}c^2=\gamma W_0\), \(W^2=m_0^2c^4+p^2c^2\). \(p=m_{\rm r}v=\gamma m_0v=Wv/c^2\), and \(pc=W\beta\) where \(\beta=v/c\). The <em>force</em> is <em>defined</em> by \(\vec{F}=d\vec{p}/dt\).</p>
+
+<p>4-vectors have the property that their modulus is independent of the observer: their components <em>can</em> change after a coordinate transformation but not their modulus. The difference of two 4-vectors transforms also as a 4-vector. The 4-vector for the velocity is given by \(\displaystyle U^\alpha=\frac{dx^\alpha}{d\tau}\). The relation with the &ldquo;common&rdquo; velocity \(u^i:=dx^i/dt\) is: \(U^\alpha=(\gamma u^i,ic\gamma)\). For particles with nonzero restmass: \(U^\alpha U_\alpha=-c^2\), for particles with zero restmass (so with \(v=c\)) : \(U^\alpha U_\alpha=0\). The 4-vector for energy and momentum is given by: \(p^\alpha=m_0U^\alpha=(\gamma p^i,iW/c)\). So: \(p_\alpha p^\alpha=-m_0^2c^2=p^2-W^2/c^2\).</p>
+
+<h3><a name="3.1.2">3.1.2 Red and blue shift</a></h3>
+
+<p>There are three causes of red and blue shifts:</p>
+
+<ol>
+    <li>Motion: with \(\vec{e}_v\cdot\vec{e}_r=\cos(\varphi)\) follows: \(\displaystyle \frac{f'}{f}=\gamma\left(1-\frac{v\cos(\varphi)}{c}\right)\).<br />
+    This can give both red- and blueshift, also \(\perp\) to the direction of motion.</li>
+    <li>Gravitational redshift: \(\displaystyle\frac{\Delta f}{f}=\frac{\kappa M}{rc^2}\).</li>
+    <li>Redshift because the universe expands, resulting in e.g. the cosmic background radiation: \(\displaystyle\frac{\lambda_0}{\lambda_1}=\frac{R_0}{R_1}\).</li>
+</ol>
+
+<h3><a name="3.1.3">3.1.3 The stress-energy tensor and the field tensor</a></h3>
+
+<p>The stress-energy tensor is given by:</p>
+
+<p>\[T_{\mu\nu}=(\varrho c^2+p)u_\mu u_\nu+pg_{\mu\nu}+\frac{1}{c^2} \left(F_{\mu\alpha}F^\alpha_\nu+\mbox{$\frac{1}{4}$}g_{\mu\nu}F^{\alpha\beta}F_{\alpha\beta}\right)\]</p>
+
+<p>The conservation laws can than be written as: \(\nabla_\nu T^{\mu\nu}=0\). The electromagnetic field tensor is given by:</p>
+
+<p>\[F_{\alpha\beta}=\frac{\partial A_\beta}{\partial x^\alpha}-\frac{\partial A_\alpha}{\partial x^\beta}\]</p>
+
+<p>with \(A_\mu:=(\vec{A},iV/c)\) and \(J_\mu:=(\vec{J},ic\rho)\). Maxwell's equations can than be written as:</p>
+
+<p>\[\partial_\nu F^{\mu\nu}=\mu_0J^\mu~,~~ \partial_\lambda F_{\mu\nu}+\partial_\mu F_{\nu\lambda}+\partial_\nu F_{\lambda\mu}=0\]</p>
+
+<p>The equations of motion for a charged particle in an EM field become with the field tensor:</p>
+
+<p>\[\frac{dp_\alpha}{d\tau}=qF_{\alpha\beta}u^\beta\]</p>
+
+<h2><a name="3.2">General relativity</a></h2>
+<h3><a name="3.2.1">3.2.1 Riemannian geometry, the Einstein tensor</a></h3>
+
+<p>The basic principles of general relativity are:</p>
+
+<ol>
+    <li>The geodesic postulate: free falling particles move along geodesics of space-time with the proper time \(\tau\) or arc length \(s\) as parameter. For particles with zero rest mass (photons), the use of a free parameter is required because for them \(ds=0\). From \(\delta\int ds=0\) the equations of motion can be derived:<br />
+    \[\frac{d^2x^\alpha}{ds^2}+\Gamma_{\beta\gamma}^{\alpha}\frac{dx^\beta}{ds}\frac{dx^\gamma}{ds}=0\]</li>
+    <li>The <em>principle of equivalence</em>: inertial mass \(\equiv\) gravitational mass \(\Rightarrow\) gravitation is equivalent with a curved space-time were particles move along geodesics.</li>
+    <li>By a proper choice of the coordinate system it is possible to make the metric locally flat in each point \(x_i\): \(g_{\alpha\beta}(x_i)=\eta_{\alpha\beta}:=\)diag\((-1,1,1,1)\).</li>
+</ol>
+
+<p>The <em>Riemann tensor</em> is defined as: \(R^\mu_{\nu\alpha\beta}T^\nu:=\nabla_\alpha\nabla_\beta T^\mu-\nabla_\beta\nabla_\alpha T^\mu\), where the covariant derivative is given by \(\nabla_j a^i=\partial_ja^i+\Gamma_{jk}^ia^k\) and \(\nabla_j a_i=\partial_ja_i-\Gamma_{ij}^ka_k\). Here,</p>
+
+<p>\[\Gamma_{jk}^i=\frac{g^{il}}{2}\left(\frac{\partial g_{lj}}{\partial x^k}+ \frac{\partial g_{lk}}{\partial x^j}-\frac{\partial g_{_jk}}{\partial x^l}\right)\]&nbsp;</p>
+
+<p>for Euclidean spaces this reduces to:</p>
+
+<p>\[\Gamma_{jk}^i=\frac{\partial^2\bar{x}^l}{\partial x^j\partial x^k}\frac{\partial x^i}{\partial \bar{x}^l},\]</p>
+
+<p>where \(\Gamma_{jk}^i\) are the <em>Christoffel symbols</em>. For a second-order tensor \([\nabla_\alpha,\nabla_\beta]T_\nu^\mu=R_{\sigma\alpha\beta}^\mu T^\sigma_\nu+R^\sigma_{\nu\alpha\beta}T^\mu_\sigma\), \(\nabla_k a^i_j=\partial_ka^i_j-\Gamma_{kj}^la_l^i+\Gamma_{kl}^ia_j^l\), \(\nabla_k a_{ij}=\partial_ka_{ij}-\Gamma_{ki}^la_{lj}-\Gamma_{kj}^la_{jl}\) and \(\nabla_k a^{ij}=\partial_ka^{ij}+\Gamma_{kl}^ia^{lj}+\Gamma_{kl}^ja^{il}\). The following holds: \(R_{\beta\mu\nu}^\alpha=\partial_\mu\Gamma_{\beta\nu}^\alpha-\partial_\nu\Gamma_{\beta\mu}^\alpha+ \Gamma_{\sigma\mu}^\alpha\Gamma_{\beta\nu}^\sigma-\Gamma_{\sigma\nu}^\alpha\Gamma_{\beta\mu}^\sigma\).</p>
+
+<p>The <em>Ricci tensor</em> is a contraction of the Riemann tensor: \(R_{\alpha\beta}:=R^\mu_{\alpha\mu\beta}\), which is symmetric: \(R_{\alpha\beta}=R_{\beta\alpha}\). The <em>Bianchi identities</em> are: \(\nabla_\lambda R_{\alpha\beta\mu\nu}+\nabla_\nu R_{\alpha\beta\lambda\mu}+ \nabla_\mu R_{\alpha\beta\nu\lambda}=0\).</p>
+
+<p>The <em>Einstein tensor</em> is given by: \(G^{\alpha\beta}:=R^{\alpha\beta}-\frac{1}{2}g^{\alpha\beta}R\), where \(R:=R_\alpha^\alpha\) is the <em>Ricci scalar</em>, for which: \(\nabla_\beta G_{\alpha\beta}=0\). With the variational principle \(\delta\int({\cal L}(g_{\mu\nu})-Rc^2/16\pi\kappa)\sqrt{|g|}d^4x=0\) for variations \(g_{\mu\nu}\rightarrow g_{\mu\nu}+\delta g_{\mu\nu}\) the <em>Einstein field equations</em> can be derived:</p>
+
+<p>\[G_{\alpha\beta}=\frac{8\pi\kappa}{c^2}T_{\alpha\beta}&nbsp;\;\;\;\textrm{, which can also be written as}\;\;\;R_{\alpha\beta}=\frac{8\pi\kappa}{c^2}(T_{\alpha\beta}-\mbox{$\frac{1}{2}$}g_{\alpha\beta}T^{\mu}_{\mu})\]</p>
+
+<p>For empty space this is equivalent to \(R_{\alpha\beta}=0\). The equation \(R_{\alpha\beta\mu\nu}=0\) has as its only solution a flat space.</p>
+
+<p>The Einstein equations are 10 independent equations, which are of second order in \(g_{\mu\nu}\). From this, the <em>Laplace equation</em> from <em>Newtonian gravitation</em> can be derived by starting with: \(g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}\), where \(|h|\ll1\). In the stationary case, this results in \(\nabla^2 h_{00}=8\pi\kappa\varrho/c^2\).</p>
+
+<p>The most general form of the field equations is: \(\displaystyle R_{\alpha\beta}-\frac{1}{2}g_{\alpha\beta}R+\Lambda g_{\alpha\beta}=\frac{8\pi\kappa}{c^2}T_{\alpha\beta}\)</p>
+
+<p>where \(\Lambda\) is the <em>cosmological constant</em>. This constant plays a role in inflatory models of the universe.</p>
+
+<h3><a name="3.2.2">3.2.2 The line element</a></h3>
+
+<p>The <em>metric tensor</em> in an Euclidean space is given by: \(\displaystyle g_{ij}=\sum_k\frac{\partial \bar{x}^k}{\partial x^i}\frac{\partial \bar{x}^k}{\partial x^j}\).</p>
+
+<p>In general: \(ds^2=g_{\mu\nu}dx^\mu dx^\nu\) holds. In special relativity this becomes \(ds^2=-c^2dt^2+dx^2+dy^2+dz^2\). This metric, \(\eta_{\mu\nu}:=\)diag\((-1,1,1,1)\), is called the <em>Minkowski metric</em>.</p>
+
+<p>The <em>external Schwarzschild metric</em> applies in vacuum outside a spherical mass distribution, and is given by:</p>
+
+<p>\[ds^2=\left(-1+\frac{2m}{r}\right)c^2dt^2+\left(1-\frac{2m}{r}\right)^{-1}dr^2+r^2d\Omega^2\]</p>
+
+<p>Here, \(m:=M\kappa/c^2\) is the <em>geometrical mass</em> of an object with mass \(M\), and \(d\Omega^2=d\theta^2+\sin^2\theta d\varphi^2\). This metric is singular for \(r=2m=2\kappa M/c^2\). If an object is smaller than its event horizon \(2m\), that implies that its escape velocity is \(&gt;c\), it is called a <em>black hole</em>. The <em>Newtonian</em> limit of this metric is given by:</p>
+
+<p>\[ds^2=-(1+2V)c^2dt^2+(1-2V)(dx^2+dy^2+dz^2)\]</p>
+
+<p>where \(V=-\kappa M/r\) is the <em>Newtonian gravitation potential</em>. In general relativity, the components of \(g_{\mu\nu}\) are associated with the potentials and the derivatives of \(g_{\mu\nu}\) with the field strength.</p>
+
+<p>The <em>Kruskal-Szekeres</em> coordinates are used to solve certain problems with the <em>Schwarzschild</em> metric near \(r=2m\). They are defined by:</p>
+
+<ul>
+    <li>\(r&gt;2m\): \[\left\{\begin{array}{ccl} u&amp;=&amp;\displaystyle{\sqrt{\frac{r}{2m}-1}\exp\left(\frac{r}{4m}\right)\cosh\left(\frac{t}{4m}\right)}\\ &amp;&amp;\\ v&amp;=&amp;\displaystyle{\sqrt{\frac{r}{2m}-1}\exp\left(\frac{r}{4m}\right)\sinh\left(\frac{t}{4m}\right)} \end{array}\right.\]</li>
+    <li>\(r&lt;2m\): \[\left\{\begin{array}{ccl} u&amp;=&amp;\displaystyle{\sqrt{1-\frac{r}{2m}}\exp\left(\frac{r}{4m}\right)\sinh\left(\frac{t}{4m}\right)}\\ &amp;&amp;\\ v&amp;=&amp;\displaystyle{\sqrt{1-\frac{r}{2m}}\exp\left(\frac{r}{4m}\right)\cosh\left(\frac{t}{4m}\right)} \end{array}\right.\]</li>
+    <li>\(r=2m\): here, the <em>Kruskal coordinates </em>are singular, which is necessary to eliminate the coordinate singularity there.</li>
+</ul>
+
+<p>The line element in these coordinates is given by:</p>
+
+<p>\[ds^2=-\frac{32m^3}{r}{\rm e}^{-r/2m}(dv^2-du^2)+r^2d\Omega^2\]</p>
+
+<p>The line \(r=2m\) corresponds to \(u=v=0\), the limit \(x^0\rightarrow\infty\) with \(u=v\) and \(x^0\rightarrow-\infty\) with \(u=-v\). The <em>Kruskal coordinates</em> are only singular on the hyperbola \(v^2-u^2=1\), this corresponds with \(r=0\). On the line \(dv=\pm du\) &nbsp;\(d\theta=d\varphi=ds=0\) holds.</p>
+
+<p>For the metric outside a rotating, charged spherical mass the <em>Newman metric </em>applies:</p>
+
+<p>\[\begin{aligned} ds^2&amp;=&amp;\left(1-\frac{2mr-e^2}{r^2+a^2\cos^2\theta}\right)c^2dt^2- \left(\frac{r^2+a^2\cos^2\theta}{r^2-2mr+a^2-e^2}\right)dr^2- (r^2+a^2\cos^2\theta)d\theta^2-\\ &amp;&amp;\left(r^2+a^2+\frac{(2mr-e^2)a^2\sin^2\theta}{r^2+a^2\cos^2\theta}\right)\sin^2\theta d\varphi^2+ \left(\frac{2a(2mr-e^2)}{r^2+a^2\cos^2\theta}\right)\sin^2\theta(d\varphi)(cdt)\end{aligned}\]</p>
+
+<p>where \(m=\kappa M/c^2\), \(a=L/Mc\) and \(e=\kappa Q/\varepsilon_0c^2\).</p>
+
+<p>A rotating charged black hole has an event horizon with \(R_{\rm S}=m+\sqrt{m^2-a^2-e^2}\).</p>
+
+<p>Near rotating black holes frame dragging occurs because \(g_{t\varphi}\neq0\). For the <em>Kerr metric</em> (\(e=0\), \(a\neq0\)) then follows that within the surface \(R_{\rm E}=m+\sqrt{m^2-a^2\cos^2\theta}\) (the&nbsp;ergosphere) no particle can be at rest.</p>
+
+<h3><a name="3.2.3">3.2.3 Planetary orbits and the perihelion shift</a></h3>
+
+<p>To find a planetary orbit, the variational problem \(\delta\int ds=0\) has to be solved. This is equivalent to the problem \(\delta\int ds^2=\delta\int g_{ij}dx^idx^j=0\). Substituting the external <em>Schwarzschild metric</em> yields for a planetary orbit:</p>
+
+<p>\[\frac{du}{d\varphi}\left(\frac{d^2u}{d\varphi^2}+u\right)=\frac{du}{d\varphi}\left(3mu+\frac{m}{h^2}\right)\]</p>
+
+<p>where \(u:=1/r\) and \(h=r^2\dot{\varphi}=\)constant. The term \(3mu\) is not present in the classical solution. This term can in the classical case also be found from a potential \(\displaystyle V(r)=-\frac{\kappa M}{r}\left(1+\frac{h^2}{r^2}\right)\).</p>
+
+<p>The orbital equation gives \(r=\)constant as solution, or can, after dividing by \(du/d\varphi\), be solved with perturbation theory. In zeroth order, this results in an elliptical orbit: \(u_0(\varphi)=A+B\cos(\varphi)\) with \(A=m/h^2\) and \(B\) an arbitrary constant. In first order, this becomes:</p>
+
+<p>\[u_1(\varphi)=A+B\cos(\varphi-\varepsilon\varphi)+\varepsilon \left(A+\frac{B^2}{2A}-\frac{B^2}{6A}\cos(2\varphi)\right)\]</p>
+
+<p>where \(\varepsilon=3m^2/h^2\) is small. The perihelion of a planet is the point for which \(r\) is minimal, or \(u\) maximal. This is the case if \(\cos(\varphi-\varepsilon\varphi)=0\Rightarrow\varphi\approx2\pi n(1+\varepsilon)\). For the perihelion shift it then follows that: \(\Delta\varphi=2\pi\varepsilon=6\pi m^2/h^2\) per orbit.</p>
+
+<h3><a name="3.2.4">3.2.4 The trajectory of a photon</a></h3>
+
+<p>For the trajectory of a photon (and for each particle with zero restmass)&nbsp;\(ds^2=0\). Substituting the external <em>Schwarzschild metric</em> results in the following orbital equation:</p>
+
+<p>\[\frac{du}{d\varphi}\left(\frac{d^2u}{d\varphi^2}+u-3mu\right)=0\]</p>
+
+<h3><a name="3.2.5">3.2.5 Gravitational waves</a></h3>
+
+<p>Starting with the approximation \(g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}\) for weak gravitational fields and the definition \(h'_{\mu\nu}=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h^{\alpha}_{\alpha}\) it follows that \(\Box h'_{\mu\nu}=0\) if the gauge condition \(\partial h'_{\mu\nu}/\partial x^\nu=0\) is satisfied. From this, it follows that the loss of energy of a mechanical system, if the occurring velocities are \(\ll c\) and for wavelengths \(\gg\) the size of the system, is given by:</p>
+
+<p>\[\frac{dE}{dt}=-\frac{G}{5c^5}\sum_{i,j}\left(\frac{d^3Q_{ij}}{dt^3}\right)^2\]</p>
+
+<p>with \(Q_{ij}=\int\varrho(x_ix_j-\frac{1}{3}\delta_{ij}r^2)d^3x\) the mass quadrupole moment.</p>
+
+<h3><a name="3.2.6">3.2.6 Cosmology</a></h3>
+
+<p>If for the universe as a whole is assumed:</p>
+
+<ol>
+    <li>There exists a global time coordinate which acts as \(x^0\) of a Gaussian coordinate system,</li>
+    <li>The 3-dimensional spaces are isotrope for a certain value of \(x^0\),</li>
+    <li>Each point is equivalent to each other point for a fixed \(x^0\).</li>
+</ol>
+
+<p>then the <em>Robertson-Walker metric</em> can be derived for the line element:</p>
+
+<p>\[ds^2=-c^2dt^2+\frac{R^2(t)}{r_0^2\left(1-\displaystyle\frac{kr^2}{4r_0^2}\right)}(dr^2+r^2d\Omega^2)\]</p>
+
+<p>For the <em>scalefactor</em> \(R(t)\) the following equations can be derived:</p>
+
+<p>\[\frac{2\ddot{R}}{R}+\frac{\dot{R}^2+kc^2}{R^2}=-\frac{8\pi\kappa p}{c^2}+\Lambda ~~~\mbox{and}~~~ \frac{\dot{R}^2+kc^2}{R^2}=\frac{8\pi\kappa\varrho}{3}+\frac{\Lambda}{3}\]</p>
+
+<p>where \(p\) is the pressure and \(\varrho\) the density of the universe. If \(\Lambda=0\)&nbsp;the <em>deceleration parameter</em> \(q\) can be derived:</p>
+
+<p>\[q=-\frac{\ddot{R}R}{\dot{R}^2}=\frac{4\pi\kappa\varrho}{3H^2}\]</p>
+
+<p>where \(H=\dot{R}/R\) is <em>Hubble&rsquo;s constant</em>. This is a measure of the velocity with which galaxies far away are moving away from each other, and has the value \(\approx(75\pm25)\) km\(\cdot\)s\(^{-1}\cdot\)Mpc\(^{-1}\). This gives 3 possible conditions for the universe (here, \(W\) is the total amount of energy in the universe):</p>
+
+<ol>
+    <li><strong>Parabolical universe</strong>: \(k=0\), \(W=0\), \(q=\frac{1}{2}\). The expansion velocity of the universe \(\rightarrow0\) if \(t\rightarrow\infty\). The hereto related <em>critical density</em> is \(\varrho_{\rm c}=3H^2/8\pi\kappa\).</li>
+    <li><strong>Hyperbolical universe</strong>: \(k=-1\), \(W&lt;0\), \(q&lt;\frac{1}{2}\). The expansion velocity of the universe remains positive forever.</li>
+    <li><strong>Elliptical universe</strong>: \(k=1\), \(W&gt;0\), \(q&gt;\frac{1}{2}\). The expansion velocity of the universe becomes negative after some time: the universe starts collapsing.</li>
+</ol>
+
+</body>
+</html>

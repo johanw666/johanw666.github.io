@@ -1,0 +1,397 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Theory of groups</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="13">13. Theory of groups</a></h1>
+
+<h2><a name="13.1">13.1 Introduction</a></h2>
+<h3><a name="13.1.1">13.1.1 Definition of a group</a></h3>
+
+<p>\({\cal{G}}\) is a group for the operation \(\bullet\) if:</p>
+
+<ol>
+    <li>\(\forall_{A,B\in{\cal{G}}}\Rightarrow A\bullet B\in{\cal{G}}\): \({\cal{G}}\) is <em>closed</em>.</li>
+    <li>\(\forall_{A,B,C\in{\cal{G}}}\Rightarrow (A\bullet B)\bullet C=A\bullet(B\bullet C)\): \({\cal{G}}\) obeys the <em>associative law</em>.</li>
+    <li>\(\exists_{E\in{\cal{G}}}\mbox{ so that }\forall_{A\in{\cal{G}}}A\bullet E=E\bullet A=A\): \({\cal{G}}\) has a <em>unit element</em>.</li>
+    <li>\(\forall_{A\in{\cal{G}}}\exists_{A^{-1}\in{\cal{G}}}\mbox{ so that }A\bullet A^{-1}=E\): Each element in \({\cal{G}}\) has an <em>inverse</em>.</li>
+</ol>
+
+<p>If also holds that if:<br />
+5. \(\forall_{A,B\in{\cal{G}}}\Rightarrow A\bullet B=B\bullet A\) the group is called <em>Abelian</em> or <em>commutative</em>.</p>
+
+<h3><a name="13.1.2">13.1.2 The Cayley table</a></h3>
+
+<p>Each element arises only once in each row and column of the Cayley- or multiplication table: because \(EA_i=A_k^{-1}(A_kA_i)=A_i\) each \(A_i\) appears once. There are \(h\) positions in each row and column when there are \(h\) elements in the group so each element appears only once.</p>
+
+<h3><a name="13.1.3">13.1.3 Conjugated elements, subgroups and classes</a></h3>
+
+<p>\(B\) is <em>conjugate</em> to \(A\) if \(\exists_{X\in{\cal{G}}}\) such that \(B=XAX^{-1}\). Then \(A\) is also conjugate to \(B\) because \(B=(X^{-1})A(X^{-1})^{-1}\).</p>
+
+<p><br />
+If \(B\) and \(C\) are conjugate to \(A\), \(B\) is also conjugate with \(C\).</p>
+
+<p>A <em>subgroup</em> is a subset of \({\cal{G}}\) which is also a group w.r.t. the same operation.</p>
+
+<p>A <em>conjugacy class</em> is the maximum collection of conjugated elements. Each group can be split up in conjugacy classes. Some theorems:</p>
+
+<ul>
+    <li>All classes are completely disjoint.</li>
+    <li>\(E\) is a class itself: for each other element in this class would hold: \(A=XEX^{-1}=E\).</li>
+    <li>\(E\) is the only class which is also a subgroup because all other classes have no unit element.</li>
+    <li>In an Abelian group each element is a separate class.</li>
+</ul>
+
+<p>The physical interpretation of classes: elements of a group are usually symmetry operations which map a symmetrical object into itself. Elements of one class are then the same kind of operations. The opposite need not to be true.</p>
+
+<h3><a name="13.1.4">13.1.4 Isomorfism and homomorfism; representations</a></h3>
+
+<p>Two groups are <em>isomorphic</em> if they have the same multiplication table. The mapping from group \({\cal{G}}_1\) to \({\cal{G}}_2\), so that the multiplication table remains the same is a homomorphic mapping. It need not be isomorphic.</p>
+
+<p>A <em>representation</em> is a homomorphic mapping of a group to a group of square matrices with the usual matrix multiplication as the combining operation. This is symbolized by \(\Gamma\). The following holds: \[\Gamma(E)=I\hspace{-0.8ex}I~~,~~\Gamma(AB)=\Gamma(A)\Gamma(B)~~,~~ \Gamma(A^{-1})=[\Gamma(A)]^{-1}\] For each group there are 3 possibilities for a representation:</p>
+
+<ol>
+    <li>A <em>faithful</em> representation: all matrices are different.</li>
+    <li>The representation \(A\rightarrow\mbox{det}(\Gamma(A))\).</li>
+    <li>The identical representation: \(A\rightarrow1\).</li>
+</ol>
+
+<p>An <em>equivalent representation</em> is obtained by performing an unitary base transformation: \(\Gamma'(A)=S^{-1}\Gamma(A)S\).</p>
+
+<h3><a name="13.1.5">13.1.5 Reducible and irreducible representations</a></h3>
+
+<p>If <em>the same</em> unitary transformation can bring all matrices of a representation \(\Gamma\) in the same block structure the representation is called <em>reducible</em>:</p>
+
+<p>\[\Gamma(A)=\left(\begin{array}{cc} \Gamma^{(1)}(A)&amp;0\\ 0&amp;\Gamma^{(2)}(A) \end{array}\right)\]</p>
+
+<p>This is written as: \(\Gamma=\Gamma^{(1)}\oplus\Gamma^{(2)}\). If this is not possible the representation is called <em>irreducible</em>.</p>
+
+<p>The number of <em>irreducible representations </em>equals the number of <em>conjugate classes</em>.</p>
+
+<h2><a name="13.2">13.2 The fundamental orthogonality theorem</a></h2>
+<h3><a name="13.2.1">13.2.1 Schur's lemma</a></h3>
+
+<p>: Each matrix which commutes with all matrices of an irreducible representation is a constant \(\times I\hspace{-0.8ex}I\), where \(I\hspace{-0.8ex}I\) is the unit matrix. The opposite is (of course) also true.</p>
+
+<p>: If there exists a matrix \(M\) so that for two irreducible representations of group \({\cal{G}}\), \(\gamma^{(1)}(A_i)\) and \(\gamma^{(2)}(A_i)\), then: \(M\gamma^{(1)}(A_i)=\gamma^{(2)}(A_i)M\), than the representations are equivalent, or \(M=\underline{\underline{0}}\).</p>
+
+<h3><a name="13.2.2">13.2.2 The fundamental orthogonality theorem</a></h3>
+
+<p>For a set of unequivalent, irreducible, for unitary representations&nbsp;if \(h\) is the number of elements in the group and \(\ell_i\) is the dimension of the \(i^{\rm th}\) representation:</p>
+
+<p>\[\displaystyle \sum_{R\in{\cal{G}}}\Gamma^{(i)*}_{\mu\nu}(R)\Gamma^{(j)}_{\alpha\beta}(R)= \frac{h}{\ell_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\beta}\]</p>
+
+<h3><a name="13.2.3">13.2.3 Character</a></h3>
+
+<p>The <em>character</em> of a representation is given by the trace of the matrix and is therefore invariant for base transformations: \(\chi^{(j)}(R) = \mbox{Tr}(\Gamma^{j}(R))\)</p>
+
+<p>This also holds for \(N_k\) the number of elements in a conjugate class: \( \sum_{k} \chi^{(i)*}(C_{k})\chi^{(j)}(C_{k})N_{k}=h\delta _{ij}\)</p>
+
+<strong><u>Theorem:</u></strong> \(\displaystyle \sum_{i=1}^{n} \ell_i^{2} =h \)
+
+<h2><a name="13.3">13.3 The relation with quantum mechanics</a></h2>
+<h3><a name="13.3.1">13.3.1 Representations, energy levels and degeneracy</a></h3>
+
+<p>Consider a set of symmetry transformations \(\vec{x}\,'=R\vec{x}\) which leave the Hamiltonian \({\cal{H}}\) invariant. These transformations are a group. An isomorphic operation on the wavefunction is given by: \(P_R\psi(\vec{x}\,)=\psi(R^{-1}\vec{x}\,)\). This is considered an <em>active rotation</em>. These operators commute with \( {\cal H}\;:\; P_R {\cal H}={\cal H}P_R \), and leave the volume element unchanged: \(d(R\vec{x})\ =d\vec{x}\).</p>
+
+<p>\(P_R\) is the symmetry group of the physical system. It causes degeneracy: if \(\psi_n\) is a solution of \( \cal{H}\psi _n=E_n \psi _n\)then also : \(\cal{H}(P_R\psi_n)=E_n(P_R\psi_n)\). A degeneracy which is not the result of a symmetry is called an <em>accidental degeneracy</em>.</p>
+
+<p>Assume an \(\ell_n\)-fold degeneracy at \(E_n\): then choose an orthonormal set \(\psi^{(n)}_{\nu}\), \(\nu=1,2,\ldots,\ell_n\). The function \(P_R\psi^{(n)}_{\nu}\) is in the same subspace: \(\displaystyle P_R\psi^{(n)}_{\nu}=\sum_{\kappa=1}^{\ell_n}\psi^{(n)}_{\kappa} \Gamma^{(n)}_{\kappa\nu}(R)\)</p>
+
+<p>where \(\Gamma^{(n)}\) is an <em>irreducible, unitary</em> representation of the symmetry group \({\cal{G}}\) of the system. Each \(n\) corresponds with another energy level. One can mathematically derive the<em>&nbsp;irreducible representations</em> of a <em>symmetry group</em> and label the energy levels with a quantum number this way. A fixed choice of \(\Gamma^{(n)}(R)\) defines the base functions \(\psi^{(n)}_{\nu}\). This way one can also label each separate base function with a quantum number.</p>
+
+<p>the symmetry operation is a cyclic group: note the operator describing one translation over one unit as \(A\). Then: \({\cal{G}}=\{A,A^2,A^3,\ldots,A^h=E\}\).</p>
+
+<p>The group is <em>Abelian</em> so all irreducible representations are one-dimensional. For \(0\leq p\leq h-1\) follows:</p>
+
+<p>\[\Gamma^{(p)}(A^n)={\rm e}^{2\pi ipn/h}\]</p>
+
+<p>If one defines: \(\displaystyle k=-\frac{2\pi p}{ah} \left({\rm mod}\frac{2\pi}{a}\right)\), then: \(\displaystyle P_A\psi_p(x)=\psi_p(x-a)={\rm e}^{2\pi ip/h}\psi_p(x)\), this gives <em>Bloch&rsquo;s theorem</em>: \(\displaystyle\psi_k(x)=u_k(x){\rm e}^{ikx}\), with \(u_k(x\pm a)=u_k(x)\).</p>
+
+<h3><a name="13.3.2">13.3.2 Breaking of degeneracy with a perturbation</a></h3>
+
+<p>Suppose the unperturbed system has Hamiltonian \(\cal{H}_0\) and symmetry group \( \cal{G}_0\). The perturbed system has \(\cal{H} =\cal{H}_0+\cal V\), and symmetry group \(\cal{G} \subset{\cal{G}}_0\). If \(\Gamma^{(n)}(R)\) is an irreducible representation of \(\cal{G}_0\), it is also a representation of \( \cal{G}\) but not all elements of \(\Gamma^{(n)}\) in \(\cal{G}_0\) are also in \(\cal{G}\). The representation then usually becomes <em>reducible</em>: \(\Gamma^{(n)}=\Gamma^{(n_1)}\oplus\Gamma^{(n_2)}\oplus\ldots\). The degeneracy is then (possibly partially) removed: see the figure below.</p>
+
+<p align="center"><img alt="Removed degeneracy by perturbation" style="width: 683px; height: 250px;" width="683px" height="250px" src="figure131.jpg" />
+
+<p>The set of \(\ell_n\) degenerate&nbsp;eigenfunctions \(\psi^{(n)}_{\nu}\) with energy \(E_n\) is a basis set for an \(\ell_n\)-dimensional irreducible representation \(\Gamma^{(n)}\) of the symmetry group.</p>
+
+<h3><a name="13.3.3">13.3.3 The construction of a base function</a></h3>
+
+<p>Each function \(F\) in configuration space can be decomposed into <em>symmetry types</em>: \(\displaystyle F=\sum_{j=1}^{n}\sum_{\kappa=1}^{\ell_j}f_{\kappa}^{(j)}\)</p>
+
+<p>The following operator extracts the symmetry types:</p>
+
+<p>\[\left(\frac{\ell_j}{h}\sum_{R\in{\cal{G}}}\Gamma^{(j)*}_{\kappa\kappa}(R)P_R\right)F=f^{(j)}_{\kappa}\]</p>
+
+<p>This is expressed as: \(f_{\kappa}^{(j)}\) being the part of \(F\) that transforms according to the \(\kappa^{\b{\rm th}}\) row of \(\Gamma^{(j)}\).</p>
+
+<p>\(F\) can also be expressed in basis&nbsp;functions \(\varphi\): \(F=\sum\limits_{aj\kappa}c_{aj\kappa}\varphi_{\kappa}^{(aj)}\). The functions \(f_{\kappa}^{(j)}\) are in general not transformed into each other by elements of the group. However, this &nbsp;happen if \(c_{ja\kappa}=c_{ja}\).</p>
+
+<p>Two wavefunctions transforming according to non-equivalent unitary representations or according to different rows of an unitary irreducible representation are orthogonal:<br />
+\(\langle\varphi^{(i)}_{\kappa}|\psi^{(j)}_{\lambda}\rangle\sim\delta_{ij}\delta_{\kappa\lambda}\), and \(\langle\varphi^{(i)}_{\kappa}|\psi^{(i)}_{\kappa}\rangle\) is independent of \(\kappa\).</p>
+
+<h3><a name="13.3.4">13.3.4 The direct product of representations</a></h3>
+
+<p>Consider a physical system existing of two subsystems. The subspace \(D^{(i)}\) of the system transforms according to \(\Gamma^{(i)}\). The basis functions are \(\varphi^{(i)}_{\kappa}(\vec{x}_i)\), \(1\leq\kappa\leq\ell_i\). Now form all \(\ell_1\times\ell_2\) products \(\varphi^{(1)}_{\kappa}(\vec{x}_1)\varphi^{(2)}_{\lambda}(\vec{x}_2)\). These define a space \(D^{(1)}\otimes D^{(2)}\).</p>
+
+<p>These products functions transform as:</p>
+
+<p>\[P_R(\varphi^{(1)}_{\kappa}(\vec{x}_1)\varphi^{(2)}_{\lambda}(\vec{x}_2))=(P_R\varphi^{(1)}_{\kappa}(\vec{x}_1))(P_R\varphi^{(2)}_{\lambda}(\vec{x}_2))\]</p>
+
+<p>In general the space \(D^{(1)}\otimes D^{(2)}\) can be split up in a number of invariant subspaces:</p>
+
+<p>\[\Gamma^{(1)}\otimes\Gamma^{(2)}=\sum_i n_i\Gamma^{(i)}\]</p>
+
+<p>A useful tool for this reduction is that for the characters: \[\chi^{(1)}(R)\chi^{(2)}(R)=\sum_i n_i\chi^{(i)}(R)\]</p>
+
+<h3><a name="13.3.5">13.3.5 Clebsch-Gordan coefficients</a></h3>
+
+<p>With the reduction of the direct-product matrix w.r.t. the basis \(\varphi_{\kappa}^{(i)}\varphi_{\lambda}^{(j)}\) one uses a new basis \(\varphi_{\mu}^{(a\kappa)}\). These basis functions lie in subspaces \(D^{(ak)}\). The unitary base transformation is given by:</p>
+
+<p>\[\varphi_{\mu}^{(ak)}=\sum_{\kappa\lambda}\varphi^{(i)}_{\kappa}\varphi^{(j)}_{\lambda}(i\kappa j\lambda|ak\mu)\]</p>
+
+<p>and the inverse transformation by: \(\displaystyle\varphi^{(i)}_{\kappa}\varphi^{(j)}_{\lambda}=\sum_{ak\mu}\varphi_{\mu}^{(a\kappa)}(ak\mu|i\kappa j\lambda)\)</p>
+
+<p>In essence the Clebsch-Gordan coefficients are dot products: \((i\kappa j\lambda|ak\mu):=\langle\varphi_k^{(i)}\varphi_{\lambda}^{(j)}|\varphi_{\mu}^{(ak)}\rangle\)</p>
+
+<h3><a name="13.3.6">13.3.6 Symmetric transformations of operators, irreducible tensor operators</a></h3>
+
+<p>Observables (operators) transform as follows under symmetry transformations: \(A'=P_RAP_R^{-1}\). If a set of operators \(A^{(j)}_{\kappa}\) with \(0\leq\kappa\leq\ell_j\) transform into each other under the transformations of \({\cal{G}}\): \</p>
+
+<p>[P_RA_{\kappa}^{(j)}P_R^{-1}=\sum_{\nu}A_{\nu}^{(j)}\Gamma^{(j)}_{\nu\kappa}(R)\]</p>
+
+<p>If \(\Gamma^{(j)}\) is irreducible they are called <em>irreducible tensor operators</em> \(A^{(j)}\) with components \(A^{(j)}_{\kappa}\).</p>
+
+<p>An operator can also be decomposed into symmetry types: \(A=\sum\limits_{jk}a^{(j)}_k\), with:</p>
+
+<p>\[a^{(j)}_{\kappa}=\left(\frac{\ell_j}{h}\sum_{R\in{\cal{G}}}\Gamma^{(j)*}_{\kappa\kappa}(R)\right)(P_RAP_R^{-1})\]</p>
+
+<p><strong>Theorem</strong>: Matrix elements \(H_{ij}\) of the operator \({\cal{H}}\) which is invariant under \(\forall_{A\in{\cal{G}}}\), are 0 between states which transform according to non-equivalent irreducible unitary representations or according to different rows of such a representation. Further \(\langle\varphi^{(i)}_{\kappa}|{\cal{H}}|\psi^{(i)}_{\kappa}\rangle\) is independent of \(\kappa\). For \({\cal{H}}=1\) this becomes the previous theorem.</p>
+
+<p>This is applied in quantum mechanics in <em>perturbation theory</em> and <em>variational calculus</em>. Here one tries to diagonalize \({\cal{H}}\). Solutions can be found within each category of functions \(\varphi^{(i)}_{\kappa}\) with common \(i\) and \(\kappa\): \({\cal{H}}\) is already diagonal in categories as a whole.</p>
+
+<p><u>Perturbation calculations</u>&nbsp;can be applied independently within each category. With the <u>variational calculus</u>&nbsp;functions can be chosen within a separate category because the exact eigenfunctions transform according to a row of an irreducible representation.</p>
+
+<h3><a name="13.3.7">13.3.7 The Wigner-Eckart theorem</a></h3>
+
+<p>The matrix element \(\langle\varphi^{(i)}_{\lambda}|A^{(j)}_{\kappa}|\psi^{(k)}_{\mu}\rangle\) can only be \(\neq0\) if \(\Gamma^{(j)}\otimes\Gamma^{(k)}=\ldots\oplus\Gamma^{(i)}\oplus\ldots\). This is the&nbsp;case if \(\Gamma^{(i)}\) appears only once, otherwise one has to sum over \(a\)):</p>
+
+<p>\[&nbsp;\langle\varphi^{(i)}_{\lambda}|A^{(j)}_{\kappa}|\psi^{(k)}_{\mu}\rangle= (i\lambda|j\kappa k\mu)\langle\varphi^{(i)}\|A^{(j)}\|\psi^{(k)}\rangle \]</p>
+
+<p>This theorem can be used to determine selection rules: the probability of a dipole transition is given by (\(\vec{\epsilon}\) is the direction of polarization of the radiation):</p>
+
+<p>\[P_D=\frac{8\pi^2e^2f^3|r_{12}|^2}{3\hbar\varepsilon_0c^3} ~~\mbox{with}~~r_{12}=\langle l_2m_2|\vec{\epsilon}\cdot\vec{r}\,|l_1m_1\rangle\]</p>
+
+<p>Further it can be used to determine intensity ratios: if there is only one value of \(a\) the ratio of the matrix elements are the Clebsch-Gordan coefficients. For more \(a\)-values relations between the intensity ratios can be stated. However, the intensity ratios are also dependent on the occupation of the atomic energy levels.</p>
+
+<h2><a name="13.4">13.4 Continuous groups</a></h2>
+
+<p>Continuous groups have \(h=\infty\). However, not all groups with \(h=\infty\) are continuous, e.g. the translation group of an spatially infinite periodic potential is not continuous but does have \(h=\infty\).</p>
+
+<h3><a name="13.4.1">13.4.1 The 3-dimensional translation group</a></h3>
+
+<p>For the translation of wavefunctions over a distance \(a\)&nbsp;\(P_a\psi(x)=\psi(x-a)\). A Taylor expansion near \(x\) gives:</p>
+
+<p>\[\psi(x-a)=\psi(x)-a\frac{d\psi(x)}{dx}+\frac{1}{2}a^2\frac{d^2\psi(x)}{dx^2}-+\ldots\]</p>
+
+<p>Because the momentum operator in quantum mechanics is given by: \(\displaystyle p_x=\frac{\hbar}{i}\frac{\partial}{\partial x}\), this can be written as:</p>
+
+<p>\[\psi(x-a)={\rm e}^{-iap_x/\hbar}\psi(x)\]</p>
+
+<h3><a name="13.4.2">13.4.2 The 3-dimensional rotation group</a></h3>
+
+<p>This group is called SO(3) because a faithful representation can be constructed from orthogonal \(3\times3\) matrices with a determinant of +1.</p>
+
+<p>For an infinitesimal rotation around the \(x\)-axis :</p>
+
+<p>\[\begin{aligned} P_{\delta\theta_x}\psi(x,y,z)&amp;\approx&amp;\psi(x,y+z\delta\theta_x,z-y\delta\theta_x)\\ &amp;=&amp;\psi(x,y,z)+\left(z\delta\theta_x\frac{\partial}{\partial y}-y\delta\theta_x\frac{\partial}{\partial z}\right)\psi(x,y,z)\\ &amp;=&amp;\left(1-\frac{i\delta\theta_xL_x}{\hbar}\right)\psi(x,y,z)\end{aligned}\]</p>
+
+<p>Because the angular momentum operator is given by: \(\displaystyle L_x=\frac{\hbar}{i} \left(z\frac{\partial}{\partial y}-y\frac{\partial}{\partial z}\right)\).</p>
+
+<p>So in an arbitrary direction \( \begin{matrix}P_{\alpha,\vec{n}}=\exp(-i\alpha(\vec{n}\cdot\vec{J}\hspace{0.5mm})/\hbar)<br />
+\\&nbsp;<br />
+P_{a,\vec{n}}=\exp(-ia(\vec{n}\cdot\vec{p}\hspace{0.5mm})/\hbar)<br />
+\end{matrix} \)</p>
+
+<p>\(J_x\), \(J_y\) and \(J_z\) are called the <em>generators</em> of the 3-dim. rotation group, \(p_x\), \(p_y\) and \(p_z\) are called the generators of the 3-dim. translation group.</p>
+
+<p>The commutation rules for the generators can be derived from the properties of the group for multiplications: translations are interchangeable \(\leftrightarrow p_xp_y-p_yp_x=0\).</p>
+
+<p>Rotations are not generally interchangeable: consider a rotation around axis \(\vec{n}\) in the \(xz\)-plane over an angle \(\alpha\). Then: \(P_{\alpha,\vec{n}}=P_{-\theta,y}P_{\alpha,x}P_{\theta,y}\), so:</p>
+
+<p>\[{\rm e}^{-i\alpha(\vec{n}\cdot\vec{J}\hspace{0.5mm})/\hbar}= {\rm e}^{i\theta J_y/\hbar}{\rm e}^{-i\alpha J_x/\hbar}{\rm e}^{-i\theta J_y/\hbar}\]</p>
+
+<p>If \(\alpha\) and \(\theta\) are very small and are expanded to second order, and the corresponding terms are put equal with \(\vec{n}\cdot\vec{J}=J_x\cos\theta+J_z\sin\theta\), it follows from the \(\alpha\theta\) term: \(J_xJ_y-J_yJ_x=i\hbar J_z\).</p>
+
+<h3><a name="13.4.3">13.4.3 Properties of continuous groups</a></h3>
+
+<p>The elements \(R(p_1,...,p_n)\) depend continuously on parameters \(p_1,...,p_n\). For the translation group this are e.g. \(an_x\), \(an_y\) and \(an_z\). It is demanded that the multiplication and inverse of an element \(R\) depend continuously on the parameters of \(R\).</p>
+
+<p>The statement that each element arises only once in each row and column of the Cayley table holds also for continuous groups. The notion conjugacy class for continuous groups is defined equally as for discrete groups. The notion representation is fitted by demanding continuity: each matrix element depends continuously on \(p_i(R)\).</p>
+
+<p>Summation over all group elements is for continuous groups replaced by an integration. If \(f(R)\) is a function defined on \({\cal{G}}\), e.g. \(\Gamma_{\alpha\beta}(R)\), then:</p>
+
+<p>\[\int\limits_{\cal{G}}f(R)dR:=\int\limits_{p_1}\cdots\int\limits_{p_n} f(R(p_1,...,p_n))g(R(p_1,...,p_n))dp_1\cdots dp_n \]&nbsp;</p>
+
+<p>Here, \(g(R)\) is the <em>density function</em>.</p>
+
+<p>Because of the properties of the <em>Cayley table</em>&nbsp;: \(\int f(R)dR=\int f(SR)dR\). This fixes \(g(R)\) except for a constant factor. Define new variables \(p'\) by: \(SR(p_i)=R(p'_i)\). If one writes: \(dV:=dp_1\cdots dp_n\) then:</p>
+
+<p>\[g(S)=g(E)\frac{dV}{dV'}\]</p>
+
+<p>Here, \(\displaystyle\frac{dV}{dV'}\) is the <em>Jacobian</em>: \(\displaystyle\frac{dV}{dV'}=\mbox{det}\left(\frac{\partial p_i}{\partial p'_j}\right)\), and \(g(E)\) is constant.</p>
+
+<p>For the translation groups: \(g(\vec{a})=\mbox{constant}=g(\vec{0}\,)\) because \(g(a\vec{n}\,)d\vec{a}'=g(\vec{0}\,)d\vec{a}\) and \(d\vec{a}'=d\vec{a}\).</p>
+
+<p>This leads to the Grand Orthogonality&nbsp;Theorem:</p>
+
+<p>\[\int\limits_{\cal{G}}\Gamma^{(i)*}_{\mu\nu}(R)\Gamma^{(j)}_{\alpha\beta}(R)dR= \frac{1}{\ell_i}\delta_{ij}\delta_{\mu\alpha}\delta_{\nu\beta}\int\limits_{\cal{G}}dR\]</p>
+
+<p>and for the characters:</p>
+
+<p>\[\int\limits_{\cal{G}}\chi^{(i)*}(R)\chi^{(j)}(R)dR=\delta_{ij}\int\limits_{\cal{G}}dR\]</p>
+
+<p><em>Compact</em> groups are groups with a finite group volume: \(\int_{\cal{G}}dR&lt;\infty\).</p>
+
+<h2><a name="13.5">13.5 The group SO(3)</a></h2>
+
+<p>One can take 2 parameters for the direction of the rotational axis and one for the angle of rotation \(\varphi\). The parameter space is a collection points \(\varphi\vec{n}\) within a sphere with radius \(\pi\). The diametrical points on this sphere are equivalent because \(R_{\vec{n},\pi}=R_{\vec{n},-\pi}\).</p>
+
+<p>Another way to define parameters is by means of <em>Eulers angles</em>. If \(\alpha\), \(\beta\) and \(\gamma\) are the 3 Euler angles, defined as:</p>
+
+<ol>
+    <li>The spherical angles of axis 3 w.r.t. \(xyz\) are \(\theta,\varphi:=\beta,\alpha\). Now a rotation around axis 3 remains possible.</li>
+    <li>The spherical angles of the \(z\)-axis w.r.t. 123 are \(\theta,\varphi:=\beta,\pi-\gamma\).</li>
+</ol>
+
+<p>then the rotation of a quantum mechanical system is described by:<br />
+\(\psi\rightarrow {\rm e}^{-i\alpha J_z\hbar}{\rm e}^{-i\beta J_y/\hbar}{\rm e}^{-i\gamma J_z/\hbar}\psi\). So \(\displaystyle P_R={\rm e}^{-i\varepsilon(\vec{n}\cdot\vec{J}\hspace{0.5mm})/\hbar}\).</p>
+
+<p>All irreducible representations of SO(3) can be constructed from the behaviour of the spherical harmonics \(Y_{lm}(\theta,\varphi)\) with \(-l\leq m\leq l\) and for a fixed \(l\):</p>
+
+<p>\[P_RY_{lm}(\theta,\varphi)=\sum_{m'}Y_{lm'}(\theta,\varphi)D^{(l)}_{mm'}(R)\]</p>
+
+<p>\(D^{(l)}\) is an irreducible representation of dimension \(2l+1\). The character of \(D^{(l)}\) is given by:</p>
+
+<p>\[\chi^{(l)}(\alpha)=\sum_{m=-l}^{l}{\rm e}^{im\alpha}=1+2\sum_{k=0}^{l}\cos(k\alpha)= \frac{\sin([l+\frac{1}{2}]\alpha)}{\sin(\frac{1}{2}\alpha)}\]</p>
+
+<p>In the derivation \(\alpha\) is the rotational angle around the \(z\)-axis. This expression is valid for all rotations over an angle \(\alpha\) because the classes of SO(3) are rotations around the same angle around an axis with an arbitrary orientation.</p>
+
+<p>Via the fundamental orthogonality theorem for characters one obtains the following expression for the density function (which is normalized so that \(g(0)=1\)):</p>
+
+<p>\[g(\alpha)=\frac{\sin^2(\frac{1}{2}\alpha)}{(\frac{1}{2}\alpha)^2}\]</p>
+
+<p>With this result one can see that the given representations of SO(3) are the only ones: the character of another representation \(\chi'\) would have to be \(\bot\) to the already found ones, so \(\chi'(\alpha)\sin^2(\frac{1}{2}\alpha)=0\forall\alpha\) \(\Rightarrow\chi'(\alpha)=0\forall\alpha\). This is contradictory because the dimension of the representation is given by \(\chi'(0)\).</p>
+
+<p>Because fermions have an half-odd integer spin the states \(\psi_{sm_s}\) with \(s=\frac{1}{2}\) and \(m_s=\pm\frac{1}{2}\) constitute a 2-dim. space which is invariant under rotations. A problem arises for rotations over \(2\pi\):</p>
+
+<p>\[\psi_{\frac{1}{2}m_s}\rightarrow{\rm e}^{-2\pi iS_z/\hbar}\psi_{\frac{1}{2}m_s} ={\rm e}^{-2\pi im_s}\psi_{\frac{1}{2}m_s}=-\psi_{\frac{1}{2}m_s}\]</p>
+
+<p>However, in SO(3): \(R_{z,2\pi}=E\). So here &nbsp;\(E\rightarrow\pm I\hspace{-0.8ex}I\) holds. Because observable quantities can always be written as \(\left\langle \phi|\psi \right\rangle\) or \(\left\langle \phi|A|\psi \right\rangle\), and are bilinear in the states, they do not change sign if the states do. If only one state changes sign the observable quantities do change.</p>
+
+<p>The existence of these half-odd integer representations is connected with the topological properties of SO(3): the group is two-fold coherent through the identification \(R_0=R_{2\pi}=E\).</p>
+
+<h2><a name="13.6">13.6 Applications to quantum mechanics</a></h2>
+<h3><a name="13.6.1">13.6.1 Vector model for the addition of angular momentum</a></h3>
+
+<p>If two subsystems have angular momentum quantum numbers \(j_1\) and \(j_2\) the only possible values for the total angular momentum are \(J=j_1+j_2,j_1+j_2-1,...,|j_1-j_2|\). This can be derived from group theory as follows: from \(\chi^{(j_1)}(\alpha)\chi^{(j_2)}(\alpha)=\sum\limits_{J}n_j\chi^{(J)}(\alpha)\) follows:</p>
+
+<p>\[D^{(j_1)}\otimes D^{(j_2)}=D^{(j_1+j_2)}\oplus D^{(j_1+j_2-1)}\oplus...\oplus D^{(|j_1-j_2|)}\]</p>
+
+<p>The states can be characterized by quantum numbers in two ways: with \(j_1,m_1,j_2,m_2\) and with \(j_1,j_2,J,M\). The Clebsch-Gordan coefficients, for SO(3) called the <em>Wigner coefficients</em>, can be chosen real, so:</p>
+
+<p>\[ \begin{matrix} \psi_{j_1j_2JM} = \sum\limits_{m_1m_2}\psi_{j_1m_1j_2m_2}(j_1m_1j_2m_2|JM)\\<br />
+\\ \psi_{j_1m_1j_2m_2}=(\sum\limits_{JM}\psi_{j_1j_2JM}(j_1m_1j_2m_2|JM)\)<br />
+\end{matrix} \]&nbsp;</p>
+
+<h3><a name="13.6.2">13.6.2 Irreducible tensoroperators, matrixelements and selection rules</a></h3>
+<h4><a name="13.6.2.1">Some examples of the behaviour of operators under SO(3)</a></h4>
+
+<ol>
+    <li>Suppose \(j=0\): this gives the identical representation with \(\ell_j=1\). This state is described by a <strong><em>scalar operator</em></strong>. Because \(P_RA^{(0)}_0P_R^{-1}=A_0^{(0)}\) this operator is invariant, e.g. the Hamiltonian of a free atom. Then: \(\left\langle J'M'|{\cal{H}}|JM \right\rangle\sim\delta_{MM'}\delta_{JJ'}\).</li>
+    <li>A <strong><em>vector operator</em></strong>: \(\vec{A}=(A_x,A_y,A_z)\). The cartesian components of a vector operator transform equally as the cartesian components of \(\vec{r}\) by definition. So for rotations around the \(z\)-axis:<br />
+    \[D(R_{\alpha,z})=\left(\begin{array}{ccc} \cos\alpha&amp;-\sin\alpha&amp;0\\ \sin\alpha&amp; \cos\alpha&amp;0\\ 0&amp;0&amp;1\\ \end{array}\right)\]<br />
+    The transformed operator has the same matrix elements w.r.t. \(P_R\psi\) and \(P_R\phi\):<br />
+    \(\left\langle P_R\psi|P_RA_xP_R^{-1}|P_R\phi \right\rangle=\left\langle \psi|A_x|\phi \right\rangle\), and \(\chi(R_{\alpha,z})=1+2\cos(\alpha)\). According to the equation for characters this means one can choose base operators which transform like \(Y_{1m}(\theta,\varphi)\). These turn out to be the spherical components:<br />
+    \[\begin{aligned} A^{(1)}_{+1}=-\frac{1}{\sqrt{2}}(A_x+iA_y),&amp;A^{(1)}_0=A_z,&amp;A^{(1)}_{-1}=\frac{1}{\sqrt{2}}(A_x-iA_y) \end{aligned}\]</li>
+    <li><strong><em>A cartesian&nbsp;tensor of rank 2</em></strong>: \(T_{ij}\) is a quantity which transforms under rotations like \(U_iV_j\), where \(\vec{U}\) and \(\vec{V}\) are vectors. So \(T_{ij}\) transforms like \(P_RT_{ij}P_R^{-1}=\sum\limits_{kl}T_{kl}D_{ki}(R)D_{lj}(R)\), so like \(D^{(1)}\otimes D^{(1)}= D^{(2)}\oplus D^{(1)}\oplus D^{(0)}\). The 9 components can be split in 3 invariant subspaces with dimension 1 \((D^{(0)})\), 3 \((D^{(1)})\) and 5 \((D^{(2)})\). The new base operators are:
+    <ol>
+        <li>\(Tr(\underline{\underline {T}}) =T_{xx}+T_{yy}+T_{zz} \). This transforms as the scalar \(\vec{U}\cdot\vec{V}\), so as \(D^{(0)}\).</li>
+        <li>The 3 antisymmetric components \(A_z=\frac{1}{2}(T_{xy}-T_{yx})\), etc. These transform as the vector \(\vec{U}\times\vec{V}\), so as \(D^{(1)}\).</li>
+        <li>The 5 independent components of the traceless, symmetric tensor \(\underline{\underline{S}}\):<br />
+        \(S_{ij}=\frac{1}{2}(T_{ij}+T_{ji})-\frac{1}{3}\delta_{ij}\mbox{Tr}(\underline{\underline{T}})\). These transform as \(D^{(2)}\).</li>
+    </ol>
+    </li>
+</ol>
+
+<h4><a name="13.6.2.2">Selection rules for dipole transitions</a></h4>
+
+<p>Dipole operators transform as \(D^{(1)}\): for an electric dipole transfer this is the operator \(e\vec{r}\), for a magnetic dipole \(e(\vec{L}+2\vec{S}\,)/2m\).</p>
+
+<p>From the <em>Wigner-Eckart theorem</em> follows: \(\langle J'M'|A^{(1)}_{\kappa}|JM\rangle=0\) except \(D^{(J')}\) is a part of \(D^{(1)}\otimes D^{(J)}=D^{(J+1)}\oplus D^{(J)}\oplus D^{(|J-1|)}\). This means that \(J'\in\{ J+1,J,|J-1|\}\): \(J'=J\) or \(J'=J\pm1\), except \(J'=J=0\).</p>
+
+<h4><a name="13.6.2.3">Land&eacute;-equation for the anomalous Zeeman splitting</a></h4>
+
+<p>According to <em>Land&eacute;&rsquo;s model</em> the interaction between a magnetic moment with an external magnetic field is determined by the projection of \(\vec{M}\) on \(\vec{J}\) because \(\vec{L}\) and \(\vec{S}\) prececesses quickly&nbsp;around \(\vec{J}\). This can also be understood from the <em>Wigner-Eckart theorem</em>: from this follows that the matrix elements from all vector operators show a certain proportionality. For an arbitrary operator \(\vec{A}\) follows:</p>
+
+<p>\[\langle\alpha jm'|\vec{A}|\alpha jm\rangle= \frac{\langle\alpha jm|\vec{A}\cdot\vec{J}\,|\alpha jm\rangle}{j(j+1)\hbar^2}~ \langle\alpha jm'|\vec{J}~|\alpha jm\rangle\]</p>
+
+<h2><a name="13.7">13.7 Applications to particle physics</a></h2>
+
+<p>The physics of a system does not change after performing a transformation \(\psi'={\rm e}^{i\delta}\psi\) where \(\delta\) is a constant. This is a <em>global gauge transformation</em>: the phase of the wavefunction changes everywhere by the same amount.</p>
+
+<p>There exists some freedom in the choice of the potentials \(\vec{A}\) and \(\phi\) at the same \(\vec{E}\) and \(\vec{B}\): <em>gauge transformations</em> of the potentials do not change \(\vec{E}\) and \(\vec{B}\) (See chapter 2 and 10). The solution \(\psi'\) of the Schr&ouml;dinger equation with the transformed potentials is: \(\psi'={\rm e}^{-iqf(\vec{r},t)}\psi\).</p>
+
+<p>This is a <em>local gauge transformation</em>: the phase of the wavefunction changes different at each position. The physics of the system does not change if \(\vec{A}\) and \(\phi\) are also transformed. This is now stated as a guiding principle: <em>the &ldquo;right of existence&rdquo; of the electromagnetic field is to allow local gauge invariance</em>.</p>
+
+<p>The <em>gauge transformations</em> of the EM-field form a group: U(1), unitary \(1\times1\)-matrices. The splitting&nbsp;of charge in the exponent is essential: it allows a single gauge field for all charged particles, independent of their charge.</p>
+
+<p>This concept is generalized: particles have a &ldquo;special charge&rdquo; \(Q\). The group elements now are \(P_R=\exp(-iQ\Theta)\).</p>
+
+<p>Other force fields than the electromagnetic field can also be understood this way. The weak interaction together with the electromagnetic interaction can be described by a force field that transforms according to U(1)\(\otimes\)SU(2), and consists of the photon and three intermediary vector bosons. The colour force is described by SU(3), and has a gauge field that exists with&nbsp;8 types of gluons.</p>
+
+<p>In general the group elements are given by \(P_R=\exp(-i\vec{T}\cdot\vec{\Theta})\), where \(\Theta_n\) are real constants and \(T_n\) operators (generators), like \(Q\). The commutation rules are given by \([T_i,T_j]=i\sum\limits_kc_{ijk}T_k\). The \(c_{ijk}\) are the <em>structure constants</em> of the group. For SO(3) these constants are \(c_{ijk}=\varepsilon_{ijk}\), here \(\varepsilon_{ijk}\) is the complete antisymmetric tensor with \(\varepsilon_{123}=+1\).</p>
+
+<p>These constants can be found with the help of group product elements: because \({\cal{G}}\) is closed and:<br />
+\({\rm e}^{i\vec{\Theta}\cdot\vec{T}}{\rm e}^{i\vec{\Theta}'\cdot\vec{T}}{\rm e}^{-i\vec{\Theta}\cdot\vec{T}} {\rm e}^{-i\vec{\Theta}'\cdot\vec{T}}={\rm e}^{-i\vec{\Theta}''\cdot\vec{T}}\). Applying aTaylor expansion and setting equal \(\Theta^n\Theta'^m\)-terms results in the commutation rules.</p>
+
+<p>The group SU(2) has 3 free parameters: because it is unitary there are 4 real conditions over 4 complex parameters, and the determinant has to be +1, leaving&nbsp;3 free parameters.</p>
+
+<p>Each unitary matrix \(U\) can be written as: \(U={\rm e}^{-iH}\). Here, \(H\) is a Hermitian matrix. Further it always holds that: \({\rm det}(U)={\rm e}^{-i{\rm Tr}(H)}\).</p>
+
+<p>For each matrix of SU(2) Tr(\(H\))=0. Each Hermitian, traceless \(2\times2\) matrix can be written as a linear combination of the 3 <em>Pauli-matrices</em> \(\sigma_i\). Thus these matrices are a choice for the operators of SU(2). One can write: SU(2)=\(\{\exp(-\frac{1}{2}i\vec{\sigma}\cdot\vec{\Theta})\}\).</p>
+
+<p>In abstraction, one can consider an isomorphic group where only the commutation rules are considered to be known about the operators \(T_i\): \([T_1,T_2]=iT_3\), etc.</p>
+
+<p>In elementary particle physics the \(T_i\) can be interpreted e.g. as the <em>isospin</em> operators. Elementary particles can be classified in isospin-multiplets, these are the irreducible representations of SU(2). The classification is:</p>
+
+<ol>
+    <li>The isospin-singlet \(\equiv\) the identical representation: \({\rm e}^{-i\vec{T}\cdot\vec{\Theta}}=1\Rightarrow T_i=0\)</li>
+    <li>The isospin-doublet \(\equiv\) the faithful representation of SU(2) on \(2\times2\) matrices.</li>
+</ol>
+
+<p>The group SU(3) has 8 free parameters. (The group SU(\(N\)) has \(N^2-1\) free parameters). The Hermitian, traceless operators are 3 SU(2)-subgroups in the \(\vec{e}_1\vec{e}_2\), \(\vec{e}_1\vec{e}_3\) and the \(\vec{e}_2\vec{e}_3\) plane. This gives 9 matrices, which are not all 9 linear independent. By taking a linear combination one gets 8 matrices.</p>
+
+<p>In the <em>Lagrange density</em> for the colour force one has to substitute \(\displaystyle\frac{\partial}{\partial x}\rightarrow\frac{D}{Dx}:= \frac{\partial}{\partial x}-\sum_{i=1}^{8}T_iA^i_x\)</p>
+
+<p>The terms of 3rd and 4th power in \(A\) show that the colour field interacts with itself.</p>
+
+</body>
+</head>

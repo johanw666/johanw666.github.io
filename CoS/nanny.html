@@ -1,0 +1,100 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+<html>
+<head>
+<title>Scientology censors its own people</title>
+<META name="description" content="Scientology information">
+<META name="keywords" content="scientology, censor, censorship, cybersitter, NOT, NOTs, OT, OTs, Xenu, xenu, Xemu, xemu, hubbard, dianetics">
+</head>
+<body bgcolor="#ffffcc" text="#000000" link="#0000ff" vlink="#990099" alink="#9999ff">
+
+<hr>
+<p align="center">
+<img src="nannyb.gif" alt="This site is being censored by scientology" border="0">
+<p align="center">
+<a href="index.html">Return to the main scientology page</a> -- <a href="../index.html">Return to my homepage</a>
+</p>
+<hr>
+<h1>Scientology censors its own people</h1>
+The scientology sect is clearly affraid what the internet can do to them. First,
+they tried to censor critics, but now that continues to prove only counterproductive
+they try to limit the damage by preventing that their own members would have
+access to critical material.
+<p>
+They do this by forcing their members to use special software that censors
+information that is unwelcome to their management when they access the net.
+This program has become known on the net as <strong>ScienoSitter</strong> or
+<strong>Scieno Net Nanny</strong>, pointing to two competing censorware products.
+<p>
+An example of what scientologists may not see from their cult leaders,
+it blocks transfer of the name Lisa McPherson, the woman that was
+<a href="http://www.b-org.demon.nl/scn/deaths/">murdered</a> by scientology
+in 1995.
+<p>
+A <a href="nanny-report.html">first hand report</a> about how this software
+works is available. This information has been made available by Charlotte Kates,
+an ex-cult member who escaped thanks to the net.
+<p>
+It only works under win95 (what else had you expected from a money-greedy cult),
+no NT or win98, on the socket level. The files are installed in the
+windows\system directory. After reboot one <tt>wsock32.dll</tt> is renamed
+<tt>wsock32.dll.tmp</tt>. This changed <tt>wsock32.dll</tt> forwards certain
+calls to <tt>stcp.dll</tt> that replaces <tt>mstcp.dll</tt>. A
+<a href="http://wpxx02.toxi.uni-wuerzburg.de/~krasel/CoS/filter/filter1.html">detailed
+list can be found here</a>. The (encrypted) blocklist is located in 3 files,
+<tt>n32l.dll</tt> (<b>n</b>ewsgroups), <tt>p32l.dll</tt> (<b>p</b>hrases) and
+<tt>d32l.dll</tt> (<b>d</b>omains). Uninstalling is easy: copy
+<tt>wsock32.dll.tmp</tt> back to <tt>wsock32.dll</tt> and delete
+<tt>stcp.dll</tt>, <tt>n32l.dll</tt>, <tt>p32l.dll</tt> and <tt>d32l.dll</tt>.
+<p>
+Fortunately this software was easily cracked by the people who also cracked the
+insideous <a href="http://cgi.pathfinder.com/netly/spoofcentral/censored/index.html">CyberSitter</a>
+censorware (considering CyberSitters poor reputation and the technical
+similarity between the programs I wouldn't be surprised when it turned out that
+scientology got help from them, see
+<a href="http://www.peacefire.org/censorware/CYBERsitter/">www.peacfire.org</a>
+for more about this). A <a href="crack.list.html">complete list of blocked
+sites and words</a> can easily be found by running <a href="c2.c">this</a>
+program with the <tt>?32l.dll</tt> files as input.
+<p>
+Finally, you can test for yourself and download the scientology ScienoSitter. I
+recommend caution, I'm not sure what other trics it contains and I don't take
+responsibility for any damage that may occur by using these files. I recommend
+backing up your original <tt>\Windows\System\wsock32.dll</tt> and your registry.
+Just copying the binaries to <tt>Windows\System</tt> did not work, and I didn't
+want to test any further. Reports are that it messes up your registry.
+<p>
+<ul>
+<li><a href="scienositter.zip">Download scientology ScienoSitter censorware</a>.
+<li><a href="c2.c">Download the program source of the crack</a> (a C compiler is required).
+<li><a href="c2.exe">Download a compiled version (for DOS) of the program</a>. Usage:
+    <tt>c2 &lt; infile </tt> for output on the screen, or <tt>c2 &lt; infile &gt; outfile</tt>
+    for output redirection to outfile. Infiles are d32l.dll, n32l.dll and p32l.dll.
+<li><a href="cracksitter.zip">Download a windows GUI version</a> of the crack program
+    (including source code for Borland C++ Builder 3). This program also allows
+    you to make your own censor DLL's to test the system.
+</ul>
+<p>
+<hr>
+<h2>Other pages dealing with this subject</h2>
+<ul>
+<li><a href="http://www.klo.pp.se/cos/">Saruman (the guy that cracked CyberSitter)</a>.
+<li><a href="http://www.xenu.net/archive/events/censorship/">Operation Clambake - COS Censors net access for members</a>.
+<li><a href="http://www.xmission.com:80/~mirele/">Deana Holmes - Knights of Xenu</a>.
+<li><a href="http://wpxx02.toxi.uni-wuerzburg.de/~krasel/CoS/filter/filter1.html">Cornelius Krasel - Filter program by CSI</a>.
+<li><a href="http://www.rickross.com/reference/Scien46.html">Rick Ross - Another View of Scientology's "ScienoSitter"</a>.
+<li><a href="http://www.salon1999.com/21st/feature/1998/07/15feature.html">Article in Salon magaine</a>.
+<li><a href="http://www.xenu.net/archive/events/censorship/tech-details.txt">Technical description of the workings of ScienoSitter</a>.
+<li><a href="http://www.gate.net/~shipbrk/Co$/censored.html">Jeff Lee - The Scientology Net Censor</a>.
+<li><a href="http://www.cgocable.net/~smclaugh/nanny/">Sean McLaughlin's page</a>.
+</ul>
+<hr>
+This program is anno 2000 still distributed among $cientology members. This
+is what a <a href="Virginia.html">usenet posting from a former member</a>
+tells about it. Virginia is a former OT7, a rather highly rank within
+$cientology.
+<p>
+Even more recently, all $cientology members were told to upgrade their
+censorware, see <a href="scienositter2000.html">this posting of Anti-Cult</a>.
+</body>
+</html>
+

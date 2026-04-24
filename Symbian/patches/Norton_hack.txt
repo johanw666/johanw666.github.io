@@ -1,0 +1,23 @@
+Symbian hack by Norton Security. By CODeRUS.
+
+How to hack?
+1. install NortonSymbianHackLDD.sis
+2. Launch
+3. Go Options- Anti-Virus - Quarantine list
+4. Go Options - Restore All, accept prompt
+5. Exit application, delete from App manager (Symantec Symbian Hack). Also delete c:\shared\ folder.
+6. Install RomPatcherPlus_3.1_LiteVersion.sisx from hack archive
+7. Launch and apply patches:
+- Open4all for full access to file system
+- Installserver for installing any unsigned applications ( if red cross - get installserver.exe here)
+Set patches to auto if needed (Options - Add to auto)
+
+Hacked successfuly =)
+
+
+
+- Unlock access to system folders
+- Download the archive from http://www.agathosyne.de/files_ext/sis-installer_symb9.2_mod.zip
+- Copy the file installserver.exe from the archive to 'c:\sys\bin\' on your phone
+- Enjoy and ...
+

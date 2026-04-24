@@ -1,0 +1,170 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Waves</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="5">5. Waves</a></h1>
+<h2><a name="5.1">5.1 The wave equation</a></h2>
+
+<p>The general form of the wave equation is: \(\Box u=0\), or:</p>
+
+<p>\[\nabla^2u-\frac{1}{v^2}\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}-\frac{1}{v^2}\frac{\partial^2 u}{\partial t^2}=0\]</p>
+
+<p>where \(u\) is the disturbance and \(v\) the <span><em>propagation velocity</em></span>. In general&nbsp;\(v=f\lambda\) holds. By definition&nbsp;\(k\lambda=2\pi\) and \(\omega=2\pi f\).</p>
+
+<p>In principle, there are two types of waves:</p>
+
+<ol>
+    <li>Longitudinal waves: for these &nbsp;\(\vec{k}\parallel\vec{v}\parallel\vec{u}\) holds.</li>
+    <li>Transversal waves: for these&nbsp;\(\vec{k}\parallel\vec{v}\perp\vec{u}\). holds</li>
+</ol>
+
+<p>The <span><em>phase velocity</em></span> is given by \(v_{\rm ph}=\omega/k\). The <span><em>group velocity</em></span> is given by:</p>
+
+<p>\[v_{\rm g}=\frac{d\omega}{dk}=v_{\rm ph}+k\frac{dv_{\rm ph}}{dk}= v_{\rm ph}\left(1-\frac{k}{n}\frac{dn}{dk}\right)\]</p>
+
+<p>where \(n\) is the refractive index of the medium. If \(v_{\rm ph}\) does not depend on \(\omega\) then:&nbsp;\(v_{\rm ph}=v_{\rm g}\). In a dispersive medium it is possible that \(v_{\rm g}&gt;v_{\rm ph}\) or \(v_{\rm g}&lt;v_{\rm ph}\), and \(v_{\rm g}\cdot v_{\rm f}=c^2\). If one wants to transfer information with a wave, e.g. by modulation of an EM wave, the information travels with the velocity at which a change in the electromagnetic field propagates. This velocity is often almost equal to the group velocity.</p>
+
+<p>For some media, the propagation velocity follows from:</p>
+
+<ul>
+    <li>Pressure waves in a liquid or gas: \(v=\sqrt{\kappa/\varrho}\), where \(\kappa\) is the modulus of compression.</li>
+    <li>Further for&nbsp;pressure waves in a gas:&nbsp;\(v=\sqrt{\gamma p/\varrho}=\sqrt{\gamma RT/M}\).</li>
+    <li>Pressure waves in a thin solid bar with diameter \(&lt;&lt;\lambda\): \(v=\sqrt{E/\varrho}\)</li>
+    <li>waves in a string: \(v=\sqrt{F_{\rm span}l/m}\)</li>
+    <li>Surface waves on a liquid: \(\displaystyle v=\sqrt{\left(\frac{g\lambda}{2\pi}+ \frac{2\pi\gamma}{\varrho\lambda}\right)\tanh\left(\frac{2\pi h}{\lambda}\right)}\)<br />
+    where \(h\) is the depth of the liquid and \(\gamma\) the surface tension. If \(h\ll\lambda\) then&nbsp;\(v\approx\sqrt{gh}\) holds.</li>
+</ul>
+
+<h2><a name="5.2">Solutions of the wave equation</a></h2>
+<h3><a name="5.2.1">5.2.1 Plane waves</a></h3>
+
+<p>In \(n\) dimensions a harmonic plane wave is defined by:</p>
+
+<p>\[u(\vec{x},t)=2^n\hat{u}\cos(\omega t)\sum_{i=1}^n\sin(k_ix_i)\]</p>
+
+<p>The equation for a harmonic traveling plane wave is: \(u(\vec{x},t)=\hat{u}\cos(\vec{k}\cdot\vec{x}\pm\omega t+\varphi)\)</p>
+
+<p>If waves reflect at the end of a spring this will result in a change in phase. A fixed end gives a phase change of \(\pi/2\) to the reflected wave, with boundary condition \(u(l)=0\). A loose end gives no change in the phase of the reflected wave, with boundary condition \((\partial u/\partial x)_l=0\).</p>
+
+<p>If an observer is moving w.r.t. the wave with a velocity \(v_{\rm obs}\), they will observe a change in frequency: the <span><em>Doppler effect</em></span>. This is given by: \(\displaystyle\frac{f}{f_0}=\frac{v_{\rm f}-v_{\rm obs}}{v_{\rm f}}\).</p>
+
+<h3><a name="5.2.2">5.2.2 Spherical waves</a></h3>
+
+<p>When the situation is spherically symmetric, the homogeneous wave equation is given by:</p>
+
+<p>\[\frac{1}{v^2}\frac{\partial^2 (ru)}{\partial t^2}-\frac{\partial^2 (ru)}{\partial r^2}=0\]</p>
+
+<p>with a&nbsp;general solution:</p>
+
+<p>\[u(r,t)=C_1\frac{f(r-vt)}{r}+C_2\frac{g(r+vt)}{r}\]</p>
+
+<h3><a name="5.2.3">5.2.3 Cylindrical waves</a></h3>
+
+<p>When the situation has a cylindrical symmetry, the homogeneous wave equation becomes:</p>
+
+<p>\[\frac{1}{v^2}\frac{\partial^2 u}{\partial t^2}-\frac{1}{r}\frac{\partial }{\partial r}\left(r\frac{\partial u}{\partial r}\right)=0\]</p>
+
+<p>This is a Bessel equation, with solutions which can be written as Hankel functions. For sufficient large values of \(r\) these are approximated by:</p>
+
+<p>\[u(r,t)=\frac{\hat{u}}{\sqrt{r}}\cos(k(r\pm vt))\]</p>
+
+<h3><a name="5.2.4">5.2.4 The general solution in one dimension</a></h3>
+
+<p>Starting point is the equation:</p>
+
+<p>\[\frac{\partial^2 u(x,t)}{\partial t^2}=\sum_{m=0}^{N}\left(b_m\frac{\partial ^m}{\partial x^m}\right)u(x,t)\]</p>
+
+<p>where \(b_m \in&nbsp; I\hspace{-1mm}R\). Substituting \(u(x,t)=A{\rm e}^{i(kx-\omega t)}\) gives two solutions \(\omega_j=\omega_j(k)\) as dispersion relations. The general solution is given by:</p>
+
+<p>\[u(x,t)=\int\limits_{-\infty}^{\infty}\left(a(k){\rm e}^{i(kx-\omega_1(k)t)}+ b(k){\rm e}^{i(kx-\omega_2(k)t)}\right)dk\]</p>
+
+<p>Because in general the frequencies \(\omega_j\) are non-linear in \(k\) there is dispersion and the solution cannot be written any more as a sum of functions depending only on \(x\pm vt\): the wave front transforms.</p>
+
+<h2><a name="5.3">5.3 The stationary phase method</a></h2>
+
+<p>Usually the Fourier integrals of the previous section cannot be calculated exactly. If \(\omega_j(k) \in I\hspace{-1mm}R\) the stationary phase method can be applied. Assuming that \(a(k)\) is only a slowly varying function of \(k\), one can state that the parts of the \(k\)-axis where the phase of \(kx-\omega(k)t\) changes rapidly will give no net contribution to the integral because the exponent oscillates rapidly there. The only areas contributing significantly to the integral are areas with a stationary phase, determined by \(\displaystyle\frac{d}{dk}(kx-\omega(k)t)=0\). Now the following approximation is possible:</p>
+
+<p>\[\int\limits_{-\infty}^\infty a(k){\rm e}^{i(kx-\omega(k)t)}dk\approx \sum_{i=1}^{N}\sqrt{\frac{2\pi}{\frac{d^2\omega(k_i)}{dk_i^2}}} \exp\left[-i\mbox{$\frac{1}{4}$}\pi+i(k_ix-\omega(k_i)t)\right]\]</p>
+
+<h2><a name="5.4">5.4 Green functions for the initial-value problem</a></h2>
+
+<p>This method is preferable if the solutions deviate much from the stationary solutions, like point-like excitations. Starting with the wave equation in one dimension, with \(\nabla^2=\partial^2/\partial x^2\) &nbsp;if \(Q(x,x',t)\) is the solution with initial values \(Q(x,x',0)=\delta(x-x')\) and \(\displaystyle\frac{\partial Q(x,x',0)}{\partial t}=0\), and \(P(x,x',t)\) the solution with initial values \(P(x,x',0)=0\) and \(\displaystyle\frac{\partial P(x,x',0)}{\partial t}=\delta(x-x')\), then the solution of the wave equation with arbitrary initial conditions \(f(x)=u(x,0)\) and \(\displaystyle g(x)=\frac{\partial u(x,0)}{\partial t}\) is given by:</p>
+
+<p>\[u(x,t)=\int\limits_{-\infty}^\infty f(x')Q(x,x',t)dx'+ \int\limits_{-\infty}^\infty g(x')P(x,x',t)dx'\]</p>
+
+<p>\(P\) and \(Q\) are called the <span><em>propagators</em></span>. They are defined by:</p>
+
+<p>\[\begin{aligned} Q(x,x',t)&amp;=&amp;\mbox{$\frac{1}{2}$}[\delta(x-x'-vt)+\delta(x-x'+vt)]\\ P(x,x',t)&amp;=&amp; \left\{\begin{array}{ll} \displaystyle\frac{1}{2v}&amp;~~~\mbox{if}~~|x-x'|&lt;vt\\ 0&amp;~~~\mbox{if}~~|x-x'|&gt;vt \end{array}\right.\end{aligned}\]</p>
+
+<p>Further&nbsp;the relation: \(\displaystyle Q(x,x',t)=\frac{\partial P(x,x',t)}{\partial t}\) holds.</p>
+
+<h2><a name="5.5">5.5 Waveguides and resonating cavities</a></h2>
+
+<p>The boundary conditions for a perfect conductor can be derived from the Maxwell equations. If \(\vec{n}\) is a unit vector \(\perp\) the surface, pointed from 1 to 2, and \(\vec{K}\) is a surface current density, then:</p>
+
+<p>\[\begin{array}{ll} \vec{n}\cdot(\vec{D}_2-\vec{D}_1)=\sigma~~&amp;~~\vec{n}\times(\vec{E}_2-\vec{E}_1)=0\\ \vec{n}\cdot(\vec{B}_2-\vec{B}_1)=0~~&amp;~~\vec{n}\times(\vec{H}_2-\vec{H}_1)=\vec{K} \end{array}\]</p>
+
+<p>In a waveguide because of the cylindrical symmetry: \(\vec{E}(\vec{x},t)=\vec{\cal E}(x,y){e}^{i(kz-\omega t)}\)&nbsp;and \(\vec{B}(\vec{x},t)=\vec{\cal{B}}(x,y){e}^{i(kz-\omega t)}\). From this one can now deduce that, if \({\cal B}_z\) and \({\cal E}_z\) are not \(\equiv0\):</p>
+
+<p>\[\begin{array}{ll} \displaystyle {\cal B}_x=\frac{i}{\varepsilon\mu\omega^2-k^2}\left(k\frac{\partial {\cal B}_z}{\partial x}-\varepsilon\mu\omega\frac{\partial {\cal E}_z}{\partial y}\right)~~&amp;~~ \displaystyle {\cal B}_y=\frac{i}{\varepsilon\mu\omega^2-k^2}\left(k\frac{\partial {\cal B}_z}{\partial y}+\varepsilon\mu\omega\frac{\partial {\cal E}_z}{\partial x}\right)\\ \displaystyle {\cal E}_x=\frac{i}{\varepsilon\mu\omega^2-k^2}\left(k\frac{\partial {\cal E}_z}{\partial x}+\varepsilon\mu\omega\frac{\partial {\cal B}_z}{\partial y}\right)~~&amp;~~ \displaystyle {\cal E}_y=\frac{i}{\varepsilon\mu\omega^2-k^2}\left(k\frac{\partial {\cal E}_z}{\partial y}-\varepsilon\mu\omega\frac{\partial {\cal B}_z}{\partial x}\right) \end{array}\]</p>
+
+<p>Now one can distinguish between three cases:</p>
+
+<ol>
+    <li>\(B_z\equiv0\): the Transverse&nbsp;Magnetic modes (TM). Boundary condition: \({\cal E}_z|_{\rm surf}=0\).</li>
+    <li>For the TE and TM modes this gives an eigenvalue problem for \({\cal E}_z\) resp. \({\cal B}_z\) with boundary conditions:<br />
+    \[\left(\frac{\partial^2 }{\partial x^2}+\frac{\partial^2 }{\partial y^2}\right)\psi=-\gamma^2\psi~~\mbox{with eigenvalues}~~ \gamma^2:=\varepsilon\mu\omega^2-k^2\]<br />
+    This gives a discrete solution \(\psi_\ell\) with eigenvalue \(\gamma_\ell^2\): \(k=\sqrt{\varepsilon\mu\omega^2-\gamma_\ell^2}\). For \(\omega&lt;\omega_\ell\), \(k\) is imaginary and the wave is damped. Therefore, \(\omega_\ell\) is called the <span><em>cut-off frequency</em></span>. In rectangular conductors the following expression can be found for the cut-off frequency for modes TE\(_{m,n}\) of TM\(_{m,n}\):<br />
+    \[\lambda_\ell=\frac{2}{\sqrt{(m/a)^2+(n/b)^2}}\]</li>
+    <li>\(E_z\) and \(B_z\) are zero everywhere for&nbsp;the Transversal Eectromagnetic (TEM). Then: \(k=\pm\omega\sqrt{\varepsilon\mu}\) and \(v_{\rm f}=v_{\rm g}\), just as if here were no waveguide. Further \(k \in \hspace{-1mm}R\), so there exists no cut-off frequency.</li>
+</ol>
+
+<p>In a rectangular, 3 dimensional resonating cavity with edges \(a\), \(b\) and \(c\) the possible wave numbers are given by: \(\displaystyle k_x=\frac{n_1\pi}{a}~,~~k_y=\frac{n_2\pi}{b}~,~~k_z=\frac{n_3\pi}{c}\) This results in the possible frequencies \(f=vk/2\pi\) in the cavity:</p>
+
+<p>\[f=\frac{v}{2}\sqrt{\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}+\frac{n_z^2}{c^2}}\]</p>
+
+<p>For a cubic cavity, with \(a=b=c\), the possible number of oscillating modes \(N_{\rm L}\) for longitudinal waves is given by:</p>
+
+<p>\[N_{\rm L}=\frac{4\pi a^3f^3}{3v^3}\]</p>
+
+<p>Because transversal waves have two possible polarizations&nbsp;\(N_{\rm T}=2N_{\rm L}\) holds for them.</p>
+
+<h2><a name="5.6">5.6 Non-linear wave equations</a></h2>
+
+<p>The <span><em>Van der Pol</em></span> equation is given by:</p>
+
+<p>\[\frac{d^2x}{dt^2}-\varepsilon\omega_0(1-\beta x^2)\frac{dx}{dt}+\omega_0^2x=0\]</p>
+
+<p>\(\beta x^2\) can be ignored for very small values of the amplitude. Substitution of \(x\sim{\rm e}^{i\omega t}\) gives: \(\omega=\frac{1}{2}\omega_0(i\varepsilon\pm2\sqrt{1-\frac{1}{2}\varepsilon^2})\). The lowest-order instabilities grow as \(\frac{1}{2}\varepsilon\omega_0\). While \(x\) is growing, the 2nd term becomes larger and diminishes the growth. Oscillations on a time scale \(\sim\omega_0^{-1}\) can exist. If \(x\) is expanded as \(x=x^{(0)}+\varepsilon x^{(1)}+\varepsilon^2x^{(2)}+\cdots\) and this is substituted one obtains, besides periodic, <span><em>secular terms</em></span> \(\sim\varepsilon t\). If it is assumed that there exist timescales \(\tau_n\), \(0\leq\tau\leq N\) with \(\partial\tau_n/\partial t=\varepsilon^n\) and if the secular terms are put to 0 one obtains:</p>
+
+<p>\[\frac{d}{dt}\left\{\frac{1}{2}\left(\frac{dx}{dt}\right)^2+\mbox{$\frac{1}{2}$}\omega_0^2x^2\right\}= \varepsilon\omega_0(1-\beta x^2)\left(\frac{dx}{dt}\right)^2\]</p>
+
+<p>This is an energy equation. Energy is conserved if the left-hand side is 0. If \(x^2&gt;1/\beta\), the right-hand side changes sign and an increase in energy changes into a decrease of energy. This mechanism limits the growth of oscillations.</p>
+
+<p>The <span><em>Korteweg-De Vries</em></span> equation is given by:</p>
+
+<p>\[\frac{\partial u}{\partial t}+\frac{\partial u}{\partial x}-\underbrace{au\frac{\partial u}{\partial x}}_{\rm non-lin}+ \underbrace{b^2\frac{\partial ^3u}{\partial x^3}}_{\rm dispersive}=0\]</p>
+
+<p>This equation is for example a model for ion-acoustic waves in a plasma. For this equation, soliton solutions of the following form exist:</p>
+
+<p>\[u(x-ct)=\frac{-d}{\cosh^2(e(x-ct))}\] with \(c=1+\frac{1}{3}ad\) and \(e^2=ad/(12b^2)\).</p>
+
+</body>
+</html>

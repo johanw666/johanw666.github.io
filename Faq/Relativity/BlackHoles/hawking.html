@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>Hawking Radiation </title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Modified by Ilja Schmelzer, 1997.<br>
+Original by John Baez, 1994.</p>
+<p><br></p>
+
+
+<h1>Hawking Radiation</h1>
+
+<p>In 1975 Hawking published a shocking result: if one takes quantum theory into account,
+it seems that black holes are not quite black!&nbsp; Instead, they should glow slightly
+with "Hawking radiation", consisting of photons, neutrinos, and to a lesser extent all
+sorts of massive particles.&nbsp; This has never been observed, since the only black holes
+we have evidence for are those with lots of hot gas falling into them, whose radiation
+would completely swamp this tiny effect.&nbsp; Indeed, if the mass of a black hole is
+<em>M</em> solar masses, Hawking predicted it should glow like a blackbody of
+temperature</p>
+
+<pre style="font-size: 24px">
+                     6 &times; 10<sup>-8</sup>/M kelvins,
+</pre>
+
+<p>so only for very small black holes would this radiation be significant.&nbsp; Still,
+the effect is theoretically very interesting, and folks working on understanding how
+quantum theory and gravity fit together have spent a lot of energy trying to understand it
+and its consequences.&nbsp; The most drastic consequence is that a black hole, left alone
+and unfed, should radiate away its mass, slowly at first but then faster and faster as it
+shrinks, finally dying in a blaze of glory like a hydrogen bomb.&nbsp; But the total
+lifetime of a black hole of <em>M</em> solar masses works out to be</p>
+
+<pre style="font-size: 24px">
+                     10<sup>71</sup> M<sup>3</sup> seconds
+</pre>
+
+<p>so don't wait around for a big one to give up the ghost.&nbsp; (People have looked for
+the death of small ones that could have formed in the big bang, but they haven't seen
+any.)</p>
+
+<P> How does this work?&nbsp; Well, you'll find Hawking radiation explained this way in a
+lot of "pop-science" treatments:
+
+<blockquote>
+ Virtual particle pairs are constantly being created near the horizon of the black hole,
+ as they are everywhere.&nbsp; Normally, they are created as a particle-antiparticle pair
+ and they quickly annihilate each other.&nbsp; But near the horizon of a black hole, it's
+ possible for one to fall in before the annihilation can happen, in which case the other
+ one escapes as Hawking radiation.
+</blockquote>
+
+<p>In fact this argument also does not correspond in any clear way to the actual
+computation.&nbsp; Or at least <EM>I've</EM> never seen how the standard computation can
+be transmuted into one involving virtual particles sneaking over the horizon, and in the
+last talk I was at on this it was emphasized that nobody has ever worked out a "local"
+description of Hawking radiation in terms of stuff like this happening at the
+horizon.&nbsp; I'd gladly be corrected by any experts out there...&nbsp; Note: I wouldn't
+be surprised if this heuristic picture turned out to be accurate, but I don't see how you
+get that picture from the usual computation.</p>
+
+<p>The usual computation involves Bogoliubov transformations.&nbsp; The idea is that when
+you quantize (say) the electromagnetic field you take solutions of the classical equations
+(Maxwell's equations) and write them as a linear combination of positive-frequency and
+negative-frequency parts.&nbsp; Roughly speaking, one gives you particles and the other
+gives you antiparticles.&nbsp; More subtly, this splitting is implicit in the very
+definition of the vacuum of the quantum version of the theory!&nbsp; In other words, if
+you do the splitting one way, and I do the splitting another way, our notion of which
+state is the vacuum may disagree!</p>
+
+<p>This should not be <em>utterly</em> shocking, just <em>pretty darn</em> shocking.&nbsp;
+The vacuum, after all, can be thought of as the state of least energy.&nbsp; If we are
+using really different co-ordinate systems, we'll have really different notions of time,
+hence really different notions of energy&mdash;since energy is defined in quantum theory to be
+the operator <em>H</em> such that time evolution is given by <em>exp(-itH)</em>.&nbsp; So
+on the one hand, it's quite conceivable that we'll have different notions of positive and
+negative frequency solutions in classical field theory&mdash;a solution that's a linear
+combination of those with time dependence <em>exp(-i&omega;t)</em> is called positive or
+negative frequency depending on the sign of <em>&omega;</em>&mdash;but of course this depends
+on a choice of time co-ordinate t.&nbsp; And on the other hand, it's quite conceivable
+that we'll have different notions of the lowest-energy state.</p>
+
+<p>Now when we are in good old flat Minkowski spacetime, a la special relativity, there
+are a bunch of "inertial frames" differing by Lorentz transformations.&nbsp;
+These give different time co-ordinates, but one can check that the difference is never so
+bad that different co-ordinates give different notions of positive or negative frequency
+solutions of Maxwell's equations.&nbsp; Nor will different people using these co-ordinate
+systems ever disagree about what's the lowest-energy state.&nbsp; So all inertial
+observers agree about what's a particle, what's an antiparticle, and what's the
+vacuum.</p>
+
+<p>But in curved spacetime there aren't these "best" co-ordinate systems, the
+inertial ones.&nbsp; So even very reasonable different choices of co-ordinates can give
+disagreements about particles vs antiparticles, or what's the vacuum.&nbsp; These
+disagreements don't mean that "everything is relative", because there are nice
+formulas for how to translate between the descriptions in different co-ordinate
+systems.&nbsp; These are Bogoliubov transformations.</p>
+
+<p>So if there is a black hole around...</p>
+
+<p>on the one hand we can split solutions of Maxwell's equations into positive frequency
+in the most blitheringly obvious way that someone far from the black hole and far in the
+future would do it...</p>
+
+<p>and on the other hand we can split solutions of Maxwell's equations into positive
+frequency in the most blitheringly obvious way that someone far in the past, before the
+collapse into a black hole has happened would do it.</p>
+
+<p>That'd be the heuristic explanation I'd give that most closely corresponds to the usual
+computation.&nbsp; There are additional things to say about the fact that the guy far in
+the future and far away from the black hole can't see what's in the hole, so he has
+incomplete information about the state, so he sees a state with entropy, in fact a thermal
+state.&nbsp; (Here I'm assuming the black hole was NOT eternal, so the guy way back in the
+past didn't have the black hole to contend with.&nbsp; Apparently Hawking's original
+computation dealt with this case, but people subsequently watered down his explanation by
+assuming the black hole was there eternally, to simplify the math.&nbsp; This is what the
+guy at the talk said...&nbsp; I'd only seen the watered-down version!)</p>
+
+<p>Now in fact when you do a Bogoliubov transformation to the vacuum you get a state in
+which there are <EM>pairs</EM> of particles and antiparticles, so this is possibly the
+link between the math and the heuristic explanation.&nbsp; Hopefully whoever made up the
+usual heuristic explanation understood the link better than I do!</p>
+
+<h2>References</h2>
+<ul>
+<li> Robert M. Wald, <cite>General Relativity</cite>, Sections
+14.2&ndash;14.4, University of Chicago Press, Chicago, 1984.&nbsp; (A good
+precise introduction to the subject.)
+<li> Stephen W. Hawking,
+Particle creation by black holes, Commun. Math. Phys. 43 (1975),
+199&ndash;220.&nbsp; (The original paper.)
+</ul>
+
+<p><br></p>
+
+</body>
+</html>

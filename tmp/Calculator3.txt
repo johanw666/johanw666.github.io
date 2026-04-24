@@ -1,0 +1,6 @@
+//workspace 3
+x^4+3x^3-x^2-5x=0
+(t-5)^2-9=0
+// Simplest polynomal without exact solution
+z^5-z-1=0
+p^137+3p^56+8p^2+5p-2002 = 0

@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Leap Seconds and Earth's Rotation</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a>
+
+<p>By Don Koks, 2023.</p>
+<p><br></p>
+
+
+
+<h1>What is a leap second?</h1>
+
+<p>Over the last few decades, at intervals of a few years, precise clocks around the world have been paused for one second, either at
+the end of June or the end of December.&nbsp; These pauses don't conform to a schedule; rather, they are made only when needed, and
+confining them to June and December is just a convention.&nbsp; Pausing a clock for a second is equivalent to inserting a second into
+its record of passing time.&nbsp; This infrequently inserted second is called a <em>leap second</em>.&nbsp; We need leap seconds
+because our "international clock" ticks just a little too quickly for our civil needs, and so must be stopped every once in a
+while&mdash;to rein it in, so to speak.&nbsp; Because of the disruption that stopping the international clock can cause, it has been
+convenient to wait until that clock has gotten almost one second ahead of where it should be, before stopping it for a whole
+second.</p>
+
+<p>To explain what's going on, we must recognise that our timing needs require two timing standards (at least: we'll add a third
+standard shortly).&nbsp; The first standard is called <i>UT1</i> ("universal time [version] 1"), which essentially measures Earth's
+rotation angle relative to the fixed stars, and hence is allied to our civil needs of knowing when the Sun will rise and
+set&mdash;which is important because the motion of the Sun governs our lives.&nbsp; The second time standard is called <i>TAI</i>
+("international atomic time", with a reversed acronym to keep the French happy, since they are big timing players).&nbsp; TAI is
+measured by atomic clocks, and defines the SI second.&nbsp; TAI clocks tick a little faster than UT1 clocks: that is, the TAI second
+is a bit shorter than the UT1 second.&nbsp; Why is that?</p>
+
+<p>A century ago, the second was defined such that the length of the <em>mean solar day</em>&mdash;the average time between the Sun's
+meridian transits&mdash;was 24 hours, or 24 &times; 60 &times; 60 seconds = 86,400 seconds.&nbsp; The use of "average" here was
+problematic: how might this second be reproduced in the laboratory?&nbsp; With the advent of atomic clocks, we could do better: we
+could create a time standard that was independent of the Sun's motion in our sky (the average of which is related to UT1).&nbsp; The
+result was that in 1967, the TAI second was defined to be the length of time taken for a particular caesium isotope to emit
+9,192,631,770 wavelengths of light when undergoing a particular electronic transition.&nbsp; This modern second, being based on the
+atom, is reproducible in the lab.&nbsp; Presumably (I wasn't there to ask them) researchers chose this number of wavelengths of light
+in an attempt to fit exactly 86,400 of the new TAI seconds into one mean solar day.&nbsp; Given that any particular solar day
+generally doesn't have the same length as a <em>mean</em> solar day, researchers cannot have been expected to get things exactly
+right.&nbsp; They did very well, but fitting <em>exactly</em> 86,400 of the new SI seconds into one mean solar day was always going
+to be a big ask, and they didn't quite succeed.&nbsp; If the SI second had instead been defined to be 9,192,631,997 wavelengths of
+caesium light, it would've been a much better fit to the mean solar day <a href="#kleppner">[1]</a>.&nbsp; Additionally, Earth's spin
+rate slows such that the mean solar day lengthens by one or two milliseconds every century, and researchers seem to have based the
+new TAI second on extremely old data.&nbsp; The result was that from the very start, TAI clocks counted out about 86,400.001 seconds
+in a mean solar day (which is, by definition, 86,400 UT1 seconds: the 24 UT1 hours that govern our civil lives).</p>
+
+<p>Because TAI clocks ticked too quickly for our civil needs (UT1) from the very start, the reading on TAI clocks began to creep
+ahead of UT1.&nbsp; After one day, TAI clocks displayed 0.001 seconds ahead of UT1.&nbsp; This didn't greatly affect anyone, but
+three years (about 1000 days) after the introduction of the atomic second, TAI clocks were a full second ahead of UT1 clocks, and
+things were looking more out of kilter.&nbsp; In hindsight, this was nothing to be concerned about; but researchers of the time felt
+that a one-second mismatch was unacceptable.&nbsp; What to do?&nbsp; We had the option of pausing TAI clocks for one second.&nbsp;
+But messing with these clocks didn't seem to be a good idea.&nbsp; Instead, we created a <em>copy</em> of a TAI clock and called it a
+<i>UTC</i> clock <a href="#UTC">[2]</a>.&nbsp; We did not stop the TAI clock.&nbsp; In a sense, the TAI clock was relegated to a lab
+and left to tick indefinitely, never being interfered with.&nbsp; Now we focussed on the UTC clock, and stopped <em>that</em> for a
+second when it had gotten a second ahead of UT1.&nbsp; Stopping UTC for a second is equivalent to inserting a second into its
+display, which then counts
+<pre style="font-size: 24px">
+   23:59:58
+
+   23:59:59
+
+   23:59:60
+
+   00:00:00
+
+   00:00:01
+
+   00:00:02
+</pre>
+and so on.&nbsp; This was called "adding a leap second".&nbsp; UTC clocks tick at exactly the same rate as TAI clocks: they both use
+the atomic second (the SI second).&nbsp; But each time we add a leap second, UTC falls behind TAI by one second.&nbsp; The first leap
+second occurred in 1972, and now in mid 2023, UTC is 37 seconds behind TAI.</p>
+
+<p>Adding a leap second every three years is only necessary if Earth spins at a rate such that 86,400.001 SI (TAI) seconds fit into a
+mean solar day.&nbsp; In the 1960s, Earth entered a period in which its spin slowed strongly, so that by the mid 1970s, a mean solar
+day lasted for 86,400.003 SI seconds.&nbsp; Now TAI/UTC was pulling ahead of UT1 three times faster than it had before, and a leap
+second had to be added every year instead of every three years.&nbsp; The figure shows the length of a mean solar day (in atomic
+seconds) versus the date.&nbsp;
+<img src="lengthOfDay.png" hspace=10 vspace=10 border=0 height=400 width=780 align=right>
+When the curve is in the blue zone, Earth's rate of spin is comparatively slow: more than 86,400 SI seconds fit into a mean solar
+day, and a leap second must occasionally be added.&nbsp; When the curve is in the yellow zone, Earth's rate of spin is comparatively
+fast: less than 86,400 SI seconds fit into a mean solar day, and a leap second must occasionally be "subtracted": that is, rather
+being stopped for a second, UTC clocks are jumped ahead by a second.&nbsp; Since the introduction of the atomic second, the more
+precise version of the curve we have drawn (&mdash;ours is a smoothened version of that more precise curve) has sometimes fluctuated
+into the yellow zone for short periods; but never long enough to compel us to <em>subtract</em> a leap second.</p>
+
+<p>Notice an important point on the graph: the zone that the curve is in, blue or yellow, does not tell us the curve's slope, and
+vice versa.&nbsp; The zone colour tells us whether a leap second is added or subtracted.&nbsp; The curve's slope tells us whether
+Earth's spin is quickening or slowing.&nbsp; A positive slope means Earth's spin is slowing; then, regardless of which zone the curve
+is currently in, that slope will eventually send the curve into the blue zone, and a leap second will be added.&nbsp; But consider
+that the curve can be in the blue zone and yet have a negative slope.&nbsp; In that case, Earth's spin rate is increasing, but leap
+seconds still need to be added occasionally.</p>
+
+
+
+<h2>A leap second just occurred.&nbsp; Does that mean Earth's rotation is slowing?</h2>
+
+<p>No, it doesn't, for the reason given in the last paragraph.&nbsp; Having to add a leap second means that the curve is in the blue
+zone, but that tells us <em>nothing</em> about the slope of the curve, which must be positive for Earth's rotation to be
+slowing.&nbsp; Even though 27 leap seconds have occurred since their introduction in 1972, Earth's rotation has <em>quickened</em>
+overall since then, as is evident from the overall negative slope of the graph.&nbsp; It's a common mistake to think that the
+existence of leap seconds means that we are watching Earth's rotation slow before our very eyes.&nbsp; No one makes the mistake of
+thinking that the need for a leap <em>day</em> every four years implies some kind of slowing of Earth's passage around the Sun.&nbsp;
+So why do so many think that the occasional need for a leap second implies that Earth's rotation is slowing?</p>
+
+<p>Part of the problem is that even the precision-timing community can confuse the curve's zone with its slope.&nbsp; For example,
+see the US Naval Observatory's Circular number 179, which describes the International Astronomical Union's utterances on time, with
+the words "the tidal deceleration of the Earth's rotation [...] causes UT1 [or UTC, since leap seconds keep the two within about a
+second of each other] to lag increasingly behind [TAI]".&nbsp; This lag (which I described some paragraphs up) is caused by the UTC
+clock ticking too quickly for civil purposes; but whether that too-quick ticking has its roots in a slowing of Earth's rotation is
+another question entirely.</p>
+
+<p>UTC clocks are no different to your wristwatch: if your watch gets a little ahead every day, you cannot infer that Earth's spin is
+slowing.&nbsp; You cannot infer anything; but you might make the infinitely more probable guess that your watch ticks faster than it
+should.&nbsp; And so you correct it occasionally.&nbsp; Leap seconds are the same idea: they are just a correction to UTC clocks
+because those clocks tick just slightly too quickly to match our days and our nights over a long period.</p>
+
+<p>The length of Earth's day is currently thought to increase by one or two milliseconds per century, being probably due mostly to
+tidal friction caused by the Moon.&nbsp; It follows that if Earth's rotation were to stop slowing while the curve was in the blue
+zone, we would still have to insert leap seconds into UTC indefinitely, for the simple reason that the curve was in the blue
+zone.&nbsp; UTC clocks would simply be ticking too quickly for civil needs, and so, as with any fast-ticking clock, they would have
+to be paused from time to time.&nbsp; The leap second accomplishes just that.&nbsp; Even if Earth's rotation rate began
+to <em>increase</em>, leap seconds would still be required until the curve had been in the yellow zone for some time.&nbsp; So, a
+need for leap seconds does not imply that Earth's spin is slowing.&nbsp; As I said above, 27 leap seconds have occurred since their
+introduction in 1972, and yet Earth's rotation has quickened overall since then.</p>
+
+<p>With Earth's spin quickening as of late, it's thought that in the next few years, the curve will be well and truly in the yellow
+zone.&nbsp; That means we might have to "<em>subtract</em> a leap second" soon.</p>
+
+
+
+<h2>A possible end to leap seconds</h2>
+
+It's clear from the graph that Earth's length of day is currently hovering around the blue&ndash;yellow boundary.&nbsp; It might come
+as no surprise, then, that no leap second has occurred for some years: the last leap second was inserted at the end of 2016.&nbsp; In
+fact, there seems to be no great reason to keep UTC in ultra-close agreement with UT1, and so given the headaches that leap seconds
+cause computer administrators, suggestions have been made to drop leap seconds for the foreseeable future.&nbsp; In practice, that
+means increasing the mismatch between UT1 and UTC that is tolerated before UTC clocks must again be paused, from its current value of
+one second.&nbsp; Suppose that we were prepared to tolerate a mismatch of 30 seconds between UT1 and UTC, and suppose that the day's
+length stabilised at 86,400.001 SI seconds.&nbsp; Then consider that after <i>n</i> days, UTC would be <i>n</i> &times; 0.001 seconds
+ahead of UT1.&nbsp; After <i>n</i> = 30,000 days (about 82 years), UTC would be 30 seconds ahead of UT1, and we would have reached the
+limit of our tolerance.&nbsp; We would then pause UTC for 30 seconds, or "insert 30 leap seconds".&nbsp; Likewise, if the day's length
+stabilised at 86,399.999 SI seconds, then after 82 years we would have to <em>subtract</em> 30 leap seconds.&nbsp; You can read
+<a href="https://www.timeanddate.com/news/astronomy/end-of-leap-seconds-2022" target="new">here</a> of the current discussion to
+avoid leap seconds for the next century.
+
+
+
+<h2>How measurable is Earth's spin rate?</h2>
+
+<p>Compare the tick rates of two super-accurate clocks, one on Earth's equator and the other at one of its poles.&nbsp; In the
+inertial frame in which Earth spins, the equator clock is moving, and relativity says that this motion has a <em>slowing</em> effect
+on its tick rate compared to the pole clock.&nbsp; But the equator clock happens to be in a slightly weaker gravity field&mdash;a
+consequence of Earth's oblate shape&mdash;and relativity says that this weaker gravity has a <em>quickening</em> effect on the
+equator clock's tick rate compared to the pole clock.&nbsp; Remarkably (at least, to a high approximation), these two effects cancel,
+and time <em>everywhere</em> on Earth's geoid (approximately mean sea level) proceeds at the same rate.&nbsp; This can be verified
+from the Schwarzschild metric in general relativity, and can be argued on general grounds without appealing to a metric.&nbsp;
+(Whether it is <em>exactly</em> true is a knotty problem in relativity, and is not known.)&nbsp; This fact is used to define
+TAI.&nbsp; Modern precise timers create plots of the length of the day that they interpret as showing irregularities in Earth's spin
+rate from day to day.&nbsp; Currently this is achieved by "very long baseline interferometry" measurements of astronomical radio
+sources, made by radio dishes widely spaced on Earth.&nbsp; The measurements made by these dishes are correlated to deduce the
+geometry of the dishes relative to the radio sources, and Earth-rotation specialists use this data to infer knowledge of Earth's spin
+rate as a function of time.</p>
+
+<p>That said, were Earth's spin rate to change, then for the TAI that governs the measurements of these dishes to remain well
+defined, the dishes would have to continue either to remain on the geoid, or to have their readings interrelatable via the
+concept of a geoid.&nbsp; If Earth's spin rate changes on a time scale of one day, then it's not clear whether Earth's actual
+rocky surface (which dictates where the dishes are) is able to adjust continuously to conform to that geoid.&nbsp; In fact,
+Earth's geoid does appear to be continually changing on the order of at least tens of centimetres.&nbsp; So, it's not clear
+whether the timing measurements that say Earth's spin rate is changing have come from a set of radio dishes whose clocks are
+ticking at the same rate.&nbsp; In that case, all bets are off that the numbers make any sense at all.&nbsp; Precise timing is
+not a straightforward subject!</p>
+<br>
+
+
+<h3>Reference and a Note</h3>
+
+<p><a name="kleppner">[1]</a> Daniel Kleppner, <i>Time Too Good to be True</i>, Physics Today, March 2006, page 11.
+<p><a name="UTC">[2]</a> UTC stands for "coordinated universal time", a wording whose precise meaning is unclear; but in a
+relativistic sense, UTC <em>is</em> a useful time coordinate.&nbsp; The rearrangement of the acronym is not only a compromise between
+English and French initial letters, but it resembles "UT1" in appearance.
+
+<p><br></p>
+
+</body>
+</html>

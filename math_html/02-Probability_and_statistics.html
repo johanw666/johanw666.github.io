@@ -1,0 +1,204 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Probability and statistics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="1">2. Probability and statistics</a></h1>
+<h2><a name="2.1">2.1 Combinations</a></h2>
+The number of possible <em>combinations</em> of $k$ elements from $n$ elements is
+given by
+\[
+{n\choose k}=\frac{n!}{k!(n-k)!}
+\]
+The number of <em>permutations</em> of $p$ from $n$ is given by
+\[
+\frac{n!}{(n-p)!}=p!{n\choose p}
+\]
+The number of different ways to classify $n_i$ elements in $i$ groups, when
+the total number of elements is $N$, is
+\[
+\frac{N!}{\prod\limits_i n_i!}
+\]
+
+<h2><a name="2.2">2.2 Probability theory</a></h2>
+The probability $P(A)$ that an event $A$ occurs is defined by:
+\[
+P(A)=\frac{n(A)}{n(U)}
+\]
+where $n(A)$ is the number of events when $A$ occurs and $n(U)$ the total
+number of events.
+<p>
+The probability $P(\neg A)$ that $A$ <em>does not</em> occur is: $P(\neg A)=1-P(A)$.
+The probability $P(A\cup B)$ that $A$ and $B$ <em>both</em> occur is given by:
+$P(A\cup B)=P(A)+P(B)-P(A\cap B)$. If $A$ and $B$ are independent, than holds:
+$P(A\cap B)=P(A)\cdot P(B)$.
+<p>
+The probability $P(A|B)$ that $A$ occurs, given the fact that $B$ occurs, is:
+\[
+P(A|B)=\frac{P(A\cap B)}{P(B)}
+\]
+
+<h2><a name="2.3">2.3 Statistics</a></h2>
+<h3><a name="2.3.1">2.3.1 General</a></h3>
+The <em>average</em> or <em>mean</em> value $\langle x\rangle$ of a collection of values is:
+$\langle x\rangle=\sum_i x_i/n$. The <em>standard deviation</em> $\sigma_x$ in the
+distribution of $x$ is given by:
+\[
+\sigma_x=\sqrt{\frac{\sum\limits_{i=1}^n(x_i-\langle x \rangle)^2}{n}}
+\]
+When samples are being used the sample variance $s$ is given by $\displaystyle s^2=\frac{n}{n-1}\sigma^2$.
+<p>
+The <em>covariance</em> $\sigma_{xy}$ of $x$ and $y$ is given by:
+\[
+\sigma_{xy}=\frac{\sum\limits_{i=1}^n(x_i-\langle x \rangle)(y_i-\langle y\rangle)}{n-1}
+\]
+The <em>correlation coefficient</em> $r_{xy}$ of $x$ and $y$ than becomes:
+$r_{xy}=\sigma_{xy}/\sigma_x\sigma_y$.
+<p>
+The standard deviation in a variable $f(x,y)$ resulting from errors in
+$x$ and $y$ is:
+\[
+\sigma^2_{f(x,y)}=\left(\frac{\partial f}{\partial x}\sigma_x\right)^2+\left(\frac{\partial f}{\partial y}\sigma_y\right)^2+
+\frac{\partial f}{\partial x}\frac{\partial f}{\partial y}\sigma_{xy}
+\]
+
+<h3><a name="2.3.2">2.3.2 Distributions</a></h3>
+<ol>
+<li> <strong>The Binomial distribution</strong> is the distribution describing a
+     sampling with replacement. The probability for success is $p$. The
+     probability $P$ for $k$ successes in $n$ trials is then given by:
+     \[
+     P(x=k)={n\choose k}p^k(1-p)^{n-k}
+     \]
+     The standard deviation is given by $\sigma_x=\sqrt{np(1-p)}$ and the
+     expectation value is $\varepsilon=np$.</li>
+<p>
+<li> <strong>The Hypergeometric distribution</strong> is the distribution describing
+     a sampling without replacement in which the order is irrelevant.
+     The probability for $k$ successes in a trial with $A$ possible
+     successes and $B$ possible failures is then given by:
+     \[
+     P(x=k)=\frac{\displaystyle{A\choose k}{B\choose n-k}}{\displaystyle{A+B\choose n}}
+     \]
+     The expectation value is given by $\varepsilon=nA/(A+B)$.</li>
+<p>
+<li> <strong>The Poisson distribution</strong> is a limiting case of the binomial
+     distribution when $p\rightarrow0$, $n\rightarrow\infty$ and also
+     $np=\lambda$ is constant.
+     \[
+     P(x)=\frac{\lambda^x {\rm e}^{-\lambda}}{x!}
+     \]
+     This distribution is normalized to $\displaystyle\sum\limits_{x=0}^\infty P(x)=1$.</li>
+<p>
+<li> <strong>The Normal distribution</strong> is a limiting case of the binomial distribution
+     for continuous variables:
+     \[
+     P(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{1}{2}\left(\frac{x-\langle x\rangle}{\sigma}\right)^2\right)
+     \]
+     </li>
+<p>
+<li> <strong>The Uniform distribution</strong> occurs when a random number $x$ is taken
+     from the set $a\leq x\leq b$ and is given by:
+     \[
+     \left\{\begin{array}{l}\displaystyle
+     P(x)=\frac{1}{b-a}~~~\mbox{if}~~~a\leq x\leq b\\
+     \\
+     P(x)=0~~~\mbox{in all other cases}
+     \end{array}\right.
+     \]
+     $\langle x\rangle=\frac{1}{2}(b-a)$ and $\displaystyle\sigma^2=\frac{(b-a)^2}{12}$.</li>
+<p>
+<li> <strong>The Gamma distribution</strong> is given by:
+     \[
+     \left\{\begin{array}{l}\displaystyle
+     P(x)=\frac{x^{\alpha-1}{\rm e}^{-x/\beta}}{\beta^\alpha\Gamma(\alpha)}~~~\mbox{if}~~~0\leq y\leq\infty
+     \end{array}\right.
+     \]
+     with $\alpha>0$ and $\beta>0$. The distribution has the following
+     properties: $\langle x\rangle=\alpha\beta$, $\sigma^2=\alpha\beta^2$.</li>
+<p>
+<li> <strong>The Beta distribution</strong> is given by:
+     \[
+     \left\{\begin{array}{l}\displaystyle
+     P(x)=\frac{x^{\alpha-1}(1-x)^{\beta-1}}{\beta(\alpha,\beta)}~~~\mbox{if}~~~0\leq x\leq1\\
+     \\
+     P(x)=0~~~\mbox{everywhere else}
+     \end{array}\right.
+     \]
+     and has the following properties: $\displaystyle\langle x\rangle=\frac{\alpha}{\alpha+\beta}$,
+     $\displaystyle\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$.
+     <p>
+     For $P(\chi^2)$ holds: $\alpha=V/2$ and $\beta=2$.</li>
+<p>
+<li> <strong>The Weibull distribution</strong> is given by:
+     \[
+     \left\{\begin{array}{l}\displaystyle
+     P(x)=\frac{\alpha}{\beta}x^{\alpha-1}{\rm e}^{-x^\alpha}~~~\mbox{if}~~~0\leq x\leq\infty\wedge\alpha\wedge\beta>0\\
+     \\
+     P(x)=0~~~\mbox{in all other cases}
+     \end{array}\right.
+     \]
+     The average is $\langle x\rangle=\beta^{1/\alpha}\Gamma((\alpha+1)\alpha)$</li>
+<p>
+<li> For a <strong>two-dimensional distribution</strong> holds:
+     \[
+     P_1(x_1)=\int P(x_1,x_2)dx_2~~,~~~P_2(x_2)=\int P(x_1,x_2)dx_1
+     \]
+     with
+     \[
+     \varepsilon(g(x_1,x_2))=\iint g(x_1,x_2)P(x_1,x_2)dx_1dx_2=\sum_{x_1}\sum_{x_2}g\cdot P
+     \]
+     </li>
+</ol>
+
+<h2><a name="2.4">2.4 Regression analyses</a></h2>
+When there exists a relation between the quantities $x$ and $y$ of the form
+$y=ax+b$ and there is a measured set $x_i$ with related $y_i$, the following
+relation holds for $a$ and $b$ with $\vec{x}=(x_1,x_2,...,x_n)$ and
+$\vec{e}=(1,1,...,1)$:
+\[
+\vec{y}-a\vec{x}-b\vec{e}\in<\vec{x},\vec{e}>^\perp
+\]
+From this follows that the inner products are 0:
+\[
+\left\{
+\begin{array}{l}
+(\vec{y},\vec{x})-a(\vec{x},\vec{x})-b(\vec{e},\vec{x})=0\\
+(\vec{y},\vec{e})-a(\vec{x},\vec{e})-b(\vec{e},\vec{e})=0
+\end{array}\right.
+\]
+with $(\vec{x},\vec{x})=\sum\limits_i x_i^2$, $(\vec{x},\vec{y})=\sum\limits_ix_iy_i$,
+$(\vec{x},\vec{e})=\sum\limits_ix_i$ and $(\vec{e},\vec{e})=n$.
+$a$ and $b$ follow from this.
+<p>
+A similar method works for higher order polynomial fits: for a second order
+fit holds:
+\[
+\vec{y}-a\vec{x^2}-b\vec{x}-c\vec{e}\in<\vec{x^2},\vec{x},\vec{e}>^\perp
+\]
+with $\vec{x^2}=(x_1^2,...,x_n^2)$.
+<p>
+The <em>correlation coefficient</em> $r$ is a measure for the quality of a fit.
+In case of linear regression it is given by:
+\[
+r=\frac{n\sum xy-\sum x\sum y}{\sqrt{(n\sum x^2-(\sum x)^2)(n\sum y^2-(\sum y)^2)}}
+\]
+
+</body>
+</head>

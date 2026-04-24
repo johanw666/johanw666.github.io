@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>Why are there eight gluons?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Original by James Bottomley and John Baez, 1996.</p>
+<p><br></p>
+
+
+<h1>Why are there eight gluons and not nine?</h1>
+
+<p>According to QCD and the standard model of particle physics, quarks carry an SU(3) "color charge" which can
+be "red", "blue" or "green".&nbsp; The strong nuclear force which binds these together inside the nucleons is
+mediated by gluons which must carry a color-anticolor charge.&nbsp; This seems to give 9 types of gluon: </p>
+
+<pre style="font-size: 24px">
+red   anti-red,   red   anti-blue,   red   anti-green,
+blue  anti-red,   blue  anti-blue,   blue  anti-green,
+green anti-red,   green anti-blue,   green anti-green.
+</pre>
+
+<p>Why then are there only eight gluons?</p>
+
+<p>Rather than start with the SU(3) theory, consider first what our knowledge of nature is&mdash;upon which we
+will base the theory.&nbsp; We know that the matter we believe to be composed of quarks (the hadrons) comes in
+two types: mesons (short lived particles, pions etc.) and baryons (protons, neutrons etc.), both of which have
+to be strong-force neutral.</p>
+
+<p>Consider the evidence: scattering experiments strongly suggest a meson to be composed of a quark anti-quark
+pair and a baryon to be composed of three quarks.&nbsp; The famous 3R experiment also suggests that whatever
+force binds the quarks together has 3 types of charge (called the 3 colors).</p>
+
+<p>Now, into the realm of theory: we are looking for an internal symmetry having a 3-dimensional
+representation which can give rise to a neutral combination of 3 particles (otherwise no color-neutral
+baryons).&nbsp; The simplest such statement is that a linear combination of each type of charge (red + green +
+blue) must be neutral, and following William of Occam we believe that the simplest theory describing all the
+facts must be the correct one.&nbsp; We now postulate that the particles carrying this force, called gluons,
+must occur in color anti-color units (i.e. nine of them).&nbsp; BUT, red + blue + green is neutral, which
+means that the linear combination red anti-red + blue anti-blue + green anti-green must be non-interacting,
+since otherwise the colorless baryons would be able to emit these gluons and interact with each other via the
+strong force&mdash;contrary to the evidence.&nbsp; So, there can only be EIGHT gluons.&nbsp; This is just
+Occam's razor again: a hypothetical particle that can't interact with anything, and therefore can't be
+detected, doesn't exist.</p>
+
+<p>The simplest theory describing the above is the SU(3) one with the gluons as the basis states of the Lie
+algebra.&nbsp; That is, gluons transform in the adjoint representation of SU(3), which is 8-dimensional.</p>
+
+<p>The physics of color is not understandable if all one knows is that there are 3 colors.&nbsp; One must
+really understand something about SU(3).&nbsp; SU(3) is the group of 3 &times; 3 unitary matrices with determinant
+1.&nbsp; This is the symmetry group of the strong force.&nbsp; What this means is that, as far as the strong
+force is concerned, the state of a particle is given by a vector in some vector space on which elements of
+SU(3) act as linear (in fact unitary) operators.&nbsp; We say the particle "transforms under some
+representation of SU(3)".&nbsp; For example, since elements of SU(3) are 3 &times; 3 matrices, they can act on
+column vectors by matrix multiplication.&nbsp; This gives a 3-dimensional representation of SU(3).&nbsp;
+Quarks transform under this representation of SU(3), and because it's 3-dimensional we say quarks come in 3
+colors: red, green and blue.&nbsp; This is just an amusing way of talking about the 3 column vectors</p>
+<pre style="font-size: 24px">
+   1
+   0
+   0
+
+   0
+   1
+   0
+
+  and
+
+   0
+   0
+   1.
+</pre>
+
+<p>Alternatively, we could let elements of SU(3) act on row vectors by multiplication on the right.&nbsp;
+Antiquarks transform under that representation, and since it is also 3-dimensional we say they come in three
+colors as well: anti-red, anti-blue, and anti-green.&nbsp; This is just an amusing way of talking about the 3 row
+vectors</p>
+
+<pre style="font-size: 24px">
+  100
+
+  010
+
+  and 
+
+  001.
+</pre>
+
+<p>Alternatively, we could let elements of SU(3) act on 3 &times; 3 hermitian matrices with trace equal to 0,
+by letting the element g of SU(3) act on the matrix T to give the new matrix gTg<sup>&minus;1</sup>.&nbsp; The
+space of 3 &times; 3 hermitian matrices with trace equal to zero is 8 dimensional.&nbsp; Gluons transform
+under this representation, so there are 8 gluons. </p>
+
+<p>Some examples of a 3 &times; 3 hermitian matrix with trace zero are</p>
+
+<pre style="font-size: 24px">
+  0 1 0          0 i 0
+  1 0 0         -i 0 0
+  0 0 0          0 0 0
+</pre>
+
+<p>If we allow ourselves to take complex linear combinations of these we can get things like</p>
+<pre style="font-size: 24px">
+  0 1 0
+  0 0 0
+  0 0 0
+</pre>
+
+<p>which we could call "red anti-blue" since it has a 1 in the red row (the first
+row) and the blue column (the second column).&nbsp;  Or we could get</p>
+<pre style="font-size: 24px">
+  0 0 0 
+  1 0 0
+  0 0 0
+</pre>
+
+<p>which we could call "blue anti-red".
+
+<p>But, no matter how we take complex linear combinations of trace-zero hermitian matrices, we cannot get</p>
+<pre style="font-size: 24px">
+  1 0 0 
+  0 0 0
+  0 0 0
+</pre>
+
+<p>since this has trace 1.&nbsp; (I.e., the sum of the diagonal entries is 1: that's what the trace means, the
+sum of the diagonal entries.)  So we cannot really get red anti-red.&nbsp; The closest we can get are things
+like</p>
+
+<pre style="font-size: 24px">
+  1  0  0 
+  0 -1  0
+  0  0  0
+
+    or 
+
+  1  0  0 
+  0  0  0
+  0  0 -1
+
+    or
+
+  0  0  0 
+  0  1  0
+  0  0 -1
+</pre>
+
+<p>But note, these three are not linearly independent: any one of them is a linear combination of the other
+two.&nbsp; So we can get stuff like</p>
+
+<pre style="font-size: 24px">
+(red anti-red) &minus; (blue anti-blue)
+</pre>
+
+<p>and so on, but not 3 linearly independent things of this sort, only 2: one less than you might expect.</p>
+
+<p>If you are wondering what the hell I am doing subtracting particles from each other, well, that's quantum
+mechanics.</p>
+
+<p>This may have made things seem more, rather than less, mysterious, but in the long run I'm afraid this is
+what one needs to think about.</p>
+
+</body>
+</html>

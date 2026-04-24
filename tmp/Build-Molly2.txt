@@ -1,0 +1,29 @@
+Build Molly via Android Studio
+
+Prerequisites:
+
+1. Install Android Studio (https://developer.android.com/studio)
+2. Download the Molly source code (zipfiles with Windows end of line conventions and tar.gz files with Unix end of lines
+   can be found on Github: https://github.com/mollyim/mollyim-android/releases . For Android Studio it doesn't matter which version you take,
+   it can handle both on all systems.
+3. Unpack the downloaded zip or .tar.gz file, for example in C:\mollyim-android
+4. Depending on the version you want to build (foss or non-foss): you need to change the Google Maps API key in
+   C:\mollyim-android\app\gradle.properties if you're building the non-foss version, if you want location to work.
+   Not changing it will still result in a working app but the Google Maps location service will not work. An explaination
+   how to do that can be found on https://developers.google.com/maps/documentation/android-sdk/get-api-key
+5. Start Android Studio
+6. Open the project. Depending on the unpack tool you need to open in the example either C:\mollyim-android<version number> or
+   C:\mollyim-android\mollyim-android<version number>
+   The opening can take quite a while the first time because all libraries and missing build tools are downloaded and installed.
+   This means an internet connection is required during this stage.
+7. In Android Studio, go to the menu, select Build, Generate Signed Build App Bundle/APK, Select APK (easier to install manually than a bundle),
+   press Next
+8. Now you need to either create a new key and keystore in Android Studio (see https://developer.android.com/studio/publish/app-signing#generate-key)
+   or select an existing one.
+9. Fill in the key name and passwords (in theory the password for thee key and the keystore can be different, in practice a lot of tools can't deal with this).
+10. Click Next.
+11. Select one or more build variants (should I add explaination of those variants?)
+12. Click Create. Depending on your computer configuration you can now fetch a cup of coffee or take an extensive lunch.\
+    Build times add up for each build variant.
+13. When the build is ready and nothing went wrong, the apk's can be found in C:\mollyim-android\app\<build variant>.
+

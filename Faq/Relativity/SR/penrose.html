@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>Can You See the Lorentz&ndash;Fitzgerald Contraction?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Addendum 1998 by Chris Hillman.<br>
+Original 1995 by Michael Weiss.</p>
+<p><br></p>
+
+
+<h1>Can You See the Lorentz&ndash;Fitzgerald Contraction?&nbsp; Or: Penrose&ndash;Terrell Rotation</h1>
+
+<p>People sometimes argue over whether the Lorentz&ndash;Fitzgerald contraction is "real" or not.&nbsp; That's a topic
+for an FAQ entry called <a href="lorentz.html">Are the Lorentz Contraction and Time Dilation Real?</a>; but here's a
+short answer: the contraction can be measured, but the measurement is frame dependent.&nbsp; Whether that makes it
+"real" or not has more to do with your choice of words than the physics.</p>
+
+<p>Here we ask a subtly different question.&nbsp; If you take a snapshot of a rapidly
+moving object, will it <em>look</em> flattened when you develop the film?&nbsp; What is
+the difference between measuring and photographing?&nbsp; Isn't seeing believing?&nbsp;
+Not always!&nbsp; When you take a snapshot, you capture the light rays that hit the
+<em>film</em> at one instant (in the reference frame of the film).&nbsp; These rays may
+have left the <em>object</em> at different instants; if the object is moving with respect
+to the film, then the photograph may give a distorted picture.  (Strictly speaking,
+snapshots aren't instantaneous, but we're idealizing.)</p>
+
+<p>Oddly enough, though Einstein published his famous relativity paper in 1905, and
+Fitzgerald proposed his contraction several years earlier, no one seems to have asked this
+question until the late '50s.&nbsp; Then Roger Penrose and James Terrell independently
+discovered that the object will <em>not</em> appear flattened [1,2].&nbsp; People
+sometimes say that the object appears rotated, so this effect is called the
+Penrose&ndash;Terrell rotation.</p>
+
+<p>Calling it a rotation can be a bit confusing though.&nbsp; Rotating an object brings
+its backside into view, but it's hard to see how a contraction could do that.&nbsp; Among
+other things, this entry will try to explain in just what sense the Penrose&ndash;Terrell effect
+is a "rotation".</p>
+
+<p>It will clarify matters to imagine <em>two</em> snapshots of the same object, taken by
+two cameras moving uniformly with respect to each other.&nbsp; We'll call them
+<em>his</em> camera and <em>her</em> camera.&nbsp; The cameras pass through each other at
+the origin at <em>t = 0</em>, when they take their two snapshots.&nbsp; Say that the object is at
+rest with respect to his camera, and moving with respect to hers.&nbsp; By analysing the
+process of taking a snapshot, the meaning of "rotation" will become clearer.</p>
+
+<p>How should we think of a snapshot?&nbsp; Here's one way: consider a pinhole
+camera.&nbsp; (Just one camera, for the moment.)&nbsp; The pinhole is located at the
+origin, and the film occupies a patch on a sphere surrounding the origin.&nbsp; We'll
+ignore all technical difficulties (!), and pretend that the camera takes full spherical
+pictures: the film occupies the entire sphere.</p>
+
+<p>We need more than just a pinhole and film, though: we also need a shutter.&nbsp; At
+t=0, the shutter snaps open for an instant to let the light rays through the pinhole;
+these spread out in all directions, and at t=1 (in the rest frame of the camera) paint a
+picture on the spherical film.</p>
+
+<p>Let's call points in the snapshot <em>pixels</em>.&nbsp; Each pixel gets its color due
+to an event, namely a light ray hitting the sphere at t=1.&nbsp; Now let's consider his &
+her cameras, as we said before.&nbsp; We'll use t for his time, and t' for hers.&nbsp; At
+t=t'=0, the two pinholes coincide at the origin, the two shutters snap simultaneously, and
+the light rays spread out.&nbsp; At t=1 for <em>his</em> camera, they paint <em>his</em>
+pixels; at t'=1 for <em>her</em> camera, they paint <em>hers</em>.&nbsp; So the definition
+of a snapshot is frame dependent.&nbsp; But you already knew that.&nbsp; (Pop quiz: what
+shape does <em>he</em> think <em>her</em> film has?&nbsp; Not spherical!)&nbsp; (More
+technical difficulties: the rays have to pass right through one film to hit the
+other.)</p>
+
+<p>So there's a one-to-one correspondence between pixels in the two snapshots.&nbsp; Two
+pixels correspond if they are painted by the same light ray.&nbsp; You can see now that
+her snapshot is just a distortion of his (and vice versa).&nbsp; You could take his
+snapshot, scan it into a computer, run an algorithm to move the pixels around, and print
+out hers.</p>
+
+<p>So what does the pixel mapping look like?&nbsp; Simple: if we put the usual
+latitude/longitude grid on the spheres, chosen so that the relative motion is along the
+north-south axis, then each pixel slides up towards the north pole along a line of
+longitude.&nbsp; (Or down towards the south pole, depending on various choices I haven't
+specified.)&nbsp; This should ring a bell if you know about the aberration of light: if
+our snapshots portray the night sky, then the stars are white pixels, and aberration
+changes their apparent positions.</p>
+
+<p>Now let's consider the object: say, a galaxy.&nbsp; In passing from his snapshot to
+hers, the image of the galaxy slides up the sphere, keeping the same face to us.&nbsp; In
+this sense, it has rotated.&nbsp; Its apparent size will also change, but not its shape
+(to a first approximation).</p>
+
+<p>The mathematical details are beautiful, but best left to the textbooks [3,4].&nbsp;
+Just to entice you if you have the background: if we regard the two spheres as Riemann
+spheres, then the pixel mapping is given by a fractional linear transformation.&nbsp;
+Well-known facts from complex analysis now tell us two things.&nbsp; First, circles go to
+circles under the pixel mapping, so a sphere will <em>always</em> photograph as a
+sphere.&nbsp; Second, shapes of objects are preserved in the infinitesimally small
+limit.&nbsp; (If you know about the double covering of SL(2), that also comes into
+play.&nbsp; [3] is a good reference.)</p>
+
+<p>Although the above description is one way of describing how a moving object appears, we
+do stress that the object does <em>not</em> look completely rotated.&nbsp; For example,
+consider a train carriage that moves with constant speed along a straight track, past us
+who stand on the platform watching it.&nbsp; Light that leaves the back of the carriage
+will arrive at our eyes coincident with light from the side of the carriage; and as well,
+the carriage is Lorentz contracted.&nbsp; At first glance this seems to ensure that the
+carriage will look rotated, because we are used to seeing just such an effect from
+rotations in everyday (nonrelativistic) life.&nbsp; But clearly, on second glance, we will
+realise the carriage is <em>not</em> rotated, because we notice that its wheels are still
+attached to the track, which has not changed its aspect (since it's at rest relative to
+us).&nbsp; So there will be a psychological effect of the carriage looking somewhat
+rotated, but we will quickly notice that this is only an imperfect optical illusion.</p>
+
+
+
+<h2>References</h2>
+
+<p>[1] and [2] are the original articles.&nbsp; [3] and [4] are textbook treatments.&nbsp;
+[5] has beautiful computer-generated pictures of the Penrose&ndash;Terrell rotation.&nbsp; The
+authors of [5] later made a video [6] of this and other effects of "SR photography".</p>
+
+<ol>
+  <li> R. Penrose, "The Apparent Shape of a Relativistically Moving Sphere",
+       Proc. Camb. Phil. Soc., vol 55 Jul 1958.
+  <li> J. Terrell, "Invisibility of the Lorentz Contraction", Phys. Rev. vol 116 no. 4
+       pgs 1041&ndash;1045 (1959).
+  <li> R. Penrose, and W. Rindler, "Spinors and Space-Time", vol I chapter 1.
+  <li> Marion, "Classical Dynamics", Section 10.5.
+  <li> Hsiung, Ping-Kang, Robert H. Thibadeau, and Robert H. P. Dunn, "Ray-Tracing
+       Relativity", Pixel, vol 1 no. 1 (Jan/Feb 1990).
+  <li> Hsiung, Ping-Kang, and Robert H. Thibadeau, "Spacetime Visualizations," a video,
+       Imaging Systems Lab, Robotics Institute, Carnegie Mellon University.
+</ol>
+
+
+<h3>Moebius transformations and the Riemann sphere</h3>
+
+<p>The above article on Penrose&ndash;Terrell rotations mentions in passing the fact that every
+Lorentz transformations act on the celestial sphere the same way that the corresponding
+Moebius transformation acts on the Riemann sphere, but it is not very explicit.&nbsp; This
+addendum is an expanded entry on the following fascinating facts, which to my mind are the
+most interesting thing about the Lorentz group:</p>
+
+<p>1. Vectors in R<sup>4</sup> with Minkowski inner product, i.e. E<sup>(1,3)</sup>, are
+in bijection with two-by-two hermitian matrices according to the prescription
+<pre style="font-size: 24px">
+  (t,x,y,z)  <--->  [t+z   x+iy]
+                    [x&minus;iy   t&minus;z]
+</pre>
+Lorentz transformations can be represented by SL<sub>2</sub>(C) matrices
+<pre style="font-size: 24px">
+  Q = [a b]
+      [c d],  ad &minus; bc = 1
+</pre>
+where you can read off the Lorentz transformation L(Q) corresponding to Q by looking at
+X &#8594; QXQ* where * is conjugate transpose.&nbsp; Going in the other direction, L(Q) can
+be represented by either Q or &minus;Q but we have a bijection
+<pre style="font-size: 24px">
+  &plusmn;Q  <---> L(Q) = L(&minus;Q)
+</pre>
+which gives a group homomorphism between the Lorentz group SO(1,3) and
+PSL<sub>2</sub>(C), the group SL<sub>2</sub>(C) modulo its "center", &plusmn; the identity
+matrix.</p>
+
+<p>In particular,
+<pre style="font-size: 24px">
+ exp p/2 [1  0] = [ exp(p/2)      0     ]  = boost by p along z axis
+         [0 &minus;1]   [    0      exp(&minus;p/2) ]
+
+
+ exp p/2 [i  0] = [ exp(ip/2)      0     ] = rotation by p about z axis
+         [0 &minus;i]   [    0      exp(&minus;ip/2) ]
+</pre>
+The appearance of "half angles" p/2 is characteristic of the two-fold "spinorial
+covering" of the Lorentz group by SL<sub>2</sub>(C).&nbsp; For instance, matrices of the
+second form above yield a "one parameter subgroup" of SL<sub>2</sub>(C) as we let p vary,
+which "covers" the one parameter subgroup SO(2) of PSL<sub>2</sub>(C) or SO(1,3) the same
+way that the circular edge of a Moebius band covers its central circle.</p>
+
+<p>2. A Moebius transformation, or linear fractional transformation, of the complex
+numbers, or more properly of the Riemann sphere (C augmented by a "point at infinity") is
+given by w &#8594; (aw+b)/(cw+d).&nbsp; Moreover, the bijection
+<pre style="font-size: 24px">
+ &plusmn;Q   <--->  M(Q) = M(&minus;Q)
+</pre>
+where M(Q) is the Moebius transformation
+<pre style="font-size: 24px">
+      a w + b
+ w &#10137; -------,   ad &minus; bc = 1 
+      c w + d
+</pre>
+and
+<pre style="font-size: 24px">
+  Q = [a b]
+      [c d],  ad &minus; bc = 1
+</pre>
+gives an isomorphism between PSL<sub>2</sub>(C) and the Moebius group.&nbsp; So,
+PSL<sub>2</sub>(C), the Lorentz group, and the Moebius group are all isomorphic as
+abstract groups.</p>
+
+<p>3. To understand the how the appearance of the night sky (apparent positions of stars
+and galaxies on the celestial sphere) is altered by a Lorentz transformation, we must look
+at null lines (one dimensional subspaces spanned by null vectors).&nbsp; Such null lines
+represent the world lines of photons coming from distant stars and striking the viewers
+retina "here and now".&nbsp; Every such null line passes through a unique point on the
+sphere t=&minus;1, x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = 1, an "equator" of the light
+cone, and thus corresponds to a unique point on the celestial sphere, i.e. on the Riemann
+sphere.&nbsp; With one exception, every null line can be represented by a unique hermitian
+matrix of form
+<pre style="font-size: 24px">
+  N = [ |w|<sup>2</sup>    w ]
+      [  w*     1 ]
+</pre>
+where w is a complex number which can be associated with a unique location on the
+Riemann sphere by inverse stereographic projection.&nbsp; Then, a simple computation shows
+that QNQ* has the effect of the Moebius transformation M(Q)
+<pre style="font-size: 24px">
+      a w + b
+ w &#10137; -------
+      c w + d
+</pre>
+In other words, L(Q) transforms the celestial sphere (changes the appearance of the
+night sky) in <em>exactly</em> the same way that M(Q) transforms the Riemann sphere.</p>
+
+<p>4. Lorentz transformations may be classified into four types according to their
+geometric effect on the night sky:
+
+<dl>
+<dt>(i) elliptic: 
+<dd>two fixed points, stars appear to have moved along circles "about" the fixed points;
+    if the fixed points are antipodal points we have a pure rotation.
+
+<dt>(ii) hyperbolic: 
+<dd>two fixed points, stars appear to have moved along circles through the fixed points;
+    if the fixed points are antipodal points we have a pure boost in the direction of the
+    "attracting" fixed point.
+
+<dt>(iii) loxodromic: 
+<dd>two fixed points, stars appear to have moved along loxodromic spirals from one fixed
+    point to the other; if the fixed points are antipodal points we have a pure boost in
+    the direction of the attracting fixed point, composed with a commuting rotation about
+    the same axis.
+
+<dt>(iv) parabolic: 
+<dd>one fixed point, stars appear to have moved along circles through this fixed
+    point.&nbsp; An example of a parabolic Lorentz transformation is given by translation
+    in C,
+<pre style="font-size: 24px">
+     Q = exp t/2 [0 1]  = [1  t/2]
+                 [0 0]    [0   1 ]
+</pre>
+    which corresponds via X &#8594; QXQ* to
+<pre style="font-size: 24px">
+     t &#10137; t + t (t<sup>2</sup> + 4x &minus; t z)/8
+     x &#10137; x + t (t+z)/2
+     y &#10137; y
+     z &#10137; z + t(t<sup>2</sup> + 4x &minus; t z)/8
+</pre>
+     Physically speaking, such a parabolic transformation may be realized by following a
+     boost along say the x axis with a rotation about say the z axis; if we "mostly boost"
+     we get a hyperbolic transformation; if we "mostly rotate" we get an elliptic
+     transformation; if we "balance" the amount of rotation and boosting just right we
+     obtain the desired parabolic transformation.
+</dl></p>
+
+<p>5. An excellent, very readable, quite elementary, and widely available reference for
+the Moebius group is Konrad Knopp, Elements of the Theory of Functions, Dover, 1952.</p>
+
+</body>
+</html>

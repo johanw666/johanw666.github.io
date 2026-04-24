@@ -1,0 +1,539 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Tensor calculus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="7">7. Tensor calculus</a></h1>
+<h2><a name="7.1">7.1 Vectors and covectors</a></h2>
+A finite dimensional vector space is denoted by $\cal V, W$. The vector
+space of linear transformations from $\cal V$ to $\cal W$ is denoted by
+$\cal L(V,W)$. Consider ${\cal L(V,}I\hspace{-1mm}R):={\cal V}^*$. We name $\cal V^*$ the
+<em>dual space</em> of $\cal V$. Now we can define <em>vectors</em> in $\cal V$ with
+basis $\vec{c}$ and <em>covectors</em> in $\cal V^*$ with basis $\hat{\vec{c}}$.
+Properties of both are:
+<p>
+<ol>
+<li>Vectors: $\vec{x}=x^i\vec{c}_i$ with basis vectors $\vec{c}_i$:
+    \[
+    \vec{c}_i=\frac{\partial}{\partial x^i}
+    \]
+    Transformation from system $i$ to $i'$ is given by:
+    \[
+    \vec{c}_{i'}=A_{i'}^i\vec{c}_i=\partial_i\in{\cal V}~~,~~x^{i'}=A_i^{i'}x^i
+    \]
+    </li>
+<li>Covectors: $\hat{\vec{x}}=x_i\hat{\vec{c}}^{~i}$ with basis vectors $\hat{\vec{c}}^{~i}$
+    \[
+    \hat{\vec{c}}^{~i}=dx^i
+    \]
+    Transformation from system $i$ to $i'$ is given by:
+    \[
+    \hat{\vec{c}}^{~i'}=A_i^{i'}\hat{\vec{c}}^{~i}\in{\cal V}^*~~,~~\vec{x}_{i'}=A_{i'}^i\vec{x}_i
+    \]
+    </li>
+</ol>
+<p>
+Here the <em>Einstein convention</em> is used:
+\[
+a^ib_i:=\sum_ia^ib_i
+\]
+The coordinate transformation is given by:
+\[
+A_{i'}^i=\frac{\partial x^i}{\partial x^{i'}}~~,~~A_i^{i'}=\frac{\partial x^{i'}}{\partial x^i}
+\]
+From this follows that $A_k^i\cdot A_l^k=\delta_l^k$ and $A_{i'}^i=(A_i^{i'})^{-1}$.
+<p>
+In differential notation the coordinate transformations are given by:
+\[
+dx^i=\frac{\partial x^i}{\partial x^{i'}}dx^{i'}~~~\mbox{and}~~~\frac{\partial}{\partial x^{i'}}=\frac{\partial x^i}{\partial x^{i'}}\frac{\partial}{\partial x^i}
+\]
+The general transformation rule for a tensor $T$ is:
+\[
+T_{s_1...s_m}^{q_1...q_n}=\left|\frac{\partial\vec{x}}{\partial\vec{u}}\right|^\ell
+\frac{\partial u^{q_1}}{\partial x^{p_1}}\cdots\frac{\partial u^{q_n}}{\partial x^{p_n}}\cdot\frac{\partial x^{r_1}}{\partial u^{s_1}}\cdots\frac{\partial x^{r_m}}{\partial u^{s_m}}T_{r_1...r_m}^{p_1...p_n}
+\]
+For an <em>absolute tensor</em> $\ell=0$.
+
+<h2><a name="7.2">7.2 Tensor algebra</a></h2>
+The following holds:
+\[
+a_{ij}(x_i+y_i)\equiv a_{ij}x_i+a_{ij}y_i,~~~\mbox{but:}~~a_{ij}(x_i+y_j)\not\equiv a_{ij}x_i+a_{ij}y_j
+\]
+and
+\[
+(a_{ij}+a_{ji})x_ix_j\equiv2a_{ij}x_ix_j,~~~\mbox{but:}~~(a_{ij}+a_{ji})x_iy_j\not\equiv 2a_{ij}x_iy_j
+\]
+en $(a_{ij}-a_{ji})x_ix_j\equiv0$.
+<p>
+The sum and difference of two tensors is a tensor of the same rank:
+$A_q^p\pm B_q^p$. The <em>outer tensor product</em> results in a tensor with a
+rank equal to the sum of the ranks of both tensors:
+$A_q^{pr}\cdot B_s^m=C_{qs}^{prm}$. The <em>contraction</em> equals two indices
+and sums over them. Suppose we take $r=s$ for a tensor $A_{qs}^{mpr}$, this
+results in: $\sum\limits_r A_{qr}^{mpr}=B_q^{mp}$. The
+<em>inner product</em> of two tensors is defined by taking the outer product
+followed by a contraction.
+
+<h2><a name="7.3">7.3 Inner product</a></h2>
+<strong>Definition</strong>: the bilinear transformation $B:{\cal V}\times{\cal V}^*\rightarrow I\hspace{-1mm}R$,
+$B(\vec{x},\hat{\vec{y}}\,)=\hat{\vec{y}}(\vec{x})$ is denoted by
+$<\vec{x},\hat{\vec{y}}\,>$.
+For this <em>pairing operator</em> $<\cdot,\cdot>=\delta$ holds:
+\[
+\hat{\vec{y}}(\vec{x})=<\vec{x},\hat{\vec{y}}>=y_ix^i~~~,~~~<\hat{\vec{c}^{~i}},\vec{c}_j>=\delta_j^i
+\]
+Let $G:{\cal V}\rightarrow{\cal V}^*$ be a linear bijection. Define the bilinear forms
+\begin{eqnarray*}
+g:{\cal V\times V}\rightarrow I\hspace{-1mm}R&~~~&g(\vec{x},\vec{y})=<\vec{x},G\vec{y}>\\
+h:{\cal V^*\times V^*}\rightarrow I\hspace{-1mm}R&~~~&h(\hat{\vec{x}},\hat{\vec{y}}\,)=<G^{-1}\hat{\vec{x}},\hat{\vec{y}}\,>
+\end{eqnarray*}
+Both are not degenerated. The following holds: $h(G\vec{x},G\vec{y})=<\vec{x},G\vec{y}>=g(\vec{x},\vec{y})$.
+If we identify $\cal V$ and $\cal V^*$ with $G$, than $g$ (or $h$)
+gives an inner product on $\cal V$.
+<p>
+The inner product $(,)_\Lambda$ on $\Lambda^k(\cal V)$ is defined by:
+\[
+(\Phi,\Psi)_\Lambda=\frac{1}{k!}(\Phi,\Psi)_{T^0_k(\cal V)}
+\]
+The inner product of two vectors is than given by:
+\[
+(\vec{x},\vec{y})=x^iy^i<\vec{c}_i,G\vec{c}_j>=g_{ij}x^ix^j
+\]
+The matrix $g_{ij}$ of $G$ is given by
+\[
+g_{ij}\hat{\vec{c}}^{~j}=G\vec{c}_i
+\]
+The matrix $g^{ij}$ of $G^{-1}$ is given by:
+\[
+g^{kl}\vec{c}_l=G^{-1}\hat{\vec{c}}^{~k}
+\]
+For this <em>metric tensor</em> $g_{ij}$ holds: $g_{ij}g^{jk}=\delta_i^k$.
+This tensor can raise or lower indices:
+\[
+x_j=g_{ij}x^i~~~,~~~x^i=g^{ij}x_j
+\]
+and $du^i=\hat{\vec{c}}^{~i}=g^{ij}\vec{c}_j$.
+
+<h2><a name="7.4">7.4 Tensor product</a></h2>
+<strong>Definition</strong>: let $\cal U$ and $\cal V$ be two finite dimensional vector
+spaces with dimensions $m$ and $n$. Let $\cal U^*\times V^*$ be the cartesian
+product of $\cal U$ and $\cal V$. A function $t:{\cal U^*\times V^*}\rightarrow I\hspace{-1mm}R$;
+$(\hat{\vec{u}};\hat{\vec{v}}\,)\mapsto t(\hat{\vec{u}};\hat{\vec{v}}\,)=t^{\alpha\beta}u_\alpha u_\beta\in I\hspace{-1mm}R$
+is called a tensor if $t$ is linear in $\hat{\vec{u}}$ and $\hat{\vec{v}}$.
+The tensors $t$ form a vector space denoted by $\cal U\otimes V$.
+The elements $T\in\cal V\otimes V$ are called contravariant 2-tensors:
+$T=T^{ij}\vec{c}_i\otimes\vec{c}_j=T^{ij}\partial_i\otimes\partial_j$. The
+elements $T\in\cal V^*\otimes V^*$ are called covariant 2-tensors:
+$T=T_{ij}\hat{\vec{c}}^{~i}\otimes\hat{\vec{c}}^{~j}=T_{ij}dx^i\otimes dx^j$.
+The elements $T\in\cal V^*\otimes V$ are called mixed 2 tensors:
+$T=T_i^{.j}\hat{\vec{c}}^{~i}\otimes\vec{c}_j=T_i^{.j}dx^i\otimes\partial_j$,
+and analogous for $T\in\cal V\otimes V^*$.
+<p>
+The numbers given by
+\[
+t^{\alpha\beta}=t(\hat{\vec{c}}^{~\alpha},\hat{\vec{c}}^{~\beta}\,)
+\]
+with $1\leq\alpha\leq m$ and $1\leq\beta\leq n$ are the components of $t$.
+<p>
+Take $\vec{x}\in\cal U$ and $\vec{y}\in\cal V$. Than the function
+$\vec{x}\otimes\vec{y}$, definied by
+\[
+(\vec{x}\otimes\vec{y})(\hat{\vec{u}},\hat{\vec{v}})=<\vec{x},\hat{\vec{u}}>_U<\vec{y},\hat{\vec{v}}>_V
+\]
+is a tensor. The components are derived from: $(\vec{u}\otimes\vec{v})_{ij}=u_iv^j$.
+The tensor product of 2 tensors is given by:
+
+\begin{eqnarray*}
+{2\choose0}~\mbox{form:}~&&(\vec{v}\otimes\vec{w})(\hat{\vec{p}},\hat{\vec{q}})=v^ip_iw^kq_k=T^{ik}p_iq_k\\
+{0\choose2}~\mbox{form:}~&&(\hat{\vec{p}}\otimes\hat{\vec{q}})(\vec{v},\vec{w})=p_iv^iq_kw^k=T_{ik}v^iw^k\\
+{1\choose1}~\mbox{form:}~&&(\vec{v}\otimes\hat{\vec{p}})(\hat{\vec{q}},\vec{w})=v^iq_ip_kw^k=T_k^iq_iw^k
+\end{eqnarray*}
+
+<h2><a name="7.5">7.5 Symmetric and antisymmetric tensors</a></h2>
+A tensor $t\in{\cal V\otimes V}$ is called symmetric resp. antisymmetric if
+$\forall\hat{\vec{x}},\hat{\vec{y}}\in{\cal V^*}$ holds:
+$t(\hat{\vec{x}},\hat{\vec{y}}\,)=t(\hat{\vec{y}},\hat{\vec{x}}\,)$ resp.
+$t(\hat{\vec{x}},\hat{\vec{y}}\,)=-t(\hat{\vec{y}},\hat{\vec{x}}\,)$.
+<p>
+A tensor $t\in{\cal V^*\otimes V^*}$ is called symmetric resp. antisymmetric
+if $\forall\vec{x},\vec{y}\in{\cal V}$ holds:
+$t(\vec{x},\vec{y})=t(\vec{y},\vec{x})$ resp.
+$t(\vec{x},\vec{y})=-t(\vec{y},\vec{x})$. The linear transformations
+$\cal S$ and $\cal A$ in $\cal V\otimes W$ are defined by:
+\begin{eqnarray*}
+{\cal S}t(\hat{\vec{x}},\hat{\vec{y}}\,)&=&\frac{1}{2}(t(\hat{\vec{x}},\hat{\vec{y}})+t(\hat{\vec{y}},\hat{\vec{x}}\,))\\
+{\cal A}t(\hat{\vec{x}},\hat{\vec{y}}\,)&=&\frac{1}{2}(t(\hat{\vec{x}},\hat{\vec{y}})-t(\hat{\vec{y}},\hat{\vec{x}}\,))
+\end{eqnarray*}
+Analogous in $\cal V^*\otimes V^*$. If $t$ is symmetric resp. antisymmetric,
+than ${\cal S}t=t$ resp. ${\cal A}t=t$.
+<p>
+The tensors $\vec{e}_i\vee\vec{e}_j=\vec{e}_i\vec{e}_j=2{\cal S}(\vec{e}_i\otimes\vec{e}_j)$,
+with $1\leq i\leq j\leq n$ are a basis in $\cal S(V\otimes V)$ with dimension
+$\frac{1}{2} n(n+1)$.
+<p>
+The tensors $\vec{e}_i\wedge\vec{e}_j=2{\cal A}(\vec{e}_i\otimes\vec{e}_j)$,
+with $1\leq i\leq j\leq n$ are a basis in $\cal A(V\otimes V)$ with dimension
+$\frac{1}{2} n(n-1)$.
+<p>
+The complete antisymmetric tensor $\varepsilon$ is given by:
+$\varepsilon_{ijk}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}$.
+<p>
+The permutation-operators $e_{pqr}$ are defined by:
+$e_{123}=e_{231}=e_{312}=1$, $e_{213}=e_{132}=e_{321}=-1$, for all other
+combinations $e_{pqr}=0$. There is a connection with the $\varepsilon$ tensor:
+$\varepsilon_{pqr}=g^{-1/2}e_{pqr}$ and $\varepsilon^{pqr}=g^{1/2}e^{pqr}$.
+
+<h2><a name="7.6">7.6 Outer product</a></h2>
+Let $\alpha\in\Lambda^k(\cal V)$ and $\beta\in\Lambda^l(\cal V)$. Than
+$\alpha\wedge\beta\in\Lambda^{k+l}(\cal V)$ is defined by:
+\[
+\alpha\wedge\beta=\frac{(k+l)!}{k!l!}{\cal A}(\alpha\otimes\beta)
+\]
+If $\alpha$ and $\beta\in\Lambda^1(\cal V)={\cal V}^*$ holds:
+$\alpha\wedge\beta=\alpha\otimes\beta-\beta\otimes\alpha$
+<p>
+The outer product can be written as: $(\vec{a}\times\vec{b})_i=\varepsilon_{ijk}a^jb^k$,
+$\vec{a}\times\vec{b}=G^{-1}\cdot*(G\vec{a}\wedge G\vec{b})$.
+<p>
+Take $\vec{a},\vec{b},\vec{c},\vec{d}\in I\hspace{-1mm}R^4$. Than
+$(dt\wedge dz)(\vec{a},\vec{b})=a_0b_4-b_0a_4$ is the oriented surface of the
+projection on the $tz$-plane of the parallelogram spanned by $\vec{a}$ and
+$\vec{b}$.
+<p>
+Further
+\[
+(dt\wedge dy\wedge dz)(\vec{a},\vec{b},\vec{c})=\det\left|\begin{array}{ccc}
+a_0&b_0&c_0\\ a_2&b_2&c_2\\ a_4&b_4&c_4 \end{array}\right|
+\]
+is the oriented 3-dimensional volume of the projection on the $tyz$-plane of
+the parallelepiped spanned by $\vec{a}$, $\vec{b}$ and $\vec{c}$.
+<p>
+$(dt\wedge dx\wedge dy\wedge dz)(\vec{a},\vec{b},\vec{c},\vec{d})=\det(\vec{a},\vec{b},\vec{c},\vec{d})$
+is the 4-dimensional volume of the hyperparellelepiped spanned by
+$\vec{a}$, $\vec{b}$, $\vec{c}$ and $\vec{d}$.
+
+<h2><a name="7.7">7.7 The Hodge star operator</a></h2>
+$\Lambda^k(\cal V)$ and $\Lambda^{n-k}(\cal V)$ have the same dimension
+because ${n\choose k}={n\choose{n-k}}$ for $1\leq k\leq n$.
+Dim$(\Lambda^n({\cal V}))=1$. The choice of a basis means the choice of an oriented
+measure of volume, a volume $\mu$, in $\cal V$. We can gauge $\mu$ so that for
+an orthonormal basis $\vec{e}_i$ holds: $\mu(\vec{e}_i)=1$. This basis is than
+by definition positive oriented if
+$\mu=\hat{\vec{e}}^{~1}\wedge \hat{\vec{e}}^{~2}\wedge...\wedge \hat{\vec{e}}^{~n}=1$.
+<p>
+Because both spaces have the same dimension one can ask if there exists a
+bijection between them. If $\cal V$ has no extra structure this is not the
+case. However, such an operation does exist if there is an inner product
+defined on $\cal V$ and the corresponding volume $\mu$. This is called
+the <em>Hodge star operator</em> and denoted by $*$. The following holds:
+\[
+\forall_{w\in\Lambda^k({\cal V})}\exists_{*w\in\Lambda^{k-n}({\cal V})}\forall_{\theta\in\Lambda^k({\cal V})}~~
+\theta\wedge*w=(\theta,w)_\lambda\mu
+\]
+For an orthonormal basis in $I\hspace{-1mm}R^3$ holds: the volume: $\mu=dx\wedge dy\wedge dz$,
+$*dx\wedge dy\wedge dz=1$, $*dx=dy\wedge dz$, $*dz=dx\wedge dy$, $*dy=-dx\wedge dz$,
+$*(dx\wedge dy)=dz$, $*(dy\wedge dz)=dx$, $*(dx\wedge dz)=-dy$.
+<p>
+For a Minkowski basis in $I\hspace{-1mm}R^4$ holds: $\mu=dt\wedge dx\wedge dy\wedge dz$,
+$G=dt\otimes dt-dx\otimes dx-dy\otimes dy-dz\otimes dz$, and
+$*dt\wedge dx\wedge dy\wedge dz=1$ and $*1=dt\wedge dx\wedge dy\wedge dz$.
+Further $*dt=dx\wedge dy\wedge dz$ and $*dx=dt\wedge dy\wedge dz$.
+
+<h2><a name="7.8">7.8 Differential operations</a></h2>
+<h3><a name="7.8.1">7.8.1 The directional derivative</a></h3>
+The <em>directional derivative</em> in point $\vec{a}$ is given by:
+\[
+{\cal L}_{\vec{a}}f=<\vec{a},df>=a^i\frac{\partial f}{\partial x^i}
+\]
+
+<h3><a name="7.8.2">7.8.2 The Lie-derivative</a></h3>
+The <em>Lie-derivative</em> is given by:
+\[
+({\cal L}_{\vec{v}}\vec{w})^j=w^i\partial_iv^j-v^i\partial_iw^j
+\]
+
+<h3><a name="7.8.3">7.8.3 Christoffel symbols</a></h3>
+To each curvelinear coordinate system $u^i$ we add a system of $n^3$
+functions $\Gamma^i_{jk}$ of $\vec{u}$, defined by
+\[
+\frac{\partial^2\vec{x}}{\partial u^i\partial u^k}=\Gamma_{jk}^i\frac{\partial\vec{x}}{\partial u^i}
+\]
+These are <em>Christoffel symbols of the second kind</em>. Christoffel symbols
+are no tensors. The Christoffel symbols of the second kind are given by:
+\[
+\left\{\begin{array}{@{}c@{}}i\\ jk \end{array}\right\}:=\Gamma^i_{jk}=
+\left\langle\frac{\partial^2\vec{x}}{\partial u^k\partial u^j},dx^i\right\rangle
+\]
+with $\Gamma^i_{jk}=\Gamma^i_{kj}$. Their transformation to a different
+coordinate system is given by:
+\[
+\Gamma_{j'k'}^{i'}=A_{i'}^iA_{j'}^jA_{k'}^k\Gamma^i_{jk}+A_i^{i'}(\partial_{j'}A_{k'}^i)
+\]
+The first term in this expression is 0 if the primed coordinates are
+cartesian.
+<p>
+There is a relation between Christoffel symbols and the metric:
+\[
+\Gamma_{jk}^i=\frac{1}{2} g^{ir}(\partial_j g_{kr}+\partial_k g_{rj}-\partial_r g_{jk})
+\]
+and $\Gamma^\alpha_{\beta\alpha}=\partial_\beta(\ln(\sqrt{|g|}))$.
+<p>
+Lowering an index gives the <em>Christoffel symbols of the first kind</em>:
+$\Gamma^i_{jk}=g^{il}\Gamma_{jkl}$.
+
+<h3><a name="7.8.4">7.8.4 The covariant derivative</a></h3>
+The <em>covariant derivative</em> $\nabla_j$ of a vector, covector and of
+rank-2 tensors is given by:
+\begin{eqnarray*}
+\nabla_ja^i                  &=&\partial_ja^i+\Gamma^i_{jk}a^k\\
+\nabla_ja_i                  &=&\partial_ja_i-\Gamma^k_{ij}a_k\\
+\nabla_\gamma a^\alpha_\beta &=&\partial_\gamma a^\alpha_\beta -\Gamma^\varepsilon_{\gamma\beta} a^\alpha_\varepsilon+\Gamma^\alpha_{\gamma\varepsilon}a_\beta^\varepsilon\\
+\nabla_\gamma a_{\alpha\beta}&=&\partial_\gamma a_{\alpha\beta}-\Gamma^\varepsilon_{\gamma\alpha}a_{\varepsilon\beta}-\Gamma^\varepsilon_{\gamma\beta}a_{\alpha\varepsilon}\\
+\nabla_\gamma a^{\alpha\beta}&=&\partial_\gamma a^{\alpha\beta}+\Gamma^\alpha_{\gamma\varepsilon}a^{\varepsilon\beta}+\Gamma^\beta_{\gamma\varepsilon}a^{\alpha\varepsilon}
+\end{eqnarray*}
+Ricci's theorem:
+\[
+\nabla_\gamma g_{\alpha\beta}=\nabla_\gamma g^{\alpha\beta}=0
+\]
+
+<h2><a name="7.9">7.9 Differential operators</a></h2>
+<h3><a name="7.9.1">7.9.1 The Gradient</a></h3>
+is given by:
+\[
+{\rm grad}(f)=G^{-1}df=g^{ki}\frac{\partial f}{\partial x^i}\frac{\partial}{\partial x^k}
+\]
+
+<h3><a name="7.9.2">7.9.2 The divergence</a></h3>
+is given by:
+\[
+{\rm div}(a^i)=\nabla_ia^i=\frac{1}{\sqrt{g}}\partial_k(\sqrt{g}\,a^k)
+\]
+
+<h3><a name="7.9.3">7.9.3 The curl</a></h3>
+is given by:
+\[
+{\rm rot}(a)=G^{-1}\cdot*\cdot d\cdot G\vec{a}=-\varepsilon^{pqr}\nabla_qa_p=\nabla_qa_p-\nabla_pa_q
+\]
+
+<h3><a name="7.9.4">7.9.4 The Laplacian</a></h3>
+is given by:
+\[
+\Delta(f)={\rm div~grad}(f)=*d*df=\nabla_ig^{ij}\partial_jf=g^{ij}\nabla_i\nabla_jf=
+\frac{1}{\sqrt{g}}\frac{\partial}{\partial x^i}\left(\sqrt{g}\,g^{ij}\frac{\partial f}{\partial x^j}\right)
+\]
+
+<h2><a name="7.10">7.10 Differential geometry</a></h2>
+<h3><a name="7.10.1">7.10.1 Space curves</a></h3>
+We limit ourselves to $I\hspace{-1mm}R^3$ with a fixed orthonormal basis. A point is
+represented by the vector $\vec{x}=(x^1,x^2,x^3)$. A space curve is a
+collection of points represented by $\vec{x}=\vec{x}(t)$. The arc length of a
+space curve is given by:
+\[
+s(t)=\int\limits_{t_0}^t\sqrt{\left(\frac{dx}{d\tau}\right)^2+\left(\frac{dy}{d\tau}\right)^2+\left(\frac{dz}{d\tau}\right)^2}d\tau
+\]
+The derivative of $s$ with respect to $t$ is the length of the vector $d\vec{x}/dt$:
+\[
+\left(\frac{ds}{dt}\right)^2=\left(\frac{d\vec{x}}{dt},\frac{d\vec{x}}{dt}\right)
+\]
+The <em>osculation plane</em> in a point $P$ of a space curve is the limiting
+position of the plane through the tangent of the plane in point $P$ and a point
+$Q$ when $Q$ approaches $P$ along the space curve. The osculation plane is
+parallel with $\dot{\vec{x}}(s)$. If $\ddot{\vec{x}}\neq0$ the osculation
+plane is given by:
+\[
+\vec{y}=\vec{x}+\lambda\dot{\vec{x}}+\mu\ddot{\vec{x}}~~~\mbox{so}~~~
+\det(\vec{y}-\vec{x},\dot{\vec{x}},\ddot{\vec{x}}\,)=0
+\]
+In a bending point holds, if $\dddot{\vec{x}}\neq0$:
+\[
+\vec{y}=\vec{x}+\lambda\dot{\vec{x}}+\mu\dddot{\vec{x}}
+\]
+The <em>tangent</em> has unit vector $\vec{\ell}=\dot{\vec{x}}$, the
+<em>main normal</em> unit vector $\vec{n}=\ddot{\vec{x}}$ and the
+<em>binormal</em> $\vec{b}=\dot{\vec{x}}\times\ddot{\vec{x}}$. So the main normal
+lies in the osculation plane, the binormal is perpendicular to it.
+<p>
+Let $P$ be a point and $Q$ be a nearby point of a space curve $\vec{x}(s)$.
+Let $\Delta\varphi$ be the angle between the tangents in $P$ and $Q$ and let
+$\Delta\psi$ be the angle between the osculation planes (binormals) in $P$ and
+$Q$. Then the <em>curvature</em> $\rho$ and the <em>torsion</em> $\tau$ in $P$ are
+defined by:
+\[
+\rho^2=\left(\frac{d\varphi}{ds}\right)^2=\lim_{\Delta s\rightarrow0}\left(\frac{\Delta\varphi}{\Delta s}\right)^2~~~,~~~
+\tau^2=\left(\frac{d\psi}{ds}\right)^2
+\]
+and $\rho>0$. For plane curves $\rho$ is the ordinary curvature and
+$\tau=0$. The following holds:
+\[
+\rho^2=(\vec{\ell},\vec{\ell})=(\ddot{\vec{x}},\ddot{\vec{x}}\,)~~~\mbox{and}~~~
+\tau^2=(\dot{\vec{b}},\dot{\vec{b}})
+\]
+Frenet's equations express the derivatives as linear combinations of these
+vectors:
+\[
+\dot{\vec{\ell}}=\rho\vec{n}~~,~~\dot{\vec{n}}=-\rho\vec{\ell}+\tau\vec{b}~~,~~
+\dot{\vec{b}}=-\tau\vec{n}
+\]
+From this follows that $\det(\dot{\vec{x}},\ddot{\vec{x}},\dddot{\vec{x}}\,)=\rho^2\tau$.
+<p>
+Some curves and their properties are:
+<p align="center">
+<table align="center" border=1>
+<tr>
+<td>Screw line</td> <td>$\tau/\rho=$constant</td>
+<tr>
+<td>Circle screw line</td> <td>$\tau=$constant, $\rho=$constant</td>
+<tr>
+<td>Plane curves</td> <td>$\tau=0$</td>
+<tr>
+<td>Circles</td> <td>$\rho=$constant, $\tau=0$</td>
+<tr>
+<td>Lines</td> <td>$\rho=\tau=0$</td>
+<tr>
+</table>
+
+<h3><a name="7.10.2">7.10.2 Surfaces in $I\hspace{-1mm}R^3$</a></h3>
+A surface in $I\hspace{-1mm}R^3$ is the collection of end points of the vectors
+$\vec{x}=\vec{x}(u,v)$, so $x^h=x^h(u^\alpha)$. On the surface are 2 families
+of curves, one with $u=$constant and one with $v=$constant.
+<p>
+The tangent plane in a point $P$ at the surface has basis:
+\[
+\vec{c}_1=\partial_1\vec{x}~~~\mbox{and}~~~\vec{c}_2=\partial_2\vec{x}
+\]
+
+<h3><a name="7.10.3">7.10.3 The first fundamental tensor</a></h3>
+Let $P$ be a point of the surface $\vec{x}=\vec{x}(u^\alpha)$. The following
+two curves through $P$, denoted by $u^\alpha=u^\alpha(t)$,
+$u^\alpha=v^\alpha(\tau)$, have as tangent vectors in $P$
+\[
+\frac{d\vec{x}}{dt}=\frac{du^\alpha}{dt}\partial_\alpha\vec{x}~~~,~~~
+\frac{d\vec{x}}{d\tau}=\frac{dv^\beta}{d\tau}\partial_\beta\vec{x}
+\]
+The <em>first fundamental tensor</em> of the surface in $P$ is the inner product
+of these tangent vectors:
+\[
+\left(\frac{d\vec{x}}{dt},\frac{d\vec{x}}{d\tau}\right)=
+(\vec{c}_\alpha,\vec{c}_\beta)\frac{du^\alpha}{dt}\frac{dv^\beta}{d\tau}
+\]
+The covariant components w.r.t.\ the basis
+$\vec{c}_\alpha=\partial_\alpha\vec{x}$ are:
+\[
+g_{\alpha\beta}=(\vec{c}_\alpha,\vec{c}_\beta)
+\]
+For the angle $\phi$ between the parameter curves in $P$: $u=t,v=$constant and
+$u=$constant, $v=\tau$ holds:
+\[
+\cos(\phi)=\frac{g_{12}}{\sqrt{g_{11}g_{22}}}
+\]
+For the arc length $s$ of $P$ along the curve $u^\alpha(t)$ holds:
+\[
+ds^2=g_{\alpha\beta}du^\alpha du^\beta
+\]
+This expression is called the <em>line element</em>.
+
+<h3><a name="7.10.4">7.10.4 The second fundamental tensor</a></h3>
+The 4 derivatives of the tangent vectors
+$\partial_\alpha\partial_\beta\vec{x}=\partial_\alpha\vec{c}_\beta$ are each
+linear independent of the vectors $\vec{c}_1$, $\vec{c}_2$ and $\vec{N}$, with
+$\vec{N}$ perpendicular to $\vec{c}_1$ and $\vec{c}_2$. This is written as:
+\[
+\partial_\alpha\vec{c}_\beta=\Gamma^\gamma_{\alpha\beta}\vec{c}_\gamma+h_{\alpha\beta}\vec{N}
+\]
+This leads to:
+\[
+\Gamma^\gamma_{\alpha\beta}=(\vec{c}^{~\gamma},\partial_\alpha\vec{c}_\beta)~~~,~~~
+h_{\alpha\beta}=(\vec{N},\partial_\alpha\vec{c}_\beta)=\frac{1}{\sqrt{\det|g|}}\det(\vec{c}_1,\vec{c}_2,\partial_\alpha\vec{c}_\beta)
+\]
+
+<h3><a name="7.10.5">7.10.5 Geodetic curvature</a></h3>
+A curve on the surface $\vec{x}(u^\alpha)$ is given by:
+$u^\alpha=u^\alpha(s)$, than $\vec{x}=\vec{x}(u^\alpha(s))$ with $s$ the
+arc length of the curve. The length of $\ddot{\vec{x}}$ is the curvature
+$\rho$ of the curve in $P$. The projection of $\ddot{\vec{x}}$ on the surface
+is a vector with components
+\[
+p^\gamma=\ddot{u}^\gamma+\Gamma^\gamma_{\alpha\beta}\dot{u}^\alpha\dot{u}^\beta
+\]
+of which the length is called the <em>geodetic curvature</em> of the curve in $p$.
+This remains the same if the surface is curved and the line element remains the
+same. The projection of $\ddot{\vec{x}}$ on $\vec{N}$ has length
+\[
+p=h_{\alpha\beta}\dot{u}^\alpha\dot{u}^\beta
+\]
+and is called the <em>normal curvature</em> of the curve in $P$. The <em>theorem
+of Meusnier</em> states that different curves on the surface with the same tangent
+vector in $P$ have the same normal curvature.
+<p>
+A <em>geodetic line</em> of a surface is a curve on the surface for which in each
+point the main normal of the curve is the same as the normal on the surface.
+So for a geodetic line is in each point $p^\gamma=0$, so
+\[
+\frac{d^2u^\gamma}{ds^2}+\Gamma^\gamma_{\alpha\beta}\frac{du^\alpha}{ds}\frac{du^\beta}{ds}=0
+\]
+The covariant derivative $\nabla/dt$ in $P$ of a vector field of a surface along
+a curve is the projection on the tangent plane in $P$ of the normal derivative
+in $P$.
+<p>
+For two vector fields $\vec{v}(t)$ and $\vec{w}(t)$ along the same curve of
+the surface follows Leibniz' rule:
+\[
+\frac{d(\vec{v},\vec{w})}{dt}=\left(\vec{v},\frac{\nabla\vec{w}}{dt}\right)+\left(\vec{w},\frac{\nabla\vec{v}}{dt}\right)
+\]
+Along a curve holds:
+\[
+\frac{\nabla}{dt}(v^\alpha\vec{c}_\alpha)=\left(\frac{dv^\gamma}{dt}+\Gamma^\gamma_{\alpha\beta}\frac{du^\alpha}{dt}v^\beta\right)\vec{c}_\gamma
+\]
+
+<h2><a name="7.11">7.11 Riemannian geometry</a></h2>
+The <em>Riemann tensor</em> $R$ is defined by:
+\[
+R^\mu_{\nu\alpha\beta}T^\nu=\nabla_\alpha\nabla_\beta T^\mu-\nabla_\beta\nabla_\alpha T^\mu
+\]
+This is a $1\choose 3$ tensor with $n^2(n^2-1)/12$ independent components not
+identically equal to 0. This tensor is a measure for the curvature of the
+considered space. If it is 0, the space is a flat manifold. It has the
+following symmetry properties:
+\[
+R_{\alpha\beta\mu\nu}=R_{\mu\nu\alpha\beta}=-R_{\beta\alpha\mu\nu}=-R_{\alpha\beta\nu\mu}
+\]
+The following relation holds:
+\[
+[\nabla_\alpha,\nabla_\beta]T_\nu^\mu=R_{\sigma\alpha\beta}^\mu T_\nu^\sigma+R_{\nu\alpha\beta}^\sigma T_\sigma^\mu
+\]
+The Riemann tensor depends on the Christoffel symbols through
+\[
+R^\alpha_{\beta\mu\nu}=\partial_\mu\Gamma^\alpha_{\beta\nu}-\partial_\nu\Gamma^\alpha_{\beta\mu}+\Gamma^\alpha_{\sigma\mu}\Gamma^\sigma_{\beta\nu}-\Gamma^\alpha_{\sigma\nu}\Gamma^\sigma_{\beta\mu}
+\]
+In a space and coordinate system where the Christoffel symbols are 0 this
+becomes:
+\[
+R^\alpha_{\beta\mu\nu}=\frac{1}{2} g^{\alpha\sigma}(\partial_\beta\partial_\mu g_{\sigma\nu}-\partial_\beta\partial_\nu g_{\sigma\mu}+\partial_\sigma\partial_\nu g_{\beta\mu}-\partial_\sigma\partial_\mu g_{\beta\nu})
+\]
+The <em>Bianchi identities</em> are: $\nabla_\lambda R_{\alpha\beta\mu\nu}+\nabla_\nu R_{\alpha\beta\lambda\mu} +\nabla_\mu R_{\alpha\beta\nu\lambda}=0$.
+<p>
+The <em>Ricci tensor</em> is obtained by contracting the Riemann tensor:
+$R_{\alpha\beta}\equiv R_{\alpha\mu\beta}^\mu$, and is symmetric in its
+indices: $R_{\alpha\beta}=R_{\beta\alpha}$. The <em>Einstein tensor</em> $G$ is
+defined by: $G^{\alpha\beta}\equiv R^{\alpha\beta}-\frac{1}{2} g^{\alpha\beta}$.
+It has the property that $\nabla_\beta G^{\alpha\beta}=0$. The Ricci-scalar is
+$R=g^{\alpha\beta}R_{\alpha\beta}$.
+
+</body>
+</head>

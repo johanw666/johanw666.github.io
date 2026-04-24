@@ -1,0 +1,590 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Quantum field theory &amp; particle physics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="15">15. Quantum field theory &amp; particle physics</a></h1>
+<h2><a name="15.1">15.1 Creation and annihilation operators</a></h2>
+
+<p>A state with more particles can be described by a collection occupation numbers \(|n_1n_2n_3\cdots\rangle\). Hence the vacuum state is given by \(|000\cdots\rangle\). This is a complete description because the particles are indistinguishable. The states are orthonormal:</p>
+
+<p>\[\left\langle n_1n_2n_3\cdots|n_1'n_2'n_3'\cdots \right\rangle=\prod_{i=1}^\infty\delta_{n_in_i'}\]</p>
+
+<p>The time-dependent state vector is given by</p>
+
+<p>\[\Psi(t)=\sum_{n_1n_2\cdots}c_{n_1n_2\cdots}(t)|n_1n_2\cdots\rangle\]</p>
+
+<p>The coefficients \(c\) can be interpreted as follows: \(|c_{n_1n_2\cdots}|^2\) is the probability to find \(n_1\) particles with momentum \(\vec{k}_1\), \(n_2\) particles with momentum \(\vec{k}_2\), etc., and \(\left\langle \Psi(t)|\Psi(t) \right\rangle=\sum|c_{n_i}(t)|^2=1\). The expansion of the states in time is described by the Schr&ouml;dinger equation</p>
+
+<p>\[i\frac{d}{dt}|\Psi(t)\rangle=H|\Psi(t)\rangle\]</p>
+
+<p>where \(H=H_0+H_{\rm int}\). \(H_0\) is the Hamiltonian for free particles and keeps \(|c_{n_i}(t)|^2\) constant, \(H_{\rm int}\) is the interaction Hamiltonian and can increase or decrease a \(c^2\) at the cost of others.</p>
+
+<p>All operators which can change occupation numbers can be expanded in the \(a\) and \(a^\dagger\) operators. \(a\) is the <em>annihilation operator</em> and \(a^\dagger\) the <em>creation operator</em>, and:</p>
+
+<p>\[\begin{aligned} a(\vec{k}_i)|n_1n_2\cdots n_i\cdots\rangle&amp;=&amp;\sqrt{n_i}~|n_1n_2\cdots n_i-1\cdots\rangle\\ a^\dagger(\vec{k}_i)|n_1n_2\cdots n_i\cdots\rangle&amp;=&amp;\sqrt{n_i+1}~|n_1n_2\cdots n_i+1\cdots\rangle\end{aligned}\]</p>
+
+<p>Because the states are normalized&nbsp;\(a|0\rangle=0\) and \(a(\vec{k}_i)a^\dagger(\vec{k}_i)|n_i\rangle=n_i|n_i\rangle\). So \(aa^\dagger\) is an occupation number operator. The following commutation rules can be derived:</p>
+
+<p>\[ [a(\vec{k}_i),a(\vec{k}_j)]=0~~,~~~ [a^\dagger(\vec{k}_i),a^\dagger(\vec{k}_j)]=0~~,~~~ [a(\vec{k}_i),a^\dagger(\vec{k}_j)]=\delta_{ij}\]</p>
+
+<p>Hence for free spin-0 particles: \(H_0=\sum\limits_i a^\dagger(\vec{k}_i)a(\vec{k}_i)\hbar\omega_{k_i}\)</p>
+
+<h2><a name="15.2">15.2 Classical and quantum fields</a></h2>
+
+<p>Starting with a real field \(\Phi^\alpha(x)\) (complex fields can be split in a real and an imaginary part), the <em>Lagrange density</em> \({\cal L}\) is a function of the position \(x=(\vec{x},ict)\) through the fields: \({\cal L}={\cal L}(\Phi^\alpha(x),\partial_\nu\Phi^\alpha(x))\). The Lagrangian is given by \(L=\int{\cal L}(x)d^3x\). Using the variational principle \(\delta I(\Omega)=0\) and with the action-integral \(I(\Omega)=\int{\cal L}(\Phi^\alpha,\partial_\nu\Phi^\alpha)d^4x\) the field equation can be derived:</p>
+
+<p>\[\frac{\partial {\cal L}}{\partial \Phi^\alpha}-\frac{\partial }{\partial x_\nu}\frac{\partial {\cal L}}{\partial (\partial_\nu\Phi^\alpha)}=0\]</p>
+
+<p>The <em>conjugated field</em> is, analogous to momentum in classical mechanics, defined as:</p>
+
+<p>\[\Pi^\alpha(x)=\frac{\partial {\cal L}}{\partial \dot{\Phi}^\alpha}\]</p>
+
+<p>With this, the Hamilton density becomes \({\cal H}(x)=\Pi^\alpha\dot{\Phi}^\alpha-{\cal L}(x)\).</p>
+
+<p>Quantization of a classical field is analogous to quantization in point mass mechanics: the field functions are considered as operators obeying certain commutation rules:</p>
+
+<p>\[ [\Phi^\alpha(\vec{x}),\Phi^\beta(\vec{x}\,')]=0~~,~~~ [\Pi^\alpha(\vec{x}),\Pi^\beta(\vec{x}\,')]=0~~,~~[\Phi^\alpha(\vec{x}),\Pi^\beta(\vec{x}\,')]=i\delta_{\alpha\beta}(\vec{x}-\vec{x}\,')\]</p>
+
+<h2><a name="15.3">15.3 The interaction picture</a></h2>
+
+<p>Some equivalent formulations of quantum mechanics are possible:</p>
+
+<ol>
+    <li>Schr&ouml;dinger picture: time-dependent states, time-independent operators.</li>
+    <li>Heisenberg picture: time-independent states, time-dependent operators.</li>
+    <li>Interaction picture: time-dependent states, time-dependent operators.</li>
+</ol>
+
+<p>The interaction picture can be obtained from the Schr&ouml;dinger picture by an unitary transformation:</p>
+
+<p>\[|\Phi(t)\rangle={\rm e}^{iH_0^{\rm S}}|\Phi^{\rm S}(t)\rangle~~\mbox{and}~~ O(t)={\rm e}^{iH_0^{\rm S}}O^{\rm S}{\rm e}^{-iH_0^{\rm S}}\]</p>
+
+<p>The index \(^{\rm S}\) denotes the Schr&ouml;dinger picture. From this follows:</p>
+
+<p>\[i\frac{d}{dt}|\Phi(t)\rangle=H_{\rm int}(t)|\Phi(t)\rangle~~\mbox{and}~~ i\frac{d}{dt}O(t)=[O(t),H_0]\]</p>
+
+<h2><a name="15.4">15.4 Real scalar field in the interaction picture</a></h2>
+
+<p>It is easy to find that, with \(M:=m_0^2c^2/\hbar^2\), holds:</p>
+
+<p>\[\frac{\partial }{\partial t}\Phi(x)=\Pi(x)~~\mbox{and}~~\frac{\partial }{\partial t}\Pi(x)=(\nabla^2-M^2)\Phi(x)\]</p>
+
+<p>From this follows that \(\Phi\) obeys the Klein-Gordon equation \((\Box-M^2)\Phi=0\). With the definition \(k_0^2=\vec{k}^2+M^2:=\omega_k^2\) and the notation \(\vec{k}\cdot\vec{x}-ik_0t:=kx\) the general solution of this equation is:</p>
+
+<p>\[\Phi(x)=\frac{1}{\sqrt{V}}\sum_{\vec{k}}\frac{1}{\sqrt{2\omega_k}} \left(a(\vec{k}\,){\rm e}^{ikx}+a^\dagger(\vec{k}\,){\rm e}^{-ikx}\right)~,~~ \Pi(x)=\frac{i}{\sqrt{V}}\sum_{\vec{k}}\sqrt{\mbox{$\frac{1}{2}$}\omega_k} \left(-a(\vec{k}\,){\rm e}^{ikx}+a^\dagger(\vec{k}\,){\rm e}^{-ikx}\right)\]</p>
+
+<p>The field operators contain a volume \(V\), which is used as normalization factor. Usually one can take the limit \(V\rightarrow\infty\).</p>
+
+<p>In general it holds that the term with \({\rm e}^{-ikx}\), the positive frequency part, is the creation part, and the negative frequency part is the annihilation part.</p>
+
+<p>The coefficients have to be each others hermitian conjugate because \(\Phi\) is hermitian. Because \(\Phi\) has only one component this can be interpreted as a field describing a particle with spin zero. From this follows that the commutation rules are given by \([\Phi(x),\Phi(x')]=i\Delta(x-x')\) with</p>
+
+<p>\[\Delta(y)=\frac{1}{(2\pi)^3}\int\frac{\sin(ky)}{\omega_k}d^3k\]</p>
+
+<p>\(\Delta(y)\) is an odd function which is invariant for proper Lorentz transformations (no mirroring). This is consistent with the previously found result \([\Phi(\vec{x},t,\Phi(\vec{x}\,',t)]=0\). In general it holds that \(\Delta(y)=0\) outside the light cone. So the equations obey the locality postulate.</p>
+
+<p>The <em>Lagrange density</em> is given by: \({\cal L}(\Phi,\partial_\nu\Phi)=-\frac{1}{2}(\partial_\nu\Phi\partial_\nu\Phi+m^2\Phi^2)\). The energy operator is given by:</p>
+
+<p>\[H=\int{\cal H}(x)d^3x=\sum_{\vec{k}}\hbar\omega_ka^\dagger(\vec{k}\,)a(\vec{k}\,)\]</p>
+
+<h2><a name="15.5">15.5 Charged spin-0 particles, conservation of charge</a></h2>
+
+<p>The <em>Lagrange density</em> of charged spin-0 particles is given by: \({\cal L}=-(\partial_\nu\Phi\partial_\nu\Phi^*+M^2\Phi\Phi^*)\).</p>
+
+<p>Noether&rsquo;s theorem connects a continuous symmetry of \({\cal L}\) and an additive conservation law. Suppose that \({\cal L}\left((\Phi^\alpha)',\partial_\nu(\Phi^\alpha)'\right)= {\cal L}\left(\Phi^\alpha,\partial_\nu\Phi^\alpha\right)\) and there exists a continuous transformation between \(\Phi^\alpha\) and \({\Phi^\alpha}'\) such as \({\Phi^\alpha}'=\Phi^\alpha+\epsilon f^\alpha(\Phi)\). Then &nbsp;</p>
+
+<p>\[\frac{\partial }{\partial x_\nu}\left(\frac{\partial {\cal L}}{\partial (\partial_\nu\Phi^\alpha)}f^\alpha\right)=0\]</p>
+
+<p>This is a continuity equation \(\Rightarrow\) conservation law. Which quantity is conserved depends on the symmetry. The above <em>Lagrange density</em> is invariant for a change in phase \(\Phi\rightarrow\Phi{\rm e}^{i\theta}\): a global gauge transformation. The conserved quantity is the current density \(J_\mu(x)=-ie(\Phi\partial_\mu\Phi^*-\Phi^*\partial_\mu\Phi)\). Because this quantity is 0 for real fields a complex field is needed to describe charged particles. When this field is quantized the field operators are given by</p>
+
+<p>\[\Phi(x)=\frac{1}{\sqrt{V}}\sum_{\vec{k}}\frac{1}{\sqrt{2\omega_k}} \left(a(\vec{k}\,){\rm e}^{ikx}+b^\dagger(\vec{k}\,){\rm e}^{-ikx}\right) ~,~~ \Phi^\dagger(x)=\frac{1}{\sqrt{V}}\sum_{\vec{k}}\frac{1}{\sqrt{2\omega_k}} \left(a^\dagger(\vec{k}\,){\rm e}^{ikx}+b(\vec{k}\,){\rm e}^{-ikx}\right)\]</p>
+
+<p>Hence the energy operator is given by:</p>
+
+<p>\[H=\sum_{\vec{k}}\hbar\omega_k\left(a^\dagger(\vec{k}\,)a(\vec{k}\,)+b^\dagger(\vec{k}\,)b(\vec{k}\,)\right)\]</p>
+
+<p>and the charge operator is given by:</p>
+
+<p>\[Q(t)=-i\int J_4(x)d^3x\Rightarrow Q=\sum_{\vec{k}}e\left(a^\dagger(\vec{k}\,)a(\vec{k}\,)-b^\dagger(\vec{k}\,)b(\vec{k}\,)\right)\]</p>
+
+<p>From this follows that \(a^\dagger a:=N_+(\vec{k}\,)\) is an occupation number operator for particles with a positive charge and \(b^\dagger b:=N_-(\vec{k}\,)\) is an occupation number operator for particles with a negative charge.</p>
+
+<h2><a name="15.6">15.6 Field functions for spin-\(\frac{1}{2}\)-particles</a></h2>
+
+<p>Spin is defined by the behaviour of the solutions \(\psi\) of the Dirac equation. A <em>scalar</em> field \(\Phi\) has the property that, if it obeys the Klein-Gordon equation, the rotated field \(\tilde{\Phi}(x):=\Phi(\Lambda^{-1}x)\) also obeys it. \(\Lambda\) denotes 4-dimensional rotations: the proper <em>Lorentz</em> <em>transformations</em>. These can be written as:</p>
+
+<p>\[\tilde{\Phi}(x)=\Phi(x){\rm e}^{-i\vec{n}\cdot\vec{L}}~~\mbox{with}~~ L_{\mu\nu}=-i\hbar\left(x_\mu\frac{\partial }{\partial x_\nu}-x_\nu\frac{\partial }{\partial x_\mu}\right)\]</p>
+
+<p>For \(\mu\leq3,\nu\leq3\) these are rotations, for \(\nu=4,\mu\neq4\) these are <em>Lorentz transformations</em>.</p>
+
+<p>A rotated field \(\tilde{\psi}\) obeys the <em>Dirac equation</em> if the following condition holds: \(\tilde{\psi}(x)=D(\Lambda)\psi(\Lambda^{-1}x)\). This results in the condition \(D^{-1}\gamma_\lambda D=\Lambda_{\lambda\mu}\gamma_\mu\). One finds: \(D={\rm e}^{i\vec{n}\cdot\vec{S}}\) with \(S_{\mu\nu}=-i\frac{1}{2}\hbar\gamma_\mu\gamma_\nu\). Hence:</p>
+
+<p>\[\tilde{\psi}(x)={\rm e}^{-i(S+L)}\psi(x)={\rm e}^{-iJ}\psi(x)\]</p>
+
+<p>Then the solutions of the Dirac equation are given by:</p>
+
+<p>\[\psi(x)=u_\pm^r(\vec{p}\,){\rm e}^{-i(\vec{p}\cdot\vec{x}\pm Et)}\]</p>
+
+<p>Here, \(r\) is an indication for the direction of the spin, and \(\pm\) is the sign of the energy. With the notation \(v^r(\vec{p}\,)=u^r_-(-\vec{p}\,)\) and \(u^r(\vec{p}\,)=u^r_+(\vec{p}\,)\) one can write for the dot products of these spinors:</p>
+
+<p>\[u_+^r(\vec{p}\,)u_+^{r'}(\vec{p}\,)=\frac{E}{M}\delta_{rr'}~~,~~ u_-^r(\vec{p}\,)u_-^{r'}(\vec{p}\,)=\frac{E}{M}\delta_{rr'}~~,~~ u_+^r(\vec{p}\,)u_-^{r'}(\vec{p}\,)=0\]</p>
+
+<p>Because of the factor \(E/M\) this is not relativistic invariant. A Lorentz-invariant dot product is defined by \(\overline{a}b:=a^\dagger\gamma_4b\), where \(\overline{a}:=a^\dagger\gamma_4\) is a row spinor. From this follows:</p>
+
+<p>\[\overline{u^r(\vec{p}\,)}u^{r'}(\vec{p}\,)=\delta_{rr'}~~,~~ \overline{v^r(\vec{p}\,)}v^{r'}(\vec{p}\,)=-\delta_{rr'}~~,~~ \overline{u^r(\vec{p}\,)}v^{r'}(\vec{p}\,)=0\]</p>
+
+<p>Combinations of the type \(a\overline{a}\) give a \(4\times4\) matrix:</p>
+
+<p>\[\sum_{r=1}^2 u^r(\vec{p}\,)\overline{u^r(\vec{p}\,)}=\frac{-i\gamma_\lambda p_\lambda+M}{2M}~~,~~ \sum_{r=1}^2 v^r(\vec{p}\,)\overline{v^r(\vec{p}\,)}=\frac{-i\gamma_\lambda p_\lambda-M}{2M}\]</p>
+
+<p>The Lagrange density which results in the Dirac equation and having the correct energy normalization is:</p>
+
+<p>\[{\cal L}(x)=-\overline{\psi(x)}\left(\gamma_\mu\frac{\partial }{\partial x_\mu}+M\right)\psi(x)\]</p>
+
+<p>and the current density is \(J_\mu(x)=-ie\overline{\psi}\gamma_\mu\psi\).</p>
+
+<h2><a name="15.7">15.7 Quantization of spin-\(\frac{1}{2}\) fields</a></h2>
+
+<p>The general solution for the fieldoperators is in this case:</p>
+
+<p>\[\psi(x)=\sqrt{\frac{M}{V}}\sum_{\vec{p}}\frac{1}{\sqrt{E}}\sum_r \left(c_r(\vec{p}\,)u^r(\vec{p}\,){\rm e}^{ipx}+ d^\dagger_r(\vec{p}\,)v^r(\vec{p}\,){\rm e}^{-ipx}\right)\]</p>
+
+<p>and</p>
+
+<p>\[\overline{\psi(x)}=\sqrt{\frac{M}{V}}\sum_{\vec{p}}\frac{1}{\sqrt{E}}\sum_r \left(c^\dagger_r(\vec{p}\,)\overline{u^r}(\vec{p}\,){\rm e}^{-ipx}+ d_r(\vec{p}\,)\overline{v^r}(\vec{p}\,){\rm e}^{ipx}\right)\]</p>
+
+<p>Here, \(c^\dagger\) and \(c\) are the creation respectively annihilation operators for an electron and \(d^\dagger\) and \(d\) the creation respectively annihilation operators for a positron. The energy operator is given by</p>
+
+<p>\[H=\sum_{\vec{p}}E_{\vec{p}}\sum_{r=1}^2\left(c_r^\dagger(\vec{p}\,)c_r(\vec{p}\,)-d_r(\vec{p}\,)d^\dagger_r(\vec{p}\,)\right)\]</p>
+
+<p>To prevent that the energy of positrons is negative the operators must obey anti commutation rules in stead of commutation rules:</p>
+
+<p>\[[c_r(\vec{p}\,),c_{r'}^\dagger(\vec{p}\,)]_+=[d_r(\vec{p}\,),d_{r'}^\dagger(\vec{p}\,)]_+=\delta_{rr'}\delta_{pp'}~~,~~ \mbox{all other anti commutators are 0.}\]</p>
+
+<p>The field operators obey</p>
+
+<p>\[[\psi_\alpha(x),\psi_\beta(x')]=0~~,~~ [\overline{\psi_\alpha(x)},\overline{\psi_\beta(x')}]=0~~,~~ [\psi_\alpha(x),\overline{\psi_\beta(x')}]_+=-iS_{\alpha\beta}(x-x')\] \[\mbox{with}~~~S(x)=\left(\gamma_\lambda\frac{\partial }{\partial x_\lambda}-M\right)\Delta(x)\]</p>
+
+<p>The anti commutation rules give besides the positive-definite energy also the Pauli exclusion principle and the Fermi-Dirac statistics: because \(c_r^\dagger(\vec{p}\,)c_r^\dagger(\vec{p}\,)=-c_r^\dagger(\vec{p}\,)c_r^\dagger(\vec{p}\,)\) and thus: \(\{c_r^\dagger(p)\}^2=0\). It appears to be impossible to create two electrons with the same momentum and spin. This is the exclusion principle. Another way to see this is the fact that \(\{N_r^+(\vec{p}\,)\}^2=N_r^+(\vec{p}\,)\): the occupation operators have only eigenvalues 0 and 1.</p>
+
+<p>To avoid infinite vacuum contributions to the energy and charge the  <em>normal product</em> is introduced. The expression for the current density now becomes \(J_\mu=-ieN(\overline{\psi}\gamma_\mu\psi)\). This product is obtained by:</p>
+
+<ul>
+    <li>Expand all fields into creation and annihilation operators,</li>
+    <li>Keep all terms which have no annihilation operators, or in which they are on the right of the creation operators,</li>
+    <li>In all other terms interchange the factors so that the annihilation operators go to the right. By an interchange of two fermion operators add a minus sign, by interchange of two boson operators not. Assume hereby that all commutators are zero.</li>
+</ul>
+
+<h2><a name="15.8">15.8 Quantization of the electromagnetic field</a></h2>
+
+<p>Starting with the <em>Lagrange density</em> \(\displaystyle{\cal L}=-\frac{1}{2}\frac{\partial A_\nu}{\partial x_\mu}\frac{\partial A_\nu}{\partial x_\mu}\)</p>
+
+<p>it follows for the field operators \(A(x)\):</p>
+
+<p>\[A(x)=\frac{1}{\sqrt{V}}\sum_{\vec{k}}\frac{1}{\sqrt{2\omega_k}}\sum_{m=1}^4 \left(a_m(\vec{k}\,)\epsilon^m(\vec{k}\,){\rm e}^{ikx}+ a^\dagger(\vec{k}\,)\epsilon^m(\vec{k}\,)^*{\rm e}^{-ikx}\right)\]</p>
+
+<p>The operators obey \([a_m(\vec{k}\,),a_{m'}^\dagger(\vec{k}\,)]=\delta_{mm'}\delta_{kk'}\). All other commutators are 0. \(m\) gives the polarization direction of the photon: \(m=1,2\) gives transversal polarized, \(m=3\) longitudinal polarized and \(m=4\) time like polarized photons. Further:</p>
+
+<p>\[[A_\mu(x),A_\nu(x')]=i\delta_{\mu\nu}D(x-x')~~\mbox{with}~~D(y)=\Delta(y)|_{m=0}\]</p>
+
+<p>In spite of the fact that \(A_4=iV\) is imaginary in the classical case, \(A_4\) is still defined to be hermitian because otherwise the sign of the energy becomes incorrect. By changing the definition of the inner product in configuration space the expectation values for \(A_{1,2,3}(x)\in I\hspace{-1mm}R\) and for \(A_4(x)\) become imaginary.</p>
+
+<p>If the potentials satisfy the <em>Lorentz gauge</em> condition \(\partial_\mu A_\mu=0\) the \(E\) and \(B\) operators derived from these potentials will satisfy the Maxwell equations. However, this gives problems with the commutation rules. It is now demanded that only those states are permitted for which</p>
+
+<p>\[\frac{\partial A^+_\mu}{\partial x_\mu}|\Phi\rangle=0\]</p>
+
+<p>This results in: \(\displaystyle\left\langle \frac{\partial A_\mu}{\partial x_\mu} \right\rangle=0\).</p>
+
+<p>From this follows that \((a_3(\vec{k}\,)-a_4(\vec{k}\,))|\Phi\rangle=0\). With a local gauge transformation one obtains \(N_3(\vec{k}\,)=0\) and \(N_4(\vec{k}\,)=0\). However, this only applies to free EM-fields: in intermediary states in interactions there can exist longitudinal and timelike photons. These photons are also responsible for the stationary Coulomb potential.</p>
+
+<h2><a name="15.9">15.9 Interacting fields and the S-matrix</a></h2>
+
+<p>The \(S\)(scattering)-matrix gives a relation between the initial and final states of an interaction: \(|\Phi(\infty)\rangle=S|\Phi(-\infty)\rangle\). If the Schr&ouml;dinger equation is integrated:</p>
+
+<p>\[|\Phi(t)\rangle=|\Phi(-\infty)\rangle-i\int\limits_{-\infty}^t H_{\rm int}(t_1)|\Phi(t_1)\rangle dt_1\]</p>
+
+<p>and when perturbation theory is applied one finds that:</p>
+
+<p>\[S=\sum_{n=0}^\infty\frac{(-i)^n}{n!}\int\cdots\int T\left\{{\cal H}_{\rm int}(x_1)\cdots{\cal H}_{\rm int}(x_n)\right\}d^4x_1\cdots d^4x_n \equiv\sum_{n=0}^\infty S^{(n)}\]</p>
+
+<p>Here, the \(T\)-operator means a <em>time-ordered product</em>: the terms in such a product must be ordered in increasing time order from the right to the left so that the earliest terms act first. The \(S\)-matrix is then given by: \(S_{ij}=\left\langle \Phi_i|S|\Phi_j \right\rangle=\left\langle \Phi_i|\Phi(\infty) \right\rangle\).</p>
+
+<p>The interaction Hamilton density for the interaction between the electromagnetic and the electron-positron field is: \({\cal H}_{\rm int}(x)=-J_\mu(x)A_\mu(x)=ieN(\overline{\psi}\gamma_\mu\psi A_\mu)\)</p>
+
+<p>When this is expanded as: \({\cal H}_{\rm int}=ieN\left((\overline{\psi^+}+\overline{\psi^-})\gamma_\mu(\psi^++\psi^-)(A_\mu^++A_\mu^-)\right)\)</p>
+
+<p>eight terms appear. Each term corresponds to a possible process. The term \(ie\overline{\psi^+}\gamma_\mu\psi^+A_\mu^-\) acting on \(|\Phi\rangle\) gives transitions where \(A_\mu^-\) creates a photon, \(\psi^+\) annihilates an electron and \(\overline{\psi^+}\) annihilates a positron. Only terms with the correct number of particles in the initial and final state contribute to a matrix element \(\left\langle \Phi_i|S|\Phi_j \right\rangle\). Further the factors in \({\cal H}_{\rm int}\) can create and thereafter annihilate particles: the <em>virtual particles</em>.</p>
+
+<p>The expressions for \(S^{(n)}\) contain time-ordered products of normal products. This can be written as a sum of normal products. The appearing operators describe the minimal changes necessary to change the initial state into the final state. The effects of the virtual particles are described by the (anti)commutator functions. Some time-ordered products are:</p>
+
+<p>\[ T\left \{ \Phi(x) \Phi(y) \right \} = N&nbsp; \left \{ \Phi(x) \Phi(y) \right \}+\frac{1}{2} \Delta^{F} (x-y) \]</p>
+
+<p>\[ T\left \{ \psi_\alpha(x)\overline{\psi_\beta(y)}\right \} = N\left \{ \psi_\alpha(x)\overline{\psi_\beta(y)} \right \} - \frac{1}{2}S_{\alpha \beta}^{F}(x-y) \]</p>
+
+<p>\[ T\left \{ A_\mu(x) A_\nu(y) \right \} = N \left \{&nbsp; A_\mu(x) A_\nu(y) \right \}+\frac{1}{2} \delta_{\mu \nu} D_{\mu \nu}^{F} (x-y) \]</p>
+
+<p>Here, \(S^{\rm F}(x)=(\gamma_\mu\partial_\mu-M)\Delta^{\rm F}(x)\), \(D^{\rm F}(x)=\Delta^{\rm F}(x)|_{m=0}\) and</p>
+
+<p>\[ \Delta^{F}(x)=\left \{ \begin{array}{ll} \frac{1}{(2 \pi)^3} \int \frac{e^{ikx}}{\omega_{\vec{k}}} d^3k &amp; ~~~~~if~x_0&gt;0\\ \\ \frac{1}{(2 \pi)^3} \int \frac{e^{-ikx}}{\omega_{\vec{k}}} d^3k&amp;~~~~~if~x_0&lt;0 \end{array}\right.\]</p>
+
+<p>The term \(\frac{1}{2}\Delta^{\rm F}(x-y)\) is called the contraction of \(\Phi(x)\) and \(\Phi(y)\), and is the expectation value of the time-ordered product in the vacuum state. Wick&rsquo;s theorem gives an expression for the time-ordened product of an arbitrary number of field operators. The graphical representation of these processes are called <em>Feynman diagrams</em>. In the \(x\)-representation each diagram describes a number of processes. The contraction functions can also be written as:</p>
+
+<p>\[ \Delta^{F}(x) = \lim_{\epsilon \rightarrow0} \frac{-2i}{(2 \pi)^4} \int \frac{e^{ikx}}{k^2 + m^2 - i\epsilon} d^4k \;\;\;\mbox{and}\;\;\; S^{F}(x) = \lim_{\epsilon\rightarrow0}\frac{-2i}{(2 \pi)^4} \int&nbsp;&nbsp;e^{ipx} \frac {i\gamma_\mu p_\mu -M}{p^2+M^2-i\epsilon} d^4p \]</p>
+
+<p>In the expressions for \(S^{(2)}\) this gives rise to terms \(\delta(p+k-p'-k')\). This means that energy and momentum is conserved. However, virtual particles do not obey the relation between energy and momentum.</p>
+
+<h2><a name="15.10">15.10 Divergences and renormalization</a></h2>
+
+<p>It turns out that higher orders contribute infinite terms because only the sum \(p+k\) of the four-momentum of the virtual particles is fixed. An integration over one of them becomes \(\infty\). In the \(x\)-representation this can be understood because the product of two functions containing \(\delta\)-like singularities is not well defined. This is solved by discounting all divergent diagrams in a renormalization of \(e\) and \(M\). It is assumed that an electron, if there would not be an electromagnetic&nbsp;field, would have a mass \(M_0\) and a charge \(e_0\) unequal to the observed mass \(M\) and charge \(e\). In the <em>Hamilton</em> and <em>Lagrange density</em> of the free electron-positron field &nbsp;\(M_0\) appears. So this gives, with \(M=M_0+\Delta M\):</p>
+
+<p>\[{\cal L}_{\rm e-p}(x)=-\overline{\psi(x)}(\gamma_\mu\partial_\mu+M_0)\psi(x)= -\overline{\psi(x)}(\gamma_\mu\partial_\mu+M)\psi(x)+\Delta M\overline{\psi(x)}\psi(x)\]</p>
+
+<p>and \({\cal H}_{\rm int}=ieN(\overline{\psi}\gamma_\mu\psi A_\mu)-i\Delta eN(\overline{\psi}\gamma_\mu\psi A_\mu)\).</p>
+
+<h2><a name="15.11">15.11 Classification of elementary particles</a></h2>
+
+<p>Elementary particles can be categorized as follows:</p>
+
+<ol>
+    <li><strong>Hadrons:</strong> these exist of quarks and can be categorized in:
+
+    <ol>
+        <li><strong>Baryons:</strong> these exist of 3 quarks or 3 antiquarks.</li>
+        <li><strong>Mesons:</strong> these exist of one quark and one antiquark.</li>
+    </ol>
+    </li>
+    <li><strong>Leptons:</strong> e\(^\pm\), \(\mu^\pm\), \(\tau^\pm\), \(\nu_{\rm e}\), \(\nu_\mu\), \(\nu_\tau\), \(\overline{\nu}_{\rm e}\), \(\overline{\nu}_\mu\), \(\overline{\nu}_\tau\).</li>
+    <li><strong>Field quanta:</strong> \(\gamma\), W\(^\pm\), Z\(^0\), gluons, gravitons (?).</li>
+    <li><strong>Higgs particle</strong>: \(\phi\).</li>
+</ol>
+
+<p>An overview of particles and antiparticles is given in the following table:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">Particle<th align="center">spin (\(\hbar\))<th align="center">B<th align="center">L<th align="center">T<th align="center">T\(_3\)<th align="center">S<th align="center">C<th align="center">B\(^*\)<th align="center">charge (\(e\))<th align="center">\(m_0\) (MeV)<th align="center">antiparticle
+<tr>
+<td>u</td><td>1/2</td><td>1/3</td><td>0</td><td>1/2</td><td>1/2</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">+2/3</td><td style="text-align:right">5</td><td>\(\overline{\rm u}\)</td>
+<tr>
+<td>d</td><td>1/2</td><td>1/3</td><td>0</td><td>1/2</td><td>-1/2</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">-1/3</td><td style="text-align:right">9</td><td>\(\overline{\rm d}\)</td>
+<tr>
+<td>s</td><td>1/2</td><td>1/3</td><td>0</td><td>0</td><td>0</td><td>-1</td><td>0</td><td>0</td><td style="text-align:right">-1/3</td><td style="text-align:right">175</td><td>\(\overline{\rm s}\)</td>
+<tr>
+<td>c</td><td>1/2</td><td>1/3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td style="text-align:right">+2/3</td><td style="text-align:right">1350</td><td>\(\overline{\rm c}\)</td>
+<tr>
+<td>b</td><td>1/2</td><td>1/3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-1</td><td style="text-align:right">-1/3</td><td style="text-align:right">4500</td><td>\(\overline{\rm b}\)</td>
+<tr>
+<td>t</td><td>1/2</td><td>1/3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">+2/3</td><td style="text-align:right">173000</td><td>\(\overline{\rm t}\)</td>
+<tr>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<tr>
+<td>e\(^-\)</td>     <td>1/2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">-1</td><td style="text-align:right">   0.511</td><td>e\(^+\)</td>
+<tr>
+<td>\(\mu_-\)</td>   <td>1/2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">-1</td><td style="text-align:right"> 105.658</td><td>\(\mu^+\)</td>
+<tr>
+<td>\(\tau^-\)</td>  <td>1/2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">-1</td><td style="text-align:right">1777.1</td><td>\(\tau^+\)</td>
+<tr>
+<td>\(\nu_e\)</td>   <td>1/2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right"> 0</td><td style="text-align:right">0(?)</td><td>\(\overline{\nu}_e\)</td>
+<tr>
+<td>\(\nu_\mu\)</td> <td>1/2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right"> 0</td><td style="text-align:right">0(?)</td><td>\(\overline{\nu}_\mu\)</td>
+<tr>
+<td>\(\nu_\tau\)</td><td>1/2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right"> 0</td><td style="text-align:right">0(?)</td><td>\(\overline{\nu}_\tau\)</td>
+<tr>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<tr>
+<td>\(\gamma\)</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td>\(\gamma\)</td>
+<tr>
+<td>gluon</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td>\(\overline{\rm gluon}\)</td>
+<tr>
+<td>W\(^+\)</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">+1</td><td style="text-align:right">80220</td><td>W\(^-\)</td>
+<tr>
+<td>Z</td><td>1</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">0</td><td style="text-align:right">91187</td><td>Z</td>
+<tr>
+<td>graviton</td><td>2</td><td>0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">0</td><td style="text-align:right">0</td><td>graviton</td>
+<tr>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<tr>
+<td>Higgs</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td style="text-align:right">0</td><td style="text-align:right">125350</td><td>Higgs</td>
+<tr>
+</table>
+</p>
+
+<p>Here B is the baryon number and L the lepton number. It is found that there are three different lepton numbers, one for e, \(\mu\) and \(\tau\), which are separately conserved. T is the isospin, with \(T_3\) the projection of the isospin on the third axis, C the charm, S the strangeness and B\(^*\) the bottom. The anti particles have quantum numbers with the opposite sign except for the total isospin T. The composition of (anti)quarks of the hadrons is given in the following table, together with their mass in MeV in their ground state:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<td>\(\pi^0\)</td> <td style="text-align:center">\(\rm\frac{1}{2}\sqrt{2}(u\overline{u}+d\overline{d})\)</td><td>134.9764</td>
+<tr>
+<td>\(\pi^+\)</td> <td style="text-align:center">\(\rm u\overline{d}\)</td><td>139.56995</td>
+<tr>
+<td>\(\pi_-\)</td> <td style="text-align:center">\(\rm d\overline{u}\)</td><td>139.56995</td>
+<tr>
+<td>K\(^0\)</td> <td style="text-align:center">\(\rm s\overline{d}\)</td><td>497.672</td>
+<tr>
+<td>K\(^0\)</td> <td style="text-align:center">\(\rm d\overline{s}\)</td><td>497.672</td>
+<tr>
+<td>K\(^+\)</td> <td style="text-align:center">\(\rm u\overline{s}\)</td><td>493.677</td>
+<tr>
+<td>K\(^-\)</td> <td style="text-align:center">\(\rm s\overline{u}\)</td><td>493.677</td>
+<tr>
+<td>D\(^+\)</td> <td style="text-align:center">\(\rm c\overline{d}\)</td><td>1869.4</td>
+<tr>              
+<td>D\(^-\)</td> <td style="text-align:center">\(\rm d\overline{c}\)</td><td>1869.4</td>
+<tr>              
+<td>D\(^0\)</td> <td style="text-align:center">\(\rm c\overline{u}\)</td><td>1864.6</td>
+<tr>              
+<td>D\(^0\)</td> <td style="text-align:center">\(\rm u\overline{c}\)</td><td>1864.6</td>
+<tr>
+<td>F\(^+\)</td> <td style="text-align:center">\(\rm c\overline{s}\)</td><td>1969.0</td>
+<tr>              
+<td>F\(^-\)</td> <td style="text-align:center">\(\rm s\overline{c}\)</td><td>1969.0</td>
+<tr>              
+<td>J/\(\Psi\)</td> <td style="text-align:center">\(\rm c\overline{c}\)</td><td>3096.8</td>
+<tr>       
+<td>\(\Upsilon\)</td> <td style="text-align:center">\(\rm b\overline{b}\)</td><td>9460.37</td>
+<tr>
+<td></td><td></td><td></td>
+<tr>
+<td>p\(^+\)</td> <td style="text-align:center">uud</td><td>938.27231</td>
+<tr>              
+<td>p\(^-\)</td> <td style="text-align:center">\(\rm\overline{u}\overline{u}\overline{d}\)</td><td>938.27231</td>
+<tr>              
+<td>n\(^0\)</td> <td style="text-align:center">udd</td><td>939.56563</td>
+<tr>              
+<td>\(\rm\overline{n}^0\)</td> <td style="text-align:center">\(\rm\overline{u}\overline{d}\overline{d}\)</td><td>939.56563</td>
+<tr>
+<td>\(\Lambda\)</td> <td style="text-align:center">uds</td><td>1115.684</td>
+<tr>              
+<td>\(\overline{\Lambda}\)</td> <td style="text-align:center">\(\rm\overline{u}\overline{d}\overline{s}\)</td><td>1115.684</td>
+<tr>              
+<td>\(\Sigma^+\)</td> <td style="text-align:center">uus</td><td>1189.37</td>
+<tr>              
+<td>\(\overline{\Sigma^-}\)</td> <td style="text-align:center">\(\rm\overline{u}\overline{u}\overline{s}\)</td><td>1189.37</td>
+<tr>
+<td>\(\Sigma^0\)</td> <td style="text-align:center">uds</td><td>1192.55</td>
+<tr>              
+<td>\(\Sigma^0\)</td> <td style="text-align:center">\(\rm\overline{u}\overline{d}\overline{s}\)</td><td>1192.55</td>
+<tr>              
+<td>\(\Sigma^-\)</td> <td style="text-align:center">dds</td><td>1197.436</td>
+<tr>              
+<td>\(\overline{\Sigma^+}\)</td> <td style="text-align:center">\(\rm\overline{d}\overline{d}\overline{s}\)</td><td>1197.436</td>
+<tr>
+<td>\(\Xi^0\)</td> <td style="text-align:center">uss</td><td>1314.9</td>
+<tr>              
+<td>\(\Xi^0\)</td> <td style="text-align:center">\(\rm\overline{u}\overline{s}\overline{s}\)</td><td>1314.9</td>
+<tr>              
+<td>\(\Xi^-\)</td> <td style="text-align:center">dss</td><td>1321.32</td>
+<tr>              
+<td>\(\Xi^+\)</td> <td style="text-align:center">\(\rm\overline{d}\overline{s}\overline{s}\)</td><td>1321.32</td>
+<tr>
+<td>\(\Omega^-\)</td> <td style="text-align:center">sss</td><td>1672.45</td>
+<tr>              
+<td>\(\Omega^+\)</td> <td style="text-align:center">\(\rm\overline{s}\overline{s}\overline{s}\)</td><td>1672.45</td>
+<tr>              
+<td>\(\Lambda_c^+\)</td> <td style="text-align:center">udc</td><td>2285.1</td>
+<tr>              
+<td>\(\Delta^{2-}\)</td> <td style="text-align:center">\(\rm\overline{u}\overline{u}\overline{u}\)</td><td>1232.0</td>
+<tr>
+<td>\(\Delta^{2+}\)</td> <td style="text-align:center">uuu</td><td>1232.0</td>
+<tr>              
+<td>\(\Delta^+\)</td> <td style="text-align:center">uud</td><td>1232.0</td>
+<tr>              
+<td>\(\Delta^0\)</td> <td style="text-align:center">udd</td><td>1232.0</td>
+<tr>              
+<td>\(\Delta^-\)</td> <td style="text-align:center">ddd</td><td>1232.0</td>
+<tr>
+</table>
+    
+<p>Each quark can exist in two spin states. So mesons are bosons with spin 0 or 1 in their ground state, while baryons are fermions with spin \(\) or \(\frac{3}{2}\). There exist excited states with higher internal \(L\). Neutrino&rsquo;s have a helicity of \(-\) while antineutrino&rsquo;s have only \(+\) as possible value.</p>
+
+<p>The quantum numbers are subject to conservation laws. These can be derived from symmetries in the Lagrange density: continuous symmetries give rise to additive conservation laws, discrete symmetries result in multiplicative conservation laws.</p>
+
+<p><em><strong>Geometrical conservation laws </strong></em>are invariant under <em>Lorentz transformations </em>and the CPT-operation. These are:</p>
+
+<ol>
+    <li>Mass/energy because the laws of nature are invariant for translations in time.</li>
+    <li>Momentum because the laws of nature are invariant for translations in space.</li>
+    <li>Angular momentum because the laws of nature are invariant for rotations.</li>
+</ol>
+
+<p><strong><em>Dynamical conservation laws</em> </strong>are invariant under the CPT-operation. These are:</p>
+
+<ol>
+    <li>Electrical charge because the Maxwell equations are invariant under gauge transformations.</li>
+    <li>Colour charge is conserved.</li>
+    <li>Isospin because QCD is invariant for rotations in T-space.</li>
+    <li>Baryon number and lepton number are conserved but not under a possible SU(5) symmetry of the laws of nature.</li>
+    <li>Quarks type is only conserved under the colour interaction.</li>
+    <li>Parity is conserved except for weak interactions.</li>
+</ol>
+
+<p>The elementary particles can be classified into three families:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center"> <th align="center">leptons<th align="center">quarks<th align="center">antileptons<th align="center">antiquarks
+<tr>
+<td>1st generation</td><td style="text-align:center">\(\rm e^-\) </td><td style="text-align:center">d</td><td style="text-align:center">\(\rm e^+\)</td><td style="text-align:center">\(\overline{d}\)</td>
+<tr>
+<td>              </td><td style="text-align:center">\(\rm\nu_e\)</td><td style="text-align:center">u</td><td style="text-align:center">\(\rm\overline{\nu}_e\)</td><td style="text-align:center">\(\overline{u}\)</td>
+<tr>
+<td>2nd generation</td><td style="text-align:center">\(\mu^-\) </td><td style="text-align:center">s</td><td style="text-align:center">\(\mu^+\)</td><td style="text-align:center">\(\overline{s}\)</td>
+<tr>
+<td>              </td><td style="text-align:center">\(\nu_\mu\)</td><td style="text-align:center">c</td><td style="text-align:center">\(\overline{\nu}_\mu\)</td><td style="text-align:center">\(\overline{c}\)</td>
+<tr>
+<td>3rd generation</td><td style="text-align:center">\(\tau^-\) </td><td style="text-align:center">b</td><td style="text-align:center">\(\tau^+\)</td><td style="text-align:center">\(\overline{b}\)</td>
+<tr>
+<td>              </td><td style="text-align:center">\(\nu_\tau\)</td><td style="text-align:center">t</td><td style="text-align:center">\(\overline{\nu}_\tau\)</td><td style="text-align:center">\(\overline{t}\)</td>
+<tr>
+</table>
+</p>
+
+<p>Quarks exist in three colours but because they are <em>confined</em> these colours cannot be seen directly. The color force does <em>not</em> decrease with distance. The potential energy will become high enough to create a quark-antiquark pair when it is tried to disjoin an (anti)quark from a hadron. This will result in two hadrons and not in free quarks.</p>
+
+<h2><a name="15.12">15.12 P and CP-violation</a></h2>
+
+<p>It is found that the weak interaction violates P-symmetry, and even CP-symmetry is not conserved. Some processes which violate P symmetry but conserve the combination CP are:</p>
+
+<ol>
+    <li>\(\mu\)-decay: \(\mu^-\rightarrow {\rm e}^-+\nu_\mu+\overline{\nu}_{\rm e}\). Left-handed electrons appear more than \(1000\times\) as much as right-handed ones.</li>
+    <li>\(\beta\)-decay of spin-polarized \(^{60}\)Co: \(\rm ^{60}Co\rightarrow^{60}Ni+e^-+\overline{\nu}_e\). More electrons with a spin parallel to the Co than with a spin antiparallel are created: (parallel\(-\)antiparallel)/(total)=20%.</li>
+    <li>There is no connection with the neutrino: the decay of the \(\Lambda\) particle through: \(\Lambda\rightarrow{\rm p}^++\pi^-\) and \(\Lambda\rightarrow{\rm n}^0+\pi^0\) has also these properties.</li>
+</ol>
+
+<p>The CP-symmetry was found to be violated by the decay of neutral Kaons. These are the lowest possible states with a s-quark so they can decay only weakly. The following holds: \(\rm C|K^0\rangle=\eta|\overline{K^0}\rangle\) where \(\eta\) is a phase factor. Further \(\rm P|K^0\rangle=-|K^0\rangle\) because \(\rm K^0\) and \(\rm\overline{K^0}\) have an intrinsic parity of \(-1\). From this follows that \(\rm K^0\) and \(\rm\overline{K^0}\) are not eigenvalues of CP: \(\rm CP|K^0\rangle=|\overline{K^0}\rangle\). The linear combinations \[\rm|K_1^0\rangle:=\mbox{$\frac{1}{2}$}\sqrt{2}(|K^0\rangle+|\overline{K^0}\rangle)~~\mbox{and}~~ |K_2^0\rangle:=\mbox{$\frac{1}{2}$}\sqrt{2}(|K^0\rangle-|\overline{K^0}\rangle)\] are eigenstates of CP: \(\rm CP|K_1^0\rangle=+|K_1^0\rangle\) and \(\rm CP|K_2^0\rangle=-|K_2^0\rangle\). A base of \(\rm K_1^0\) and \(\rm K_2^0\) is practical while describing weak interactions. For colour interactions a base of \(\rm K^0\) and \(\rm\overline{K^0}\) is practical because then the number u\(-\)number\(~\overline{\rm u}\) is constant. The expansion postulate must be used for weak decays:</p>
+
+<p>\[\rm|K^0\rangle=\mbox{$\frac{1}{2}$}(\langle K_1^0|K^0\rangle+\langle K_2^0|K^0\rangle)\]</p>
+
+<p>The probability to find a final state with CP\(=-1\) is \(\rm|\left\langle K_2^0|K^0 \right\rangle|^2\), the probability of CP=+1 decay is \(\rm|\left\langle K_1^0|K^0 \right\rangle|^2\).</p>
+
+<p>The relation between the mass eigenvalues of the quarks (unaccented) and the fields arising in the weak currents (accented) is \((u',c',t')=(u,c,t)\), and:</p>
+
+<p>\[\begin{aligned} \left(\begin{array}{c}d'\\s'\\b'\end{array}\right)&amp;=&amp; \left(\begin{array}{ccc} 1&amp;0&amp;0\\ 0&amp;\cos\theta_2&amp;\sin\theta_2\\ 0&amp;-\sin\theta_2&amp;\cos\theta_2 \end{array}\right) \left(\begin{array}{ccc} 1&amp;0&amp;0\\ 0&amp;1&amp;0\\ 0&amp;0&amp;{\rm e}^{i\delta} \end{array}\right) \left(\begin{array}{ccc} \cos\theta_1&amp;\sin\theta_1&amp;0\\ -\sin\theta_1&amp;\cos\theta_1&amp;0\\ 0&amp;0&amp;1\\ \end{array}\right)\\ &amp;&amp;\left(\begin{array}{ccc} 1&amp;0&amp;0\\ 0&amp;\cos\theta_3&amp;\sin\theta_3\\ 0&amp;-\sin\theta_3&amp;\cos\theta_3\\ \end{array}\right) \left(\begin{array}{c}d\\s\\b\end{array}\right)\end{aligned}\]</p>
+
+<p>\(\theta_1\equiv\theta_{\rm C}\) is the <em>Cabibbo angle</em>: \(\sin(\theta_{\rm C})\approx0.23\pm0.01\).</p>
+
+<h2><a name="15.13">15.13 The standard model</a></h2>
+
+<p>When one wants to make the <em>Lagrange density</em> which describes a field invariant for local gauge transformations from a certain group, one has to perform the transformation</p>
+
+<p>\[\frac{\partial }{\partial x_\mu}\rightarrow\frac{D}{Dx_\mu}=\frac{\partial }{\partial x_\mu}-i\frac{g}{\hbar}L_kA_\mu^k\]</p>
+
+<p>Here the \(L_k\) are the generators of the gauge group (the &ldquo;charges&rdquo;) and the \(A_\mu^k\) are the gauge fields. \(g\) is the matching coupling constant. The <em>Lagrange density</em> for a scalar field becomes:</p>
+
+<p>\[{\cal L}=-\mbox{$\frac{1}{2}$}(D_\mu\Phi^*D^\mu\Phi+M^2\Phi^*\Phi)-\mbox{$\frac{1}{4}$}F_{\mu\nu}^aF_a^{\mu\nu}\]</p>
+
+<p>and the field tensors are given by: \(F^a_{\mu\nu}=\partial_\mu A^a_\nu-\partial_\nu A^a_\mu+gc^a_{lm}A_\mu^lA_\nu^m\).</p>
+
+<h3><a name="15.13.1">15.13.1 The electroweak theory</a></h3>
+
+<p>The electroweak interaction arises from the necessity to keep the <em>Lagrange density</em> invariant for local gauge transformations of the group SU(2)\(\otimes\)U(1). Right- and left-handed spin states are treated different because the weak interaction does not conserve parity. If a fifth Dirac matrix is defined by:</p>
+
+<p>\[\gamma_5:=\gamma_1\gamma_2\gamma_3\gamma_4=- \left(\begin{array}{cccc}0&amp;0&amp;1&amp;0\\0&amp;0&amp;0&amp;1\\1&amp;0&amp;0&amp;0\\0&amp;1&amp;0&amp;0\end{array}\right)\]</p>
+
+<p>the left- and right- handed solutions of the Dirac equation for neutrino&rsquo;s are given by:</p>
+
+<p>\[\psi_{\rm L}=\mbox{$\frac{1}{2}$}(1+\gamma_5)\psi~~~\mbox{and}~~~\psi_{\rm R}=\mbox{$\frac{1}{2}$}(1-\gamma_5)\psi\]</p>
+
+<p>It appears that neutrino&rsquo;s are always left-handed while antineutrino&rsquo;s are always right-handed. The <em>hypercharge</em> \(Y\), for quarks given by \(Y={\rm B+S+C+B^*+T'}\), is defined by:</p>
+
+<p>\[Q=\mbox{$\frac{1}{2}$}Y+T_3\] so \([Y,T_k]=0\).</p>
+
+<p>The group U(1)\(_Y\otimes\)SU(2)\(_T\) is taken as symmetry group for the electroweak interaction because the generators of this group commute. The multiplets are classified as follows:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center"><th align="center">e\(^-_{\rm R}\)<th align="center">\(\nu_{\rm eL}\;\;\;\) e\(^-_{\rm L}\)<th align="center">u\(_{\rm L}\;\;\;\) d\('_{\rm L}\)<th align="center">u\(_{\rm R}\)<th align="center">d\(_{\rm R}\;\)
+<tr>
+<td>\(T\)</td><td style="text-align:center">0</td><td style="text-align:center">\(\frac{1}{2}\)</td><td style="text-align:center">\(\frac{1}{2}\)</td><td style="text-align:center">0</td><td style="text-align:center">0</td>
+<tr>
+<td>\(T_3\)</td><td style="text-align:center">0</td><td style="text-align:center">\(\frac{1}{2}\;\;\;-\frac{1}{2}\)</td><td style="text-align:center">\(\frac{1}{2}\;\;\;-\frac{1}{2}\)</td><td style="text-align:center">0</td><td style="text-align:center">0</td>
+<tr>
+<td>\(Y\)</td><td style="text-align:center">-2</td><td style="text-align:center">-1</td><td style="text-align:center">\(\frac{1}{3}\)</td><td style="text-align:center">\(\frac{4}{3}\)</td><td style="text-align:center">\(-\frac{2}{3}\)</td>
+<tr>
+</table>
+</p>
+
+<p>Now, 1 field \(B_\mu(x)\) is connected with gauge group U(1) and 3 gauge fields \(\vec{A}_\mu(x)\) are connected with SU(2). The total Lagrange density (minus the fieldterms) for the electron-fermion field now becomes:</p>
+
+<p>\[\begin{aligned} {\cal L}_{0,\rm EW}&amp;=&amp;-(\overline{\psi_{\rm\nu e,L}},\overline{\psi_{\rm eL}})\gamma^\mu \left(\partial_\mu-i\frac{g}{\hbar}\vec{A}_\mu\cdot(\mbox{$\frac{1}{2}$}\vec{\sigma})-\mbox{$\frac{1}{2}$}i\frac{g'}{\hbar}B_\mu\cdot(-1)\right) \left(\begin{array}{c}\psi_{\rm\nu e,L}\\ \psi_{\rm eL}\end{array}\right)-\\ &amp;&amp;\overline{\psi_{\rm eR}}\gamma^\mu\left(\partial_\mu-\mbox{$\frac{1}{2}$}i\frac{g'}{\hbar}(-2)B_\mu\right)\psi_{\rm eR}\end{aligned}\]</p>
+
+<p>Here, \(\vec{\sigma}\) are the generators of \(T\) and \(-1\) and \(-2\) the generators of \(Y\).</p>
+
+<h3><a name="15.13.2">15.13.2 Spontaneous symmetry breaking: the Higgs mechanism</a></h3>
+
+<p>All leptons are massless in the equations above. Their mass is probably generated by <em>spontaneous symmetry breaking</em>. This means that the dynamic equations which describe the system have a symmetry which the ground state does not have. It is assumed that there exists an isospin-doublet of scalar fields \(\Phi\) with electrical charges +1 and 0 and potential \(V(\Phi)=-\mu^2\Phi^*\Phi+\lambda(\Phi^*\Phi)^2\). Their antiparticles have charges \(-1\) and 0. The extra terms in \({\cal L}\) arising from these fields, \({\cal L}_H=(D_{L\mu}\Phi)^*(D_L^\mu\Phi)-V(\Phi)\), are globally U(1)\(\otimes\)SU(2) symmetric. Hence the state with the lowest energy corresponds with the state \(\Phi^*(x)\Phi(x)=v=\mu^2/2\lambda=\)constant. The field can be written (were \(\omega^\pm\) and \(z\) are Nambu-Goldstone bosons which can be transformed away, and \(m_\phi=\mu\sqrt{2}\)) as:</p>
+
+<p>\[\Phi=\left(\begin{array}{c}\Phi^+\\ \Phi^0\end{array}\right)= \left(\begin{array}{c}i\omega^+\\ (v+\phi-iz)/\sqrt{2}\end{array}\right)\;\mbox{and}\;\left\langle 0|\Phi|0 \right\rangle=\left(\begin{array}{c}0\\ v/\sqrt{2}\end{array}\right)\] Because this expectation value \(\neq0\) the SU(2) symmetry is broken but the U(1) symmetry is not. When the gauge fields in the resulting Lagrange density are separated one obtains:</p>
+
+<p>\[\begin{aligned} W_\mu^-&amp;=&amp;\mbox{$\frac{1}{2}$}\sqrt{2}(A_\mu^1+iA_\mu^2)~~,~~W_\mu^+~=~\mbox{$\frac{1}{2}$}\sqrt{2}(A_\mu^1-iA_\mu^2)\\ Z_\mu&amp;=&amp;\frac{gA_\mu^3-g'B_\mu}{\sqrt{g^2+g'^2}}\equiv A_\mu^3\cos(\theta_{\rm W})-B_\mu\sin(\theta_{\rm W})\\ A_\mu&amp;=&amp;\frac{g'A_\mu^3+gB_\mu}{\sqrt{g^2+g'^2}}\equiv A_\mu^3\sin(\theta_{\rm W})+B_\mu\cos(\theta_{\rm W})\end{aligned}\]</p>
+
+<p>where \(\theta_{\rm W}\) is called the <em>Weinberg angle</em>. For this angle: \(\sin^2(\theta_{\rm W})=0.255\pm0.010\). Relations for the masses of the field quanta can be obtained from the remaining terms: \(M_W=vg\) and \(M_Z=v\sqrt{g^2+g'^2}\), and for the elementary charge: \(\displaystyle e=\frac{gg'}{\sqrt{g^2+g'^2}}=g'\cos(\theta_{\rm W})=g\sin(\theta_{\rm W})\)</p>
+
+<p>Experimentally it is found that \(M_W=80.022\pm0.26\) GeV/c\(^2\) and \(M_Z=91.187\pm0.007\) GeV/c\(^2\). According to the weak theory this should be: \(M_W=83.0\pm0.24\) GeV/c\(^2\) and \(M_Z=93.8\pm2.0\) GeV/c\(^2\).</p>
+
+<h3><a name="15.13.3">15.13.3 Quantumchromodynamics</a></h3>
+
+<p>Coloured particles interact because the <em>Lagrange density</em> is invariant for the transformations of the group SU(3) of the colour interaction. A distinction can be made between two types of particles:</p>
+
+<ol>
+    <li>&ldquo;White&rdquo; particles: they have no colour charge, the generator \(\vec{T}=0\).</li>
+    <li>&ldquo;Coloured&rdquo; particles: the generators \(\vec{T}\) are 8 \(3\times3\) matrices. There exist three colours and three anticolours.</li>
+</ol>
+
+<p>The <em>Lagrange density </em>for coloured particles is given by</p>
+
+<p>\[{\cal L}_{\rm QCD}=i\sum_k\overline{\Psi_k}\gamma^\mu D_\mu\Psi_k+ \sum_{k,l}\overline{\Psi_k}M_{kl}\Psi_l-\mbox{$\frac{1}{4}$}F^a_{\mu\nu}F_a^{\mu\nu}\]</p>
+
+<p>The gluons remain massless because this Lagrange density does not contain spinless particles. Because left- and right- handed quarks now belong to the same multiplet a mass term can be introduced. This term can be brought in the form \(M_{kl}=m_k\delta_{kl}\).</p>
+
+<h2><a name="15.14">15.14 Path integrals</a></h2>
+
+<p>The development in time of a quantum mechanical system can, besides with Schr&ouml;dingers equation, also be described by a <em>path integral</em> (Feynman):</p>
+
+<p>\[\psi(x',t')=\int F(x',t',x,t)\psi(x,t)dx\]</p>
+
+<p>in which \(F(x',t',x,t)\) is the amplitude of probability to find a system on time \(t'\) in \(x'\) if it was in \(x\) on time \(t\). Then,</p>
+
+<p>\[F(x',t',x,t)=\int\exp\left(\frac{iS[x]}{\hbar}\right)d[x]\]</p>
+
+<p>where \(S[x]\) is an action-integral: \(S[x]=\int L(x,\dot{x},t)dt\). The notation \(d[x]\) means that the integral has to be taken over all possible paths \([x]\):</p>
+
+<p>\[\int d[x]:=\lim_{n\rightarrow\infty}\frac{1}{N}\prod_n\left\{\int\limits_{-\infty}^\infty dx(t_n)\right\}\]</p>
+
+<p>in which \(N\) is a normalization constant. To each path is assigned a probability amplitude \(\exp(iS/\hbar)\). The classical limit can be found by taking \(\delta S=0\): the average of the exponent vanishes, except where it is stationary. In quantum field theory, the probability of the transition of a field operator \(\Phi(\vec{x},-\infty)\) to \(\Phi'(\vec{x},\infty)\) is given by</p>
+
+<p>\[F(\Phi'(\vec{x},\infty),\Phi(\vec{x},-\infty))=\int\exp\left(\frac{iS[\Phi]}{\hbar}\right)d[\Phi]\]</p>
+
+<p>with the action-integral \[S[\Phi]=\int\limits_\Omega {\cal L}(\Phi,\partial_\nu\Phi)d^4x\]</p>
+
+<h2><a name="15.15">15.15 Unification and quantum gravity</a></h2>
+
+<p>The strength of the forces varies with energy and the reciprocal coupling constants approach each other with increasing energy. The SU(5) model predicts complete unification of the electromagnetic, weak and colour forces at \(10^{15}\)GeV. It also predicts 12 extra X bosons which couple leptons and quarks and are i.g. responsible for proton decay, with dominant channel \({\rm p}^+\rightarrow\pi^0+{\rm e}^+\), with an average lifetime of the proton of \(10^{31}\) year. This model has been experimentally falsified.</p>
+
+<p>Supersymmetric models assume a symmetry between bosons and fermions and predict partners for the currently known particles with a spin which differs . The supersymmetric SU(5) model predicts unification at \(10^{16}\)GeV and an average lifetime of the proton of \(10^{33}\) year. The dominant decay channels in this theory are \({\rm p}^+\rightarrow{\rm K}^++\overline{\nu}_\mu\) and \({\rm p}^+\rightarrow{\rm K}^0+\mu^+\).</p>
+
+<p>Quantum gravity plays only a role in particle interactions at the Planck dimensions, where \(\lambda_{\rm C}\approx R_{\rm S}\): \(m_{\rm Pl}=\sqrt{hc/G}=3\cdot10^{19}\) GeV, \(t_{\rm Pl}=h/m_{\rm Pl}c^2=\sqrt{hG/c^5}=10^{-43}\) sec and \(r_{\rm Pl}=ct_{\rm Pl}\approx 10^{-35}\) m.</p>
+
+</body>
+</head>

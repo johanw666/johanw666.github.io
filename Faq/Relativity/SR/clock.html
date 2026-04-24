@@ -1,0 +1,342 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Does a clock's acceleration affect its timing rate?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a>
+
+<p>By Don Koks, 1998, 2015.</p>
+<p><br></p>
+
+
+<h1>Does a clock's acceleration affect its timing rate?</h1>
+
+
+<p>It's often said that special relativity is based on two postulates: that all inertial frames are of equal validity,
+and that light travels at the same speed in all inertial frames.&nbsp; But in real world scenarios, objects almost
+never travel at constant velocity, and so we might never find an inertial frame in which such an object is at
+rest.&nbsp; To allow us to make predictions about how accelerating objects behave, we need to introduce a third
+postulate.</p>
+
+<p>This is often called the "clock postulate", but it applies to much more than just clocks, and in fact it underpins
+much of advanced relativity, both special and general, as well as the notion of covariance (that is, writing the
+equations of physics in a observer-independent way).</p>
+
+<p>The clock postulate can be stated in the following way.&nbsp; First, we take the rate that our frame's clocks count
+out their time, and compare that to the rate that a moving clock counts out its time.&nbsp; Before the clock postulate
+was ever thought of, all that was known was that when the moving clock has a constant velocity and speed $v$
+(measured relative to the speed of light $c$), this ratio of rates is the "gamma factor"
+\begin{equation}
+\gamma = {1\over \sqrt{1-v^2}}\,.
+\end{equation}
+The clock postulate generalises this to say that even when the moving clock accelerates, the ratio of the rate of our
+clocks compared to its rate is still the above quantity.&nbsp; That is, this ratio depends only on $v$, and
+does not depend on any derivatives of $v$, such as acceleration.&nbsp; So this says that an accelerating clock
+will count out its time in such a way that at any one moment, its timing has slowed by a factor ($\gamma$)
+that depends only on its current speed; its acceleration has no effect at all.</p>
+
+<p>In other words, the accelerated clock's rate is identical to the clock rate in a "momentarily comoving inertial
+frame" (MCIF), which we can imagine is holding an inertial clock that for a brief moment slows to a stop alongside the
+accelerated clock, so that their relative velocity is momentarily zero.&nbsp; At that moment they are ticking at the
+same rate.&nbsp; A moment later, the accelerated clock has a new MCIF, again one that is moving momentarily to match
+its speed, and there is a new inertial clock that briefly slows to a stop alongside the accelerated clock.&nbsp; And
+again, the rates of accelerated clock and the new inertial one will momentarily be the same.</p>
+
+<p>So the clock postulate says that the rate of an accelerated clock doesn't depend on its acceleration.&nbsp; But
+note: the clock postulate does <em>not</em> say that the rate of timing of a moving clock is <em>unaffected</em> by
+its acceleration.&nbsp; The timing rate will certainly be affected if the acceleration changes the clock's speed of
+movement, because its speed determines how fast it counts out its time (i.e. by the factor $\gamma$).&nbsp; (The clock
+rate won't be affected by circular motion at constant speed.)&nbsp; If that all seems confusing, think of an everyday
+analogy.&nbsp; If you ride your bicycle on an icy morning, you get very cold due to the wind chill factor.&nbsp; The
+faster you go, the colder your hands get.&nbsp; This wind chill is a function of your speed, but not your
+acceleration.&nbsp; Nevertheless, it <em>is</em> affected by your acceleration when your acceleration changes your
+speed.&nbsp; But regardless of whether you have a low or a high acceleration, the only thing that matters as far as
+your cold hands are concerned is what your current speed is.&nbsp; And for circular motion, two cyclists who follow
+different-diameter circles at the same speed will feel the same wind chill, even though they have different
+accelerations.&nbsp; So the wind chill factor does not depend on your acceleration, but it certainly can be affected
+by your acceleration.</p>
+
+<p>The clock postulate also implies that the amount of shortening of a moving rod is independent of its
+acceleration.&nbsp; And also, that the relativistic mass of a moving object also doesn't depend on its
+acceleration.</p>
+
+<p>The clock postulate is not meant to be obvious, and it can't be proved.&nbsp; It's <em>not</em> some kind of
+trivial result obtained by writing special relativity using non-cartesian coordinates.&nbsp; Rather, it's a statement
+about the physical world.&nbsp; But we don't know if it's true; it's just a postulate.&nbsp; For instance, we can't
+magically verify it by noting that the Lorentz transform is a function only of speed, because the Lorentz transform is
+something that's built before the clock postulate enters the picture.&nbsp; Also, we cannot simply maintain that an
+acceleration can be treated as a sequence of constant velocities that each exist only for an infinitesimal time
+interval, for the simple reason that an accelerating body (away from gravity) feels a force, while a constant-velocity
+body does not.&nbsp; Although the clock postulate does speak in terms of constant velocities and infinitesimal time
+intervals, there's no a priori reason why that should be meaningful or correct.&nbsp; It's just a postulate!&nbsp;
+This is just like the fact that even though a 1000-sided polygon looks pretty much like a circle, a small piece of a
+circle can't always be treated as an infinitesimal straight line: after all, no matter how small the circular arc is,
+it will always have the same radius of curvature, whereas a straight line has an infinite radius of curvature.&nbsp;
+It also won't do to simply <em>define</em> a clock to be a device whose timing is unaffected by its acceleration,
+because it's not clear what such a device has got to do with the real world: that is, how well it approximates the
+thing we wear on our wrist.</p>
+
+<p>The clock postulate is just that, a postulate; but it has partly been verified experimentally up to extraordinarily high
+accelerations, as much as $10^{18}$ g in fact (see the FAQ <a href="experiments.html#Clock Hypothesis">What is the experimental
+basis of Special Relativity?</a>, although it must be said that these accelerations were <em>perpendicular</em> to the relevant
+velocity, not <em>parallel</em> to that velocity).&nbsp; Of course, the postulate also speaks of more than acceleration, it
+speaks of all derivatives of $v$ with respect to time.&nbsp; But still it can be shown to be a reasonable thing to assume,
+because it leads directly to something that has been tested in other ways: <i>spacetime</i>, as we'll see in the next
+section.</p>
+
+<p><br><br></p>
+
+
+<h2>The spacetime metric, or interval</h2>
+
+<p>This something is the idea of a spacetime metric.&nbsp; Typically when learning special relativity, at some stage
+we note that the "interval" between two events, $\Delta t^2 - \Delta x^2 - \Delta y^2 - \Delta z^2$ (where I write $t$
+and $T$ as shorthand for $ct$ and $cT$), is independent of the inertial frame in which we make our measurements.&nbsp;
+So although relativity has taught us to discard our ideas of the absoluteness of space and time, this "something" that
+is observer independent is a new absolute thing called spacetime.&nbsp; And since the interval is observer
+independent, we can also say immediately that the time $\Delta T$ elapsed on an inertial clock connecting two events
+is just $\Delta T^2 = \Delta t^2 - \Delta x^2 - \Delta y^2 - \Delta z^2$, since in its own inertial frame, the clock
+doesn't move, and so increments in its own spatial coordinates are zero.</p>
+
+<p>But, what is the time as shown on a <em>noninertial</em> (i.e. accelerated) clock connecting two widely separated
+events?&nbsp; There's no reason why it should be $\Delta t^2 - \Delta x^2 - \Delta y^2 - \Delta z^2$ (and it certainly
+isn't), because that expression looks only at the end points and doesn't take into account how the clock moved.&nbsp;
+In fact, what we do to get the right answer is this: we assume the clock postulate holds.&nbsp; So, when an
+accelerating clock moves from one event to another that is infinitesimally close, we can say that the infinitesimal
+time $\text{d}T$ elapsed is given by
+\begin{equation}
+\text{d}T^2 = \text{d}t^2 - \text{d}x^2 - \text{d}y^2 - \text{d}z^2,
+\end{equation}
+since this is the time that elapses on a clock in the MCIF.&nbsp; And we can now integrate this $\text{d}T$ along the
+accelerated clock's world line to get the actual elapsed time that it shows.</p>
+
+<p>This sort of idea is exactly analogous to the idea of calculating the length of a curve by dividing it into a large
+number of short segments, each of which is "almost straight", and then adding up the lengths of each of those using
+Pythagoras: $\text{d}\ell^2 = \text{d}x^2 + \text{d}y^2 + \text{d}z^2$.&nbsp; That's an exercise in calculus.&nbsp;
+Sure, each of those short segments is definitely not straight&mdash;it still has some curvature that doesn't go away
+as we break it into smaller and smaller parts.&nbsp; But the total error that we introduce by taking the segments as
+being straight gets ever smaller as we make the number of segments larger and larger; again, that's standard calculus
+in action.</p>
+
+<p>The idea of calculating the time elapsed on a clock that accelerates from one event to another is just the same
+idea: we divide its path into small segments that the clock postulate lets us work with.&nbsp; And just as the
+curvatures of those small segments in the previous paragraph never become zero (and yet we can ignore them), so too
+the accelerations of the clock along its path never become zero either&mdash;and yet the clock postulate allows us to
+ignore them too.</p>
+
+<p>This is why we can give some structure to spacetime, because it's possible to talk about the "length" of a curved
+world line as being given by the time shown on a clock moving along that world line, even though the clock itself is
+accelerating (since the world line is curved&mdash;we are still only talking about flat space here).&nbsp; If the
+"length" between two infinitesimally separated spacetime points was something that depended on how a clock connecting
+them moved, then it wouldn't be an intrinsically geometric thing.&nbsp; The clock postulate geometrises relativity by
+saying that we don't need to consider how the clock moves; the time (squared) shown by any clock connecting two
+closely separated events is just $\text{d}t^2 - \text{d}x^2 - \text{d}y^2 - \text{d}z^2$, and it doesn't matter how
+the clock moves.</p>
+
+<p>Ultimately, that's why the interval is written using infinitesimals.&nbsp; It has nothing to do with curved
+spacetime; we use infinitesimals even if the spacetime is flat.&nbsp; We use them because in this form the interval
+embodies the clock postulate.&nbsp; But now the grand thing is that this idea of geometrical spacetime structure
+allows us to make the transition to general relativity, and the great success of that theory lends plausibility to the
+parts that make it up&mdash;and one of these is the clock postulate.</p>
+
+<p>The clock postulate is one of the ideas we use to build the theory of gravity known as general relativity.&nbsp;
+People sometimes think (and books sometimes say) that a proper description of accelerating clocks demands a theory of
+gravity: general relativity.&nbsp (The historical names "special relativity" and "general relativity" might possibly
+have changed over the years, so that where once general relativity might have referred to all noninertial motion,
+nowadays it's generally accepted to refer only to gravity, and both inertial and noninertial motion are now labelled
+as special relativity.)&nbsp; But no, analysing acceleration does not need to refer to gravity.&nbsp; General
+relativity is built on a foundation that includes the clock postulate.&nbsp; Once we've built general relativity, we
+cannot then turn around and start using it to "explain" the physics of accelerating clocks!&nbsp; That would be
+circular reasoning.&nbsp; General relativity (gravity) is built upon the ideas of special relativity, but the physics
+of accelerating clocks is completely handled by special relativity alone.</p>
+
+<p><br><br></p>
+
+
+
+<h2>But what about the Equivalence Principle?</h2>
+
+<p>Sometimes people say "But if a clock's rate isn't affected by its acceleration, doesn't that mean the Equivalence
+Principle comes out wrong?&nbsp; If the Equivalence Principle says that a gravitational field is akin to acceleration,
+shouldn't that imply that a clock isn't affected by a gravitational field, even though the textbooks say it is?"</p>
+
+<p>No, the Equivalence Principle is fine.&nbsp; Again, the confusion here is the same sort of thing as above where we
+spoke about the wind chill factor.&nbsp; Let's try to see what is happening.&nbsp; Imagine we have a rocket with no
+fuel.&nbsp; It sits on the launch pad with two occupants, a couple of astronauts who can't see outside and who believe
+that they are accelerating at 1 g in deep space, far from any gravity.</p>
+
+<p>One of the astronauts sits at the base of the rocket, with the other at its top, and they both send a light beam to
+each other.&nbsp; Now, general relativity tells us that light loses energy as it climbs up a gravitational field, so
+we know that the top astronaut will see a redshifted signal.&nbsp; Likewise, the bottom astronaut will see a
+blueshifted signal, because the light coming down has fallen down the gravitational field and gained some energy en
+route.</p>
+
+<p>How do the astronauts describe what is going on?&nbsp; They believe they're accelerating in deep space.&nbsp; The
+top astronaut reasons "By the time the light from the bottom astronaut reaches me, I'll have picked up some speed, so
+that I'll be receding from the light at a higher rate than previously as I receive it.&nbsp; So it should be
+redshifted&mdash;and yes, so it is!"&nbsp; The bottom astronaut reasons very similarly: "By the time the light from
+the top astronaut reaches me, I'll have picked up some speed, so that I'll be approaching the light at a higher rate
+than previously as I receive it.&nbsp; So it should be blueshifted&mdash;and yes, so it is!"</p>
+
+<p>As you can see, they both got the right answer, care of the Equivalence Principle.&nbsp; But their analysis used
+only their <em>speed</em>, not their acceleration as such.&nbsp; So just like our wind chill factor above, applying
+the Equivalence Principle to the case of the rocket doesn't depend on acceleration per se, but it <em>does</em> depend
+on the result of acceleration: changing speeds!</p>
+
+<p><br><br></p>
+
+
+
+<h2>Is the clock postulate in fact not a postulate?</h2>
+
+
+<p>There are some who state that the clock postulate isn't a postulate at all; that it's simply a theorem that can be
+proved in the following way.&nbsp; They use some standard reasoning about inertial frames that you'll find in most
+books on relativity, but then they apply that reasoning incorrectly to an accelerated frame.&nbsp; Here's their
+reasoning.&nbsp; I'll make sure to include all factors of $c$ explicitly here.</p>
+
+<p>First, they appeal to a standard and useful description of a "light clock" in relativity, as follows.&nbsp; Sit
+yourself on a train that is moving with <em>constant</em> velocity relative to the platform, with a torch aimed at a
+mirror on the ceiling a distance $L$ above you.&nbsp; You send a pulse of light up from the torch at speed $c$ (light
+has speed $c$ in all inertial frames), and let it bounce off the mirror so that it returns to you some short time
+$\Delta t'$ later.&nbsp; You have a receiver that emits a tick when it detects the light.&nbsp; Applying "time taken =
+distance the light travelled divided by light speed", you write down
+\begin{equation}
+\Delta t' = 2L/c\,.
+\end{equation}
+
+On the platform, I watch you move past me with speed $v$, and I note that the light moved with speed $c$ along two
+diagonal paths in a total time of $\Delta t$, which may or may not equal your $\Delta t'$: that's what we want to work
+out.&nbsp; As the light climbs to the top of the train, the train moves a distance $v\Delta t/2$, and similarly for
+the light coming back down.&nbsp; Pythagoras tells me that the length of that whole path is twice the square root of
+$(L^2 + (v\Delta t/2)^2)$, so when I apply "time taken = distance the light travelled divided by light speed", I
+get
+\begin{equation}
+\Delta t = {2\over c} \sqrt{L^2 + (v\Delta t/2)^2} \,.
+\end{equation}
+I solve this for $\Delta t$, getting
+\begin{equation}
+\Delta t = {2L\over c\sqrt{1 - v^2/c^2}} \,.
+\end{equation}
+But remember that $2L/c$ is just $\Delta t'$, so finally I have
+\begin{equation}\label{postulate-analysis1}
+\Delta t = {\Delta t'\over\sqrt{1 - v^2/c^2}} > \Delta t' \,.
+\end{equation}
+In other words, the time $\Delta t$ taken for the pulse of light to do a round trip "torch-to-mirror-to-torch", as
+seen from the platform, is greater by a factor of $1/\sqrt{1 - v^2/c^2}$ than the time $\Delta t'$ taken on the
+train.&nbsp; This is traditionally one way in which time dilation is derived.</p>
+
+<p>All well and good.&nbsp; Now here's where they mis-apply the above argument to the case of an accelerating
+train.&nbsp; They suggest having the train accelerate with some acceleration $a$, so that the distance moved by the
+train as the pulse goes up is now not $v\Delta t/2$, but instead $v\Delta t/2 + a\Delta t^2/2$.&nbsp; That's okay so
+far.&nbsp; Then they replace "$v\Delta t/2$" by "$v\Delta t/2 + a\Delta t^2/2$" in the above analysis, and then reason
+that as $\Delta t$ goes to zero, the effect of the acceleration term $a\Delta t^2/2$ becomes negligible, and so arrive
+once more at equation \eqref{postulate-analysis1}, without ever needing to invoke the clock postulate, saying that
+this all follows from the first two postulates of special relativity, and the clock postulate is therefore not a third
+postulate after all, but just a theorem.</p>
+
+<p>Where they went wrong was to assume, with no justification, that the speed of light on the accelerating train is
+also $c$.&nbsp; Is it?&nbsp; What do Maxwell's equations say?&nbsp; Maxwell's equations are valid only for inertial
+frames, so they don't tell us the speed of light on the accelerating train.</p>
+
+<p>You can use the clock postulate to show that the speed of light does turn out to be $c$ <em>locally</em> in the
+accelerating train: in other words, the light's speed as measured by the train passenger actually turns out to be a
+function of its distance from that passenger, but as the light gets closer to the passenger, its speed as measured by
+the passenger gets closer to $c$.&nbsp; But those who apply the above inertial calculation to an accelerating train
+cannot know or claim a-priori that the speed of light is $c$ in the light clock on the accelerating train (and, of
+course, they're not allowed to use the clock postulate to show that).&nbsp; They are only assuming that the speed is
+$c$; and by assuming what turns out to be true <em>locally</em> (and they never knew anything about "local"), they
+fluked the right answer, that $\gamma$ has no dependence on $a$.&nbsp; But because they were not allowed to assume
+a-priori that light travels at speed $c$ in an accelerated frame, their calculation has failed to show that the clock
+postulate is a theorem.</p>
+
+<p><br><br></p>
+
+
+
+<h2>Generalising the clock postulate</h2>
+
+<p>On a more advanced note, the clock postulate can be generalised to say something about measurements we make in a
+noninertial frame.&nbsp; First, it tells us that noninertial objects only age and contract by the same gamma factor as
+that of their MCIF.&nbsp; So, any measurements we make in a noninertial frame that use clocks and rods will be
+identical to measurements made in our MCIF&mdash;at least, if these measurements are made over a small enough
+region.&nbsp; This is because, in general, different regions of the noninertial frame have different MCIFs, a
+complicating factor that makes the construction of noninertial frames very difficult.&nbsp; In fact, it can only
+readily be done for constant-velocity and constant-acceleration frames; and for the last, that is rather
+difficult.</p>
+
+<p>But we now choose to extend the clock postulate to include <em>all</em> measurements (though perhaps it can be
+argued that all measurements only ever use clocks and rods anyway).&nbsp; This idea leads onto "covariance", which is
+a way of using tensors to write the language of physics in a way that applies to all frames, noninertial as well as
+inertial.&nbsp; How is this done?</p>
+
+<p>Take, for example, the electromagnetic field.&nbsp; Suppose some measurements were made in an inertial lab frame,
+and it was determined to have the four spacetime components $A^\alpha$ (up to a choice of gauge).&nbsp; Now, we know
+from other considerations that $A^\alpha$ are the components of a four-vector.&nbsp; That means they transform between
+inertial frames identically to the way $(\text{d}t, \text{d}x, \text{d}y, \text{d}z)$ transform.&nbsp; In the language
+of tensors (where repeated up and down indices are summed over), we can say that from one inertial frame, $(t, x, y,
+z)$, to another, $(t', x', y', z')$, the $A^\alpha$ transform via
+\begin{equation}\label{tensor1}
+A^{\alpha'} = {\partial x^{\alpha'}\over\partial x^\beta} A^\beta \,
+\end{equation}
+(where repeated indices are always summed over).&nbsp; This much can be shown without the clock postulate, because it
+deals only with inertial frames.&nbsp; The question is: in this language, how do the $A^\alpha$ look in a noninertial
+frame?</p>
+
+<p>Suppose we are in a noninertial frame (written with double-primed coordinates), and wish to know what values the
+field will take for us.&nbsp; The clock postulate tells us that the field in our frame, $A^{\alpha''}$, will be
+identical to the field measured by our MCIF, $A^{\alpha'}$.&nbsp; But that frame is inertial, so we know how to
+calculate the $A^{\alpha'}$: these are just given by equation \eqref{tensor1}.&nbsp; Next step: how can we
+relate <em>our</em> double-primed coordinates to the way in which the $A^\alpha$ transform?&nbsp; After all, the MCIF
+always exists, but it's just a tool; we don't want to consider it (those single-primed coordinates) explicitly.&nbsp;
+That is, how do we relate double-primed coordinates to non-primed coordinates?</p>
+
+<p>We use the clock postulate.&nbsp; It says that our measurements of distance and time are unaffected by any pseudo
+forces we feel, so that they are identical to those of our MCIF:
+\begin{equation}
+\text{d}x^{\alpha''} = \text{d}x^{\alpha'} \,.
+\end{equation}
+This is just another way of saying that
+\begin{equation}
+{\partial x^{\alpha''}\over\partial x^\beta} = {\partial x^{\alpha'}\over\partial x^\beta} \,.
+\end{equation}
+So, we can put it all together to write
+\begin{align}
+A^{\alpha''} &= A^{\alpha'} &&\text{(by our extended clock postulate)}\\
+&= {\partial x^{\alpha'}\over\partial x^\beta} A^\beta &&\text{(Lorentz transform between MCIF and lab frame)}\\
+&= {\partial x^{\alpha''}\over\partial x^\beta} A^\beta &&\text{(the clock postulate again).}
+\end{align}
+Finally
+\begin{equation}
+A^{\alpha''} = {\partial x^{\alpha''}\over\partial x^\beta} A^\beta,
+\end{equation}
+which is just like \eqref{tensor1} above, except now it applies to a noninertial (double-primed) frame!&nbsp; So,
+we've managed to write our original transformation law \eqref{tensor1}, which held only between two inertial frames,
+in a way that looks just the same as \eqref{tensor1}, except that it's using different coordinates, some from a
+noninertial frame.&nbsp; And <em>this</em> is the idea behind covariance and tensor language, that it's possible to
+write the laws of physics for arbitrary frames, even noninertial ones, in one way: the way of equation
+\eqref{tensor1}.</p>
+
+<p><br></p>
+
+</body>
+</html>

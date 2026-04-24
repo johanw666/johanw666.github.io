@@ -1,0 +1,245 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Transport phenomena</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="9">9. Transport phenomena</a></h1>
+<h2><a name="9.1">9.1 Mathematical introduction</a></h2>
+
+<p>An important relation is: if \(X\) is a property&nbsp;of a volume element which travels from position \(\vec{r}\) to \(\vec{r}+d\vec{r}\) in a time \(dt\), the total differential \(dX\) is then given by:</p>
+
+<p>\[dX=\frac{\partial X}{\partial x}dx+\frac{\partial X}{\partial y}dy+\frac{\partial X}{\partial z}dz+\frac{\partial X}{\partial t}dt~\Rightarrow~ \frac{dX}{dt}=\frac{\partial X}{\partial x}v_x+\frac{\partial X}{\partial y}v_y+\frac{\partial X}{\partial z}v_z+\frac{\partial X}{\partial t}\]</p>
+
+<p>This in general leads to: \(\dfrac{dX}{dt}=\dfrac{\partial X}{\partial x}+\left ( \overrightarrow{v}\cdot \bigtriangledown &nbsp;\right )X\).</p>
+
+<p>From this follows that :&nbsp;\(\dfrac{d}{dt} \displaystyle \int\hspace{-1.5ex}\int\hspace{-1.5ex}\int \; Xd^{3}V = \dfrac{\partial }{\partial t} \int\hspace{-1.5ex} \int\hspace{-1.5ex}\int Xd^{3}V + \int\hspace{-2ex} \int X\hspace{-5ex} \bigcirc \hspace{2ex} \left ( &nbsp;\overrightarrow{v}\cdot \overrightarrow{n}\right )d^{2}A \)</p>
+
+<p>where the volume \(V\) is surrounded by surface \(A\). Some properties of the \(\nabla\) operator are:</p>
+
+<p>\[\begin{array}{l@{~~~~~}l@{~~~~~}l} {\rm div}(\phi\vec{v}\,)=\phi{\rm div}\vec{v}+{\rm grad}\phi\cdot\vec{v}&amp; {\rm rot}(\phi\vec{v}\,)=\phi{\rm rot}\vec{v}+({\rm grad}\phi)\times\vec{v}&amp;{\rm rot~grad}\phi=\vec{0}\\ {\rm div}(\vec{u}\times\vec{v}\,)=\vec{v}\cdot({\rm rot}\vec{u}\,)-\vec{u}\cdot({\rm rot}\vec{v}\,)&amp; {\rm rot~rot}\vec{v}={\rm grad~div}\vec{v}-\nabla^2\vec{v}&amp;{\rm div~rot\vec{v}}=0\\ {\rm div~grad}\phi=\nabla^2\phi&amp;\nabla^2\vec{v}\equiv(\nabla^2v_1,\nabla^2v_2,\nabla^2v_3) \end{array}\]</p>
+
+<p>Here, \(\vec{v}\) is an arbitrary vector field and \(\phi\) an arbitrary scalar field. Some important integral theorems are:</p>
+
+<p>\[\begin{array}{l@{~~}l} \mbox{Gauss:}&amp;\displaystyle\int\hspace{-2ex}\int\hspace{-3ex}\bigcirc~(\vec{v}\cdot\vec{n}\,)d^2A=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int({\rm div}\vec{v}\,)d^3V\\[5mm] \mbox{Stokes for a scalar field:}&amp;\displaystyle\oint(\phi\cdot\vec{e}_{\rm t})ds=\int\hspace{-1.5ex}\int(\vec{n}\times{\rm grad}\phi)d^2A\\[5mm] \mbox{Stokes for a vector field:}&amp;\displaystyle\oint(\vec{v}\cdot\vec{e}_{\rm t})ds=\int\hspace{-1.5ex}\int({\rm rot}\vec{v}\cdot\vec{n}\,)d^2A\\[5mm] \mbox{This results in:}&amp;\displaystyle\int\hspace{-2ex}\int\hspace{-3ex}\bigcirc~({\rm rot}\vec{v}\cdot\vec{n}\,)d^2A=0\\[5mm] \mbox{Ostrogradsky:}&amp;\displaystyle\int\hspace{-2ex}\int\hspace{-3ex}\bigcirc~(\vec{n}\times\vec{v}\,)d^2A=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int({\rm rot}\vec{v}\,)d^3A\\[5mm] \mbox{}&amp;\displaystyle\int\hspace{-2ex}\int\hspace{-3ex}\bigcirc~(\phi\vec{n}\,)d^2A=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int({\rm grad}\phi)d^3V \end{array}\]</p>
+
+<p>Here, the orientable surface \(\int\hspace{-1mm}\int d^2A\) is limited by the Jordan curve \(\oint ds\).</p>
+
+<h2><a name="9.2">9.2 Conservation laws</a></h2>
+
+<p>Two types of forces can do work on a volume:</p>
+
+<ol>
+    <li>The force \(\vec{f}_0\) on each volume element. For gravity: \(\vec{f}_0=\varrho\vec{g}\).</li>
+    <li>Surface forces working only on the boundaries: \(\vec{t}\). For these: \(\vec{t}=\vec{n}\)<tt>T</tt>, where <tt>T</tt> is the <em>stress tensor</em>.</li>
+</ol>
+
+<p>can be split in a part \(p\)<tt>I</tt> representing the normal tension&nbsp;and a part <tt>T'</tt> representing the shear stress: <tt>T</tt>=<tt>T'</tt>\(+p\)<tt>I</tt>, where <tt>I</tt> is the unit tensor. When viscous aspects can be ignored: div\(=-\)grad\(p\).</p>
+
+<p>When the flow velocity is \(\vec{v}\) at position \(\vec{r}\) holds at position \(\vec{r}+d\vec{r}\):</p>
+
+<p>\[\vec{v}(d\vec{r}\,)= \underbrace{\vec{v}(\vec{r}\,)}_{\rm translation}+ \underbrace{d\vec{r}\cdot({\rm grad}\vec{v}\,)}_{\rm rotation,~deformation,~dilatation}\]</p>
+
+<p>The quantity <tt>L</tt>\(:=\)grad\(\vec{v}\) can be split in a symmetric part and an antisymmetric part <tt>W</tt>. <tt>L</tt>=<tt>D</tt>+<tt>W</tt> with</p>
+
+<p>\[D_{ij}:=\frac{1}{2}\left(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\right)~,~~ W_{ij}:=\frac{1}{2}\left(\frac{\partial v_i}{\partial x_j}-\frac{\partial v_j}{\partial x_i}\right)\]</p>
+
+<p>When the rotation or <em>vorticity</em> \(\vec{\omega}={\rm rot}\vec{v}\) is introduced: \(W_{ij}=\frac{1}{2}\varepsilon_{ijk}\omega_k\). \(\vec{\omega}\) represents the local rotation velocity: \(\vec{dr}\cdot\)<tt>W</tt>\(=\frac{1}{2}\omega\times\vec{dr}\).</p>
+
+<p>For a <em>Newtonian liquid</em> :<tt>T'</tt>\(=2\eta\)<tt>D</tt>. Here, \(\eta\) is the dynamical viscosity. This is related to the shear stress \(\tau\) by:</p>
+
+<p>\[\tau_{ij}=\eta\frac{\partial v_i}{\partial x_j}\]</p>
+
+<p>For compressible media it can be stated that: <tt>T'</tt>\(=(\eta'\) div \(\vec{v}\,)\)<tt>I</tt>\(+2\eta\)<tt>D</tt>. From equating the thermodynamic and mechanical pressure it follows: \(3\eta'+2\eta=0\). If the viscosity is constant: div(2<tt>D</tt>)=\(\nabla^2\vec{v}+{\rm grad~div}\vec{v}\).</p>
+
+<p>The conservation laws for mass, momentum and energy for continuous media can be written in both integral and differential form. They are:</p>
+
+<ol>
+    <li>Conservation of mass: \(\displaystyle\frac{\partial }{\partial t}\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int\varrho d^3V+\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~\varrho(\vec{v}\cdot\vec{n}\,)d^2A=0\)</li>
+    <li>Conservation of momentum: \(\displaystyle\frac{\partial }{\partial t}\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int\varrho\vec{v}d^3V+\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~\varrho\vec{v}(\vec{v}\cdot\vec{n}\,)d^2A=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int f_0d^3V+\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~\vec{n}\cdot Td^2A\)</li>
+    <li>Conservation of energy: \(\displaystyle\frac{\partial }{\partial t}\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int(\frac{1}{2}v^2+e)\varrho d^3V+\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~(\frac{1}{2}v^2+e)\varrho(\vec{v}\cdot\vec{n}\,)d^2A=\)<br />
+    \(\displaystyle-\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~(\vec{q}\cdot\vec{n}\,)d^2A+\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int(\vec{v}\cdot\vec{f}_0)d^3V+\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~(\vec{v}\cdot\vec{n}\) <tt>T</tt>\( )d^2A\)</li>
+</ol>
+
+<p><strong>Differential notation</strong>:</p>
+
+<ol>
+    <li>Conservation of mass: \(\displaystyle\frac{\partial \varrho}{\partial t}+{\rm div}\cdot(\varrho\vec{v}\,)=0\)</li>
+    <li>Conservation of momentum: \(\displaystyle\varrho\frac{\partial \vec{v}}{\partial t}+(\varrho\vec{v}\cdot\nabla)\vec{v}=\vec{f}_0+\)div <tt>T</tt>\(=\vec{f}_0-{\rm grad}p+\) div<tt>T'</tt></li>
+    <li>Conservation of energy: \(\displaystyle\varrho T\frac{ds}{dt}=\varrho\frac{de}{dt}-\frac{p}{\varrho}\frac{d\varrho}{dt}=-{\rm div}\vec{q}+\)<tt>T'</tt>: <tt>D</tt></li>
+</ol>
+
+<p>Here, \(e\) is the internal energy per unit of mass \(E/m\) and \(s\) is the entropy per unit of mass \(S/m\). \(\vec{q}=-\kappa\vec{\nabla}T\) is the heat flow. Further: \[p=-\frac{\partial E}{\partial V}=-\frac{\partial e}{\partial 1/\varrho}~~,~~~T=\frac{\partial E}{\partial S}=\frac{\partial e}{\partial s}\] so \[C_V=\left(\frac{\partial e}{\partial T}\right)_{V}~~~\mbox{and}~~~C_p=\left(\frac{\partial h}{\partial T}\right)_{p}\] with \(h=H/m\) the enthalpy per unit of mass.</p>
+
+<p>From this one can derive the <em>Navier-Stokes</em><em> equations</em> for an incompressible, viscous and heat-conducting medium:</p>
+
+<p>\[\mbox{div}\;\vec{v}=0\]</p>
+<p>\[\varrho\frac{\partial \vec{v}}{\partial t}+\varrho(\vec{v}\cdot\nabla)\vec{v}=\varrho\vec{g}-{\rm grad}p+\eta\nabla^2\vec{v}\]</p>
+<p align="center">\(\displaystyle\varrho C\frac{\partial T}{\partial t}+\varrho C(\vec{v}\cdot\nabla)T=\kappa\nabla^2 T+2\eta\) <tt>D</tt>:<tt>D</tt></p>
+
+<p>with \(C\) the thermal heat capacity. The force \(\vec{F}\) on an object within a flow, when viscous effects are limited to the boundary layer, can be obtained using the momentum law. If a surface \(A\) surrounds the object outside the boundary layer:</p>
+
+<p>\[\vec{F}=-\int\hspace{-2ex}\int\hspace{-3ex}\bigcirc~[p\vec{n}+\varrho\vec{v}(\vec{v}\cdot\vec{n}\,)]d^2A\]</p>
+
+<h2><a name="9.3">9.3 Bernoulli's equations</a></h2>
+
+<p>Starting with the momentum equation one can find that for a non-viscous medium for stationary flows, with</p>
+
+<p>\[(\vec{v}\cdot{\rm grad})\vec{v}=\mbox{$\frac{1}{2}$}{\rm grad}(v^2)+({\rm rot}\vec{v}\,)\times\vec{v}\]</p>
+
+<p>and the potential equation \(\vec{g}=-{\rm grad}(gh)\):</p>
+
+<p>\[\mbox{$\frac{1}{2}$}v^2+gh+\int\frac{dp}{\varrho}=\mbox{constant along a streamline}\]</p>
+
+<p>For compressible flows holds: \(\frac{1}{2}v^2+gh+p/\varrho=\)constant along a line of flow. If also holds rot\(\vec{v}=0\) and the entropy is equal on each streamline holds \(\frac{1}{2}v^2+gh+\int dp/\varrho=\)constant everywhere. For incompressible flows this becomes: \(\frac{1}{2}v^2+gh+p/\varrho=\)constant everywhere. For ideal gases with constant \(C_p\) and \(C_V\), with \(\gamma=C_p/C_V\):</p>
+
+<p>\[\mbox{$\frac{1}{2}$}v^2+\frac{\gamma}{\gamma-1}\frac{p}{\varrho}=\mbox{$\frac{1}{2}$}v^2+\frac{c^2}{\gamma-1}=\mbox{constant}\]</p>
+
+<p>With a velocity potential defined by \(\vec{v}={\rm grad}\phi\)&nbsp; for instationary flows:</p>
+
+<p>\[\frac{\partial \phi}{\partial t}+\mbox{$\frac{1}{2}$}v^2+gh+\int\frac{dp}{\varrho}=\mbox{constant everywhere}\]</p>
+
+<h2><a name="9.4">9.4 Characterising of flows with dimensionless numbers</a></h2>
+
+<p>The advantage of dimensionless numbers is that they make model experiments possible&nbsp;if one makes the dimensionless numbers which are important for the specific experiment equal for both model and the real situation. One can also deduce functional equalities without solving the differential equations. Some dimensionless numbers are given by:</p>
+
+<p>\[\begin{array}{l@{~~~}l@{~~~~~~}l@{~~~}l@{~~~~~~}l@{~~~}l} \mbox{Strouhal:}&amp;\displaystyle{\rm Sr}=\frac{\omega L}{v}&amp;\mbox{Froude:}&amp;\displaystyle{\rm Fr}=\frac{v^2}{gL}&amp;\mbox{Mach:}&amp;\displaystyle{\rm Ma}=\frac{v}{c}\\[3mm] \mbox{Fourier:}&amp;\displaystyle{\rm Fo}=\frac{a}{\omega L^2}&amp;\mbox{P&eacute;clet:}&amp;\displaystyle{\rm Pe}=\frac{vL}{a}&amp;\mbox{Reynolds:}&amp;\displaystyle{\rm Re}=\frac{vL}{\nu}\\[3mm] \mbox{Prandtl:}&amp;\displaystyle{\rm Pr}=\frac{\nu}{a}&amp;\mbox{Nusselt:}&amp;\displaystyle{\rm Nu}=\frac{L\alpha}{\kappa}&amp;\mbox{Eckert:}&amp;\displaystyle{\rm Ec}=\frac{v^2}{c\Delta T} \end{array}\]</p>
+
+<p>Here, \(\nu=\eta/\varrho\) is the <em>kinematic viscosity</em>, \(c\) is the speed of sound and \(L\) is a characteristic length of the system. \(\alpha\) follows from the equation for heat transport \(\kappa\partial_yT=\alpha\Delta T\) and \(a=\kappa/\varrho c\) is the thermal diffusion coefficient.</p>
+
+<p>These numbers can be interpreted as follows:</p>
+
+<ul>
+    <li>Re: (stationary inertial forces)/(viscous forces)</li>
+    <li>Sr: (non-stationary inertial forces)/(stationary inertial forces)</li>
+    <li>Fr: (stationary inertial forces)/(gravity)</li>
+    <li>Fo: (heat conductance)/(non-stationary change in enthalpy)</li>
+    <li>Pe: (convective heat transport)/(heat conductance)</li>
+    <li>Ec: (viscous dissipation)/(convective heat transport)</li>
+    <li>Ma: (velocity)/(speed of sound): objects moving faster than approximately Ma = 0,8 produce shockwaves which propagate with an angle \(\theta\) with the velocity of the object. For this angle&nbsp;Ma\(=1/\arctan(\theta)\).</li>
+    <li>Pr and Nu are related to specific materials.</li>
+</ul>
+
+<p>Now, the dimensionless <em>Navier-Stokes equation</em> becomes, with \(x'=x/L\), \(\vec{v}\,'=\vec{v}/V\), grad\('=L\)grad, \(\nabla'^2=L^2\nabla^2\) and \(t'=t\omega\):</p>
+
+<p>\[{\rm Sr}\frac{\partial \vec{v}\,'}{\partial t'}+(\vec{v}\,'\cdot\nabla')\vec{v}\,'=-{\rm grad}'p+\frac{\vec{g}}{\rm Fr} +\frac{\nabla'^2\vec{v}\,'}{\rm Re}\]</p>
+
+<h2><a name="9.5">9.5 Tube flows</a></h2>
+
+<p>Tube flow is&nbsp;laminar if Re\(&lt;2300\) across the diameter of a tube, and turbulent if Re is larger. For an incompressible laminar flow through a straight, circular tube&nbsp;the velocity profile is:</p>
+
+<p>\[v(r)=-\frac{1}{4\eta}\frac{dp}{dx}(R^2-r^2)\]</p>
+
+<p>For the volumetric flow: \(\displaystyle\Phi_V=\int\limits_0^R v(r)2\pi rdr=-\frac{\pi}{8\eta}\frac{dp}{dx}R^4\)</p>
+
+<p>The <em>entrance length</em> \(L_{\rm e}\) is given by:</p>
+
+<ol>
+    <li>\(500&lt;{\rm Re}_D&lt;2300\): \(L_{\rm e}/2R=0.056{\rm Re}_D\)</li>
+    <li>\({\rm Re}&gt;2300\): \(L_{\rm e}/2R\approx50\)</li>
+</ol>
+
+<p>For gas transport at low pressures (Knudsen-gas): \(\displaystyle\Phi_V=\frac{4R^3\alpha\sqrt{\pi}}{3}\frac{dp}{dx}\)</p>
+
+<p>For flows at a small Re holds: \(\nabla p=\eta\nabla^2\vec{v}\) and div\(\vec{v}=0\). For the total force on a sphere with radius \(R\) in a flow then: \(F=6\pi\eta Rv\). For large Re the force on a surface \(A\) is: \(F=\frac{1}{2}C_WA\varrho v^2\).</p>
+
+<h2><a name="9.6">9.6 Potential theory</a></h2>
+
+<p>The <em>circulation</em> \(\Gamma\) is defined as: \(\displaystyle \Gamma=\oint(\vec{v}\cdot\vec{e}_{\rm t})ds=\int\hspace{-1.5ex}\int({\rm rot}\vec{v}\,)\cdot\vec{n}d^2A=\int\hspace{-1.5ex}\int(\vec{\omega}\cdot\vec{n}\,)d^2A\)</p>
+
+<p>For non viscous media, if \(p=p(\varrho)\) and all forces are conservative, Kelvin&rsquo;s theorem can be derived:</p>
+
+<p>\[\frac{d\Gamma}{dt}=0\]</p>
+
+<p>For rotationless flows a velocity potential \(\vec{v}={\rm grad}\phi\) can be introduced. In the incompressible case It follows from conservation of mass that \(\nabla^2\phi=0\). For a 2-dimensional flow a flow function \(\psi(x,y)\) can be defined: with \(\Phi_{AB}\) the amount of liquid flowing through a curve \(s\) between the points A and B:</p>
+
+<p>\[\Phi_{AB}=\int\limits_A^B (\vec{v}\cdot\vec{n}\,)ds=\int\limits_A^B(v_xdy-v_ydx)\]</p>
+
+<p>and the definitions \(v_x=\partial\psi/\partial y\), \(v_y=-\partial\psi/\partial x\) then: \(\Phi_{AB}=\psi(B)-\psi(A)\). In general:</p>
+
+<p>\[\frac{\partial^2 \psi}{\partial x^2}+\frac{\partial^2 \psi}{\partial y^2}=-\omega_z\]</p>
+
+<p>In polar coordinates:</p>
+
+<p>\[v_r=\frac{1}{r}\frac{\partial \psi}{\partial \theta}=\frac{\partial \phi}{\partial r}~~,~~ v_\theta=-\frac{\partial \psi}{\partial r}=\frac{1}{r}\frac{\partial \phi}{\partial \theta}\]</p>
+
+<p>For source flows with power \(Q\) in \((x,y)=(0,0)\): \(\displaystyle\phi=\frac{Q}{2\pi}\ln(r)\) so that \(v_r=Q/2\pi r\), \(v_\theta=0\).</p>
+
+<p>For a dipole of strength \(Q\) in \(x=a\) and strength \(-Q\) in \(x=-a\) it follows from the superposition that: \(\displaystyle\phi=-Qax/2\pi r^2\) where \(Qa\) is the dipole strength. For a vortex: \(\phi=\Gamma\theta/2\pi\).</p>
+
+<p>If an object is surrounded by an uniform main flow with \(\vec{v}=v\vec{e}_x\) and such a large Re that viscous effects are limited to the boundary layer: \(F_x=0\) and \(F_y=-\varrho\Gamma v\). The statement that \(F_x=0\) is d&rsquo;Alembert&rsquo;s paradox and originates from the neglect&nbsp;of viscous effects. The lift \(F_y\) is also created by \(\eta\) because \(\Gamma\neq0\) due to viscous effects. Hence rotating bodies also create a force perpendicular to their direction of motion: the <em>Magnus effect</em>.</p>
+
+<h2><a name="9.7">9.7 Boundary layers</a></h2>
+<h3><a name="9.7.1">9.7.1 Flow boundary layers</a></h3>
+
+<p>If for the thickness of the boundary layer : \(\delta\ll L\) then: \(\delta\approx L/\sqrt{\rm Re}\). With \(v_\infty\) the velocity of the main flow it follows that&nbsp;the velocity \(v_y\) \(\perp\) at the surface will be: \(v_yL\approx\delta v_\infty\). <em>Blasius&rsquo; equation</em> for the boundary layer is&nbsp;with \(v_y/v_\infty=f(y/\delta)\): \(2f'''+ff''=0\) with boundary conditions \(f(0)=f'(0)=0\), \(f'(\infty)=1\). From this follows: \(C_W=0.664~{\rm Re}_x^{-1/2}\).</p>
+
+<p>The momentum theorem of <em>von Karman</em> for the boundary layer is: \(\displaystyle \frac{d}{dx}(\vartheta v^2)+\delta^* v\frac{dv}{dx}=\frac{\tau_0}{\varrho}\)</p>
+
+<p>where the displacement thickness \(\delta^*v\) and the momentum thickness \(\vartheta v^2\) are given by:</p>
+
+<p>\[\vartheta v^2=\int\limits_0^\infty (v-v_x)v_xdy~~,~~~ \delta^*v=\int\limits_0^\infty (v-v_x)dy~~\mbox{and}~~ \tau_0=-\eta\left.\frac{\partial v_x}{\partial y}\right|_{y=0}\]</p>
+
+<p>The boundary layer is released from the surface if \(\displaystyle\left(\frac{\partial v_x}{\partial y}\right)_{y=0}=0\). This is equivalent to \(\displaystyle\frac{dp}{dx}=\frac{12\eta v_\infty}{\delta^2}\).</p>
+
+<h3><a name="9.7.2">9.7.2 Temperature boundary layers</a></h3>
+
+<p>If the thickness of the temperature boundary layer \(\delta_T\ll L\) then:
+<ol>
+<li>If \({\rm Pr}\leq1\): \(\delta/\delta_T\approx\sqrt{\rm Pr}\).</li>
+<li>If \({\rm Pr}\gg1\): \(\delta/\delta_T\approx\sqrt[3]{\rm Pr}\).</li>
+</ol>
+
+<h2><a name="9.8">9.8 Heat conductance</a></h2>
+
+<p>For non-stationairy heat conductance in one dimension without flow:</p>
+
+<p>\[\frac{\partial T}{\partial t}=\frac{\kappa}{\varrho c}\frac{\partial^2 T}{\partial x^2}+\Phi\]</p>
+
+<p>where \(\Phi\) is a source term. If \(\Phi=0\) the solutions for harmonic oscillations at \(x=0\) are:</p>
+
+<p>\[\frac{T-T_\infty}{T_{\rm max}-T_\infty}=\exp\left(-\frac{x}{D}\right)\cos\left(\omega t-\frac{x}{D}\right)\]</p>
+
+<p>with \(D=\sqrt{2\kappa/\omega\varrho c}\). At \(x=\pi D\) the temperature variation is in anti-phase with the surface. The one-dimensional solution at \(\Phi=0\) is</p>
+
+<p>\[T(x,t)=\frac{1}{2\sqrt{\pi at}}\exp\left(-\frac{x^2}{4at}\right)\]</p>
+
+<p>This is mathematically equivalent to the diffusion problem:</p>
+
+<p>\[\frac{\partial n}{\partial t}=D\nabla^2n+P-A\] where \(P\) is the production of and \(A\) the discharge of particles. The flow density \(J=-D\nabla n\).</p>
+
+<h2><a name="9.9">9.9 Turbulence</a></h2>
+
+<p>The time scale of turbulent velocity variations \(\tau_{\rm t}\) is of the order of: \(\tau_{\rm t}=\tau\sqrt{\rm Re}/{\rm Ma^2}\) with \(\tau\) the molecular time scale. For the velocity of the particles: \(v(t)=\left\langle v \right\rangle+v'(t)\) with \(\left\langle v'(t) \right\rangle=0\). The Navier-Stokes equation now becomes:</p>
+
+<p>\[\frac{\partial \left\langle \vec{v}\, \right\rangle}{\partial t}+(\left\langle \vec{v}\, \right\rangle\cdot\nabla)\left\langle \vec{v}\, \right\rangle=-\frac{\nabla\left\langle p \right\rangle}{\varrho}+ \nu\nabla^2\left\langle \vec{v}\, \right\rangle+\frac{{\rm div}\mbox{S}_R}{\varrho}\]</p>
+
+<p>where \({\mbox{S}_R}_{ij}=-\varrho\left\langle v_i v_j \right\rangle\) is the turbulent stress tensor. Boussinesq&rsquo;s assumption is: \(\tau_{ij}=-\varrho\left\langle v_i'v_j' \right\rangle\). It is stated that, analogous to Newtonian media: S\(_R=2\varrho\nu_t\langle\)<tt>D</tt>\(\rangle\). Near a boundary: \(\nu_t=0\), far away from a boundary: \(\nu_t\approx\nu{\rm Re}\).</p>
+
+<h2><a name="9.10">9.10 Self organization</a></h2>
+
+<p>For a (semi) two-dimensional flow: \(\displaystyle\frac{d\omega}{dt}=\frac{\partial \omega}{\partial t}+J(\omega,\psi)=\nu\nabla^2\omega\)</p>
+
+<p>With \(J(\omega,\psi)\) the Jacobian. So if \(\nu=0\), \(\omega\) is conserved. Further, the kinetic energy\(/mA\) and the enstrofy \(V\) are conserved: with \(\vec{v}=\nabla\times(\vec{k}\psi)\)</p>
+
+<p>\[E\sim(\nabla\psi)^2\sim\int\limits_0^\infty {\cal E}(k,t)dk=\mbox{constant}~~,~~ V\sim(\nabla^2\psi)^2\sim\int\limits_0^\infty k^2{\cal E}(k,t)dk=\mbox{constant}\]</p>
+
+<p>From this follows that in a two-dimensional flow the energy flux goes towards large values of \(k\): larger structures become larger at the expanse of smaller ones. In three-dimensional flows the situation is just the opposite.</p>
+
+</body>
+</html>

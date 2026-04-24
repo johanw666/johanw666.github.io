@@ -1,0 +1,33 @@
+Build Molly via Android Studio
+
+Prerequisites:
+
+1. Install Android Studio (https://developer.android.com/studio)
+2. Install Git (many possible sources)
+3. Make sure the git command is in the path - this is required by some commands in the build system.
+   If you don't want to build from a Git repository this requires some changes in app/build.gradle.kts which
+   fall ouside the scope of this desription.
+
+4. Clone the Molly repository into a directory: open a command prompt, go to the directory you want the installaton in,
+   for example C:\Molly on Windows, and type:
+   
+   git clone --recursive https://github.com/mollyim/mollyim-android
+   
+   The recursive part is not necessary at the moment but is a safeguard if some future release includes dependencies,
+   like libwebp a while ago.
+
+5. Start Android Studio
+6. Open the project, in this case in C:\mollyim-android
+   The opening can take quite a while the first time because all libraries and missing build tools are downloaded and installed.
+   This means an internet connection is required during this stage.
+7. In Android Studio, go to the menu, select Build, Generate Signed Build App Bundle/APK, Select APK (easier to install manually than a bundle),
+   press Next
+8. Now you need to either create a new key and keystore in Android Studio (see https://developer.android.com/studio/publish/app-signing#generate-key)
+   or select an existing one.
+9. Fill in the key name and passwords (in theory the password for thee key and the keystore can be different, in practice a lot of tools can't deal with this).
+10. Click Next.
+11. Select one or more build variants (should I add explaination of those variants?)
+12. Click Create. Depending on your computer configuration you can now fetch a cup of coffee or take an extensive lunch.\
+    Build times add up for each build variant.
+13. When the build is ready and nothing went wrong, the apk's can be found in C:\mollyim-android\app\<build variant>.
+

@@ -1,0 +1,340 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Mechanics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="1">1. Mechanics</a></h1>
+<h2><a name="1.1">1.1 Point-kinetics in a fixed coordinate system</a></h2>
+<h3><a name="1.1.1">1.1.1 Definitions</a></h3>
+
+<p>The position \(\vec{r}\), the velocity \(\vec{v}\) and the acceleration \(\vec{a}\) are defined by: \(\vec{r}=(x,y,z)\), \(\vec{v}=(\dot{x},\dot{y},\dot{z})\), \(\vec{a}=(\ddot{x},\ddot{y},\ddot{z})\). The following holds:</p>
+
+<p>\[s(t)=s_0+\int|\vec{v}(t)|dt~;~~~\vec{r}(t)=\vec{r}_0+\int\vec{v}(t)dt~;~~~\vec{v}(t)=\vec{v}_0+\int\vec{a}(t)dt\]</p>
+
+<p>When the acceleration is constant this gives: \(v(t)=v_0+at\) and \(s(t)=s_0+v_0t+\frac{1}{2}at^2\).</p>
+
+<p>For the unit vectors in a direction \(\perp\) to the orbit \(\vec{e}_{\rm t}\) and parallel to it \(\vec{e}_{\rm n}\):</p>
+
+<p>\[\vec{e}_{\rm t}=\frac{\vec{v}}{|\vec{v}|}=\frac{d\vec{r}}{ds}~~~\dot{\vec{e}_{\rm t}}= \frac{v}{\rho}\vec{e}_{\rm n}~;~~~\vec{e}_{\rm n}=\frac{\dot{\vec{e}_{\rm t}}}{|\dot{\vec{e}_{\rm t}}|}\]</p>
+
+<p>For the <span><em>curvature</em></span> \(k\) and the <span><em>radius of curvature</em></span> \(\rho\): \[\vec{k}=\frac{d\vec{e}_{\rm t}}{ds}=\frac{d^2\vec{r}}{ds^2}=\left|\frac{d\varphi}{ds}\right| ~;~~~\rho=\frac{1}{|k|}\]</p>
+
+<h3><a name="1.1.2">1.1.2 Polar coordinates</a></h3>
+
+<p>Polar coordinates are defined by: \(x=r\cos(\theta)\), \(y=r\sin(\theta)\). So, for the unit coordinate vectors: \(\dot{\vec{e}_{r}}=\dot{\theta}\vec{e}_{\theta}\), \(\dot{\vec{e}_{\theta}}=-\dot{\theta}\vec{e}_{r}\)</p>
+
+<p>The velocity and the acceleration are derived from: \[\vec{r}=r\vec{e}_{r} \; ,\;\;&nbsp;\vec{v}=\dot{r}\vec{e}_{r}+r\dot{\theta}\vec{e}_{\theta} \; ,\;\;&nbsp;\vec{a}=(\ddot{r}-r\dot{\theta}^2)\vec{e}_{r}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\vec{e}_{\theta}\].</p>
+
+<h2><a name="1.2">1.2 Relative motion</a></h2>          
+
+<p>For the motion of a point D w.r.t. a point Q: \(\displaystyle\vec{r}_{\rm D}=\vec{r}_{\rm Q}+\frac{\vec{\omega}\times\vec{v}_{\rm Q}}{\omega^2}\) with \(\vec{\rm QD}=\vec{r}_{\rm D}-\vec{r}_{\rm Q}\) and \(\omega=\dot{\theta}\).</p>
+
+<p>Further: \(\alpha=\ddot{\theta}\)&nbsp;\('\) means that the quantity is defined in a moving system of coordinates. In a moving system: \(\vec{v}=\vec{v}_{Q}+\vec{v}\,'+\vec{\omega}\times\vec{r}\,'\) and \(\vec{a}=\vec{a}_{Q}+\vec{a}\,'+\vec{\alpha}\times\vec{r}\,'+2\vec{\omega}\times\vec{v}\,'+\vec{\omega}\times(\vec{\omega}\times\vec{r}\,')\) with \(\vec{\omega}\times(\vec{\omega}\times\vec{r}\,')=-\omega^2\vec{r}\,'_n\)</p>
+
+<h2><a name="1.3">1.3 Point-dynamics in a fixed coordinate system</a></h2>          
+<h3><a name="1.3.1">1.3.1 Force, (angular)momentum and energy</a></h3>
+
+<p>Newton&rsquo;s 2nd law connects the force on an object and the resulting acceleration of the object where the <span><em>momentum</em></span> is given by \(\vec{p}=m\vec{v}\):</p>
+
+<p>\[\vec{F}(\vec{r},\vec{v},t)=\frac{d\vec{p}}{dt}=\frac{d(m\vec{v}\,)}{dt}=m\frac{d\vec{v}}{dt}+ \vec{v}\,\frac{dm}{dt}\mathop{=}\limits^{m={\rm const}}m\vec{a}\] Newton&rsquo;s 3rd law is given by: \(\vec{F}_{\rm action}=-\vec{F}_{\rm reaction}\).</p>
+
+<p>For the power \(P\): \(P=\dot{W}=\vec{F}\cdot\vec{v}\). For the total energy \(W\), the kinetic energy \(T\) and the potential energy \(U\): \(W=T+U~;~~~\dot{T}=-\dot{U}\) with \(T=\frac{1}{2}mv^2\).</p>
+
+<p>The <span><em>kick</em></span> \(\vec{S}\) is given by: \(\displaystyle\vec{S}=\Delta\vec{p}=\int\vec{F}dt\)</p>
+
+<p>The work \(A\), delivered by a force, is \(\displaystyle A=\int\limits_1^2\vec{F}\cdot d\vec{s}=\int\limits_1^2F\cos(\alpha)ds\)</p>
+
+<p>The torque \(\vec{\tau}\) is related to the angular momentum \(\vec{L}\): \(\vec{\tau}=\dot{\vec{L}}=\vec{r}\times\vec{F}\); and<br />
+\(\vec{L}=\vec{r}\times\vec{p}=m\vec{v}\times\vec{r}\), \(|\vec{L}|=mr^2\omega\). The following equation is valid:</p>
+
+<p>\[\tau=-\frac{\partial U}{\partial \theta}\]</p>
+
+<p>Hence, the conditions for a mechanical equilibrium are: \(\sum\vec{F}_i=0\) and \(\sum\vec{\tau}_i=0\).</p>
+
+<p>The <span><em>force of friction</em></span> is usually proportional to the force perpendicular to the surface, except when the motion starts, when a threshold has to be overcome: \(F_{\rm fric}=f\cdot F_{\rm norm}\cdot\vec{e}_{\rm t}\).</p>
+
+<h3><a name="1.3.2">1.3.2 Conservative force fields</a></h3>
+
+<p>A conservative force can be written as the gradient of a potential: \(\vec{F}_{\rm cons}=-\vec{\nabla}U\). From this follows that \(\nabla\times\vec{F}=\vec{0}\). For such a force field also:</p>
+
+<p>\[\oint\vec{F}\cdot d\vec{s}=0~\Rightarrow~U=U_0-\int\limits_{r_0}^{r_1}\vec{F}\cdot d\vec{s}\]</p>
+
+<p>So the work delivered by a conservative force field depends not on the trajectory covered but only on the starting and ending points of the motion.</p>
+
+<h3><a name="1.3.3">1.3.3 Gravitation</a></h3>
+
+<p>The Newtonian law of gravitation is (in GRT one also uses \(\kappa\) instead of \(G\)):</p>
+
+<p>\[\vec{F}_{\rm g}=-G\frac{m_1 m_2}{r^2}\vec{e}_{r}\]</p>
+
+<p>The gravitational potential is then given by \(V=-Gm/r\). From Gauss law it then follows: \(\nabla^2 V=4\pi G\varrho\).</p>
+
+<h3><a name="1.3.4">1.3.4 Orbital equations</a></h3>
+
+<p>If \(V=V(r)\) one can derive from the equations of Lagrange for \(\phi\) the conservation of angular momentum:</p>
+
+<p>\[\frac{\partial {\cal L}}{\partial \phi}=\frac{\partial V}{\partial \phi}=0\Rightarrow\frac{d}{dt}(mr^2\phi)=0\Rightarrow L_z=mr^2\phi=\mbox{constant}\]</p>
+
+<p>For the radial position as a function of time it can be found that:</p>
+
+<p>\[\left(\frac{dr}{dt}\right)^2=\frac{2(W-V)}{m}-\frac{L^2}{m^2r^2}\]</p>
+
+<p>The angular equation is then:</p>
+
+<p>\[\phi-\phi_0=\int\limits_0^r\left[\frac{mr^2}{L}\sqrt{\frac{2(W-V)}{m}-\frac{L^2}{m^2r^2}}~\right]^{-1}dr \stackrel{r^{-2}{\rm field}}{=} \arccos\left(1+\frac{\frac{1}{r}-\frac{1}{r_0}}{\frac{1}{r_0}+km/L_z^2}\right)\]</p>
+
+<p>If \(F=F(r)\): \(L=\) constant, if \(F\) is conservative: \(W=\) constant, if \(\vec{F}\perp\vec{v}\) then \(\Delta T=0\) and \(U=0\).</p>
+
+<h4><a name="1.3.4.1">1.3.4.1 Kepler's equations</a></h4>
+
+<p>In a force field \(F=kr^{-2}\), the orbits are conic sections with the origin of the force in one of the foci (Kepler&rsquo;s 1st law). The equation of the orbit is:</p>
+
+<p>\[r(\theta)=\frac{\ell}{1+\varepsilon\cos(\theta-\theta_0)}\;,\;\;\mbox{or:}\;\; x^2+y^2=(\ell-\varepsilon x)^2\]</p>
+
+<p>with</p>
+
+<p>\[\ell=\frac{L^2}{G\mu^2M_{\rm tot}}~;~~~\varepsilon^2=1+\frac{2WL^2}{G^2\mu^3M^2_{\rm tot}}=1-\frac{\ell}{a} ~;~~~a=\frac{\ell}{1-\varepsilon^2}=\frac{k}{2W}\]</p>
+
+<p>\(a\) is half the length of the long axis of the elliptical orbit in case the orbit is closed. Half the length of the short axis is \(b=\sqrt{a\ell}\). \(\varepsilon\) is the <span><em>excentricity</em></span> of the orbit. Orbits with an equal \(\varepsilon\) are of equal shape. Now, 5 types of orbits are possible:</p>
+
+<ol>
+    <li>\(k&lt;0\) and \(\varepsilon=0\): a circle.</li>
+    <li>\(k&lt;0\) and \(0&lt;\varepsilon&lt;1\): an ellipse.</li>
+    <li>\(k&lt;0\) and \(\varepsilon=1\): a parabola.</li>
+    <li>\(k&lt;0\) and \(\varepsilon&gt;1\): a hyperbola, curved towards the centre of force.</li>
+    <li>\(k&gt;0\) and \(\varepsilon&gt;1\): a hyperbola, curved away from the centre of force.</li>
+</ol>
+
+<p>Other combinations are not possible: the total energy in a repulsive force field is always positive so \(\varepsilon&gt;1\).</p>
+
+<p>If the surface between the orbit covered between \(t_1\) and \(t_2\) and the focus C around which the planet moves is \(A(t_1,t_2)\), Kepler&rsquo;s 2nd law is</p>
+
+<p>\[A(t_1,t_2)=\frac{L_{\rm C}}{2m}(t_2-t_1)\]</p>
+
+<p>Kepler&rsquo;s 3rd law is, with \(T\) the period and \(M_{\rm tot}\) the total mass of the system is:</p>
+
+<p>\[\frac{T^2}{a^3}=\frac{4\pi^2}{GM_{\rm tot}}\]</p>
+
+<h3><a name="1.3.5">1.3.5 The virial theorem</a></h3>
+
+<p>The virial theorem for one particle is:</p>
+
+<p>\[\left\langle m\vec{v}\cdot\vec{r} \right\rangle=0\Rightarrow\left\langle T \right\rangle=-\mbox{$\frac{1}{2}$}\left\langle \vec{F}\cdot\vec{r} \right\rangle=\mbox{$\frac{1}{2}$}\left\langle r\frac{dU}{dr} \right\rangle= \mbox{$\frac{1}{2}$}n\left\langle U \right\rangle\mbox{ if } U=-\frac{k}{r^n}\]</p>
+
+<p>The virial theorem for a collection of particles is:</p>
+
+<p>\[\left\langle T \right\rangle=-\mbox{$\frac{1}{2}$}\left\langle \sum\limits_{\rm particles}\vec{F}_i\cdot\vec{r}_i+ \sum\limits_{\rm pairs}\vec{F}_{ij}\cdot\vec{r}_{ij} \right\rangle\]</p>
+
+<p>These propositions can also be written as: \(2E_{\rm kin}+E_{\rm pot}=0\).</p>
+
+<h2><a name="1.4">1.4 Point dynamics in a moving coordinate system</a></h2>
+<h3><a name="1.4.1">1.4.1 Apparent forces</a></h3>
+
+<p>The total force in a moving coordinate system can be found by subtracting the apparent forces from the forces working in the reference frame: \(\vec{F}\,'=\vec{F}-\vec{F}_{\rm app}\). The different apparent forces are given by:</p>
+
+<ol>
+    <li>Transformation of the origin: \(F_{\rm or}=-m\vec{a}_a\)</li>
+    <li>Rotation: \(\vec{F}_{\alpha}=-m\vec{\alpha}\times\vec{r}\,'\)</li>
+    <li>Coriolis force: \(F_{\rm cor}=-2m\vec{\omega}\times\vec{v}\)</li>
+    <li>Centrifugal force: \(\vec{F}_{\rm cf}=m\omega^2\vec{r}_n\,'=-\vec{F}_{\rm cp}\) ; \(\displaystyle\vec{F}_{\rm cp}=-\frac{mv^2}{r}\vec{e}_{r}\)</li>
+</ol>
+
+<h3><a name="1.4.2">1.4.2 Tensor notation</a></h3>
+
+<p>Transformation of the Newtonian equations of motion to \(x^\alpha=x^\alpha(x)\) gives:</p>
+
+<p>\[\frac{dx^\alpha}{dt}=\frac{\partial x^\alpha}{\partial \bar{x}^\beta}\frac{d\bar{x}^\beta}{dt};\]</p>
+
+<p>The chain rule gives:</p>
+
+<p>\[\frac{d}{dt}\frac{dx^\alpha}{dt}=\frac{d^2x^\alpha}{dt^2}=\frac{d}{dt} \left(\frac{\partial x^\alpha}{\partial \bar{x}^\beta}\frac{d\bar{x}^\beta}{dt}\right)= \frac{\partial x^\alpha}{\partial \bar{x}^\beta}\frac{d^2\bar{x}^\beta}{dt^2}+ \frac{d\bar{x}^\beta}{dt}\frac{d}{dt}\left(\frac{\partial x^\alpha}{\partial \bar{x}^\beta}\right)\]</p>
+
+<p>so:</p>
+
+<p>\[\frac{d}{dt}\frac{\partial x^\alpha}{\partial \bar{x}^\beta}=\frac{\partial }{\partial \bar{x}^\gamma}\frac{\partial x^\alpha}{\partial \bar{x}^\beta}\frac{d\bar{x}^\gamma}{dt}= \frac{\partial^2x^\alpha}{\partial\bar{x}^\beta\partial\bar{x}^\gamma}\frac{d\bar{x}^\gamma}{dt}\]</p>
+
+<p>This leads to:</p>
+
+<p>\[\frac{d^2x^\alpha}{dt^2}=\frac{\partial x^\alpha}{\partial \bar{x}^\beta}\frac{d^2\bar{x}^\beta}{dt^2}+ \frac{\partial^2x^\alpha}{\partial\bar{x}^\beta\partial\bar{x}^\gamma}\frac{d\bar{x}^\gamma}{dt} \left(\frac{d\bar{x}^\beta}{dt}\right)\]</p>
+
+<p>Hence the Newtonian equation of motion</p>
+
+<p>\[m\frac{d^2x^\alpha}{dt^2}=F^\alpha\]</p>
+
+<p>will be transformed into:</p>
+
+<p>\[m\left\{\frac{d^2x^\alpha}{dt^2}+\Gamma_{\beta\gamma}^\alpha \frac{dx^\beta}{dt}\frac{dx^\gamma}{dt}\right\}=F^\alpha\]</p>
+
+<p>The apparent forces are taken from he origin to the effect side in the way \(\displaystyle\Gamma_{\beta\gamma}^\alpha\frac{dx^\beta}{dt}\frac{dx^\gamma}{dt}\).</p>
+
+<h2><a name="1.5">1.5 Dynamics of masspoint collections</a></h2>
+<h3><a name="1.5.1">1.5.1 The centre of mass</a></h3>
+
+<p>The velocity w.r.t. the centre of mass \(\vec{R}\) is given by \(\vec{v}-\dot{\vec{R}}\). The coordinates of the centre of mass are given by:</p>
+
+<p>\[\vec{r}_{\rm m}=\frac{\sum m_i\vec{r}_i}{\sum m_i}\]</p>
+
+<p>In a 2-particle system, the coordinates of the centre of mass are given by:</p>
+
+<p>\[\vec{R}=\frac{m_1\vec{r}_1+m_2\vec{r}_2}{m_1+m_2}\]</p>
+
+<p>With \(\vec{r}=\vec{r}_1-\vec{r}_2\), the kinetic energy becomes: \(T=\frac{1}{2}M_{\rm tot}\dot{R}^2+\frac{1}{2}\mu\dot{r}^2\), with the <span><em>reduced mass</em></span> \(\mu\) given by:</p>
+
+<p>\[\displaystyle\frac{1}{\mu}=\frac{1}{m_1}+\frac{1}{m_2}\]</p>
+
+<p>The motion within and outside the centre of mass can be separated:</p>
+
+<p>\[\dot{\vec{L}}_{\rm outside}=\vec{\tau}_{\rm outside}~;~~~ \dot{\vec{L}}_{\rm inside}=\vec{\tau}_{\rm inside}\] \[\vec{p}=m\vec{v}_{\rm m}~;~~~\vec{F}_{\rm ext}=m\vec{a}_{\rm m}~;~~~\vec{F}_{12}=\mu\vec{u}\]</p>
+
+<h3><a name="1.5.2">1.5.2 Collisions</a></h3>
+
+<p>With collisions, where B are the coordinates of the collision and C an arbitrary other position: \(\vec{p}=m\vec{v}_{\rm m}\) is constant, and \(T=\frac{1}{2}m\vec{v}_{\rm m}^{\,2}\) is constant. The changes in the <span><em>relative velocities</em></span> can be derived from: \(\vec{S}=\Delta\vec{p}=\mu(\vec{v}_{\rm aft}-\vec{v}_{\rm before})\). Further &nbsp;\(\Delta\vec{L}_{\rm C}=\vec{\rm CB}\times\vec{S}\), \(\vec{p}~\parallel~\vec{S}=\)constant and \(\vec{L}\) w.r.t. B is constant.</p>
+
+<h2><a name="1.6">1.6 Dynamics of rigid bodies</a></h2>
+<h3><a name="1.6.1">1.6.1 Moment of Inertia</a></h3>
+
+<p>The angular momentum in a moving coordinate system is given by:</p>
+
+<p>\[\vec{L}'=I\vec{\omega}+\vec{L}_n'\]</p>
+
+<p>where \(I\) is the <span><em>moment of inertia</em></span> with respect to a central axis, which is given by:</p>
+
+<p>\[I=\sum\limits_i m_i\vec{r}_i~^2~;~~~T'=W_{\rm rot}=\mbox{$\frac{1}{2}$}\omega I_{ij}\vec{e}_i\vec{e}_j=\mbox{$\frac{1}{2}$}I\omega^2\]</p>
+
+<p>or, in the continuous case:</p>
+
+<p>\[I=\frac{m}{V}\int{r'}^2_ndV=\int{r'}^2_ndm\]</p>
+
+<p>Further:</p>
+
+<p>\[L_i=I^{ij}\omega_j~;~~~I_{ii}=I_i~;~~~I_{ij}=I_{ji}=-\sum\limits_km_kx_i'x_j'\]</p>
+
+<p><em>Steiner&rsquo;s theorem</em> is: \(I_{\rm w.r.t. D}=I_{\rm w.r.t. C}+m(DM)^2\) if axis C \(\parallel\) axis D.</p>
+
+<table align="center" border=1>
+<tr>
+<th align="center"><b>Object<b><th align="center">I<th align="center">Object<b><th align="center">I
+<tr>
+<td>Cavern cylinder</td>                       <td>\(I=mR^2\)</td>                  <td>Massive cylinder</td><td>\(I=\frac{1}{2}mR^2\)</td>
+<tr>
+<td>Disc, axis in plane disc through m>        <td>\(I=\frac{1}{4}mR^2\)</td>       <td>Dumbbell</td><td>\(I=\frac{1}{2}\mu R^2\)</td>
+<tr>
+<td>Cavern sphere                              <td>\(I=\frac{2}{3}mR^2\)</td>       <td>Massive sphere</td><td>\(I=\frac{2}{5}mR^2\)</td>
+<tr>
+<td>Bar, axis \(\perp\) through c.o.m.         <td>\(I=\frac{1}{12}ml^2\)</td>      <td>Bar, axis \(\perp\) through end</td><td>\(I=\frac{1}{3}ml^2\)</tr>
+<tr>
+<td>Rectangle, axis \(\perp\) plane thr. c.o.m.<td>\(I=\frac{1}{12}m(a^2+b^2)\)</td><td>Rectangle, axis \(\parallel b\) thr. m</td><td>\(I=ma^2\)</tr>
+<tr>
+</table>
+
+<h3><a name="1.6.2">1.6.2 Principal axes</a></h3>
+
+<p>Each rigid body has (at least) 3 principal axes which stand \(\perp\) to each other. For a principal axis:</p>
+
+<p>\[\frac{\partial I}{\partial \omega_x}=\frac{\partial I}{\partial \omega_y}=\frac{\partial I}{\partial \omega_z}=0~~\mbox{so}~~L'_n=0\]</p>
+
+<p>The following holds: \(\dot{\omega}_k=-a_{ijk}\omega_i\omega_j\) with \(\displaystyle a_{ijk}=\frac{I_i-I_j}{I_k}\) if \(I_1\leq I_2\leq I_3\).</p>
+
+<h3><a name="1.6.3">1.6.3 Time dependence</a></h3>
+
+<p>For torque of force \(\vec{\tau}\): \[\vec{\tau}\,'=I\ddot{\theta}~;~~~\frac{d''\vec{L}'}{dt}=\vec{\tau}\,'-\vec{\omega}\times\vec{L}'\] The <span><em>torque</em></span> \(\vec{T}\) is defined by: \(\vec{T}=\vec{F}\times\vec{d}\).</p>
+
+<h2><a name="1.7">1.7 Variational Calculus, Hamilton and Lagrange mechanics</a></h2>
+<h3><a name="1.7.1">1.7.1 Variational Calculus</a></h3>
+
+<p>Starting with:</p>
+
+<p>\[\delta\int\limits_a^b{\cal L}(q,\dot{q},t)dt=0 \;\;\textrm{where} \;\; \delta(a)=\delta(b)=0 \;\;\mbox{and}\;\; \delta\left(\frac{du}{dx}\right)=\frac{d}{dx}(\delta u)\]</p>
+
+<p>the equations of Lagrange can be derived:</p>
+
+<p>\[\frac{d}{dt}\frac{\partial {\cal L}}{\partial \dot{q}_i}=\frac{\partial {\cal L}}{\partial q_i}\]</p>
+
+<p>When there are additional conditions applying to the variational problem \(\delta J(u)=0\) of the type \(K(u)=\)constant, the new problem becomes: \(\delta J(u)-\lambda\delta K(u)=0\).</p>
+
+<h3><a name="1.7.2">1.7.2 Hamilton mechanics</a></h3>
+
+<p>The <span><em>Lagrangian</em></span> is given by: \({\cal L}=\sum T(\dot{q}_i)-V(q_i)\). The <span><em>Hamiltonian</em></span> is given by: \(H=\sum\dot{q}_ip_i-{\cal L}\). In 2 dimensions: \({\cal L}=T-U=\frac{1}{2}m(\dot{r}^2+r^2\dot{\phi}^2)-U(r,\phi)\).</p>
+
+<p>If the coordinates used are <span><em>canonical</em></span> the <em>Hamilton equations</em> are the equations of motion for the system:</p>
+
+<p>\[\frac{dq_i}{dt}=\frac{\partial H}{\partial p_i}~;~~~\frac{dp_i}{dt}=-\frac{\partial H}{\partial q_i}\]</p>
+
+<p>Coordinates are canonical if the following holds: \(\{q_i,q_j\}=0,~\{p_i,p_j\}=0,~\{q_i,p_j\}=\delta_{ij}\) where \(\{,\}\) is the <span><em>Poisson bracket</em></span>:</p>
+
+<p>\[\{A,B\}=\sum\limits_i\left[\frac{\partial A}{\partial q_i}\frac{\partial B}{\partial p_i}-\frac{\partial A}{\partial p_i}\frac{\partial B}{\partial q_i}\right]\]</p>
+
+<p>The <em>Hamiltonian</em> of an harmonic oscillator is given by \(H(x,p)=p^2/2m+\frac{1}{2}m\omega^2 x^2\). With new coordinates \((\theta,I)\), obtained by the canonical transformation \(x=\sqrt{2I/m\omega}\cos(\theta)\) and \(p=-\sqrt{2Im\omega}\sin(\theta)\), with inverse \(\theta=\arctan(-p/m\omega x)\) and \(I=p^2/2m\omega+\frac{1}{2}m\omega x^2\) it follows: \(H(\theta,I)=\omega I\).</p>
+
+<p>The <em>Hamiltonian</em> of a charged particle with charge \(q\) in an external electromagnetic field is given by:</p>
+
+<p>\[H=\frac{1}{2m}\left(\vec{p}-q\vec{A}\,\right)^2+qV\]</p>
+
+<p>This <em>Hamiltonian</em> can be derived from the <em>Hamiltonian</em> of a free particle \(H=p^2/2m\) with the transformations \(\vec{p}\rightarrow\vec{p}-q\vec{A}\) and \(H\rightarrow H-qV\). This is elegant from a relativistic point of view: it is equivalent to the transformation of the momentum 4-vector \(p^\alpha\rightarrow p^\alpha-qA^\alpha\). A gauge transformation on the potentials \(A^\alpha\) corresponds with a canonical transformation, which make the <em>Hamilton equations</em> the equations of motion for the system.</p>
+
+<h3><a name="1.7.3">1.7.3 Motion around an equilibrium, linearization</a></h3>
+
+<p>For natural systems around equilibrium the following equations are valid:</p>
+
+<p>\[\left(\frac{\partial V}{\partial q_i}\right)_0=0~; \;\; V(q)=V(0)+V_{ik}q_iq_k \;\;\mbox{with}\;\; V_{ik}=\left(\frac{\partial^2V}{\partial q_i\partial q_k}\right)_0\]</p>
+
+<p>With \(T=\frac{1}{2}(M_{ik}\dot{q}_i\dot{q}_k)\) one obtains&nbsp;the set of equations \(M\ddot{q}+Vq=0\). If \(q_i(t)=a_i\exp(i\omega t)\) is substituted, this set of equations has solutions if \({\rm det}(V-\omega^2 M)=0\). This leads to the eigenfrequencies of the problem: \(\displaystyle\omega^2_k=\frac{a_k^{\rm T}Va_k}{a_k^{\rm T}Ma_k}\). If the equilibrium is stable: \(\forall k\) that \(\omega^2_k&gt;0\). The general solution is a superposition of eigenvibrations.</p>
+
+<h3><a name="1.7.4">1.7.4 Phase space, Liouville's equation</a></h3>
+
+<p>In phase space:</p>
+
+<p>\[\nabla=\left(\sum_i\frac{\partial }{\partial q_i},\sum_i\frac{\partial }{\partial p_i}\right) \;\;\mbox{so}\;\; \nabla\cdot\vec{v}=\sum_i\left(\frac{\partial }{\partial q_i}\frac{\partial H}{\partial p_i}-\frac{\partial }{\partial p_i}\frac{\partial H}{\partial q_i}\right)\]</p>
+
+<p>If the equation of continuity, \(\partial_t\varrho+\nabla\cdot(\varrho\vec{v}\,)=0\) holds, this can be written as:</p>
+
+<p>\[\{\varrho,H\}+\frac{\partial \varrho}{\partial t}=0\]</p>
+
+<p>For an arbitrary quantity \(A\) :</p>
+
+<p>\[\frac{dA}{dt}=\{A,H\}+\frac{\partial A}{\partial t}\]</p>
+
+<p>Liouville&rsquo;s theorem can than be written as:</p>
+
+<p>\[\frac{d\varrho}{dt}=0\; ; \;\;\mbox{or:}\;\; \int pdq=\mbox{constant}\]</p>
+
+<h3><a name="1.7.5">1.7.5 Generating functions</a></h3>
+
+<p>Starting with the coordinate transformation:</p>
+
+<p>\[\left\{\begin{array}{l} Q_i=Q_i(q_i,p_i,t)\\ P_i=P_i(q_i,p_i,t) \end{array}\right.\]</p>
+
+<p>one can derive the following <em>Hamilton equations</em> with the new <em>Hamiltonian</em> \(K\):</p>
+
+<p>\[\frac{dQ_i}{dt}=\frac{\partial K}{\partial P_i}~;~~~\frac{dP_i}{dt}=-\frac{\partial K}{\partial Q_i}\]</p>
+
+<p>Now, a distinction between 4 cases can be made:</p>
+
+<ol>
+    <li>If \(\displaystyle p_i\dot{q}_i-H=P_iQ_i-K(P_i,Q_i,t)-\frac{dF_1(q_i,Q_i,t)}{dt}\), the coordinates follow from: \[p_i=\frac{\partial F_1}{\partial q_i}~;~~~P_i=-\frac{\partial F_1}{\partial Q_i}~;~~~K=H+\frac{\partial F_1}{\partial t}\]</li>
+    <li>If \(\displaystyle p_i\dot{q}_i-H=-\dot{P}_iQ_i-K(P_i,Q_i,t)+\frac{dF_2(q_i,P_i,t)}{dt}\), the coordinates follow from: \[p_i=\frac{\partial F_2}{\partial q_i}~;~~~Q_i=\frac{\partial F_2}{\partial P_i}~;~~~K=H+\frac{\partial F_2}{\partial t}\]</li>
+    <li>If \(\displaystyle-\dot{p}_iq_i-H=P_i\dot{Q}_i-K(P_i,Q_i,t)+\frac{dF_3(p_i,Q_i,t)}{dt}\), the coordinates follow from: \[q_i=-\frac{\partial F_3}{\partial p_i}~;~~~P_i=-\frac{\partial F_3}{\partial Q_i}~;~~~K=H+\frac{\partial F_3}{\partial t}\]</li>
+    <li>If \(\displaystyle-\dot{p}_iq_i-H=-P_iQ_i-K(P_i,Q_i,t)+\frac{dF_4(p_i,P_i,t)}{dt}\), the coordinates follow from: \[q_i=-\frac{\partial F_4}{\partial p_i}~;~~~Q_i=\frac{\partial F_4}{\partial P_i}~;~~~K=H+\frac{\partial F_4}{\partial t}\]</li>
+</ol>
+
+<p>The functions \(F_1\), \(F_2\), \(F_3\) and \(F_4\) are called <span><em>generating functions</em></span>.</p>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<html>
+<head>
+<title>The Twin Paradox: The Spacetime Diagram Analysis</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" 
+content="this document is copyright as described in the copyright notice">
+</head>
+<body>
+<p><a href="../../../index.html">[Physics FAQ]</a> -
+   <a href="../../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p><a href="twin_paradox.html">[Top]</a>
+<a href="twin_intro.html">[Intro]</a>
+<a href="twin_doppler.html">[Prev]</a>
+<a href="twin_gr.html">[Next]</a>
+<br> By Michael Weiss.</p>
+<p><br></p>
+<hr><br>
+
+
+<h1>The Twin Paradox: The Spacetime Diagram Analysis</h1>
+
+<p>This entry borrows heavily from the original FAQ entry for the Twin Paradox, by Kurt
+Sonnenmoser.&nbsp; But it has also been extensively modified, so he is not
+responsible for any sloppiness or infelicities.</p>
+
+<p>Minkowski said "Henceforth Space by itself, and Time by itself, are doomed to
+fade away into mere shadows, and only a kind of union of the two will preserve an
+independent reality."&nbsp; Minkowski recast Einstein's version of Special Relativity (SR)
+on a new stage, <em>Minkowski spacetime</em>.&nbsp; The Twin Paradox has a very simple
+resolution in this framework.&nbsp; The crucial concept is the proper time of a moving
+body.</p>
+
+<p>First chose one specific inertial frame of reference, say the rest frame of Earth
+(which we'll pretend is inertial).&nbsp; Once we've chosen a reference frame, we can
+define co-ordinates (<em>t,x,y,z</em>) for every event that takes place.&nbsp; Pop-science
+treatments sometimes ask us to imagine an army of observers, all equipped with clocks and
+rulers, and all at rest with respect to the given reference frame.&nbsp; With their clocks
+and rulers they can determine <em>when</em> and <em>where</em> any event takes place&mdash;in
+other words, its (<em>t,x,y,z</em>) co-ordinates.&nbsp; In a different frame of reference,
+a different army of observers would determine different co-ordinates for the same
+event.&nbsp; But we'll stick with one frame throughout this discussion.</p>
+
+<p>The collection of all events in toto, no matter where or when, is called
+<em>spacetime</em>.&nbsp; Traditionally, one plots events in spacetime on a <em>Minkowski
+Spacetime Diagram</em>.&nbsp; That's just a piece of paper (or blackboard!)&nbsp; with the
+<em>t</em> co-ordinate running vertically upwards, and the <em>x</em> co-ordinate running
+horizontally.&nbsp; (One just politely ignores the <em>y</em> and <em>z</em> co-ordinates,
+4-dimensional paper and blackboards being in short supply at most universities.)&nbsp; Be
+aware that Terence's lines of simultaneity are horizontal lines on this plot.&nbsp; That
+is, all events lying on any horizontal line are given the same time co-ordinate by
+Terence.&nbsp; He regards them as simultaneous.</p>
+
+<p><img src="worldlines.gif" align="right"> If we plot all of Terence's and Stella's
+events, we get their so-called "worldlines".&nbsp; (Miscellaneous trivia: the physicist
+George Gamow titled his autobiography, "My Worldline".)&nbsp; Terence's and
+Stella's worldlines are shown in figure 1.</p>
+
+<p>
+ 
+<!--
+        Return Event
+        | \
+        |  \
+        |   \ Inbound Leg
+        |    \
+        |     \
+        |      \
+        |       |Turnaround
+        |      /
+        |     /
+        |    /
+        |   / Outbound Leg
+        |  /
+        | /       
+        Start Event
+-->  
+
+Since Terence is at rest in our chosen frame of reference, at all times he will be in same
+place, say (0,0,0).&nbsp; In other words, the co-ordinates of his events all take this
+form:
+</p>
+
+<center>
+<pre style="font-size: 24px">
+(t,0,0,0)
+</pre>
+</center>
+
+<p>But at an arbitrary time <em>t</em>, Stella's event co-ordinates will take this
+form:</p>
+
+<center>
+<pre style="font-size: 24px">
+(t, f(t), g(t), h(t))
+</pre>
+</center>
+
+<p>where <em>f</em>(<em>t</em>), <em>g</em>(<em>t</em>), and <em>h</em>(<em>t</em>) are
+all functions of <em>t</em>, and <em>t</em> is (remember) measured by some lowly private
+in our observer army.</p>
+
+<p>Plotting distance against time is nothing new.&nbsp; Minkowski's new twist was the
+following formula:</p>
+
+<center>
+<pre style="font-size: 24px">
+d&tau;<sup>2</sup> = dt<sup>2</sup> - dx<sup>2</sup> - dy<sup>2</sup> - dz<sup>2</sup>
+</pre>
+</center>
+
+<p>Here, <em>dt</em>, <em>dx</em>, <em>dy</em>, and <em>dz</em> are all co-ordinate
+differences between two events that are "near" each other on the Minkowski
+diagram.&nbsp; (So if (<em>t,x,y,z</em>) are the co-ordinates of one event, then
+(<em>t+dt,x+dx,y+dy,z+dz</em>) are the co-ordinates of the other.)&nbsp; Time and space
+are measured in units for which c, the speed of light, equals 1 (e.g. seconds and
+light seconds).&nbsp; And d&tau; is the <strong>proper time</strong> difference, which
+we define next.</p>
+
+<p>Suppose someone wearing a watch coasts uniformly from event (<em>t,x,y,z</em>) to event
+(<em>t+dt,x+dx,y+dy,z+dz</em>).&nbsp; The time between these two events, <em>as measured
+by that person's watch</em>, is called the elapsed <strong>proper time</strong> for that
+person.&nbsp; And according to Minkowski, the proper time is given by d&tau; in the
+formula above.</p>
+
+<p>More generally, suppose someone carrying a high-quality time-piece travels some
+worldline from event E to event F.&nbsp; "High-quality" here means that acceleration
+doesn't affect the time-keeping mechanism.&nbsp; A pendulum clock would not be a good
+choice!&nbsp; A balance-wheel watch might do OK, a tuning-fork mechanism would be still
+better, and an atomic clock ought to be nearly perfect.&nbsp; How much time elapses
+according to the time-piece?&nbsp; I.e., what is proper time along that worldline between
+events E and F?&nbsp; Well, simply integrate d&tau;:</p>
+
+<center>
+<img src="eq-tauint.gif" 
+alt="proper time = integral_E^F d\tau = integral_E^F sqrt(1 - [v(t)]&#178;)">
+</center>
+
+<p>where
+
+<center>
+<img src="eq-vt.gif" ALT="v(t) = (dx/dt, dy/dt, dz/dt)">
+</center></p>
+
+<p>is the velocity vector, and [<em>v</em>(<em>t</em>)]&#178; is the square of its
+length:</p>
+<pre style="font-size: 24px">
+
+           [v(t)]&#178;   = (dx/dt)&#178;  + (dy/dt)&#178;  + (dz/dt)&#178;
+                      
+</pre>
+
+<p>You shouldn't have much difficulty obtaining these formulas from what we've said
+already.</p>
+
+<p>Our integral for the proper time can be difficult to evaluate in general, but certain
+special cases are a breeze.&nbsp; Let's take Terence's case first.&nbsp; Remember that his
+event co-ordinates are always (<em>t</em>,0,0,0), so <em>dx</em>, <em>dy</em>, and
+<em>dz</em> are always 0 for him.&nbsp; So d&tau; is just <em>dt</em>, and the forbidding
+integral becomes:</p>
+
+<center>
+<img src="eq-tint.gif" ALT="integral_E^F dt">
+</center>
+
+<p>that is, just the difference in the <em>t</em> co-ordinates!&nbsp; In other words,
+Terence's elapsed proper time is just the elapsed proper time as measured by our army of
+observers, in the reference frame in which Terence is at rest.&nbsp; It doesn't stretch
+credulity too far to suppose that Terence <em>is</em> one of those observers.</p>
+
+<p>Now how about Stella?&nbsp; For her, <em>dx</em>, <em>dy</em>, and <em>dz</em> are not
+always all 0.&nbsp; So <em>dx/dt</em>, <em>dy/dt</em>, and <em>dz/dt</em> are also not
+always all 0, and their <em>squares</em> (which appear in the formula for
+[<em>v</em>(<em>t</em>)]&#178;) are always non-negative, and sometimes positive.&nbsp; So
+the quantity under the square root is less than or equal to 1, and sometimes strictly less
+than 1.&nbsp; Conclusion: the value of Stella's integral is less than that of Terence's
+integral.&nbsp; I.e., her elapsed proper time is less than Terence's.&nbsp; I.e., she ages
+less.</p>
+
+<p>That's the whole story!&nbsp; We evaluate a path integral along two different paths,
+and get two different results.&nbsp; Not so different in spirit from picking two points in
+ordinary Euclidean space, and then evaluating the arc-length integral along two different
+paths connecting them.&nbsp; It's not just where you're going, it's how you get
+there.&nbsp; In the words of the unknown poet:</p>
+
+<blockquote>
+<p>O ye'll tak' the high road<br>
+   and I'll tak' the low road,<br>
+   An' I'll be in Scotland afore ye
+</p>
+</blockquote>
+
+<p>(But at least our hero and heroine do get to meet again!)</p>
+
+<hr>
+<p><br>
+<a href="twin_paradox.html">[Top]</a>
+<a href="twin_intro.html">[Intro]</a>
+<a href="twin_doppler.html">[Prev]</a>
+<a href="twin_gr.html">[Next]</a>
+</p>
+
+</body>
+</html>

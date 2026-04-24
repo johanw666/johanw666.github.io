@@ -1,0 +1,167 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Nuclear physics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="14">14. Nuclear physics</a></h1>
+<h2><a name="14.1">14.1 Nuclear forces</a></h2>
+
+<p>The mass of a nucleus is given by: \[M_{\rm nucl}=Zm_{\rm p}+Nm_{\rm n}-E_{\rm bind}/c^2\] The binding energy per nucleon is given in the figure at the right. The top is at \(^{56}_{26}\)Fe, the most stable nucleus. With the constants</p>
+
+<p>\[ \begin{matrix} &nbsp;<br />
+a_{1} &amp; = &amp; 15.760 &amp; MeV\\&nbsp;<br />
+a_{2} &amp; = &amp; 17.810 &amp; MeV\\&nbsp;<br />
+a_{3} &amp; = &amp; 0.711 &amp; MeV\\&nbsp;<br />
+a_{4} &amp; = &amp; 23.702 &amp; MeV\\&nbsp;<br />
+a_{5} &amp; = &amp; 34.000 &amp; MeV\\&nbsp;<br />
+\end{matrix} \]</p>
+
+<p align="center"><img alt="Nuclear masses" style="width: 457px; height: 300px;" width="457px" height="300px" src="figure141.jpg" /></p>
+
+<p>and \(A=Z+N\), in the <em>droplet</em> or <em>collective model</em> of the nucleus the binding energy \(E_{\rm bind}\) is given by: \[\frac{E_{\rm bind}}{c^2}=a_1A-a_2A^{2/3}-a_3\frac{Z(Z-1)}{A^{1/3}}-a_4\frac{(N-Z)^2}{A}+\epsilon a_5A^{-3/4}\] These terms arise from:</p>
+
+<ol>
+    <li>\(a_1\): Binding energy of the strong nuclear force, approximately \(\sim A\).</li>
+    <li>\(a_2\): Surface correction: the nucleons near the surface are less bound.</li>
+    <li>\(a_3\): Coulomb repulsion between the protons.</li>
+    <li>\(a_4\): Asymmetry term: a surplus of protons or neutrons has a lower binding energy.</li>
+    <li>\(a_5\): Pair off effect: nuclei with an even number of protons or neutrons are more stable because groups of two protons or neutrons have a lower energy. The following holds:<br />
+    Z even N even: \(\epsilon=+1\),&nbsp; Z odd N odd: \(\epsilon=-1\).<br />
+    Z even N&nbsp; odd: \(\epsilon=&nbsp; 0\),&nbsp; &nbsp;Z odd N even:\(\epsilon=0\).</li>
+</ol>
+
+<p>The Yukawa potential can be derived if the nuclear force can to first approximation, be considered as an exchange of virtual pions:</p>
+
+<p>\[U(r)=-\frac{W_0r_0}{r}\exp\left(-\frac{r}{r_0}\right)\]</p>
+
+<p>With \(\Delta E\cdot\Delta t\approx\hbar\), \(E_\gamma=m_0c^2\) and \(r_0=c\Delta t\) follows: \(r_0=\hbar/m_0c\).</p>
+
+<p>In the shell model of the nucleus one assumes that a nucleon moves in an average field of other nucleons. Further, there is a contribution of the spin-orbit coupling \(\sim\vec{L}\cdot\vec{S}\): \(\Delta V_{ls}=\frac{1}{2}(2l+1)\hbar\omega\). So each level \((n,l)\) is split in two, with \(j=l\pm\frac{1}{2}\), where the state with \(j=l+\frac{1}{2}\) has the lowest energy. This is just the opposite for electrons, which is an indication that the \(L-S\) interaction is not electromagnetical. The energy of a 3-dimensional harmonic oscillator is \(E=(N+\frac{3}{2})\hbar\omega\). \(N=n_x+n_y+n_z=2(n-1)+l\) where \(n\geq1\) is the main oscillator number. Because \(-l\leq m\leq l\) and \(m_s=\pm\frac{1}{2}\hbar\) there are \(2(2l+1)\) substates which exist independently for protons and neutrons. This gives rise to the so called <em>magical numbers</em>: nuclei where each state in the outermost level are filled are particulary stable. This is the case if \(N\) or \(Z\) \(\in\{2,8,20,28,50,82,126\}\).</p>
+
+<h2><a name="14.2">14.2 The shape of the nucleus</a></h2>
+
+<p>A nucleus is to first approximation spherical with a radius of \(R=R_0A^{1/3}\). Here, \(R_0\approx1.4\cdot10^{-15}\) m, constant for all nuclei. If the nuclear radius is measured including the charge distribution one obtains \(R_0\approx1.2\cdot10^{-15}\) m. The shape of oscillating nuclei can be described by spherical harmonics:</p>
+
+<p>\[R=R_0\left[1+\sum_{lm}a_{lm}Y_l^m(\theta,\varphi)\right]\]</p>
+
+<p>\(l=0\) gives rise to monopole vibrations, density vibrations, which can be applied to the theory of neutron stars. \(l=1\) gives dipole vibrations, \(l=2\) quadrupole, with \(a_{2,0}=\beta\cos\gamma\) and \(a_{2,\pm2}=\frac{1}{2}\sqrt{2}\beta\sin\gamma\) where \(\beta\) is the deformation factor and \(\gamma\) the shape parameter. The multipole moment is given by \(\mu_l=Zer^lY_l^m(\theta,\varphi)\). The parity of the electric moment is \(\Pi_E=(-1)^l\), of the magnetic moment \(\Pi_M=(-1)^{l+1}\).</p>
+
+<p>There are two contributions to the magnetic moment: \(\displaystyle\vec{M}_L=\frac{e}{2m_{\rm p}}\vec{L}\) and \(\displaystyle\vec{M}_S=g_S\frac{e}{2m_{\rm p}}\vec{S}\)<br />
+where \(g_S\) is the <em>spin-gyromagnetic ratio</em>. For protons&nbsp;\(g_S=5.5855\) and for neutrons \(g_S=-3.8263\). The \(z\)-components of the magnetic moment are given by \(M_{L,z}=\mu_{\rm N}m_l\) and \(M_{S,z}=g_S\mu_{\rm N}m_S\). The resulting magnetic moment is related to the nuclear spin \(I\) according to \(\vec{M}=g_I(e/2m_{\rm p})\vec{I}\). The \(z\)-component is then \(M_z=\mu_{\rm N}g_Im_I\).</p>
+
+<h2><a name="14.3">14.3 Radioactive decay</a></h2>
+
+<p>The number of nuclei decaying is proportional to the number of nuclei: \(\dot{N}=-\lambda N\). This gives for the number of nuclei \(N\): \(N(t)=N_0\exp(-\lambda t)\). The <em>half life time</em> follows from \(\tau_{\frac{1}{2}}\lambda=\ln(2)\). The average life time of a nucleus is \(\tau=1/\lambda\). The probability that \(N\) nuclei decay within a time interval is given by a Poisson distribution:</p>
+
+<p>\[P(N)dt=N_0\frac{\lambda^N{\rm e}^{-\lambda}}{N!}dt\]</p>
+
+<p>If a nucleus can decay into more final states then: \(\lambda=\sum\lambda_i\). So the fraction decaying into state \(i\) is \(\lambda_i/\sum\lambda_i\). There are 5 types of natural radioactive decay:</p>
+
+<ol>
+    <li>\(\alpha\)-decay: the nucleus emits a He\(^{2+}\) nucleus. Because nucleons tend to order themselves in groups of 2p+2n this can be considered as a tunneling of a He\(^{2+}\) nucleus through a potential barrier. The tunnel probability \(P\) is<br />
+    \[P=\frac{\mbox{incoming amplitude}}{\mbox{outgoing amplitude}}={\rm e}^{-2G}~~\mbox{with}~~ G=\frac{1}{\hbar}\sqrt{2m\int[V(r)-E]dr}\]<br />
+    \(G\) is called the <em>Gamow factor</em>.</li>
+    <li>\(\beta\)-decay. Here a proton changes into a neutron or vice versa:<br />
+    \(\rm p^+\rightarrow n^0+W^+\rightarrow n^0+e^++\nu_e\), and \(\rm n^0\rightarrow p^++W^-\rightarrow p^++e^-+\overline{\nu}_e\).</li>
+    <li>Electron capture: here, a proton in the nucleus captures an electron (usually from the K-shell).</li>
+    <li>Spontaneous fission: a nucleus breaks apart.</li>
+    <li>\(\gamma\)-decay: here the nucleus emits a high-energetic photon. The decay constant is given by<br />
+    \[\lambda=\frac{P(l)}{\hbar\omega}\sim\frac{E_\gamma}{(\hbar c)^2}\left(\frac{E_\gamma R}{\hbar c}\right)^{2l}\sim10^{-4l}\]<br />
+    where \(l\) is the quantum number for the angular momentum and \(P\) the radiated power. Usually the decay constant of electric multipole moments is larger than the one of magnetic multipole moments. The energy of the photon is \(E_\gamma=E_i-E_f-T_{\rm R}\), with \(T_{\rm R}=E_{\gamma}^2/2mc^2\) the recoil energy, which can usually be neglected. The parity of the emitted radiation is \(\Pi^l=\Pi^i\cdot\Pi^f\). With \(I\) the quantum number of angular momentum of the nucleus, \(L=\hbar\sqrt{I(I+1)}\), the following selection rule holds: \(|\vec{I}_i-\vec{I}_f|\leq\Delta l\leq|\vec{I}_i+\vec{I}_f|\).</li>
+</ol>
+
+<h2><a name="14.4">14.4 Scattering and nuclear reactions</a></h2>
+<h3><a name="14.4.1">14.4.1 Kinetic model</a></h3>
+
+<p>If a beam with intensity \(I\) hits a target with density \(n\) and length \(x\) (Rutherford scattering) the number of scatterings \(R\) per unit of time is equal to \(R=Inx\sigma\). From this follows that the intensity of the beam decreases as \(-dI=In\sigma dx\). This results in \(I=I_0{\rm e}^{-n\sigma x}=I_0{\rm e}^{-\mu x}\).</p>
+
+<p>Because \(dR=R(\theta,\varphi)d\Omega/4\pi=Inxd\sigma\) it follows: \(\displaystyle\frac{d\sigma}{d\Omega}=\frac{R(\theta,\varphi)}{4\pi nxI}\)</p>
+
+<p>If \(N\) particles are scattered in a material with density \(n\) then: \(\displaystyle\frac{\Delta N}{N}=n\frac{d\sigma}{d\Omega}\Delta\Omega\Delta x\)</p>
+
+<p>For Coulomb collisions: \(\displaystyle\left.\frac{d\sigma}{d\Omega}\right|_{\rm C}= \frac{Z_1Z_2e^2}{8\pi\varepsilon_0\mu v_0^2}\frac{1}{\sin^4(\frac{1}{2}\theta)}\)</p>
+
+<h3><a name="14.4.2">14.4.2 Quantum mechanical model for n-p scattering</a></h3>
+
+<p>The initial state is a beam of neutrons moving along the \(z\)-axis with wavefunction \(\psi_{\rm init}={\rm e}^{ikz}\) and current density \(J_{\rm init}=v|\psi_{\rm init}|^2=v\). At large distances from the scattering point they have approximately a spherical wavefunction \(\psi_{\rm scat}=f(\theta){\rm e}^{ikr}/r\) where \(f(\theta)\) is the <em>scattering amplitude</em>. The total wavefunction is then given by</p>
+
+<p>\[\psi=\psi_{\in}+\psi_{\rm scat}={\rm e}^{ikz}+f(\theta)\frac{e^{ikr}}{r}\]</p>
+
+<p>The particle flux of the scattered particles is \(v|\psi_{\rm scat}|^2=v|f(\theta)|^2 d\Omega\). From this it follows that \(\sigma(\theta)=|f(\theta)|^2\). The wavefunction of the incoming particles can be expressed as a sum of angular momentum wavefunctions:</p>
+
+<p>\[\psi_{\rm init}={\rm e}^{ikz}=\sum_l\psi_l\]</p>
+
+<p>The impact parameter is related to the angular momentum with \(L=bp=b\hbar k\), so \(bk\approx l\). At very low energy only particles with \(l=0\) are scattered, so</p>
+
+<p>\[\psi=\psi_0'+\sum_{l&gt;0}\psi_l~~\mbox{and}~~\psi_0=\frac{\sin(kr)}{kr}\]</p>
+
+<p>If the potential is approximately rectangular then: \(\displaystyle\psi_0'=C\frac{\sin(kr+\delta_0)}{kr}\)</p>
+
+<p>The cross section is then \(\displaystyle \sigma(\theta)=\frac{\sin^2(\delta_0)}{k^2}~~\mbox{so}~~ \sigma=\int\sigma(\theta)d\Omega=\frac{4\pi\sin^2(\delta_0)}{k^2}\)</p>
+
+<p>At very low energies: \(\displaystyle\sin^2(\delta_0)=\frac{\hbar^2k^2/2m}{W_0+W}\)</p>
+
+<p>with \(W_0\) the depth of the potential well. At higher energies: \(\displaystyle\sigma=\frac{4\pi}{k^2}\sum_l\sin^2(\delta_l)\)</p>
+
+<h3><a name="14.4.3">14.4.3 Conservation of energy and momentum in nuclear reactions</a></h3>
+
+<p>If a particle \(P_1\) collides with a particle \(P_2\) which is in rest w.r.t. the laboratory system and other particles are created, so</p>
+
+<p>\[P_1+P_2\rightarrow\sum_{k&gt;2} P_k\]</p>
+
+<p>the total energy \(Q\) gained or required is given by \(Q=(m_1+m_2-\sum\limits_{k&gt;2}m_k)c^2\).</p>
+
+<p>The minimal required kinetic energy \(T\) of \(P_1\) in the laboratory system to initialize the reaction is \[T=-Q\frac{m_1+m_2+\sum m_k}{2m_2}\] If \(Q&lt;0\) there is a threshold energy.</p>
+
+<h2><a name="14.5">14.5 Radiation dosimetry</a></h2>
+
+<p><em>Radiometric quantities</em> determine the strength of the radiation source(s). <em>Dosimetric quantities</em> are related to the energy transfer from radiation to matter. Parameters describing a relation between those are called <em>interaction parameters</em>. The intensity of a beam of particles in matter decreases according to \(I(s)=I_0\exp(-\mu s)\). The deceleration of a <em>heavy</em> particle is described by the <em>Bethe-Bloch equation</em>:</p>
+
+<p>\[\frac{dE}{ds}\sim\frac{q^2}{v^2}\]</p>
+
+<p>The <em>fluention</em> is given by \(\Phi=dN/dA\). The <em>flux</em> is given by \(\phi=d\Phi/dt\). The energy loss is defined by \(\Psi=dW/dA\), and the energy flux density \(\psi=d\Psi/dt\). The <em>absorption coefficient</em> is given by \(\mu=(dN/N)/dx\). The <em>mass absorption coefficient</em> is given by \(\mu/\varrho\).</p>
+
+<p>The <em>radiation dose</em> \(X\) is the amount of charge produced by the radiation per unit of mass, with unit C/kg. An old unit is the R&ouml;ntgen: 1Ro\(=2.58\cdot10^{-4}\) C/kg. With the energy-absorption coefficient \(\mu_E\) follows: \[X=\frac{dQ}{dm}=\frac{e\mu_E}{W\varrho}\Psi\] where \(W\) is the energy required to disjoin an elementary charge.</p>
+
+<p>The <em>absorbed dose</em> \(D\) is given by \(D=dE_{\rm abs}/dm\), with unit Gy=J/kg. An old unit is the rad: 1 rad=0.01 Gy. The <em>dose tempo</em> is defined as \(\dot{D}\). It can be derived that \[D=\frac{\mu_E}{\varrho}\Psi\] The <em>Kerma</em> \(K\) is the amount of kinetic energy of secundary produced particles which is produced per mass unit of the radiated object.</p>
+
+<p>The <em>equivalent dose</em> \(H\) is a weight average of the absorbed dose per type of radiation, where for each type radiation the effects on biological material is used for the weight factor. These weight factors are called the quality factors. Their unit is Sv. \(H=QD\). If the absorption is not equally distributed also weight factors \(w\) per organ need to be used: \(H=\sum w_k H_k\). For some types of radiation holds:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<th>Radiation type<th>Q
+<tr>
+<td>R&ouml;ntgen, gamma radiation</td> <td>1</td>
+<tr>
+<td>\(\beta\), electrons, mesons</td> <td>1</td>
+<tr>
+<td>Thermic neutrons </td> <td>3 to 5</td>
+<tr>
+<td>Fast neutrons</td> <td>10 to 20</td>
+<tr>
+<td>protons</td> <td>10</td>
+<tr>
+<td>\(\alpha\), fission products</td> <td>20</td>
+<tr>
+</table>
+</p>
+
+</body>
+</head>

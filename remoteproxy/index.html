@@ -1,0 +1,82 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<title>Remote Proxy Controller for the Junkbuster Filtering proxy</title>
+<meta name="description" content="Remote Proxy Controller">
+<meta name="keywords" content="filtering, junkbuster, spam, remote control, windows NT, service">
+</head>
+<body background="../equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#9999ff">
+
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+<h1 align="center">The Junkbuster Filtering proxy as winNT/2000 service</h1>
+
+<h2>The Junkbuster Filtering proxy</h2>
+The <a href="http://www.junkbusters.com/">Junkbuster Proxy</a> is a filtering
+HTTP proxy. Unlike <a href="http://censorware.net/">censorware</a> (sometimes
+given euphemistic names like "family filter") this proxy allows the user to
+choose its own filtering rules. It is usually used to block annoying banner
+ads like the ones from Doubleclick.
+<p>
+However, I found the use of it under windows NT/2000 less than optimal. One
+could start it in the run section of the registry, but then it would only
+start after a user has logged in. This makes it difficult to use it as a
+normal proxy for background processes.
+<p>
+The situation under Linux is much better: there it just runs as a deamon.
+So the trick was to convert Junkbusters to the WinNT equivalent of a Unix
+deamon, a service. The source code presented here is an expansion to the
+original Junkbusters code, with an extra compile target. The service
+executable is included for those who do not have a compiler available.
+<p>
+You can install the Junkbusters service by running the executable with
+the <tt>-i</tt> or <tt>--install</tt> flag, uninstall it with <tt>-u</tt>
+or <tt>--uninstall</tt>, and check the setup with <tt>-t</tt> or <tt>--test</tt>.
+
+<h2>Remote Proxy Controller</h2>
+Because I already had written a <a href="../rscc/index.html">program to
+remotely administer</a> the <a href="http://www.distributed.net/">distributed.net</a>
+client on a WinNT domain, I decided to adapt this program for the service
+version of Junkbusters. This is Remote Proxy Controller. It works very similar.
+<p>
+The program is distributed under the terms of the
+<a href="../rscc/COPYING">GNU General Public License</a>, as is Junkbuster.
+
+<h2>How it works</h2>
+The main form is shown below.
+<p>
+<img src="remproxy.gif" alt="Picture of main form">
+<p>
+The usage of the program is almost identical to that of
+<a href="../rscc/index.html">RSCC</a>. Only the default setup differs
+significantly because there are now several inifiles to select, and the
+user can select whether he wants to select them manually or copy them from
+the exact locations given in the main inifile.
+<p>
+<img src="remproxydefsetup.gif" alt="The default setup form">
+<p>
+<strong>Warning: Remote Proxy Controller cannot correctly handle main inifiles
+where other inifiles do not have a path, or are defined with UNC paths! In
+those cases you have to select all inifilenames manually.</strong>
+
+
+<h2>Download</h2>
+Here you can download the current versions of both programs.
+<p>
+<ul>
+<li><a href="ijb203.zip">ijb203.zip</a> (214kb):
+    Source code and service executable of the Junkbuster Filtering Proxy.
+<li><a href="remproxy-src-1.2.zip">remproxy-src-1.2.zip</a> (94kb):
+    Source code for Remote Proxy Controller. Requires Borland C++ Builder 3 to compile.
+<li><a href="remproxy-bin-1.2.zip">remproxy-bin-1.2.zip</a> (292kb):
+    Executable for Remote Proxy Controller.
+</ul>
+
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+
+</body>
+</html>
+

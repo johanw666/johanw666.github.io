@@ -1,0 +1,5 @@
+; Patch: Totally remove recording tone
+; by mantrinilesh
+; try every line. uncomment new and comment old
+; saaudioserver.dll
+SnR:sys\bin\SaAudioServer.dll:3EB504460020:3EB53EBD0020

@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>Symbian trics and programs</title>
+<meta name="description" content="Symbian trics and programs">
+<meta name="keywords" content="Symbian, Nokia, maps">
+</head>
+<body background="equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#990099" alink="#9999ff">
+
+<h1>Symbian trics and programs</h1>
+Now that Microsoft has destroyed Nokia it becomes increasingly difficult to find good
+Symbian programs on the internet. Although still a lot of Symbian smartphones are in use,
+distributors like Google and Microsoft have removed the Symbian versions of programs like
+Google Maps, Skype and Youtube from their download sites. What still can be found is often
+hidden away after logins on fora like <a href="http://www.ipmart-forum.com/">IPmart</a>, and
+links to filelockers there are often out of date.
+<p>
+So as being a kind of Symbian enthousiast myself, still using a Nokia E72, I decided to collect
+some Symbian software and some usefull trics here, free for everyone to download.
+
+<h1>Rooting Symbian</h1>
+Since S60v3, Symbian installers (.sis and .sisx files) have to be signed. It used to be the
+case that you could get a developer certificate that allowed you to sign software for only
+one phone at sites like <a href="http://cer.opda.cn/en/">OPDA</a> but Nokia has decded to
+cut that route. Fortunately rooting Symbian is fairly easy, and the one advantage of it
+being a"dead" platform is that there won't be any"fixes" to prevent these routes.
+<p>
+I found the explanation and tools on
+<a href="http://symbianism.blogspot.nl/2011/09/symbian3-hacks-alive-and-kicking-norton.html">Symbian Underground</a>.
+The use of Norton is the easyest, however I noticed that Norton does not want to startup if there
+is no working simcard in the phone. This method will allow you to install unsigned sis installers
+and give you access to hidden system folders. The goal is to install
+<a href="patches/RomPatcherPlus_3.1_LiteVersion.sisx">Rompatcher</a>, a program to make changes
+in system files at runtime to remove certain restrictions.
+<a href="patches/RomPatcherPlus_3.1_LiteVersion.sisx">Rompatcher</a> requires some files present
+in system directories that are not writable for users, but there is a workaround. It is based
+on the fact that anti-virus tools have write access to all directories. Hackers have succeeded
+in puting the required files in the quarantine list of the virusscanners, so a simple restore
+will put them there.
+<p>
+Symbian hack by Norton Security. By CODeRUS.
+<p>
+<ol>
+<li>Install <a href="patches/NortonSymbianHackLDD.sis">NortonSymbianHackLDD.sis</a>.
+<li>Launch Norton
+<li>Go Options- Anti-Virus - Quarantine list
+<li>Go Options - Restore All, accept prompt
+<li>Exit application, delete from App manager (Symantec Symbian Hack). Also delete c:\shared\ folder.
+<li>Install <a href="patches/RomPatcherPlus_3.1_LiteVersion.sisx">Rompatcher</a>.
+<li>Launch and apply patches:
+<ul>
+<li>Open4all for full access to file system.
+<li>Installserver for installing any unsigned applications (if red cross - get installserver.exe
+from <a href="patches/installservers_pack.zip">this collection</a>. Read the info file to see which
+one you need).
+<li>Set patches to auto if needed (Options - Add to auto).
+</ul>
+</ol>
+<p>
+Now you can apply other patches as well. Just copy the patch file (usually with extension <tt>.rmp</tt>)
+to <tt>C:\Patches</tt> on the phone and it will show up in Rompatchers menu. Remember that these
+patches can be model and even software version specific, so if it works on one phone it might
+not work on another. One usefull patch I found for my E72 was a patch to remove the audio beep when
+recording a phone conversation.
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">Patch<th align="center">Comfirmed working on these phone models<th align="center">Function
+<tr>
+<td><a href="patches/RemoveBeepE72.rmp">RemoveBeepE72.rmp</a></td> <td align="center">Nokia E72</td><td align="center">Remove beep while recording a phone call</td>
+<tr>
+</table>
+
+<h1>Symbian programs</h1>
+This is a list of usefull programs for Symbian. The ones with "unsigned" in their name require
+a rooted phone or (in most cases) a developer certificate.
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">Program<th align="center">Description
+<tr>
+<td><a href="progs/ActiveFile_1.44_S60_3X_5X-basic.sisx">ActiveFile_1.44_S60_3X_5X-basic.sisx</a></td> <td align="left">File manager. Signed installer so no rooted phone required, but with limited access.</td>
+<tr>
+<td><a href="progs/ActiveFile_1.44_S60_3X_5X-extended_unsigned.sis">ActiveFile_1.44_S60_3X_5X-extended_unsigned.sis</a></td> <td align="left">File manager with extended rights. Developer certificate or rooted phone required.</td>
+<tr>
+<td><a href="progs/ActiveFile_1.44_S60_3X_5X-manufacturer_unsigned.sis">ActiveFile_1.44_S60_3X_5X-manufacturer_unsigned.sis</a></td> <td align="left">File manager. Full access, rooted phone required.</td>
+<tr>
+<td><a href="progs/AlternateDjVu_1.06_S60v3_signed.sisx">AlternateDjVu_1.06_S60v3_signed.sisx</a></td> <td align="left">A djvu (a format mostly used for scanned books) viewer.</td>
+<tr>
+<td><a href="progs/bubue_books_1207_231002.sisx">bubue_books_1207_231002.sisx</a></td> <td align="left">An epub reader.</td>
+<tr>
+<td><a href="progs/CorePlayer-1.36.7427-unsigned.sisx">CorePlayer-1.36.7427-unsigned.sisx</a></td> <td align="left">A videoplayer that plays most common videoformats and remembers where you stopped last time. Much better than the Realplayer that Nokia includes in its software. Unfortunately the development has ceased. An Android version was promised but never released.</td>
+<tr>
+<td><a href="progs/dedit9_0.76_r12.sis">dedit9_0.76_r12.sis</a></td> <td align="left">A text editor.</td>
+<tr>
+<td><a href="progs/FieldTest_9.2_new.sisx">FieldTest_9.2_new.sisx</a></td> <td align="left">Fieldtest. Shows data from the network, a program comparable with the Netmonitor program on the 3310.</td>
+<tr>
+<td><a href="progs/GoogleMaps-3.2.0.sisx">GoogleMaps-3.2.0.sisx</a></td> <td align="left">Google Maps client. The one without the already cancelled Google Wave.</td>
+<tr>
+<td><a href="progs/Joikusoft JoikuSpot Premium v.3.10(977) s60v5 S^3 Express Signed by AirSac.sis">Joikusoft JoikuSpot Premium v.3.10(977) s60v5 S^3 Express Signed by AirSac.sis</a></td> <td align="left">A program to make a WIFI hotspot from your phone.</td>
+<tr>
+<td><a href="progs/largetime-1.04.sisx">largetime-1.04.sisx</a></td> <td align="left">An open source screensaver that shows a large clock. The sourcecode is <a href="progs/largetime-1.04-source.zip">here</a>.</td>
+<tr>
+<td><a href="progs/northpole0.86.sisx">northpole0.86.sisx</a></td> <td align="left">A compass for phones with a magnetometer like the E72.</td>
+<tr>
+<td><a href="progs/PhoNetInfo_4.0.0.sisx">PhoNetInfo_4.0.0.sisx</a></td> <td align="left">Shows information from the phone and the network.</td>
+<tr>
+<td><a href="progs/putty_s60v3_1.5.2.sisx">putty_s60v3_1.5.2.sisx</a></td> <td align="left">Putty is a ssh client More information on the Symbian version can be found <a href="http://s2putty.sourceforge.net/">here</a>.</td>
+<tr>
+<td><a href="progs/sic_ftp_3rd.sisx">sic_ftp_3rd.sisx</a></td> <td align="left">An ftp client.</td>
+<tr>
+<td><a href="progs/SIP_VoIP_3_1_Settings_S60_5_x_v1_0_en.sis">SIP_VoIP_3_1_Settings_S60_5_x_v1_0_en.sis</a></td> <td align="left">Advanced VOIP settings for S60v5 phones.</td>
+<tr>
+<td><a href="progs/SIP_VoIP_3_1_Settings_Symbian_3_v1_0_en.sis">SIP_VoIP_3_1_Settings_Symbian_3_v1_0_en.sis</a></td> <td align="left">Advanced VOIP settings for Symbian^3 phones.</td>
+<tr>
+<td><a href="progs/SIP_VoIP_3_x_Settings_v2_0_en.sis">SIP_VoIP_3_x_Settings_v2_0_en.sis</a></td> <td align="left">Advanced VOIP settings for S60v3 FP2 phones like the E72.</td>
+<tr>
+<td><a href="progs/SIP_VoIP_Settings_v1_2_en.sis">SIP_VoIP_Settings_v1_2_en.sis</a></td> <td align="left">Advanced VOIP settings for S60v3 and S60v3 FP1 phones like the E51.</td>
+<tr>
+<td><a href="progs/Skype_S60_3.0_v1.5.0.12.sisx">Skype_S60_3.0_v1.5.0.12.sisx</a></td> <td align="left">A Skype client for S60v3 (the non-touchscreen phones).</td>
+<tr>
+<td><a href="progs/skype_S60_5.0_v2.0.06.sis">skype_S60_5.0_v2.0.06.sis</a></td> <td align="left">A Skype client for S60v5 (the touchscreen phones).</td>
+<tr>
+<td><a href="progs/Symella_1.41_2009-12-11.sisx">Symella_1.41_2009-12-11.sisx</a></td> <td align="left">A Gnutella client (watch your data usage!). The sourcecode is <a href="progs/Symella_1.41_source.zip">here</a>.</td>
+<tr>
+<td><a href="progs/SymTorrent1.50_2011-03-05.sis">SymTorrent1.50_2011-03-05.sis</a></td> <td align="left">A torrent client (watch your data usage!). The sourcecode is <a href="progs/SymTorrent_1.50_source_minus_screenshots.zip">here</a>.</td>
+<tr>
+<td><a href="progs/Youtube_2.4.10.sisx">Youtube_2.4.10.sisx</a></td> <td align="left">Youtube client for Symbian.</td>
+<tr>
+</table>
+<p>
+<a href="http://www.smartphoneware.com/">Smartphoneware</a> has a nice collection of Symbian
+programs available. You can download free trials, and <a href="best_products_keygen.exe">here</a>
+is a free keygen to register them.
+
+<h1>Java midlets</h1>
+Some usefull Java midlets:
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">Jar file (actual program)<th align="center">Jad file (sometimes required)<th align="center">Description
+<tr>
+  <td><a href="progs/cryptosms1.1.1.jar">cryptosms1.1.1.jar</a></td> 
+  <td><a href="progs/cryptosms1.1.1.jad">cryptosms1.1.1.jad</a></td> 
+  <td align="left">A program to send encrypted sms, with elleptic curve public key's. See <a href="http://www.cryptosms.org">Cryptosms.org</a> for more information.</td>
+<tr>
+  <td><a href="progs/Youtube_Downloader_v1.1_10.jar">Youtube_Downloader_v1.1_10.jar</a></td> 
+  <td>-</td> 
+  <td align="left">A Youtube downloader.</td>
+<tr>
+</table>
+A Java client for reading epubs on your phone can be found <a href="http://albite.org/reader">here</a>.
+It has multiple installers for different phone types. It has much more functionality than Bubue books
+but because the midlet is not signed it will give security questions on Nokia E series phones.
+Patches to override these security measures exist but are complicated to install.
+
+<h1>Nokia Maps speedtrap lists</h1>
+One of the great things of Nokia Maps was that it could warn you for speedtraps. Unfortunately,
+due to some legal pressure Nokia has removed this information from its application and distributes
+now an empty speedtrap file. Fortunately people saved some of those files before the data was
+removed, so I'm offering them here. Copy the file(s) to the memorycard (usually the <tt>E:</tt>
+drive, on some models it can be <tt>F:</tt>) to the map <tt>\cities\diskcache\safetyspots</tt>.
+<p>
+The last file for Europe, with empty data, is called <tt>1.0.0.602.europe.cdt</tt>. You can rename
+the <tt>1.0.0.594.europe.cdt</tt> file to <tt>1.0.0.602.europe.cdt</tt> to prevent the updater
+from overwriting it if you run Nokia Maps in online mode.
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">File<th align="center">Continent
+<tr>
+  <td><a href="maps/1.0.0.10.australia.cdt">1.0.0.10.australia.cdt</a></td> 
+  <td>Australia</td> 
+<tr>
+  <td><a href="maps/1.0.0.22.china.cdt">1.0.0.22.china.cdt</a></td> 
+  <td>China</td> 
+<tr>
+  <td><a href="maps/1.0.0.594.europe.cdt">1.0.0.594.europe.cdt</a></td> 
+  <td>Europe</td> 
+<tr>
+</table>
+
+</body>
+</html>

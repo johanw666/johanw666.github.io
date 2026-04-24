@@ -1,0 +1,486 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Basics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="1">1. Basics</a></h1>
+<h2><a name="1.1">1.1 Goniometric functions</a></h2>
+
+For the goniometric ratios for a point $p$ on the unit circle holds:
+\[
+\cos(\phi)=x_p~~,~~\sin(\phi)=y_p~~,~~\tan(\phi)=\frac{y_p}{x_p}
+\]
+$\sin^2(x)+\cos^2(x)=1$ and $\cos^{-2}(x)=1+\tan^2(x)$.
+\[
+\cos(a\pm b)=\cos(a)\cos(b)\mp\sin(a)\sin(b)~~,~~
+\sin(a\pm b)=\sin(a)\cos(b)\pm\cos(a)\sin(b)
+\]
+\[
+\tan(a\pm b)=\frac{\tan(a)\pm\tan(b)}{1\mp\tan(a)\tan(b)}
+\]
+The <strong>sum formulas</strong> are:
+\begin{eqnarray*}
+\sin(p)+\sin(q)&=&2\sin(\frac{1}{2}(p+q))\cos(\frac{1}{2}(p-q))\\
+\sin(p)-\sin(q)&=&2\cos(\frac{1}{2}(p+q))\sin(\frac{1}{2}(p-q))\\
+\cos(p)+\cos(q)&=&2\cos(\frac{1}{2}(p+q))\cos(\frac{1}{2}(p-q))\\
+\cos(p)-\cos(q)&=&-2\sin(\frac{1}{2}(p+q))\sin(\frac{1}{2}(p-q))\\
+\end{eqnarray*}
+From these equations can be derived that
+\begin{eqnarray*}
+2\cos^2(x)=1+\cos(2x)   &~~,~~&2\sin^2(x)=1-\cos(2x)\\
+\sin(\pi-x)=\sin(x)     &~~,~~&\cos(\pi-x)=-\cos(x)\\
+\sin(\frac{1}{2}\pi-x)=\cos(x)&~~,~~&\cos(\frac{1}{2}\pi-x)=\sin(x)
+\end{eqnarray*}
+<strong>Conclusions from equalities</strong>:
+\begin{eqnarray*}
+\underline{\sin(x)=\sin(a)}&~~\Rightarrow~~&x=a\pm2k\pi\mbox{ or }x=(\pi-a)\pm2k\pi,~~k\in I\hspace{-1mm}N \\
+\underline{\cos(x)=\cos(a)}&~~\Rightarrow~~&x=a\pm2k\pi\mbox{ or }x=-a\pm2k\pi\\
+\underline{\tan(x)=\tan(a)}&~~\Rightarrow~~&x=a\pm k\pi\mbox{ and }x\neq\frac{\pi}{2}\pm k\pi
+\end{eqnarray*}
+The following relations exist between the inverse goniometric functions:
+\[
+\arctan(x)=\arcsin\left(\frac{x}{\sqrt{x^2+1}}\right)=\arccos\left(\frac{1}{\sqrt{x^2+1}}\right)~~,~~
+\sin(\arccos(x))=\sqrt{1-x^2}
+\]
+
+<h2><a name="1.2">1.2 Hyperbolic functions</a></h2>
+The hyperbolic functions are defined by:
+\[
+\sinh(x)=\frac{{\rm e}^x-{\rm e}^{-x}}{2}~~,~~~\cosh(x)=\frac{{\rm e}^x+{\rm e}^{-x}}{2}~~,~~~\tanh(x)=\frac{\sinh(x)}{\cosh(x)}
+\]
+From this follows that $\cosh^2(x)-\sinh^2(x)=1$. Further holds:
+\[
+{\rm arsinh}(x)=\ln|x+\sqrt{x^2+1}|~~~,~~~{\rm arcosh}(x)={\rm arsinh}(\sqrt{x^2-1})
+\]
+
+<h2><a name="1.3">1.3 Calculus</a></h2>
+The derivative of a function is defined as:
+\[
+\frac{df}{dx}=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}
+\]
+Derivatives obey the following algebraic rules:
+\[
+d(x\pm y)=dx\pm dy~~,~~d(xy)=xdy+ydx~~,~~d\left(\frac{x}{y}\right)=\frac{ydx-xdy}{y^2}
+\]
+For the derivative of the inverse function $f^{\rm inv}(y)$, defined by
+$f^{\rm inv}(f(x))=x$, holds at point $P=(x,f(x))$:
+\[
+\left(\frac{df^{\rm inv}(y)}{dy}\right)_P\cdot\left(\frac{df(x)}{dx}\right)_P=1
+\]
+Chain rule: if $f=f(g(x))$, then holds
+\[
+\frac{df}{dx}=\frac{df}{dg}\frac{dg}{dx}
+\]
+Further, for the derivatives of products of functions holds:
+\[
+(f\cdot g)^{(n)}=\sum\limits_{k=0}^n{n\choose k}f^{(n-k)}\cdot g^{(k)}
+\]
+For the <em>primitive function</em> $F(x)$ holds: $F'(x)=f(x)$.
+An overview of derivatives and primitives is:
+<p align="center">
+<table align="center" border=1>
+<tr>
+<th align="center">$y=f(x)$<th align="center">$dy/dx=f'(x)$<th align="center">$\int f(x)dx$
+<tr>
+<td>$ax^n$</td> <td>$anx^{n-1}$</td><td>$a(n+1)^{-1}x^{n+1}$</td>
+<tr>
+<td>$1/x$</td> <td>$-x^{-2}$</td><td>$\ln|x|$</td>
+<tr>
+<td>$a$</td> <td>0</td><td>$ax$</td>
+<tr>
+<td></td> <td></td><td></td>
+<tr>
+<td>$a^x$</td> <td>$a^x\ln(a)$</td><td>$a^x/\ln(a)$</td>
+<tr>
+<td>${\rm e}^x$</td> <td>${\rm e}^x$</td><td>${\rm e}^x$</td>
+<tr>
+<td>$^a\log(x)$</td> <td>$(x\ln(a))^{-1}$</td><td>$(x\ln(x)-x)/\ln(a)$</td>
+<tr>
+<td>$\ln(x)$</td> <td>$1/x$</td><td>$x\ln(x)-x$</td>
+<tr>
+<td></td> <td></td><td></td>
+<tr>
+<td>$\sin(x)$</td> <td>$\cos(x)$</td><td>$-\cos(x)$</td>
+<tr>
+<td>$\cos(x)$</td> <td>$-\sin(x)$</td><td>$\sin(x)$</td>
+<tr>
+<td>$\tan(x)$</td> <td>$\cos^{-2}(x)$</td><td>$-\ln|\cos(x)|$</td>
+<tr>
+<td>$\sin^{-1}(x)$</td> <td>$-\sin^{-2}(x)\cos(x)$</td><td>$\ln|\tan(\frac{1}{2} x)|$</td>
+<tr>
+<td>$\sinh(x)$</td> <td>$\cosh(x)$</td><td>$\cosh(x)$</td>
+<tr>
+<td>$\cosh(x)$</td> <td>$\sinh(x)$</td><td>$\sinh(x)$</td>
+<tr>
+<td>$\arcsin(x)$</td> <td>$1/\sqrt{1-x^2}$</td><td>$x\arcsin(x)+\sqrt{1-x^2}$</td>
+<tr>
+<td>$\arccos(x)$</td> <td>$-1/\sqrt{1-x^2}$</td><td>$x\arccos(x)-\sqrt{1-x^2}$</td>
+<tr>
+<td>$\arctan(x)$</td> <td>$(1+x^2)^{-1}$</td><td>$x\arctan(x)-\frac{1}{2}\ln(1+x^2)$</td>
+<tr>
+<td></td> <td></td><td></td>
+<tr>
+<td>$(a+x^2)^{-1/2}$</td> <td>$-x(a+x^2)^{-3/2}$</td><td>$\ln|x+\sqrt{a+x^2}|$</td>
+<tr>
+<td>$(a^2-x^2)^{-1}$</td> <td>$2x(a^2+x^2)^{-2}$</td><td>$\displaystyle\frac{1}{2a}\ln|(a+x)/(a-x)|$</td>
+<tr>
+</table>
+</p>
+The <em>curvature</em> $\rho$ of a curve is given by:
+$\displaystyle\rho=\frac{(1+(y')^2)^{3/2}}{|y''|}$
+<p>
+The theorem of De 'l H\^opital: if $f(a)=0$ and $g(a)=0$, then is
+$\displaystyle\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}$
+
+<h2><a name="1.4">1.4 Limits</a></h2>
+\[
+\lim_{x\rightarrow0}\frac{\sin(x)}{x}=1~~,~~
+\lim_{x\rightarrow0}\frac{{\rm e}^x-1}{x}=1~~,~~
+\lim_{x\rightarrow0}\frac{\tan(x)}{x}=1~~,~~
+\lim_{k\rightarrow0}(1+k)^{1/k}={\rm e}~~,~~
+\lim_{x\rightarrow\infty}\left(1+\frac{n}{x}\right)^x={\rm e}^n
+\]
+\[
+\lim_{x\downarrow0}x^a\ln(x)=0~~,~~
+\lim_{x\rightarrow\infty}\frac{\ln^p(x)}{x^a}=0~~,~~
+\lim_{x\rightarrow0}\frac{\ln(x+a)}{x}=a~~,~~
+\lim_{x\rightarrow\infty}\frac{x^p}{a^x}=0~~\mbox{als }|a|>1.
+\]
+\[
+\lim_{x\rightarrow0}\left(a^{1/x}-1\right)=\ln(a)~~,~~
+\lim_{x\rightarrow0}\frac{\arcsin(x)}{x}=1~~,~~
+\lim_{x\rightarrow\infty}\sqrt[x]{x}=1
+\]
+
+<h2><a name="1.5">1.5 Complex numbers and quaternions</a></h2>
+<h3><a name="1.5.1">1.5.1 Complex numbers</a></h3>
+The complex number $z=a+bi$ with $a$ and $b\in I\hspace{-1mm}R$. $a$ is the <em>real part</em>,
+$b$ the <em>imaginary part</em> of $z$. $|z|=\sqrt{a^2+b^2}$. By definition
+holds: $i^2=-1$. Every complex number can be written as $z=|z|\exp(i\varphi)$,
+with $\tan(\varphi)=b/a$. The <em>complex conjugate</em> of $z$ is defined as
+$\overline{z}=z^*:=a-bi$. Further holds:
+\begin{eqnarray*}
+(a+bi)(c+di)&=&(ac-bd)+i(ad+bc)\\
+(a+bi)+(c+di)&=&a+c+i(b+d)\\
+\frac{a+bi}{c+di}&=&\frac{(ac+bd)+i(bc-ad)}{c^2+d^2}
+\end{eqnarray*}
+Goniometric functions can be written as complex exponents:
+\begin{eqnarray*}
+\sin(x)&=&\frac{1}{2i}({\rm e}^{ix}-{\rm e}^{-ix})\\
+\cos(x)&=&\frac{1}{2}({\rm e}^{ix}+{\rm e}^{-ix})
+\end{eqnarray*}
+From this follows that $\cos(ix)=\cosh(x)$ and $\sin(ix)=i\sinh(x)$.
+Further follows from this that\newline
+${\rm e}^{\pm ix}=\cos(x)\pm i\sin(x)$, so
+${\rm e}^{iz}\neq0\forall z$. Also the theorem of De Moivre follows from
+this:\\ $(\cos(\varphi)+i\sin(\varphi))^n=\cos(n\varphi)+i\sin(n\varphi)$.
+<p>
+Products and quotients of complex numbers can be written as:
+\begin{eqnarray*}
+z_1\cdot z_2&=&|z_1|\cdot|z_2|(\cos(\varphi_1+\varphi_2)+i\sin(\varphi_1+\varphi_2))\\
+\frac{z_1}{z_2}&=&\frac{|z_1|}{|z_2|}(\cos(\varphi_1-\varphi_2)+i\sin(\varphi_1-\varphi_2))
+\end{eqnarray*}
+The following can be derived:
+\[
+|z_1+z_2|\leq|z_1|+|z_2|~~,~~|z_1-z_2|\geq|~|z_1|-|z_2|~|
+\]
+And from $z=r\exp(i\theta)$ follows: $\ln(z)=\ln(r)+i\theta$, $\ln(z)=\ln(z)\pm2n\pi i$.
+
+<h3><a name="1.5.2">1.5.2 Quaternions</a></h3>
+Quaternions are defined as: $z=a+bi+cj+dk$, with $a,b,c,d\in I\hspace{-1mm}R$ and
+$i^2=j^2=k^2=-1$. The products of $i,j,k$ with each other are given by
+$ij=-ji=k$, $jk=-kj=i$ and $ki=-ik=j$.
+
+<h2><a name="1.6">1.6 Geometry</a></h2>
+<h3><a name="1.6.1">1.6.1 Triangles</a></h3>
+The sine rule is:
+\[
+\frac{a}{\sin(\alpha)}=\frac{b}{\sin(\beta)}=\frac{c}{\sin(\gamma)}
+\]
+Here, $\alpha$ is the angle opposite to $a$, $\beta$ is opposite to $b$ and
+$\gamma$ opposite to $c$. The cosine rule is: $a^2=b^2+c^2-2bc\cos(\alpha)$.
+For each triangle holds: $\alpha+\beta+\gamma=180^\circ$.
+<p>
+Further holds:
+\[
+\frac{\tan(\frac{1}{2}(\alpha+\beta))}{\tan(\frac{1}{2}(\alpha-\beta))}=\frac{a+b}{a-b}
+\]
+The surface of a triangle is given by $\frac{1}{2} ab\sin(\gamma)=\frac{1}{2} ah_a=\sqrt{s(s-a)(s-b)(s-c)}$
+with $h_a$ the perpendicular on $a$ and $s=\frac{1}{2}(a+b+c)$.
+
+<h3><a name="1.6.2">1.6.2 Curves</a></h3>
+<strong>Cycloid</strong>: if a circle with radius $a$ rolls along a straight line, the
+trajectory of a point on this circle has the following parameter equation:
+\[
+x=a(t+\sin(t))~~,~~y=a(1+\cos(t))
+\]
+<strong>Epicycloid</strong>: if a small circle with radius $a$ rolls along a big circle
+with radius $R$, the trajectory of a point on the small circle has the
+following parameter equation:
+\[
+x=a\sin\left(\frac{R+a}{a}t\right)+(R+a)\sin(t)~~,~~
+y=a\cos\left(\frac{R+a}{a}t\right)+(R+a)\cos(t)
+\]
+<strong>Hypocycloid</strong>: if a small circle with radius $a$ rolls inside a big circle
+with radius $R$, the trajectory of a point on the small circle has the
+following parameter equation:
+\[
+x=a\sin\left(\frac{R-a}{a}t\right)+(R-a)\sin(t)~~,~~
+y=-a\cos\left(\frac{R-a}{a}t\right)+(R-a)\cos(t)
+\]
+A hypocycloid with $a=R$ is called a <strong>cardioid</strong>. It has the following
+parameterequation in polar coordinates: $r=2a[1-\cos(\varphi)]$.
+
+<h2><a name="1.7">1.7 Vectors</a></h2>
+The <em>inner product</em> is defined by:
+$\displaystyle\vec{a}\cdot\vec{b}=\sum_i a_ib_i=|\vec{a}|\cdot|\vec{b}|\cos(\varphi)$
+<p>
+where $\varphi$ is the angle between $\vec{a}$ and $\vec{b}$. The <em>external
+product</em> is in $ I\hspace{-1mm}R^3$ defined by:
+\[
+\vec{a}\times\vec{b}=\left(\begin{array}{c}
+a_yb_z-a_zb_y\\
+a_zb_x-a_xb_z\\
+a_xb_y-a_yb_x\end{array}\right)=
+\left|\begin{array}{ccc}
+\vec{e}_x&\vec{e}_y&\vec{e}_z\\
+a_x&a_y&a_z\\
+b_x&b_y&b_z\end{array}\right|
+\]
+Further holds: $|\vec{a}\times\vec{b}|=|\vec{a}|\cdot|\vec{b}|\sin(\varphi)$, and
+$\vec{a}\times(\vec{b}\times\vec{c})=(\vec{a}\cdot\vec{c})\vec{b}-(\vec{a}\cdot\vec{b})\vec{c}$.
+
+<h2><a name="1.8">1.8 Series</a></h2>
+<h3><a name="1.8.1">1.8.1 Expansion</a></h3>
+The Binomium of Newton is:
+\[
+(a+b)^n=\sum_{k=0}^n{n\choose k}a^{n-k}b^k
+\]
+where $\displaystyle{n\choose k}:=\frac{n!}{k!(n-k)!}$.
+<p>
+By subtracting the series $\sum\limits_{k=0}^n r^k$ and $r\sum\limits_{k=0}^n r^k$
+one finds:
+\[
+\sum_{k=0}^n r^k=\frac{1-r^{n+1}}{1-r}
+\]
+and for $|r|<1$ this gives the <em>geometric series</em>:
+$\displaystyle\sum_{k=0}^\infty r^k=\frac{1}{1-r}$.
+<p>
+The <em>arithmetic series</em> is given by:
+$\displaystyle\sum_{n=0}^N(a+nV)=a(N+1)+\frac{1}{2} N(N+1)V$.
+<p>
+The expansion of a function around the point $a$ is given by the
+<em>Taylor series</em>:
+\[
+f(x)=f(a)+(x-a)f'(a)+\frac{(x-a)^2}{2}f''(a)+\cdots+\frac{(x-a)^n}{n!}f^{(n)}(a)+R
+\]
+where the remainder is given by:
+\[
+R_n(h)=(1-\theta)^n\frac{h^n}{n!}f^{(n+1)}(\theta h)
+\]
+and is subject to:
+\[
+\frac{mh^{n+1}}{(n+1)!}\leq R_n(h)\leq\frac{Mh^{n+1}}{(n+1)!}
+\]
+From this one can deduce that
+\[
+(1-x)^\alpha=\sum_{n=0}^\infty{\alpha\choose n}x^n
+\]
+One can derive that:
+\[
+\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}~,~~
+\sum_{n=1}^\infty\frac{1}{n^4}=\frac{\pi^4}{90}~,~~
+\sum_{n=1}^\infty\frac{1}{n^6}=\frac{\pi^6}{945}
+\]
+\[
+\sum_{k=1}^nk^2=\mbox{$\frac{1}{6}$}n(n+1)(2n+1)~,~~
+\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n^2}=\frac{\pi^2}{12}~,~~
+\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}=\ln(2)
+\]
+\[
+\sum_{n=1}^\infty\frac{1}{4n^2-1}=\mbox{$\frac{1}{2}$}~,~~
+\sum_{n=1}^\infty\frac{1}{(2n-1)^2}=\frac{\pi^2}{8}~,~~
+\sum_{n=1}^\infty\frac{1}{(2n-1)^4}=\frac{\pi^4}{96}~,~~
+\sum_{n=1}^\infty\frac{(-1)^{n+1}}{(2n-1)^3}=\frac{\pi^3}{32}
+\]
+
+<h3><a name="1.8.2">1.8.2 Convergence and divergence of series</a></h3>
+If $\sum\limits_n|u_n|$ converges, $\sum\limits_n u_n$ also converges.
+<p>
+If $\lim\limits_{n\rightarrow\infty}u_n\neq0$ then $\sum\limits_n u_n$ is divergent.
+<p>
+An alternating series of which the absolute values of the terms drop
+monotonously to 0 is convergent (Leibniz).
+<p>
+If $\int_p^{\infty}f(x)dx<\infty$, then $\sum\limits_n f_n$ is convergent.
+<p>
+If $u_n>0~\forall n$ then is $\sum\limits_n u_n$ convergent <em>if</em>
+$\sum\limits_n\ln(u_n+1)$ is convergent.
+<p>
+If $u_n=c_nx^n$ the radius of convergence $\rho$ of
+$\sum\limits_n u_n$ is given by:
+$\displaystyle\frac{1}{\rho}=\lim_{n\rightarrow\infty}\sqrt[n]{|c_n|}=
+\lim_{n\rightarrow\infty}\left|\frac{c_{n+1}}{c_n}\right|$.
+<p>
+The series $\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}$ is convergent if
+$p>1$ and divergent if $p\leq1$.
+<p>
+If: $\displaystyle\lim_{n\rightarrow\infty}\frac{u_n}{v_n}=p$,
+than the following is true: if $p>0$ than $\sum\limits_{n}u_n$ and $\sum\limits_{n}v_n$
+are both divergent or both convergent, if $p=0$ holds: if $\sum\limits_{n}v_n$
+is convergent, than $\sum\limits_{n}u_n$ is also convergent.
+<p>
+If $L$ is defined by:
+$\displaystyle L=\lim_{n\rightarrow\infty}\sqrt[n]{|n_n|}$, or by:
+$\displaystyle L=\lim_{n\rightarrow\infty}\left|\frac{u_{n+1}}{u_n}\right|$,
+then is $\sum\limits_{n}u_n$ divergent if $L>1$ and convergent if $L<1$.
+
+<h3><a name="1.8.3">1.8.3 Convergence and divergence of functions</a></h3>
+\label{sec:convf}
+$f(x)$ is continuous in $x=a$ only if the upper - and lower limit are equal:
+$\lim\limits_{x\uparrow a}f(x)=\lim\limits_{x\downarrow a}f(x)$.
+This is written as: $f(a^-)=f(a^+)$.
+<p>
+If $f(x)$ is continuous in $a$ <em>and</em>:
+$\lim\limits_{x\uparrow a}f'(x)=\lim\limits_{x\downarrow a}f'(x)$,
+<em>then</em> $f(x)$ is differentiable in $x=a$.
+<p>
+We define: $\|f\|_W:={\rm sup}(|f(x)|~|x\in W)$, and $\lim\limits_{x\rightarrow\infty}f_n(x)=f(x)$.
+Than holds: $\{f_n\}$ is uniform convergent if $\lim\limits_{n\rightarrow\infty}\|f_n-f\|=0$,
+or: $\forall(\varepsilon>0)\exists(N)\forall(n\geq N)\|f_n-f\|<\varepsilon$.
+<p>
+Weierstrass' test: if $\sum\|u_n\|_W$ is convergent, than $\sum u_n$ is
+uniform convergent.
+<p>
+We define $\displaystyle S(x)=\sum_{n=N}^\infty u_n(x)$ and
+$\displaystyle F(y)=\int\limits_a^bf(x,y)dx:=F$. Than it can be proved that:
+
+
+<p align="center">
+<table align="center" border=1>
+<tr>
+<th align="center"><strong>Theorem</strong><th align="center"><strong>For</strong><th align="center"><strong>Demands on</strong> $W$<th align="center"><strong>Then holds on</strong> $W$
+<tr>
+<td></td> <td>rows</td><td>$f_n$ continuous, $\{f_n\}$ uniform convergent</td><td>$f$ is continuous</td>
+<tr>
+<td>C</td> <td>series</td><td>$S(x)$ uniform convergent, $u_n$ continuous</td><td>$S$ is continuous</td>
+<tr>
+<td></td> <td>integral</td><td>$f$ is continuous</td><td>$F$ is continuous</td>
+<tr>
+<td></td> <td></td><td></td><td></td>
+<tr>
+<td></td> <td>rows</td><td>$f_n$ can be integrated, $\{f_n\}$ uniform convergent</td><td>$f_n$ can be integrated, $\int f(x)dx=\lim\limits_{n\rightarrow\infty}\int f_ndx$</td>
+<tr>
+<td>I</td> <td>series</td><td>$S(x)$ is uniform convergent, $u_n$ can be integrated</td><td>$S$ can be integrated, $\int Sdx=\sum\int u_ndx$</td>
+<tr>
+<td></td> <td>integral</td><td>$f$ is continuous</td><td>$\int Fdy=\iint f(x,y)dxdy$</td>
+<tr>
+<td></td> <td></td><td></td><td></td>
+<tr>
+<td></td> <td>rows</td><td>$\{f_n\}\in$C$^{-1}$; $\{f_n'\}$ unif.conv $\rightarrow\phi$</td><td>$f'=\phi(x)$</td>
+<tr>
+<td>D</td> <td>series</td><td>$u_n\in$C$^{-1}$; $\sum u_n$ conv; $\sum u_n'$ u.c.</td><td>$S'(x)=\sum u_n'(x)$</td>
+<tr>
+<td></td> <td>integral</td><td>$\partial f/\partial y$ continuous</td><td>$F_y=\int f_y(x,y)dx$</td>
+<tr>
+</table>
+</p>
+
+<h2><a name="1.9">1.9 Products and quotients</a></h2>
+For $a,b,c,d\in I\hspace{-1mm}R$ holds:\\
+The <strong>distributive property</strong>: $(a+b)(c+d)=ac+ad+bc+bd$\\
+The <strong>associative property</strong>: $a(bc)=b(ac)=c(ab)$ and $a(b+c)=ab+ac$\\
+The <strong>commutative property</strong>: $a+b=b+a$, $ab=ba$.
+<p>
+Further holds:
+\[
+\frac{a^{2n}-b^{2n}}{a\pm b}=a^{2n-1}\pm a^{2n-2}b+a^{2n-3}b^2\pm\cdots\pm b^{2n-1}~~~,~~~
+\frac{a^{2n+1}-b^{2n+1}}{a+b}=\sum_{k=0}^n a^{2n-k}b^{2k}
+\]
+\[
+(a\pm b)(a^2\pm ab+b^2)=a^3\pm b^3~,~~(a+b)(a-b)=a^2+b^2~,~~
+\frac{a^3\pm b^3}{a+b}=a^2\mp ba+b^2
+\]
+
+<h2><a name="1.10">1.10 Logarithms</a></h2>
+<strong>Definition</strong>: $^a\log(x)=b\Leftrightarrow a^b=x$. For logarithms with
+base $e$ one writes $\ln(x)$.
+<p>
+<strong>Rules</strong>: $\log(x^n)=n\log(x)$, $\log(a)+\log(b)=\log(ab)$, $\log(a)-\log(b)=\log(a/b)$.
+
+<h2><a name="1.11">1.11 Polynomials</a></h2>
+Equations of the type
+\[
+\sum_{k=0}^n a_kx^k=0
+\]
+have $n$ roots which may be equal to each other. Each polynomial $p(z)$ of order
+$n\geq1$ has at least one root in $\mathbb{C}$. If all $a_k\in I\hspace{-1mm}R$ holds: when
+$x=p$ with $p\in\mathbb{C}$ a root, than $p^*$ is also a root. Polynomials up to and
+including order 4 have a general analytical solution, for polynomials with
+order $\geq5$ there does not exist a general analytical solution.
+<p>
+For $a,b,c\in I\hspace{-1mm}R$ and $a\neq0$ holds: the 2nd order equation $ax^2+bx+c=0$ has the general solution:
+\[
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\]
+For $a,b,c,d\in I\hspace{-1mm}R$ and $a\neq0$ holds:
+the 3rd order equation $ax^3+bx^2+cx+d=0$ has the general analytical solution:
+\begin{eqnarray*}
+x_1&=&~K-\frac{3ac-b^2}{9a^2K}-\frac{b}{3a}\\
+x_2=x_3^*&=&-\frac{K}{2}+\frac{3ac-b^2}{18a^2K}-\frac{b}{3a}+i\frac{\sqrt{3}}{2}\left(K+\frac{3ac-b^2}{9a^2K}\right)\\
+\end{eqnarray*}
+with $\displaystyle K=\left(\frac{9abc-27da^2-2b^3}{54a^3}+
+\frac{\sqrt{3}\,\sqrt{4ac^3-c^2b^2-18abcd+27a^2d^2+4db^3}}{18a^2}\right)^{1/3}$
+
+<h2><a name="1.12">1.12 Primes</a></h2>
+A <em>prime</em> is a number $\in I\hspace{-1mm}N$ that can only be divided by itself and
+1. There are an infinite number of primes. Proof: suppose that the collection of primes
+$P$ would be finite, than construct the number $q=1+\prod\limits_{p\in P}p$,
+than holds $q=1(p)$ and so $Q$ cannot be written as a product of primes from
+$P$. This is a contradiction.
+<p>
+If $\pi(x)$ is the number of primes $\leq x$, than holds:
+\[
+\lim_{x\rightarrow\infty}\frac{\pi(x)}{x/\ln(x)}=1~~~\mbox{and}~~~
+\lim_{x\rightarrow\infty}\frac{\pi(x)}{\int\limits_2^x\frac{dt}{\ln(t)}}=1
+\]
+For each $N\geq2$ there is a prime between $N$ and $2N$.
+<p>
+The numbers $F_k:=2^k+1$ with $k\in I\hspace{-1mm}N$ are called <em>Fermat numbers</em>.
+Many Fermat numbers are prime.
+<p>
+The numbers $M_k:=2^k-1$ are called <em>Mersenne numbers</em>. They occur when
+one searches for <em>perfect numbers</em>, which are numbers $n\in I\hspace{-1mm}N$ which are
+the sum of their different dividers, for example $6=1+2+3$. There are 23
+Mersenne numbers for $k<12000$ which are prime:
+for $k\in\{2,3,5,7,13,17,19,31,61,89,107,127,521,$
+$607,1279,2203,2281,3217,4253,4423,9689,9941,11213\}$.
+<p>
+To check if a given number $n$ is prime one can use a sieve method. The
+first known sieve method was developed by Eratosthenes. A faster method for
+large numbers are the 4 Fermat tests, who don't prove that a number is prime
+but give a large probability.
+<ol>
+<li>Take the first 4 primes: $b=\{2,3,5,7\}$,</li>
+<li>Take $w(b)=b^{n-1}~{\rm mod}~n$, for each $b$,</li>
+<li>If $w=1$ for each $b$, then $n$ is probably prime. For each other value of $w$, $n$ is certainly not prime.</li>
+</ol>
+
+</body>
+</head>

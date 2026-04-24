@@ -1,0 +1,57 @@
+RATIONALE: sci.physics.relativity
+
+Subjects related to special and general relativity are frequently
+discussed in a number of news groups but there is not yet a
+dedicated group for these topics despite the large volume of posts.
+Sci.physics is the most appropriate group for most such discussions
+at the moment and the Physics FAQ already covers many questions on
+relativity. Sci.astro also hosts discussions on some related topics
+in astronomy and its FAQ also has a section on relativity.
+
+But relativity threads often get cross-posted to other groups
+where they are sometimes regarded as off-topic. Even in sci.physics
+and sci.astro the speculative nature of some discussions is regarded
+as more suitable for alt.sci.physics.new-theories. The problem is
+significant because of the volume and longevity of some of those
+threads.
+
+Sci.physics.relativity would provide a dedicated forum for the discussion
+of the special and general theories of relativity where speculative
+ideas, as well as conventional theory, may be discussed.
+
+END RATIONALE.
+
+
+CHARTER: sci.physics.relativity
+
+Appropriate postings would include, but not be limited to:
+
+ 1.  Queries regarding special and general relativity
+ 2.  How to resolve relativity paradoxes
+ 3.  Black holes, worm holes and singularities
+ 4.  Big Bang and other cosmological models of space-time
+ 5.  Equivalence of mass and energy
+ 6.  The speed of light and gravity
+ 7.  Time dilation, space contraction, redshifts
+ 8.  Causality, and faster than light travel
+ 9.  The large and small scale structure of space-time
+10.  Discussion of the scope and validity of relativity
+11.  Viability of alternative theories to relativity
+12.  Experimental tests of Relativity
+13.  Gravitational waves
+14.  Theories and concepts which take us beyond relativity
+
+The news group sci.physics.relativity will be open to
+discussion on all levels. It will accept talk about
+alternative theories and other controversial discussions
+about relativity which would be outside the charter of
+most other sci newsgroups, as well as more mainstream
+discussion on physics as described by Einstein's theory
+of relativity and modern research to develop more unified
+theories combining relativity and quantum mechanics. This
+reflects the kind of threads which are now popular in usenet
+on the subject of relativity.
+
+The FAQ introduction will advise caution against cross posting to
+other groups.
+

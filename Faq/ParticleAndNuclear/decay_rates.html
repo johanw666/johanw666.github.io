@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>How to Change Nuclear Decay Rates</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Updated January 2022 by Dan Watts.<br>
+Original by Bill Johnson, with an early update by Scott Chase.</p>
+<p><br></p>
+
+
+<h1>How to Change Nuclear Decay Rates</h1>
+
+<p>"I've had this idea for making radioactive nuclei decay faster/slower than they normally do.&nbsp; You do [this, that, or
+the other thing].&nbsp; Will this work?"</p>
+
+<p>Short Answer: possibly, but probably not usefully.</p>
+
+<p>Long Answer: "One of the paradigms of nuclear science since the very early days of its study has been the general
+understanding that the half-life, or decay constant, of a radioactive substance is independent of extranuclear
+considerations".&nbsp; (Emery, cited below.)&nbsp; Like all paradigms, this one is subject to some interpretation.&nbsp; Normal
+decay of radioactive stuff proceeds via one of four mechanisms:
+
+<ul>
+<li> <b>alpha decay</b>: the emission of an alpha particle (a helium-4 nucleus), which reduces the numbers of protons and
+neutrons present in the parent nucleus each by two;</li><br>
+
+<li> <b>beta decay</b>: this encompasses several related phenomena in which a neutron in the nucleus becomes a proton, or a
+proton becomes a neutron, along with some other things happening that involve electrons, positrons, neutrinos, or
+anti-neutrinos.&nbsp; These other things are, as we shall see, pertinent to several questions involving perturbation of decay
+rates;</li><br>
+
+<li> <b>gamma decay</b>: the emission of one or more gamma rays (very energetic photons) that take a nucleus from an excited
+state to some other (typically ground) state.&nbsp; Some of these photons may be replaced by "conversion electrons", of which
+more shortly;</li><br>
+
+<li> <b>spontaneous fission</b>: here, a sufficiently heavy nucleus simply breaks apart.&nbsp; Most of the discussion about
+alpha particles also applies to spontaneous fission.</li>
+</ul>
+</p>
+
+<p>Gamma decay often occurs from the "daughter nucleus" of one of the other decay modes.&nbsp; We neglect <em>very</em> exotic
+processes like C-14 emission or double beta decay in this analysis.</p>
+
+<p>Beta decay happens most often to a nucleus with a neutron excess, which decays by converting a neutron to a proton:
+<pre style="font-size: 24px">
+         n ---> p + e<sup>&minus;</sup> + anti-nu<sub>e</sub> ,
+</pre>
+where n means neutron, p means proton, e<sup>&minus;</sup> means electron, and anti-nu<sub>e</sub> means an anti-neutrino of the
+electron type.&nbsp; The type of beta decay that involves destruction of a proton is not familiar to many people, and so
+deserves some elaboration.&nbsp; Either of two processes may occur in this kind of decay:
+<pre style="font-size: 24px">
+        p ---> n + e<sup>+</sup> + nu<sub>e</sub> ,
+</pre>
+where e<sup>+</sup> means positron and nu<sub>e</sub> means electron neutrino; or
+<pre style="font-size: 24px">
+        p + e<sup>&minus;</sup> ---> n + nu<sub>e</sub> ,
+</pre>
+where the electron is captured from the neighborhood of the nucleus undergoing decay.&nbsp; These processes are called
+"positron emission" and "electron capture" respectively.&nbsp; A given nucleus that has too many protons for stability may
+undergo beta decay through either, and typically both, of these reactions.</p>
+
+<p>"Conversion electrons" are produced by the process of "internal conversion", in which the photon that would normally be
+emitted in gamma decay is <em>virtual</em> and its energy is absorbed by an atomic electron.&nbsp; The absorbed energy is
+usually sufficient to eject the electron from the atom.</p>
+
+<p>Now for the tie-in to decay rates.&nbsp; Both the electron-capture and internal conversion phenomena require an electron
+somewhere close to the decaying nucleus.&nbsp; In any normal atom, this requirement is satisfied in spades: the innermost
+electrons are in states such that their probability of being close to the nucleus is both large and insensitive to
+environmental influences.&nbsp; The decay rate depends only very weakly on the electron wave functions, i.e., on how much of
+their time the inner electrons spend very near the nucleus.</p>
+
+<p>But this general rule has its exceptions.&nbsp; The most notable is the astrophysically important isotope beryllium-7.&nbsp;
+Be-7 decays purely by electron capture (positron emission being impossible because of inadequate decay energy) with a half-life
+of somewhat over 50 days.&nbsp; It has been shown that differences in chemical environment result in half-life variations of
+the order of 0.2%, and high pressures produce somewhat similar changes.&nbsp; Also, a 2004 paper (see the references) measures
+a 0.8% reduction in half-life for Be-7 atoms enclosed in carbon-60 cages.&nbsp; Other nuclei in which decay-rate changes are
+known to occur are zirconium-89 and strontium-85, also electron capturers; technetium-99m ("m" implying an excited state),
+which decays by both beta and gamma emission; and various other "metastable" isotopes that decay by gamma emission with
+internal conversion.&nbsp; With all of these other cases the magnitude of the effect is less than is typically the case with
+Be-7.</p>
+
+<p>What makes these cases special?&nbsp; The answer is that one or more of the usual starting assumptions (such as
+insensitivity of electrons near the nucleus to external forces, or availability of the innermost electrons for
+capture/conversion) are not completely valid.&nbsp; Atomic beryllium has only 4 electrons to begin with, and so the "innermost
+electrons" are also practically the <em>outermost</em> ones, and are thus much more sensitive to chemical effects than is
+usual.&nbsp; With most of the other cases, the foibles of nuclear structure produce very little energy from the decay: as
+little as a few electron volts, as compared with most radioactive decays, which release hundreds or thousands
+of <em>kilo</em>electron volts.&nbsp; In these low-energy cases, the innermost electrons can't undergo internal
+conversion.&nbsp; Remember that converting an electron requires dumping enough energy into it to expel it from the atom (more
+or less); "enough energy" is typically some tens of keV, and so they don't get converted at all in these cases.&nbsp;
+Conversion therefore works only on some of the outer electrons, which again are more sensitive to the environment.</p>
+
+<p>A real anomaly is the beta emitter rhenium-187.&nbsp; Its decay energy is only about 2.6 keV, practically nothing by nuclear
+standards.&nbsp; "That this decay occurs at all is an example of the effects of the atomic environment on nuclear decay: the
+bare nucleus rhenium-187 [i.e., stripped of all orbital electrons] is stable against beta decay [but not to bound-state beta
+decay, in which the outgoing electron is captured by the daughter nucleus into a tightly bound orbital], and it is the
+difference of 15 keV in the total electronic binding energy of osmium [to which it decays] and rhenium [...] which makes the
+decay possible" (Emery).</p>
+
+<p>A 1996 paper (see the references) discusses this bound-state decay of bare-nucleus rhenium-187.&nbsp; Whereas neutral
+rhenium-187 has a half-life of 42 &times; 10<sup>9</sup> years, the authors measured fully ionised rhenium-187 to have a half
+life of just 33 years!&nbsp; They discuss the cosmological implications of the altered half life of rhenium-187 in various
+degrees of ionisation in stellar interiors, and what that implies for our knowledge of galactic ages.</p>
+
+<p>Alpha decay and spontaneous fission might also be affected by changes in the electron density near the nucleus, for a
+different reason.&nbsp; These processes occur as a result of penetration of the "Coulomb barrier" that inhibits emission of
+charged particles from the nucleus, and their rate is <em>very</em> sensitive to the height of the barrier.&nbsp; Changes in
+the electron density could, in principle, affect the barrier by some tiny amount.&nbsp; But calculations show that the
+magnitude of the effect is <em>very</em> small.&nbsp; For a few alpha emitters, the change has been estimated to be of the
+order of 1 part in 10<sup>7</sup> or less (!), which is not measurable, given that the alpha emitters' half lives aren't known
+to that degree of accuracy to begin with.</p>
+
+<p>All told, the existence of changes in radioactive decay rates due to the environment of the decaying nuclei is on solid
+grounds, both experimentally and theoretically.&nbsp; But the magnitude of the changes is nothing to get very excited about,
+except for the case of neutron bombardment.&nbsp; Controlled neutron bombardment is the basis for nuclear reactors (and
+exponentially increasing nuclear bombardment is the basis of a nuclear fission bomb).</p>
+
+<p>In the country of Gabon in mid-western Africa lies a uranium deposit known as Oklo.&nbsp; This is the only known natural
+self-sustaining nuclear fission site.&nbsp As discussed in a 1989 paper (see the references), its uranium-235 concentration is
+0.48% to 0.68% of the total uranium present, in contrast to the 0.72% concentration that is normally found in uranium.&nbsp;
+This depletion is consistent with the effects of nuclear fission.</p>
+
+<p>Although Oklo is the only such natural reactor site known, the generation of neutrons by lightning discharge has been
+reported since at least 1985; so if you leave fissionable material out in a storm, its fission rate might be temporarily
+increased by lightning-induced neutrons.</p>
+
+
+<h2>References</h2>
+
+<p>Perhaps the best review article on this subject is G. T. Emery, <em>Perturbation of Nuclear Decay Rates</em>, Annual Review
+of Nuclear Science <b>22</b>, pg 165 (1972).&nbsp; Papers describing specific experiments are cited in that article, which
+contains considerable arcane maths but also gives a reasonable qualitative feel for what is involved.</p>
+
+<p>The recent work on Be-7 enclosed in C-60 cages is in Ohtsuki et al., <em>Enhanced Electron-Capture Decay Rate of Be-7
+Encapsulated in C-60 Cages.</em>  Phys. Rev. Lett. <b>93</b>, 112501 (2004).</p>
+
+<p>The discussion of the half life of fully ionised rhenium-187 is found in Bosch et al.,
+<em>Observation of Bound-State &beta;<sup>&minus;</sup> Decay of Fully Ionized
+<sup>187</sup>Re: <sup>187</sup>Re&mdash;<sup>187</sup>Os Cosmochronometry</em>, Phys. Rev. Lett. <b>77</b>, 5190 (1996).</p>
+
+<p>The discussion of the Oklo natural reactor can be found in F. Gauthier-Lafaye and F. Weber, <em>Natural Fission Reactors of
+Oklo</em>, Economic Geology <b>84</b>, 2286 (1989)</p>
+
+<p>A few papers discussing neutron production in thunderstorms are:
+<ul>
+<li>V. I. Kozlov et al., <a href="https://iopscience.iop.org/article/10.1088/1742-6596/409/1/012210/pdf"><em>Neutron bursts
+  associated with lightning cloud-to-ground discharges</em></a>, J. Phys.: Conf. Ser. <b>409</b>, 012210 (2013)</li>
+<li>C. K&#246;hn, G. Diniz,
+  M. N. Harakeh, <a href="https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1002/2016JD025445"><em>Production mechanisms of
+  leptons, photons, and hadrons and their possible feedback close to lightning leaders</em></a>,
+  J. Geophys. Res. Atmos. <b>122</b>, 1365&ndash;1383 (2017)</li>
+<li>Y. Wada et al., <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.101.102007"><em>Photoneutron detection in
+    lightning by gadolinium orthosilicate scintillators</em></a>, Phys. Rev. D</a> <b>101</b>, 102007 (2020)</li>
+</ul>
+</p>
+
+
+<p><br></p>
+
+</body>
+</html>

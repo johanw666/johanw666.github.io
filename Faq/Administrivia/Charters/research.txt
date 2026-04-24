@@ -1,0 +1,90 @@
+NEWSGROUP NAME: sci.physics.research.
+
+STATUS: moderated.
+
+CHARTER: Sci.physics.research is a newsgroup for discussions related
+         to current physics research.
+
+DESCRIPTION OF THE GROUP:
+
+Sci.physics.research is a moderated newsgroup for discussions related
+to current physics research.
+
+The newsgroup will be moderated by a panel; an article to be posted
+will be randomly sent to one of the moderators, who will decide to
+accept or reject it.  In borderline cases the moderators can consult
+with each other, but the hope is that this will only rarely be
+necessary.  The names and backgrounds of the moderators are at the end
+of this posting.  (If one moderator has to quit, the others will
+choose a replacement.)
+
+This newsgroup is to be "lightly" moderated--that is, the moderators
+will only reject clearly inappropriate postings, and will accept any
+that has serious physics content or that is likely to be of interest
+to an audience of professional physicists.  Clearly inappropriate
+postings include:
+        (1) Personal attacks;
+        (2) Discussion that isn't about or related to physics;
+        (3) Multiple responses that all say the same things; and
+        (4) Crackpot postings that are "not even wrong."
+
+An article that is rejected will be sent back to the author, perhaps
+with the suggestion of a more appropriate newsgroup, or a suggestion
+of how to revise it to make it acceptable.
+
+Note that, in certain cases, articles about politics or philosophy are
+appropriate to this group; for example, WHAT'S NEW is appropriate.
+Such subjects, however, can easily drift into more general political
+or philosophical discussions that have nothing to do with physics,
+and, when this happens, the moderators will redirect the discussion to
+a more appropriate group.
+
+Note also that this newsgroup is not a peer reviewed journal; the
+moderators are not referees or editors, and they do not have the time
+to check whether the physics (or the grammar!) in each posting is
+actually correct.  As long as an article is readable, and isn't
+blatantly nonsensical, it's fine.
+
+Finally, brief requests for facts are fine, so long as they aren't
+already answered in the "frequently asked questions" (FAQ) list.
+Replies to requests for information will be accepted if they (1) may
+be of general interest, (2) don't become repetitive, and (3) don't
+impose unacceptably heavy message traffic on the group.  Otherwise,
+replies will be redirected to e-mail.
+
+
+The moderators are [Ed's note: changed as of August 2004] Urs Schreiber and Philip Helbig.
+
+The intent is that this panel be reasonably diverse in terms of
+research interests; each of these people wrote up a "microCV" that
+tells a bit about their background and what they do.
+
+[Ed's note: this is now out of date.]
+ 
+----------------------------------------
+John C. Baez
+BA mathematics Princeton U. 1982
+PhD mathematics MIT 1986
+Associate Prof. Dept. of Math. U. C. Riverside
+Constructive quantum field theory, nonlinear wave equations, and
+    the relationship of knot theory to quantum gravity
+
+----------------------------------------
+Cameron 'dale' Bass
+B.S. Aerospace Engineering, UVa
+Graduate Research Assistant, University of Virginia;  
+    Ph.D. expected early 1993 in Mechanical and Aerospace Engineering;  
+Research interests: fluid dynamics, electromagnetism, acoustics
+
+----------------------------------------
+Bill Johnson
+Staff member [project leader] at Los Alamos National Laboratory;
+Ph.D., nuclear chemistry, Univ. of Rochester, 1979; 
+Research interests: basic and applied nuclear physics, nuclear safeguards
+
+----------------------------------------
+H. Lee Sawyer, Jr
+B.S. Northeast Louisiana University (1985)
+Ph.D. Florida State University (1991)
+Experimental high energy physicist (we haven't perfected them yet...)    
+Member of the E711, ALEPH, D0, and SDC experimental collaborations.      

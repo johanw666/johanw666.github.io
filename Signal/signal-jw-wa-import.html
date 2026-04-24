@@ -1,0 +1,56 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<title>Signal-JW WhatsApp import</title>
+
+<style>
+.screenshot {
+  width: 360px;
+  height: 640px;
+}
+</style>
+
+</head>
+<body background="equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#990099" alink="#9999ff">
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+
+<h1>WhatsApp import</h1>
+
+This is based on code contributed by Samuel Welten (https://github.com/jukefoxer/Signal-Android) and Wollwolke 
+(https://github.com/Wollwolke/Signal-Android/tree/feature/wa-db-import). Thank you both for this.
+<p>
+It's currently still a pretty tedious process, but at least it's possible.
+
+<h2>What works</h2>
+<ul>
+<li>Import 1-to-1 text conversation threads.
+<li>Import group chat conversations if a group chat with the same name is set up in the Signal App.
+<li>Importing images and videos messages from WhatsApp chats.
+</ul>
+
+<h2>What doesn't work</h2>
+<ul>
+<li>Multimedia messages other than images and videos are currently not imported.
+<li>It's pretty slow (10 seconds per 1000 messages).
+</ul>
+
+<h2>How to do it</h2>
+<ul>
+<li>Extract your unencrypted msgstore.db from your WhatsApp installation. There are several methods to do so. WhatsAppDump seems to offer a possibility that doesn't require rooting the device. A more detailed description of how to do so might be added here in the future.
+<li>Copy the msgstore.db file to the top level directory of your internal storage
+<li>Make an encrypted Backup of your Signal Messages using the built-in feature of the Signal App.
+<li>Build and install this version of the Signal App and import the encrypted Backup of your signal messages.
+<li>You might have to go to the app permission settings and give it the permission to manage all of the external storage.
+<li>Go to Backup => Import WhatsApp to start the import.
+<li>Be patient until it finishes.
+<li>If you're happy with the WhatsApp import create another encrypted backup of all Signal messages.
+<li>Install the original Signal app again and import the encrypted Backup.
+</ul>
+
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+</body>
+</html>

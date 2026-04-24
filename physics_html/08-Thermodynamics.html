@@ -1,0 +1,274 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Thermodynamics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="8">8. Thermodynamics</a></h1>
+<h2><a name="8.1">8.1 Mathematical introduction</a></h2>
+
+<p>If there exists a relation \(f(x,y,z)=0\) between 3 variables, one can write: \(x=x(y,z)\), \(y=y(x,z)\) and \(z=z(x,y)\). The <span><em>total differential</em></span> \(dz\) of \(z\) is than given by:</p>
+
+<p>\[dz=\left(\frac{\partial z}{\partial x}\right)_{y}dx+\left(\frac{\partial z}{\partial y}\right)_{x}dy\]</p>
+
+<p>By writing this also for \(dx\) and \(dy\) it can be obtained that</p>
+
+<p>\[\left(\frac{\partial x}{\partial y}\right)_{z}\cdot\left(\frac{\partial y}{\partial z}\right)_{x}\cdot\left(\frac{\partial z}{\partial x}\right)_{y}=-1\]</p>
+
+<p>Because \(dz\) is a total differential&nbsp;\(\oint dz=0\).</p>
+
+<p>A homogeneous function of degree \(m\) obeys: \(\varepsilon^m F(x,y,z)=F(\varepsilon x,\varepsilon y,\varepsilon z)\). For such a function Euler&rsquo;s theorem applies:</p>
+
+<p>\[mF(x,y,z)=x\frac{\partial F}{\partial x}+y\frac{\partial F}{\partial y}+z\frac{\partial F}{\partial z}\]</p>
+
+<h2><a name="8.2">8.2 Definitions</a></h2>
+
+<ul>
+    <li>The isochoric pressure coefficient: \(\displaystyle \beta_V=\frac{1}{p}\left(\frac{\partial p}{\partial T}\right)_{V}&nbsp; \)</li>
+    <li>The isothermal compressibility: \(\displaystyle \kappa_T=-\frac{1}{V}\left(\frac{\partial V}{\partial p}\right)_{T}\)</li>
+    <li>The isobaric volume coefficient: \(\displaystyle \gamma_p=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{p}\)</li>
+    <li>The adiabatic compressibility: \(\displaystyle \kappa_S=-\frac{1}{V}\left(\frac{\partial V}{\partial p}\right)_{S}\)</li>
+</ul>
+
+<p>For an ideal gas it follows that: \(\gamma_p=1/T\), \(\kappa_T=1/p\) and \(\beta_V=-1/V\).</p>
+
+<h2><a name="8.3">8.3 Thermal heat capacity</a></h2>
+
+<ul>
+    <li>The specific heat at constant \(X\) is: \(\displaystyle C_X=T\left(\frac{\partial S}{\partial T}\right)_{X}\)</li>
+    <li>The specific heat at constant pressure: \(\displaystyle C_p=\left(\frac{\partial H}{\partial T}\right)_{p}\)</li>
+    <li>The specific heat at constant volume: \(\displaystyle C_V=\left(\frac{\partial U}{\partial T}\right)_{V}\)</li>
+</ul>
+
+<p>For an ideal gas holds: \(C_{mp}-C_{mV}=R\). Further, if the temperature is high enough to thermalize all internal rotational and vibrational degrees of freedom: \(C_V=\frac{1}{2}sR\). Hence \(C_p=\frac{1}{2}(s+2)R\). From their ratio it now follows that \(\gamma=(2+s)/s\). For a lower \(T\) one needs only to consider the thermalized degrees of freedom. For a Van der Waals gas: \(C_{mV}=\frac{1}{2}sR+ap/RT^2\).</p>
+
+<p>In general holds:</p>
+
+<p>\[C_p-C_V=T\left(\frac{\partial p}{\partial T}\right)_{V}\cdot\left(\frac{\partial V}{\partial T}\right)_{p}=-T\left(\frac{\partial V}{\partial T}\right)_{p}^2\left(\frac{\partial p}{\partial V}\right)_{T}\geq0\]</p>
+
+<p>Because \((\partial p/\partial V)_T\) is always \(&lt;0\), the following is always valid: \(C_p\geq C_V\). If the coefficient of expansion is 0, \(C_p=C_V\), and this is true also at \(T=0\)K.</p>
+
+<h2><a name="8.4">8.4 The laws of thermodynamics</a></h2>
+
+<p>The zeroth law states that heat flows from higher to lower temperatures. The first law is the conservation of energy. For a closed system: \(Q=\Delta U+W\), where \(Q\) is the total added heat, \(W\) the work done and \(\Delta U\) the difference in the internal energy. In differential form this becomes: \(&dstrok; Q=dU+&dstrok;W\), where \(&dstrok;\) means that the it is not a differential of a state function. For a quasi-static process: \(&dstrok;W=pdV\). So for a reversible process: \(&dstrok;Q=dU+pdV\).</p>
+
+<p>For an open (flowing) system the first law is: \(Q=\Delta H+W_{\rm i}+\Delta E_{\rm kin}+\Delta E_{\rm pot}\). One can extract an amount of work \(W_{\rm t}\) from the system or add \(W_{\rm t}=-W_{\rm i}\) to the system.</p>
+
+<p>The second law states: for a closed system there exists an additive quantity \(S\), called the entropy, the differential of which has the following property:</p>
+
+<p>\[dS\geq\frac{&dstrok;Q}{T}\]</p>
+
+<p>If the only processes occurring are reversible: \(dS=&dstrok;Q_{\rm rev}/T\). So, the entropy difference after a reversible process is:</p>
+
+<p>\[S_2-S_1=\int\limits_1^2 \frac{&dstrok;Q_{\rm rev}}{T}\]</p>
+
+<p>So, for a reversible cycle: \(\displaystyle\oint\frac{&dstrok;Q_{\rm rev}}{T}=0\).</p>
+
+<p>For an irreversible cycle: \(\displaystyle\oint\frac{&dstrok;Q_{\rm irr}}{T}&lt;0\).</p>
+
+<p>The third law of thermodynamics is (<em>Nernst's law</em>):</p>
+
+<p>\[\lim_{T\rightarrow0}\left(\frac{\partial S}{\partial X}\right)_{T}=0\]</p>
+
+<p>From this it can be concluded that the thermal heat capacity \(\rightarrow0\) if \(T\rightarrow0\), so absolute zero temperature cannot be reached by cooling through a finite number of steps.</p>
+
+<h2><a name="8.5">8.5 State functions and Maxwell relations</a></h2>
+
+<p>The state functions and their differentials are:</p>
+
+<table align="center" border=1>
+<tr>
+<td>Internal energy:</td>   <td>\(U\)</td>     <td>\(dU=TdS-pdV\)</td>
+<tr>
+<td>Enthalpy:</td>          <td>\(H=U+pV\)</td><td>\(dH=TdS+Vdp\)</td>
+<tr>
+<td>Free energy:</td>       <td>\(F=U-TS\)</td><td>\(dF=-SdT-pdV\)</td>
+<tr>
+<td>Gibbs free energy:</td> <td>\(G=H-TS\)</td><td>\(dG=-SdT+Vdp\)</td>
+<tr>
+</table>
+
+<p>From this one can derive <em>Maxwell&rsquo;s relations</em>:</p>
+
+<p>\[\left(\frac{\partial T}{\partial V}\right)_{S}=-\left(\frac{\partial p}{\partial S}\right)_{V}~,~~\left(\frac{\partial T}{\partial p}\right)_{S}=\left(\frac{\partial V}{\partial S}\right)_{p}~,~~ \left(\frac{\partial p}{\partial T}\right)_{V}=\left(\frac{\partial S}{\partial V}\right)_{T}~,~~\left(\frac{\partial V}{\partial T}\right)_{p}=-\left(\frac{\partial S}{\partial p}\right)_{T}\]</p>
+
+<p>From the total differential and the definitions of \(C_V\) and \(C_p\) it can be derived that:</p>
+
+<p>\[TdS=C_VdT+T\left(\frac{\partial p}{\partial T}\right)_{V}dV~~\mbox{and}~~TdS=C_pdT-T\left(\frac{\partial V}{\partial T}\right)_{p}dp\]</p>
+
+<p>For an ideal gas:</p>
+
+<p>\[S_m=C_V\ln\left(\frac{T}{T_0}\right)+R\ln\left(\frac{V}{V_0}\right)+S_{m0}~~\mbox{and}~~ S_m=C_p\ln\left(\frac{T}{T_0}\right)-R\ln\left(\frac{p}{p_0}\right)+S_{m0}'\]</p>
+
+<p><em>Helmholtz</em>&rsquo; <em>equations </em>are:</p>
+
+<p>\[\left(\frac{\partial U}{\partial V}\right)_{T}=T\left(\frac{\partial p}{\partial T}\right)_{V}-p~~,~~\left(\frac{\partial H}{\partial p}\right)_{T}=V-T\left(\frac{\partial V}{\partial T}\right)_{p}\]</p>
+
+<p>For a macroscopic&nbsp;surface: \(&dstrok;W_{\rm rev}=-\gamma dA\), with \(\gamma\) the surface tension. From this follows:&nbsp;</p>
+
+<p>\[\gamma=\left(\frac{\partial U}{\partial A}\right)_{S}=\left(\frac{\partial F}{\partial A}\right)_{T}\]</p>
+
+<h2><a name="8.6">8.6 Processes</a></h2>
+
+<p>The <span><em>efficiency</em></span> \(\eta\) of a process is given by: \(\displaystyle\eta=\frac{\mbox{Work done}}{\mbox{Heat added}}\)</p>
+
+<p>The <span><em>Cold factor</em></span> \(\xi\) of a cooling down process is given by: \(\displaystyle\xi=\frac{\mbox{Cold delivered}}{\mbox{Work added}}\)</p>
+
+<h3>Reversible_adiabatic_processes</h3>
+
+<p>For adiabatic processes: \(W=U_1-U_2\). For reversible adiabatic processes&nbsp;<em>Poisson&rsquo;s equation</em> holds.&nbsp;With \(\gamma=C_p/C_V\) one gets that \(pV^\gamma=\)constant. Also: \(TV^{\gamma-1}=\)constant and \(T^\gamma p^{1-\gamma}=\)constant. Adiabats are steeper on a&nbsp;\(p\)-\(V\) diagram than isotherms because \(\gamma&gt;1\).</p>
+
+<h3>Isobaric processes</h3>
+
+<p>Here: \(H_2-H_1=\int_1^2 C_pdT\). For a reversible isobaric process: \(H_2-H_1=Q_{\rm rev}\).</p>
+
+<h3>Throttle processes</h3>
+
+<p>This is also called the <span><em>Joule-Kelvin</em></span> <em>effect</em> and is an adiabatic expansion of a gas through a porous material or a small opening. Here \(H\) is a conserved quantity, and \(dS&gt;0\). In general this is accompanied with a change in temperature. The quantity which is important here is the <span><em>throttle coefficient</em></span>:</p>
+
+<p>\[\alpha_H=\left(\frac{\partial T}{\partial p}\right)_{H}=\frac{1}{C_p}\left[T\left(\frac{\partial V}{\partial T}\right)_{p}-V\right]\]</p>
+
+<p>The <span><em>inversion temperature</em></span> is the temperature where an adiabatically expanding gas keeps the same temperature. If \(T&gt;T_{\rm i}\) the gas heats up, if \(T&lt;T_{\rm i}\) the gas cools down. \(T_{\rm i}=2T_{\rm B}\), with for \(T_{\rm B}\): \([\partial(pV)/\partial p]_T=0\). The throttle process is, for example, applied in refrigerators.</p>
+
+<h3>The Carnot process</h3>
+
+<p>The system undergoes a reversible cycle with 2 isothemics and 2 adiabats:</p>
+
+<ol>
+    <li>Isothermic expansion at \(T_1\). The system absorbs a heat \(Q_1\) from the reservoir.</li>
+    <li>Adiabatic expansion with a temperature drop to \(T_2\).</li>
+    <li>Isothermic compression at \(T_2\), removing \(Q_2\) from the system.</li>
+    <li>Adiabatic compression to \(T_1\).</li>
+</ol>
+
+<p>The efficiency for a <em>Carnot&nbsp;cycle&nbsp;</em>is:</p>
+
+<p>\[\eta=1-\frac{|Q_2|}{|Q_1|}=1-\frac{T_2}{T_1}:=\eta_{\rm C}\]</p>
+
+<p>The <span><em>Carnot efficiency</em></span> \(\eta_{\rm C}\) is the maximal efficiency at which a heat machine can operate. If the process is applied in reverse order and the system performs a work \(-W\) the cold factor is given by:</p>
+
+<p>\[\xi=\frac{|Q_2|}{W}=\frac{|Q_2|}{|Q_1|-|Q_2|}=\frac{T_2}{T_1-T_2}\]</p>
+
+<p><span><strong>The Stirling cycle</strong></span><br />
+<em>Stirling&rsquo;s cycle</em>&nbsp;consists of 2 isotherms and 2 isochorics. The efficiency in the ideal case is the same as for a <em>Carnot&nbsp;cycle.</em></p>
+
+<h2><a name="8.7">8.7 Maximal work</a></h2>
+
+<p>Consider a system that changes from state 1 into state 2, with the temperature and pressure of the surroundings given by \(T_0\) and \(p_0\). The maximum work which can be obtained from this change is, when all processes are reversible:</p>
+
+<ol>
+    <li>Closed system: \(W_{\rm max}=(U_1-U_2)-T_0(S_1-S_2)+p_0(V_1-V_2)\).</li>
+    <li>Open system: \(W_{\rm max}=(H_1-H_2)-T_0(S_1-S_2)-\Delta E_{\rm kin}-\Delta E_{\rm pot}\).</li>
+</ol>
+
+<p>The minimal work needed to attain a certain state is: \(W_{\rm min}=-W_{\rm max}\).</p>
+
+<h2><a name="8.8">8.8 Phase transitions</a></h2>
+
+<p>Phase transitions are isothermic and isobaric, so \(dG=0\). When the phases are indicated by \(\alpha\), \(\beta\) and \(\gamma\): \(G_m^\alpha=G_m^\beta\) and</p>
+
+<p>\[\Delta S_m=S_m^\alpha - S_m^\beta=\frac{r_{\beta\alpha}}{T_0}\]</p>
+
+<p>where \(r_{\beta\alpha}\) is the transition heat of phase \(\beta\) to phase \(\alpha\) and \(T_0\) is the transition temperature. The following holds: \(r_{\beta\alpha}=r_{\alpha\beta}\) and \(r_{\beta\alpha}=r_{\gamma\alpha}-r_{\gamma\beta}\). Further</p>
+
+<p>\[S_m=\left(\frac{\partial G_m}{\partial T}\right)_{p}\]</p>
+
+<p>so \(G\) has a kink&nbsp;in the transition point and the derivative is discontinuous. In a two phase system <em>Clapeyron&rsquo;s equation</em> is valid:</p>
+
+<p>\[\frac{dp}{dT}=\frac{S_m^\alpha-S_m^\beta}{V_m^\alpha-V_m^\beta}= \frac{r_{\beta\alpha}}{(V_m^\alpha-V_m^\beta)T}\]</p>
+
+<p>For an ideal gas one finds for the vapor line at some distance from the critical point:</p>
+
+<p>\[p=p_0{\rm e}^{-r_{\beta\alpha/RT}}\]</p>
+
+<p>There exist also phase transitions with \(r_{\beta\alpha}=0\). For those there will occur only be a discontinuity in the second derivatives of \(G_m\). These second-order transitions appear at <span><em>organization phenomena</em></span>.</p>
+
+<p>A phase-change of the 3rd order, so with e.g. \([\partial^3 G_m/\partial T^3]_p\) non continuous arises e.g. when ferromagnetic iron changes to the paramagnetic state.</p>
+
+<h2><a name="8.9">8.9 Thermodynamic potential</a></h2>
+
+<p>When the number of particles within a system changes this number becomes a third quantity of state. Because addition of matter usually takes place at constant \(p\) and \(T\), \(G\) is the relevant quantity. If a system has many components this becomes:</p>
+
+<p>\[dG=-SdT+Vdp+\sum_i\mu_idn_i\] where \(\displaystyle\mu=\left(\frac{\partial G}{\partial n_i}\right)_{p,T,n_j}\)</p>
+
+<p>is called the thermodynamic potential. This is a <span><em>partial quantity</em></span>. For \(V\):</p>
+
+<p>\[V=\sum_{i=1}^c n_i\left(\frac{\partial V}{\partial n_i}\right)_{n_j,p,T}:=\sum_{i=1}^c n_i V_i\]</p>
+
+<p>where \(V_i\) is the partial volume of component \(i\). The following holds:</p>
+
+<p>\[\begin{aligned} V_m&amp;=&amp;\sum_i x_i V_i\\ 0&amp;=&amp;\sum_i x_i dV_i\end{aligned}\]</p>
+
+<p>where \(x_i=n_i/n\) is the molar fraction of component \(i\). The molar volume of a mixture of two components can be a concave line in a \(V\)-\(x_2\) diagram: the mixing leads to a contraction of the volume</p>
+
+<p>The thermodynamic potentials are not independent in a multiple-phase system. It can be derived that \(\sum\limits_i n_i d\mu_i=-SdT+Vdp\), this gives at constant \(p\) and \(T\): \(\sum\limits_i x_i d\mu_i=0\) (Gibbs-Duhmen).</p>
+
+<p>Each component has as many \(\mu\)&rsquo;s as there are phases. The number of free parameters in a system with \(c\) components and \(p\) different phases is given by \(f=c+2-p\) which is called Gibb's phase rule.&nbsp;.</p>
+
+<h2><a name="8.10">8.10 Ideal mixtures</a></h2>
+
+<p>For a mixture of \(n\) components (the index \(^0\) is the value for the pure component):</p>
+
+<p>\[U_{\rm mixture}=\sum_i n_i U^0_i~~,~~H_{\rm mixture}=\sum_i n_i H^0_i~~,~~ S_{\rm mixture}=n\sum_i x_i S^0_i+\Delta S_{\rm mix}\]</p>
+
+<p>where for ideal gases: \(\Delta S_{\rm mix}=-nR\sum\limits_i x_i\ln(x_i)\).</p>
+
+<p>For the thermodynamic potentials: \(\mu_i=\mu_i^0+RT\ln(x_i)&lt;\mu_i^0\). A mixture of two liquids is rarely ideal: this is usually only the case for chemically related components or isotopes. In spite of this Raoult&rsquo;s law holds for the vapour pressure&nbsp;for many binary mixtures: \(p_i=x_ip^0_i=y_ip\). Here&nbsp;\(x_i\) is the fraction of the \(i\)th component in liquid phase and \(y_i\) the fraction of the \(i\)th component in gas phase.</p>
+
+<p>A solution for one component in a second gives rise to an increase in the boiling point \(\Delta T_{\rm k}\) and a decrease of the freezing point \(\Delta T_{\rm s}\). For \(x_2\ll1\):</p>
+
+<p>\[\Delta T_{\rm k}=\frac{RT_{\rm k}^2}{r_{\beta\alpha}}x_2~~,~~ \Delta T_{\rm s}=-\frac{RT_{\rm s}^2}{r_{\gamma\beta}}x_2\]</p>
+
+<p>with \(r_{\beta\alpha}\) the heat of evaporation&nbsp;and \(r_{\gamma\beta}&lt;0\) the melting heat. For the <span><em>osmotic pressure</em></span> \(\Pi\) of a solution: \(\Pi V_{m1}^0=x_2RT\).</p>
+
+<p>These are called collegative properties</p>
+
+<h2><a name="8.11">8.11 Conditions for equilibrium</a></h2>
+
+<p>When a system evolves towards equilibrium the only changes that are possible are those for which: \((dS)_{U,V}\geq0\) or \((dU)_{S,V}\leq0\) or \((dH)_{S,p}\leq0\) or \((dF)_{T,V}\leq0\) or \((dG)_{T,p}\leq0\). In equilibrium for each component: \(\mu_i^\alpha=\mu_i^\beta=\mu_i^\gamma\).</p>
+
+<h2><a name="8.12">8.12 Statistical basis for thermodynamics</a></h2>
+
+<p>The number of possibilities \(P\) to distribute \(N\) particles on \(n\) possible energy levels, each with a \(g\)-fold degeneracy is called the thermodynamic probability and is given by:</p>
+
+<p>\[P=N!\prod_i\frac{g_i^{n_i}}{n_i!}\]</p>
+
+<p>The most probable distribution, that with the maximum value for \(P\), is the <span><em>equilibrium state</em></span>. When Stirling&rsquo;s equation, \(\ln(n!)\approx n\ln(n)-n\) is used, one finds for a discrete system the Maxwell-Boltzmann distribution. The occupation numbers in equilibrium are then given by:</p>
+
+<p>\[n_i=\frac{N}{Z}g_i\exp\left(-\frac{W_i}{kT}\right)\]</p>
+
+<p>The <span><em>state sum</em></span> \(Z\) is a normalization constant, given by: \(Z=\sum\limits_ig_i\exp(-W_i/kT)\). For an ideal gas:</p>
+
+<p>\[Z=\frac{V(2\pi mkT)^{3/2}}{h^3}\]</p>
+
+<p>The entropy can then be defined as: &nbsp;\(S=k\;ln\left ( P \right ) \). For a system in thermodynamic equilibrium this becomes:</p>
+
+<p>\[S=\frac{U}{T}+kN\ln\left(\frac{Z}{N}\right)+kN\approx\frac{U}{T}+k\ln\left(\frac{Z^N}{N!}\right)\]</p>
+
+<p>For an ideal gas, with \(U=\frac{3}{2}kT\) then: \(\displaystyle S=kN+kN\ln\left(\frac{V(2\pi mkT)^{3/2}}{Nh^3}\right)\)</p>
+
+<h2><a name="8.13">8.13 Application to other systems</a></h2>
+
+<p>Thermodynamics can be applied to other systems than gases and liquids. To do this the term \(&dstrok;W=pdV\) has to be replaced with the correct work term, like \(&dstrok;W_{\rm rev}=-Fdl\) for the stretching of a wire, \(&dstrok;W_{\rm rev}=-\gamma dA\) for the expansion of a soap bubble or \(&dstrok;W_{\rm rev}=-BdM\) for a magnetic system.</p>
+
+<p>A rotating, non-charged black hole has a temperature of \(T=\hbar c/8\pi km\). It has an entropy \(S=Akc^3/4\hbar\kappa\) with \(A\) the area of its event horizon. For a Schwarzschild black hole \(A\) is given by \(A=16\pi m^2\). Hawkings area theorem states that \(dA/dt\geq0\).</p>
+
+<p>Hence, the lifetime of a black hole \(\sim m^3\).</p>
+
+</body>
+</html>

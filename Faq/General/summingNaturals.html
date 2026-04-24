@@ -1,0 +1,355 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Can All the Natural Numbers be Summed?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>By Don Koks, 2016.</p>
+<p><br></p>
+
+
+<h1>Can All the Natural Numbers be Summed?<br>
+(or, does $1 + 2 + 3 + \dots$ equal $-1/12$?)</h1>
+
+<p>No, of course the natural numbers can't be summed.&nbsp; $1 + 2 + 3 + \dots$ has no sum; or we might just as well
+say that it sums to infinity.&nbsp; The real question is: why do some people write $1 + 2 + 3 + \ldots = -1/12$?&nbsp;
+The answer involves some maths, some physics, and some analysis of common misunderstandings about what mathematicians
+and physicists are saying.&nbsp; Some physicists mistakenly believe that mathematicians have summed the series to give
+$-1/12$.&nbsp; And some mathematicians mistakenly believe that physicists have summed the series experimentally to
+give $-1/12$.&nbsp; Neither are right, but so much finger pointing of each to the other's discipline has occurred that
+many laymen now believe that maths <em>and</em> physics have both proved that the sum is $-1/12$.&nbsp; The subject is
+an old one, but gained a new lease of life in 2014 with the appearance of a notorious youtube clip presented by an
+academic well outside his zone of expertise, who succeeded only in breaking the rules of elementary maths.</p>
+<br><br>
+
+
+
+<h2>The Relevant Maths</h2>
+
+<p>Of course, it's physically impossible to use a calculator, abacus, or pen and paper to actually sum a series that
+is infinitely long, so mathematicians long ago realised that such an expression must be carefully defined for it to
+have any useful meaning.&nbsp; They define it in a way that matches everyone's expectation of what such an
+expression <em>should</em> mean: begin the addition term by term in the order written, and keep an eye on the running
+sum (also known as the "sequence of partial sums") as each term is added.&nbsp; If this running sum gets ever closer
+to some number, then that number will be unique and is called the sum of the series.&nbsp; If the running sum doesn't
+behave in that way, then we say the series has no sum.&nbsp; If you start with 1, then add 2 (running sum is 3), then
+add 3 (running sum is 6), then add 4 (running sum is 10), those partial sums 1, 3, 6, 10, get bigger and bigger and
+don't get arbitrarily close to any number at all.&nbsp; So the series $1 + 2 + 3 + \dots$ has no sum.&nbsp; But you
+knew that anyway.</p>
+
+<p>But didn't the mathematician Ramanujan sum the series to give $-1/12$?&nbsp; Ramanujan's letter of almost a century
+ago to the mathematician Hardy, in which he wrote the sum, dates from a different time.&nbsp; Ramanujan certainly had
+his feet on the ground enough to know that putting one orange into a big pit, followed by 2 more oranges, then 3 more
+oranges, and so on forever, is not going to result in there being $-1/12$ oranges in the pit.&nbsp; He was a
+trailblazer of another time, and went very far by experimenting with the fewer boundaries that existed back
+then.&nbsp; Since that time, more boundaries have been drawn, and modern mathematics knows perfectly well where these
+lie.&nbsp; Those boundaries were established by setting axiomatic properties of numbers, to keep mathematics from
+running off the rails and all hell breaking loose.&nbsp; Early mathematicians were allowed to do what they did, but
+modern mathematicians and physicists no longer work under the paradigm that was current back then.</p>
+
+<p>The reason why some modern physicists think that mathematics <em>has</em> summed the natural numbers actually
+has nothing to do with simple algebraic manipulations of the series.&nbsp; So let's take it in stages, and begin
+with some much simpler ideas.</p>
+
+<p>For example, what do we mean by the repeating decimal $0.3333\dots$?&nbsp; This represents the infinite series
+$3/10 + 3/100 + 3/1000 + \dots$.&nbsp; It can be shown that the ordered sequence $0.3, 0.33, 0.333, 0.3333, \dots$
+converges to 1/3 (or "has a limit of 1/3", or "tends toward 1/3"), and so we define $0.3333\dots$ to <i>equal</i>
+1/3.&nbsp; (Technically, that means we can always find an element in that sequence of $0.3, 0.33, 0.333, 0.3333,
+\dots$ which is as close to 1/3 as we wish, and such that all successive elements lie even closer to 1/3.)&nbsp; By
+the same token, the repeating decimal $0.9999\dots$ equals 1, because the ordered sequence $0.9, 0.99, 0.999, 0.9999,
+\dots$ converges to 1.&nbsp; In contrast, the ordered sequence $1,\; 1 + 2,\; 1 + 2 + 3, \dots$ has no limit at all
+that you can find on a number line.&nbsp; By convention we then say that the sum tends to infinity; although you can't
+find infinity on a number line, mathematicians do supplement the number system with a "number" called infinity, and so
+it can be said that $1 + 2 + 3 + \dots$ equals infinity.</p>
+
+<p>How about the series $1 + x + x^2 + x^3 + \dots$, where $x$ is a real number?&nbsp; This series converges only when
+$|x| < 1$.&nbsp; When it does converge, it sums to $1/(1-x)$, but you must always remember that the procedure that
+yields this sum is valid only when $|x| < 1$.&nbsp; It is certainly nonsensical to set $x$ equal to 5 and conclude
+that $1 + 5 + 5^2 + 5^3 + \dots$ equals $-1/4$.&nbsp; But it turns out that this is essentially what those are doing
+who say that $1 + 2 + 3 + \dots$ equals $-1/12$.</p>
+
+<p>If we <em>were</em> to assume that $1 + 5 + 5^2 + 5^3 + \dots$ equals some number that we can point to on the
+real-number line, then it would be easy to find that number.&nbsp; Call it $S$:
+\begin{equation}\label{eqn-for-S}
+     S = 1 + 5 + 5^2 + 5^3 + \dots \,.
+\end{equation}
+Since we are assuming that $S$ is a number, it must be amenable to the usual rules of algebra.&nbsp; So multiply
+equation \eqref{eqn-for-S} by 5, giving
+\begin{equation}\label{eqn-for-5S}
+     5S = 5 + 5^2 + 5^3 + 5^4 + \dots \,,
+\end{equation}
+and then subtract \eqref{eqn-for-S} from \eqref{eqn-for-5S} to conclude that
+\begin{equation}
+     4S = -1 \,.
+\end{equation}
+We find that <em>if</em> $S$ is assumed to exist, then it must equal $-1/4$.&nbsp; But <em>does</em> $S$ exist?&nbsp;
+The sum \eqref{eqn-for-S} deals only with whole and positive quantities $1, 5, 5^2, 5^3, \dots$, and so it should
+apply to whole objects such as eggs or electrons; but it's clear that adding $1\text{ egg} + 5\text{ eggs} + 5^2\text{
+eggs} + 5^3\text{ eggs} + \dots$ can <em>never</em> give $-1/4$ egg (what <em>is</em> $-1/4$ of an egg, anyway?); nor
+can it give $-1/4$ of an electron (is that $1/4$ of a positron?)&nbsp; So we've proved by contradiction that our
+initial idea to call the series $S$ was wrong, and that means that all the mathematical manipulations we did after
+introducing $S$ were invalid.&nbsp; It follows that $1 + 5 + 5^2 + 5^3 + \dots$ cannot equal any number at all that
+you can point to on the real-number line.</p>
+
+<p>This idea is routinely analysed using partial sums, and then the reason for why it doesn't work becomes very
+obvious.&nbsp; Denote the $n^\text{th}$ partial sum by $S_n$, which is certainly possible because these are just normal
+everyday sums:
+\begin{equation}
+     S_n = 1 + 5 + 5^2 + 5^3 + \dots + 5^n .
+\end{equation}
+Then
+\begin{equation}
+     5S_n = 5 + 5^2 + 5^3 + 5^4 + \dots 5^{n+1} .
+\end{equation}
+Subtracting the first line from the second gives
+\begin{equation}
+     4S_n = 5^{n+1} - 1 \,,
+\end{equation}
+and $S_n = (5^{n+1} - 1)/4$.&nbsp; This is all quite correct, but notice that as $n$ gets larger, $S_n = (5^{n+1} -
+1)/4$ grows without limit.&nbsp; So the sequence of partial sums $S_0, S_1, S_2, \dots$ doesn't converge to any number
+that we can locate on the real-number line.&nbsp; That's a formal mathematical proof of the obvious statement that $1
++ 5 + 5^2 + 5^3 + \dots$ doesn't converge to any real number.</p>
+<br>
+
+
+
+<h3>Analytic Continuation</h3>
+
+<p>Now let's picture a scenario, one that more usually occurs in the realm of complex numbers, but we can also explore
+it in the realm of real numbers.&nbsp; The example here is simple enough to highlight the main points, but don't be
+misled by its simplicity into believing that more complicated examples are as transparent as this one.</p>
+
+<p>I have a function $f(x) = 1 + x + x^2 + x^3 + \dots$ that I have worked out is defined for $|x| < 1$.&nbsp; Suppose
+I don't know what the sum converges to, but I just know that it converges for, and only for, all $|x| < 1$.</p>
+
+<p>But as I dabble with various expressions, I happen to notice that the expression $1/(1-x)$ equals the sum of my
+series $f(x)$ for all $|x| < 1$.&nbsp; I also know that $1/(1-x)$ is defined for all other values of $x$ except $x =
+1$.&nbsp; It turns out that of all "sufficiently smooth" functions, $1/(1-x)$ is the unique function with these
+properties.&nbsp; For suppose, on the contrary, that I was able to find another function $g(x)$ that also matched my
+series $f(x)$ for all $|x| < 1$.&nbsp; That would mean $g(x) - 1/(1-x)$ was zero everywhere inside $|x| < 1$.&nbsp;
+But if $g(x) - 1/(1-x)$ is "sufficiently smooth", it turns out that it will have to equal
+zero <em>everywhere</em>.&nbsp; But that means $g(x) = 1/(1-x)$, and so I haven't really found another
+function&mdash;I've only found $1/(1-x)$ again.&nbsp; So $1/(1-x)$ is a unique extension of my function $f(x)$ to the
+wider world of all $x$ (except $x = 1$).&nbsp; This $1/(1-x)$ is called the <i>analytic continuation</i> of
+$f(x)$.&nbsp; We have started with a series $f(x)$ valid in a limited interval $|x| < 1$, and managed to come up with
+a unique function that agrees with $f(x)$ in that interval, but is also valid on a larger interval.</p>
+
+<p>The crucial point here is that $1/(1-x)$ is <em>not</em> the sum of $1 + x + x^2 + x^3 + \dots$ outside the
+interval $|x| < 1$.&nbsp; It's simply a function that equals $f(x)$ within $|x| < 1$ but is also defined outside that
+interval, and is unique if we require our functions to be sufficiently smooth.&nbsp; What I could do is define a
+function $f(x)$ as follows (where "$\equiv$" means "is defined to be"):
+\begin{equation}
+f(x) \equiv \begin{cases}
+  1 + x + x^2 + x^3 + \dots & \text{for } |x| < 1 \,,\\[2ex]
+  1/(1-x) & \text{for all other $x$ except } x = 1 \,.
+\end{cases}
+\end{equation}
+I can then correctly write $f(5) = 1/(1-5) = -1/4$.&nbsp; But I'm certainly not saying that $1 + 5 + 5^2 + 5^3 + \dots
+= -1/4$.&nbsp; I have simply enlarged my original definition of $f(x)$ outside its original realm of applicability by
+using a different expression: $1/(1-x)$ in place of $1 + x + x^2 + x^3 +\dots$.&nbsp; Within the original realm of
+applicability, $1/(1-x)$ equals $1 + x + x^2 + x^3 + \dots$ of course.&nbsp; But that's neither here nor there,
+because 5 is not within the original realm of applicability.</p>
+
+<p>The same ideas apply more generally to functions defined over complex numbers.&nbsp; A "sufficiently smooth"
+function is called <i>analytic</i>.&nbsp; The series $f(z) = 1 + z + z^2 + z^3 + \dots$ certainly exists for all
+complex numbers $z$ in the disk $|z| < 1$, and again a unique analytic continuation exists, which is the function
+$1/(1-z)$ that is defined for all other $z$ except $z = 1$.&nbsp; And, as usual, we <em>only</em> say that $1 + z +
+z^2 + z^3 + \dots = 1/(1-z)$ for $|z| < 1$, but we can redefine $f(z)$ outside that disk by setting it equal to
+$1/(1-z)$ there.</p>
+
+<p>This series $1 + z + z^2 + z^3 + \dots$ was a simple example.&nbsp; Long ago, mathematicians became interested in
+the following series:
+\begin{equation}
+  1 + 1/2^z + 1/3^z + \dots \,.
+\end{equation}
+This series converges only when the real part of $z$ is greater than 1, and is called the <i>zeta function</i>,
+$\zeta(z)$, in this region of the complex numbers:
+\begin{equation} \label{zeta-defn-real-z-greater-than-1}
+  \zeta(z) \equiv 1 + 1/2^z + 1/3^z + \dots \,,\text{ provided real}(z) > 1 \,.
+\end{equation}
+This series doesn't converge when $\text{real}(z) \leqslant 1$, and so we cannot write $\zeta(z) = 1 + 1/2^z + 1/3^z +
+\dots$ when $\text{real}(z) \leqslant 1$.&nbsp; And we don't.&nbsp; But because an analytic continuation of the zeta
+function has been found for all $z$ not equalling 1, the zeta function has been redefined to include this wider
+definition.&nbsp; But note that this has nothing to do with the series in \eqref{zeta-defn-real-z-greater-than-1}!</p>
+
+<p>It turns out that the zeta function can first be analytically continued to the region $\text{real}(z) > 0$
+with $z$ not equal to 1, by using the following series:
+\begin{equation}
+  \zeta(z) \equiv {1\over 1-2^{1-z}} \left(1 - {1\over 2^z} + {1\over 3^z} - {1\over 4^z} + \dots\right),
+  \text{ provided } \text{real}(z) > 0 \text{ and } z \neq 1 \,.
+\end{equation}
+A second analytic continuation now extends the definition of the zeta function to all $z\neq 1$.&nbsp; This turns out
+to be possible with the following definition:
+\begin{equation} \label{zeta-defn-real-z-less-than-1}
+  \zeta(z) \equiv 2(2\pi)^{z-1} \sin(\pi z/2)\; \Pi(-z)\; \zeta(1-z) \,, \text{ provided } \text{real}(z) < 1 \,, 
+\end{equation}
+where $\Pi(z)$ is the "Pi" or factorial function as defined over all complex numbers, and can also be written as
+"$z\textit{!}\,$".&nbsp; [There are actually several ways that the factorial can be defined over all complex numbers,
+but \eqref{zeta-defn-real-z-less-than-1} uses the most common one.&nbsp; Note also that $\Pi(z)$ is often written as
+the "Gamma function" $\Gamma(z+1)$, that has a confusing yet bizarrely fashionable shift of 1 whose origins presumably
+trace back to a mathematician from a bygone century having had a little too much to drink, or something.&nbsp; Use
+$\Gamma$ only if you want to confuse people.]</p>
+
+<p>It turns out that when $\zeta(z)$ is analytically continued in the way of the above, that $\zeta(-1) =
+-1/12$.&nbsp; Of course, this has nothing to do with the original series \eqref{zeta-defn-real-z-greater-than-1} that
+started $\zeta(z)$ off, which was only defined when the real part of $z$ is greater than 1.&nbsp; But picture a
+mathematicians' party where the joke goes around that if we set $z = -1$ in the series $1 + 1/2^z + 1/3^z + \dots$,
+and then say that the result equals $\zeta(-1)$ (which it most certainly does <em>not</em>), then we'll end up by
+saying that $1 + 2 + 3 + \dots$ equals $-1/12$.&nbsp; It's a bit of humour that probably works well at that party
+precisely because the mathematicians understand what's really going on, that it <em>is</em> just a joke.&nbsp; But a
+problem arises when this joke leaks out into the wider world and gets taken seriously by those who aren't in on the
+joke.&nbsp; And that is precisely what has happened, and why so many people think that mathematicians say that $1 + 2
++ 3 + \dots$ equals $-1/12$.&nbsp; Consider it to be just a joke that got out of hand.</p>
+
+<p>Of course, mathematicians are well within their remit to search for any connection that might exist between two
+functions when one is the analytic continuation of the other.&nbsp; That's a very interesting technical question, and
+one that currently has no answer.&nbsp; In other words, how is the most general definition of $\zeta(z)$ related to
+the restricted definition in \eqref{zeta-defn-real-z-greater-than-1}, $\zeta(z)=1 + 1/2^z + 1/3^z + \dots$, that holds
+only for $\text{real}(z) > 1$?&nbsp; Perhaps one day someone will figure that out.&nbsp; But currently that is a task
+specific to pure mathematics.&nbsp; Although a few isolated values of the zeta function turn up in physics, the
+function itself (as a whole entity) has not yet found any application in physics.</p>
+
+<p>In the meantime, I don't think anyone ever sets $z$ to 0 in the series $1 + 1/2^z + 1/3^z + \dots$ and equates the
+answer to $\zeta(0) = -1/2$, to say that $1 + 1 + 1 + \dots$ equals $-1/2$.&nbsp; And if they do, how do they find any
+consistency with the fact that they could equally well have done the same thing for the series $1 + z + z^2 + z^3 +
+\dots$ by substituting $z = 1$ into the expression $1/(1-z)$ to arrive at infinity?&nbsp; Nor does anyone set $z$ to
+$-2$ in the series $1 + 1/2^z + 1/3^z + \dots$ and equate the answer to $\zeta(-2) = 0$, to say that $1^2 + 2^2 + 3^2
++ \dots$ equals 0.&nbsp; And yet, the mathematicians' joke that $1 + 2 + 3 + \dots$ equals $-1/12$ clings stubbornly on
+in the imaginations of many non mathematicians&mdash;and even of some mathematicians.</p>
+
+<p>Other ideas of summing infinite series exist.&nbsp; One that you will find mentioned in connection with summing the
+natural numbers is "Cesaro summation", in which we write a sequence of arithmetic means of the partial sums of the
+infinite series.&nbsp; If that sequence converges to some limit, then that limit is called the Cesaro sum of the
+infinite series.&nbsp; Cesaro sums can sometimes be better behaved than the usual type.&nbsp; Also, any series that
+sums in the usual sense of partial sums will be Cesaro summable to the same number.&nbsp; But some series that are not
+summable in the usual sense <em>are</em> Cesaro summable&mdash;although the series $1 + 2 + 3 + \dots$ is not one of
+those.&nbsp; In principle there is an infinite number of different "flavours" of Cesaro sum that one could define for
+any one series, purely because there is an infinite number of different ways to define an average: the arithmetic,
+geometric, and harmonic means are only three examples of an infinite number of different means.&nbsp; Cesaro summing
+uses the usual arithmetic mean, but there is no reason why we shouldn't use any other flavour of mean instead.</p>
+
+<p>Here's an example of a series that is not summable in the usual sense, but <em>is</em> Cesaro summable:
+\begin{equation} \label{summing-1-minus-1}
+1 - 1 + 1 - 1 + 1 - 1 + \dots \,.
+\end{equation}
+The sequence of running sums is $1, 0, 1, 0, 1, 0, \dots$.  The average of these tends to 1/2 as the sequence gets
+longer, and so the Cesaro sum of \eqref{summing-1-minus-1} is 1/2, even though the usual sum doesn't exist.&nbsp; Does
+the Cesaro sum have any physical use here?&nbsp; Note that if you give a man 1 dollar in the first second, then 1/2
+dollar in the next second, then 1/4 dollar, then 1/8 dollar and so on, he will eventually be able to spend a sum of
+money arbitrarily close to \$2 (but not more than that) if he waits long enough.&nbsp; But if you give him 1 dollar,
+then take it away, then give it back, then take it away, repeating these actions indefinitely, he'll never be able to
+spend anything at all, unless he spends \$1 very quickly and then sells what he bought for \$1 so that he can give it
+back to you.&nbsp; He certainly won't be able to spend 1/2 a dollar and keep what he buys.&nbsp; So whereas the usual
+way of summing says the series \eqref{summing-1-minus-1} has no sum&mdash;which corresponds to something about the
+real world here&mdash;the Cesaro sum does not correspond to anything about the real world.</p>
+
+<p>Cesaro summing is really one version of a more general idea in which we define a function, say $f$, that takes the
+elements of the infinite series in order and returns a number that we find interesting.&nbsp; Those who wish to say
+that the sum of the natural numbers is $\zeta(-1)$ are really defining such a function via "$f(1,2,3,\dots) =
+\zeta(-1)$".&nbsp; That can certainly be done, but is it useful?&nbsp; There are any number of infinite series in $z$
+that we could write down that reduce to $1 + 2 + 3 + \dots$ when some $z$ is set to some number, and the result won't
+necessarily be $-1/12$.&nbsp; So now we'll have to introduce <em>another</em> function, call it $g$, such that
+$g(1,2,3,\dots)$ equals whatever number is returned by that new series of interest.&nbsp; An infinite number of
+functions will need to be invented to cover all series.&nbsp; The subject of infinite summation will then be running
+off the rails, and departing from the very basic idea that a sum is all about piling objects on top of each other and
+seeing what, if anything, is taking shape.</p>
+
+<p>It's sometimes argued that if the series $1 + 2 + 3 + \dots$ has no sum in the usual sense, that we are free to define it to
+equal <em>something</em> of use.&nbsp; The analogy is used that the square root of 2 doesn't exist in the rational numbers, so
+we extend those numbers to become the real numbers, in which case the square root of 2 <em>does</em> then exist.&nbsp; Likewise
+the square root of $-1$ doesn't exist in the real numbers, so we extend the real numbers to become the complex numbers, and
+then the square root of $-1$ does exist.&nbsp; So, some argue, we should be allowed to <em>define</em> $1 + 2 + 3 + \dots$ to
+be $-1/12$.&nbsp; But this line of reasoning has no logical content.&nbsp; The only way that the square root of 2 and the
+square root of $-1$ were given meaning was precisely by <em>extending</em> the realm of known numbers to a larger set that
+contained new entities.&nbsp; For example, we can't just say the square root of 2 equals 4/5; we have to invent a new type of
+number, an irrational number.&nbsp; Likewise we can't just say the square root of $-1$ equals $-5$ or 349.&nbsp; We need to
+extend the realm of numbers to give the square root of $-1$ meaning; we do that by inventing a new number, $i$, for the square
+root of $-1$.&nbsp; Likewise, we cannot set $1 + 2 + 3 + \dots$ equal to a real number, because we already know that $1 + 2 + 3
++ \dots$ doesn't converge to any such number.&nbsp; So can we extend the complex numbers by defining a new object that equals
+$1 + 2 + 3 + \dots$?&nbsp; Certainly, and this was done long ago: that new object is "infinity".&nbsp; Defining it hasn't
+proved as fruitful as defining irrational numbers and complex numbers, but it has been done.&nbsp; The important point is that
+infinity does not equal $-1/12$.&nbsp; Maintaining that an infinite sum is just too inconvenient and must be replaced by some
+real number&mdash;as some do&mdash;is about as daft as demanding that Earth's radius should be redefined to be 10 metres to
+make it quicker to travel to another country.</p>
+<br><br>
+
+
+
+<h2>The Relevant Physics</h2>
+<p>Some mathematicians and physicists think that physicists have measured $1 + 2 + 3 + \dots$ to equal $-1/12$ in the
+laboratory.&nbsp; But no such measurement has ever been made; nor will it ever be made.&nbsp; This measurement is
+described in the FAQ entry <a href="../Quantum/casimir.html">What is the Casimir Effect?</a>.&nbsp; It concerns a
+prediction made by the Dutch physicist Hendrick Casimir in 1948.&nbsp; Casimir analysed two parallel plates using the
+language of quantum mechanics.&nbsp; He considered a field that might fill the universe, and in particular the space
+between the plates.&nbsp; This field was purely a theoretical construct until Casimir came along.</p>
+
+<p>The usual line of reasoning says that the value of this field in some region is to be interpreted in a quantum
+mechanical sense as being related to the probability of finding a related particle in that region.&nbsp; Since
+presumably no particles can exist at the plates themselves, the field is required to vanish at the plates.&nbsp; If
+the field is constrained that way and Fourier-analysed into a sum of "modes", then only a countably infinite number
+of these modes can exist between the plates.</p>
+
+<p>Casimir calculated the quantum mechanical energy of the mode-restricted field between the plates.&nbsp; As
+expected, it was infinite, because quantum mechanics allocates a unit of energy to each mode, and there are an
+infinite number of modes between the plates.&nbsp; His calculation arrived at the sum "$1 + 2 + 3 + \dots$", which
+expressed this infinite energy.</p>
+
+<p>The idea of infinite energy is something of a problem in practice.&nbsp; What Casimir did next got him through that
+problematic infinity.&nbsp; First, he made the series somewhat like a geometrical one by inserting a "cutoff" factor
+that could go to 1 in an appropriate limit.&nbsp; This new series was well defined and able to be summed exactly to
+some number $S_L$, where $L$ is the plates' separation.&nbsp; Next, Casimir calculated the <em>difference</em> between
+this expression and the analogous expression for the absence of plates: that is, when the the plate separation $L$
+went to infinity.&nbsp; So he calculated $S_L - S_\infty$.&nbsp; The divergent part of each series was contained in
+the cutoff, but this part cancelled in the subtraction&mdash;thus no "limit as cutoff goes to 1" ever had to be
+considered.&nbsp; What was left included a factor of $-1/12$.&nbsp; I'll call this the "Energy Difference".</p>
+
+<p>This difference in energies was treated like a difference in potential energies.&nbsp; Now, potential energy is
+only defined up to an additive constant, so there is no unique potential energy for, say, a mass in a gravitational
+field (unless we stipulate the additive constant, which we certainly do in practice).&nbsp; But
+the <em>difference</em> between two potential energies certainly is well defined and related to forces.&nbsp; The
+difference in field energies with and without the plates was then related to the existence of a tiny force between the
+plates, and the existence of this force is known as the Casimir Effect.&nbsp; In fact, a force is a <em>spatial</em>
+gradient of potential energy, but spatial gradients actually have nothing to do with the difference in field energies
+with and without plates.&nbsp; So this very standard explanation of the Casimir Effect doesn't quite work.&nbsp; But
+it has become standard in the field.</p>
+
+<p>Historically, that's where the Casimir Effect stands, but the above procedure has been re-interpreted by many
+practitioners in the following way.&nbsp; They note that the original divergent sum (i.e., with plates present) will
+give what I called the Energy Difference if they simply replace its "$1 + 2 + 3 + \dots$" part with $-1/12$.&nbsp; I
+think that's of no great consequence: the mathematics of the sums in the Casimir Effect is not complicated, so it
+should not be surprising to find that the Energy Difference has a lot in common with the non-divergent overall factor
+in the original divergent sum.</p>
+
+<p>But notice what this interpretation has done: it has taken a divergent quantity and observed that replacing its $1
++ 2 + 3 + \dots$ part by $-1/12$ gives the difference between two related sums ($S_L$ and $S_\infty$, that each have a
+cutoff).&nbsp; Then, because $S_L - S_\infty$ is in some sense measured in the lab to involve a factor of $-1/12$,
+this interpretation concludes that $1 + 2 + 3 + \dots$ equals $-1/12$.&nbsp; There is no real logic here, so don't
+look too hard for it.&nbsp; Just remember the bottom line: neither mathematics nor physics says that $1 + 2 + 3 +
+\dots$ equals anything other than infinity.&nbsp; And because the meaning of "$+$" was already extended long ago to
+apply to infinite series in the particular way described above, it cannot now be given some new, arbitrary meaning
+to suit the tastes of those who think that they have a licence to change the rules of elementary mathematics.</p>
+
+<p><br></p>
+
+</body>
+</html>

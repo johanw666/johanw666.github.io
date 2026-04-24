@@ -1,0 +1,405 @@
+<html>
+<head>
+<title>Some Frequently Asked Questions About Virtual Particles</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Original by Matt McIrvin, 1994.</p>
+<p><br></p>
+
+
+<h1>Some Frequently Asked Questions About Virtual Particles</h1>
+
+Contents:
+<ol>
+<li> What are virtual particles?
+<li> How can they be responsible for attractive forces?
+<li> Do they violate energy conservation?
+<li> Do they go faster than light?&nbsp;  Do virtual particles contradict relativity or causality?
+<li> I hear physicists saying that the "quantum of the gravitational force" is something called a graviton.&nbsp; Doesn't general
+relativity say that gravity isn't a force at all?
+</ol>
+
+
+
+<h2>What are virtual particles?</h2>
+
+One of the first steps in the development of quantum mechanics was Max Planck's idea that a harmonic oscillator (classically,
+anything that wiggles like a mass bobbing on the end of an ideal spring) cannot have just any energy.&nbsp; Its possible energies
+come in a discrete set of equally spaced levels.
+
+<p>An electromagnetic field wiggles in the same way when it possesses waves.&nbsp; Applying quantum mechanics to this oscillator
+reveals that it must also have discrete, evenly spaced energy levels.&nbsp; These energy levels are what we usually identify as
+different numbers of photons.&nbsp; The higher the energy level of a vibrational mode, the more photons there are.&nbsp; In this way,
+an electromagnetic wave acts as if it were made of particles.&nbsp; The electromagnetic field is a quantum field.</p>
+
+<p>Electromagnetic fields can do things other than vibration.&nbsp; For instance, the electric field produces an attractive or
+repulsive force between charged objects, that varies as the inverse square of distance.&nbsp; The force can change the momenta of the
+objects.</p>
+
+<p>Can this be understood in terms of photons as well?&nbsp; It turns out that, in a sense, it can.&nbsp; We can say that the
+particles exchange "virtual photons" that carry the transferred momentum.&nbsp; Here is a picture (a "Feynman diagram") of the
+exchange of one virtual photon.</p>
+<pre style="font-size: 24px">
+                    \                /
+                     \   <- p       / 
+                      >~~~         /          ^ time
+                     /    ~~~~    /           |
+                    /         ~~~<            |
+                   /              \            ---> space
+                  /                \
+</pre>
+
+<p>The lines on the left and right represent two charged particles, and the wavy line (jagged because of the limitations of ASCII) is
+a virtual photon, that transfers momentum from one to the other.&nbsp; The particle that emits the virtual photon loses momentum p in
+the recoil, and the other particle gets the momentum.</p>
+
+<p>This is a seemingly tidy explanation.&nbsp; Forces don't happen because of any sort of action at a distance, they happen because
+of virtual particles that spew out of things and hit other things, knocking them around.&nbsp; But this is misleading.&nbsp; Virtual
+particles are really not just like classical bullets.</p>
+
+
+
+<h2>How can they be responsible for attractive forces?</h2>
+
+<p>The most obvious problem with a simple, classical picture of virtual particles is that this sort of behavior can't possibly result
+in attractive forces.&nbsp; If I throw a ball at you, the recoil pushes me back; when you catch the ball, you are pushed away from
+me.&nbsp; How can this attract us to each other?&nbsp; The answer lies in Heisenberg's uncertainty principle.</p>
+
+<p>Suppose that we are trying to calculate the probability (or, actually, the probability amplitude) that some amount of momentum, p,
+gets transferred between a couple of particles that are fairly well- localized.&nbsp; The uncertainty principle says that definite
+momentum is associated with a huge uncertainty in position.&nbsp; A virtual particle with momentum p corresponds to a plane wave
+filling all of space, with no definite position at all.&nbsp; It doesn't matter which way the momentum points; that just determines
+how the wave fronts are oriented.&nbsp; Since the wave is everywhere, the photon can be created by one particle and absorbed by the
+other, no matter where they are.&nbsp; If the momentum transferred by the wave points in the direction from the receiving particle to
+the emitting one, the effect is that of an attractive force.</p>
+
+<p>The moral is that the lines in a Feynman diagram are not to be interpreted literally as the paths of classical particles.&nbsp;
+Usually, in fact, this interpretation applies to an even lesser extent than in my example, since in most Feynman diagrams the
+incoming and outgoing particles are not very well localized; they're supposed to be plane waves too.</p>
+
+<p>The uncertainty principle opens up the possibility that a virtual photon <em>could</em> impart a momentum that corresponds to an
+attractive force as well as to a repulsive one.&nbsp; But you may well ask what makes the force repulsive for like charges and
+attractive for opposite charges!&nbsp; Does the virtual photon <em>know</em> what kind of particle it's going to hit?</p>
+
+<p>It's hard even for particle physicists to see this using the Feynman diagram rules of QED, because they're usually formulated in a
+manner designed to answer a completely different question: that of the probability of particles in plane-wave states scattering off
+each other at various angles.&nbsp; Here, though, we want to understand what nudges a couple of particles that are just sitting
+around some distance apart&mdash;to explain the experiment you may have done in high school, in which charged balls of aluminum foil
+repel each other when hanging from strings.&nbsp; We want to do this using virtual particles.&nbsp; It can be done.</p>
+
+<p>In QED, as in quantum mechanics in general, there are wave functions with complex-number values that have to be squared to get
+probabilities.&nbsp; We want to see that the wave function changes so that the like charges, on average, are repelled from each
+other, and the unlike charges, on average, are attracted.</p>
+
+<p>Suppose, for simplicity, that the charged particles' wave functions are initially gaussians at rest, that is, normal bell-shaped,
+real-valued functions, and that they are lined up along the x axis.&nbsp; You can think of the wave functions, schematically, as
+looking like this:</p>
+
+<pre style="font-size: 24px">
+             ____                         ____   
+            /    \                       /    \     x ->  
+          _/      \_                   _/      \_  
+0 _______/          \_________________/          \__________
+
+</pre>
+
+<p>where you are supposed to imagine that those ASCII stairs are actually continuous, smooth curves.&nbsp; Imagine, furthermore, that
+the distance between the two lumps in this diagram is much larger than the width of a lump.&nbsp; If you know some quantum mechanics,
+you know that in the absence of any forces, the lumps will just spread out symmetrically (well, if the particles are identical we
+have to worry about other details when they start to overlap substantially, but if the lumps are far apart that won't happen for a
+while).&nbsp; If there is an overall constant potential energy, that will give the wave functions an additional rotating phase, but
+we can always ignore that without affecting any physical quantities.</p>
+
+<p>Concentrate on one of the particles, say, the one to the left.&nbsp; As well as the ordinary wave functions that are functions of
+position, I can also define wave functions in "momentum space": there is a probability amplitude for every momentum, that you square
+to find the probability density.&nbsp; If its wave function in space is Gaussian, then the wave function in "momentum space" is also
+Gaussian: as a function of the x component of momentum it is also bell-shaped.&nbsp; The narrower the position-space Gaussian is, the
+wider the momentum-space Gaussian is; that is Heisenberg's uncertainty principle!</p>
+
+<pre style="font-size: 24px">
+
+                       _____________
+                    __/      ^      \__
+                 __/         |         \__         p ->
+            ____/            |            \____
+ 0 ________/           zero momentum           \____________
+
+</pre> 
+ 
+ 
+<p>In order to make this problem tractable, I should specify that the momentum-space wave function isn't so wide (in other words, the
+position-space wave function isn't so narrow) that consequent relativistic effects become large.&nbsp; (For electrons, this doesn't
+happen until the position wave functions are squeezed into a space much smaller than an atom; and if the particle is more massive you
+have to squeeze it even more.)  Also, I will ignore the particles' magnetic moments, if they have them, because all I care about is
+the electrostatic force.</p>
+
+<p>Now, consider a virtual photon that comes from the particle on the right and is absorbed by the particle on the left.&nbsp;
+Actually calculating the photon's wave function is a little hairy; I have to consider the possibility that the photon was emitted by
+the other particle at any prior time.&nbsp; (But I <em>can</em> save myself a little effort later by automatically including the
+possibility that the photon actually comes from the particle on the <em>left</em> and is absorbed by the particle on the
+<em>right</em>, with the recoil nudging the left particle: all I have to do is include situations in which the photon is "emitted on
+the right" in the <em>future</em> and goes "backward in time," and take its momentum to be minus what it really is!&nbsp; As long as
+I remember what's really going on, this trick is formally OK and saves a lot of trouble; it was introduced by Richard Feynman.)</p>
+
+<p>When I include all of these possibilities, it turns out that I can <em>approximate</em> the photon's momentum-space wave function
+usably well by the following: the wave function is a function proportional to the electric charge of the emitting particle (in a
+sense this <em>defines</em> what electric charge is), and it has a few big, narrow spikes in it.  One spike is proportional to -i
+times the charge, and is to the left of the origin; the other spike is minus <em>that</em> and is to the right of the origin.&nbsp;
+(There is also a third spike at zero momentum that has a real amplitude, but it turns out not to do anything important at the end of
+the day&mdash;it provides a constant potential energy&mdash;so I'll ignore it.)  The imaginary component of the photon wave function
+looks like this, if the emitting particle was a negatively charged electron:</p>
+
+<pre style="font-size: 24px">
+
+                |
+ +i             |     zero momentum                p -->
+                |          |
+                |          v
+  0 ____________|________________________________________
+                                     |
+                                     |
+                                     |
+  -i                                 |
+                                     |
+
+</pre>
+				     
+<p>If the emitting particle was <em>positively</em> charged, this picture is upside down.</p>
+
+<p>(A note for experts only: The somewhat QED-savvy may be puzzled by the total non-resemblance of this to any well-known photon
+propagator.&nbsp; That's because I'm not going into momentum space in every direction, just in the x direction.&nbsp; The more
+QED-savvy will notice that I am making some pretty monstrous oversimplifications here.&nbsp; Actually they are not so bad; what I'm
+doing is the equivalent of assuming that the potential can be locally approximated by a sinusoid!&nbsp; If the wave packet is small
+enough in position space, a Coulomb potential and a sinusoidal one are both effectively a constant-force potential, so I can do
+this.&nbsp; Neglecting all magnetic effects and taking the nonrelativistic limit, the amplitude for transfer of a given momentum by a
+single virtual photon&mdash;which is essentially what I am colorfully, and without much prevarication, labeling the "photon's
+momentum-space wave function"&mdash; has to have an imaginary part odd in <em>p<sub>x</sub></em> because the potential is real, so in
+any case the qualitative effect will be the same as what I describe below, and for essentially the same reasons.&nbsp; It's just so
+much easier to convolve spikes.&nbsp; As for the single-particle "wave functions" of the charged particles, I can speak of them with
+fair correctness because the particles are far apart and slowly moving.)</p>
+
+<p>The effect of a virtual photon hit on the charged particle's momentum-space wave function is, then, quite simple.&nbsp; The photon
+has a certain probability amplitude of knocking the charged particle to the left and a certain amplitude of knocking it to the
+right.&nbsp; The probability amplitude for each possibility is just proportional to i times the charge of the particle times the
+photon wave function times the time!&nbsp; (The other constants of proportionality depend on the system of units; we're not being
+terribly quantitative so don't worry about them.)  We multiply the original charged particle's wave function&mdash;shifted to the
+right or left in momentum space, depending on which way it got knocked by the photon&mdash;times this amplitude, for each of the two
+possibilities, and then add the modified wave functions for the two possibilities together.</p>
+
+<p>If both particles are negatively charged, or both are positively charged, then we're adding a right-side-up wave function, shifted
+to the left, to an upside-down wave function shifted to the right.&nbsp; The result is real-valued and looks something like this:</p>
+
+<pre style="font-size: 24px">
+
+                _____
+ +            _/     \_ zero momentum
+           __/         \   |                      p -->
+        __/             \  |
+ 0  ___/                 \ v 
+                          \                   ________
+                           \               __/
+                            \           __/
+ -                           \_       _/
+                               \_____/
+
+</pre>
+
+<p>and it increases in size as time goes on, from zero at the start of the problem.&nbsp; If the particles have <em>opposite</em>
+charges, then you should flip that picture upside down.&nbsp; The result is proportional to the <em>product</em> of the two charges,
+because we multiplied in the other particle's charge when finding the photon wave function, and this particle's charge when the
+interaction happened.</p>
+
+<p>Now, by now you might be a little disturbed.&nbsp; We get wave functions by squaring amplitudes.&nbsp; The lump to the right of
+the origin goes <em>down</em> just as far as the lump to the left goes <em>up</em>.&nbsp; So isn't the probability that the photon
+knocked the particle's momentum <em>toward</em> the other one just as large as the probability that it knocked it <em>away</em>?&nbsp;
+No, because there is still some probability amplitude that no photon interaction occurred at all, and since we have no way of
+unambiguously telling one possibility from the other, we need to add the two wave functions together before squaring them!&nbsp;
+(There are also amplitudes for larger numbers of interactions, but for short times, we need not worry about those.&nbsp; Also, the
+"no-hit" wave function is not exactly the unmodified one, because of its own natural time evolution, but for short times all that
+does to the momentum-space wave function is give it a small imaginary part that we don't care about here.)</p>
+
+<p>I said the unmodified wave function was positive, so the post-hit wave function will interfere with it <em>constructively</em> on
+the left side of the origin, and <em>destructively</em> on the right (or vice versa if the particles have opposite charges).&nbsp; So
+after a little time has passed, the wave function looks something like this in momentum space:</p>
+
+<pre style="font-size: 24px">
+
+           ________    zero momentum
+         _/        \___    |
+        /              \__ v                  p -->
+      _/                  \__
+    _/                       \______
+ 0 /                                \________________
+
+</pre>
+ 
+<p>Squaring the absolute value of the wave function gives you a probability distribution whose hump is also shifted to the
+left.&nbsp; The momentum of the particle is skewed leftward&mdash;it is being repelled from the other particle!&nbsp; If the charges
+have opposite signs, the interference goes the other way and the particle's momentum is skewed rightward, resulting in a net
+attraction.&nbsp; The position-space wave function itself will tend to move leftward or rightward as it spreads out, as the case may
+be.</p>
+
+<p>You might wonder: What happens when the time gets late enough that the negative hump in the struck wave function more than cancels
+the original wave function?&nbsp; Well, at those times, my analysis here is not enough, because there is also a significant amplitude
+that <em>two</em> photons have hit the particle (and things get gnarlier, because they could have hit it in any <em>order</em>); for
+still longer times I need to consider three, and so on.</p>
+
+<p>The important point is that the photon doesn't "know" that it's going to hit a particle of the same charge as the one that emitted
+it, or of the opposite charge.&nbsp; The distinction between attraction and repulsion actually arises when the effect of the virtual
+photon interferes with the unperturbed wave function!&nbsp; In general, the distinction comes from interference between the
+contributions from <em>odd</em> and <em>even</em> numbers of virtual photons traveling from one particle to the other.&nbsp; Each
+such photon multiplies a factor of the product of the two charges into its contribution to the wave function; so the odd processes
+will get a factor of &minus;1 from this product (times other things, of course) if the charges are different and +1 if they are
+alike, whereas the even processes get a factor of +1 in either case.&nbsp; The interference between "odd" and "even" terms in the
+wave function yields effects that survive even upon squaring the amplitude to get a probability.&nbsp; In the discussion above, by
+limiting consideration to short times, I've been able to ignore everything but the no-photon and one-photon processes.</p>
+
+<p>This interference, with the amplitude for photon collision increasing smoothly with time, is also part of the reason why you can
+regard a stately and continuous thing like the evolution of a wave packet as the result of violent particle-collision events.&nbsp;
+As discordant as these phenomena may seem, they are actually two sides of the same coin.&nbsp; In the classical realm we don't see
+the spreading of the wave functions, but we <em>do</em> see this gradual net change in momentum, and it is what we call a force.</p>
+
+
+
+<h2>Do they violate energy conservation?</h2>
+
+<p>We are really using the quantum-mechanical approximation method known as perturbation theory.&nbsp; In perturbation theory,
+systems can go through intermediate "virtual states" that normally have energies different from that of the initial and final
+states.&nbsp; This is because of another uncertainty principle, that relates time and energy.</p>
+
+<p>In the pictured example, we consider an intermediate state with a virtual photon in it.&nbsp; It isn't classically possible for a
+charged particle to just emit a photon and remain unchanged (except for recoil) itself.&nbsp; The state with the photon in it has too
+much energy, assuming conservation of momentum.&nbsp; But since the intermediate state lasts only a short time, the state's energy
+becomes uncertain, and it can actually have the same energy as the initial and final states.&nbsp; This allows the system to pass
+through this state with some probability without violating energy conservation.</p>
+
+<p>Some descriptions of this phenomenon instead say that the energy of the <EM>system</EM> becomes uncertain for a short period of
+time, that energy is somehow "borrowed" for a brief interval.&nbsp; This is just another way of talking about the same
+mathematics.&nbsp; But it obscures the fact that all this talk of virtual states is just an approximation to quantum mechanics, in
+which energy is conserved at all times.&nbsp; The way I've described it also corresponds to the usual way of talking about Feynman
+diagrams, in which energy is conserved, but virtual particles can carry amounts of energy not normally allowed by the laws of
+motion.</p>
+
+<p>(General relativity creates a different set of problems for energy conservation; that's described elsewhere in the sci.physics
+FAQ.)</p>
+
+
+
+<h2>Do they go faster than light?&nbsp; Do virtual particles contradict relativity or
+   causality?</h2>
+
+<p>In section 2, the virtual photon's plane wave is seemingly created everywhere in space at once, and destroyed all at once.&nbsp;
+Therefore, the interaction can happen no matter how far the interacting particles are from each other.&nbsp; Quantum field theory is
+supposed to properly apply special relativity to quantum mechanics.&nbsp; Yet here we have something that, at least at first glance,
+isn't supposed to be possible in special relativity: the virtual photon can go from one interacting particle to the other faster than
+light!&nbsp; It turns out, if we sum up all possible momenta, that the amplitude for transmission drops as the virtual particle's
+final position gets farther and farther outside the light cone, but that's small consolation.&nbsp; This "superluminal" propagation
+had better not transmit any information if we are to retain the principle of causality.</p>
+
+<p>I'll give a plausibility argument that it doesn't in the context of a thought experiment.&nbsp; Let's try to send information
+faster than light with a virtual particle.</p>
+
+<p>Suppose that you and I make repeated measurements of a quantum field at distant locations.&nbsp; The electromagnetic field is sort
+of a complicated thing, so I'll use the example of a field with just one component, and call it F.&nbsp; To make things even simpler,
+we'll assume that there are no "charged" sources of the F field or real F particles initially.&nbsp; This means that our F
+measurements should fluctuate quantum- mechanically around an average value of zero.&nbsp; You measure F (really, an average value of
+F over some small region) at one place, and I measure it a little while later at a place far away.&nbsp; We do this over and over,
+and wait a long time between the repetitions, just to be safe.<p>
+<pre style="font-size: 24px">
+                                .
+                                .
+                                .
+                                   ------X
+                             ------
+                      X------
+
+
+                                                     ^ time
+                                   ------X me        |
+                             ------                  |
+                  you X------                         ---> space
+</pre>
+
+<p>After a large number of repeated field measurements we compare notes.&nbsp; We discover that our results are not independent; the
+F values are correlated with each other&mdash;even though each individual set of measurements just fluctuates around zero, the
+fluctuations are not completely independent.&nbsp; This is because of the propagation of virtual quanta of the F field, represented
+by the diagonal lines.&nbsp; It happens even if the virtual particle has to go faster than light.</p>
+
+<p>But this correlation transmits no information.&nbsp; Neither of us has any control over the results we get, and each set of
+results looks completely random until we compare notes (this is just like the resolution of the famous EPR "paradox").</p>
+
+<p>You can do things to fields other than measure them.&nbsp; Might you still be able to send a signal?&nbsp; Suppose that you
+attempt, by some series of actions, to send information to me by means of the virtual particle.&nbsp; If we look at this from the
+perspective of someone moving to the right at a high enough speed, special relativity says that in that reference frame, the effect
+is going the other way:</p>
+<pre style="font-size: 24px">
+           .
+            .
+             .
+
+          X------
+                 ------
+                       ------X
+
+
+
+            you X------                        ^ time
+                       ------                  |
+                             ------X me        |
+                                                ---> space
+</pre>
+
+<p>Now it seems as if I'm affecting what happens to you rather than the other way around.&nbsp; (If the quanta of the F field are not
+the same as their antiparticles, then the transmission of a virtual F particle from you to me now looks like the transmission of its
+antiparticle from me to you.)&nbsp; If all this is to fit properly into special relativity, then it shouldn't matter which of these
+processes "really" happened; the two descriptions should be equally valid.</p>
+
+<p>We know that all of this was derived from quantum mechanics, using perturbation theory.&nbsp; In quantum mechanics, the future
+quantum state of a system can be derived by applying the rules for time evolution to its present quantum state.&nbsp; No measurement
+I make when I "receive" the particle can tell me whether you've "sent" it or not, because in one frame that hasn't happened
+yet!&nbsp; Since my present state must be derivable from past events, if I have your message, I must have gotten it by other
+means.&nbsp; The virtual particle didn't "transmit" any information that I didn't have already; it is useless as a means of
+faster-than-light communication.</p>
+
+<p>The order of events does <EM>not</EM> vary in different frames if the transmission is at the speed of light or slower.&nbsp; Then,
+the use of virtual particles as a communication channel is completely consistent with quantum mechanics and relativity.&nbsp; That's
+fortunate: since all particle interactions occur over a finite time interval, in a sense <EM>all</EM> particles are virtual to some
+extent.</p>
+
+
+
+<h2>I hear physicists saying that the "quantum of the gravitational force" is
+   something called a graviton.&nbsp; Doesn't general relativity say that gravity isn't a
+   force at all?</h2>
+
+<p>You don't have to accept that gravity is a "force" to believe that gravitons might exist.&nbsp; According to QM, anything that
+behaves like a harmonic oscillator has discrete energy levels, as I said in part 1.&nbsp; General relativity allows gravitational
+waves, ripples in the geometry of spacetime that travel through space at the speed of light.&nbsp; Under a certain definition of
+gravitational energy (a tricky subject), the wave can be said to carry energy.&nbsp; If QM is ever successfully applied to GR, it
+seems sensible to expect that these oscillations will also possess discrete "gravitational energies," corresponding to different
+numbers of gravitons.</p>
+
+<p>Quantum gravity is not yet a complete, established theory, so gravitons are still speculative.&nbsp; It is also unlikely that
+individual gravitons will be detected any time in the near future.</p>
+
+<p>Furthermore, it is not at all clear that it will be useful to think of gravitational "forces," such as the one that sticks you to
+Earth's surface, as mediated by virtual gravitons.&nbsp; The notion of virtual particles mediating static forces comes from
+perturbation theory, and if there is one thing we know about quantum gravity, it's that the usual way of doing perturbation theory
+doesn't work.</p>
+
+<p>Quantum field theory is plagued with infinities, that show up in diagrams in which virtual particles go in closed loops.&nbsp;
+Normally these infinities can be gotten rid of by "renormalization," in which infinite "counter terms" cancel the infinite parts of
+the diagrams, leaving finite results for experimentally observable quantities.&nbsp; Renormalization works for QED and the other
+field theories used to describe particle interactions, but it fails when applied to gravity.&nbsp; Graviton loops generate an
+infinite family of counter terms.&nbsp; The theory ends up with an infinite number of free parameters, and it's no theory at
+all.&nbsp; Other approaches to quantum gravity are needed, and they might not describe static fields with virtual gravitons.</p>
+
+</body>
+</html>

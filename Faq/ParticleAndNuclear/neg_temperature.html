@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>What is negative temperature?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Original by Scott Chase.</p>
+<p><br></p>
+
+
+<h1>What is negative temperature?</h1>
+
+<p>Question: Can you really make a system that has a negative temperature?</p>
+
+<p>Answer: You can, provided you allow some flexibility in the definition of temperature.</p>
+
+
+<h2>Step I: what is "temperature"?</h2>
+
+<p>To get things started, we need a clear definition of temperature.&nbsp; Actually various kinds of "temperature"
+appear in the literature of physics (e.g., kinetic temperature, color temperature).&nbsp; The relevant one here is
+the one from thermodynamics, which is in some sense the most fundamental.
+</p>
+
+<p>Our intuitive notion is that two systems in thermal contact should exchange no heat, on average, if and only if
+they are at the same temperature.&nbsp; Let's call the two systems <em>S<sub>1</sub></em>
+and <em>S<sub>2</sub></em>.&nbsp; The combined system, treating <em>S<sub>1</sub></em> and <em>S<sub>2</sub></em>
+together, is called <em>S<sub>3</sub></em>.&nbsp; The important question, consideration of which will lead us to a
+useful quantitative definition of temperature, is "How will the energy of <em>S<sub>3</sub></em> be distributed
+between <em>S<sub>1</sub></em> and <em>S<sub>2</sub></em>?"&nbsp; I will explain this briefly, but I recommend that
+you read Kittel and Kroemer (referenced <a href="#kittel-kroemer">below</a>) for a careful, simple, and thorough
+explanation of this important and fundamental result.</p>
+
+<p><em>S<sub>3</sub></em> has many possible internal states (microstates) because the atoms
+of <em>S<sub>3</sub></em> can share their total energy <em>E</em> in many ways.&nbsp; Let's say there
+are <em>N</em> of these microstates.&nbsp; Each microstate corresponds to a particular division of the total energy
+in the two subsystems <em>S<sub>1</sub></em> and <em>S<sub>2</sub></em>.&nbsp; Many microstates can correspond to
+the same division of energy: <em>E<sub>1</sub></em> in <em>S<sub>1</sub></em> and <em>E<sub>2</sub></em> in
+<em>S<sub>2</sub></em>.&nbsp; The only division of the energy that will occur with any significant probability is
+the one with the overwhelmingly largest number of microstates for the total system <em>S<sub>3</sub></em>.&nbsp;
+That number <em>N(E<sub>1</sub>, E<sub>2</sub>)</em> is just the product of the number of states allowed in each
+subsystem: <em>N(E<sub>1</sub>,E<sub>2</sub>) = N<sub>1</sub>(E<sub>1</sub>) N<sub>2</sub>(E<sub>2</sub>)</em>, and
+since <em>E<sub>1</sub> + E<sub>2</sub> = E</em>, <em>N(E<sub>1</sub>, E<sub>2</sub>)</em> reaches a maximum
+when <em>N<sub>1</sub>N<sub>2</sub></em> is stationary with respect to variations of <em>E<sub>1</sub></em>
+and <em>E<sub>2</sub></em> subject to the total energy constraint.</p>
+
+<p>For convenience, physicists prefer to frame the question in terms of Boltzmann's constant <em>k</em> times the
+natural logarithm of the number of microstates <em>N</em>, and call this the entropy <em>S</em> (so <em>S = k</em>
+ln <em>N</em>).&nbsp; The above analysis indicates that two systems are in equilibrium with one another when
+(&part;<em>S</em>/&part;<em>E</em>)<sub>1</sub> = (&part;<em>S</em>/&part;<em>E</em>)<sub>2</sub> at constant
+volume and particle number; that is, the rate of increase of entropy <em>S</em> per unit increase in
+energy <em>E</em> must be the same for both systems (at constant volume and particle number).&nbsp; Otherwise,
+energy will tend to flow from one subsystem to another as <em>S<sub>3</sub></em> bounces randomly from one
+microstate to another as the combined system moves towards a state of maximal total entropy.&nbsp; We define the
+temperature <em>T</em> by <em>T = &part;E/&part;S</em> at constant volume and particle number, so that
+the equilibrium condition becomes the very simple <em>T<sub>1</sub> = T<sub>2</sub></em>.</p>
+
+<p>This statistical mechanical definition of temperature does in fact correspond to your intuitive notion of
+temperature for most systems.&nbsp; So long as &part;<em>E</em>/&part;<em>S</em> is always positive, <em>T</em> is
+always positive.&nbsp; For common situations, such as a collection of free particles or particles in a harmonic
+oscillator potential, adding energy always increases the number of available microstates, increasingly faster with
+increasing total energy.&nbsp; So temperature increases with increasing energy, from zero, asymptotically
+approaching positive infinity as the energy increases.
+</p>
+
+
+<h2>Step II: what is "negative temperature"?</h2>
+
+<p>Not all systems have the property that the entropy increases with energy.&nbsp; In some cases, as energy is
+added to the system, the number of available microstates, or configurations, actually <em>decreases</em> for some
+range of energies.&nbsp; For example, imagine an ideal "spin-system", a set of <em>N</em> atoms each with spin 1/2
+on a one-dimensional wire.&nbsp; The atoms are not free to move from their positions on the wire.&nbsp; The only
+degree of freedom allowed to them is spin: the spin of a given atom can point in an "upward" or "downward"
+direction.&nbsp; The total energy of the system, in a magnetic field of strength <em>B</em> pointing down,
+is <em>(U &minus; D) &mu;B</em>, where <em>&mu; &gt; 0</em> is the magnitude of the component of each atom's
+magnetic moment along the <em>B</em> direction, and <em>U</em> and <em>D</em> are the numbers of atoms with "spin
+up" and "spin down" respectively.&nbsp; Notice that with this definition, <em>E</em> is zero when half of the spins
+are up and half are down.&nbsp; <em>E</em> is negative when the majority are down and positive when the majority
+are up.</p>
+
+<p>The lowest possible energy state (all the spins pointing down) gives the system a total energy
+of <em>&minus;N&mu;B</em>, and a temperature of absolute zero.&nbsp; There is only one configuration of the system
+at this energy: all the spins must point down.&nbsp; The entropy is <em>k</em> times the log of the number of
+microstates, so in this case is <em>k</em> ln 1 = 0.&nbsp; If we now add energy <em>2&mu;B</em> to the system, one
+spin is allowed to flip up.&nbsp; There are <em>N</em> ways of having one spin flip up, so the new entropy
+is <em>k</em> ln <em>N</em>.&nbsp; If we add another quantum of energy, there are a total
+of <em>N(N&minus;1)/2</em> allowable configurations with two spins up.&nbsp; The entropy is increasing quickly, and
+the temperature is rising as well.</p>
+
+<p>But for this system, the entropy does not go on increasing forever.&nbsp; The system has maximal
+energy <em>N&mu;B</em> when all spins are up.&nbsp; Here there is again only one microstate, and the entropy is
+again zero.&nbsp; If we remove one quantum of energy from the system, we allow one spin down.&nbsp; At this energy
+there are <em>N</em> available microstates.&nbsp; The entropy goes on increasing as the energy is lowered.&nbsp; In
+fact the maximal entropy occurs for total energy zero, i.e., half of the spins up, half down.</p>
+
+<p>So we have created a system where, as we add more and more energy, temperature starts off positive and increases
+to some large positive number as maximum entropy is approached, with half of all spins up.&nbsp; After that, the
+temperature becomes a negative number of large absolute value, coming down in magnitude toward zero as the energy
+increases toward maximum.&nbsp; (You will sometimes find it written that the temperature goes to infinity when half
+the spins are up, then jumps to minus infinity.&nbsp; This isn't really correct, because these examples of negative
+temperature <em>always</em> deal with discrete systems; but the above definition of temperature "<em>T =
+&part;E/&part;S</em> at constant volume and particle number" refers to a continuous system&mdash;or at least a
+system that is as good as continuous.&nbsp; So the best we can do for our set of spins is write "<em>T &approx;
+&Delta;E/&Delta;S</em> at constant volume and particle number", so that the calculation of <em>T</em> is now a
+little nebulous.)&nbsp; If you take two copies of the system, one with positive and one with negative temperature,
+and put them in thermal contact, heat will flow from the negative-temperature system into the positive-temperature
+system.&nbsp; It is sometimes said that the negative-temperature system is <em>hotter</em> than the
+positive-temperature system.&nbsp; On the other hand, the original definition of temperature above was actually
+rooted in the analysis of everyday systems whose energy and entropy increase together, and simply defining "<em>T =
+&part;E/&part;S</em> at constant volume and particle number" without this assumption is bound to produce strange
+values of temperature for systems that lie outside this assumption.&nbsp; Negative temperature is just such an
+example of these strange values, so don't take it too seriously!</p>
+
+
+<h2>Step III: what does this have to do with the real world?</h2>
+
+<p>Can this system ever by realized in the real world, or is it just a fantastic invention of sinister theoretical
+condensed matter physicists?&nbsp; Atoms always have other degrees of freedom in addition to spin, usually making
+the total energy of the system unbounded upward due to the atom's translational degrees of freedom.&nbsp; Thus,
+only certain degrees of freedom of a particle can have negative temperature.&nbsp; It makes sense to define the
+"spin temperature" of a collection of atoms as long as one condition is met: the coupling between the atomic spins
+and the other degrees of freedom is sufficiently weak, and the coupling between atomic spins sufficiently strong,
+that the timescale for energy to flow from the spins into other degrees of freedom is very large compared to the
+timescale for thermalisation of the spins among themselves.&nbsp; Then it makes sense to talk about the temperature
+of the spins separately from the temperature of the atoms as a whole.&nbsp; This condition can easily be met for
+the case of nuclear spins in a strong external magnetic field.</p>
+
+<p>Nuclear and electron spin systems can be promoted to negative temperatures by suitable radio frequency
+techniques.&nbsp; Various experiments in the calorimetry of negative temperatures, as well as applications of
+negative temperature systems as RF amplifiers, can be found in the articles listed below, and the references
+therein.</p>
+
+
+<h2>References</h2>
+
+<ul>
+<li> <a name="kittel-kroemer">Kittel and Kroemer, <em>Thermal Physics</em>, appendix E.
+<li> N.F. Ramsey, "Thermodynamics and statistical mechanics at negative
+absolute temperature,"  Phys. Rev. <b>103</b>, 20 (1956).
+<li> M.J. Klein,"Negative Absolute Temperature," Phys. Rev. <b>104</b>, 589 (1956).
+</ul>
+
+</body>
+</html>

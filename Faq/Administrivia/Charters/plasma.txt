@@ -1,0 +1,66 @@
+Newsgroups line:
+sci.physics.plasma	Plasma Science & Technology community exchange.
+
+
+CHARTER (Proponent)
+
+   The NEWSGROUP for Plasma Science and Technology is intended as a
+community forum for sharing new developments and bringing researchers
+together for potential new collaborations. During 1994, the focus of
+this news group will be a community-wide dialogue to formulate a Plasma
+Science and Technology Initiative which would deliver big-science
+value with a medium-scale investment.  Participation in this dialogue
+will involve primarily researchers in plasma science and technology
+although qualified researchers in all related fields are
+welcome. Executive committees for the Division of Plasma Physics of
+the American Physical Society (APS) and the Nuclear and Plasma
+Sciences Society of IEEE (Institute of Electrical and Electronics
+Engineers) have given formal approval for this network dialogue.
+
+   The Plasma Science and Technology research community seeks an
+increased dialogue among its multifarious constituencies.  Plasmas are
+as rich as any other state of matter in terms of distinct processes
+and they encompass distinguishable scales ranging from the atomic to
+the galactic. Opportunities in plasma science and technology reflect
+this breadth in phenomena and scales; one recent list contains 135
+subject areas and 65 applications areas including thin-film diamond
+deposition, toxic waste disposal, plasma arcs for steel processing,
+laser self-focusing, fusion for energy production, gas and arc lamps,
+cutting and welding, and semiconductor production.
+
+   In its initial implementation, Dr. Tim Eastman will be the PLASMA
+NEWSGROUP moderator. He is a Faculty member of the Institute for
+Physical Science and Technology at the University of Maryland [ph:
+301-405-4829, fax: 301-314-9363, email: eastman@astro.umd.edu].
+Dr. Barry Ripin of the Naval Research Laboratory will be an alternate
+moderator.  The APS and IEEE Executive Committees will renew or
+replace the moderator on a yearly basis.
+
+NOTE: The news group name "sci.physics.fusion" already exists
+and is appropriate for the subset of Plasma Science and Technology
+which focuses on plasmas for energy production (i.e., fusion).  
+The proposed NEWSGROUP for PLASMA is intended to complement the 
+"fusion" group and will primarily orient itself to issues of 
+Plasma Science and Technology other than fusion.
+
+
+Why the News Group for Plasma Science & Technology is needed and should pass:
+
+Representatives and members of the Plasma Science and Technology
+research community have long recognized a need to communicate
+information and issues that affect the broader community in addition
+to the several email groups that currently exist at the local level or
+sub-field level (e.g., the Plasma Etch User's Group in the Bay area).
+Formal support for setting up this news group has now been given (as
+of Nov. 1993) by the key Executive Committees representing this broad
+multi-disciplinary field.  In order to focus the discussion during the
+news group's first year, we will encourage a community-wide dialogue
+to formulate a major Plasma Science and Technology Initiative.  The
+news group would then complement a Workshop on this topic at the
+International Conference in Plasma Science in June, 1994.  Even after
+this initiative is formulated and is no longer a focus of discussion,
+the news group will provide a valuable service to the community by
+encouraging contacts and research coordination that might otherwise
+never develop.  Use of the news group will be encouraged through
+scientific meetings and through timely announcements of job
+opportunities, research opportunities, and funding options.

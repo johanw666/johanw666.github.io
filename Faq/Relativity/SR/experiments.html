@@ -1,0 +1,2397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-US"><head>
+
+
+<XSSCleaned_taghttp-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<XSSCleaned_tagname="copyright" content="this document is copyright as described in the copyright notice">
+<XSSCleaned_taghttp-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<XSSCleaned_tagname="Author" content="Tom Roberts and Siegmar Schleif">
+<XSSCleaned_tagname="Description" content="A summary of Experimental Tests of Special Relativity.">
+<XSSCleaned_tagname="GENERATOR" content="hand-coded HTML by John Dlugosz and Tom Roberts">
+<link rel="copyeditor" type="text/html" href="http://www.dlugosz.com">
+<XSSCleaned_tagname="last-edited-date" content="2007-08-13">
+<link rel="Copyright" href="http://math.ucr.edu/home/baez/physics/Administrivia/copyright.html">
+
+<title>Experimental Basis of Special Relativity</title>
+
+
+
+<style type="text/css">
+
+ul {			/* my bullet lists are part of the paragraph */
+	margin-top: 0;
+	padding-top: 0;
+}
+p.flag {		/* to flag items that need doing */
+	display: block;
+	color: red;
+	font-weight: bold;
+}
+p.citation {		/* for citations beginning with &mdash; */
+	display: block;
+	margin-left: 40%;
+	text-indent: -1em;
+}
+
+
+.in_your_face {
+	font-size: 175%;
+	text-align: center;
+	}
+
+LI > CITE {
+	display:block;  /* list them on separate lines.  No explicit BR's. */
+	}
+
+ul.entry {
+	list-style-type: none;
+	margin-top: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-top: 7pt;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+li.entry {
+	margin-top: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+p.entry {
+	margin-top: 0;
+	margin-left: 36pt;
+	margin-bottom: 10pt;
+	padding-top: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+ins, .ins {
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	color: rgb(0,0,100);
+}
+
+TABLE {
+	border-collapse: collapse;
+	border: solid;
+	}
+
+TD,TH {
+	border: solid;
+	border-width: thin;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	}
+
+LI P {
+	margin-left: 5%;
+	}
+
+LI.gapafter, P {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em
+	}
+
+.invisible {
+	/* used to align text.  There is no typesetting space entity that is the width of a digit */
+	visibility: hidden;
+	}
+
+H3 {			/* un-numbered headings */
+	text-decoration: underline;
+	font-weight: bolder;
+	font-size: 1.0em;
+	padding-top: 15pt;
+	}
+
+#content H1 {
+	font-size: 1.5em;
+	padding-top: 20pt;
+	}
+
+#content H2 {
+	font-size: 1.17em;
+	padding-top: 20pt;
+	}
+
+
+TABLE#t_MMX_result {
+	border-collapse:
+	border: solid
+	}
+
+/* a work-around since Mozilla-based browsers don't support COL formatting */
+#t_MMX_result TD +TD +TD {
+	padding-left: 1em;
+	}
+
+/* math help */
+
+.radic { border-top: solid 1px }
+
+</style></head><body>
+
+<a href="../../index.html">[Physics FAQ]</a> &mdash;
+<a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>By Tom Roberts&nbsp;(look me up in the <a href="http://www-tele.fnal.gov/telephone/">FNAL Phonebook</a>)
+and Siegmar Schleif (<a href="mailto:siegmar.schleif@_nospam_sap.com">email</a>), 2007.
+<br>HTML/CSS coding and copyediting: <a href="http://www.dlugosz.com">John Dlugosz</a>, 2007.</p>
+
+
+
+
+<h1>What is the experimental basis of Special Relativity?</h1>
+
+<p>There has been a renaissance in tests of special relativity (SR), in part because considerations of quantum
+gravity imply that SR may well be violated at appropriate scales (very small distance, very high energy).</p>
+
+<ol>
+<li><a href="#Introduction">Introduction</a>
+<ul>
+<li><a href="#Domain_of_Applicability">Domain of Applicability</a></li>
+<li><a href="#Test_Theories">Test Theories of SR</a></li>
+<li><a href="#Optical_Extinction">Optical Extinction</a></li>
+</ul>
+</li>
+<li><a href="#early_experiments">Early experiments (Pre 1905)</a>
+<br>Roentgen, Eichenwald, Wilson, Rayleigh, Arago, Fizeau, Hoek, Bradley, Airy.
+</li>
+<li><a href="#Tests_of_Einsteins_two_postulates">Tests of Einstein's Two Postulates</a>
+<ul>
+<li><a href="#round-trip_tests">Round-Trip Tests of Light Speed Isotropy</a>
+	<ul><li><a href="#the_MMX">Michelson and Morley</a>
+		</li><li><a href="#Kennedy-Thorndike">Kennedy and Thorndike</a>
+		</li><li><a href="#modern-laser">Modern Laser/Maser Tests</a>
+		</li><li><a href="#other_isotropy">Other</a>
+		</li></ul>
+	</li><li><a href="#one-way_tests">One-Way Tests of Light Speed Isotropy</a>
+		<br>Cialdea, Krisher, Champeny, Turner &amp; Hill.
+	</li><li><a href="#moving-source_tests">Tests of Light Speed from Moving Sources</a>
+		<ul><li><a href="#cosmological">Cosmological Sources</a>: DeSitter, Brecher
+			</li><li><a href="#terrestrial">Terrestrial Sources</a>: Alvaeger, Sadeh, ...
+			</li></ul>
+	</li><li><a href="#Measurements_of_the_Speed_of_Light">Measurements of the Speed
+	of Light, and Other Limits on it</a>
+		<ul><li>NBS Measurements, 1983 Redefinition of the Metre
+			</li><li><a href="#frequency">Limits on Variations with Frequency</a>
+			</li><li><a href="#photon_mass">Limits on Photon Mass</a>
+			</li></ul>
+	</li><li><a href="#Tests_of_the_poR">Tests of the Principle of Relativity and
+	Lorentz Invariance</a>
+		<ul><li><a href="#Trouton_Noble">Trouton Noble</a>
+			</li><li><a href="#other_poR">Other</a>
+			</li></ul>
+	</li><li><a href="#Tests_of_isotropy_of_space">Tests of the Isotropy of Space</a>
+		<br>Hughes&ndash;Drever, Prestage, Lamoreaux, Chupp, Phillips, Brillet and Hall.
+	</li></ul>
+</li><li><a href="#Tests_of_time_dilation">Tests of Time Dilation and Transverse Doppler Effect</a>
+	<ul><li><a href="#Ives-Stilwell">Ives and Stilwell</a>
+		</li><li><a href="#particle_lifetimes">Particle Lifetimes</a>
+		</li><li><a href="#Doppler_shift">Doppler Shift Measurements</a>
+		</li></ul>
+</li><li><a href="#Twin_paradox">Tests of the Twin Paradox</a>
+	<ul><li>Hafele and Keating, Vessot et al., Alley, Bailey et al.
+		</li><li><a href="#Clock_Postulate">The Clock Postulate</a>
+		</li></ul>
+</li><li><a href="#Tests_of_kinematics">Tests of Relativistic Kinematics</a>
+	<ul><li><a href="#elastic_scattering">Elastic Scattering</a>
+		</li><li><a href="#limiting_velocity">Limiting Velocity <var>c</var></a>
+		</li><li>Relativistic Mass Variations: <a
+		href="#electron_mass_variation">electron</a>, <a
+		href="#proton_mass_variation">proton</a>
+		</li><li><a href="#calorimetric">Calorimetric Test of SR</a>
+		</li></ul>
+</li><li><a href="#Length_Contraction">Tests of Length Contraction</a>
+	<ul><li>Magnetic Force
+	</li></ul>
+</li><li><a href="#Recent_Tests">Recent Tests of CPT and Lorentz Invariance</a>
+	<ul><li>Many Ingenious and Precise experiments of different types
+	</li></ul>
+</li><li><a href="#Other_experiments">Other Experiments</a>
+	<ul><li><a href="#Fizeau">Fizeau</a>
+		</li><li><a href="#Sagnac">Sagnac</a>
+		</li><li><a href="#Michelson-Gale">Michelson and Gale</a>
+		</li><li><a href="#g-2"><var>g</var>&minus;2 Tests of SR</a>
+		</li><li><a href="#GPS">The Global Positioning System (GPS)</a>
+		</li><li><a href="#lunar_ranging">Lunar Laser Ranging</a>
+		</li><li><a href="#CMBR">Cosmic Background Radiation (CMBR)</a>
+		</li><li><a href="#constants">Constancy of Physical Constants</a>
+		</li><li><a href="#neutral_molecules">The Neutrality of Molecules</a>
+		</li></ul>
+</li><li><a href="#Experiments_not_consistent_with_SR">Experiments that Apparently are
+<em>not</em> Consistent with SR/GR</a>
+	<ul><li><a href="#error_analysis">Elementary Error Analysis of an Average</a></li>
+	<li><a href="#Experimenters_Bias">Experimenter's Bias</a></li><li><a
+	href="#Publication_Bias">Publication Bias</a></li>
+	</ul>
+</li><li><a href="#Acknowledgements">Acknowledgments</a>
+</li></ol>
+
+
+
+<h1 id="Introduction">1. Introduction</h1>
+
+<p>Physics is an experimental science, and as such the experimental basis for any physical theory is extremely important.&nbsp;
+The relationship between theory and experiments in modern science is a multi-edged sword:</p>
+
+<ol>
+<li class="gapafter">It is required that the theory not be refuted by any undisputed experiment within the
+theory's <a href="#Domain_of_Applicability">domain of applicability</a>.</li>
+
+<li>It is expected that the theory be confirmed by a number of experiments that:
+
+	<ul><li>cover a significant fraction of the theory's <a href="#Domain_of_Applicability">domain of applicability</a>.
+	</li><li>examine a significant fraction of the theory's predictions.
+	</li></ul> </li></ol>
+
+<p>At present, special relativity (SR) meets all of these requirements and expectations.&nbsp; Literally hundreds of
+experiments have tested SR, with an enormous range and diversity, and the agreement between theory and experiment is
+excellent.&nbsp; There is a lot of redundancy in these experimental tests.&nbsp; Also, many indirect tests of SR are not
+included here.&nbsp; This list of experiments is by no means complete!</p>
+
+<p>Other than their sheer numbers, the most striking thing about these experimental tests of SR is their remarkable breadth and
+diversity.&nbsp; An important aspect of SR is its universality&mdash;it applies to all known physical phenomena and not just to
+the electromagnetic phenomena it was originally invented to explain.&nbsp; In these experiments you will find tests using
+electromagnetic and nuclear measurements (including both strong and weak interactions).&nbsp; Gravitational tests are the
+province of general relativity, and are not considered here.</p>
+
+<p>There are several useful surveys of the experimental basis of SR:
+</p><ul>
+<li><cite><a href="http://relativity.livingreviews.org/Articles/lrr-2005-5/index.html">Modern Tests of Lorentz Invariance</a>
+on LivingReviews.</cite></li>
+<li><cite>Y.Z. Zhang, <u>Special Relativity and its Experimental Foundations</u>, World Scientific (1997).</cite></li>
+<li><cite>G. Holton, "Resource Letter SRT-1 on Special Relativity Theory", Am. J. Phys., <b>30</b> (1962), pg
+462.</cite></li>
+<li><cite>D.I. Blotkhintsev, "Basis for Special Relativity Theory Provided by Experiments in High Energy Physics",
+Sov. Phys. Uspekhi, <b>9</b> (1966), pg 405.</cite></li>
+<li><cite>Newman et al., Phys. Rev. Lett. <b>40</b> no. 21 (1978), pg 1355.</cite></li>
+</ul>
+
+<p>Zhang's book is especially comprehensive.&nbsp; The LivingReviews article goes into considerable detail relating current
+theoretical ideas to experimental tests.</p>
+
+<p>Textbooks with good summaries of the experimental basis of relativity are:
+
+</p><ul>
+<li><cite>M. Born, <u>Einstein's theory of Relativity</u>.</cite></li>
+<li><cite>Bergmann, <u>Introduction to the Theory of Relativity</u>.</cite></li>
+<li><cite>Moller, <u>The Theory of Relativity</u>.</cite></li>
+<li><cite>M. von Laue, <u lang="DE">Die relativitätstheorie</u> (in German).</cite></li>
+</ul>
+<p>
+
+</p><p>Albert Einstein introduced the world to special relativity in his seminal 1905 paper: <cite>A. Einstein, "Zur
+Elektrodynamik bewegter Körper", Ann. d. Physik, 17, 1905</cite> ("On the Electrodynamics of Moving
+Bodies").&nbsp; It is available in several forms:
+</p><ul>
+<li>Einstein et al., <u>The Principle of Relativity</u>, Methuen and Company, Ltd., 1923; reprinted by Dover in 1952.
+</li><li><a href="http://www3.interscience.wiley.com/cgi-bin/fulltext/109924449/PDFSTART"
+hreflang="DE">http://www3.interscience.wiley.com/cgi-bin/fulltext/109924449/PDFSTART</a> (original German, reprinted by the
+publisher).
+</li><li><a href="http://www.physik.fu-berlin.de/%7Ekleinert/files/1905_17_891-921.pdf"
+hreflang="DE">http://www.physik.fu-berlin.de/~kleinert/files/1905_17_891-921.pdf</a> (original German).
+</li><li><a href="http://www.fourmilab.ch/etexts/einstein/specrel/specrel.pdf"
+hreflang="EN">http://www.fourmilab.ch/etexts/einstein/specrel/specrel.pdf</a> (translated into English by Jeffries and
+Perritt).
+</li></ul>
+
+
+<p>Note, however, that SR is not perfect (in agreement with every experiment), and there are some experiments that are in
+disagreement with its predictions.&nbsp; See <a href="#Experiments_not_consistent_with_SR">Experiments that Apparently
+are <em>not</em> Consistent with SR</a> where some of these experiments are referenced and discussed.&nbsp; It is clear that
+most, if not all, of these experiments have difficulties that are unrelated to SR.&nbsp; Note also that few if any standard
+references or textbooks even mention the possibility that some experiments might be inconsistent with SR, and there are also
+aspects of <a href="#Publication_Bias">publication bias</a> in the literature.&nbsp; That being said, as of this writing there
+are no reproducible and generally accepted experiments that are inconsistent with SR, within
+its <a href="#Domain_of_Applicability">domain of applicability</a>.</p>
+
+
+<p>
+Technically, the basis of SR is Lorentz invariance, and many recent articles phrase it that way.&nbsp; This is closely related
+to the CPT theorem, and many of the recent experiments apply to both Lorentz invariance and CPT.&nbsp; Recently there have been
+conferences on <a href="#Recent_Tests">Lorentz invariance and CPT violations</a>:</p>
+<ul>
+<li><cite>Kostelecký, V.A., ed., <u>CPT and Lorentz Symmetry</u>, Proceedings of the Meeting held at Indiana University,
+Bloomington, USA, November 6&ndash;8, 1998, (World Scientific, Singapore, 1999).</cite></li>
+
+<li><cite>Kostelecký, V.A., ed., <u>Third Meeting on CPT and Lorentz Symmetry</u>, Proceedings of the meeting held at
+Bloomington, USA, 4&ndash;7 August 2004, (World Scientific, Singapore, 2005).</cite></li>
+</ul>
+
+<p>Much of the renewed interest in testing SR has come from considerations of quantum gravity, which imply that at a suitable
+scale (very small distance, very high energy) SR might well be violated.&nbsp; Here are some review articles (ordered less to
+more technical):
+</p>
+<ul>
+<li><cite>Kostelecký, "The Search for Relativity Violations", Scientific American, Sept. 2004, pg 93.</cite>
+</li><li><cite>Pospelov and Romalis, "Lorentz Invariance on Trial", Physics Today, 57, pg 40 (July 2004).</cite>
+</li><li><cite>Will, "Special Relativity: A Centenary
+Perspective", <a href="http://arxiv.org/abs/gr-qc/0504085">arXiv:gr-qc/0504085 (2005)</a>.</cite>
+</li><li><cite>Mattingly, "Modern tests of Lorentz
+Invariance", <a href="http://arxiv.org/abs/gr-qc/0502097">arXiv:gr-qc/0502097 (2005)</a>.</cite>
+</li></ul>
+
+There is also a new literature on "doubly special relativity", in which there are two invariant scales: the speed
+of light and the Planck scale.&nbsp; An introduction is available (but this is much more technical than the previous reviews):
+
+<ul>
+<li><cite>Kowalski-Glikman, J., "Introduction to Doubly Special Relativity",
+(2004).&nbsp; <a href="http://arxiv.org/abs/hep-th/0405273">arXiv:hep-th/0405273</a>.</cite>
+</li></ul>
+
+
+
+<h3 id="Domain_of_Applicability">Domain of Applicability</h3>
+
+<p>The domain of applicability of a physical theory is the set of physical situations in which the theory is valid.&nbsp; For
+SR, this is measurements of distance, time, momentum, energy, etc. in inertial frames.&nbsp; Calculus can be used to apply SR
+in accelerated systems.&nbsp; A more technical definition is that SR is valid only in flat Lorentz manifolds topologically
+equivalent to R<sup>4</sup>.</p>
+
+<p>In particular, any experiment in which the effects of gravitation are important is outside the domain of SR.&nbsp; Because
+SR is the local limit of general relativity, it is possible to compute how large an error is made when one applies SR to a
+situation that is approximately but not exactly inertial, such as the common case of experimental apparatus supported against
+gravity on Earth's surface.&nbsp; In many cases (e.g. most optical and elementary-particle experiments on the rotating Earth's
+surface) these errors are vastly smaller than the experimental resolution, and SR can be accurately applied.</p>
+
+
+
+<h3 id="Test_Theories">Test Theories of SR</h3>
+
+<p>A test theory of SR is a generalization of the Lorentz transforms of SR using additional parameters.&nbsp; One can then
+analyze experiments using the test theory (rather than SR itself) and fit the parameters of the test theory to the experimental
+results.&nbsp; If the fitted parameter values differ significantly from the values corresponding to SR, then the experiment is
+inconsistent with SR.&nbsp; But more normally, such fits can show how well a given experiment confirms or disagrees with SR,
+and what the experimental accuracy is for doing so.&nbsp; This gives a general and tractable method of analysis which can be
+common to multiple experiments.</p>
+
+<p>Different test theories differ in their assumptions about what form the transform equations could reasonably take.&nbsp;
+There are at present four test theories of SR:</p>
+
+<ul>
+<li><cite>Robertson, Rev. of Mod. Phys. <b>21</b>, pg 378 (1949).</cite>
+</li><li><cite>Edwards, Am. J. Phys. <b>31</b> (1963), pg 482.</cite>
+</li><li><cite>Mansouri and Sexl, Gen. Rel. Grav. <b>8</b> (1977), pg 497, pg 515, pg 809.</cite>
+</li><li><cite>Zhang, <u>Special Relativity and its Experimental Foundations.</u></cite>
+</li></ul>
+
+<p>Zhang discusses their interrelationships and presents a unified test theory encompassing the other three, but with a better
+and more interpretable parametrisation.&nbsp; His discussion implies that there will be no more test theories of SR that are
+not reducible to one of the first three.</p>
+
+<p>Robertson showed that one can unambiguously deduce the Lorentz transform of SR to an accuracy of ~0.1% from the following
+three experiments: Michelson and Morley, Kennedy and Thorndike, Ives and Stilwell.&nbsp; Zhang showed that modern experiments
+determine the Lorentz transforms to within a few parts per million.</p>
+
+<p>These test theories can also be used to examine potential alternative theories to SR; such alternative theories predict
+particular values of the parameters of the test theory, which can easily be compared to values determined by experiments
+analyzed with the test theory.&nbsp; The existing experiments put rather strong <strong>experimental</strong> constraints on
+any alternative theory.</p>
+
+<p id="no_aether">In particular, Zhang showed that these experimental limits essentially require that any theory based upon the
+existence of an aether be experimentally indistinguishable from SR, and have an aether frame which is unobservable (the only
+alternative is for a theory to "live in the error bars" of the experiments, which is quite difficult given the high accuracies
+achieved by many of these experiments).&nbsp; Note also that some of the parameters in these test theories are not determined
+at all by SR (or by experiments)&mdash;this means that many different theories, characterized by different values of such
+parameters, are equivalent to SR in that they are experimentally indistinguishable from SR (though they differ from SR in other
+aspects).
+</p>
+
+<p id="SME">In addition there is the "standard model extension (SME)" of Colladay and Kostelecký that extends the standard
+model of particle physics with various plausible Lorentz-violating terms.&nbsp; This is in the context of quantum field theory,
+and is well beyond the scope of this article (which is limited to SR and its immediate consequences).&nbsp; The goal of many of
+the recent tests is to put limits on the many parameters of this test theory.&nbsp; <cite>Colladay and Kostelecký,
+Phys. Rev. D55 (1997) pg 6760 (<a href="http://arxiv.org/abs/hep-ph/9703464">arxiv:hep-ph/9703464</a>)</cite>, and
+<cite>Phys. Rev. D 58, 116002 (1998) (<a href="http://arxiv.org/abs/hep-ph/9809521">arxiv:hep-ph/9809521</a>).</cite>
+</p>
+
+
+
+<h3 id="Optical_Extinction">Optical Extinction</h3>
+<p>Many measurements of the speed of light involve the passage of the light through some material medium.&nbsp; This can
+invalidate some conclusions of the measurement due to the extinction theorem of Ewald and Oseen.&nbsp; This theorem states that
+the speed of light will approach the speed <var>c</var>/<var>n</var> relative to the medium (<var>n</var> is its index of
+refraction), and it also determines how long a path length is required for that approach.&nbsp; The distance required depends
+strongly on the index of refraction of the medium and the wavelength: for visible light and optical glass it is less than a
+micron, for air it is about a millimetre, and for the intergalactic medium it is several light years.&nbsp; So even
+astronomical observations over vast distances in the "vacuum" of outer space are not immune from the effects of this
+theorem.&nbsp; Note this theorem is based purely on classical electrodynamics, and for gamma rays detected as individual
+particles it does not apply; it is also not clear how it would apply to theories other than SR and classical
+electrodynamics.&nbsp; See for instance:
+<cite>J.G. Fox, Am. J. Phys. <b>30</b>, pg 297 (1962)</cite>, <cite>JOSA <b>57</b>, pg 967
+(1967)</cite>, and <cite>AJP <b>33</b>, pg 1 (1964)</cite>.&nbsp; An elementary discussion is
+given in <cite>Ballenegger and Weber, AJP <b>67</b>, pg 599 (1999)</cite>.&nbsp; The standard
+reference for this is <cite>Born and Wolf, <u>Principles of Optics</u></cite>, and the
+original paper is <cite>Oseen, Ann. der Physik 48, pg 1, 1915</cite>.</p> 
+
+
+<h1 id="early_experiments">2. Early Experiments (Pre 1905)</h1>
+
+<p>The special theory of relativity (SR) was invented in 1905 by Einstein to explain several experimental results.&nbsp; Since
+then it has been found to explain a wide range of experimental results.&nbsp; SR is <em>not</em> a mathematical game or just a
+hypothesis.&nbsp; SR is a physical theory that has been well tested many times.</p>
+
+<p>A detailed account of the early history of SRT is given in: <cite>Arthur L. Miller,
+<u>Albert Einstein's Special Theory of Relativity: Emergence and early interpretation</u>, Addison Wesley, 1981, ISBN
+0-201-04680-6.</cite>
+</p>
+
+<p>When A. Einstein wrote his famous paper: "The Electrodynamics of Moving Bodies" in 1905, he already had experimental support
+for his new theory:</p>
+
+<blockquote>...Examples of this sort, together with the unsuccessful attempts to discover any motion of Earth relative to the
+"light medium", suggest that the phenomena of electrodynamics as well as of mechanics possess no properties corresponding to
+the idea of absolute rest.&nbsp; They suggest rather that, as has already been shown to the first order of small quantities,
+the same laws of electrodynamics and optics will be valid for all frames of reference for which the equations of mechanics hold
+good...
+</blockquote>
+
+<p>What was the experimental support for this claim? There were several experiments concerning the electrodynamics of moving
+bodies that are not very well known today; but Einstein knew of numerous examples.&nbsp; Many of these experiments were
+reviewed in H.A. Lorentz's important paper <cite>"On the influence of the earth's motion on luminiferous phenomena",
+Versl. Kon. Akad. Wettensh. Amsterdam, 297 (1886)</cite>.&nbsp; Lorentz showed that Stokes' theory of light, which assumed
+complete dragging of the aether at Earth's surface and decreasing to zero dragging far away, had severe problems with
+aberration and the results of Arago and Airy.
+
+</p><ul class="entry">
+
+<li class="entry"><cite>Bradley, Phil. Trans. 35, no 406 (1728).</cite>
+<p>Bradley (1727) discovered that the images of stars move in small ellipses.&nbsp; This is explained as aberration due to
+Earth's motion around the Sun.&nbsp; This is inconsistent with a simple model of light as waves in an aether that is dragged
+along by Earth; it is consistent with SR.</p></li>
+
+<li class="entry"><cite>Arago, Oevre completes, T.1. pg 107 (1853) (delayed publication of results from 1810).</cite>
+
+<p>Examined the expected change in focus of a refracting telescope due to Earth's motion around the Sun.&nbsp; This is first
+order in <var>v</var>/<var>c</var> if one assumes light is fully dragged by the lens.&nbsp; The null result is consistent with
+SR.&nbsp; Arago's results caused Fresnel to develop his theory of the partial dragging of aether, which was then confirmed
+by:</p></li>
+
+<li class="entry"><cite>Fizeau, Ann. de Chem et de Physique, 3e ser., T.57 pg 385 (1859).</cite>
+<p>Measured the speed of light in moving materials.&nbsp; The Fresnel drag coefficient is solidly established by experiments,
+and is consistent with SR to within experimental resolutions.</p></li>
+
+<li class="entry"><cite>Hoek, Arch. Neerl. T.3, pg 180 (1868).</cite>
+<p>Much more accurate version of the basic concept of Arago's experiment, using a terrestrial source and a square (ring)
+interferometer with one side in water and three in air.&nbsp; The null result is consistent with Arago's result and with
+Fresnel's drag coefficient, and with SR.</p></li>
+
+<li class="entry"><cite>Airy, Proc. Royal Soc. London, V20, pg 35 (1871); V32, pg 121 (1873).&nbsp; Phil. Mag. 43, pg 310
+(1872).</cite>
+<p>Airy tested whether stellar aberration remained unchanged if the telescope was filled with water.&nbsp; It did, in agreement
+with the prediction of SR.</p></li>
+
+<li class="entry"><cite>Kettler, Pogg. Ann., Bd.144, pg 370 (1872); Bd.147, pg 410 and pg 410 (1872).&nbsp; Astr. Und. Theorie,
+pg 66 (1873).</cite> p>Interference and polarization experiments similar to Hoek.</p> /li><li class="entry"><cite>Mascart,
+Ann. de l'Ecole Normale, 2e ser., T.1 pg 210&ndash;214 (1872); T.3, pg 376 (1874).</cite>
+<p>Changes of polarization in the direction of Earth's motion not observed.</p></li>
+
+
+<li class="entry"><cite>W.C. Roentgen, Annalen der Physik 35 (1888), pg 264.</cite>
+<p>Note that Roentgen describes in this paper an "unsuccessful" experiment, where he tried to measure the velocity of Earth
+through the aether (a "primitive" version of the Trouton&ndash;Noble experiment).</p></li>
+
+<li class="entry"><cite>R. Blondlot, C.R.A.S. 133 (1901), pg 778.</cite>
+<cite>H.A. Wilson, Philosph. Transact. Roy. Soc. London <b>204</b>, 121 (1904)</cite> <cite>H.A. Wilson, M. Wilson,
+Philosph. Transact. Roy. Soc. London <b>89</b>, 99 (1913).</cite>
+
+<p>Experiments concerning the so-called Roentgen convection, with a magnetic field (See Sommerfeld Vol. <b>3</b>, Chapter 4,
+and von Laue Ch. 1).&nbsp; Blondlot's experiment was an early experiment with &#956;,&nbsp;&#949;&nbsp;=&nbsp;1.</p></li>
+ 
+<li class="entry"><cite>Rayleigh Phil. Mag. (6) 4, pg 678 (1902).</cite>
+<cite>Brace Phil. Mag. (6) 7, pg 317 (1904).</cite>
+<cite>Phil. Mag. (6) 10, pg 71 (1905); pg 387 (1905).</cite>
+
+<p>Experiments concerning the effect of the motion of Earth on double refraction.</p></li>
+
+<li class="entry"><cite>A. Eichenwald, Annalen der Physik <b>11</b> (1903), pg 1 and pg 241.</cite>
+<p>Experiments concerning the so-called Roentgen convection, with an electric field (See Sommerfeld Vol. <b>3</b>, Chapter
+4).</p></li>
+
+</ul>
+See also the experiments of <a href="#Trouton_Noble">Trouton&ndash;Noble</a>, <a href="#Kaufmann">Kaufmann</a>,
+and <a href="#the_MMX">Michelson and Morley</a>.
+
+<h1 id="Tests_of_Einsteins_two_postulates">3. Tests of Einstein's two Postulates</h1>
+
+<blockquote><ol> <li class="gapafter">The laws by which the states of physical systems undergo change are not affected, whether
+these changes of state be referred to the one or the other of two systems of coordinates in uniform translatory motion.</li>
+
+<li>Any ray of light moves in the "stationary" system of coordinates with determined speed <var>c</var>, whether the ray be
+emitted by a stationary or by a moving body.</li> </ol>
+
+<p class="citation">&mdash;<cite>Einstein, Ann. d. Physik
+<b>17</b> (1905)</cite>; translated by Perrett and Jeffery; reprinted in: <cite>Einstein, Lorentz, Weyl, Minkowski,
+<u>The Principle of Relativity</u>, Dover 1952.</cite></p>
+</blockquote>
+
+<p>"Stationary" was defined in the first paragraph of this section:</p>
+<blockquote>
+Let us take a system of coordinates in which the equations of newtonian mechanics hold good.&nbsp; In order to render our
+presentation more precise and to distinguish this system of coordinates verbally from others that will be introduced hereafter,
+we call it the "stationary system".
+<p class="citation">&mdash;<i>Ibid.</i></p>
+</blockquote>
+
+<p>It is clear that the word "stationary" is used merely as a label, and implies no "absolute" aspects at all.</p>
+
+<p>[Editor's note: The phrase "stationary system" here denotes an inertial frame.&nbsp; By a "system of coordinates", Einstein
+ultimately means an inertial frame.&nbsp; A distinction should be made between frames (which embody physics) and coordinates
+(which embody maths).&nbsp; Because Einstein allocated distinct coordinates to distinct frames, he used the terms
+interchangeably, and they are still used interchangeably by most physicists.&nbsp; But it's important to realise that they are
+different entities.&nbsp; This is also true when doing calculations in, say, projectile motion, where we must include several
+frames and coordinate systems in one calculation.&nbsp; There, it's well known that interchanging "frame" and "coordinates"
+leads to great confusion.]</p>
+
+
+
+<h2 id="round-trip_tests">3.1 Round-Trip Tests of Light-Speed Isotropy</h2>
+
+<p>The speed of light is said to be <dfn>isotropic</dfn> if it has the same value when measured in any/every direction.</p>
+
+
+
+<h3 id="the_MMX">The Michelson&ndash;Morley Experiment (the MMX)</h3>
+<p>The Michelson&ndash;Morley experiment (MMX) was intended to measure Earth's velocity relative to the "lumeniferous aether"
+which was at the time presumed to carry electromagnetic phenomena.&nbsp; The failure of it and the other early experiments to
+actually observe Earth's motion through the aether became significant in promoting the acceptance of Einstein's theory of
+special relativity, as it was appreciated from early on that Einstein's approach (via symmetry) was more elegant and
+parsimonious of assumptions than were other approaches (e.g. those of Maxwell, Hertz, Stokes, Fresnel, Lorentz, Ritz, and
+Abraham).</p>
+
+<p>The following table comes from <cite>R.S. Shankland et al., Rev. Mod. Phys. <b>27</b> no. 2, pg 167&ndash;178 (1955)</cite>,
+which includes references to each experiment (resolution and the limit on <var>v<sub>aether</sub></var> are from the original
+sources).&nbsp; The expected fringe shift is what would be expected for a rigid aether at rest with respect to the Sun and
+Earth's orbital speed (~30 km/s).</p>
+
+<table summary="Details of Results" id="t_MMX_result">
+<thead>
+<tr align="center" valign="top">
+<th rowspan="2">Name
+</th><th rowspan="2">Year
+</th><th rowspan="2">Arm length<br>(metres)
+</th><th colspan="2" style="border-bottom: medium none;">Fringe shift
+</th><th rowspan="2">Experimental<br>Resolution<br>(see note)
+</th><th rowspan="2">Upper Limit<br>on <var>v<sub>aether</sub></var>
+</th></tr>
+
+<tr>
+<th style="border-top: medium none;">expected
+</th><th style="border-top: medium none;">measured
+</th></tr>
+
+</thead><tbody>
+
+<tr>
+<td>Michelson
+</td><td>1881
+</td><td><span class="invisible">0</span>1.2
+</td><td>0.04
+</td><td>0.02
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Michelson + Morley
+</td><td>1887
+</td><td>11.0
+</td><td>0.4
+</td><td style="padding-left: 0pt;"><span style="display: block; float: left; width: 1em; text-align: center;">&lt;</span>0.01
+	<!-- there's got to be an easier way to do that! -->
+</td><td>
+</td><td>8 km/s
+
+</td></tr><tr>
+<td>Morley + Morley
+</td><td>1902&ndash;04
+</td><td>32.2
+</td><td>1.13
+</td><td>0.015
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Miller
+</td><td>1921
+</td><td>32.0
+</td><td>1.12
+</td><td>0.08
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Miller
+</td><td>1923&ndash;24
+</td><td>32.0
+</td><td>1.12
+</td><td>0.03
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Miller (Sunlight)
+</td><td>1924
+</td><td>32.0
+</td><td>1.12
+</td><td>0.014
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Tomascheck (Starlight)
+</td><td>1924
+</td><td><span class="invisible">0</span>8.6
+</td><td>0.3
+</td><td>0.02
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Miller
+</td><td>1925&ndash;26
+</td><td>32.0
+</td><td>1.12
+</td><td>0.088
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Miller (re-analysis in 2006, see note)
+</td><td>1925&ndash;29
+</td><td>32.0
+</td><td>1.12
+</td><td>0.000
+</td><td>0.015</td><td>
+6 km/s
+</td></tr><tr>
+<td>Kennedy (Mt Wilson)
+</td><td>1926
+</td><td><span class="invisible">0</span>2.0
+</td><td>0.07
+</td><td>0.002
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Illingworth
+</td><td>1927
+</td><td><span class="invisible">0</span>2.0
+</td><td>0.07
+</td><td>0.0002
+</td><td>0.0006
+</td><td>1 km/s
+
+</td></tr><tr>
+<td>Piccard + Stahel (Mt Rigi)
+</td><td>1927
+</td><td><span class="invisible">0</span>2.8
+</td><td>0.13
+</td><td>0.006
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Michelson et al.
+</td><td>1929
+</td><td>25.9
+</td><td>0.9
+</td><td>0.01
+</td><td></td><td>
+
+</td></tr><tr>
+<td>Joos
+</td><td>1930
+</td><td>21.0
+</td><td>0.75
+</td><td>0.002
+</td><td>
+</td></tr></tbody></table>
+
+
+<p>Note: before about 1950 it was common to not perform a detailed error analysis, and to not report error bars or
+resolutions.</p>
+
+<p>Note: the re-analysis of Miller's 1925&ndash;29 results is: <cite>T.J. Roberts, "An Explanation of Dayton Miller's
+Anomalous &#8216;Ether Drift'
+Results", <a href="http://www.arxiv.org/abs/physics/0608238">arXiv:physics/0608238</a></cite>.&nbsp; There is more
+discussion of this <a href="#Miller">below</a>.
+</p>
+<ul class="entry">
+<li class="entry"><cite>A.A. Michelson and E.W. Morley, "On the Relative Motion of the Earth and the Luminiferous
+Ether", Am. J. Sci. (3rd series) <b>34</b> 333&ndash;345 (1887).
+<a href="http://www.aip.org/history/gap/PDF/michelson.pdf">http://www.aip.org/history/gap/PDF/michelson.pdf</a>.</cite>
+<p>This is the classic paper describing this famous experiment.&nbsp; Contrary to popular myth, their result is not actually
+"null"&mdash;in their words "the relative velocity of the Earth and the aether is probably less than one
+sixth the Earth's orbital velocity, and certainly less than one-forth".&nbsp; While some people claim to see a
+"signal" in their plots, an elementary error analysis shows it is not statistically significant (see Appendix I
+of <a href="http://www.arxiv.org/abs/physics/0608238">arXiv:physics/0608238</a>).&nbsp; So this experiment is certainly
+consistent with SR.
+</p>
+
+</li><li class="entry"><cite>Shankland, "Michelson&ndash;Morley Experiment", American Journal of Physics 1964, pg
+16.</cite>
+<p>This is a general review article.</p>
+
+</li><li class="entry"><cite>G. Joos, Ann. Phys. <b>7</b> 385 (1930).</cite>
+<p>An excellent repetition of the MMX, in vacuum.</p>
+
+</li><li class="entry"><cite>K.K. Illingworth, Phys. Rev. <b>30</b> (1927), pg 692.</cite>
+<p>Used a clever technique with a tiny step in one mirror to obtain significantly improved resolution.</p>
+
+</li><li class="entry"><cite>Shamir and Fox, N. Cim. <b>62B</b> no. 2 (1969), pg 258.</cite>
+<p>A repetition of the MMX with the optical paths in perspex (<var>n</var>&nbsp;=&nbsp;1.49), and a laser-based optics
+sensitive to ~0.00003 fringe.&nbsp; They report a null result with an upper limit on <var>v<sub>aether</sub></var> of 6.64
+km/s.</p> </li></ul>
+<p>See also: <a href="#Brillet">Brillet and Hall</a>.</p>
+
+
+
+<h3 id="Kennedy&ndash;Thorndike">The Kennedy&ndash;Thorndike Experiment</h3>
+<ul class="entry">
+<li class="entry"><cite>R.J. Kennedy and E.M. Thorndike, "Experimental Establishment
+of the Relativity of Time", Phys. Rev. <b>42</b> 400&ndash;418 (1932).</cite>
+<p>This uses an interferometer similar to Michelson's, except that its arms are of different length, and are not at right
+angles to each other.&nbsp; They used a spectacular technique to keep the apparatus temperature constant to 0.001°C, which gave
+them sufficient stability to permit observations during several seasons.&nbsp; They also used photographs of their fringes
+(rather than observing them in real time as in most other interferometer experiments).&nbsp; Their apparatus was fixed to
+Earth and could only rotate with it.&nbsp; Their null result is consistent with SR.</p> </li>
+
+<li class="entry"><cite>Müller and Soffel, "A Kennedy&ndash;Thorndike experiment using LLR data",
+Phys. Lett. A <b>198</b>, p71 (1995).</cite>
+
+<p>Using lunar laser ranging data they put a limit on Lorentz violating terms in the test theory of Mansouri and Sexl only a
+factor of two or so worse than modern laser techniques in the laboratory.
+</p></li>
+
+</ul>
+
+<p>See also: <a href="#Hils">Hils and Hall</a>.</p>
+
+
+
+<h3 id="modern-laser">Modern Laser / Maser Tests of Light-Speed Isotropy</h3>
+<ul class="entry">
+<li class="entry"><cite>Cedarholm, Havens, and Townes, Phys. Rev. Lett. <b>1</b>(1958), pg 342.</cite>
+<p>They used two ammonia-beam masers back to back to put a limit of 30 m/s on any "aether drift".</p>
+
+</li><li class="entry"><cite>T.S. Jaseja, A. Javan, J. Murray and C.H. Townes, "Test of Special Relativity or of the
+Isotropy of Space by Use of Infrared Masers", Phys. Rev. <b>133A</b> 1221&ndash;1225 (1964)</cite>
+<p>They mounted two He&ndash;Ne microwave masers perpendicularly on a shock-mounted table and observed the beat frequency between
+them as the table was rotated.&nbsp; They put a limit of 30 m/s on the anisotropy.</p>
+
+</li><li class="entry"><cite id="Brillet">A. Brillet and J.L. Hall, "Improved Laser Test of the Isotropy of Space",
+Phys. Rev. Lett. <b>42</b> 549&ndash;552 (1979).</cite>
+
+<p>This is one of the most accurate limits on any anisotropy in the <u>round-trip</u> speed of light in a laboratory.&nbsp;
+They measured the beat frequency between a single-mode laser on a rotating table and a single-mode laser fixed to Earth to
+put a limit on such an anisotropy of 3 parts in 10<sup>15</sup>.&nbsp; Due to the construction of their rotating laser, this
+can also be interpreted as a limit on any anisotropy of space.&nbsp; This is a round-trip experiment because of their use of a
+Fabry&ndash;Perot etalon to determine the frequency of the rotating laser.&nbsp; Note that their limit on the round-trip anisotropy
+corresponds to a round-trip speed of less than 10<sup>&minus;6</sup> m/s (!); in terms of the more usual one-way anisotropy it
+is 30 m/s.</p>
+
+<p>Their residual 17 Hz signal (out of ~10<sup>15</sup> Hz) was described as "unknown"; it was fixed with respect
+to their laboratory and therefore could not be of cosmic origin.&nbsp; A.&nbsp;Brillet has indicated privately that this is
+most likely due to the rotation axis being slightly off vertical by a few microradians.</p>
+
+</li><li class="entry"><cite id="Hils">Hils and Hall, Phys. Rev. Lett. <b>64</b> (1990), pg 1697.</cite>
+
+<p>This is similar to <a href="#Brillet">Brillet and Hall</a> (above), but the lasers are fixed to Earth for better
+stability.&nbsp; No variations were found at the level of 2 &times; 10<sup>&minus;13</sup>.&nbsp; As they made observations
+over a year, this is not merely a limit on anisotropy, but also a limit on variations in different inertial frames.&nbsp;
+Brillet and Hall corresponds roughly to the Michelson&ndash;Morley experiment (no variations of the round-trip speed of light
+in different directions, with a time scale of minutes or seconds); Hils and Hall corresponds roughly to the
+Kennedy&ndash;Thorndike experiment (no variations of the round-trip speed of light in different directions or for the different
+inertial frames occupied by Earth during a year or so).</p> </li> <li><cite>Antonini, P., Okhapkin, M., Goklu, E., and
+Schiller, S., "Test of constancy of speed of light with rotating cryogenic optical resonators", Phys. Rev. A 71, 050101(R)
+(2005). <a href="http://arxiv.org/abs/gr-qc/0504109">arXiv:gr-qc/0504109</a>.</cite>
+
+<p>Commented on by <cite>Tobar et al., Phys. Rev. A72, 066101 (2005).</cite> Reply by the authors <cite>Phys. Rev. A72, 066102
+(2005)</cite>.</p>
+
+</li><li><cite>Herrmann et al., "Test of the Isotropy of the Speed of light using a Continuously
+Rotating Optical Resonator", Phys. Rev. Lett. 95, 150401 (2005)
+<a href="http://arxiv.org/abs/physics/0508097">arXiv:physics/0508097</a>.</cite>
+
+<p>Improved limits at a level of a few parts in 10<sup>&minus;16</sup>.
+
+</p></li><li><cite>Mueller et al., "Modern Michelson&ndash;Morley Experiment using Cryogenic Optical
+Resonators", Phys. Rev. Lett. 91, no. 2, 020401 (2003).</cite>
+<p>Anisotropy of <var>c</var> &lt; (2.6 ±1.7) &times; 10<sup>&minus;15</sup>.
+
+</p></li><li><cite>Chen et al., "Experimental Test of the Isotropy of Two-way Light Speed",
+A.S.N.U. Peking, 33, no. 5, pg 595 (1997).</cite>
+
+<p>An experiment similar to Brillet and Hall, with a limit of 1 &times; 10<sup>&minus;18</sup> in the anisotropy of <var>c</var>.
+
+</p></li></ul>
+
+
+
+<h3 id="other_isotropy">Other Experiments</h3>
+<ul class="entry">
+<li class="entry"><cite>Trimmer et al., Phys. Rev. <b>D8</b>, pg 3321 (1973); Phys. Rev. <b>D9</b> pg 2489 (1974).</cite>
+
+<p>A triangle interferometer with one leg in glass.&nbsp; They set an upper limit on the anisotropy of 0.025 m/s.&nbsp; This is
+about one millionth of Earth's orbital speed and about 1/10,000 of its rotational speed.</p>
+
+</li><li class="entry"><cite>Riis et al., Phys. Rev. Lett. <b>60</b>, pg 81 (1988).</cite>
+
+<p>This novel experiment uses a two-photon transition in a neon atomic beam to set an upper limit on any anisotropy of 0.3
+m/s.</p>
+
+</li>
+<li class="entry"><cite>Wolf and Petit, "Satellite test of special relativity
+using the global positioning system", Phys. Rev. A <b>56</b>, p4405 (1997).</cite>
+<p>Using GPS satellites to test for anisotropy in the speed of light, they find &delta;c/c &lt; 5 &times;
+10<sup>&minus;9</sup>.
+</p>
+</li>
+
+<li class="entry"><cite>Silvertooth, JOSA. <b>62</b> (1972), pg 1330.</cite>
+<p>This innovative experiment uses an interferometer with frequency-doubling crystals, so the fundamental's fringes are due to
+signals going all the way around, but the doubled-frequency fringes are due to signals going only half the way around
+(converging from opposite directions onto the detector).&nbsp; Its null result is consistent with SR.</p>
+</li></ul>
+
+
+
+<h2 id="one-way_tests">3.2 One-Way Tests of Light-Speed Isotropy</h2>
+
+<p>Note that while these experiments clearly use a one-way light path and find isotropy, they are inherently unable to rule out
+a large class of theories in which the one-way speed of light is anisotropic.&nbsp; These theories share the property that the
+round-trip speed of light is isotropic in any inertial frame, but the one-way speed is isotropic only in an aether frame.&nbsp;
+In all of these theories the effects of slow clock transport exactly offset the effects of the anisotropic one-way speed of
+light (in any inertial frame), and all are experimentally indistinguishable from SR.&nbsp; All of these theories predict null
+results for these experiments.&nbsp; See <a href="#Test_Theories">Test Theories</a> above, especially Zhang (in which these
+theories are called "Edwards frames").</p>
+
+<ul class="entry">
+<li class="entry"><cite id="Cialdea">Cialdea, Lett. Nuovo Cimento <b>4</b> (1972), pg 821.</cite>
+<p>Uses two multi-mode lasers mounted on a rotating table to look for variations in their interference pattern as the table is
+rotated.&nbsp; Places an upper limit on any one-way anisotropy of 0.9 m/s.</p>
+
+</li><li class="entry"><cite id="Krisher">Krisher et al., Phys. Rev. D, <b>42</b>, No. 2, pg 731&ndash;734, (1990).</cite>
+<p>Uses two hydrogen masers fixed to Earth and separated by a 21-km fiber-optic link to look for variations in the phase
+between them.&nbsp; They put an upper limit on the one-way linear anisotropy of 100 m/s.</p>
+
+</li><li class="entry"><cite>Champeny et al., Phys. Lett. <b>7</b> (1963), pg 241.</cite>
+	<cite>Champeney, Isaak and Khan, Proc. Physical Soc. <b>85</b>, pg 583 (1965).</cite>
+	<cite>Isaak et al., Phys. Bull. <b>21</b> (1970), pg 255.</cite>
+<p>Uses a rotating Mössbauer absorber and fixed detector to place an upper limit on any one-way anisotropy of 3 m/s.</p>
+
+</li><li class="entry"><cite>Turner and Hill, Phys. Rev. <b>134</b> (1964), B252.</cite>
+<p>Uses a rotating source and fixed Mössbauer detector to place an upper limit on any one-way anisotropy of 10 m/s.</p>
+
+</li><li class="entry"><cite>Gagnon, Torr, Kolen, and Chang, Phys. Rev. <b>A38</b> no. 4 (1988), pg 1767.</cite>
+<p>A guided-wave test of isotropy.&nbsp; Their null result is consistent with SR.</p>
+
+</li><li><cite>T.W. Cole, "Astronomical Tests for the Presence of an Ether",
+Mon. Not. R. Astr. Soc. (1976), <b>175</b> 93P&ndash;96P.</cite>
+<p>
+Several VLBI tests sensitive to first-order effects of an aether are described.&nbsp; No aether is detected, with a sensitivity
+of 70 m/s.
+</p>
+
+</li><li><cite>Ragulsky, "Determination of light velocity dependence on direction of
+propagation", Phys. Lett. A, 235 (1997), pg 125.</cite>
+<p>A "one-way" test that is bidirectional with the outgoing ray in glass and the return ray in air.&nbsp; The interferometer is
+by design particularly robust against mechanical perturbations, and temperature controlled.&nbsp; The limit on the anisotropy
+of <var>c</var> is 0.13 m/s.
+
+</p></li></ul>
+
+
+
+<h2 id="moving-source_tests">3.3 Tests of Light Speed from Moving Sources</h2>
+
+<p>If the light emitted from a source moving with velocity <var>v</var> toward the observer has a speed
+<var>c+kv</var> in the observer's frame, then these experiments place a limit on <var>k</var>.&nbsp; Many but not all of these
+experiments are subject to criticism due to <a href="#Optical_Extinction">Optical Extinction</a>.</p>
+
+
+
+<h3 id="cosmological">Experiments Using Cosmological Sources</h3>
+<ul class="entry">
+<li class="entry"><cite>Comstock, Phys. Rev. <b>10</b> (1910), pg 267.</cite>
+<cite>DeSitter, Koninklijke Akademie van Wetenschappen, vol <b>15</b>, part 2, pg 1297&ndash;1298 (1913).</cite>
+<cite>DeSitter, Koninklijke Akademie van Wetenschappen, vol <b>16</b>, part 1, pg 395&ndash;396 (1913).</cite>
+<cite>DeSitter, Physik. Zeitschr. 14, 429,
+(1913) <a href="http://www.datasync.com/%7Ersf1/desitter.htm">http://www.datasync.com/~rsf1/desitter.htm</a>.</cite>
+<cite>DeSitter, Physik. Zeitschr. 14, 1267,
+(1913) <a href="http://www.datasync.com/%7Ersf1/desitter.htm">http://www.datasync.com/~rsf1/desitter.htm</a>.</cite>
+<cite>Zurhellen, Astr. Nachr. <b>198</b> (1914), pg 1.</cite>
+<p>Observations of binary stars. <var>k</var> &lt; 10<sup>&minus;6</sup>.&nbsp; These are all subject to criticism due
+to <a href="#Optical_Extinction">Optical Extinction</a>.</p>
+
+</li><li class="entry"><cite>K. Brecher, "Is the Speed of Light Independent of the Velocity of the Source?",
+Phys. Rev. Lett. <b>39</b> 1051&ndash;1054, 1236(E) (1977).</cite>
+<p>Uses observations of binary pulsars to put a limit on the source-velocity dependence of the speed of light. <var>k</var>
+&lt; 2 &times; 10<sup>&minus;9</sup>.&nbsp; Optical Extinction is not a problem here, because the high-energy X-rays used have
+an extinction length considerably longer than the distance to the sources.</p>
+
+</li><li class="entry"><cite>Heckmann, Ann. d. Astrophys. <b>23</b> (1960), pg 410.</cite>
+<p>Differential aberration, galaxies versus stars.&nbsp; This experiment is subject to criticism due
+to <a href="#Optical_Extinction">Optical Extinction</a>.</p>
+</li>
+
+<li><i>Observations of Supernovae</i>
+<p>A supernova explosion sends debris out in all directions with speeds of 10,000 km/s or more (known from Doppler broadening
+of spectral lines).&nbsp; If the speed of light depended on the source velocity, its arrival at Earth would be spread out in
+time due to the spread of source velocities.&nbsp; Such a time spread is not observed, and observations of distant supernovae
+give <var>k</var> &lt; 5 &times; 10<sup>&minus;9</sup>.&nbsp; These observations could be subject to criticism due to Optical
+Extinction, but some observations are for supernovas considerably closer than the extinction length of the X-ray wavelengths
+used.
+
+</p></li></ul>
+
+
+
+<h3 id="terrestrial">Experiments Using Terrestrial Sources</h3>
+<ul class="entry">
+<li class="entry"><cite>Alvaeger F.J.M. Farley, J. Kjellman and I Wallin, Physics Letters <b>12</b>, 260 (1964).</cite>
+<cite>Arkiv foer Fysik, Vol 31, pg 145 (1965).</cite>
+<p>Measured the speed of gamma rays from the decay of fast &#960;<sup>0</sup> (~0.99975 <var>c</var>) to be <var>c</var> with a
+resolution of 400 parts per million.&nbsp; Optical extinction is not a problem for such high-energy gamma rays.&nbsp; The speed of
+the &#960;<sup>0</sup> is not measured, but is assumed to be similar to that measured for &#960;<sup>+</sup> and
+&#960;<sup>&minus;</sup>.
+
+</p></li><li class="entry"><cite>Sadeh, Phys. Rev. Lett. <b>10</b> no. 7 (1963), pg 271.</cite>
+<p>Measured the speed of the gammas emitted from e<sup>+</sup>e<sup>&minus;</sup>
+annihilation (with center of mass <var>v/c</var> ~0.5) to be <var>c</var> within 10%.
+</p>
+
+<p>This experiment was criticized in <cite>Lo Savio, Phys. Lett. A, 1988, Vol <b>133</b>, pg 176.</cite>  It is certainly true
+that at the instant of annihilation the e<sup>+</sup> need not be traveling in the same direction it had initially, or have the
+same speed (most annihilations occur at very low energy as the positrons stop).&nbsp; This experiment is inconclusive at best.
+</p>
+
+</li><li class="entry"><cite>Babcock and Bergmann, Journal Opt. Soc. Amer. Vol. <b>54</b>, pg 147 (1964).</cite>
+<p>This repeat of Kantor's experiment in vacuum shows no significant variation in the speed of light affected by moving glass
+plates.&nbsp; Optical Extinction is not a problem. <var>k</var> &lt; 0.02.</p>
+
+</li><li class="entry"><cite>Filipas and Fox, Phys. Rev. <b>135</b> no. 4B (1964), pg B1071.</cite>
+<p>Measured the speed of gamma rays from the decay of fast &#960;<sup>0</sup> (~0.2 <var>c</var>) in an experiment specifically
+designed to avoid extinction effects.&nbsp; Their results are in complete disagreement with the assumption <var>c+v</var>, and
+are consistent with SR.&nbsp; k &lt; 0.5 with a confidence level of 99.9%.</p>
+
+</li>
+<li><cite>Beckmann and Mandics, "Test of the Constancy of the Velocity of Electromagnetic Radiation in
+High Vacuum", Radio Science, 69D, no. 4, pg 623 (1965).</cite>
+<p>A direct experiment with coherent light reflected from a moving mirror was performed in vacuum better than
+10<sup>&minus;6</sup> torr.&nbsp; Its result is consistent with the constant speed of light.&nbsp; This experiment is notable
+because Beckmann was a perennial critic of SR.&nbsp; Optical Extinction is not a problem.</p>
+
+</li><li><cite>Operation of FLASH, a free-electron
+laser, <a href="http://vuv-fel.desy.de/">http://vuv-fel.desy.de/</a>.</cite>
+<p>A free-electron laser generates highly collimated X-rays parallel to the relativistic electron beam that is their
+source.&nbsp; If the region that generates the X-rays is <var>L</var> metres long, and the speed of light emitted from the
+moving electrons is <var>c+kv</var> (here <var>v</var> is essentially <var>c</var>), then at the downstream end of that region
+the minimum pulse width is <var>k</var>(<var>L</var>/<var>c</var>)/(1+<var>k</var>), because light emitted at the beginning
+arrives before light emitted at the downstream end.&nbsp; For FLASH, <var>L</var>=30 metres, <var>v</var>=0.9999997 <var>c</var>
+(700 MeV), and the observed X-ray pulse width is as short as 25 fs.&nbsp; This puts an upper limit on <var>k</var> of
+2.5 &times; 10<sup>&minus;7</sup>.&nbsp; Optical extinction is not present, as the entire process occurs in very high vacuum.</p>
+</li>
+
+</ul>
+
+
+
+<h2 id="Measurements_of_the_Speed_of_Light">3.4 Measurements of the Speed of Light, and Other Limits on it</h2>
+
+<p>In 1983 the international standard for the metre was redefined in terms of the definition of the second and
+a <strong>defined</strong> value for the speed of light.&nbsp; The defined value was chosen to be as consistent as possible
+with the earlier metrological definitions of the metre and the second.&nbsp; Since then it is not possible to measure the speed
+of light using the current metrological standards, but one can still measure any anisotropy in its speed, or use an earlier
+definition of the metre if necessary.</p>
+
+<ul class="entry">
+<li class="entry"><cite>Mulligan, Am. J. Phys. <b>44</b> no. 10 (1976), pg 960.</cite>
+<p>A report on measurements by the NBS.</p>
+
+</li><li class="entry"><cite>Rowley et al., Opt. and Quantum Elect. <b>8</b> (1976), pg 1.</cite>
+<p>A review article on the set of precision frequency and wavelength measurements that became the basis for the 1973 value
+of <var>c</var>.&nbsp; This is the best single reference for this.</p>
+
+</li><li class="entry"><cite>Woods et al., Appl. Optics <b>17</b> (1978), pg 1048; Rowley, Opt. Comm. <b>34</b> (1980), pg 429.</cite>
+<cite>Baird and Whitford, Opt. Comm. <b>31</b> (1979), pg 363, pg 367.</cite>
+<p>Measured <var>c</var> = 299,792,458.8 ± 0.2 metre/s, with 1.2 metre uncertainty due to realization of the Kr metre standard
+used.&nbsp; The fact that the Kr standard for the metre became the limit on accuracy was a major reason for the 1983
+redefinition of the metre in terms of the definition of <var>c</var> and the definition of the second.</p>
+
+</li><li class="entry"><cite>Goldman, J.O.S.A. <b>70</b> (1980), 1640.</cite>
+<p>Discussion of three proposals for a new definition of the metre (pre 1983).</p>
+
+</li><li class="entry"><cite>Jennings et al., J. Res. N.B.S. <b>92</b> (1982), pg 11.</cite>
+<p>Review of methods to relate <var>c</var> to the metre, and results for further measurements checking the 1973 determination
+of <var>c</var> leading to the 1983 adoption of the new metre standard in terms of the definition of <var>c</var> and the
+definition of the second.</p>
+
+</li><li class="entry"><cite>Giacomo, "The New Definition of the Meter", Am. J. Phys. <b>52</b> no. 7 (1984), pg
+607.</cite>
+<p>An overview of past definitions of the metre with emphasis on the guidelines that governed the choice of the new definition
+in 1983 in terms of the definition of the second and the definition of the speed of light.</p>
+
+</li><li class="entry"><cite>Petley, "New Definition of the Metre", Nature <b>303</b> (1983), pg 373.</cite>
+<p>A review article discussing the reasons for the re-definition of the metre in 1983 in terms of the definition of the second
+and the definition of the speed of light.</p>
+
+</li><li class="entry"><cite>Bates, Am. J. Phys. <b>56</b> (1986), pg 682.</cite>
+<cite>Bates, Am. J. Phys. <b>51</b> (1983), pg 1003.</cite>
+<p>A summary of measurements of <var>c</var>.&nbsp; The second paper describes measuring <var>c</var> by measuring frequency
+and wavelength and describes a college-level lab experiment.</p>
+</li></ul>
+
+
+
+<h3 id="frequency">Limits on Velocity Variations with Frequency</h3>
+<ul class="entry">
+<li class="entry"><cite>Essen and Froome, <u>The Velocity of Light and Radio Waves (1969)</u>.</cite>
+<p>For frequencies between 10<sup>8</sup> and 10<sup>15</sup> Hz the speed of light is constant within 1 part in
+10<sup>5</sup>.</p>
+
+</li><li class="entry" id="Brown"><cite>Brown et al., Phys. Rev. Lett. <b>30</b> no. 16 (1973), pg 763.</cite>
+<p>For visible light and 7 GeV gammas the speed of light differs by at most 6 parts in 10<sup>6</sup>.&nbsp; The speed of 11
+GeV electrons is within 3 parts in 10<sup>6</sup> of the speed of visible light.</p>
+
+</li><li class="entry"><cite>Florman, J. Res. N.B.S. <b>54</b> (1955), pg 355.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Schaefer, Phys. Rev. Lett. <b>82</b> no. 25 (1999), pg 4964.</cite>
+<p>For photons of 30 keV and 200 keV the speed of light is the same within a few parts in 10<sup>21</sup>.</p>
+</li></ul>
+
+
+
+<h3 id="photon_mass">Limits on the Photon Mass</h3>
+<ul class="entry">
+<li class="entry"><cite>Goldhaber and Nieto, "New Geomagnetic Limit on the Mass of the Photon",
+Phys. Rev. Lett. <b>21</b> no. 8 (1968), pg 567.</cite>
+<p>A limit of 2.3 &times; 10<sup>&minus;15</sup> eV/<var>c</var><sup>2</sup>.</p>
+
+</li><li class="entry"><cite>Goldhaber and Nieto, "Terrestrial and Extraterrestrial limits on the Photon Mass",
+Rev. Mod. Phys. <b>43</b> no. 3 (1971), pg 277.</cite>
+<p>A review article discussion about various experimental limits.</p>
+
+</li><li class="entry"><cite>Davis et al., "Limit on the Photon Mass Deduced from Pioneer-10 Observations of Jupiter's
+magnetic Fields", Phys. Rev. Lett. <b>35</b> no. 21 (1975), pg 1402.</cite>
+<p>A limit of 6 &times; 10<sup>&minus;16</sup> eV/<var>c</var><sup>2</sup>.</p>
+
+</li><li class="entry"><cite>Lakes, "Experimental limits on the Photon Mass and Cosmic Magnetic Vector Potential",
+Phys. Rev. Lett. <b>80</b> no. 9 (1998), pg 1826.</cite>
+<p>An experimental approach using a toroid Cavendish balance.</p>
+
+</li>
+<li><cite>Luo et al., "New Experimental Limit on the Photon Rest Mass with a Rotating Torsion
+Balance", Phys. Rev. Lett, 90, no. 8, 081801 (2003).</cite>
+<p>A limit of 1.2 &times; 10<sup>&minus;51</sup> g (6 &times; 10<sup>&minus;19</sup> eV/<var>c</var><sup>2</sup>).
+
+</p></li></ul>
+
+<p>See also the <a href="http://pdg.lbl.gov/">Particle Data Group's</a> summary on "Gauge and Higgs Bosons".&nbsp;
+As of July 2007, their reported limit on the photon mass is 6 &times; 10<sup>&minus;17</sup> eV/<var>c</var><sup>2</sup>.</p>
+
+
+
+<h2 id="Tests_of_the_poR">3.5 Tests of the Principle of Relativity and Lorentz Invariance</h2>
+
+<p>Einstein's first postulate, the principle of relativity (<dfn>PoR</dfn>), essentially states that the laws of physics do not
+vary for different inertial frames.&nbsp; Most if not all of the tests of his second postulate (the isotropy experiments above)
+could also be placed in this section, as could those in the following section on the isotropy of space.</p>
+
+
+
+<h3 id="Trouton_Noble">The Trouton&ndash;Noble Experiment</h3>
+
+<ul class="entry">
+<li class="entry"><cite>F.T. Trouton, Trans. Royal Soc. Dublin, 76, pg 379 (1902).</cite>
+<cite>Trouton and Noble, Phil. Trans. Royal Soc. London, A 202 (1903), pg 165.</cite>
+<p>This classic experiment looked for a torque induced on a charged capacitor due to its motion through the aether.&nbsp; Its
+null result is consistent with SR.</p>
+
+</li><li class="entry"><cite>Trouton and Rankine, "On the electrical resistance of moving matter", Proc. Royal
+Soc. London, 80, pg 420 (1908).</cite>
+<p>Measurements of the resistance of a coil fixed in the lab, for various orientations relative to Earth's motion.&nbsp; Its
+null result is consistent with SR.</p>
+
+</li><li class="entry"><cite>Chase, Phys, Rev, <b>28</b>, pg 378 (1926); <b>30</b> pg 516 (1927).</cite>
+<p>Set an upper limit on aether drift of 4 km/s.</p>
+
+</li><li class="entry"><cite>Tomaschek, Ann. d Phys. <b>78</b> (1926), p743; <b>80</b> (1926), pg 509.</cite>
+<p>Tomaschek performed the Trouton&ndash;Noble experiment at three different
+altitudes; all results are consistent with the SR predictions. </p>
+</li></ul>
+
+
+
+<h3 id="other_poR">Other Experiments</h3>
+<ul class="entry">
+<li class="entry"><cite>Coleman and Glashow, "Cosmic ray and Neutrino Tests of Special Relativity",
+preprint <a href="http://arxiv.org/abs/hep-ph/9703240">arxiv:hep-ph/9703240</a>.</cite>
+<p>Simple observations of the existence of cosmic rays lead to extremely tight limits on Lorentz non-invariance.&nbsp; These
+are model dependent, and depending on choice of model and other assumptions limits as good as 5 &times; 10<sup>&minus;23</sup> are
+obtained.</p>
+
+</li><li class="entry"><cite>Coleman and Glashow, "High-Energy Tests of Lorentz Invariance",
+preprint <a href="http://arxiv.org/abs/hep-ph/9812418">arxiv:hep-ph/9812418</a>.</cite>
+<p>A more general perturbative framework is developed.</p>
+</li></ul>
+
+
+
+<h2 id="Tests_of_isotropy_of_space">3.6 Tests of the Isotropy of Space</h2>
+<ul class="entry">
+<li class="entry"><cite>Hughes et al., Phys. Rev. lett. <b>4</b> no. 1 (1960), pg 342.</cite>
+<cite>Drever, Philosophical Mag. <b>6</b>, 683.</cite>
+<p>This extremely accurate experiment looked for any anisotropy in nuclear magnetic resonance.&nbsp; Hughes placed an upper
+limit on such anisotropy of 10<sup>&minus;20</sup>.</p>
+
+</li><li class="entry"><cite>Prestage et al., Physics Review Letters <b>54</b>, 2387 (1985).</cite>
+<cite>Lamoreaux et al., Physics Review Letters <b>57</b>, 3125 (1986).</cite>
+<cite>Chupp et al., Phys. Rev. Lett. <b>63</b>, 1541 (1989).</cite>
+<p>Variations on the Hughes&ndash;Drever experiment.</p>
+
+</li><li class="entry"><cite>Phillips, Phys. Rev. Lett. <b>59</b> no. 15 (1987), pg 1784.</cite>
+<p>A test using a cryogenic torsion pendulum carrying a transversely polarized magnet.&nbsp; No significant anisotropy was
+observed.</p>
+</li>
+<li><cite>Hou, L.-S., Ni, W.-T., and Li, Y.-C.M., "Test of Cosmic Spatial Isotropy for Polarized
+Electrons Using a Rotatable Torsion Balance", Phys. Rev. Lett., 90, 201101, (2003).</cite>
+<p>-</p>
+
+</li><li><cite>Heckel et al., Phys. Rev. Lett. 97 (2006)
+021603. <a href="http://arxiv.org/abs/hep-ph/0606218">arXiv:hep-ph/0606218</a></cite>
+<p>This uses a very clever spin-aligned torsion pendulum with a net spin but zero magnetization.</p>
+</li>
+</ul>
+<p>See also <a href="#Brillet">Brillet and Hall</a>.</p>
+
+
+
+<h3>Recent High-Resolution Tests using Cavities</h3>
+<ul class="entry"><li class="entry"><cite>Müller, H., "Testing Lorentz invariance by use of vacuum and matter filled
+cavity resonators", (2004).
+<a href="http://arxiv.org/abs/hep-ph/0412385">arXiv:hep-ph/0412385</a>.</cite>
+<p>
+A general review.
+</p></li><li><cite>Braxmaier, C., Müller, H., Pradl, O., Mlynek, J., Peters, A., and Schiller, S., "Tests of Relativity
+Using a Cryogenic Optical Resonator", Phys. Rev. Lett., 88, 010401, (2002).</cite>
+<p>-</p>
+</li><li><cite>Müller, H., Herrmann, S., Saenz, A., Peters, A., and Lämmerzahl, C., "Optical cavity tests of Lorentz
+invariance for the electron", Phys. Rev. D, 68, 116006-1-17, (2003).
+<a href="http://arxiv.org/abs/hep-ph/0401016">arXiv:hep-ph/0401016</a>.</cite>
+<cite>Müller, H., Braxmaier, C., Hermann, S., Peters, A., and Lämmerzahl, C., "Electromagnetic cavities and Lorentz
+invariance violation", Phys. Rev. D67, 056006 (2003).</cite>
+<p>-</p>
+</li><li><cite>Wolf, P., Bize, S., Clairon, A., Santarelli, G., Tobar, M.E., and Luiten, A.N., "Improved test of Lorentz
+invariance in electrodynamics", Phys. Rev. D, 70, 051902-1-4, (2004).
+<a href="http://arxiv.org/abs/hep-ph/0407232">arxiv:hep-ph/0407232</a>.</cite>
+<cite>Wolf et al., "Tests of Lorentz Invariance using a Microwave Resonator", Phys. Rev. Lett., 90, no. 6, 060402
+(2003).</cite>
+<p>-</p>
+</li><li><cite>Lipa, J.A., Nissen, J.A., Wang, S., Stricker, D.A., and Avaloff, D., "A New Limit on Signals of Lorentz
+Violation in Electrodynamics", Phys. Rev. Lett., 90, 060403,
+(2003). <a href="http://arxiv.org/abs/physics/0302093">arXiv:physics/0302093</a>.</cite>
+<p>Superconducting cylindrical cavities oriented vertically and East&ndash;West.&nbsp; No anisotropy to 1 part in
+10<sup>13</sup>.</p>
+</li><li><cite> Stanwix, P.L., Tobar, M.E., Wolf, P., Susli, M., Locke, C.R., Ivanov, E.N., Winterflood, J., and van Kann, F.,
+"Test of Lorentz Invariance in Electrodynamics Using Rotating Cryogenic Sapphire Microwave Oscillators",
+Phys. Rev. Lett., 95, 040404, (2005).
+<a href="http://arxiv.org/abs/hep-ph/0506074">arXiv:hep-ph/0506074</a>.</cite>
+<p>-</p>
+</li></ul>
+
+
+
+
+<h1 id="Tests_of_time_dilation">4. Tests of Time Dilation and Transverse Doppler Effect</h1>
+
+<p>The Doppler effect is the observed variation in frequency of a source when it is observed by a detector that is moving
+relative to the source.&nbsp; This effect is most pronounced when the source is moving directly toward or away from the
+detector, and in pre-relativity physics its value was zero for transverse motion (motion perpendicular to the source&ndash;detector
+line).&nbsp; In SR there is a non-zero Doppler effect for transverse motion, due to the relative time dilation of the source as
+seen by the detector.&nbsp; Measurements of Doppler shifts for sources moving with velocities approaching <var>c</var> can test
+the validity of SR's prediction for such observations, which differs significantly from classical predictions; the experiments
+support SR and are in complete disagreement with non-relativistic predictions.</p>
+
+
+
+<h3>Review Article</h3>
+<ul class="entry"><li class="entry"><cite>G. Gwinner, "Experimental Tests of Time Dilation in Special Relativity",
+Mod. Phys. Lett. 1, 20, no. 11 (2005), pg 791.</cite>
+<p>A general review article.</p>
+</li></ul>
+
+
+
+<h3 id="Ives-Stilwell">The Ives and Stilwell Experiment</h3>
+<ul class="entry">
+<li class="entry"><cite>H.E. Ives and G.R. Stilwell, "An Experimental Study of the Rate of a Moving Atomic Clock",
+J. Opt. Soc. Am. <b>28</b> pg 215&ndash;226 (1938); JOSA <b>31</b> pg 369&ndash;374 (1941).</cite>
+<p>This classic experiment measured the transverse Doppler effect for moving atoms.</p>
+
+</li><li class="entry"><cite>Otting, Physik. Zeitschr. <b>40</b>, 681 (1939).</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Hasselkamp et al., Z. Physik <b>A289</b> (1989), pg 151.</cite>
+<p>A measurement that is truly at 90° in the lab.&nbsp; Agreement with SR to an accuracy of a few percent.</p>
+</li></ul>
+
+<p>See also <a href="#Mandelberg">Mandelberg and Witten</a>.</p>
+
+
+
+<h3 id="particle_lifetimes">Measurements of Particle Lifetimes</h3>
+<ul class="entry">
+<li class="entry"><cite>Rossi and Hoag, Physical Review <b>57</b>, pg 461 (1940).</cite>
+<cite>Rossi and Hall, Physical Review <b>59</b>, pg 223 (1941).</cite>
+<cite>Rasetti, Physical Review <b>60</b>, pg 198 (1941).</cite>
+<cite>Redei, Phys. Rev. <b>162</b> no. 5 (1967), pg 1299.</cite>
+<p>Various measurements of the lifetimes of muons.
+<br>See also: <a href="#Bailey">Bailey et al.</a></p>
+
+</li><li class="entry"><cite>Durbin, Loar and Havens, Physical Review <b>88</b>, pg 179 (1952).</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>D. Frisch and J. Smith, "Measurement of the Relativistic Time Dilation Using Mesons",
+Am. J. Phys. <b>31</b> (1963) 342.</cite>
+<p>Measurements of the lifetimes of pions.&nbsp; An interpretation was given by: <cite>Terell, Nuovo Cimento <b>16</b> (1960)
+pg 457.</cite></p>
+
+</li><li class="entry"><cite>Greenberg et al., Phys. Rev. Lett. <b>23</b> no. 21 (1969), pg 1267.</cite>
+<p>More accurate measurement of pion lifetimes.</p>
+
+</li><li class="entry"><cite>Ayres et al., Phys. Rev. <b>D3</b> no. 5 (1971), pg 1051.</cite>
+<p>Measurements of pion lifetimes, comparison of positive and negative pions, etc.</p>
+
+</li><li class="entry"><cite>Burrowes et al., Phys. Rev. Lett. <b>2</b> (1959), pg 117.</cite>
+<p>Measurements of Kaon lifetimes.</p>
+</li></ul>
+
+
+
+<h3 id="Doppler_shift">Doppler Shift Measurements</h3>
+<ul class="entry">
+<li class="entry"><cite>Kaivola et al., Phys. Rev. Lett. <b>54</b> no. 4 (1985), pg 255.</cite>
+<cite>McGowan et al., Phys. Rev. Lett. <b>70</b> no. 3 (1993), pg 251.</cite>
+<p>They compared the frequency of two lasers, one locked to fast-beam neon and one locked to the same transition in thermal
+neon.&nbsp; Kaivola found agreement with SR's Doppler formula is to within 4 &times; 10<sup>&minus;5</sup>; McGowan within
+2.3 &times; 10<sup>&minus;6</sup>.</p>
+
+</li><li class="entry"><cite>Hay et al., Phys. Rev. Lett. <b>4</b> (1960), pg 165.</cite>
+<p>A Mössbauer absorber on a rotor.</p>
+
+</li><li class="entry"><cite>Kuendig, Phys. Rev. <b>129</b> no. 6 (1963), pg 2371.</cite>
+<p>A Mössbauer 
+absorber on a rotor was used to verify the transverse Doppler effect of
+SR to 1.1%.</p>
+
+</li><li class="entry"><cite>Olin et al., Phys. Rev. <b>D8</b> no. 6 (1973), pg 1633.</cite>
+<p>A nuclear measurement at 0.05 <var>c</var>, in very good agreement with the prediction of SR.</p>
+</li>
+<li><cite id="Mandelberg">Mandelberg and Witten, Journal Opt. Soc. Amer. 52, pg 529 (1962).</cite>
+<p>Measured the exponent of the quadratic Doppler shift to be 0.498±0.025, in agreement with SR's value of ½.</p>
+</li>
+</ul>
+
+<h1 id="Twin_paradox">5. Tests of the "Twin Paradox"</h1>
+<p>The "twin paradox" occurs when two clocks are synchronized, separated, and rejoined.&nbsp; If one clock remains in an
+inertial frame, then the other must be accelerated sometime during its journey, and it displays less elapsed proper time than
+the inertial clock.&nbsp; This is a paradox only in that it appears to be inconsistent but is not.
+</p>
+<ul class="entry">
+<li class="entry"><cite>Hafele and Keating, Nature <b>227</b> (1970), pg 270 (proposal).</cite>
+<cite>Science Vol. <b>177</b> pg 166&ndash;170 (1972) (experiment).</cite>
+<p>They flew atomic clocks on commercial airliners around the world in both directions, and compared the time elapsed on the
+airborne clocks with the time elapsed on an Earthbound clock (USNO).&nbsp; Their eastbound clock lost 59 ns on the USNO clock;
+their westbound clock gained 273 ns; these agree with GR predictions to well within their experimental resolution and
+uncertainties (which total about 25 ns).&nbsp; By using four cesium-beam atomic clocks they greatly reduced their systematic
+errors due to clock drift.</p>
+<p>Criticised in: A.G. Kelly, "Reliability of Relativistic Effect Tests on Airborne Clocks", Inst. Engineers
+Ireland Monograph No. 3 (February 1996),
+<a href="http://www.cartesio-episteme.net/H%26KPaper.htm">http://www.cartesio-episteme.net/H&amp;KPaper.htm</a>.&nbsp; His
+criticism does not stand up, as he does not understand the properties of the atomic clocks and the way the four clocks were
+reduced to a single "paper" clock.&nbsp; The simple averages he advocates are not nearly as accurate as the paper clock used in
+the final paper&mdash;that was the whole point of flying four clocks (they call this "correlated rate change"; this technique
+is used by all standards organizations today to minimize the deficiencies of atomic clocks).
+</p>
+<p>Also commented on in <cite>Schlegel, AJP <b>42</b>, pg 183 (1974).</cite>  He identifies the East&ndash;West time difference
+as the Sagnac effect, notes that this is independent of the clock's speed relative to the (rotating) Earth, and proposes a
+coordinate system in which it is treated just like the international date line (for use in highly accurate time transfer around
+the world).&nbsp; Whether or not this idea has any substance, it has been superceded by the ECI coordinate system of
+the <a href="#GPS">GPS</a>.
+</p>
+
+<p>
+Here is a brief description of a repetition in the UK
+(2005): <cite><a href="http://www.npl.co.uk/upload/pdf/metromnia_issue18.pdf">http://www.npl.co.uk/upload/pdf/metromnia_issue18.pdf</a>
+(Page 2)</cite>
+</p>
+
+</li><li class="entry"><cite>Vessot et al., "A Test of the Equivalence Principle Using a Space-borne Clock",
+Gel. Rel. Grav., <b>10</b>, (1979) 181&ndash;204.</cite>
+<cite>"Test of Relativistic Gravitation with a Space borne Hydrogen Maser", Phys. Rev. Lett. <b>45</b>
+2081&ndash;2084.</cite>
+<p>They flew a hydrogen maser in a Scout rocket up into space and back (not recovered).&nbsp; Gravitational effects are
+important, as are speed effects.&nbsp; This experiment is also known as "Gravity Probe A".</p>
+
+</li><li class="entry"><cite>C. Alley, "Proper Time Experiments in Gravitational Fields with Atomic Clocks, Aircraft, and
+Laser Light Pulses," in Quantum Optics, Experimental Gravity, and Measurement Theory, eds. Pierre Meystre and Marlan
+O. Scully, Proceedings Conf. Bad Windsheim 1981, 1983 Plenum Press New York, ISBN 0-306-41354-X, pg 363&ndash;427.</cite>
+
+<p>They flew atomic clocks in airplanes that remained localized over Chesapeake Bay, and also which flew to Greenland and
+back.</p>
+
+</li><li class="entry" id="Bailey"><cite>Bailey et al., "Measurements of relativistic time dilation for positive and
+negative muons in a circular orbit," Nature <b>268</b> (July 28, 1977) pg 301.</cite>
+<cite>Bailey et al., Nuclear Physics B <b>150</b> pg 1&ndash;79 (1979).</cite>
+<p>They stored muons in a storage ring and measured their lifetime.&nbsp; When combined with measurements of the muon lifetime
+at rest this becomes a highly relativistic twin scenario (<var>v</var> ~0.9994 <var>c</var>), for which the stored muons are
+the traveling twin and return to a given point in the lab every few microseconds.&nbsp; Muon lifetime at rest:
+<cite>Meyer et al., Physical Review <b>132</b>, pg 2693</cite>;
+<cite>Balandin et al., JETP <b>40</b>, pg 811 (1974)</cite>;
+<cite>Bardin et al., Physics Letters <b>137B</b>, pg 135 (1984)</cite>.&nbsp; Also a test of the clock hypotheses (below).</p>
+</li></ul>
+
+
+
+<h3 id="Clock_Postulate"><a href="clock.html">The Clock Postulate</a></h3>
+<p>The clock postulate states that the tick rate of a clock when measured in an inertial frame depends only upon its speed in
+that frame, and is independent of its acceleration or higher derivatives.&nbsp; The experiment of <a href="#Bailey">Bailey et
+al.</a> referenced above stored muons in a magnetic storage ring and measured their lifetime.&nbsp; While being stored in the
+ring they were subject to a proper acceleration of approximately 10<sup>18</sup> g (1 g = 9.8 m/s<sup>2</sup>).&nbsp; The
+observed agreement between the lifetime of the stored muons with that of constant-velocity muons with the same
+energy <em>partly</em> confirms the clock postulate for accelerations of that magnitude.&nbsp; We must say "partly" here,
+because these accelerations were centripetal: that is, they were perpendicular to the muons' velocity, and contained no
+component parallel to that velocity.&nbsp; Thus, using this restricted type of acceleration only partly tested the clock
+postulate.</p>
+
+<ul class="entry">
+<li class="entry"><cite>Sherwin, "Some Recent Experimental Tests of the 'Clock Paradox'", Phys. Rev. <b>129</b>
+no. 1 (1960), pg 17.</cite>
+<p>He discusses some Mössbauer experiments that support the thesis that the tick rate of a clock is independent of its acceleration
+(~10<sup>16</sup> g), and depends only on its speed.</p>
+</li></ul>
+
+<h1 id="Tests_of_kinematics">6. Tests of Relativistic Dynamics</h1>
+
+<p><dfn>Dynamics</dfn> is the study of how energy and momentum conservation laws constrain and affect physical
+interactions.&nbsp; The two predictions of SR in this regard are that massive objects will have a limiting speed
+of <var>c</var> (the speed of light), and that their "relativistic mass" will increase with their speed.&nbsp; This latter
+property implies that the newtonian equations for conservation of energy and momentum will be violated by enormous factors for
+objects with velocities approaching <var>c</var>, and that the corresponding formulas of SR must be used.&nbsp; This has become
+so obvious in particle experiments that few experiments test the SR equations, and virtually all particle experiments rely upon
+SR in their analysis.&nbsp; The exceptions are primarily early experiments measuring energy as a function of speed for
+electrons and protons.</p>
+
+<p>Note that the nomenclature has changed over the past century, and current literature focusses more on rest mass than
+relativistic mass because rest mass is an invariant property of an object.&nbsp; In this article, use of the word "mass" means
+rest mass.&nbsp; See also <a href="mass.html">this</a> FAQ page.</p>
+
+
+
+<h3 id="elastic_scattering">Elastic Scattering</h3>
+<ul class="entry">
+<li class="entry"><cite>Champion, Proc. R. Soc. <b>A136</b> (1932), pg 630.</cite>
+<p>Electro&ndash;electron elastic scattering</p>
+
+</li><li class="entry"><cite>Foley et al., "Experimental Test of the Pion&ndash;Nucleon Forward Dispersion Relation at High
+Energies", Phys. Rev. Lett. <b>19</b> no. 4 (1967), pg 193.</cite>
+<p>The dispersion relation expresses conservation of probability, and its validity at different energies is related
+to relativistic kinematics.</p>
+</li>
+<li><cite>Akerlof et al., "Elastic Proton&ndash;Proton Scattering at 90° and Structure within the
+Proton", Phys. Rev. 159, no. 9, pg 1138 (1967).</cite>
+<p>In newtonian mechanics, when two equal-mass objects scatter elastically, in the rest frame of one initial particle the two
+outgoing particles always travel at right angles to each other.&nbsp; In SR, that angle can be much less than a right angle, and in
+this experiment it is strikingly less than 90° (see their Fig. 3).</p></li>
+</ul>
+
+
+
+<h3 id="limiting_velocity">Experiments that Show the Limiting Speed <var>c</var></h3>
+<ul class="entry">
+<li class="entry"><cite>Alspector et al., Phys. Rev. Lett. <b>36</b>, pg 837 (1976).</cite>
+<p>A comparison of neutrino and muon velocities, at Fermilab.</p>
+
+</li><li class="entry"><cite>Kalbfleisch et al., Physics Review Letters <b>43</b>, pg 1361 (1979).</cite>
+<p>A comparison of muon, neutrino, and antineutrino velocities over a range of energies, at Fermilab.</p>
+
+</li><li class="entry"><cite>Guiragosian et al., Phys. Rev. Lett. <b>34</b> no. 6 (1975), pg 335.</cite>
+<p>Relative velocity measurements of 15 GeV electrons and gammas. No significant difference was observed within ~2 parts in
+10<sup>7</sup>. See also <a href="#Brown">Brown et al.</a></p>
+
+
+</li><li class="entry"><cite>G.L. Greene et al.,"Test of special relativity by a determination of the Lorentz limiting
+velocity: Does E=mc<sup>2</sup>?" Physical Review D <b>44</b> (1991) R2216.</cite>
+<p>An analysis combining the results of several experiments gives the result that the Lorentz limiting speed must be equal
+to the speed of light to within 12 parts per million.</p>
+
+</li><li class="entry"><cite>Stodolsky, "The Speed of Light and the Speed of Neutrinos", Phys. Lett. <b>B201</b>
+no. 3 (1988), pg 353.</cite>
+<p>A comparison of neutrino and photon speeds from supernova SN1987A puts a limit of about 1 part in 10<sup>8</sup> on their
+speed difference.</p>
+</li></ul>
+
+
+
+<h3 id="electron_mass_variation">Electron Relativistic Mass Variations</h3>
+<p>In the early 20<sup>th</sup> century there was an alternative theory by Abraham that is now little known, because these
+experiments rejected it in favor of SR.&nbsp; A critical review of the experimental evidence concerning the Lorentz model compared
+to the Abraham model was given in: <cite>Farago and Jannossy, Il Nuovo Cim. Vol5, No 6, pg 1411 (1957).</cite>
+</p>
+<ul class="entry" id="Kaufmann">
+<li class="entry"><cite>W. Kaufmann, Nachr. K. Ges. Wiss. Goettingen 2, pg 143 (1901)</cite>
+<cite>W. Kaufmann, Nachr. K. Ges. Wiss. Goettingen 3, pg 291 (1902);</cite>
+<cite>W. Kaufmann "Die elektromagnetische Masse des Elektrons", Phys. Zeitschr. 4, pg 54 (1902)</cite>
+<cite>W. Kaufmann, Nachr. K. Ges. Wiss. Goettingen 4, pg 90 (1903)</cite>
+<cite>W. Kaufmann, "Uber die Konstitution des Elektrons", Ann. Physik 19 ,495 (1906) and Nachtrag 20, 639&ndash;640
+(1906);</cite>
+<cite>W. Kaufmann, "Uber die Konstitution des Elektrons", Sitzungsberichte der preussichen Akademie der
+Wissenschaften, 1905, Part 2.</cite>
+<cite>W. Kaufmann, "Uber die Konstitution des Elektrons" Ann. Physik 19 ,495 (1906);</cite>
+<cite>W. Kaufmann, "Uber die Konstitution des Elektrons", Sitzungsberichte der preussichen Akademie der
+Wissenschaften, 1915, Part 2.</cite>
+<p>There were several discussions about the conclusions from Kaufmann's experiments and his data analysis.&nbsp; See for
+instance:
+<cite>M. Planck, "Die Kaufmannschen Messungen der Ablenkbarkeit der beta-Strahlen in ihrer Bedeutung fur die Dynamik der
+Electron", Verhandlungen der Deutschen Physikalischen Gesellschaft, <b>8</b>, 1906</cite>; and
+<cite>M. Planck, "Nachtrag zu der Besprechung der Kaufmannschen Ablenkungsmessungen", Verhandlungen der
+Deutschen Physikalischen Gesellschaft, <b>9</b>, 1907</cite>.
+
+</p></li><li class="entry"><cite>A.H. Bucherer, Phyz. Zeitschr. <b>9</b> (1908), pg 755; Ber. d. deutschen Phys. Ges. <b>6</b> (1908), pg 688.</cite>
+<cite>A. Bucherer, "Die experimentelle Bestatigung des Relativitatsprinzips", Annalen der Physik, <b>28</b>, 1909.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>E. Hupka, Ann. Phys. <b>31</b> (1910), pg 169.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Cl. Schaefer and G. Neumann, Phys. Zeitschr. <b>14</b> (1913), pg 1117.</cite>
+<cite>G. Neumann, "Die träge Masse schnell bewegter Elektronen", Ann. Phys. 45, pg 529 (1914).</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Ch.E. Guye and Ch. Lavanchy, Comptes rendus <b>161</b> (1915), pg 52.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Zahn and Spees, Phys. Rev. <b>53</b> (1938), pg 511.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Rogers et al., Physical Review <b>57</b> (1940), pg 379.</cite>
+<p>Measurement of m/e and <var>v</var> for three beta particles (electrons) from Radium.&nbsp; Supports the Lorentz model over
+the Abraham model by &gt; 10 <abbr title="sigma = population standard deviation">&#963;</abbr>.</p>
+
+</li><li class="entry"><cite>Meyer et al., Helv. Physica Acta <b>36</b> , pg 981 (1963).</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>W. Bertozzi, Am. J. Phys. <b>32</b>, 551 (1964).</cite>
+<p>Measurements of speed vs. energy for 0.5&ndash;15 MeV electrons.</p>
+
+</li><li class="entry"><cite>Geller and Kollarits, Am. J. Phys. <b>40</b> (1972), pg 1125.</cite>
+<p>-</p>
+</li></ul>
+
+
+
+<h3 id="proton_mass_variation">Proton Relativistic Mass Variations</h3>
+<ul class="entry">
+<li class="entry"><cite>Zrelov, Tiapkin, Farago Soviet Physics JETP, Vol. <b>34</b>, pg 384 (1958).</cite>
+<p>-</p>
+</li></ul>
+
+
+
+<h3 id="calorimetric">Calorimetric Test of Special Relativity</h3>
+<ul class="entry">
+<li class="entry"><cite>D.R. Walz, H.P. Noyes and R.L. Carezani, Physical Review <b>A29</b> (1984), pg 2110.</cite>
+<p>The beam power at SLAC is measured using temperature rise in a calorimeter, for
+electrons of ~17 and 20 GeV
+and beam currents up to ~15 microamperes.&nbsp; Their results
+confirm SR with a resolution of about 30%, and are "many orders of
+magnitude larger than predicted by the theory of autodynamics",
+of which Carezani is the author (and also member of this experimental
+group).</p>
+</li></ul>
+
+
+<h1 id="Length_Contraction">7. Tests of Length Contraction</h1>
+<p>At this time there are no direct tests of length contraction, as measuring the length of a moving object to the precision
+required has not been feasible.&nbsp; There is, however, a demonstration that it occurs:</p>
+
+<p>A current-carrying wire is observed to be electrically neutral in its rest frame, and a nearby charged particle at rest in
+that frame is unaffected by the current.&nbsp; A nearby charged particle that is moving parallel to the wire, however, is
+subject to a magnetic force that is related to its speed relative to the wire.&nbsp; If one considers the situation in the rest
+frame of a charge moving with the drift velocity of the electrons in the wire, the force is purely electrostatic due to the
+different length contractions of the positive and negative charges in the wire (the former are fixed relative to the wire,
+while the latter are mobile with drift velocities of a few mm per second).&nbsp; This approach gives the correct quantitative
+value of the magnetic force in the wire frame.&nbsp; This is discussed in more detail in: <cite>Purcel, <u>Electricity and
+Magnetism</u></cite>.&nbsp; It is rather remarkable that relativistic effects for such a tiny speed explain the enormous
+magnetic forces we observe.</p>
+
+<h1 id="Recent_Tests">8. Recent Tests of CPT and Lorentz Invariance</h1>
+<p>The <i>CPT theorem</i> is a general property of quantum field theories that states (loosely) that any system must behave the
+same if one applies the <i>CPT</i> transform to it: invert all charges (C, charge conjugation), invert all spatial axes (P,
+parity inversion), and invert the direction of time (T, time inversion).&nbsp; While one cannot actually do any of that in the
+real world, one can perform experiments in which particles are replaced by antiparticles (C), one looks at situations in which
+left and right are interchanged (P), and the particles travel along similar paths but in opposite directions and have opposite
+spin polarizations (T).</p>
+
+<p><i>Lorentz Invariance</i> is the technical term for the statement that SR is valid.&nbsp; Any violation of CPT invariance
+implies a violation of Lorentz invariance; theories without Lorentz invariance need not have CPT invariance.</p>
+<ul class="entry">
+<li class="entry"><cite>Kostelecký and Mewes, "Signals for Lorentz violation in electrodynamics", Phys. Rev. D66,
+056005 (2002).</cite>
+<p>A review of various limits, terrestrial and astrophysical.</p>
+
+</li><li class="entry"><cite>Mueller, "Testing Lorentz invariance by the use of vacuum and matter filled cavity
+resonators", Phys. Rev. D71, 045004 (2005).</cite>
+<p>A review article.</p>
+</li></ul>
+
+
+
+<h3>Cavity Experiments:</h3>
+<ul class="entry">
+<li class="entry"><cite>Müller, H., P.L. Stanwix, M.E. Tobar, E. Ivanov, P. Wolf, S. Herrmann, A. Senger, E. Kovalchuk,
+A. Peters, "Relativity tests by complementary rotating Michelson&ndash;Morley
+experiments", <a href="http://arxiv.org/abs/0706.2031v1">arXiv:0706.2031v1 [physics.class-ph]</a>.</cite>
+
+<p>By combining results from two interferometers made of different materials, located in different hemispheres, rotating on
+tables, they are able to put limits on more parameters of the <a href="#SME">SME</a> than otherwise.&nbsp; They have also
+improved both the statistics and systematic errors of the individual interferometers.</p> </li></ul>
+
+
+
+<h3>Particle-Based Experiments:</h3>
+<ul class="entry">
+<li class="entry"><cite>Nguyen, H.H., "CPT results from KTeV",
+(2001).&nbsp; <a href="http://arxiv.org/abs/hep-ex/0112046">arXiv:hep-ex/0112046</a>.</cite>
+<p>-</p>
+</li><li class="entry"><cite>Schwingenheuer, B. et al., "CPT tests in the neutral kaon system", Phys. Rev. Lett.,
+74, pg 4376&ndash;4379, (1995).</cite>
+<p>-</p>
+</li><li class="entry"><cite>Gurzadyan et al., "Probing the Light Speed Anisotropy with respect to the Cosmic Microwave
+Background Radiation Dipole", Mod. Phys. Lett., 2005, v.20, pg
+19. <a href="http://arxiv.org/abs/astro-ph/0410742">arXiv:astro-ph/0410742</a>.</cite>
+<p>-</p>
+</li><li class="entry"><cite>Hughes, V.W., Grosse Perdekamp, M., Kawall, D., Liu, W., Jungmann, K., and zu Pulitz, G.,
+"Test of CPT and Lorentz Invariance from Muonium Spectroscopy", Phys. Rev. Lett., 87, 111804-1-4,
+(2001).&nbsp; <a href="http://arxiv.org/abs/hep-ex/0106103">arxiv:hep-ex/0106103</a>.</cite>
+<p>-</p>
+</li><li class="entry"><cite>Bluhm, R., Kostelecký, V.A., and Lane, C.D.,"CPT and Lorentz tests with muons",
+Phys. Rev. Lett., 84, pg 1098&ndash;1101,
+(2000).&nbsp; <a href="http://arxiv.org/abs/hep-ph/9912451">arXiv:hep-ph/9912451</a>.</cite>
+<p>-</p>
+</li><li class="entry"><cite>Carey, R.M. et al., "New Measurement of the Anomalous Magnetic Moment of the Positive
+Muon", Phys. Rev. Lett., 82, pg 1632&ndash;1635, (1999).</cite>
+<p>-</p>
+</li><li class="entry"><cite>R. Grieser, R. Klein, G. Huber, S. Dickopf, I. Klaft, P. Knobloch, P. Merz, F. Albrecht,
+M. Grieser, D. Habs, D. Schwalm and T. Kaehl, "A test of special relativity with stored lithium ions",
+Appl. Phys. B59, no. 2, pg 127 (1994).</cite>
+<cite>Klein et al., Zeitschrift fuer Physik A 342, pg 455 (1992).</cite>
+<cite>Saathoff, G., Karpuk, S., Eisenbarth, U., Huber, G., Krohn, S., Horta, R.M., Reinhardt, S., Schwalm, D., Wolf, A., and
+Gwinner, G., "Improved Test of Time Dilation in Special Relativity", Phys. Rev. Lett., 91, 190403, (2003).</cite>
+<cite>G. Saathoff, S. Reinhardt, H. Buhr, L.A. Carlson, D. Schwalm, A. Wolf, S. Karpuk, C. Novotny, G. Huber, and G. Gwinner,
+Can. J. Phys./Rev. Can. Phys. 83(4): pg 425&ndash;434 (2005)</cite>
+<cite>(Saathof's Ph.D. thesis,
+2002) <a href="http://www.mpi-hd.mpg.de/ato/homes/saathoff/diss-saathoff.pdf">http://www.mpi-hd.mpg.de/ato/homes/saathoff/diss-saathoff.pdf</a></cite>
+<cite>(Reinhardt's Ph.D. thesis,
+2005) <a href="http://archiv.ub.uni-heidelberg.de/volltextserver/volltexte/2005/5934/pdf/doktorarbeit_sreinhardt.pdf">http://archiv.ub.uni-heidelberg.de/volltextserver/volltexte/2005/5934/pdf/doktorarbeit_sreinhardt.pdf</a></cite>
+<p>This is an incredibly clever experiment using <sup>7</sup>Li<sup>+</sup> ions in a storage ring, synchronizing a single
+laser to a 2-level transition via Doppler shifts in both directions.&nbsp; The fractional accuracy in frequency is
+10<sup>&minus;9</sup>, and the limit on deviation from the relativistic formula is 2.2 &times; 10<sup>&minus;7</sup> for speeds a
+substantial fraction of <var>c</var>.</p>
+
+</li><li class="entry"><cite>Lane, C.D., "Probing Lorentz violation with Doppler-shift
+experiments". <a href="http://arxiv.org/abs/hep-ph/0505130">arXiv:hep-ph/0505130</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Mittleman, R.K., Ioannou, I.I., Dehmelt, H.G., and Russell, N., "Bound on CPT and Lorentz
+symmetry with a trapped electron", Phys. Rev. Lett., 83, pg 2116&ndash;2119, (1999).</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Gabrielse, G., Khabbaz, A., Hall, D.S., Heimann, C., Kalinowsky, H., and Jhe, W., "Precision
+mass spectroscopy of the antiproton and proton using simultaneously trapped particles", Phys. Rev. Lett., 82, pg
+3198&ndash;3201, (1999).</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Dehmelt, H.G., Mittleman, R.K., van Dyck Jr, R.S., and Schwinberg, P., "Past electron
+positron g-2 experiments yielded sharpest bound on CPT violation", Phys. Rev. Lett., 83, pg 4694&ndash;4696,
+(1999). <a href="http://arxiv.org/abs/hep-ph/9906262">arXiv:hep-ph/9906262</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Auerbach et al. (LSND Collaboration), "Test of Lorentz violation in <abbr title="nu bar sub
+mu rightarrow nu bar sub e">Anti-&#957;<sub>&#956;</sub> &#8594; Anti-&#957;<sub>e</sub></abbr>
+oscillations". Phys. Rev. D 72, 076004 (2005).</cite>
+<p>These neutrino oscillations display no significant sidereal variation.</p>
+<p>Note, however, that the LSND results have been a puzzle for several years, as they appear to be inconsistent with other
+experiments.&nbsp; Just recently they were directly contradicted by the Mini-BooNE results from Fermilab (May 2007, no reference
+yet).</p>
+
+</li><li class="entry"><cite>Kostelecký and Mewes, "Lorentz violation and short-baseline neutrino experiments",
+Phys. Rev. D70, 076002 (2004).</cite>
+
+<p>Using the published results of the Liquid Scintillator Neutrino Detector (LSND) experiment, an estimated nonzero value (3
+±1) &times; 10<sup>&minus;19</sup>&nbsp;GeV for a combination of coefficients for Lorentz violation is obtained.&nbsp; This
+lies in the range expected for effects originating from the Planck scale in an underlying unified theory.</p>
+
+<p>Note, however, that the LSND results have been a puzzle for several years, as they appear to be inconsistent with other
+experiments.&nbsp; Just recently they were directly contradicted by the Mini-BooNE results from Fermilab (May 2007, no
+reference yet).</p>
+</li></ul>
+
+
+
+<h3>Clock-comparison experiments:</h3>
+
+<ul class="entry">
+<li class="entry"><cite>Walsworth, Bear, Humphrey, Mattison, Phillips, Stoner, and Vessot, "New Clock Comparison Searches
+for Lorentz and CPT Violation", <a href="http://arxiv.org/abs/physics/0007063">arxiv:physics/0007063 (2000)</a>.</cite>
+<cite>Bear, D., Stoner, R.E., Walsworth, R.L., Kostelecký, V.A., and Lane, C.D., "Limit on Lorentz and CPT violation of
+the neutron using a two-species noble-gas maser", Phys. Rev. Lett., 85, pg 5038&ndash;5041, (2000).
+<a href="http://arxiv.org/abs/physics/0007049">arXiv:physics/0007049</a>.</cite>
+<cite>Bear, D., Stoner, R.E., Walsworth, R.L., Kostelecký, V.A., and Lane, C.D., "Erratum: Limit on Lorentz and CPT
+Violation of the Neutron Using a Two-Species Noble-Gas Maser", Phys. Rev. Lett., 89, 209902, (2002).</cite>
+<cite>Cane, Bear, Phillips, Rosen, Smallwood, Stoner, and Walsworth, "Bound on Lorentz and CPT Violating Boost Effects
+for the Neutron", Phys. Rev. Lett. 93, 230801 (2004).</cite>
+<p>Search for sidereal variation in the frequency difference between co-located <sup>129</sup>Xe and <sup>3</sup>He Zeeman
+masers sets the most stringent limits to date on leading order Lorentz and CPT violation.&nbsp; By locating the two masers in the
+same enclosure they eliminate many systematic errors, and are looking at variations at the level of 100 nHz
+(10<sup>&minus;7</sup>&nbsp;Hz !).</p>
+
+</li><li class="entry"><cite>Kostelecký, V.A., and Lane, C.D., "Constraints on Lorentz violation from clock-comparison
+experiments", Phys. Rev. D, 60, 116010,
+(1999). <a href="http://arxiv.org/abs/hep-ph/9908504">arXiv:hep-ph/9908504</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Bertolami, O., and Rosa, J.G., "New bounds on cubic Lorentz-violating terms in the fermionic
+dispersion relation", Phys. Rev. D, 71,
+097901. <a href="http://arxiv.org/abs/hep-ph/0412289">arXiv:hep-ph/0412289</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Berglund, C.J. et al., "New Limits on Local Lorentz Invariance from Hg and Cs
+Magnetometers", Phys. Rev. Lett., 75, 1879, (1995).</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Phillips, D.F., Humphrey, M.A., Mattison, E.M., Stoner, R.E., Vessot, R.F.C., and Walsworth, R.L.,
+"Limit on Lorentz and CPT violation of the proton using a hydrogen maser", Phys. Rev. D, 63, 111101,
+(2001). <a href="http://arxiv.org/abs/physics/0008230">arXiv:physics/0008230</a>.</cite>
+<cite>Humphrey et al., "Testing CPT and Lorentz Symmetry with Hydrogen Masers", Phys. Rev. A68, 063807
+(2003). <a href="http://arxiv.org/abs/physics/0103068">arXiv:physics/0103068</a>.</cite>
+<p>-</p>
+
+</li></ul>
+
+
+
+<h3>Astrophysical tests:</h3>
+
+<ul class="entry">
+<li class="entry"><cite>Ellis, J.R., Farakos, K., Mavromatos, N.E., Mitsou, V.A., and Nanopoulos, D.V., "Astrophysical
+probes of the constancy of the velocity of light", Astrophys. J., 535, 139&ndash;151,
+(2000). <a href="http://arxiv.org/abs/astro-ph/9907340">arXiv:astro-ph/9907340</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Ellis, J.R., Mavromatos, N.E., Nanopoulos, D.V., and Sakharov, A.S., "Quantum-gravity
+analysis of gamma-ray bursts using wavelets", Astron. Astrophys., 402, 409&ndash;424,
+(2003). <a href="http://arxiv.org/abs/astro-ph/0210124">arXiv:astro-ph/0210124</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Biller, S.D., Breslin, A.C., Buckley, J., Catanese, M., Carson, M., Carter-Lewis, D.A., Cawley,
+M.F., Fegan, D.J., Finley, J.P., Gaidos, J.A., Hillas, A.M., Krennrich, F., Lamb, R.C., Lessard, R., Masterson, C., McEnery,
+J.E., McKernan, B., Moriarty, P., Quinn, J., Rose, H.J., Samuelson, F., Sembroski, G., Skelton, P., and Weekes, T.C.,
+"Limits to quantum gravity effects from observations of TeV flares in active galaxies", Phys. Rev. Lett., 83,
+2108&ndash;2111, (1999). <a href="http://arxiv.org/abs/gr-qc/9810044">arXiv:gr-qc/9810044</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Boggs, S.E., Wunderer, C.B., Hurley, K., and Coburn, W., "Testing Lorentz Non-Invariance
+with GRB021206", (2003).&nbsp; <a href="http://arxiv.org/abs/astro-ph/0310307">arXiv:astro-ph/0310307</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Ellis et al., "Robust Limits on Lorentz Violation from Gamma-Ray
+Bursts", <a href="http://arxiv.org/abs/astro-ph/0510172">arXiv:astro-ph/0510172</a> (2005).</cite>
+<p>If the speed of light has an energy dependence <var>c</var>(<var>E</var>) ~ <var>c</var><sub>0</sub>(1
+&minus; <var>E</var>/<var>M</var>), a limit on <var>M</var> is obtained: <var>M</var> &gt; 0.9 &times; 10<sup>16</sup>
+GeV/<var>c</var><sup>2</sup>.</p>
+
+</li><li class="entry"><cite>Kostelecký and Mewes, "Cosmological Constraints on Lorentz Violation in
+Electrodynamics", Phys. Rev. Lett., 87, no. 25, 251304 (2001).</cite>
+<p>Certain coefficients for Lorentz violation are bounded to less than 3 &times; 10<sup>&minus;32</sup>.</p>
+
+</li></ul>
+
+
+
+<h3>Vacuum Cerenkov radiation:</h3>
+
+<ul class="entry">
+<li class="entry"><cite>Lehnert, R., and Potting, R., "The Cerenkov effect in Lorentz-violating vacua",
+Phys. Rev. D, 70, 125010, (2004). <a href="http://arxiv.org/abs/hep-ph/0408285">arXiv:hep-ph/0408285</a> .</cite>
+<cite>Lehnert, R., and Potting, R., "Vacuum Cerenkov radiation", Phys. Rev. Lett., 93, 110402,
+(2004). <a href="http://arxiv.org/abs/hep-ph/0406128">arXiv:hep-ph/0406128</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Coleman, S.R., and Glashow, S.L., "Cosmic ray and neutrino tests of special
+relativity", Phys. Lett. B, 405, 249-252,
+(1997). <a href="http://arxiv.org/abs/hep-ph/9703240">http://arXiv.org/abs/hep-ph/9703240</a>.</cite>
+<cite>Coleman, S.R., and Glashow, S.L., "Evading the GZK cosmic-ray cutoff",
+(1998). <a href="http://arxiv.org/abs/hep-ph/9808446">arXiv:hep-ph/9808446</a>.</cite>
+<cite>Coleman, S.R., and Glashow, S.L., "High-energy tests of Lorentz invariance", Phys. Rev. D, 59, 116008,
+(1999). <a href="http://arxiv.org/abs/hep-ph/9812418">arXiv:hep-ph/9812418</a>.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Greisen, K., "End to the cosmic ray spectrum?", Phys. Rev. Lett., 16, pg
+748&ndash;750, (1966).</cite>
+<cite>Zatsepin, G.T., and Kuzmin, V.A., "Upper limit of the spectrum of cosmic rays", J. Exp. Theor. Phys. Lett.,
+4, pg 78&ndash;80, (1966).</cite>
+<p>The original GZT papers.</p>
+
+</li></ul>
+
+
+
+<h1 id="Other_experiments">9. Other Experiments</h1>
+
+
+
+<h3 id="Fizeau">The Fizeau Experiment</h3>
+
+<p>Fizeau measured the speed of light in moving mediums, most notably moving water.&nbsp; Fresnel proposed a "drag
+coefficient" that putatively described how strongly a moving material medium "dragged" the aether.&nbsp; SR
+predicts no aether but does predict that the speed of light in a moving medium differs from the speed in the medium at rest, by
+an amount consistent (to within experimental resolutions) with these experiments and with the Fresnel drag coefficient.</p>
+
+<ul class="entry">
+<li class="entry"><cite>Michelson&ndash;Morley, Am. J. Sci. 31, 377 (1886).</cite>
+<p>This is a repetition of Fizeau's experiment, <em>not</em> the original MMX experiment!</p>
+
+</li><li class="entry"><cite>Zeeman: Proc. Royal Soc. Amsterdam <b>17</b>, pg 445 (1914); Proc. Royal Soc. Amsterdam <b>18</b>,
+pg 398 (1915); Amst. Versl. <b>23</b>, pg 245 (1914); Amst. Versl. <b>24</b>, pg 18 (1915).</cite>
+<p>A critical review of Zeeman's experiments is in: <cite>Lerche, American Journal of Physics Vol. <b>45</b>, pg 1154
+(1977).</cite></p>
+
+</li><li class="entry"><cite>Macek et al., "Measurement of Fresnel Drag with the Ring Laser",
+J. Appl. Phys. <b>35</b> (1964), pg 2556.</cite>
+<p>A more accurate, modern repetition.&nbsp; Includes a moving solid, liquid, and gas.</p>
+
+</li><li class="entry"><cite>Bilger et al., Phys. Rev. <b>A5</b> (1972) pg 591.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>James and Sternberg, Nature <b>197</b> (1963), pg 1192.</cite>
+<p>Measurements with a glass plate moving perpendicular to the light path.&nbsp; The experiment measures no significant effect,
+but is not sensitive enough to detect the small effect predicted by SR.</p>
+</li></ul>
+
+
+
+<h3 id="Sagnac">The Sagnac Experiment</h3>
+<p><a href="http://en.wikipedia.org/wiki/Georges_Sagnac">Sagnac</a> constructed a ring interferometer and measured its fringe
+shifts as it is rotated.&nbsp; Contrary to some uninformed claims, this experiment can be fully analyzed using SR, and the results
+are consistent with SR.</p>
+
+<ul class="entry">
+<li class="entry"><cite>Sagnac, C.R.A.S <b>157</b> (1913), p708, p1410; J. Phys. Radium, 5th Ser. <b>4</b> (1914), pg
+177.</cite>
+<p>The classic papers by Sagnac.</p>
+
+</li><li class="entry"><cite>Post, "Sagnac Effect", Rev. Mod. Phys., <b>39</b> no. 2, pg 475 (1967).</cite>
+<p>A review article.&nbsp; This is probably the most useful reference on ring interferometers and the Sagnac effect.</p>
+
+</li><li class="entry"><cite>Anderson et al., Am. J. Phys. <b>62</b> no. 11 (1994), pg 975.</cite>
+<p>A more recent review, and description of a much more accurate ring interferometer.</p>
+
+</li><li class="entry"><cite>Hasselbach and Nicklaus, Phys. Rev. A <b>48</b> no. 1 (1993), pg 143.</cite>
+<p>The Sagnac effect using electrons.</p>
+
+</li><li class="entry"><cite>Allan et al., Science, <b>228</b> (1985), pg 69.</cite>
+<p>They observed the Sagnac effect using GPS satellite signals observed simultaneously at multiple locations around the world.
+See <a href="#GPS">GPS</a>.</p>
+
+</li><li class="entry"><cite>Anandan, "Sagnac Effect in Relativistic and Nonrelativistic Physics",
+Phys. Rev. <b>D24</b> no. 2 (1981), pg 338.</cite>
+<cite>Gron, "Relativistic description of a Rotating Disk", AJP <b>43</b> no. 10 (1975), pg 869.</cite>
+<cite>Rizzi and Tartaglia, "Speed of Light on Rotating Platforms", preprint
+<a href="http://arxiv.org/abs/gr-qc/9805089">arxiv:gr-qc/9805089</a>.</cite>
+<cite>Mainwaring and Stedman, "Accelerated Clock Principles in Special Relativity", Phys. Rev. <b>A47</b> no. 5
+(1993), pg 3611.</cite>
+<cite>Berenda, "The Problem of the Rotating Disk", Phys. Rev. <b>62</b> (1942), pg 280.</cite>
+<p>Various additional papers on the analysis of rotating systems.</p>
+
+</li><li class="entry"><cite>Ashtekar and Magnon, "The Sagnac Effect in General Relativity",
+J. Math. Phys. <b>16</b> no. 2 (1975), pg 341.</cite>
+<p>A discussion using GR.</p>
+</li>
+
+<li><cite>The Canterbury Ring Laser, publications:
+<a href="http://www.phys.canterbury.ac.nz/research/laser/ring_publications.shtml">http://www.phys.canterbury.ac.nz/research/laser/ring_publications.shtml</a>.</cite>
+<p>A detailed and varied series of modern measurements using a highly sensitive ring laser.&nbsp; A review paper is:
+<cite>Stedman, Rep. Prog. Phys. 60: pg 615&ndash;688 (1997),
+<a href="http://www.phys.canterbury.ac.nz/research/laser/files/ringlaserrpp.pdf">http://www.phys.canterbury.ac.nz/research/laser/files/ringlaserrpp.pdf</a></cite>.
+
+</p></li></ul>
+
+
+
+<h3 id="Michelson-Gale">The Michelson and Gale Experiment</h3>
+<ul class="entry">
+<li class="entry"><cite>Michelson and Gale, Nature <b>115</b> (1925), pg 566; Astrophys. J. <b>61</b> (1925), pg 137.</cite>
+<p>This is essentially the Sagnac experiment, but on a much larger scale.&nbsp; They constructed a ring interferometer fixed on
+the ground with a size of 0.2 mile by 0.4 mile (about 320 m by 640 m).&nbsp; They did indeed detect Earth's rotation.</p>
+</li>
+
+<li><cite>Dunn et al., "Design and Operation of a 367 m<sup>2</sup> rectangular ring laser", Appl. Optics, 41, pg 1685
+(2002).</cite>
+<p>A modern large ring laser.</p>
+</li>
+</ul>
+
+
+
+<h3 id="g-2">g&minus;2 Experiments as a Test of Special Relativity</h3>
+<p>
+The value <var>g</var> is the <dfn>gyromagnetic ratio</dfn> of a particle, and is exactly 2 for a classical particle with
+charge and spin.&nbsp; So <var>g</var>&minus;2 measures the anomalous magnetic moment of the particle, and can be used
+(via <a href="http://en.wikipedia.org/wiki/Quantum_electrodynamics">QED</a>) as a test of SR.
+</p>
+<ul class="entry">
+<li class="entry"><cite>Newman et al., Phys. Rev. Lett. <b>40</b> no. 21 (1978), pg 1355.</cite>
+<p>A discussion of the basic technique of using measurements of the anomalous magnetic moment of electrons and muons as a test
+of SR, and an analysis of some low-energy electron data.</p>
+
+</li><li class="entry"><cite>F. Combley et al., Physical Review Letters <b>42</b> (1979), pg 1383.</cite>
+<p>Electron and muon measurements.</p>
+
+</li><li class="entry"><cite>P.S. Cooper et al., Physical Review Letters <b>42</b> (1979), pg 1386.</cite>
+<p>Electron measurements up to 12 GeV.</p>
+
+</li><li class="entry"><cite>Farley et al., Nuovo Cimento Vol <b>45</b>, pg 281 (1966).</cite>
+<cite>Farley et al., Nature <b>217</b>, pg 17 (1968).</cite>
+<cite>Bailey et al., Nuovo Cimento <b>9A</b>, pg 369 (1972).</cite>
+<cite>Bailey et al., Phys. Lett. <b>68B</b> no. 2 (1977), pg 191.</cite>
+<p>Measurements of the anomalous magnetic moment of muons.</p>
+</li>
+
+<li><cite>Bennett et al., "Measurement of the Negative Muon Anomalous Magnetic Moment to 0.7
+ppm", Phys. Rev. Lett., 92; 1618102 (2004).</cite>
+<p>The Brookhaven experiment to measure <var>g</var>&minus;2 for
+muons, <a href="http://www.g-2.bnl.gov/">http://www.g-2.bnl.gov/</a>.</p>
+</li>
+</ul>
+
+
+
+<h3 id="GPS">The Global Positioning System (GPS)</h3>
+<p>While not really an experiment, and not really any sort of test of SR, the GPS is an interesting and useful system in which
+relativity plays an important part.&nbsp; In particular it has become the best and most economical method of highly accurate time
+transfer around the globe.</p>
+
+<ul class="entry">
+<li class="entry"><cite><a href="http://tycho.usno.navy.mil/gps.html">http://tycho.usno.navy.mil/gps.html</a></cite>
+<p>US naval Observatory (USNO) GPS Operations.&nbsp; Includes an overview of the GPS and current details of its operation.</p>
+
+</li><li class="entry"><cite><a href="http://www.utexas.edu/depts/grg/gcraft/notes/gps/gps.html">http://www.utexas.edu/depts/grg/gcraft/notes/gps/gps.html</a></cite>
+<cite><a href="http://www.colorado.edu/geography/gcraft/notes/gps/gps_f.html">http://www.colorado.edu/geography/gcraft/notes/gps/gps_f.html</a></cite>
+<p>A tutorial and general overview of the GPS.</p>
+</li>
+<li><cite><a href="http://edu-observatory.org/gps/">http://edu-observatory.org/gps/</a></cite>
+<p>A large collection of links to GPS resources, tutorials, and references.&nbsp; More up to date than most other references in
+this section.</p>
+</li>
+<li class="entry"><cite>Allan et al., IEEE Trans. Inst. and Meas., <b>IM-32</b> no. 2 (1985), pg 118.</cite>
+<p>They discuss in detail how time and frequency comparisons among the various standards organizations of the world can be
+performed with an accuracy of about 1 part in 10<sup>14</sup>, using GPS satellites.</p>
+
+
+</li><li class="entry"><cite>Ashby and Allan, "Coordinate time On and Near Earth", Phys. Rev. Lett. <b>53</b>
+no. 19 (1984), pg 1858.</cite>
+<p>They discuss how the GPS coordinate system is used on and near Earth.&nbsp; They also describe two different comparisons
+between USNO and the Paris Observatory.</p>
+
+</li><li class="entry"><cite>Petit and Wolf, "Relativistic Theory for Picosecond Time Transfer in the Vicinity of
+Earth", Astron. and Astrophys. <b>286</b> (1994), pg 971.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Saburi et al., "High-Precision Time Comparison via Satellite and Observed Discrepancy of
+Synchronization", IEEE Trans. Inst. Meas. <b>IM-25</b> no. 4 (1976), pg 473.</cite>
+<p>The "discrepancy" they mention is merely the <a href="#Sagnac">Sagnac effect</a>, and observations agree with
+predictions.</p>
+</li></ul>
+
+
+
+<h3 id="lunar_ranging">Lunar Laser Ranging</h3>
+<ul class="entry">
+<li class="entry"><cite>Bender et al., Science <b>182</b> (1973), pg 229.</cite>
+<p>The corner reflectors placed on the moon by the Apollo astronauts are used to verify GR with a net accuracy of 15 cm in the
+telescope-to-reflector distance.</p>
+
+</li><li class="entry"><cite>Mueller et al., Ap. J. <b>382</b> (1991), pg L101.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Williams et al., Phys. Rev. Lett. <b>36</b> no. 11 (1976), pg 551.</cite>
+<cite>Williams et al., Phys. Rev. <b>D53</b> no. 12 (1996), pg 6730.</cite>
+<p>-</p>
+
+</li><li class="entry"><cite>Dickey et al., Science <b>265</b> (1994), pg 482.</cite>
+<p>-</p>
+</li></ul>
+
+
+
+<h3 id="CMBR">Cosmic Microwave Background Radiation (CMBR)</h3>
+<p>The <dfn>CMBR</dfn> is a diffuse and almost isotropic microwave radiation that apparently suffuses all of space.&nbsp; It is
+generally thought to be a relic of the big bang.&nbsp; While not really a test of SR, CMBR measurements may be of interest to
+some readers&mdash;there is a unique locally inertial frame near Earth in which its dipole moment is zero; this frame moves
+with speed ~370 km/s relative to the Sun.</p>
+<ul class="entry">
+<li class="entry"><cite>Smoot et al., Phys. Rev. Lett. <b>39</b> no. 14 (1977), pg 898.</cite>
+<p>Detected an anisotropy in the CMBR, and determined it is primarily a dipole anisotropy which would be zero in a frame moving
+at 390 ± 60 km/s with respect to Earth.</p>
+
+</li><li class="entry"><cite>Mather et al., Ap. J. <b>420</b> (1994), pg 439.</cite>
+<p>Measurement of the CMBR by the <a href="http://en.wikipedia.org/wiki/COBE">COBE</a> satellite's FIRAS instrument.</p>
+
+</li><li class="entry"><cite>Bennett et al., Physics Today (Nov. 1997), pg 32.</cite>
+<p>Microkelvin variations in the CMBR are described.&nbsp; Note that these are after the dipole is subtracted out (i.e. these
+variations are measured in the "zero-dipole frame" of the CMBR moving about 370 km/s with respect to Earth).</p>
+
+</li><li class="entry"><cite>Songalla et al., Nature <b>371</b> (1994), pg 43.</cite>
+<p>They present a measurement of the CMBR for a distant object with <var>z</var> = 1.776 (z is the redshift, often used as a
+measure of distance from Earth).</p>
+
+</li><li class="entry"><cite>Ge et al., Ap. J. <b>474</b> (1997), pg 67.</cite>
+<p>They present a measurement of the CMBR for a distant object with <var>z</var> = 1.9731.</p>
+</li>
+
+<li class="entry"><cite>"The Wilkinson Microwave Anisotropy
+Probe", <a href="http://map.gsfc.nasa.gov/">http://map.gsfc.nasa.gov/</a></cite>
+<p>WMAP is a more recent set of satellite measurements of the CMBR.&nbsp; It has considerably better resolution than previous
+measurements.</p>
+</li></ul>
+
+
+
+<h3 id="constants">The Constancy of Physical Constants</h3>
+<ul class="entry">
+<li class="entry"><cite>Tubbs and Wolfe, "Evidence for large-Scale Uniformity of Physical Laws", Ap. J. <b>236</b>
+(1980), pg L105.</cite>
+<p>Uniformity to 1 part in 10<sup>4</sup> is shown, subsequent to an epoch corresponding to less than 5% of the current age of
+the universe.</p>
+
+</li><li class="entry"><cite>Potekhin and Varshalovich, "Non-Variability of the Fine-Structure Constant over cosmological
+Time Scales", Astron. Astrophys. Suppl. Ser. <b>104</b> (1994), pg 89.</cite>
+<p>Quasar spectra with redshifts <var>z</var> ~0.2&ndash;3.7 are used to put a limit on the rate of change of alpha of about
+4 &times; 10<sup>&minus;14</sup> per year.</p>
+</li>
+<li><cite>Fischer et al., "New Limits on the Drift of Fundamental Constants from Laboratory
+Measurements", Phys. Rev. Lett., 92, no. 23, 230802 (2004).</cite>
+<p>New limits from measurements in atomic hydrogen.</p>
+</li>
+</ul>
+
+
+
+<h3 id="neutral_molecules">The Neutrality of Molecules</h3>
+<ul class="entry">
+<li class="entry"><cite>Dylla and King, Phys. Rev. <b>A7</b> (1973) pg 1224.</cite>
+<p>The charge on sulfur hexafluoride is less than 2 &times; 10<sup>&minus;19</sup> times the charge on an electron.</p>
+</li></ul>
+
+
+<h1 id="Experiments_not_consistent_with_SR">10. Experiments that Apparently are <em>NOT</em> Consistent with SR/GR</h1>
+
+
+<p>It is clear that most if not all of these experiments have difficulties that are unrelated to SR.&nbsp; In some cases the
+anomalous experiment has been carefully repeated and been shown to be in error (e.g. Miller, Kantor, Munera); in others the
+experimental result is so outrageous that any serious attempt to reproduce it is unlikely (e.g. Esclangon); in still other
+cases there are great uncertainties and/or unknowns involved (e.g. Marinov, Silvertooth, Munera, Cahill, Mirabel), and some are
+based on major conceptual errors (e.g. Marinov, Thimm, Silvertooth).&nbsp; In any case, at present no reproducible and
+generally accepted experiment is inconsistent with SR, within its <a href="#Domain_of_Applicability">domain of
+applicability</a>.&nbsp; In the case of some anomalous experiments there is an aspect of this being a self-fulfilling prophecy
+(being inconsistent with SR may be considered to be an indication that the experiment is not acceptable).&nbsp; Note also that
+few if any standard references or textbooks even mention the possibility that some experiments might be inconsistent with SR,
+and there are also aspects of <a href="#Publication_Bias">publication bias</a> in the literature&mdash;many of these papers
+appear in obscure journals.&nbsp; Many of these papers exhibit various levels of incompetence, which explains their authors'
+difficulty in being published in mainstream peer-reviewed physics journals; the presence of major peer-reviewed journals here
+shows it is not impossible for a competently performed anomalous experiment to get published in them.</p>
+
+<p>There <em>is</em> a common thread among most of these experiments: the experimenters make no attempt to measure and quantify
+the systematic effects that could affect or mimic the signal they claim to observe.&nbsp; And none of them perform a
+comprehensive <a href="#error_analysis">error analysis</a>, which is necessary for any experiment to be believable
+today&mdash;<em>especially</em> ones that purport to overturn the foundations of modern physics.&nbsp; For Esclangon and Miller
+this is understandable, as during their lifetimes the use of error bars and quantitative error analyses was not the norm; the
+modern authors have no such excuse.&nbsp; In several cases (Esclangon, Miller, Marinov, Torr and Kolen, Cahill) it is possible
+to perform an <a href="#error_analysis">error analysis</a> which shows that the experiment is not inconsistent with SR after
+all.</p>
+
+<p>Another common thread among many of these experiments is the claim of "agreement with <a href="#Miller">Miller's result</a>"
+(Kantor, Marinov, Silvertooth, Torr and Kolen, Munera, Cahill).&nbsp; Miller was the first to claim to have measured the
+"absolute motion of the Earth", and his result has achieved a sort of "cult status" among people who doubt the validity of
+SR.&nbsp; The paper referenced below in the discussion of Miller's results shows conclusively that his result is wrong, and
+explains why in detail.&nbsp; So claims of "agreement with Miller" generate doubts about the validity of experiments making
+such claims (how likely is it that a valid result would "agree" with a demonstrably bogus result?).</p>
+
+<p>A key point is: if one is performing an experiment and claiming that it completely overthrows the foundations of modern
+physics, one <em>must</em> make it bulletproof or it will not be believed or accepted.&nbsp; At a minimum this means that a
+comprehensive error analysis <em>must</em> be included, direct measurements of important systematic errors
+<em>must</em> be performed, and whatever "signal" is found <em>must</em> be statistically significant.&nbsp; None
+of these experiments come anywhere close to making a convincing case that they are valid and refute SR.&nbsp; This is based on
+a basic and elementary analysis of the experimenters' technique, not on the mere fact that they disagree with the predictions
+of SR.&nbsp; Most of these experiments are shown to be invalid (or at least not inconsistent with SR) by a simple application
+of the <a href="#error_analysis">elementary error analysis</a> or other arguments relating to error bars, showing how important
+that is to the believability of a result&mdash;the authors merely found patterns:</p>
+
+<p class="in_your_face">Amateurs look for patterns, professionals look at error bars.</p>
+
+
+<p>All that being said, I repeat: as of this writing there are no reproducible and generally accepted experiments that are
+inconsistent with SR, within its <a href="#Domain_of_Applicability">domain of applicability</a>.</p>
+
+<ul class="entry">
+<li><cite>A.A. Michelson and E.W. Morley, "On the Relative Motion of the Earth and the Luminiferous
+Ether", Am. J. Sci. (3rd series) 34 pg 333&ndash;345 (1887).</cite>
+
+<p>Some people claim to see a "signal" in this iconic experiment.&nbsp; Indeed there does appear to be a sinusoidal variation
+in their plots, with period ½ turn, just as any real signal would be.&nbsp; But an <a href="#error_analysis">elementary error
+analysis</a> shows these variations are not statistically significant.&nbsp; Appendix I
+of <a href="http://www.arxiv.org/abs/physics/0608238">arxiv:physics/0608238</a> discusses this experiment, including the error
+analysis, and Section III of that paper shows why their noise appears to be a sinusoid with period ½ turn.&nbsp; There is no
+justification for claims of a real "signal" here.</p></li><li class="entry"><cite>Esclangon, C.R.A.S. <b>185</b> no. 26 (1927),
+pg 1593.</cite>
+
+<p>He observed a systematic variation in the position of an optical image, correlated with sidereal angle (also called,
+incorrectly, "sidereal time", and nowadays called Earth rotation angle).&nbsp; This result is inconsistent not only with SR,
+but is also inconsistent with the hypothesis that space is Euclidean and light travels in straight lines.</p>
+
+
+<p>His "signal" is actually composed of points that are an average of several thousand measurements each, and the magnitude of
+the signal is about 25 times smaller than the resolution of the individual measurements;
+an <a href="#error_analysis">elementary error analysis</a> shows that his result is not significantly different from no
+variation (the prediction of both SR and Euclidean geometry).&nbsp; So there is no reason to believe this result is
+inconsistent with SR.&nbsp; Also see <a href="#Experimenters_Bias">Experimenter's Bias</a> below&mdash;this is a clear example
+of over-averaging.
+</p>
+
+</li><li class="entry" id="Miller"><cite>Miller, Rev. Mod. Phys. <b>5</b> (1933), pg 203.</cite>
+<p>This is a laborious repetition of the Michelson&ndash;Morley experiment (MMX), with observations taken over a decade.&nbsp;
+He reports a net aether drift of about 10 km/s, and describes the variation in speed and direction in terms of the motions of
+the Sun and Earth combined with a net aether drift.</p>
+
+<p>This experiment was re-analyzed in: <cite>R.S. Shankland, S.W. McCuskey, F.C. Leone and G. Kuerti, "New Analysis of the
+Interferometric Observations of Dayton C. Miller", Rev. Mod. Phys. <b>27</b> pg 167&ndash;178 (1955).</cite> They re-examined
+Miller's original data logs and explained his non-null result as partly due to statistical fluctuations and partly due to local
+temperature conditions.&nbsp; Their re-analysis is consistent with a null result at all epochs during a year.&nbsp; They gave
+no justification for any correlation with sidereal angle such as Miller reported.</p>
+
+<p>Remarkably, the raw data of this experiment have survived (copies can be ordered from the C.W.R.U. archives).&nbsp; They
+were also re-analyzed in: <cite>T.J. Roberts, "An Explanation of Dayton Miller's Anomalous 'Ether Drift'
+Result", <a href="http://www.arxiv.org/abs/physics/0608238">arXiv:physics/0608238</a></cite>.&nbsp; This paper explains in
+detail how and why Miller was fooled (using digital signal processing techniques), and performs an error analysis showing his
+results are not statistically significant.&nbsp; It also presents a new analysis that models his systematic drift and obtains a
+zero result with an upper bound on "aether drift" of 6 km/s (90% confidence).&nbsp; In short, this is every experimenter's
+nightmare: Miller was unknowingly looking at statistically insignificant patterns in his systematic drift that precisely
+mimicked the appearance of a real signal.&nbsp; While Miller himself could not have known this, there is no reason to believe
+or accept his anomalous result today.</p>
+
+<p>Dozens of other papers discuss and/or attempt to "re-analyze" Miller's data.&nbsp; They all claim to find some real signal
+in his data.&nbsp; They are all worthless as they do not perform the elementary error analysis of his raw data (see Section II
+of <a href="http://www.arxiv.org/abs/physics/0608238">arXiv:physics/0608238</a>).&nbsp; Miller's anomalous result comes from
+averaging data&mdash;the elementary error analysis is indisputable and shows that his result is not statistically
+significant.&nbsp; Some modern authors even perform a complicated statistical analysis on plots of his run results versus
+sidereal angle, proclaiming there is a "significant signal"&mdash;they forgot to look at the raw data and compute the
+statistical significance of each run's result: those are not significant, which destroys their house of cards.</p>
+
+<p>There is also an aspect of <a href="#Experimenters_Bias">experimenter's bias</a> in Miller's original result (and in the
+modern "re-interpretations" that find a "signal").&nbsp; He clearly over-averaged his data, and the "signal" he (and others)
+found is an order of magnitude smaller than the resolution with which his raw data points were recorded.&nbsp; It is a fact of
+arithmetic that when averaging data one will obtain an answer, but an <a href="#error_analysis">error analysis</a> is required
+to determine whether or not it is statistically significant.&nbsp; People unfamiliar with modern experimental physics can
+impose their personal desires onto Miller's plots and find a "signal" by ignoring the huge scatter of the individual runs and
+just looking at the averages.&nbsp; The quantitative error analysis shows this approach is woefully inadequate and the "signal"
+found this way is not significant.</p>
+
+<p>So there is no reason to believe or accept Miller's anomalous result today.</p> 
+
+</li><li class="entry"><cite>Kantor, JOSA <b>52</b> (1962),978.</cite>
+<p>Criticized in: <cite>Burcev, Phys. Lett. <b>5</b> no. 1 (1963), pg 44.</cite>
+<br>Repeated by: <cite>Babcock and Bergman, J.O.S.A. <b>54</b> (1964), pg 147.</cite>
+<br>Repeated by: <cite>Rotz, Phys. Lett. <b>7</b> no. 4 (1963), pg 252.</cite>
+<br>Repeated by: <cite>Waddoups et al., JOSA <b>55</b>, pg 142 (1965).</cite>
+<br>The consensus is now that Kantor's non-null result was due to his rotating mirrors dragging the air; repetitions in vacuum
+yield a null result consistent with SR.</p>
+</li>
+
+<li><cite>Marinov, "Measurement of the Laboratory's Absolute Velocity", Gen. Rel. and Grav. 12
+no. 1 (1980), pg 57.</cite>
+<cite>Marinov, Czech J. Phys. B 24, (1974), pg 965.</cite>
+<cite>Marinov, J. Phys. A: Math. Gen. 16 (1983), pg1885&ndash;1888.</cite>
+<cite>Marinov, Progr. in Physics, 1 (2007), pg 31; (posthum. reprint from "Deutscher Physik" 1992).</cite>
+<p>This is a series of experiments using mechanically rotating mirrors and apertures that claim to measure a local anisotropy
+in the one-way speed of light.</p>
+
+<p>Marinov thinks his rotating mirrors and apertures provide an "absolute synchronization" which can be used to measure the
+one-way speed of light; this is not so, and is a major conceptual error in his design: they merely provide synchronization in
+the rest frame of his lab.&nbsp; He is also conspicuously bad about ignoring errors and resolutions, to the point of being
+ridiculous.&nbsp; Simple estimates based on his apertures and rotation rates show that his apparatus is incapable of measuring
+what he claims, by a factor of 1,000 or more.&nbsp; His apparatus inherently averages over several microseconds (or more), and
+he completely ignores this basic fact and claims to be measuring the speed of light over a distance of 1.4 metres (!).&nbsp;
+And he does not bother to monitor various environmental factors (temperature, humidity, barometric pressure) that could easily
+induce the variations he observes.&nbsp; There is no reason to believe his experiments have any value at all.</p> </li>
+
+<li class="entry"><cite>Silvertooth and Jacobs, Applied Optics <b>22</b> no. 9 (1983), pg 1274.</cite>
+<cite>Silvertooth, Specl. Sci. and Tech. <b>10</b> no. 1 (1986), pg 3.</cite>
+<cite>Silvertooth and Whitney, Physics Essays <b>5</b> no. 1 (1992), pg 82.</cite>
+<p>This is a series of experiments using variations on a novel interferometer in which Silvertooth claims to have observed the
+aether.&nbsp; The first paper is simply a description of the special phototube and its usage in measuring Wiener fringes.&nbsp;
+The second and third present different variations of Silvertooth's basic double interferometer; both claim to observe the
+aether.</p>
+
+<p>The experiments are marred by two clear instrumentation effects: there is feedback into the laser, and the multi-mode lasers
+employed could mimic the effect seen due to the interrelationships among the different modes.&nbsp; And the apparatus is
+excessively finicky&mdash;an attempt to repeat the measurement using his apparatus failed to see any effect at all
+(unpublished, see <a href="#Publication_Bias">Publication Bias</a>).&nbsp; In addition, the analysis presented is downright
+wrong&mdash;the anisotropy in the speed of light postulated in the 2nd and 3rd papers is completely unable to account for the
+observations (two different erroneous analyses are presented in the last two papers, making the same elementary mistake both
+times: not considering the <strong>entire</strong> light path).&nbsp; Indeed, their postulated transforms belong to the class
+of theories that are experimentally indistinguishable from SR (see <a href="#Test_Theories">Test Theories</a> above).
+
+</p></li><li class="entry"><cite>Kolen and Torr, Found. Phys. <b>12</b> no. 4 (1982), pg 401 (proposal).</cite>
+<cite>Torr and Kolen, NBS Special Publication 617 (1984), pg 675&ndash;679(results).</cite>
+<p>This is an experiment using two atomic clocks separated by 500 metres connected by an underground coaxial cable, which looks
+for sidereal variations in the phase between them.&nbsp; Variations in that phase are interpreted as variations in the one-way
+speed of propagation in the cable.&nbsp; This experiment is quite similar to those of <a href="#Krisher">Krisher et al.</a>
+and <a href="#Cialdea">Cialdea</a> referenced above (both of whom reported null results).</p>
+
+<p>It is not clear why some people interpret this result as inconsistent with SR&mdash;certainly the authors themselves do not
+do so.&nbsp; Their monitoring of systematic effects such as temperature and barometric pressure (both of which affect the
+propagation speed of their cable) is woefully inadequate, and such uncontrolled and unmonitored environmental effects could
+easily explain the tiny variations they observe.&nbsp; Those variations are about a factor of 100 times smaller than the
+relative drift of the clocks for zero separation (which they tried to subtract in their analysis by assuming it is linear, an
+assumption that is unlikely to hold to better than 1% as they require).&nbsp; Their data analysis method is also inadequate, as
+it involves averaging over 23 days (averaging data like this is almost never justified).&nbsp; Moreover, they omitted an error
+analysis related to that averaging, implying they do not understand the terrible implications of such averaging
+(see <a href="http://arxiv.org/abs/physics/0608238">arXiv:physics/0608238</a> for an example of how disastrous it was for
+Miller to perform such averaging).&nbsp; They also have some days during which no variation was detected&mdash;that is
+consistent with an unmonitored environmental effect, and is inconsistent with any sort of cosmic effect.&nbsp; Because of the
+great variability in their diurnal variations, and the inadequacy of their monitoring and analysis, there is no reason to
+believe this result is inconsistent with SR; the experimenters themselves considered their result "preliminary".</p>
+
+</li><li class="entry"><cite>Pearson et al., "Superluminal Expansion of Quasar 3C273". Nature <b>290</b> (1981), pg
+365.</cite>
+<cite>Mirabel and Rodriguez, "A Superluminal Source in the Galaxy", Nature <b>371</b> no. 1 (1994), pg 46.</cite>
+<p>The simple observation of a visibly superluminal expansion or motion of a distant object does not necessarily imply that
+anything actually exceeds <var>c</var> locally.&nbsp; See for instance: <cite>Gabuzda, Am. J. Phys. <b>55</b> no. 3 (1987), pg
+214.</cite>  If a high-gamma (subluminal) object is moving at a small angle to our line of sight, it can appear to be going
+faster than light, but is not.&nbsp; This is different from any uncertainties in distance scales.</p>
+
+</li><li><cite>Thimm, "Absence of the Relativistic Transverse Doppler Shift at Microwave
+Frequencies", IEEE Trans. Instrum. and Meas., 52 no 5 (2003), pg 1660.</cite>
+<p>This experiment uses antennas mounted on a rotating disk inside a pair of metal enclosures to attempt to measure the
+transverse Doppler effect.&nbsp; Unfortunately the author fails to realize that he has merely constructed two closed RF
+cavities with a rotating coupler between them.&nbsp; That is, the "antennas" he mounted on the rotating disk are not free, and
+reflections from the surrounding walls completely dominate the RF pattern inside his apparatus, setting up wave patterns in
+what amounts to a coupled pair of untuned RF cavities.&nbsp; As the input and output of the enclosure have no relative motion,
+no frequency shift is predicted, in agreement with his measurement.&nbsp; This experiment does not actually test transverse
+Doppler at all, and it is fully consistent with SR.</p>
+
+</li><li><cite>H.A. Múnera, D. Hernández-Deckers, G. Arenas, and J.E. Alfonso, "Observation during 2004
+of periodic fringe-shifts in an adialeiptometric stationary Michelson&ndash;Morley experiment", Electromagnetic Phenomena 6,
+No. 1 (16) pg 70&ndash;92 (2006).</cite>
+
+<p>This experiment is a repeat of the Kennedy&ndash;Thorndike experiment, but with equal-length arms at 90°.&nbsp; The
+interferometer is fixed to Earth at a latitude quite close to the equator.</p>
+
+<p>When Kennedy and Thorndike performed a similar experiment more than 70 years ago, they realized they would be unable to
+distinguish between temperature effects and orientation effects, so they took great pains to keep the apparatus temperature
+constant to 0.001°C.&nbsp; In contrast, Múnera et al. did not make any attempt to control temperature or humidity effects (both
+are quite large in their room).&nbsp; They measured the temperature with a resolution of just 0.2°C, and attempted to correct
+for the large temperature and humidity changes&mdash;a simple estimate shows that an unmeasurable drift of 0.2°C between the
+two arms can cause a fringe shift comparable to their "signal".&nbsp; Humidity differences can generate similarly large fringe
+shifts.&nbsp; Because they insulated each arm's light path from the room and from each other, it is clear that such variations
+did occur between the two arms (variations in the room itself were much larger).&nbsp; Because of inadequate environmental
+monitoring and control, there is no reason to believe this measurement is inconsistent with SR.</p>
+
+</li><li><cite>R.T. Cahill, "A New Light-Speed Anisotropy Experiment: Absolute Motion and Gravitational
+Waves Detected", Progr. in Physics, 4 (2006), pg 73.</cite>
+
+<p>This experiment measures the round-trip delay of RF signals that go out via an optical fiber and come back via coaxial
+cable, minus the delay from signals that go out via coaxial cable and come back via optical fiber.&nbsp; The apparatus has
+5-metre cables, and is fixed to Earth with the cables aligned north&ndash;south at a latitude of 38° S.&nbsp; He claims that
+optical fiber is insensitive to "absolute motion" but coax cable can observe it, and this combination maximizes the
+"signal".</p>
+
+<p>Cahill made a reasonable effort to minimize the effects of temperature variations on his apparatus, but
+then <em>assumed</em> that no systematic error remained, and did not monitor the environmental factors (temperature, barometric
+pressure) that can affect his apparatus.&nbsp; By temporarily arranging the cables to form a circle, he used a test setup that
+eliminates any real signal and permits him to directly measure his systematic errors, which is an important thing to do.&nbsp;
+But then he inexplicably ignores that measurement (the last 4 hours of his Fig. 14).&nbsp; The apparatus drifts up and down by
+8 ps during this signal-canceling configuration, which is roughly half the magnitude of his "signal".&nbsp; The presence of
+such a large, unmonitored, and unknown drift completely invalidates his conclusions.&nbsp; For instance, there are several
+24-hour periods in his data plots during which the variations are less than the 8 ps during that short measurement of the
+systematic drift&mdash;that is consistent with the entire "signal" being this unknown systematic drift.</p>
+
+<p>Cahill has a novel way of dealing with the clear and obvious variations in his data at a given orientation (i.e. data points
+24 hours apart): he calls this "gravitational waves" and claims they are an additional part of his "signal" (these
+"gravitational waves" are from his theory, not GR).&nbsp; The presence of comparable variations when the cables were configured
+in a circle invalidates this claim, as that cancels any real signal.&nbsp; For this apparatus any real signal corresponding to
+"absolute motion" must have a period of 24 hours, and it is clear from his plots that there is no significant signal present
+(in his Fig. 15, the variance of the differences between points separated by 24 hours is comparable to the variance of the
+entire plot and of the signal-canceling configuration; this is just an application of the
+<a href="#error_analysis">elementary error analysis</a>).&nbsp; Calling the variations at a given orientation "gravitational
+waves" does not change the fact that these variations are comparable to the orientation dependence, which is therefore not
+statistically significant.&nbsp; In order to separate an orientation-dependent signal from the "gravitational waves" he claims,
+it is necessary to perform an experiment that can actually separate them, and this one cannot possibly do so.&nbsp; That
+requires an apparatus capable of separating systematic environmental effects from the data, and also capable of varying its
+orientation on a time scale smaller than that of the "gravitational waves" (remember these are not the gravitational waves of
+GR).</p>
+
+<p>Cahill emphasizes that his experiment agrees with <a href="#Miller">Miller's results</a> and with an unpublished experiment
+by de Witte.&nbsp; But his comparisons are without error bars and are therefore worthless.&nbsp; Error bars for Miller's data
+can be computed, and error bars for de Witte's and Cahill's data can be estimated, and
+<em>each</em> of the three results is not significantly different from null (for "absolute motion"; one must ignore his
+"gravitational waves" for this comparison).&nbsp; So they actually are consistent with each other, in a way completely
+unanticipated by Cahill: all three are consistent with a null "absolute motion" result! Do not be deluded by his Fig. 18, as
+Cahill does not display any error bars, and <em>NONE</em> of those variations are statistically significant; like Miller he is
+unknowingly looking at insignificant patterns in systematic drifts.</p>
+
+<p>In short, there is no reason to believe this result because: a) the systematic effects cannot be separated from the "signal"
+while taking data, b) the brief measurement of systematic drift (in a signal-canceling configuration) is comparable to the
+"signal", c) the data for "absolute motion" are not significantly different from zero, and d) the "agreement" with other
+experiments is not at all what he thinks it is.</p>
+
+</li><li><cite>C.E. Navia, C.R.A. Augusto, D.F. Franceschini, M.B. Robba and K.H. Tsui, "Search for Anisotropic Light
+Propagation as a Function of Laser Beam Alignment Relative to the Earth's Velocity Vector", Progr. in Physics, 1 (2007), pg
+53.</cite> <cite>Also, <a href="http://arxiv.org/abs/astro-ph/0604145v1">arxiv:astro-ph/0604145v1</a>.</cite>
+
+<p>This experiment looks for a variation in the transverse position of the laser light diffracted by a grating as the
+orientation of the apparatus is changed.</p>
+
+<p>The authors apparently think their laser came out of a textbook and provides a perfectly coherent monochromatic light
+source.&nbsp; Real lasers are not so perfect, and the difference is important.&nbsp; As they did not describe their laser other
+than saying it is He&ndash;Ne, I'll use generic values for a typical classroom or laboratory He&ndash;Ne laser: such a laser
+has a line width of about 1.5 parts per million, including 3&ndash;5 longitudinal modes among which the power is shared, with
+the fraction in each mode varying widely during operation.&nbsp; Such a laser also has a beam divergence of about 2
+milliradians, and a pointing accuracy about 0.1 milliradians.&nbsp; These effects generate systematic uncertainties in the
+diffraction peak position comparable to their "signal"; they were neither controlled nor monitored by the experimenters.</p>
+
+<p>The authors provided no <a href="#error_analysis">error analysis</a>, despite the fact that averaging is central to their
+analysis.&nbsp; From their plot of raw data (their Fig. 3), it appears to me that the data are quantized quite coarsely, and
+are then overaveraged to obtain their "result".&nbsp; The averaged data have unexplained variations (noise) unrelated to
+orientation which is about half the variations of their "signal".&nbsp; One can obtain an estimate of the variance of their
+data from their Fig. 7, and their data plots have variations only about double that variance.&nbsp; So their "signal" is of
+marginal significance at best.</p>
+
+<p>Without a careful measurement of their obvious systematic errors, and a comprehensive error analysis, there is no reason to
+believe the variations they observe are significant.</p> </li> </ul>
+
+
+
+<h3 id="error_analysis">Elementary Error Analysis of an Average</h3>
+
+<p>When multiple measurements of a single quantity are made, their mean provides the best estimate for the actual value of the
+quantity being measured.&nbsp; But this value is not perfect, and there is still uncertainty in the estimate.&nbsp; A histogram
+of the original measurements can provide an error estimate for the mean: the best estimate for the error bar on the mean comes
+from the <abbr title="root mean square">r.m.s.</abbr> variance of the histogram (i.e. its <abbr title="sigma = population
+standard deviation">&#963;</abbr>).&nbsp; If the original values are all statistically independent, and there are <var>N</var>
+of them, then the best estimate of the error bar on the mean is &#963;/&#8730;<var class="radic">N</var> (this comes from
+the <a href="http://en.wikipedia.org/wiki/Central_limit_theorem">central limit theorem</a> of statistics).&nbsp; That is a
+lower bound for the error bar on the mean.&nbsp; But if the original measurements are not truly independent, such as when some
+systematic effect is present, then the error bar on the mean will be larger.&nbsp; For a purely systematic error, the error bar
+on the mean is &#963; (independent of <var>N</var>), because one does not know which of the original measurements is
+correct.&nbsp; This is not necessarily an upper bound on the error bar because additional errors could be present, such as
+calibration errors of the instrumentation. </p>
+
+<p>It is a fact of arithmetic that when averaging data one will obtain an answer, but the above error analysis is required to
+know whether or not it is significant.&nbsp; As a rule of thumb, a signal that is 5&#963; (or more) from zero is difficult or
+impossible to ignore; a "signal" that is less than 3&#963; from zero is unconvincing at best.&nbsp; The challenge is usually in
+determining what the &#963; actually is; but for an average, &#963;/&#8730;<var class="radic">N</var> gives a lower bound that
+is indisputable.</p>
+
+<p>Usually the averaging of data is unwarranted, and in most cases one can apply an analysis to the entire data
+sequence&mdash;one should normally fit a parameterized theoretical expression to such a data sequence.&nbsp; So if an
+experiment measures a series of fringe positions as the apparatus is rotated, the theoretical fringe position should be
+parameterized as a function of orientation, and the parameters fit to the entire measurement sequence.&nbsp; A parametrisation
+of backgrounds and/or systematic errors should be included.&nbsp; Such a fit inherently provides error bars on the resulting
+parameter values.&nbsp; This is vastly better than averaging the data taken at each orientation and looking for patterns in the
+averages, because such averaging introduces artifacts, because averaging cannot distinguish between orientation dependence and
+systematic drifts, and because the fit inherently accounts for correlations in the parameters that averaging ignores.&nbsp;
+See <a href="http://www.arxiv.org/abs/physics/0608238">arXiv:physics/0608238</a> for examples of both the artifacts introduced
+by averaging (Section III), and an analysis performed without such averaging (Section IV).</p>
+
+<p>Error bars have become such an important part of modern experimental physics that it is not uncommon to make multiple
+measurements of a quantity, or to split one sequence of measurements into multiple smaller sequences, specifically so the error
+bar on the result can be estimated.</p>
+
+<p>Note that the word "error" here is standard terminology, and is used in the sense of "uncertainty" rather than
+"mistake".&nbsp; For well-designed experiments, care is taken to minimize the backgrounds and systematic errors, and major
+systematic errors are measured; then a comprehensive error analysis is performed and used to quantify the resolutions and
+significance of the results.&nbsp; For most experiments in this section the authors simply did not do this.&nbsp; Prior to 1950
+or so that was common and accepted practice; today it is not acceptable at all.</p>
+
+
+
+<h3 id="Experimenters_Bias">Experimenter's Bias</h3>
+
+<p>Experimenter's bias is a phenomenon caused by the inability of human participants in an experiment to remain completely
+objective, in which the human experimenter directly influences the experiment's outcome based upon his or her personal desires
+or expectations.&nbsp; It is most commonly a concern in medical and sociological experiments, in which "single-blind" and
+"double-blind" protocols are usually required.&nbsp; But some physical experiments in which a human observer is required to
+round measurements off can also be subject to it.&nbsp; In the experiments here, the conditions for this are the combination of
+a signal smaller than the actual measurement resolution, and an over-averaging of the data used to extract the "signal" from
+the measurements.</p>
+
+<p>In principle, if a measurement has a resolution of <var>R</var>, then if the
+experimenteraverages <var>N</var> <strong>independent</strong> measurements the average will have a resolution
+of <var>R</var>/&#8730;<var class="radic">N</var> (this is just an application of the <a href="#error_analysis">error
+analysis</a> above).&nbsp; This is an important experimental technique used to reduce the impact of randomness on an
+experiment's outcome.&nbsp; But note that this <strong>requires</strong> that the measurements be <strong>statistically
+independent</strong>, and there are several reasons why that may not be true&mdash;if so then the average may not actually be a
+better measurement but may merely reflect the correlations among the individual measurements and their non-independent
+nature.</p>
+
+<p>The most common cause of non-independence is systematic errors (errors affecting all measurements equally, causing the
+different measurements to be highly correlated, so the average is no better than any single measurement).&nbsp; But another
+cause can be due to the inability of a human observer to round off measurements in a truly random manner.&nbsp; If an
+experiment is searching for a sidereal variation of some measurement, and if the measurement is rounded off by a human who
+knows the sidereal angle of the measurement, and if hundreds of measurements are averaged to extract a "signal" that is smaller
+than the apparatus's actual resolution, then it should be clear that this "signal" can come from the non-random round-off, and
+not from the apparatus itself.&nbsp; In such cases a single-blind experimental protocol is required; if the human observer does
+not know the sidereal angle of the measurements, then even though the round-off is not random, it cannot introduce a spurious
+sidereal variation.</p>
+
+<p>Note that modern electronic and/or computerized data acquisition techniques have greatly reduced the likelihood of such
+bias, but it can still be introduced by a poorly designed analysis technique.&nbsp; Experimenter's bias was not well recognized
+until the 1950s and 1960s, and then it was primarily in medical experiments and studies.&nbsp; Its effects on experiments in
+the physical sciences have not always been fully recognized.&nbsp; Several experiments referenced above were clearly affected
+by it.</p>
+
+
+
+<h3 id="Publication_Bias">Publication Bias</h3>
+<p>There are two very different aspects of publication bias:</p>
+<ol>
+<li>Unpopular or unexpected results may not be published because either the original experimenters or some journal referees
+have misgivings or reservations about the results, based on the results themselves and not any independent evaluation of
+experimental procedures or technique.</li>
+
+<li><strong>Expected</strong> experimental results may not be published because either the original experimenters or some
+journal referees do not consider them interesting enough to merit publication.</li> </ol>
+
+<p>In both cases the experimental record in the literature does not fully and accurately reflect the actual experiments that
+have been performed.&nbsp; Both of these effects clearly affect the literature on experimental tests of SR.&nbsp; This second
+aspect is one reason why this list of experiments is incomplete; there have probably been many hundreds of unpublished
+experiments that agree with SR.</p>
+
+<p>Note that this does <strong>not</strong> include papers that are rejected for other reasons, such as: inappropriate subject
+or style, major internal inconsistencies, or downright incompetence on the part of authors or experimenters.&nbsp; Such
+rejections are not bias, they are the proper functioning of a peer-reviewed journal.</p>
+
+<h1 id="Acknowledgements">11. Acknowledgments</h1>
+
+<p>My interest in the experimental basis of SR has been piqued by many discussions in the newsgroup <em>sci.physics.relativity</em>
+about how well SR has or has not been confirmed or refuted.&nbsp; One effect of this is that I have assembled a rather large
+collection of papers on experimental tests of SR; this FAQ page is in some sense an index to this collection.&nbsp; Most of the
+descriptions above are my summaries direct from primary sources.&nbsp; In some cases the original paper was unavailable to me
+and I have relied on secondary sources (primarily the previous version of this FAQ page, and the books by Zhang, by Born, and
+by von Laue). &mdash; Tom Roberts</p>
+
+<p><br></p>
+
+</body>
+</html>

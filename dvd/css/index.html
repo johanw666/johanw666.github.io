@@ -1,0 +1,358 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta name="Author" content="Frank A. Stevenson">
+   <title>Analysis of DVD ContentsScrambling System</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+ 
+<CENTER>
+<P><FONT size=+3>Cryptanalysis of Contents Scrambling System,</FONT>
+<BR><I>Frank A. Stevenson ( frank@funcom.com )</I>
+<P><I><B>Abstract: </B>CSS is a scrambling system used in the distribution
+for movies on DVD ( Digital Versatile Disc ) a high capacity CD like storage
+system. Its main purpose is to prevent the unauthorized duplication of
+disc contents. This is achieved through encrypting the files, and storing
+keys in hardware. Here we will describe the system, and show that even
+if the keys can be securely stored in hardware, the data will not be protected
+from unauthorized copying. Severe weaknesses in the ciphers effectively
+voids the need for the hardware keys when decrypting the content.</I>
+<BR> 
+<BR> 
+<P><B>8th November 1999</B>
+<BR><B>(updated 13th Nov.)</B></CENTER>
+
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>
+<HR WIDTH="80%">
+<BR><FONT size=+2>0 General disclaimer.</FONT>
+<BLOCKQUOTE><FONT size=+1>This information is provided as is, with no warranties
+on its accuracy or usability. It is based on a piece of source code claiming
+to be the css algorithms, and which have since been confirmed to interoperate
+with the CSS system. The author has not read any official CSS documentation,
+and any errors in the terminology is a result of this. This information
+has not to the knowledge of the author been made available through breaches
+of the DVD consortium Non Disclosure Agreement.</FONT></BLOCKQUOTE>
+
+<P><BR><FONT size=+2>1 System overview.</FONT>
+<BLOCKQUOTE><FONT size=+1>Every DVD player is equipped with a small set
+of player keys. When presented with a new disc, the player will attempt
+to decrypt the contents with the set of keys it possesses. Every disk has
+a disk key data block that is organized as follows:</FONT>
+<UL>
+<LI>
+<FONT size=+1>5 bytes hash of decrypted disk key ( <I>hash</I> )</FONT></LI>
+
+<LI>
+<FONT size=+1>disk key encrypted with player key 1 (<I>dk<SUB>1</SUB> </I>)</FONT></LI>
+
+<LI>
+<FONT size=+1>disk key encrypted with player key 2 (<I>dk<SUB>2</SUB> </I>)</FONT></LI>
+
+<LI>
+<FONT size=+1>...</FONT></LI>
+
+<LI>
+<FONT size=+1>disk key encrypted with player key 409 (<I>dk<SUB>409</SUB></I>)</FONT></LI>
+</UL>
+<FONT size=+1>Suppose the player has a valid key for slot 213, it will
+calculate</FONT>
+<BR><FONT size=+1>(1)<I>        K<SUB>d</SUB>
+= D</I></FONT><I><SUB><FONT size=-1>A</FONT></SUB><FONT size=+1>( dk<SUB>213</SUB>
+, K<SUB>p213</SUB> )</FONT></I>
+<P><FONT size=+1>To verify that <I>K<SUB>d</SUB> </I>is correct, the following
+check is done, if the check fails, it will try the next player key.</FONT>
+<BR><FONT size=+1>(2)<I>        K<SUB>d</SUB>
+= D</I></FONT><I><SUB><FONT size=-1>A</FONT></SUB><FONT size=+1>( hash
+, K<SUB>d</SUB> )</FONT></I>
+<P><FONT size=+1>An obvious weakness stems from this check, by trying all
+2</FONT><SUP>40</SUP><FONT size=+1> possible <I>K<SUB>d</SUB></I>, disk
+key<I><SUB> </SUB></I>can be deduced without knowing any valid player key.
+As will be shown later, this attack can be carried out with a complexity
+of  2</FONT><SUP>25</SUP><FONT size=+1>, making such an attack feasible
+in runtime applications.  Another obvious attack is that by having
+1 working player key, other player keys can be derived  through a
+similar search. This can be done offline, also keys obtained from the former
+attack can be used as a starting point.</FONT>
+<P><FONT size=+1>To decrypt the contents an additional key <I>tk</I> -
+the title key is decrypted with the now decrypted and verified disk key.</FONT>
+<P><FONT size=+1>(3)        <I>K<SUB>t</SUB>
+= D</I></FONT><I><SUB><FONT size=-1>B</FONT></SUB><FONT size=+1>( tk, K<SUB>d</SUB>)</FONT></I>
+<P><FONT size=+1>Each sector of the data files is the optionally encrypted
+by a key that is derived from <I>K<SUB>t </SUB></I>by exclusive or of specified
+bytes from the unencrypted first 128 bytes of the 2048 bytes sector. The
+decryption is done with the CSS stream cipher primitive described in section
+II.</FONT></BLOCKQUOTE>
+<FONT size=+2>2 CSS streamcipher primitive:</FONT>
+<BLOCKQUOTE><FONT size=+1>The CSS streamcipher is a very simplistic one,
+based on 2 LFSRs being added together to produce output bytes. There is
+no truncation, both LFSR are clocked 8 times for every byte output, and
+there are 4 ways of combining the output of the LFSRs to an output byte.
+These four modes are just settings on 2 inverter switches, and the modes
+operation are used for the following purposes.</FONT>
+<OL>
+<LI>
+<FONT size=+1>Authentication to DVD drive ( not discussed )</FONT></LI>
+
+<LI>
+<FONT size=+1>Decryption of Disk key (<I>D</I></FONT><I><SUB><FONT size=-1>A</FONT></SUB></I><FONT size=+1>)</FONT></LI>
+
+<LI>
+<FONT size=+1>Decryption of Title key (<I>D</I></FONT><I><SUB><FONT size=-1>B</FONT></SUB></I><FONT size=+1>)</FONT></LI>
+
+<LI>
+<FONT size=+1>Decryption of data blocks.</FONT></LI>
+</OL>
+<FONT size=+1>LFSR1: 17 bits ? taps, and is initialized by the 2 first
+bytes of key, and setting the most significant bit to 1 to prevent null
+cycling.</FONT>
+<BR><FONT size=+1>LFSR2: 25 bits 4 taps, is initialized with byte 3,4,5
+of the key shifting all but the 3 least significant bits up 1 position,
+and setting bit 4 to prevent null cycling.</FONT>
+<P><FONT size=+1>As new bits are clocked into the LFSRs, the same bits
+are clocked in with reversed order to the two LFSRs output bytes. ( With
+optional inversion of bits. )</FONT>
+<P><FONT size=+1>The output of LFSR1 is <I>O<SUB>1</SUB>(1), O<SUB>1</SUB>(2),
+O<SUB>1</SUB>(3) ...</I></FONT>
+<BR><FONT size=+1>Likewise LFSR2 produces <I>O<SUB>2</SUB>(1), O<SUB>2</SUB>(2),
+O<SUB>2</SUB>(3) ...</I></FONT>
+<P><FONT size=+1>These two streams are combined through 8 bits addition
+with carry carried over to the next output. The carry bit is zero at start
+of stream.</FONT>
+<BR><FONT size=+1>(4)        <I>O(i)
+= O<SUB>1</SUB>(i) + O<SUB>2</SUB>(i) + c     </I>where<I>
+c </I>is carry bit from<I> O(i-1)</I></FONT>
+<P><FONT size=+1>This streamcipher is very weak, a trivial 2</FONT><SUP>16</SUP><FONT size=+1>
+attack is possible with output bytes known for <I>i = {1,2,3,4,5,6}</I>.
+Guess the initial state of LFSR1, and clock out 4 bytes. <I>O<SUB>2</SUB>(1),
+O<SUB>2</SUB>(2), O<SUB>2</SUB>(3), O<SUB>2</SUB>(4) </I>can then be uniquely
+determined, and from them the state at <I>i=4</I> is fully known. The guess
+on LFSR1 can then be verified by clocking out 2 or more bytes of the cipher
+and comparing the result.</FONT>
+<P><FONT size=+1>Another important attack is the case when only <I>O(i)</I>
+for <I>i = {1,2,3,4,5} </I>is known. Guess the initial state of LFSR1,
+and clock out 3 bytes. Now <I>O<SUB>2</SUB>(1), O<SUB>2</SUB>(2) </I>and
+<I>O<SUB>2</SUB>(3)
+</I>can be found as in the above attack. This will reveal all but the most
+significant bit of LFSR2s state at <I>i=3</I>. If both possible settings
+for MSB is tried, and LFSR2 is clocked backwards 24 steps, a state where
+bit 4 is set at <I>i=1</I> can always be found. ( This is stated without
+proof ). Select the setting of the most significant bit for LFSR2 such
+that LFSR2 is in a legal state at <I>i=1</I>, and clock out two more bytes
+to verify the guess of LFSR1. For some values of <I>O( i = {1,2,3,4,5}
+)</I> multiple start states can be found, and for others none. Selecting
+the correct start state is not a problem, as this attack is used in situations
+where only the first five output bytes are of significance ( encryption
+of keys ).</FONT>
+<BR> </BLOCKQUOTE>
+<FONT size=+2>3 CSS mangling step:</FONT>
+<BLOCKQUOTE><FONT size=+1>When the CSS streamcipher is used to encrypt
+keys such as in <I>D</I></FONT><I><SUB>A</SUB><FONT size=+1>(data,key)</FONT></I><FONT size=+1>
+and <I>D</I></FONT><I><SUB>B</SUB><FONT size=+1>(data,key)</FONT></I><FONT size=+1>,
+an additional mangling step is performed on the data. This cipher is best
+illustrated with the following block diagram:</FONT>
+<UL>
+<LI>
+<FONT size=+1>A(1,2,3,4,5) are the input bytes (data)</FONT></LI>
+
+<LI>
+<FONT size=+1>C(1,2,3,4,5) are the output bytes (data)</FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>i</SUB> = O(i)</FONT></I><FONT size=+1> where <I>O(i={1,2,3,4,5})</I>
+is streamcipher output from key</FONT></LI>
+
+<LI>
+<FONT size=+1>B(1,2,3,4,5) are temporary stages</FONT></LI>
+</UL>
+<FONT size=+1>The cipher is evaluated top down, with exceptions indicated
+by an arrow.</FONT></BLOCKQUOTE>
+
+<BR> 
+<CENTER>
+<P><IMG SRC="Mangle.gif" height=400 width=600></CENTER>
+
+<BLOCKQUOTE> 
+<BR><FONT size=+1>Examples of evaluating cipher:</FONT>
+<UL>
+<LI>
+<FONT size=+1><I>B(j) = </I>xor<I>( <B>F</B>( A(j) ) , A(j-1) , k<SUB>j</SUB>
+) </I>for <I>j = {2,3,4,5}</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(1) = </I>xor <I>( <B>F</B>( A(1)) , B(5), k<SUB>1</SUB>
+)</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>C(j) = </I>xor<I>( <B>F</B>( B(j) ) , B(j-1) , k<SUB>j</SUB>
+) </I>for <I>j = {2,3,4,5}</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>C(1) = </I>xor <I>( <B>F</B>( B(1)) , k<SUB>1</SUB> )</I></FONT></LI>
+</UL>
+<FONT size=+1><B><I>F</I></B> is a function, defined by a byte permutation
+table. With known cipher and plaintext, the whole cipher unravels with
+a minimal amount of work. Here is how:</FONT>
+<UL>
+<LI>
+<FONT size=+1>Make a guess on k<SUB>5</SUB></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(5) = </I>xor<I>( <B>F</B>( A(5) ) , A(4) , k<SUB>5</SUB>
+)</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(4) = </I>xor<I>( <B>F</B>( B(5) ) , C(5), k<SUB>5</SUB>
+)</I></FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>4</SUB> = </FONT></I><FONT size=+1>xor<I>( <B>F</B>(
+A(4) ) , A(3) , B(4) )</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(3) = </I>xor<I>( <B>F</B>( B(4) ) , C(4), k<SUB>4</SUB>
+)</I></FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>3</SUB> = </FONT></I><FONT size=+1>xor<I>( <B>F</B>(
+A(3) ) , A(2) , B(3) )</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(2) = </I>xor<I>( <B>F</B>( B(3) ) , C(3), k<SUB>3</SUB>
+)</I></FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>2</SUB> = </FONT></I><FONT size=+1>xor<I>( <B>F</B>(
+A(2) ) , A(1) , B(2) )</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(1) = </I>xor<I>( <B>F</B>( B(2) ) , C(2), k<SUB>2</SUB>
+)</I></FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>1</SUB> = </FONT></I><FONT size=+1>xor<I>( <B>F</B>(
+A(1) ) , B(5) , B(1) )</I></FONT></LI>
+
+<LI>
+<FONT size=+1>verify by checking <I>C(1) = </I>xor <I>( <B>F</B>( B(1)
+, k<SUB>1</SUB> )</I></FONT></LI>
+</UL>
+<FONT size=+1>Thus by trying 256 possibilities, we can recover 5 output
+bytes from the CSS streamcipher, and so recover the key by using the five
+known output bytes. This attack can be put to immediate use for recovering
+other player keys as in the notes to eqn. 2,3. Even if the player key is
+not recovered through the reversal of the stream cipher, the output of
+the streamcipher is known, and will still be usefull for decrypting disks
+that employ other player keys.</FONT></BLOCKQUOTE>
+<FONT size=+2>4 Attacking the hash of the disk key.</FONT>
+<BLOCKQUOTE><FONT size=+1>Reversing the hash at the start of the disc key
+block is somewhat more complicated. From (2) we see that only the hash
+value is known, the problem is finding a disk key such that the decrypted
+hash equals the disk key itself. An attack of complexity 2</FONT><SUP>25</SUP><FONT size=+1>
+proceeds as follows.</FONT>
+<P><FONT size=+1>First some aspects on the value of <I>k<SUB>2</SUB></I>
+will have to be considered. <I>A(1)</I> and <I>A(2)</I> is known, and a
+table can be build by running through every possible combination of <I>k<SUB>2
+</SUB></I>and
+<I>B(1)
+</I>and
+calculate the resulting <I>C(2)</I>. When trying to build a table of possible
+values <I>k<SUB>2 </SUB></I>of indexed by <I>C(2)</I> and <I>B(1)</I> there
+will be many values that map to the same set of indices, so a the table
+must be able to hold several values of <I>k<SUB>2 </SUB></I>in each location.</FONT>
+<P><FONT size=+1>Guess the start state of LFSR1, calculate <I>O<SUB>1</SUB>(
+i = {1,2,3,4,5} ) </I>. Next guess <I>B(1)</I> and complete the following
+calculations:</FONT>
+<UL>
+<LI>
+<I><FONT size=+1>k<SUB>1</SUB> = </FONT></I><FONT size=+1>xor<I>( <B>F</B>(
+B( 1 ) ) , C(1) )</I>        <I>C(1,2)</I>
+is known, they are the start state of LFSR1</FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(5)</I> = xor<I>( <B>F</B>( A(1) ) , B(1), k<SUB>1</SUB>)</I></FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>5</SUB></FONT></I><FONT size=+1> <I>= </I>xor<I>(
+<B>F</B>(
+A(5) ) , A(4),  B(5) )</I></FONT></LI>
+
+<LI>
+<FONT size=+1>Through the table indexed by <I>C(2)</I> and <I>B(1)</I>
+all permissible <I>k<SUB>2 </SUB></I>can be found, there can be from 0-8
+, on average 1. For all permissible <I>k<SUB>2</SUB></I> calculate:</FONT></LI>
+
+<UL>
+<LI>
+<I><FONT size=+1>O<SUB>2</SUB>(1)</FONT></I><FONT size=+1> , <I>O<SUB>2</SUB>(2)</I>,
+and 2 possible <I>O<SUB>2</SUB>(5)</I>.   This is possible since
+k<SUB>1,2,5</SUB> are found.</FONT></LI>
+
+<LI>
+<FONT size=+1>For every legal initial state of LFSR2 there exists a one
+to one mapping to <I>O<SUB>2</SUB>(1,2,5)</I> , by generating a table with
+2</FONT><SUP>24</SUP><FONT size=+1> entries the start state of LFSR2 can
+be found. Thus <I>C(1,2,3,4,5)</I> is potentially known.</FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(4) = </I>xor<I>( <B>F</B>( B(5) ) , C(5), k<SUB>5</SUB>
+)</I></FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>4</SUB> = </FONT></I><FONT size=+1>xor<I>( <B>F</B>(
+A(4) ) , A(3) , B(4) )</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(3) = </I>xor<I>( <B>F</B>( B(4) ) , C(4), k<SUB>4</SUB>
+)</I></FONT></LI>
+
+<LI>
+<I><FONT size=+1>k<SUB>3</SUB> = </FONT></I><FONT size=+1>xor<I>( <B>F</B>(
+A(3) ) , A(2) , B(3) )</I></FONT></LI>
+
+<LI>
+<FONT size=+1><I>B(2) = </I>xor<I>( <B>F</B>( B(3) ) , C(3), k<SUB>3</SUB>
+)</I></FONT></LI>
+
+<LI>
+<FONT size=+1>verify <I>k<SUB>2</SUB> = </I>xor<I>( <B>F</B>( A(2) ) ,
+A(1) , B(2) ) </I>, this holds for 1 / 256 tries ( 2</FONT><SUP><FONT size=-1>17</FONT></SUP><FONT size=+1>
+altogether ) and if the test holds, the key <I>C(1,2,3,4,5)</I> can be
+tested by eqn. (2). If eqn (2) holds, then a key has been found that will
+satisfy the hash. From experience it is possible to find from zero to a
+few such keys to any given hash value. When multiple disc keys are found
+trial decryption of the files will eliminate the false keys.</FONT></LI>
+</UL>
+</UL>
+<FONT size=+1>This attack when implemented on a Pentium III running 450
+MHz, will recover a disk key from the hash alone in less than 18 seconds.
+This is clearly much less than what is to be expected of a 40 bits cipher.</FONT></BLOCKQUOTE>
+<FONT size=+2>5 Conclusion</FONT>
+<BLOCKQUOTE><FONT size=+1>The author has through email correspondence learned
+that attacks as described at (2) have indeed been carried out by brute
+force prior to this analysis. CSS was designed with a 40 bit keylength
+to comply with US government export regulation, and as such it easily compromised
+through brute force attacks ( such are the intentions of export control
+). Moreover the 40 bits have not been put to good use, as the ciphers succumb
+to attacks with much lower computational work than which is permitted in
+the export control rules. Whether CSS is a serious cryptographic cipher
+is debatable. It has been clearly been demonstrated that its strength does
+not match the keylength. If the cipher was intended to get security by
+remaining secret, this is yet another testament to the fact that security
+through obscurity is an unworkable principle.</FONT></BLOCKQUOTE>
+<FONT size=+2>6 Further information</FONT>
+<BLOCKQUOTE><FONT size=+1>I have collected <A href="livid.html">links</A>
+to posts that were made to the Livid project mailing list. These include
+the original anonymous posting of the CSS algorithm, as well as full C
+source code for the attacks I outline here.</FONT></BLOCKQUOTE>
+
+<BR> 
+<BR> 
+<BR> 
+</BODY>
+</HTML>
+

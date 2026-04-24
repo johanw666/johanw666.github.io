@@ -1,0 +1,38 @@
+Newsgroups: news.announce.newgroups,news.groups,sci.physics,sci.physics.research
+Date: 21 Jun 1993 11:53:18 -0400
+
+
+                   Charter for sci.physics.accelerators
+
+NAME: sci.physics.accelerators
+
+MODERATION: unmoderated
+
+PURPOSE:
+  The purpose of the newsgroup sci.physics.accelerators is for discussing 
+  issues related to particle accelerators and the physics of beams. 
+  Possible topics include, but are not limited to: computer codes and
+  simulation in accelerator physics; experimental methods, instrumentation,
+  diagnostics and measurement; accelerator theory; particle sources;
+  accelerator structures; advanced accelerator concepts; rf power sources;
+  free electron lasers; announcements and news from accelerator laboratories.
+
+RATIONALE:
+  Particle accelerators, beam transport systems and magnetic optics systems 
+  are designed, built and utilized at numerous institutions around the world. 
+  Researchers starting work on a problem that is new to them can poll the 
+  newsgroup for past efforts related to that problem.  By fostering scientific 
+  interchange and discussion between accelerator scientists, the newsgroup 
+  would help researchers get their work done more quickly, it could prevent 
+  them from making common mistakes, and it could help them find the best 
+  solutions to problems. 
+
+CHANGE OF MODERATION:
+  If, in the future, there is a desire to change the status of the newsgroup
+  from unmoderated to moderated, this can be accomplished by following the
+  Usenet rules for creation of a new newsgroup (RFD, CFV, vote)
+
+
+
+Date: 26 Jul 1993 11:54:28 -0400
+RESULT: sci.physics.accelerators passes 318:8

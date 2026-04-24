@@ -1,0 +1,253 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Optics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="6">6. Optics</a></h1>
+<h2><a name="6.1">6.1 The bending of light</a></h2>
+
+<p>For the refraction at a surface : \(n_i\sin(\theta_i)=n_t\sin(\theta_t)\) holds where \(n\) is the <em>refractive index</em> of the material. <em>Snell&rsquo;s law</em> is:</p>
+
+<p>\[\frac{n_2}{n_1}=\frac{\lambda_1}{\lambda_2}=\frac{v_1}{v_2}\]</p>
+
+<p>If \(\Delta n\leq1\), the change in phase of the light is \(\Delta\varphi=0\), if \(\Delta n&gt;1\) then: \(\Delta\varphi=\pi\). The refraction of light in a material is caused by scattering from atoms. This is described by:</p>
+
+<p>\[n^2=1+\frac{n_{\rm e}e^2}{\varepsilon_0m}\sum_j\frac{f_j}{\omega_{0,j}^2-\omega^2-i\delta\omega}\]</p>
+
+<p>where \(n_{\rm e}\) is the electron density and \(f_j\) the <em>oscillator strength</em>, for which&nbsp;\(\sum\limits_j f_j=1\). From this follows that \(v_{\rm g}=c/(1+(n_{\rm e}e^2/2\varepsilon_0m\omega^2))\). From this the equation of Cauchy one&nbsp;can&nbsp;derive: \(n=a_0+a_1/\lambda^2\). More generally, it is possible to expand \(n\) as: \(\displaystyle n=\sum_{k=0}^n\frac{a_k}{\lambda^{2k}}\).</p>
+
+<p>For an electromagnetic wave in general: \(n=\sqrt{\varepsilon_{\rm r}\mu_{\rm r}}\).</p>
+
+<p>The path, followed by a light ray in material can be found from <em>Fermat&rsquo;s principle</em>:</p>
+
+<p>\[\delta\int\limits_1^2 dt=\delta\int\limits_1^2\frac{n(s)}{c}ds=0\Rightarrow \delta\int\limits_1^2 n(s)ds=0\]</p>
+
+<h2><a name="6.2">6.2 Paraxial geometrical optics</a></h2>
+<h3><a name="6.2.1">6.2.1 Lenses</a></h3>
+
+<p>The Gaussian lens formula can be deduced from Fermat&rsquo;s principle with the approximations \(\cos\varphi=1\) and \(\sin\varphi=\varphi\). For the refraction at a spherical surface with radius \(R\):</p>
+
+<p>\[\frac{n_1}{v}-\frac{n_2}{b}=\frac{n_1-n_2}{R}\]</p>
+
+<p>where \(|v|\) is the distance of the object and \(|b|\) the distance of the image. Applying this twice results in:</p>
+
+<p>\[\frac{1}{f}=(n_{\rm l}-1)\left(\frac{1}{R_2}-\frac{1}{R_1}\right)\]</p>
+
+<p>where \(n_{\rm l}\) is the refractive index of the lens, \(f\) is the focal length and \(R_1\) and \(R_2\) are the curvature radii of both surfaces. For a double concave lens&nbsp;\(R_1&lt;0\), \(R_2&gt;0\), for a double convex lens&nbsp;\(R_1&gt;0\) and \(R_2&lt;0\). Further:</p>
+
+<p>\[\frac{1}{f}=\frac{1}{v}-\frac{1}{b}\]</p>
+
+<p>\(D:=1/f\) is called the dioptric power of a lens. For a lens with thickness \(d\) and diameter \(D\)&nbsp;to a good approximation: \(1/f=8(n-1)d/D^2\). For two lenses placed on a line with distance \(d\) between them:</p>
+
+<p>\[\frac{1}{f}=\frac{1}{f_1}+\frac{1}{f_2}-\frac{d}{f_1f_2}\]</p>
+
+<p>In these equations the following signs are being used for refraction at a spherical surface, as is seen by an incoming light ray:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">Quantity<th align="center">+<th align="center">-
+<tr>
+<td>\(R\)</td> <td>Concave surface</td><td>Convex surface</td>
+<tr>
+<td>\(f\)</td> <td>Converging lens</td><td>Diverging lens</td>
+<tr>
+<td>\(v\)</td> <td>Real object</td><td>Virtual object</td>
+<tr>
+<td>\(b\)</td> <td>Virtual image</td><td>Real image</td>
+<tr>
+</table>
+
+<h3><a name="6.2.2">6.2.2 Mirrors</a></h3>
+
+<p>For images formed by mirrors</p>
+
+<p>\[\frac{1}{f}=\frac{1}{v}+\frac{1}{b}=\frac{2}{R}+\frac{h^2}{2}\left(\frac{1}{R}-\frac{1}{v}\right)^2\]</p>
+
+<p>where \(h\) is the perpendicular distance from the point the light ray hits the mirror to the optical axis. Spherical aberration can be reduced by not using spherical mirrors. A parabolical mirror has no spherical aberration for light rays parallel with the optical axis and is therefore often used for telescopes. The signs used are:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">Quantity<th align="center">+<th align="center">-
+<tr>
+<td>\(R\)</td> <td>Concave mirror</td><td>Convex mirror</td>
+<tr>
+<td>\(f\)</td> <td>Concave mirror</td><td>Convex mirror</td>
+<tr>
+<td>\(v\)</td> <td>Real object</td><td>Virtual object</td>
+<tr>
+<td>\(b\)</td> <td>Real image</td><td>Virtual image</td>
+<tr>
+</table>
+
+<h3><a name="6.2.3">6.2.3 Principal planes</a></h2>
+
+<p>The <em>nodal points</em> N of a lens are defined in the figure below. If the lens is surrounded by the same medium on both sides, the nodal points are the same as the principal points H. The plane \(\perp\) to the optical axis through the principal points is called the <em>principal plane</em>. If the lens is described by a matrix \(m_{ij}\) then for the distances \(h_1\) and \(h_2\) to the boundary of the lens it holds that:</p>
+
+<p>\[h_1=n\frac{m_{11}-1}{m_{12}}~~,~~~h_2=n\frac{m_{22}-1}{m_{12}}\]</p>
+
+<p align="center"><img alt="Principal planes" class="internal default" style="width: 214px; height: 169px;" width="214px" height="169px" src="figure61.jpg" />
+</p>
+
+<h3><a name="6.2.4">6.2.4 Magnification</a></h2>
+
+<p>The <em>linear magnification</em> is defined by: \(\displaystyle N=-\frac{b}{v}\)</p>
+
+<p>The <em>angular magnification</em> is defined by: \(\displaystyle N_{\alpha}=-\frac{\alpha_{\rm syst}}{\alpha_{\rm none}}\)</p>
+
+<p>where \(\alpha_{\rm sys}\) is the size of the retinal image in the optical system and \(\alpha_{\rm none}\) the size of the retinal image outside&nbsp;the system. Further: \(N\cdot N_{\alpha}=1\). For a telescope: \(N=f_{\rm objective}/f_{\rm ocular}\) holds. The <em>f-number</em> is defined by \(f/D_{\rm objective}\).</p>
+
+<h2><a name="6.3">6.3 Matrix methods</a></h2>
+
+<p>A light ray can be described by a vector \((n\alpha,y)\) with \(\alpha\) the angle with the optical axis and \(y\) the distance to the optical axis. The change of a light ray interacting with an optical system can be obtained using matrix multiplication:</p>
+
+<p>\[\left(\begin{array}{c}n_2\alpha_2\\y_2\end{array}\right)=M \left(\begin{array}{c}n_1\alpha_1\\y_1\end{array}\right)\]</p>
+
+<p>where \({\rm Tr}(M)=1\). \(M\) is a product of elementary matrices. These are:</p>
+
+<ol>
+    <li>Transfer along length \(l\): \(\displaystyle M_{\rm R}= \left(\begin{array}{cc}1&amp;0\\l/n&amp;1\end{array}\right)\)</li>
+    <li>Refraction at a surface with dioptric power \(D\): \(\displaystyle M_{\rm T}=\left(\begin{array}{cc}1&amp;-D\\0&amp;1\end{array}\right)\)</li>
+</ol>
+
+<h2><a name="6.4">6.4 Aberrations</a></h2>
+
+<p>Lenses usually do not give a perfect image. Some causes are:</p>
+
+<ol>
+    <li><strong>Chromatic aberration</strong> is caused by the fact that \(n=n(\lambda)\). This can be partially corrected with a lens which is composed of more lenses with different functions \(n_i(\lambda)\). Using \(N\) lenses makes it possible to obtain the same \(f\) for \(N\) wavelengths.</li>
+    <li><strong>Spherical aberration</strong> is caused by second-order effects which are usually ignored; a spherical surface does not make a perfect lens. Incoming rays far from the optical axis will more bent.</li>
+    <li><strong>Coma</strong> is caused by the fact that the principal planes of a lens are only flat near the principal axis. Further from the optical axis they are curved. This curvature can be both positive or negative.</li>
+    <li><strong>Astigmatism</strong>: from each point of an object not on the optical axis the image is an ellipse because the thickness of the lens is not the same everywhere.</li>
+    <li><strong>Field curvature</strong> can be corrected by the human eye.</li>
+    <li><strong>Distorsion</strong> gives aberrations near the edges of the image. This can be corrected with a combination of positive and negative lenses.</li>
+</ol>
+
+<h2><a name="6.5">6.5 Reflection and transmission</a></h2>
+
+<p>If an electromagnetic wave hits a transparent medium part of the wave will reflect at the same angle as the incident angle, and a part will be refracted at an angle according to Snell&rsquo;s law. It makes a difference whether the \(\vec{E}\) field of the wave is \(\perp\) or \(\parallel\) w.r.t. the surface. When the coefficients of reflection \(r\) and transmission \(t\) are defined as:</p>
+
+<p>\[r_\parallel\equiv\left(\frac{E_{0r}}{E_{0i}}\right)_\parallel~,~~ r_\perp\equiv\left(\frac{E_{0r}}{E_{0i}}\right)_\perp~,~~ t_\parallel\equiv\left(\frac{E_{0t}}{E_{0i}}\right)_\parallel~,~~ t_\perp\equiv\left(\frac{E_{0t}}{E_{0i}}\right)_\perp\]</p>
+
+<p>where \(E_{0r}\) is the reflected amplitude and \(E_{0t}\) the transmitted amplitude. Then the Fresnel equations are:</p>
+
+<p>\[r_\parallel=\frac{\tan(\theta_i-\theta_t)}{\tan(\theta_i+\theta_t)}~~~,~~~ r_\perp =\frac{\sin(\theta_t-\theta_i)}{\sin(\theta_t+\theta_i)}\\\]</p>
+
+<p>\[t_\parallel=\frac{2\sin(\theta_t)\cos(\theta_i)}{\sin(\theta_t+\theta_i)\cos(\theta_t-\theta_i)}~~~,~~~ t_\perp =\frac{2\sin(\theta_t)\cos(\theta_i)}{\sin(\theta_t+\theta_i)}\]</p>
+
+<p>and the following holds: \(t_\perp-r_\perp=1\) and \(t_\parallel+r_\parallel=1\). If the coefficient of reflection \(R\) and transmission \(T\) are defined as (with \(\theta_i=\theta_r\)):</p>
+
+<p>\[R\equiv\frac{I_r}{I_i}~~~\mbox{and}~~~T\equiv\frac{I_t\cos(\theta_t)}{I_i\cos(\theta_i)}\]</p>
+
+<p>with \(I=\langle|\vec{S}|\rangle\) it follows that: \(R+T=1\). A special case is \(r_\parallel=0\). This happens if the angle between the reflected and transmitted rays is \(90^\circ\). From <em>Snell&rsquo;s law</em> it then follows: \(\tan(\theta_i)=n\). This angle is called <em>Brewster&rsquo;s angle</em>. The situation with \(r_\perp=0\) is not possible.</p>
+
+<h2><a name="6.6">6.6 Polarization</a></h2>
+
+<p>The polarization is defined as:</p>
+
+<p>\[P=\frac{I_{\rm p}}{I_{\rm p}+I_{\rm u}}=\frac{I_{\rm max}-I_{\rm min}}{I_{\rm max}+I_{\rm min}}\]</p>
+
+<p>where the intensity of the polarized light is given by \(I_{\rm p}\) and the intensity of the unpolarized light is given by \(I_{\rm u}\). \(I_{\rm max}\) and \(I_{\rm min}\) are the maximum and minimum intensities when the light passes a polarizer. If polarized light passes through a polarizer <em>Malus law</em> applies: \(I(\theta)=I(0)\cos^2(\theta)\) where \(\theta\) is the angle of the polarizer.</p>
+
+<p>The state of a light ray can be described by the <em>Stokes-parameters</em>: start with 4 filters where each transmits half the intensity. The first is independent of the polarization, the second and third are linear polarizers with the transmission axes horizontal and at \(+45^\circ\), while the fourth is a circular polarizer which is opaque for \(L\)-states. Then&nbsp;\(S_1=2I_1\), \(S_2=2I_2-2I_1\), \(S_3=2I_3-2I_1\) and \(S_4=2I_4-2I_1\).</p>
+
+<p>The state of a <em>polarized</em> light ray can also be described by the <em>Jones vector</em>:</p>
+
+<p>\[\vec{E}=\left(\begin{array}{c} E_{0x}{\rm e}^{i\varphi_x}\\ E_{0y}{\rm e}^{i\varphi_y} \end{array}\right)\]</p>
+
+<p>For the horizontal \(P\)-state: \(\vec{E}=(1,0)\), for the vertical \(P\)-state \(\vec{E}=(0,1)\), the \(R\)-state is given by \(\vec{E}=\frac{1}{2}\sqrt{2}(1,-i)\) and the \(L\)-state by \(\vec{E}=\frac{1}{2}\sqrt{2}(1,i)\). The change in state of a light beam after passage of optical equipment can be described as \(\vec{E}_2=M\cdot\vec{E}_1\). For some types of optical equipment the Jones matrix \(M\) is given by:</p>
+
+<ul>
+    <li>Horizontal linear polarizer: \[M=\left(\begin{array}{cc}1&amp;0\\0&amp;0\end{array}\right)\]</li>
+    <li>Vertical linear polarizer: \[M=\left(\begin{array}{cc}0&amp;0\\0&amp;1\end{array}\right)\]</li>
+    <li>Linear polarizer at \(+45^\circ\) \[M=\frac{1}{2}\left(\begin{array}{cc}1&amp;1\\1&amp;1\end{array}\right)\]</li>
+    <li>Lineair polarizer at \(-45^\circ\) \[M=\frac{1}{2}\left(\begin{array}{cc}1&amp;-1\\-1&amp;1\end{array}\right)\]</li>
+    <li>\(\frac{1}{4}-\lambda\) plate, fast axis vertical \[M={\rm e}^{i\pi/4}\left(\begin{array}{cc}1&amp;0\\0&amp;-i\end{array}\right)\]</li>
+    <li>\(\frac{1}{4}-\lambda\) plate, fast axis horizontal \[M={\rm e}^{i\pi/4}\left(\begin{array}{cc}1&amp;0\\0&amp;i\end{array}\right)\]</li>
+    <li>Homogene circular polarizor right \[M=\frac{1}{2}\left(\begin{array}{cc}1&amp;i\\-i&amp;1\end{array}\right)\]</li>
+    <li>Homogene circular polarizer left \[M=\frac{1}{2}\left(\begin{array}{cc}1&amp;-i\\i&amp;1\end{array}\right)\]</li>
+</ul>
+
+<h2><a name="6.7">6.7 Prisms and dispersion</a></h2>
+
+<p>A light ray passing through a prism is refracted twice and aquires a deviation from its original direction \(\delta=\theta_i+\theta_{i'}+\alpha\) w.r.t. the incident direction, where \(\alpha\) is the apex angle, \(\theta_i\) is the angle between the incident angle and a line perpendicular to the surface and \(\theta_{i'}\) is the angle between the ray leaving the prism and a line perpendicular to the surface. When \(\theta_i\) varies there is an angle for which \(\delta\) becomes minimal. For the refractive index of the prism now:</p>
+
+<p>\[n=\frac{\sin(\mbox{$\frac{1}{2}$}(\delta_{\rm min}+\alpha))}{\sin(\mbox{$\frac{1}{2}$}\alpha)}\]</p>
+
+<p>The dispersion of a prism is defined by:</p>
+
+<p>\[D=\frac{d\delta}{d\lambda}=\frac{d\delta}{dn}\frac{dn}{d\lambda}\] where the first factor depends on the shape and the second on the composition of the prism. For the first factor it follows that:</p>
+
+<p>\[\frac{d\delta}{dn}=\frac{2\sin(\mbox{$\frac{1}{2}$}\alpha)}{\cos(\mbox{$\frac{1}{2}$}(\delta_{\rm min}+\alpha))}\]</p>
+
+<p>For visible light usually \(dn/d\lambda&lt;0\) holds and&nbsp;shorter wavelengths are more strongly&nbsp;bent than longer ones. The refractive index in this region can usually be approximated by Cauchy&rsquo;s formula.</p>
+
+<h2><a name="6.8">6.8 Diffraction</a></h2>
+
+<p>Fraunhofer diffraction occurs far away from the source(s). The Fraunhofer diffraction of light passing through multiple slits is described by:</p>
+
+<p>\[\frac{I(\theta)}{I_0}=\left(\frac{\sin(u)}{u}\right)^2\cdot \left(\frac{\sin(Nv)}{\sin(v)}\right)^2\]</p>
+
+<p>where \(u=\pi b\sin(\theta)/\lambda\), \(v=\pi d\sin(\theta)/\lambda\). \(N\) is the number of slits, \(b\) the width of a slit and \(d\) the distance between the slits. The maxima in intensity are given by \(d\sin(\theta)=k\lambda\).</p>
+
+<p>The diffraction through a spherical aperture with radius \(a\) is described by:</p>
+
+<p>\[\frac{I(\theta)}{I_0}=\left(\frac{J_1(ka\sin(\theta))}{ka\sin(\theta)}\right)^2\]</p>
+
+<p>The diffraction pattern of a rectangular aperture at distance \(R\) with length \(a\) in the \(x\)-direction and \(b\) in the \(y\)-direction is described by:</p>
+
+<p>\[\frac{I(x,y)}{I_0}=\left(\frac{\sin(\alpha')}{\alpha'}\right)^2\left(\frac{\sin(\beta')}{\beta'}\right)^2\]</p>
+
+<p>where \(\alpha'=kax/2R\) and \(\beta'=kby/2R\).</p>
+
+<p>When X rays are diffracted at a crystal the&nbsp;<em>Braggs Relation</em> holds for the position of the maximum&nbsp;intensity : \(2d\sin(\theta)=n\lambda\) where \(d\) is the distance between the crystal layers.</p>
+
+<p>Close to&nbsp;the source the Fraunhofer model is invalid because it ignores the angle-dependence of the reflected waves. This is described by the <em>obliquity</em> or <em>inclination factor</em>, which describes the directionality of the secondary emissions: \(E(\theta)=\frac{1}{2}E_0(1+\cos(\theta))\) where \(\theta\) is the angle w.r.t. the optical axis.</p>
+
+<p>Diffraction limits the <em>resolution</em> of a system. This is the minimum angle \(\Delta\theta_{\rm min}\) between two incident rays coming from points far away for which their refraction patterns can be detected separately. For a circular slit: \(\Delta\theta_{\rm min}=1.22\lambda/D\) where \(D\) is the diameter of the slit.</p>
+
+<p>For a grating: \(\Delta\theta_{\rm min}=2\lambda/(Na\cos(\theta_m))\) where \(a\) is the distance between two peaks and \(N\) the number of peaks. The minimum difference between two wavelengths that gives a separated diffraction pattern in a multiple slit geometry is given by \(\Delta\lambda/\lambda=nN\) where \(N\) is the number of lines and \(n\) the order of the pattern.</p>
+
+<h2><a name="6.9">6.9 Special optical effects</a></h2>
+
+<ul>
+    <li><strong>Birefringence and dichroism</strong>. \(\vec{D}\) is not parallel with \(\vec{E}\) if the polarizability \(\vec{P}\) of a material is not equal in all directions. There are at least 3 directions, the <em>principal axes</em>, in which they are parallel. This results in 3 refractive indices \(n_i\) which can be used to construct Fresnel&rsquo;s ellipsoid. In case \(n_2=n_3\neq n_1\), which happens e.g. at trigonal, hexagonal and tetragonal crystals there is one optical axis in the direction of \(n_1\). Incident light rays can now be split up in two parts: the <em>ordinary wave</em> is linear polarized \(\perp\) the plane through the transmission direction and the optical axis. The <em>extraordinary wave</em> is linear polarized in the plane through the transmission direction and the optical axis. <em>Dichroism</em> is caused by a different absorption of the ordinary and extraordinary wave in some materials. <em>Double images</em> occur when the incident ray makes an angle with the optical axis: the extraordinary wave will refract, the ordinary will not.</li>
+    <li><strong>Retarders: waveplates and compensators</strong>. Incident light will have a phase shift of \(\Delta\varphi=2\pi d(|n_0-n_{\rm e}|)/\lambda_0\) if an uniaxial crystal is cut in such a way that the optical axis is parallel with the front and back plane. Here, \(\lambda_0\) is the wavelength in vacuum and \(n_0\) and \(n_{\rm e}\) the refractive indices for the ordinary and extraordinary wave. For a quarter-wave plate: \(\Delta\varphi=\pi/2\).</li>
+    <li><strong>The Kerr-effect</strong>: isotropic, transparent materials can become birefringent when placed in an electric field. In that case, the optical axis is parallel to \(\vec{E}\). The difference in refractive index in the two directions is given by: \(\Delta n=\lambda_0KE^2\), where \(K\) is the <em>Kerr constant</em> of the material. If the electrodes have an effective length \(\ell\) and are separated by a distance \(d\), the retardation is given by: \(\Delta\varphi=2\pi K\ell V^2/d^2\), where \(V\) is the applied voltage.</li>
+    <li><strong>The Pockels</strong> or linear electro-optical effect can occur in 20 (from a total of 32) crystal symmetry classes, namely those without a centre of symmetry. These crystals are also <em>piezoelectric</em>: their polarization changes when a pressure is applied and vice versa: \(\vec{P}=pd+\varepsilon_0\chi\vec{E}\). The retardation in a Pockels cell is \(\Delta\varphi=2\pi n_0^3 r_{63}V/\lambda_0\) where \(r_{63}\) is the 6-3 element of the electro-optic tensor.</li>
+    <li><strong>The Faraday effect</strong>: the polarization of light passing through material with length \(d\) and to which a magnetic field is applied in the propagation direction is rotated by an angle \(\beta={\cal V}Bd\) where \(\cal V\) is the <em>Verdet constant</em>.</li>
+    <li><strong>Cerenkov radiation</strong> arises when a charged particle with \(v_q&gt;v_{\rm f}\) arrives. The radiation is emitted within a cone with an apex angle \(\alpha\) with \(\sin(\alpha)=c/c_{\rm medium}=c/nv_q\).</li>
+</ul>
+
+<h2><a name="6.10">6.10 The Fabry-Perot interferometer</a></h2>
+
+<p>For a Fabry-Perot interferometer and&nbsp;in general: \(T+R+A=1\) where \(T\) is the transmission factor, \(R\) the reflection factor and \(A\) the absorption factor. If \(F\) is given by \(F=4R/(1-R)^2\) it follows for the intensity distribution:</p>
+
+<p>\[\frac{I_t}{I_i}=\left[1-\frac{A}{1-R}\right]^2\frac{1}{1+F\sin^2(\theta)}\]</p>
+
+<p>The term \([1+F\sin^2(\theta)]^{-1}:={\cal A}(\theta)\) is called the <em>Airy function</em>.</p>
+
+<p align="center"><img alt="The Fabry-Perot interferometer" class="internal" style="width: 434px; height: 253px;" width="434px" height="253px" src="figure62.jpg" />
+</p>
+
+<p>The width of the peaks at half height is given by \(\gamma=4/\sqrt{F}\). The <em>finesse</em> \(\cal F\) is defined as \({\cal F}= \frac{1}{2} \pi\sqrt{F}\). The maximum resolution is then given by \(\Delta f_{\rm min}=c/2nd{\cal F}\).</p>
+
+</body>
+</html>

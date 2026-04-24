@@ -1,0 +1,72 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<title>Remote Commander - versions</title>
+</head>
+<body background="../equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#9999ff">
+
+<hr>
+<a href="index.html"><-- Return to the Remote Commander main page</a>
+<hr>
+
+<h1 align="center">Remote Commander Version history</h1>
+<table align="center" border=1>
+<tr>
+<th align="center">Date<th align="center">Version<th>Type<th align="center">Changes
+<tr>
+<td>24-05-2006</td><td align="center">2.1</td><td>New</td><td>New menu options check- and uncheck all computers in the list.</td>
+<tr>
+<td>19-05-2006</td><td align="center">2.0</td><td>New</td><td>Network scanning is much faster now when only the local domain is scanned. A configuration option to revert back to the old method is provided in the settings menu since the new mathod does not work for local systems not on a domain.</td>
+<tr>
+<td></td><td></td><td>New</td><td>Multiple logfiles can now be viewed at the same time. A dynamic menu keeps track of them.</td>
+<tr>
+<td></td><td></td><td>Chg</td><td>The user interface of the run as another user form has been simplified.</td>
+<tr>
+<td></td><td></td><td>Fix</td><td>Run as another user functionality now works on XP without giving errors.</td>
+<tr>
+<td></td><td></td><td>Chg</td><td>Changed the source code with some #ifdef's to make it compile cleanly under CBuilder 3 and up.</td>
+<tr>
+<td>01-10-2003</td><td align="center">1.8</td><td>Fix</td><td>Applied the previous fix to the network scan function too.</td>
+<tr>
+<td>04-07-2003</td><td align="center">1.7</td><td>Fix</td><td>Adding computernames by hand now works when the new name partially overlaps with an existing one.</td>
+<tr>
+<td>02-04-2001</td><td align="center">1.6</td><td>Fix</td><td>Updating the status information while running the network scan would remove the indicator. Fixed.</td>
+<tr>
+<td>30-03-2001</td><td align="center">1.5</td> <td>New</td><td>Running a service under an account name with an empty password would fail.</td>
+<tr>
+<td>24-02-2001</td><td align="center">1.4</td> <td>New</td><td>The destination path in the default setup can now be chosen with a decent directory selector.</td>
+<tr>
+<td>08-02-2001</td><td align="center">1.3</td> <td>Fix</td><td>When editing the configuration of a remote service, the interaction with the desktop was always reset to "No" in previous versions. This is now user-selectable.</td>
+<tr>
+<td>          </td><td align="center">   </td> <td>New</td><td>Now all user defined service control codes are properly described in the debug file. Previous versions described some codes as "unknown".</td>
+<tr>
+<td>25-01-2001</td><td align="center">1.2</td> <td>Fix</td><td>Corrected version information that claimed the program was rscc.</td>
+<tr>
+<td>          </td><td align="center">   </td> <td>New</td><td>If the program has unsufficient rights to run in another user context, the program asks if it can try to add this right to the useraccount (requires a logoff/login to take effect).</td>
+<tr>
+<td>11-01-2001</td><td align="center">1.1</td> <td>Fix</td><td>The program tried to decrypt uncrypted local debug files. They are now loaded in plain.</td>
+<tr>
+<td>10-01-2001</td><td align="center">1.0</td><td>-</td> <td width="80%">Initial release, based on RSCC 4.2.</td>
+<tr>
+</table>
+
+<h1 align="center">Remote Service Version history</h1>
+<table align="center" border=1>
+<tr>
+<th align="center">Date<th align="center">Version<th>Type<th align="center">Changes
+<tr>
+<td>26-03-2001</td><td align="center">1.3</td> <td>Fix</td><td>Solved a resource leak when installing remsrv manually.</td>
+<tr>
+<td>19-02-2001</td><td align="center">1.2</td> <td>Fix</td><td>The option NOT to generate a logfile was ignored.</td>
+<tr>
+<td>11-01-2001</td><td align="center">1.1</td> <td>-</td><td>First public release.</td>
+<tr>
+</table>
+
+<hr>
+<a href="index.html"><-- Return to the Remote Commander main page</a>
+<hr>
+
+</body>
+</html>
+

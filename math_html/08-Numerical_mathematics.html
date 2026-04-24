@@ -1,0 +1,503 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Numerical mathematics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="8">8. Numerical mathematics</a></h1>
+<h2><a name="8.1">8.1 Errors</a></h2>
+There will be an error in the solution if a problem has a number of parameters
+which are not exactly known. The dependency between errors in input data and
+errors in the solution can be expressed in the <em>condition number</em> $c$. If
+the problem is given by $x=\phi(a)$ the first-order approximation for an error
+$\delta a$ in $a$ is:
+\[
+\frac{\delta x}{x}=\frac{a\phi'(a)}{\phi(a)}\cdot\frac{\delta a}{a}
+\]
+The number $c(a)=|a\phi'(a)|/|\phi(a)|$. $c\ll1$ if the problem is
+well-conditioned.
+
+<h2><a name="8.2">8.2 Floating point representations</a></h2>
+The floating point representation depends on 4 natural numbers:
+<p>
+<ol>
+<li>The basis of the number system $\beta$,</li>
+<li>The length of the mantissa $t$,</li>
+<li>The length of the exponent $q$,</li>
+<li>The sign $s$.</li>
+</ol>
+<p>
+Than the representation of machine numbers becomes: rd$(x)=s\cdot m\cdot\beta^e$
+where mantissa $m$ is a number with $t$ $\beta$-based numbers and for which holds
+$1/\beta\leq|m|<1$, and $e$ is a number with $q$ $\beta$-based numbers for which
+holds $|e|\leq\beta^q-1$. The number 0 is added to this set, for example with
+$m=e=0$. The largest machine number is
+\[
+a_{\rm max}=(1-\beta^{-t})\beta^{\beta^q-1}
+\]
+and the smallest positive machine number is
+\[
+a_{\rm min}=\beta^{-\beta^q}
+\]
+The distance between two successive machine numbers in the interval
+$[\beta^{p-1},\beta^p]$ is $\beta^{p-t}$. If $x$ is a real number and the
+closest machine number is ${\rm rd}(x)$, than holds:
+\begin{eqnarray*}
+{\rm rd}(x)=x(1+\varepsilon) &~~~\mbox{with}~~~&|\varepsilon|\leq\frac{1}{2}\beta^{1-t}\\
+x={\rm rd}(x)(1+\varepsilon')&~~~\mbox{with}~~~&|\varepsilon'|\leq\frac{1}{2}\beta^{1-t}
+\end{eqnarray*}
+The number $\eta:=\frac{1}{2}\beta^{1-t}$ is called the machine-accuracy, and
+\[
+\varepsilon,\varepsilon'\leq\eta\left|\frac{x-{\rm rd}(x)}{x}\right|\leq\eta
+\]
+An often used 32 bits float format is: 1 bit for $s$, 8 for the exponent
+and $23$ for de mantissa. The base here is 2.
+
+<h2><a name="8.3">8.3 Systems of equations</a></h2>
+We want to solve the matrix equation $A\vec{x}=\vec{b}$ for a non-singular
+$A$, which is equivalent to finding the inverse matrix $A^{-1}$. Inverting
+a $n\times n$ matrix via Cramer's rule requires too much multiplications
+$f(n)$ with $n!\leq f(n)\leq (e-1)n!$, so other methods are preferable.
+
+<h3><a name="8.3.1">8.3.1 Triangular matrices</a></h3>
+Consider the equation $U\vec{x}=\vec{c}$ where $U$ is a right-upper triangular,
+this is a matrix in which $U_{ij}=0$ for all $j < i$, and all $U_{ii}\neq0$. Than:
+\begin{eqnarray*}
+x_n    &=&c_n/U_{nn}\\
+x_{n-1}&=&(c_{n-1}-U_{n-1,n}x_n)/U_{n-1,n-1}\\
+\vdots & &\vdots\\
+x_1    &=&(c_1-\sum_{j=2}^nU_{1j}x_j)/U_{11}
+\end{eqnarray*}
+<p>
+In code:
+
+<pre>
+for (k = n; k > 0; k--)
+{
+  S = c[k];
+  for (j = k + 1; j < n; j++)
+  {
+    S -= U[k][j] * x[j];
+  }
+  x[k] = S / U[k][k];
+}
+</pre>
+This algorithm requires $\frac{1}{2}n(n+1)$ floating point calculations.
+
+<h3><a name="8.3.2">8.3.2 Gauss elimination</a></h3>
+Consider a general set $A\vec{x}=\vec{b}$. This can be reduced by Gauss
+elimination to a triangular form by multiplying the first equation with
+$A_{i1}/A_{11}$ and than subtract it from all others; now the first column
+contains all 0's except $A_{11}$. Than the 2nd equation is subtracted in
+such a way from the others that all elements on the second row are 0 except
+$A_{22}$, etc. In code:
+<pre>
+for (k = 1; k <= n; k++)
+{
+  for (j = k; j <= n; j++) U[k][j] = A[k][j];
+  c[k] = b[k];
+
+  for (i = k + 1; i <= n; i++)
+  {
+    L = A[i][k] / U[k][k];
+    for (j = k + 1; j <= n; j++)
+    {
+      A[i][j] -= L * U[k][j];
+    }
+    b[i] -= L * c[k];
+  }
+}
+</pre>
+This algorithm requires $\frac{1}{3}n(n^2-1)$ floating point multiplications
+and divisions for operations on the coefficient matrix and $\frac{1}{2}n(n-1)$
+multiplications for operations on the right-hand terms, whereafter the
+triangular set has to be solved with $\frac{1}{2}n(n+1)$ operations.
+
+<h3><a name="8.3.3">8.3.3 Pivot strategy</a></h3>
+Some equations have to be interchanged if the corner elements
+$A_{11}, A^{(1)}_{22},...$ are not all $\neq0$ to allow Gauss elimination to
+work. In the following, $A^{(n)}$ is the element after the $n$th iteration.
+One method is: if $A^{(k-1)}_{kk}=0$, than search for an element $A^{(k-1)}_{pk}$
+with $p>k$ that is $\neq0$ and interchange the $p$th and the $n$th equation. This
+strategy fails only if the set is singular and has no solution at all.
+
+<h2><a name="8.4">8.4 Roots of functions</a></h2>
+<h3><a name="8.4.1">8.4.1 Successive substitution</a></h3>
+We want to solve the equation $F(x)=0$, so we want to find the root $\alpha$ with $F(\alpha)=0$.
+<p>
+Many solutions are essentially the following:
+<p>
+<ol>
+<li>Rewrite the equation in the form $x=f(x)$ so that a solution of this
+    equation is also a solution of $F(x)=0$. Further, $f(x)$ may not vary
+    too much with respect to $x$ near $\alpha$.</li>
+<li>Assume an initial estimation $x_0$ for $\alpha$ and obtain the series
+    $x_n$ with $x_n=f(x_{n-1})$, in the hope that $\lim\limits_{n\rightarrow\infty}x_n=\alpha$.</li>
+</ol>
+<p>
+Example: choose
+\[
+f(x)=\beta-\varepsilon\frac{h(x)}{g(x)}=x-\frac{F(x)}{G(x)}
+\]
+than we can expect that the row $x_n$ with
+\begin{eqnarray*}
+x_0&=&\beta\\
+x_n&=&x_{n-1}-\varepsilon\frac{h(x_{n-1})}{g(x_{n-1})}
+\end{eqnarray*}
+converges to $\alpha$.
+
+<h3><a name="8.4.2">8.4.2 Local convergence</a></h3>
+Let $\alpha$ be a solution of $x=f(x)$ and let $x_n=f(x_{n-1})$ for a given
+$x_0$. Let $f'(x)$ be continuous in a neighbourhood of $\alpha$. Let
+$f'(\alpha)=A$ with $|A|<1$. Than there exists a $\delta>0$ so that for each
+$x_0$ with $|x_0-\alpha|\leq\delta$ holds:
+<p>
+<ol>
+<li>$\lim\limits_{n\rightarrow\infty}n_n=\alpha$,</li>
+<li>If for a particular $k$ holds: $x_k=\alpha$, than for each $n\geq k$
+      holds that $x_n=\alpha$. If $x_n\neq\alpha$ for all $n$ than holds
+\[
+\lim_{n\rightarrow\infty}\frac{\alpha-x_n}{\alpha-x_{n-1}}=A~~~,~~~
+\lim_{n\rightarrow\infty}\frac{x_n-x_{n-1}}{x_{n-1}-x_{n-2}}=A~~~,~~~
+\lim_{n\rightarrow\infty}\frac{\alpha-x_n}{x_n-x_{n-1}}=\frac{A}{1-A}
+\]</li>
+</ol>
+<p>
+The quantity $A$ is called the {\it asymptotic convergence factor}, the
+quantity $B=-{}^{10}\log|A|$ is called the {\it asymptotic convergence speed}.
+
+<h3><a name="8.4.3">8.4.3 Aitken extrapolation</a></h3>
+We define
+\[
+A=\lim_{n\rightarrow\infty}\frac{x_n-x_{n-1}}{x_{n-1}-x_{n-2}}
+\]
+$A$ converges to $f'(a)$. Than the row
+\[
+\alpha_n=x_n+\frac{A_n}{1-A_n}(x_n-x_{n-1})
+\]
+will converge to $\alpha$.
+
+<h3><a name="8.4.4">8.4.4 Newton iteration</a></h3>
+There are more ways to transform $F(x)=0$ into $x=f(x)$. One essential
+condition for them all is that in a neighbourhood of a root $\alpha$ holds
+that $|f'(x)|<1$, and the smaller $f'(x)$, the faster the series converges.
+A general method to construct $f(x)$ is:
+\[
+f(x)=x-\Phi(x)F(x)
+\]
+with $\Phi(x)\neq0$ in a neighbourhood of $\alpha$. If one chooses:
+\[
+\Phi(x)=\frac{1}{F'(x)}
+\]
+Than this becomes Newtons method. The iteration formula than becomes:
+\[
+x_n=x_{n-1}-\frac{F(x_{n-1})}{F'(x_{n-1})}
+\]
+Some remarks:
+<p>
+<ul>
+<li>This same result can also be derived with Taylor series.</li>
+<li>Local convergence is often difficult to determine.</li>
+<li>f $x_n$ is far apart from $\alpha$ the convergence can sometimes be very slow.</li>
+<li>The assumption $F'(\alpha)\neq0$ means that $\alpha$ is a simple root.</li>
+</ul>
+<p>
+For $F(x)=x^k-a$ the series becomes:
+\[
+x_n=\frac{1}{k}\left((k-1)x_{n-1}+\frac{a}{x_{n-1}^{k-1}}\right)
+\]
+This is a well-known way to compute roots.
+<p>
+The following code finds the root of a function by means of Newton's method. The
+root lies within the interval {\tt [x1, x2]}. The value is adapted until the
+accuracy is better than {\tt$\pm$eps}. The function {\tt funcd} is a routine
+that returns both the function and its first derivative in point {\tt x} in the
+passed pointers.
+<p>
+<pre>
+float SolveNewton(void (*funcd)(float, float*, float*), float x1, float x2, float eps)
+{
+  int   j, max_iter = 25;
+  float df, dx, f, root;
+
+  root = 0.5 * (x1 + x2);
+  for (j = 1; j <= max_iter; j++)
+  {
+    (*funcd)(root, &f, &df);
+    dx  = f/df;
+    root = -dx;
+    if ( (x1 - root)*(root - x2) < 0.0 )
+    {
+      perror("Jumped out of brackets in SolveNewton.");
+      exit(1);
+    }
+    if ( fabs(dx) < eps ) return root; /* Convergence */
+  }
+  perror("Maximum number of iterations exceeded in SolveNewton.");
+  exit(1);
+  return 0.0;
+}
+</pre>
+
+<h3><a name="8.4.5">8.4.5 The secant method</a></h3>
+This is, in contrast to the two methods discussed previously, a two-step
+method. If two approximations $x_n$ and $x_{n-1}$ exist for a root, than
+one can find the next approximation with
+\[
+x_{n+1}=x_n-F(x_n)\frac{x_n-x_{n-1}}{F(x_n)-F(x_{n-1})}
+\]
+If $F(x_n)$ and $F(x_{n-1})$ have a different sign one is interpolating,
+otherwise extrapolating.
+
+<h2><a name="8.5">8.5 Polynomial interpolation</a></h2>
+A base for polynomials of order $n$ is given by {\it Lagrange's interpolation
+polynomials}:
+\[
+L_j(x)=\prod_{{l=0}\atop{l\neq j}}^n\frac{x-x_l}{x_j-x_l}
+\]
+The following holds:
+<p>
+<ol>
+<li>Each $L_j(x)$ has order $n$,</li>
+<li>$L_j(x_i)=\delta_{ij}$ for $i,j=0,1,...,n$,</li>
+<li>Each polynomial $p(x)$ can be written uniquely as
+\[
+p(x)=\sum_{j=0}^n c_jL_j(x)~~~\mbox{with}~~~c_j=p(x_j)
+\]</li>
+</ol>
+<p>
+This is not a suitable method to calculate the value of a ploynomial in a
+given point $x=a$. To do this, the Horner algorithm is more usable: the
+value $s=\sum_k c_kx^k$ in $x=a$ can be calculated as follows:
+<p>
+<pre>
+float GetPolyValue(float c[], int n)
+{
+  int i; float s = c[n];
+  for (i = n - 1; i >= 0; i--)
+  {
+    s = s * a + c[i];
+  }
+  return s;
+}
+</pre>
+After it is finished <tt>s</tt> has value $p(a)$.
+
+<h2><a name="8.6">8.6 Definite integrals</a></h2>
+Almost all numerical methods are based on a formula of the type:
+\[
+\int\limits_a^bf(x)dx=\sum_{i=0}^nc_if(x_i)+R(f)
+\]
+with $n$, $c_i$ and $x_i$ independent of $f(x)$ and $R(f)$ the error which
+has the form $R(f)=Cf^{(q)}(\xi)$ for all common methods. Here, $\xi\in(a,b)$
+and $q\geq n+1$. Often the points $x_i$ are chosen equidistant.
+Some common formulas are:
+<p>
+<ul>
+<li>The trapezoid rule: $n=1$, $x_0=a$, $x_1=b$, $h=b-a$:
+\[
+\int\limits_a^bf(x)dx=\frac{h}{2}[f(x_0)+f(x_1)]-\frac{h^3}{12}f''(\xi)
+\]</li>
+<li>Simpson's rule: $n=2$, $x_0=a$, $x_1=\frac{1}{2}(a+b)$, $x_2=b$, $h=\frac{1}{2}(b-a)$:
+\[
+\int\limits_a^bf(x)dx=\frac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]-\frac{h^5}{90}f^{(4)}(\xi)
+\]</li>
+<li>The midpoint rule: $n=0$, $x_0=\frac{1}{2}(a+b)$, $h=b-a$:
+\[
+\int\limits_a^bf(x)dx=hf(x_0)+\frac{h^3}{24}f''(\xi)
+\]</li>
+</ul>
+<p>
+The interval will usually be split up and the integration formulas be
+applied to the partial intervals if $f$ varies much within the interval.
+<p>
+A Gaussian integration formula is obtained when one wants to get both the
+coefficients $c_j$ and the points $x_j$ in an integral formula so that the
+integral formula gives exact results for polynomials of an order as high as
+possible. Two examples are:
+<p>
+<ol>
+<li>Gaussian formula with 2 points:
+\[
+\int\limits_{-h}^hf(x)dx=h\left[f\left(\frac{-h}{\sqrt{3}}\right)+f\left(\frac{h}{\sqrt{3}}\right)\right]+\frac{h^5}{135}f^{(4)}(\xi)
+\]</li>
+<li>Gaussian formula with 3 points:
+\[
+\int\limits_{-h}^hf(x)dx=\frac{h}{9}\left[5f\left(-h\sqrt{\mbox{$\frac{3}{5}$}}\right)+8f(0)+5f\left(h\sqrt{\mbox{$\frac{3}{5}$}}\right)\right]+\frac{h^7}{15750}f^{(6)}(\xi)
+\]</li>
+</ol>
+
+<h2><a name="8.7">8.7 Derivatives</a></h2>
+There are several formulas for the numerical calculation of $f'(x)$:
+<p>
+<ul>
+<li>Forward differentiation:
+\[
+f'(x)=\frac{f(x+h)-f(x)}{h}-\frac{1}{2} hf''(\xi)
+\]</li>
+<li>Backward differentiation:
+\[
+f'(x)=\frac{f(x)-f(x-h)}{h}+\frac{1}{2} hf''(\xi)
+\]</li>
+<li>Central differentiation:
+\[
+f'(x)=\frac{f(x+h)-f(x-h)}{2h}-\frac{h^2}{6}f'''(\xi)
+\]</li>
+<li>The approximation is better if more function values are used:
+\[
+f'(x)=\frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}+\frac{h^4}{30}f^{(5)}(\xi)
+\]</li>
+</ul>
+<p>
+There are also formulas for higher derivatives:
+\[
+f''(x)=\frac{-f(x+2h)+16f(x+h)-30f(x)+16f(x-h)-f(x-2h)}{12h^2}+\frac{h^4}{90}f^{(6)}(\xi)
+\]
+
+<h2><a name="8.8">8.8 Differential equations</a></h2>
+We start with the first order DE $y'(x)=f(x,y)$ for $x>x_0$ and initial condition
+$y(x_0)=x_0$. Suppose we find approximations $z_1,z_2,...,z_n$ for $y(x_1)$,
+$y(x_2)$,..., $y(x_n)$. Than we can derive some formulas to obtain
+$z_{n+1}$ as approximation for $y(x_{n+1})$:
+<p>
+<ul>
+<li>Euler (single step, explicit):
+\[
+z_{n+1}=z_n+hf(x_n,z_n)+\frac{h^2}{2}y''(\xi)
+\]</li>
+<li>Midpoint rule (two steps, explicit):
+\[
+z_{n+1}=z_{n-1}+2hf(x_n,z_n)+\frac{h^3}{3}y'''(\xi)
+\]</li>
+<li>Trapezoid rule (single step, implicit):
+\[
+z_{n+1}=z_n+\frac{1}{2} h(f(x_n,z_n)+f(x_{n+1},z_{n+1}))-\frac{h^3}{12}y'''(\xi)
+\]</li>
+</ul>
+<p>
+Runge-Kutta methods are an important class of single-step methods. They
+work so well because the solution $y(x)$ can be written as:
+\[
+y_{n+1}=y_n+hf(\xi_n,y(\xi_n))~~~\mbox{with}~~~\xi_n\in(x_n,x_{n+1})
+\]
+Because $\xi_n$ is unknown some ``measurements'' are done on the
+increment function $k=hf(x,y)$ in well chosen points near the solution.
+Than one takes for $z_{n+1}-z_n$ a weighted average of the measured values.
+One of the possible 3rd order Runge-Kutta methods is given by:
+\begin{eqnarray*}
+k_1&=&hf(x_n,z_n)\\
+k_2&=&hf(x_n+\frac{1}{2} h,z_n+\frac{1}{2} k_1)\\
+k_3&=&hf(x_n+\mbox{$\frac{3}{4}$}h,z_n+\mbox{$\frac{3}{4}$}k_2)\\
+z_{n+1}&=&z_n+\mbox{$\frac{1}{9}$}(2k_1+3k_2+4k_3)
+\end{eqnarray*}
+and the classical 4th order method is:
+\begin{eqnarray*}
+k_1&=&hf(x_n,z_n)\\
+k_2&=&hf(x_n+\frac{1}{2} h,z_n+\frac{1}{2} k_1)\\
+k_3&=&hf(x_n+\frac{1}{2} h,z_n+\frac{1}{2} k_2)\\
+k_4&=&hf(x_n+h,z_n+k_3)\\
+z_{n+1}&=&z_n+\mbox{$\frac{1}{6}$}(k_1+2k_2+2k_3+k_4)
+\end{eqnarray*}
+Often the accuracy is increased by adjusting the stepsize for each step with
+the estimated error. Step doubling is most often used for 4th order Runge-Kutta.
+
+<h2><a name="8.9">8.9 The fast Fourier transform</a></h2>
+The Fourier transform of a function can be approximated when some discrete
+points are known. Suppose we have $N$ successive samples $h_k=h(t_k)$ with
+$t_k=k\Delta$, $k=0,1,2,...,N-1$. Than the discrete Fourier transform is
+given by:
+\[
+H_n=\sum_{k=0}^{N-1}h_k{\rm e}^{2\pi ikn/N}
+\]
+and the inverse Fourier transform by
+\[
+h_k=\frac{1}{N}\sum_{n=0}^{N-1}H_n{\rm e}^{-2\pi ikn/N}
+\]
+This operation is order $N^2$. It can be faster, order $N\cdot ^2\log(N)$,
+with the fast Fourier transform. The basic idea is that a Fourier transform
+of length $N$ can be rewritten as the sum of two discrete Fourier transforms,
+each of length $N/2$. One is formed from the even-numbered points of
+the original $N$, the other from the odd-numbered points.
+<p>
+This can be implemented as follows.
+The array <tt>data[1..2*nn]</tt> contains on the odd positions the real and on the
+even positions the imaginary parts of the input data: <tt>data[1]</tt>
+is the real part and <tt>data[2]</tt> the imaginary part of $f_0$, etc. The
+next routine replaces the values in <tt>data</tt> by their discrete Fourier
+transformed values if <tt>isign</tt> $=1$, and by their inverse transformed values
+if {\tt isign} $=-1$. <tt>nn</tt> must be a power of 2.
+<p>
+<pre>
+#include &lt;math.h&gt;
+#define SWAP(a,b) tempr=(a);(a)=(b);(b)=tempr
+
+void FourierTransform(float data[], unsigned long nn, int isign)
+{
+  unsigned long n, mmax, m, j, istep, i;
+  double        wtemp, wr, wpr, wpi, wi, theta;
+  float         tempr, tempi;
+
+  n = nn << 1;
+  j = 1;
+  for (i = 1; i < n; i += 2)
+  {
+    if ( j > i )
+    {
+      SWAP(data[j], data[i]);
+      SWAP(data[j+1], data[i+1]);
+    }
+    m = n >> 1;
+    while ( m >= 2 && j > m )
+    {
+      j -= m;
+      m >>= 1;
+    }
+    j += m;
+  }
+  mmax = 2;
+  while ( n > mmax ) /* Outermost loop, is executed log2(nn) times */
+  {
+    istep = mmax << 1;
+    theta = isign * (6.28318530717959/mmax);
+    wtemp = sin(0.5 * theta);
+    wpr   = -2.0 * wtemp * wtemp;
+    wpi   = sin(theta);
+    wr    = 1.0;
+    wi    = 0.0;
+    for (m = 1; m < mmax; m += 2)
+    {
+      for (i = m; i <= n; i += istep) /* Danielson-Lanczos equation */
+      {
+        j          = i + mmax;
+        tempr      = wr * data[j]   - wi * data[j+1];
+        tempi      = wr * data[j+1] + wi * data[j];
+        data[j]    = data[i]   - tempr;
+        data[j+1]  = data[i+1] - tempi;
+        data[i]   += tempr;
+        data[i+1] += tempi;
+      }
+      wr = (wtemp = wr) * wpr - wi * wpi + wr;
+      wi = wi * wpr + wtemp * wpi + wi;
+    }
+    mmax = istep;
+  }
+}
+</pre>
+
+</body>
+</head>

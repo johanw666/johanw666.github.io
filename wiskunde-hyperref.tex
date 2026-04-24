@@ -1,0 +1,3511 @@
+\documentclass[twoside]{report}
+\usepackage{times}
+\usepackage{fancyheadings,a4wide}
+\usepackage{dutch}
+\usepackage{hyperref}
+\parindent 0pt
+
+\voffset 0mm
+\hoffset 0mm
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\textwidth 16.1925cm
+
+\setlength{\headrulewidth}{0.5pt}
+\setlength{\footrulewidth}{0.5pt}
+\unitlength 1mm
+
+\makeatletter
+
+% changes to report.sty
+
+\def\@makechapterhead#1{{\parindent 0pt\raggedright
+\ifnum\c@secnumdepth >\m@ne\huge\bf\@chapapp{} \thechapter\par
+\vskip 18pt\fi\Huge\bf #1\par
+\nobreak\vskip 40pt}}
+
+\def\@makeschapterhead#1{{\parindent 0pt\raggedright
+\Huge\bf #1\par
+\nobreak\vskip 40pt}}
+
+\makeatother
+
+\begin{document}
+\typeout{Wiskundig formularium door J.C.A. Wevers <johanw@vulcan.xs4all.nl>}
+
+\newfont{\sfd}{cmssdc10 scaled\magstep0}
+\newfont{\cmu}{cmu10 scaled\magstep0}
+
+\def\npar{\par\medskip}
+%\def\vec#1{\mbox{\boldmath$#1$\unboldmath}} % Uncomment this when you don't like the arrows
+\def\vvec#1{\vec{#1}\,}
+\def\e#1{\vec{e}_{\rm #1}}
+\def\ee#1{\vec{e}_{#1}}
+\def\Q#1#2{\frac{\partial #1}{\partial #2}}
+\def\QQ#1#2{\frac{\partial^2 #1}{\partial #2^2}}
+\def\Qc#1#2#3{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
+\def\RR{I\hspace{-1mm}R}
+\def\NN{I\hspace{-1mm}N}
+\def\II{I\hspace{-1mm}I}
+\def\KK{I\hspace{-1mm}K}
+\def\MM{I\hspace{-1mm}M}
+\def\ZZ{Z\hspace{-1ex}Z}
+\def\CC{C\hspace*{-1.2ex}\rule{0.4pt}{1.5ex}\hspace*{1.2ex}}
+\def\dddot#1{\stackrel{...}{#1}}
+\def\half{\mbox{$\frac{1}{2}$}}
+\def\kwart{\mbox{$\frac{1}{4}$}}
+\def\av#1{\left\langle #1 \right\rangle}
+\def\oiint{\int\hspace{-2ex}\int\hspace{-3ex}\bigcirc~}
+\def\iint{\int\hspace{-1.5ex}\int}
+\def\iiint{\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int}
+
+\pagestyle{fancyplain}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\cmu Wiskundig formularium door J.C.A. Wevers}}
+\rhead[\fancyplain{}{\cmu Wiskundig formularium door J.C.A. Wevers}]{\fancyplain{}{\thepage}}
+\cfoot{\fancyplain{\thepage}{}}
+
+\thispagestyle{empty}
+\hrule
+\rule{.4pt}{22.35cm}\hspace*{161.62mm}\rule{.4pt}{22.35cm}
+\vspace*{-17cm}
+\begin{center}
+\Huge
+\fbox{\fbox{Wiskundig Formularium}}
+\end{center}
+\vspace{2cm}
+\centerline{\Large\bf Door ir. J.C.A. Wevers}
+\vfill
+\hrule
+\newpage
+\thispagestyle{empty}
+\copyright~1998, 2013~~J.C.A. Wevers\hfill Versie: 2 september 2013
+\npar
+\hrule
+\par
+\bigskip
+Geachte lezer,
+\npar
+Dit document is een 66 pagina's tellend wiskundig formuleboek gericht
+op fysici en ingenieurs. Het is bedoeld als naslagwerk voor iedereen die
+veel formules op moet zoeken.
+\npar
+Dit document is tevens te verkrijgen bij de auteur, Johan Wevers ({\tt johanw@vulcan.xs4all.nl}).
+\npar
+Het is tevens te vinden op het WWW op {\tt http://www.xs4all.nl/\~{}johanw/index.html}.
+\npar
+De Creative Commons Naamsvermelding 3.0 Nederland Licentie is van toepassing op
+dit werk.
+Ga naar {\tt http://creativecommons.org/licenses/by/3.0/nl/} of stuur een brief naar Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, VS om deze licentie te bekijken.
+\npar
+De C code voor de nulpuntsberekening volgens Newton en de FFT in hoofdstuk
+\ref{chap:num} komen uit ``{\it Numerical Recipes in C}~'', 2nd Edition,
+ISBN 0-521-43108-5.
+\npar
+Het Wiskundig Formularium werd gemaakt met behulp van te\TeX\ en \LaTeX\ versie 2.09.
+\npar
+Indien U de layout waarin vectoren vet weergegeven worden prefereert kunt U
+het commentaar voor het alternatieve {\tt $\backslash$vec} commando in deze
+file weghalen en hercompileren.
+\npar
+Ik houd me altijd aanbevolen voor opmerkingen en suggesties over het
+Wiskundig Formularium.
+\npar
+Johan Wevers
+\vfill
+\hrule
+
+\newpage
+
+\pagenumbering{Roman}
+\addcontentsline{toc}{chapter}{Inhoudsopgave}
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\cmu Hoofdstuk \thechapter: \leftmark}}
+\rhead[\fancyplain{}{\cmu Wiskundig Formularium door ir. J.C.A. Wevers}]{\fancyplain{}{\thepage}}
+
+\chapter{Basiswiskunde}
+\typeout{Basiswiskunde}
+\section{Goniometrische functies}
+Voor de goniometrische verhoudingen van een punt $p$ op de eenheidscirkel geldt:
+\[
+\cos(\phi)=x_p~~,~~\sin(\phi)=y_p~~,~~\tan(\phi)=\frac{y_p}{x_p}
+\]
+$\sin^2(x)+\cos^2(x)=1$ en $\cos^{-2}(x)=1+\tan^2(x)$.
+\[
+\cos(a\pm b)=\cos(a)\cos(b)\mp\sin(a)\sin(b)~~,~~
+\sin(a\pm b)=\sin(a)\cos(b)\pm\cos(a)\sin(b)
+\]
+\[
+\tan(a\pm b)=\frac{\tan(a)\pm\tan(b)}{1\mp\tan(a)\tan(b)}
+\]
+De {\bf somformules} zijn:
+\begin{eqnarray*}
+\sin(p)+\sin(q)&=&2\sin(\half(p+q))\cos(\half(p-q))\\
+\sin(p)-\sin(q)&=&2\cos(\half(p+q))\sin(\half(p-q))\\
+\cos(p)+\cos(q)&=&2\cos(\half(p+q))\cos(\half(p-q))\\
+\cos(p)-\cos(q)&=&-2\sin(\half(p+q))\sin(\half(p-q))\\
+\end{eqnarray*}
+Hieruit volgt:
+\begin{eqnarray*}
+2\cos^2(x)=1+\cos(2x)   &~~,~~&2\sin^2(x)=1-\cos(2x)\\
+\sin(\pi-x)=\sin(x)     &~~,~~&\cos(\pi-x)=-\cos(x)\\
+\sin(\half\pi-x)=\cos(x)&~~,~~&\cos(\half\pi-x)=\sin(x)
+\end{eqnarray*}
+{\bf Conclusies uit Gelijkheden}:
+\begin{eqnarray*}
+\underline{\sin(x)=\sin(a)}&~~\Rightarrow~~&x=a\pm2k\pi\mbox{ of }x=(\pi-a)\pm2k\pi,~~k\in\NN\\
+\underline{\cos(x)=\cos(a)}&~~\Rightarrow~~&x=a\pm2k\pi\mbox{ of }x=-a\pm2k\pi\\
+\underline{\tan(x)=\tan(a)}&~~\Rightarrow~~&x=a\pm k\pi\mbox{ \'en }x\neq\frac{\pi}{2}\pm k\pi
+\end{eqnarray*}
+Tussen de inverse functies gelden de volgende relaties:
+\[
+\arctan(x)=\arcsin\left(\frac{x}{\sqrt{x^2+1}}\right)=\arccos\left(\frac{1}{\sqrt{x^2+1}}\right)~~,~~
+\sin(\arccos(x))=\sqrt{1-x^2}
+\]
+
+\section{Hyperbolische functies}
+De hyperbolische functies zijn gedefinieerd door:
+\[
+\sinh(x)=\frac{{\rm e}^x-{\rm e}^{-x}}{2}~~,~~~\cosh(x)=\frac{{\rm e}^x+{\rm e}^{-x}}{2}~~,~~~\tanh(x)=\frac{\sinh(x)}{\cosh(x)}
+\]
+Hieruit volgt dat $\cosh^2(x)-\sinh^2(x)=1$. Verder geldt:
+\[
+{\rm arsinh}(x)=\ln|x+\sqrt{x^2+1}|~~~,~~~{\rm arcosh}(x)={\rm arsinh}(\sqrt{x^2-1})
+\]
+
+\section{Infinitesimaalrekening}
+De definitie van de afgeleide functie is:
+\[
+\frac{df}{dx}=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}
+\]
+Rekenregels voor afgeleiden zijn:
+\[
+d(x\pm y)=dx\pm dy~~,~~d(xy)=xdy+ydx~~,~~d\left(\frac{x}{y}\right)=\frac{ydx-xdy}{y^2}
+\]
+Voor de afgeleide van de {\it inverse functie} $f^{\rm inv}(y)$, gedefinieerd
+door $f^{\rm inv}(f(x))=x$, geldt in punt $P=(x,f(x))$:
+\[
+\left(\frac{df^{\rm inv}(y)}{dy}\right)_P\cdot\left(\frac{df(x)}{dx}\right)_P=1
+\]
+Kettingregel: als $f=f(g(x))$, dan geldt
+\[
+\frac{df}{dx}=\frac{df}{dg}\frac{dg}{dx}
+\]
+Verder geldt voor afgeleiden van producten van functies:
+\[
+(f\cdot g)^{(n)}=\sum\limits_{k=0}^n{n\choose k}f^{(n-k)}\cdot g^{(k)}
+\]
+Voor de {\it primitieve functie} $F(x)$ geldt: $F'(x)=f(x)$.
+Een overzicht van afgeleiden en primitieven is:
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+\boldmath$y=f(x)$\unboldmath&\boldmath$dy/dx=f'(x)$\unboldmath&\boldmath$\int f(x)dx$\rule{0pt}{12pt}\rule[-7pt]{0pt}{0pt}\unboldmath\\
+\hline
+\hline
+$ax^n$&$anx^{n-1}$&$a(n+1)^{-1}x^{n+1}$\rule{0pt}{12pt}\\
+$1/x$&$-x^{-2}$&$\ln|x|$\\
+$a$&$0$&$ax$\\
+\hline
+$a^x$&$a^x\ln(a)$&$a^x/\ln(a)$\rule{0pt}{12pt}\\
+${\rm e}^x$&${\rm e}^x$&${\rm e}^x$\\
+$^a\log(x)$&$(x\ln(a))^{-1}$&$(x\ln(x)-x)/\ln(a)$\\
+$\ln(x)$&$1/x$&$x\ln(x)-x$\\
+\hline
+$\sin(x)$&$\cos(x)$&$-\cos(x)$\\
+$\cos(x)$&$-\sin(x)$&$\sin(x)$\\
+$\tan(x)$&$\cos^{-2}(x)$&$-\ln|\cos(x)|$\\
+$\sin^{-1}(x)$&$-\sin^{-2}(x)\cos(x)$&$\ln|\tan(\half x)|$\\
+$\sinh(x)$&$\cosh(x)$&$\cosh(x)$\\
+$\cosh(x)$&$\sinh(x)$&$\sinh(x)$\\
+$\arcsin(x)$&$1/\sqrt{1-x^2}$&$x\arcsin(x)+\sqrt{1-x^2}$\\
+$\arccos(x)$&$-1/\sqrt{1-x^2}$&$x\arccos(x)-\sqrt{1-x^2}$\\
+$\arctan(x)$&$(1+x^2)^{-1}$&$x\arctan(x)-\half\ln(1+x^2)$\rule[-7pt]{0pt}{0pt}\\
+\hline
+$(a+x^2)^{-1/2}$&$-x(a+x^2)^{-3/2}$&$\ln|x+\sqrt{a+x^2}|$\rule{0pt}{12pt}\\
+$(a^2-x^2)^{-1}$&$2x(a^2+x^2)^{-2}$&$\displaystyle\frac{1}{2a}\ln|(a+x)/(a-x)|$\rule[-10pt]{0pt}{23pt}\\
+\hline
+\end{tabular}
+\end{center}
+De {\it kromtestraal} $\rho$ van een kromme is gegeven door:
+$\displaystyle\rho=\frac{(1+(y')^2)^{3/2}}{|y''|}$
+\npar
+Stelling van De 'l H\^opital: als $f(a)=0$ en $g(a)=0$, dan is
+$\displaystyle\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}$
+
+\section{Limieten}
+\[
+\lim_{x\rightarrow0}\frac{\sin(x)}{x}=1~~,~~
+\lim_{x\rightarrow0}\frac{{\rm e}^x-1}{x}=1~~,~~
+\lim_{x\rightarrow0}\frac{\tan(x)}{x}=1~~,~~
+\lim_{k\rightarrow0}(1+k)^{1/k}={\rm e}~~,~~
+\lim_{x\rightarrow\infty}\left(1+\frac{n}{x}\right)^x={\rm e}^n
+\]
+\[
+\lim_{x\downarrow0}x^a\ln(x)=0~~,~~
+\lim_{x\rightarrow\infty}\frac{\ln^p(x)}{x^a}=0~~,~~
+\lim_{x\rightarrow0}\frac{\ln(x+a)}{x}=a~~,~~
+\lim_{x\rightarrow\infty}\frac{x^p}{a^x}=0~~\mbox{als }|a|>1.
+\]
+\[
+\lim_{x\rightarrow0}\left(a^{1/x}-1\right)=\ln(a)~~,~~
+\lim_{x\rightarrow0}\frac{\arcsin(x)}{x}=1~~,~~
+\lim_{x\rightarrow\infty}\sqrt[x]{x}=1
+\]
+
+\section{Complexe getallen en quaternionen}
+\subsection{Complexe getallen}
+Het complexe getal $z=a+bi$ met $a$ en $b\in\RR$. $a$ is het {\it re\"eele
+deel}, $b$ het {\it imaginaire deel} van $z$. $|z|=\sqrt{a^2+b^2}$. Per
+definitie geldt: $i^2=-1$. Elk complex getal is te schrijven als
+$z=|z|\exp(i\varphi)$, met $\tan(\varphi)=b/a$. De {\it complex geconjugeerde}
+van $z$ is gedefinieerd als $\overline{z}=z^*:=a-bi$. Er geldt verder:
+\begin{eqnarray*}
+(a+bi)(c+di)&=&(ac-bd)+i(ad+bc)\\
+(a+bi)+(c+di)&=&a+c+i(b+d)\\
+\frac{a+bi}{c+di}&=&\frac{(ac+bd)+i(bc-ad)}{c^2+d^2}
+\end{eqnarray*}
+Men kan de goniometrische functies schrijven als complexe e-machten:
+\begin{eqnarray*}
+\sin(x)&=&\frac{1}{2i}({\rm e}^{ix}-{\rm e}^{-ix})\\
+\cos(x)&=&\frac{1}{2}({\rm e}^{ix}+{\rm e}^{-ix})
+\end{eqnarray*}
+Hieruit volgt $\cos(ix)=\cosh(x)$ en $\sin(ix)=i\sinh(x)$. Verder volgt
+hieruit dat ${\rm e}^{\pm ix}=\cos(x)\pm i\sin(x)$, dus
+${\rm e}^{iz}\neq0\forall z$. Ook volgt hieruit de stelling van De Moivre:
+$(\cos(\varphi)+i\sin(\varphi))^n=\cos(n\varphi)+i\sin(n\varphi)$.
+\npar
+Producten en quoti\"enten van complexe getallen zijn te schrijven als:
+\begin{eqnarray*}
+z_1\cdot z_2&=&|z_1|\cdot|z_2|(\cos(\varphi_1+\varphi_2)+i\sin(\varphi_1+\varphi_2))\\
+\frac{z_1}{z_2}&=&\frac{|z_1|}{|z_2|}(\cos(\varphi_1-\varphi_2)+i\sin(\varphi_1-\varphi_2))
+\end{eqnarray*}
+Er is af te leiden dat geldt:
+\[
+|z_1+z_2|\leq|z_1|+|z_2|~~,~~|z_1-z_2|\geq|~|z_1|-|z_2|~|
+\]
+En uit $z=r\exp(i\theta)$ volgt: $\ln(z)=\ln(r)+i\theta$, $\ln(z)=\ln(z)\pm2n\pi i$.
+
+\subsection{Quaternionen}
+Quaternionen zijn gedefinieerd als: $z=a+bi+cj+dk$, met $a,b,c,d\in\RR$.
+Er geldt: $i^2=j^2=k^2=-1$. De producten van $i,j,k$ onderling zijn gegeven
+door $ij=-ji=k$, $jk=-kj=i$ en $ki=-ik=j$.
+
+\section{Meetkunde}
+\subsection{Driehoeken}
+Wanneer in een driehoek $\alpha$ de hoek is tegenover zijde $a$, $\beta$ de
+hoek tegenover zijde $b$ en $\gamma$ de hoek is tegenover zijde $c$ luidt de
+sinusregel:
+\[
+\frac{a}{\sin(\alpha)}=\frac{b}{\sin(\beta)}=\frac{c}{\sin(\gamma)}
+\]
+en de cosinusregel: $a^2=b^2+c^2-2bc\cos(\alpha)$. In elke driehoek geldt dat
+$\alpha+\beta+\gamma=180^\circ$.
+\npar
+Verder geldt:
+\[
+\frac{\tan(\half(\alpha+\beta))}{\tan(\half(\alpha-\beta))}=\frac{a+b}{a-b}
+\]
+De oppervlakte van een driehoek is
+$\half ab\sin(\gamma)=\half ah_a=\sqrt{s(s-a)(s-b)(s-c)}$ met $h_a$ de
+hoogtelijn op zijde $a$ en $s=\half(a+b+c)$.
+
+\subsection{Krommen}
+{\bf Cyclo\"{\i}de}: indien een cirkel met straal $a$ rolt over een
+lijn geldt voor de baan van een punt op de cirkel de parametervergelijking:
+$x=a(t+\sin(t))$, $y=a(1+\cos(t))$.
+\npar
+{\bf Epicyclo\"{\i}de}: indien een kleine cirkel met straal $a$ rolt over een
+grote cirkel met straal $R$ geldt voor de baan van een punt op de kleine
+cirkel de parametervergelijking:
+\[
+x=a\sin\left(\frac{R+a}{a}t\right)+(R+a)\sin(t)~~,~~
+y=a\cos\left(\frac{R+a}{a}t\right)+(R+a)\cos(t)
+\]
+{\bf Hypocyclo\"{\i}de}: indien een kleine cirkel met straal $a$ rolt
+binnenin een grote cirkel met straal $R$ geldt voor de baan van een punt op
+de kleine cirkel de parametervergelijking:
+\[
+x=a\sin\left(\frac{R-a}{a}t\right)+(R-a)\sin(t)~~,~~
+y=-a\cos\left(\frac{R-a}{a}t\right)+(R-a)\cos(t)
+\]
+Een hypocyclo\"{\i}de met $a=R$ heet een {\bf cardio\"{\i}de}. In
+poolco\"ordinaten is deze gegeven door de vergelijking:
+$r(\varphi)=2a[1-\cos(\varphi)]$.
+
+\section{Vectoren}
+Het {\it inproduct} is gedefinieerd door:
+$\displaystyle\vec{a}\cdot\vec{b}=\sum_i a_ib_i=|\vvec{a}|\cdot|\vvec{b}|\cos(\varphi)$
+\npar
+waarbij $\varphi$ de hoek tussen $\vec{a}$ en $\vec{b}$ is. Het
+{\it uitproduct} is in $\RR^3$ gedefinieerd door:
+\[
+\vec{a}\times\vec{b}=\left(\begin{array}{c}
+a_yb_z-a_zb_y\\
+a_zb_x-a_xb_z\\
+a_xb_y-a_yb_x\end{array}\right)=
+\left|\begin{array}{ccc}
+\vec{e}_x&\vec{e}_y&\vec{e}_z\\
+a_x&a_y&a_z\\
+b_x&b_y&b_z\end{array}\right|
+\]
+Verder geldt: $|\vec{a}\times\vvec{b}|=|\vvec{a}|\cdot|\vvec{b}|\sin(\varphi)$, en
+$\vec{a}\times(\vec{b}\times\vvec{c})=(\vec{a}\cdot\vvec{c})\vec{b}-(\vec{a}\cdot\vvec{b})\vec{c}$.
+
+\section{Reeksen}
+\subsection{Ontwikkelingen}
+Het Binomium van Newton is: $\displaystyle (a+b)^n=\sum_{k=0}^n{n\choose k}a^{n-k}b^k$,
+waarin $\displaystyle{n\choose k}:=\frac{n!}{k!(n-k)!}$.
+\npar
+Door de reeksen $\sum\limits_{k=0}^n r^k$ en $r\sum\limits_{k=0}^n r^k$ van
+elkaar af te trekken vindt men
+\[
+\sum_{k=0}^n r^k=\frac{1-r^{n+1}}{1-r}
+\]
+dit geeft voor $|r|<1$ de {\it geometrische reeks}:
+$\displaystyle\sum_{k=0}^\infty r^k=\frac{1}{1-r}$.
+\npar
+De {\it rekenkundige reeks} is gegeven door:
+$\displaystyle\sum_{n=0}^N(a+nV)=a(N+1)+\half N(N+1)V$.
+\npar
+De ontwikkeling van een functie rondom het punt $a$ is gegeven door de
+{\it Taylorreeks}:
+\[
+f(x)=f(a)+(x-a)f'(a)+\frac{(x-a)^2}{2}f''(a)+\cdots+\frac{(x-a)^n}{n!}f^{(n)}(a)+R
+\]
+waarin de restterm gegeven is door:
+\[
+R_n(h)=(1-\theta)^n\frac{h^n}{n!}f^{(n+1)}(\theta h)
+\]
+en voldoet aan:
+\[
+\frac{mh^{n+1}}{(n+1)!}\leq R_n(h)\leq\frac{Mh^{n+1}}{(n+1)!}
+\]
+Hieruit kan men afleiden dat:
+\[
+(1-x)^\alpha=\sum_{n=0}^\infty{\alpha\choose n}x^n
+\]
+Er is af te leiden dat:
+\[
+\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}~,~~
+\sum_{n=1}^\infty\frac{1}{n^4}=\frac{\pi^4}{90}~,~~
+\sum_{n=1}^\infty\frac{1}{n^6}=\frac{\pi^6}{945}
+\]
+\[
+\sum_{k=1}^nk^2=\mbox{$\frac{1}{6}$}n(n+1)(2n+1)~,~~
+\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n^2}=\frac{\pi^2}{12}~,~~
+\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}=\ln(2)
+\]
+\[
+\sum_{n=1}^\infty\frac{1}{4n^2-1}=\mbox{$\frac{1}{2}$}~,~~
+\sum_{n=1}^\infty\frac{1}{(2n-1)^2}=\frac{\pi^2}{8}~,~~
+\sum_{n=1}^\infty\frac{1}{(2n-1)^4}=\frac{\pi^4}{96}~,~~
+\sum_{n=1}^\infty\frac{(-1)^{n+1}}{(2n-1)^3}=\frac{\pi^3}{32}
+\]
+
+\subsection{Convergentie en divergentie van reeksen}
+Als $\sum\limits_n|u_n|$ convergeert, convergeert $\sum\limits_n u_n$ ook.
+\npar
+Als $\lim\limits_{n\rightarrow\infty}u_n\neq0$ divergeert $\sum\limits_n u_n$.
+\npar
+Een alternerende reeks waarvan de termen in absolute waarde monotoon tot 0
+naderen is convergent (Leibniz).
+\npar
+Als $\int_p^{\infty}f(x)dx<\infty$ dan convergeert $\sum\limits_n f_n$.
+\npar
+Als $u_n>0~\forall n$ dan convergeert $\sum\limits_n u_n$ \'als
+$\sum\limits_n\ln(u_n+1)$ convergeert.
+\npar
+Als $u_n=c_nx^n$ geldt voor de convergentiestraal $\rho$ van
+$\sum\limits_n u_n$:
+$\displaystyle\frac{1}{\rho}=\lim_{n\rightarrow\infty}\sqrt[n]{|c_n|}=
+\lim_{n\rightarrow\infty}\left|\frac{c_{n+1}}{c_n}\right|$.
+\npar
+De reeks $\displaystyle\sum_{n=1}^\infty \frac{1}{n^p}$ is convergent als
+$p>1$ en divergent als $p\leq1$.
+\npar
+Als geldt:
+$\displaystyle\lim_{n\rightarrow\infty}\frac{u_n}{v_n}=p$,
+dan geldt: als $p>0$ zijn $\sum\limits_{n}u_n$ en $\sum\limits_{n}v_n$ beide
+divergent of beide convergent, als $p=0$ geldt: als $\sum\limits_{n}v_n$
+convergeert, d\'an convergeert $\sum\limits_{n}u_n$ ook.
+\npar
+Wanneer $L$ gedefinieerd wordt door:
+$\displaystyle L=\lim_{n\rightarrow\infty}\sqrt[n]{|n_n|}$ \'of door:
+$\displaystyle L=\lim_{n\rightarrow\infty}\left|\frac{u_{n+1}}{u_n}\right|$,
+dan is $\sum\limits_{n}u_n$ divergent als $L>1$ en convergent als $L<1$.
+
+\subsection{Convergentie en divergentie van functies}
+\label{sec:convf}
+$f(x)$ is continu in $x=a$ dan en slechts dan als de boven- en onderlimiet
+gelijk zijn: $\lim\limits_{x\uparrow a}f(x)=\lim\limits_{x\downarrow a}f(x)$.
+Dit wordt wel genoteerd als: $f(a^-)=f(a^+)$.
+\npar
+Indien $f(x)$ continu is in $a$ {\it en}:
+$\lim\limits_{x\uparrow a}f'(x)=\lim\limits_{x\downarrow a}f'(x)$,
+{\it dan} is $f(x)$ differentieerbaar in $x=a$.
+\npar
+We defini\"eren: $\|f\|_W:={\rm sup}(|f(x)|~|x\in W)$ en $\lim\limits_{x\rightarrow\infty}f_n(x)=f(x)$.
+Dan geldt: $\{f_n\}$ is uniform convergent als $\lim\limits_{n\rightarrow\infty}\|f_n-f\|=0$,
+of: $\forall(\varepsilon>0)\exists(N)\forall(n\geq N)\|f_n-f\|<\varepsilon$.
+\npar
+De toets van Weierstrass: als $\sum\|u_n\|_W$ convergent is, dan is $\sum u_n$
+uniform convergent.
+\npar
+We defini\"eren $\displaystyle S(x)=\sum_{n=N}^\infty u_n(x)$ en
+$\displaystyle F(y)=\int\limits_a^bf(x,y)dx:=F$. Dan is te bewijzen dat:
+\begin{center}
+\begin{tabular}{||l|l|p{5cm}|p{6cm}||}
+\hline
+\bf Stelling&\bf Voor&\bf Eisen op $W$&\bf Dan geldt op $W$\\
+\hline
+\hline
+ &rijen    &$f_n$ continu,                              &$f$ is continu\\
+ &         &$\{f_n\}$ uniform convergent                &\\
+\cline{2-4}
+C&reeksen  &$S(x)$ uniform convergent,                  &$S$ is continu\\
+ &         &$u_n$ continu                               &\\
+\cline{2-4}
+ &integraal&$f$ is continu                              &$F$ is continu\\
+\hline
+ &rijen    &$f_n$ integreerbaar,                        &$f_n$ is integreerbaar,\\
+ &         &$\{f_n\}$ uniform convergent                &$\int f(x)dx=\lim\limits_{n\rightarrow\infty}\int f_ndx$\rule[-10pt]{0pt}{0pt}\\
+\cline{2-4}
+I&reeksen  &$S(x)$ is uniform convergent,               &$S$ integreerbaar, $\int Sdx=\sum\int u_ndx$\rule{0pt}{13pt}\\
+ &         &$u_n$ is integreerbaar                      &\\
+\cline{2-4}
+ &integraal&$f$ is continu                              &$\int Fdy=\int\hspace*{-1.5mm}\int f(x,y)dxdy$\rule{0pt}{13pt}\rule[-8pt]{0pt}{0pt}\\
+\hline
+ &rijen    &$\{f_n\}\in$C$^{-1}$; $\{f_n'\}$ unif. conv.$\rightarrow\phi$&$f'=\phi(x)$\rule{0pt}{13pt}\rule[-7pt]{0pt}{0pt}\\
+\cline{2-4}
+D&reeksen  &$u_n\in$C$^{-1}$; $\sum u_n$ conv; $\sum u_n'$ u.c.&$S'(x)=\sum u_n'(x)$\rule{0pt}{13pt}\rule[-7pt]{0pt}{0pt}\\
+\cline{2-4}
+ &integraal&$\partial f/\partial y$ continu             &$F_y=\int f_y(x,y)dx$\rule{0pt}{13pt}\rule[-7pt]{0pt}{0pt}\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Producten en quoti\"enten}
+Voor $a,b,c,d\in\RR$ gelden:\\
+De {\bf distributieve eigenschap}: $(a+b)(c+d)=ac+ad+bc+bd$\\
+De {\bf associatieve eigenschap}: $a(bc)=b(ac)=c(ab)$ en $a(b+c)=ab+ac$\\
+De {\bf commutatieve eigenschap}: $a+b=b+a$, $ab=ba$.
+\npar
+Verder geldt:
+\[
+\frac{a^{2n}-b^{2n}}{a\pm b}=a^{2n-1}\pm a^{2n-2}b+a^{2n-3}b^2\pm\cdots\pm b^{2n-1}~~~,~~~
+\frac{a^{2n+1}-b^{2n+1}}{a+b}=\sum_{k=0}^n a^{2n-k}b^{2k}
+\]
+\[
+(a\pm b)(a^2\pm ab+b^2)=a^3\pm b^3~,~~(a+b)(a-b)=a^2+b^2~,~~
+\frac{a^3\pm b^3}{a+b}=a^2\mp ba+b^2
+\]
+
+\section{Logaritmen}
+{\bf Definitie}: $^a\log(x)=b\Leftrightarrow a^b=x$. Voor logaritmen met
+grondtal $e$ schrijft men $\ln(x)$.
+\npar
+{\bf Rekenregels}: $\log(x^n)=n\log(x)$, $\log(a)+\log(b)=\log(ab)$,
+$\log(a)-\log(b)=\log(a/b)$.
+
+\section{Polynomen}
+Vergelijkingen van de vorm
+\[
+\sum_{k=0}^n a_kx^k=0
+\]
+hebben $n$ nulpunten die eventueel samenvallen. Ieder polynoom $p(z)$ met
+graad $n\geq1$ heeft tenminste \'e\'en nulpunt in $\CC$.
+Als alle $a_k\in\RR$, dan geldt: is $x=p$ met $p\in\CC$ een nulpunt, dan is
+$p^*$ ook een nulpunt. Polynomen tot en met graad 4 zijn algemeen analytisch
+oplosbaar, voor polynomen met graad $\geq5$ bestaat geen algemeen geldige
+analytische oplossing.
+\npar
+Voor $a,b,c\in\RR$ en $a\neq0$ geldt:
+de 2e graads vergelijking $ax^2+bx+c=0$ heeft als algemene oplossing:
+\[
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\]
+Voor $a,b,c,d\in\RR$ en $a\neq0$ geldt:
+de 3e graads vergelijking $ax^3+bx^2+cx+d=0$ heeft als algemene analytische
+oplossing:
+\begin{eqnarray*}
+x_1&=&~K-\frac{3ac-b^2}{9a^2K}-\frac{b}{3a}\\
+x_2=x_3^*&=&-\frac{K}{2}+\frac{3ac-b^2}{18a^2K}-\frac{b}{3a}+i\frac{\sqrt{3}}{2}\left(K+\frac{3ac-b^2}{9a^2K}\right)\\
+\end{eqnarray*}
+met $\displaystyle K=\left(\frac{9abc-27da^2-2b^3}{54a^3}+
+\frac{\sqrt{3}\,\sqrt{4ac^3-c^2b^2-18abcd+27a^2d^2+4db^3}}{18a^2}\right)^{1/3}$
+
+\section{Priemgetallen}
+Een {\it priemgetal} is een getal $\in\NN$ dat slechts deelbaar is door
+zichzelf en door 1. Er zijn $\infty$ veel priemgetallen. Bewijs: stel dat
+de verzameling priemgetallen $P$ eindig is, vorm dan het getal
+$q=1+\prod\limits_{p\in P}p$, dan geldt $q=1(p)$ en $q$ kan dus niet als
+product van priemgetallen uit $P$ geschreven worden. Dit is een tegenspraak.
+\npar
+Indien $\pi(x)$ het aantal priemgetallen $\leq x$ is, dan geldt:
+\[
+\lim_{x\rightarrow\infty}\frac{\pi(x)}{x/\ln(x)}=1~~~\mbox{en}~~~
+\lim_{x\rightarrow\infty}\frac{\pi(x)}{\int\limits_2^x\frac{dt}{\ln(t)}}=1
+\]
+Voor iedere $N\geq2$ is er een priemgetal tussen $N$ en $2N$.
+\npar
+De getallen $F_k:=2^k+1$ met $k\in\NN$ heten de {\it getallen van Fermat}.
+Hiertussen zitten vele priemgetallen.
+\npar
+De getallen $M_k:=2^k-1$ heten de {\it getallen van Mersenne}. Men stuit hierop
+bij het opsporen van {\it perfecte getallen}, d.w.z. getallen $n\in\NN$ die
+tevens de som van hun verschillende delers zijn, bv.\ $6=1+2+3$. Voor $k<12000$
+zijn er 23 priemgetallen van Mersenne: voor $k\in\{2,3,5,7,13,17,19,31,61,89,
+107,127,521,607,$ $1279,2203,2281,3217,4253,4423,9689,9941,11213\}$.
+\npar
+Om te bepalen of een gegeven getal $n$ een priemgetal is kan men met
+zeefmethoden werken, waarvan die van Eratosthenes de eerst bekende is. Een
+snellere manier voor grote getallen zijn de 4 testen van Fermat, die welliswaar
+niet bewijzen dat een getal priem is maar wel een hoge waarschijnlijkheid geven:
+\begin{enumerate}
+\item Neem de eerste 4 priemgetallen: $b=\{2,3,5,7\}$,
+\item Neem $w(b)=b^{n-1}~{\rm mod}~n$, voor iedere $b$,
+\item Als $w=1$ voor elke $b$ is $n$ waarschijnlijk priem. Voor elke andere
+      waarde van $w$ is $n$ zeker geen priemgetal.
+\end{enumerate}
+
+
+\chapter{Kansrekening en statistiek}
+\typeout{Kansrekening en statistiek}
+\section{Combinatoriek}
+Het aantal mogelijke {\it combinaties} van $k$ elementen uit $n$ elementen is
+gegeven door
+\[
+{n\choose k}=\frac{n!}{k!(n-k)!}
+\]
+Het aantal {\it permutaties} van $p$ uit $n$ is gegeven door
+\[
+\frac{n!}{(n-p)!}=p!{n\choose p}
+\]
+Het aantal verschillende manieren om $n_i$ elementen in $i$ groepen onder te
+brengen bij een totaal van $N$ elementen is
+\[
+\frac{N!}{\prod\limits_i n_i!}
+\]
+
+\section{Kansrekening}
+De kans $P(A)$ dat een gebeurtenis $A$ plaatsvindt is gedefinieerd door:
+\[
+P(A)=\frac{n(A)}{n(U)}
+\]
+waarin $n(A)$ het aantal keren is dat $A$ plaatsvindt en $n(U)$ het totale
+aantal gebeurtenissen is.
+\npar
+De kans $P(\neg A)$ dat $A$ {\it niet} plaatsvindt is: $P(\neg A)=1-P(A)$.
+De kans $P(A\cup B)$ dat $A$ en $B$ {\it beide} plaatsvinden is gegeven door:
+$P(A\cup B)=P(A)+P(B)-P(A\cap B)$. Als $A$ en $B$ onafhankelijk zijn, geldt:
+$P(A\cap B)=P(A)\cdot P(B)$.
+\npar
+De kans $P(A|B)$ dat $A$ plaatsvindt, gegeven dat $B$ plaatsvindt, is:
+\[
+P(A|B)=\frac{P(A\cap B)}{P(B)}
+\]
+
+\section{Statistiek}
+\subsection{Algemeen}
+Het {\it gemiddelde} $\av{x}$ van een verzameling waarden is: $\av{x}=\sum_i x_i/n$.
+De {\it standaarddeviatie} $\sigma_x$ in de verdeling van $x$ is gegeven door:
+\[
+\sigma_x=\sqrt{\frac{\sum\limits_{i=1}^n(x_i-\av{x})^2}{n}}
+\]
+Wanneer met steekproeven gewerkt wordt is de variantie $s$ van de toevalsgrootte
+gegeven door $\displaystyle s^2=\frac{n}{n-1}\sigma^2$.
+\npar
+De {\it covariantie} $\sigma_{xy}$ van $x$ en $y$ is gegeven door:
+\[
+\sigma_{xy}=\frac{\sum\limits_{i=1}^n(x_i-\av{x})(y_i-\av{y})}{n-1}
+\]
+De {\it correlatieco\"effici\"ent} $r_{xy}$ van $x$ en $y$ is dan:
+$r_{xy}=\sigma_{xy}/\sigma_x\sigma_y$.
+\npar
+De standaarddeviatie in een variabele $f(x,y)$ ten gevolge van afwijkingen in
+de bepaaldheid in $x$ en $y$ is:
+\[
+\sigma^2_{f(x,y)}=\left(\Q{f}{x}\sigma_x\right)^2+\left(\Q{f}{y}\sigma_y\right)^2+
+\Q{f}{x}\Q{f}{y}\sigma_{xy}
+\]
+
+\subsection{Verdelingen}
+\begin{enumerate}
+\item {\bf De Binomiaalverdeling} is de verdeling die een trekking met
+      teruglegging beschrijft. De kans op succes is $p$. De kans $P$ op
+      $k$ successen uit $n$ trekkingen is dan gegeven door:
+      \[
+      P(x=k)={n\choose k}p^k(1-p)^{n-k}
+      \]
+      De standaarddeviatie is gegeven door $\sigma_x=\sqrt{np(1-p)}$ en de
+      verwachtingswaarde is $\varepsilon=np$.
+\item {\bf De Hypergeometrische verdeling} is de verdeling die een trekking
+      zonder terugleggen beschrijft waarin de volgorde er niet toe doet. De
+      kans op $k$ successen in een trekking uit $A$ mogelijk positieve en $B$
+      mogelijk negatieve resultaten is dan gegeven door:
+      \[
+      P(x=k)=\frac{\displaystyle{A\choose k}{B\choose n-k}}{\displaystyle{A+B\choose n}}
+      \]
+      De verwachtingswaarde is gegeven door $\varepsilon=nA/(A+B)$.
+\item {\bf De Poisson verdeling} ontstaat uit de binomiaalverdeling wanneer
+      $p\rightarrow0$, $n\rightarrow\infty$, en tegelijkertijd het product
+      $np=\lambda$ constant is.
+      \[
+      P(x)=\frac{\lambda^x {\rm e}^{-\lambda}}{x!}
+      \]
+      Deze verdeling is genormeerd op $\displaystyle\sum\limits_{x=0}^\infty P(x)=1$.
+\item {\bf De Normaalverdeling} is een benadering van de binomiaalverdeling
+      voor continue variabelen:
+      \[
+      P(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{1}{2}\left(\frac{x-\av{x}}{\sigma}\right)^2\right)
+      \]
+\item {\bf De Uniforme verdeling} treedt op als aselect een getal $x$ genomen
+      wordt uit de verzameling $a\leq x\leq b$ en is gegeven door:
+      \[
+      \left\{\begin{array}{l}\displaystyle
+      P(x)=\frac{1}{b-a}~~~\mbox{als}~~~a\leq x\leq b\\
+      \\
+      P(x)=0~~~\mbox{in alle andere gevallen}
+      \end{array}\right.
+      \]
+      $\av{x}=\half(b-a)$ en $\displaystyle\sigma^2=\frac{(b-a)^2}{12}$.
+\item {\bf De Gamma verdeling} is gegeven door:
+      \[
+      \left\{\begin{array}{l}\displaystyle
+      P(x)=\frac{x^{\alpha-1}{\rm e}^{-x/\beta}}{\beta^\alpha\Gamma(\alpha)}~~~\mbox{als}~~~0\leq y\leq\infty
+      \end{array}\right.
+      \]
+      met $\alpha>0$ en $\beta>0$. De verdeling heeft
+      de volgende eigenschappen: $\av{x}=\alpha\beta$, $\sigma^2=\alpha\beta^2$.
+\item {\bf De Beta verdeling} is gegeven door:
+      \[
+      \left\{\begin{array}{l}\displaystyle
+      P(x)=\frac{x^{\alpha-1}(1-x)^{\beta-1}}{\beta(\alpha,\beta)}~~~\mbox{als}~~~0\leq x\leq1\\
+      \\
+      P(x)=0~~~\mbox{elders}
+      \end{array}\right.
+      \]
+      en heeft de volgende eigenschappen: $\displaystyle\av{x}=\frac{\alpha}{\alpha+\beta}$,
+      $\displaystyle\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$.
+      \npar
+      Voor $P(\chi^2)$ geldt: $\alpha=V/2$ en $\beta=2$.
+\item {\bf De Weibull verdeling} is gegeven door:
+      \[
+      \left\{\begin{array}{l}\displaystyle
+      P(x)=\frac{\alpha}{\beta}x^{\alpha-1}{\rm e}^{-x^\alpha}~~~\mbox{als}~~~0\leq x\leq\infty\wedge\alpha\wedge\beta>0\\
+      \\
+      P(x)=0~~~\mbox{in alle andere gevallen}
+      \end{array}\right.
+      \]
+      Het gemiddelde is $\av{x}=\beta^{1/\alpha}\Gamma((\alpha+1)\alpha)$
+\item Bij een {\bf tweeledige verdeling} geldt:
+      \[
+      P_1(x_1)=\int P(x_1,x_2)dx_2~~,~~~P_2(x_2)=\int P(x_1,x_2)dx_1
+      \]
+      met
+      \[
+      \varepsilon(g(x_1,x_2))=\iint g(x_1,x_2)P(x_1,x_2)dx_1dx_2=\sum_{x_1}\sum_{x_2}g\cdot P
+      \]
+\end{enumerate}
+
+\section{Regressie analyse}
+Wanneer er een verband tussen de grootheden $x$ en $y$ bestaat van de vorm
+$y=ax+b$, en men een set $x_i$ en bijbehorende $y_i$ gemeten heeft, geldt het
+volgende verband voor $a$ en $b$ ($\vec{x}=(x_1,x_2,...,x_n)$ en
+$\vec{e}=(1,1,...,1)$):
+\[
+\vec{y}-a\vec{x}-b\vec{e}\in<\vec{x},\vec{e}>^\perp
+\]
+Hieruit volgt dat de inproducten 0 zijn:
+\[
+\left\{
+\begin{array}{l}
+(\vec{y},\vvec{x})-a(\vec{x},\vvec{x})-b(\vec{e},\vvec{x})=0\\
+(\vec{y},\vvec{e})-a(\vec{x},\vvec{e})-b(\vec{e},\vvec{e})=0
+\end{array}\right.
+\]
+met $(\vec{x},\vvec{x})=\sum\limits_i x_i^2$, $(\vec{x},\vvec{y})=\sum\limits_ix_iy_i$,
+$(\vec{x},\vvec{e})=\sum\limits_ix_i$ en $(\vec{e},\vvec{e})=n$.
+Hieruit volgen $a$ en $b$.
+\npar
+Dit geldt ook voor hogere orde polynoom fits: voor een 2e orde fit geldt:
+\[
+\vec{y}-a\vec{x^2}-b\vec{x}-c\vec{e}\in<\vec{x^2},\vec{x},\vec{e}>^\perp
+\]
+met $\vec{x^2}=(x_1^2,...,x_n^2)$.
+\npar
+De {\it correlatie co\"effici\"ent} $r$ is een maat voor hoe goed een fit is.
+Bij lineaire regressie is ze gegeven door:
+\[
+r=\frac{n\sum xy-\sum x\sum y}{\sqrt{(n\sum x^2-(\sum x)^2)(n\sum y^2-(\sum y)^2)}}
+\]
+
+
+\chapter{Analyse}
+\typeout{Analyse}
+\section{Integraalrekening}
+\subsection{Rekenregels}
+De primitieve functie $F(x)$ van $f(x)$ voldoet aan: $F'(x)=f(x)$. Met
+$F(x)$ de primitieve van $f(x)$ geldt voor de bepaalde integraal
+\[
+\int\limits_a^bf(x)dx=F(b)-F(a)
+\]
+Als $u=f(x)$ geldt:
+\[
+\int\limits_a^bg(f(x))df(x)=\int\limits_{f(a)}^{f(b)}g(u)du
+\]
+{\bf Parti\"eel integreren}: met $F$ en $G$ de primitieven van $f$ resp.\ $g$
+geldt:
+\[
+\int f(x)\cdot g(x)dx=f(x)G(x)-\int G(x)\frac{df(x)}{dx}dx
+\]
+Afgeleide onder het integraalteken brengen (zie {\bf sectie \ref{sec:convf}}
+voor de eisen wanneer dit kan):
+\[
+\frac{d}{dy}\left[\int\limits_{x=g(y)}^{x=h(y)}f(x,y)dx\right]=
+\int\limits_{x=g(y)}^{x=h(y)}\Q{f(x,y)}{y}dx-f(g(y),y)\frac{dg(y)}{dy}+f(h(y),y)\frac{dh(y)}{dy}
+\]
+
+\subsection{Lengten, oppervlakten en volumen}
+De lengte $\ell$ van een kromme $y(x)$ is gegeven door:
+\[
+\ell=\int\sqrt{1+\left(\frac{dy(x)}{dx}\right)^2}dx
+\]
+De lengte $\ell$ van een parameterkromme $F(\vec{x}(t))$ is:
+\[
+\ell=\int Fds=\int F(\vec{x}(t))|\dot{\vec{x}}(t)|dt
+\]
+met
+\[
+\vec{t}=\frac{d\vec{x}}{ds}=\frac{\dot{\vec{x}}(t)}{|\dot{\vec{x}}(t)|}~~~,~~|\vec{t}~|=1
+\]
+\[
+\int(\vec{v},\vec{t})ds=\int(\vec{v},\dot{\vec{t}}(t))dt=\int(v_1dx+v_2dy+v_3dz)
+\]
+De oppervlakte $A$ van een omwentelingslichaam is:
+\[
+A=2\pi\int y\sqrt{1+\left(\frac{dy(x)}{dx}\right)^2}dx
+\]
+Het volume $V$ van een omwentelingslichaam is:
+\[
+V=\pi\int f^2(x)dx
+\]
+
+\subsection{Breuksplitsen}
+\label{sec:breuksplits}
+Iedere rationele functie $P(x)/Q(x)$ met $P$ en $Q$ polynomen is te schrijven
+als een lineaire combinatie van functies van de gedaante $(x-a)^k$ met
+$k\in\ZZ$, en van functies van de gedaante
+\[
+\frac{px+q}{((x-a)^2+b^2)^n}
+\]
+met $b>0$ en $n\in\NN$. Dus:
+\[
+\frac{p(x)}{(x-a)^n}=\sum_{k=1}^n\frac{A_k}{(x-a)^k}~~,~~~
+\frac{p(x)}{((x-b)^2+c^2)^n}=\sum_{k=1}^n \frac{A_kx+B}{((x-b)^2+c^2)^k}
+\]
+Recurrente betrekking: voor $n\neq0$ geldt:
+\[
+\int\frac{dx}{(x^2+1)^{n+1}}=\frac{1}{2n}\frac{x}{(x^2+1)^n}+\frac{2n-1}{2n}\int\frac{dx}{(x^2+1)^n}
+\]
+
+\subsection{Speciale functies}
+\subsubsection{Elliptische functies}
+Elliptische functies zijn als volgt als reeks te schrijven:
+\[
+\sqrt{1-k^2\sin^2(x)}=1-\sum_{n=1}^\infty\frac{(2n-1)!!}{(2n)!!(2n-1)}k^{2n}\sin^{2n}(x)
+\]
+\[
+\frac{1}{\sqrt{1-k^2\sin^2(x)}}=1+\sum_{n=1}^\infty\frac{(2n-1)!!}{(2n)!!}k^{2n}\sin^{2n}(x)
+\]
+met $n!!=n(n-2)!!$.
+
+\subsubsection{De Gamma functie}
+De gammafunctie $\Gamma(y)$ is gedefinieerd door:
+\[
+\Gamma(y)=\int\limits_0^\infty{\rm e}^{-x}x^{y-1}dx
+\]
+Er geldt: $\Gamma(y+1)=y\Gamma(y)=y!$. Op deze manier zijn faculteiten voor
+niet-gehele getallen te defini\"eren. Verder is af te leiden dat
+\[
+\Gamma(n+\half)=\frac{\sqrt{\pi}}{2^n}(2n-1)!!~~\mbox{ en }~~
+\Gamma^{(n)}(y)=\int\limits_0^\infty{\rm e}^{-x}x^{y-1}\ln^n(x)dx
+\]
+
+\subsubsection{De Beta functie}
+De betafunctie $\beta(p,q)$ is gedefinieerd door:
+\[
+\beta(p,q)=\int\limits_0^1x^{p-1}(1-x)^{q-1}dx
+\]
+met $p$ en $q$ $>0$. Tussen de beta- en gammafunctie geldt het volgende
+verband:
+\[
+\beta(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}
+\]
+
+\subsubsection{De Delta functie}
+De delta functie $\delta(x)$ is een oneindig dunne piekfunctie met oppervlakte
+1. Ze is te defini\"eren als:
+\[
+\delta(x)=\lim_{\varepsilon\rightarrow0}P(\varepsilon,x)~~\mbox{met}~~
+P(\varepsilon,x)=\left\{
+\begin{array}{l}
+0~~~\mbox{voor}~|x|>\varepsilon\\
+\displaystyle\frac{1}{2\varepsilon}~~~\mbox{voor}~|x|<\varepsilon
+\end{array}\right.
+\]
+Enkele eigenschappen zijn:
+\[
+\int\limits_{-\infty}^\infty\delta(x)dx=1~~,~~~
+\int\limits_{-\infty}^\infty F(x)\delta(x)dx=F(0)
+\]
+
+\subsection{Goniometrische integralen}
+Voor het oplossen van goniometrische integralen is het vaak nuttig te wisselen
+van variabele. Als men stelt dat $\tan(\frac{1}{2}x):=t$ geldt:
+\[
+dx=\frac{2dt}{1+t^2}~,~~\cos(x)=\frac{1-t^2}{1+t^2}~,~~\sin(x)=\frac{2t}{1+t^2}
+\]
+Iedere integraal van het type $\int R(x,\sqrt{ax^2+bx+c})dx$ is te herleiden
+tot de types die in {\bf sectie \ref{sec:breuksplits}} behandeld zijn. Na
+herleiding substitueert men in:
+\begin{eqnarray*}
+\int R(x,\sqrt{x^2+1})dx&~:~~&x=\tan(\varphi)          ~,dx=\frac{d\varphi}{\cos(\varphi)}               ~~\mbox{of}~~\sqrt{x^2+1}=t+x\\
+\int R(x,\sqrt{1-x^2})dx&~:~~&x=\sin(\varphi)          ~,dx=\cos(\varphi)d\varphi                        ~~\mbox{of}~~\sqrt{1-x^2}=1-tx\\
+\int R(x,\sqrt{x^2-1})dx&~:~~&x=\frac{1}{\cos(\varphi)}~,dx=\frac{\sin(\varphi)}{\cos^2(\varphi)}d\varphi~~\mbox{of}~~\sqrt{x^2-1}=x-t
+\end{eqnarray*}
+De volgende bepaalde integralen zijn eenvoudig op te lossen:
+\[
+\int\limits_0^{\pi/2}\cos^n(x)\sin^m(x)dx=\frac{(n-1)!!(m-1)!!}{(m+n)!!}\cdot
+\left\{\begin{array}{l}
+\pi/2\mbox{~~als $m$ en $n$ beide even zijn}\\
+1\mbox{~~~~~~in alle andere gevallen}
+\end{array}\right.
+\]
+Enkele belangrijke integralen zijn:
+\[
+\int\limits_0^\infty\frac{xdx}{{\rm e}^{ax}+1}=\frac{\pi^2}{12a^2}~~,~~
+\int\limits_{-\infty}^\infty\frac{x^2dx}{({\rm e}^x+1)^2}=\frac{\pi^2}{3}~~,~~
+\int\limits_0^\infty\frac{x^3dx}{{\rm e}^x-1}=\frac{\pi^4}{15}
+\]
+
+\section{Functies met meer variabelen}
+\subsection{Afgeleiden}
+De {\it parti\"ele afgeleide} naar $x$ van een functie $f(x,y)$ is gedefinieerd
+door:
+\[
+\Qc{f}{x}{x_0}=\lim_{h\rightarrow0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h}
+\]
+De {\it richtingsafgeleide} in richting $\alpha$ is gedefinieerd door:
+\[
+\Q{f}{\alpha}=\lim_{r\downarrow0}\frac{f(x_0+r\cos(\alpha),y_0+r\sin(\alpha))-f(x_0,y_0)}{r}=
+(\vec{\nabla}f,(\sin\alpha,\cos\alpha))=\frac{\nabla f\cdot\vec{v}}{|\vec{v}|}
+\]
+Wanneer men overgaat op andere co\"ordinaten $f(x(u,v),y(u,v))$ geldt:
+\[
+\Q{f}{u}=\Q{f}{x}\Q{x}{u}+\Q{f}{y}\Q{y}{u}
+\]
+Als $x(t)$ en $y(t)$ van maar \'e\'en parameter $t$ afhangen geldt:
+\[
+\Q{f}{t}=\Q{f}{x}\frac{dx}{dt}+\Q{f}{y}\frac{dy}{dt}
+\]
+De {\it totale differentiaal} $df$ van een functie met 3 variabelen is
+gegeven door:
+\[
+df=\Q{f}{x}dx+\Q{f}{y}dy+\Q{f}{z}dz
+\]
+Dus
+\[
+\frac{df}{dx}=\Q{f}{x}+\Q{f}{y}\frac{dy}{dx}+\Q{f}{z}\frac{dz}{dx}
+\]
+De {\it raaklijn} in het punt $\vec{x}_0$ aan het oppervlak $f(x,y)=0$ heeft
+als vergelijking:\\ $f_x(\vec{x}_0)(x-x_0)+f_y(\vec{x}_0)(y-y_0)=0$.
+\npar
+Het {\it raakvlak} in $\vec{x}_0$ is gegeven door:
+$f_x(\vec{x}_0)(x-x_0)+f_y(\vec{x}_0)(y-y_0)=z-f(\vec{x}_0)$.
+
+\subsection{Taylorreeksen}
+Men kan een functie van 2 variabelen als volgt in een Taylorreeks ontwikkelen:
+\[
+f(x_0+h,y_0+k)=\sum\limits_{p=0}^n \frac{1}{p!}
+\left(h\Q{^p}{x^p}+k\Q{^p}{y^p}\right)f(x_0,y_0)+R(n)
+\]
+met $R(n)$ de restfout en
+\[
+\left(h\Q{^p}{x^p}+k\Q{^p}{y^p}\right)f(a,b)=\sum\limits_{m=0}^p{p\choose m}
+h^mk^{p-m}\frac{\partial^pf(a,b)}{\partial x^m\partial y^{p-m}}
+\]
+
+\subsection{Extrema}
+Indien $f$ continu is op een compacte rand $V$ heeft $f$ een globaal
+maximum en een globaal minimum op deze rand. Een rand is compact als hij
+begrensd en gesloten is.
+\npar
+Kandidaten voor extrema van $f(x,y)$ op een rand $V\in\RR^2$ zijn:
+\begin{enumerate}
+\item Punten op $V$ waar $f(x,y)$ niet differentieerbaar is,
+\item Punten waar $\vec{\nabla}f=\vec{0}$,
+\item Indien de rand $V$ gegeven is door $\varphi(x,y)=0$ zijn alle punten
+      waar $\vec{\nabla}f(x,y)+\lambda\vec{\nabla}\varphi(x,y)=0$ kandidaten
+      voor extrema. Dit is de multiplicatoren methode van Lagrange, $\lambda$
+      is een multiplicator.
+\end{enumerate}
+In $\RR^3$ geldt dat, indien het te onderzoeken gebied begrensd is door
+een compacte $V$, met $V$ gedefinieerd door $\varphi_1(x,y,z)=0$ en
+$\varphi_2(x,y,z)=0$, voor extrema van $f(x,y,z)$ hetzelfde als op $\RR^2$
+m.b.t.\ punt (1) en (2). Punt (3) wordt als volgt herschreven: potenti\"ele
+extra zijn punten waar
+$\vec{\nabla}f(x,y,z)+\lambda_1\vec{\nabla}\varphi_1(x,y,z)+\lambda_2\vec{\nabla}\varphi_2(x,y,z)=0$.
+
+\subsection{De $\nabla$-operator}
+In cartesische co\"ordinaten $(x,y,z)$ geldt:
+\begin{eqnarray*}
+\vec{\nabla}     &=&\Q{}{x}\ee{x}+\Q{}{y}\ee{y}+\Q{}{z}\ee{z}\\
+{\rm grad}f      &=&\Q{f}{x}\ee{x}+\Q{f}{y}\ee{y}+\Q{f}{z}\ee{z}\\
+{\rm div}~\vec{a}&=&\Q{a_x}{x}+\Q{a_y}{y}+\Q{a_z}{z}\\
+{\rm rot}~\vec{a}&=&\left(\Q{a_z}{y}-\Q{a_y}{z}\right)\ee{x}+
+                    \left(\Q{a_x}{z}-\Q{a_z}{x}\right)\ee{y}+
+                    \left(\Q{a_y}{x}-\Q{a_x}{y}\right)\ee{z}\\
+\nabla^2 f       &=&\QQ{f}{x}+\QQ{f}{y}+\QQ{f}{z}
+\end{eqnarray*}
+
+In cylinderco\"ordinaten $(r,\varphi,z)$ geldt:
+\begin{eqnarray*}
+\vec{\nabla}     &=&\Q{}{r}\ee{r}+\frac{1}{r}\Q{}{\varphi}\ee{\varphi}+\Q{}{z}\ee{z}\\
+{\rm grad}f      &=&\Q{f}{r}\ee{r}+\frac{1}{r}\Q{f}{\varphi}\ee{\varphi}+\Q{f}{z}\ee{z}\\
+{\rm div}~\vec{a}&=&\Q{a_r}{r}+\frac{a_r}{r}+\frac{1}{r}\Q{a_\varphi}{\varphi}+\Q{a_z}{z}\\
+{\rm rot}~\vec{a}&=&\left(\frac{1}{r}\Q{a_z}{\varphi}-\Q{a_\varphi}{z}\right)\ee{r}+
+                    \left(\Q{a_r}{z}-\Q{a_z}{r}\right)\ee{\varphi}+
+                    \left(\Q{a_\varphi}{r}+\frac{a_\varphi}{r}-\frac{1}{r}\Q{a_r}{\varphi}\right)\ee{z}\\
+\nabla^2 f       &=&\QQ{f}{r}+\frac{1}{r}\Q{f}{r}+\frac{1}{r^2}\QQ{f}{\varphi}+\QQ{f}{z}
+\end{eqnarray*}
+
+In bolco\"ordinaten $(r,\theta,\varphi)$ geldt:
+\begin{eqnarray*}
+\vec{\nabla}     &=&\Q{}{r}\ee{r}+\frac{1}{r}\Q{}{\theta}\ee{\theta}+\frac{1}{r\sin\theta}\Q{}{\varphi}\ee{\varphi}\\
+{\rm grad}f      &=&\Q{f}{r}\ee{r}+\frac{1}{r}\Q{f}{\theta}\ee{\theta}+\frac{1}{r\sin\theta}\Q{f}{\varphi}\ee{\varphi}\\
+{\rm div}~\vec{a}&=&\Q{a_r}{r}+\frac{2a_r}{r}+\frac{1}{r}\Q{a_\theta}{\theta}+\frac{a_\theta}{r\tan\theta}+\frac{1}{r\sin\theta}\Q{a_\varphi}{\varphi}\\
+{\rm rot}~\vec{a}&=&\left(\frac{1}{r}\Q{a_\varphi}{\theta}+\frac{a_\theta}{r\tan\theta}-\frac{1}{r\sin\theta}\Q{a_\theta}{\varphi}\right)\ee{r}+
+                    \left(\frac{1}{r\sin\theta}\Q{a_r}{\varphi}-\Q{a_\varphi}{r}-\frac{a_\varphi}{r}\right)\ee{\theta}+\\
+                 &&\left(\Q{a_\theta}{r}+\frac{a_\theta}{r}-\frac{1}{r}\Q{a_r}{\theta}\right)\ee{\varphi}\\
+\nabla^2 f       &=&\QQ{f}{r}+\frac{2}{r}\Q{f}{r}+\frac{1}{r^2}\QQ{f}{\theta}+\frac{1}{r^2\tan\theta}\Q{f}{\theta}+\frac{1}{r^2\sin^2\theta}\QQ{f}{\varphi}
+\end{eqnarray*}
+
+Algemene kromlijnige orthonormale co\"ordinaten $(u,v,w)$ kunnen uit
+cartesische co\"ordinaten verkregen worden door de transformatie
+$\vec{x}=\vec{x}(u,v,w)$. Dan worden de eenheidsvectoren gegeven door:
+\[
+\ee{u}=\frac{1}{h_1}\Q{\vec{x}}{u}~,~~ \ee{v}=\frac{1}{h_2}\Q{\vec{x}}{v}~,~~
+\ee{w}=\frac{1}{h_3}\Q{\vec{x}}{w}
+\]
+waarin de factoren $h_i$ zorgen voor de normering op lengte 1. De
+differentiaaloperatoren worden dan gegeven door:
+\begin{eqnarray*}
+{\rm grad}f      &=&\frac{1}{h_1}\Q{f}{u}\ee{u}+\frac{1}{h_2}\Q{f}{v}\ee{v}+\frac{1}{h_3}\Q{f}{w}\ee{w}\\
+{\rm div}~\vec{a}&=&\frac{1}{h_1h_2h_3}\left(\Q{}{u}(h_2h_3a_u)+\Q{}{v}(h_3h_1a_v)+\Q{}{w}(h_1h_2a_w)\right)\\
+{\rm rot}~\vec{a}&=&\frac{1}{h_2h_3}\left(\Q{(h_3a_w)}{v}-\Q{(h_2a_v)}{w}\right)\ee{u}+
+                    \frac{1}{h_3h_1}\left(\Q{(h_1a_u)}{w}-\Q{(h_3a_w)}{u}\right)\ee{v}+\\
+                  &&\frac{1}{h_1h_2}\left(\Q{(h_2a_v)}{u}-\Q{(h_1a_u)}{v}\right)\ee{w}\\
+\nabla^2 f       &=&\frac{1}{h_1h_2h_3}\left[\Q{}{u}\left(\frac{h_2h_3}{h_1}\Q{f}{u}\right)+
+                    \Q{}{v}\left(\frac{h_3h_1}{h_2}\Q{f}{v}\right)+
+                    \Q{}{w}\left(\frac{h_1h_2}{h_3}\Q{f}{w}\right)\right]
+\end{eqnarray*}
+
+Enkele eigenschappen van de $\nabla$-operator zijn:
+\[
+\begin{array}{l@{~~~~~}l@{~~~~~}l}
+{\rm div}(\phi\vec{v})=\phi{\rm div}\vec{v}+{\rm grad}\phi\cdot\vec{v}&
+{\rm rot}(\phi\vec{v})=\phi{\rm rot}\vec{v}+({\rm grad}\phi)\times\vec{v}&{\rm rot~grad}\phi=\vec{0}\\
+{\rm div}(\vec{u}\times\vec{v})=\vec{v}\cdot({\rm rot}\vec{u})-\vec{u}\cdot({\rm rot}\vec{v})&
+{\rm rot~rot}\vec{v}={\rm grad~div}\vec{v}-\nabla^2\vec{v}&{\rm div~rot}\vec{v}=0\\
+{\rm div~grad}\phi=\nabla^2\phi&\nabla^2\vec{v}\equiv(\nabla^2v_1,\nabla^2v_2,\nabla^2v_3)
+\end{array}
+\]
+Hierin  is $\vec{v}$ een willekeurig vectorveld en $\phi$ een willekeurig
+scalarveld.
+
+\subsection{Integraalstellingen}
+Enkele belangrijke integraalstellingen zijn:
+\[
+\begin{array}{l@{~~}l}
+\mbox{Gauss:}&\displaystyle\oiint(\vec{v}\cdot\vec{n})d^2A=\iiint({\rm div}\vvec{v})d^3V\\[5mm]
+\mbox{Stokes voor een scalarveld:}&\displaystyle\oint(\phi\cdot\e{t})ds=\iint(\vec{n}\times{\rm grad}\phi)d^2A\\[5mm]
+\mbox{Stokes voor een vectorveld:}&\displaystyle\oint(\vec{v}\cdot\e{t})ds=\iint({\rm rot}\vec{v}\cdot\vec{n})d^2A\\[5mm]
+\mbox{dit geeft:}&\displaystyle\oiint({\rm rot}\vec{v}\cdot\vec{n})d^2A=0\\[5mm]
+\mbox{Ostrogradsky:}&\displaystyle\oiint(\vec{n}\times\vvec{v})d^2A=\iiint({\rm rot}\vvec{v})d^3A\\[5mm]
+\mbox{}&\displaystyle\oiint(\phi\vvec{n})d^2A=\iiint({\rm grad}\phi)d^3V
+\end{array}
+\]
+Hierin wordt het ori\"enteerbare oppervlak $\int\hspace{-1mm}\int d^2A$
+begrensd door de Jordankromme $s(t)$.
+
+\subsection{Meervoudige integralen}
+Als $A$ een gesloten kromme is die gegeven wordt door $f(x,y)=0$ wordt
+het oppervlak $A$ binnen de kromme in $\RR^2$ gegeven door
+\[
+A=\iint d^2A=\iint dxdy
+\]
+Aanname: het oppervlak $A$ wordt gedefinieerd door de functie $z=f(x,y)$.
+Het volume $V$ tussen $A$ en het $xy$ vlak wordt dan gegeven door:
+\[
+V=\iint f(x,y)dxdy
+\]
+Het volume binnen een gesloten oppervlak dat gedefinieerd is door $z=f(x,y)$
+is gegeven door:
+\[
+V=\iiint d^3V=\iint f(x,y)dxdy=\iiint dxdydz
+\]
+
+\subsection{Co\"ordinatentransformaties}
+De uitdrukkingen $d^2A$ en $d^3V$ transformeren als volgt wanneer men
+overgaat op co\"ordinaten $\vec{u}=(u,v,w)$ via de transformatie $x(u,v,w)$:
+\[
+V=\iiint f(x,y,z)dxdydz=\iiint f(\vec{x}(\vec{u}))\left|\Q{\vec{x}}{\vec{u}}\right|dudvdw
+\]
+In $\RR^2$ geldt:
+\[
+\Q{\vec{x}}{\vec{u}}=\left|\begin{array}{cc}x_u&x_v\\ y_u&y_v\end{array}\right|
+\]
+Als het oppervlak $A$ gegeven is door $z=F(x,y)=X(u,v)$ is het volume tussen
+het $xy$ vlak en $F$ gegeven door:
+\[
+\iint\limits_Sf(\vec{x})d^2A=\iint\limits_Gf(\vec{x}(\vec{u}))
+\left|\Q{X}{u}\times\Q{X}{v}\right|dudv=
+\iint\limits_Gf(x,y,F(x,y))\sqrt{1+\partial_xF^2+\partial_yF^2}dxdy
+\]
+
+\section{Orthogonaliteit van functies}
+Het inproduct van twee functies $f(x)$ en $g(x)$ op het interval $[a,b]$ is
+gegeven door:
+\[
+(f,g)=\int\limits_a^bf(x)g(x)dx
+\]
+of, als men een gewichtsfunctie $p(x)$ hanteert door:
+\[
+(f,g)=\int\limits_a^bp(x)f(x)g(x)dx
+\]
+De {\it norm} $\|f\|$ volgt dan uit: $\|f\|^2=(f,f)$. Een set functies $f_i$
+is {\it orthonormaal} als geldt: $(f_i,f_j)=\delta_{ij}$.
+\npar
+Elke functie $f(x)$ is te schrijven als een som van orthogonale functies:
+\[
+f(x)=\sum_{i=0}^\infty c_ig_i(x)
+\]
+en $\sum c_i^2\leq\|f\|^2$. Als de set $g_i$ orthogonaal is volgt:
+\[
+c_i=\frac{f,g_i}{(g_i,g_i)}
+\]
+
+\section{Fourier reeksen}
+Elke functie is te schrijven als een som van onafhankelijke basisfuncties.
+Indien men voor de orthogonale basis $(\cos(nx),\sin(nx))$ kiest spreekt men
+van een Fourier reeks.
+\npar
+Een periodieke functie $f(x)$ met periode $2L$ is te schrijven als:
+\[
+f(x)=a_0+\sum_{n=1}^\infty\left[a_n\cos\left(\frac{n\pi x}{L}\right)+b_n\sin\left(\frac{n\pi x}{L}\right)\right]
+\]
+Voor de co\"effici\"enten volgt dan vanwege de orthogonaliteit:
+\[
+a_0=\frac{1}{2L}\int\limits_{-L}^Lf(t)dt~~,~~
+a_n=\frac{1}{L}\int\limits_{-L}^Lf(t)\cos\left(\frac{n\pi t}{L}\right)dt~~,~~
+b_n=\frac{1}{L}\int\limits_{-L}^Lf(t)\sin\left(\frac{n\pi t}{L}\right)dt
+\]
+Men kan een Fourier reeks ook schrijven als een som van complexe e-machten:
+\[
+f(x)=\sum_{n=-\infty}^\infty c_n{\rm e}^{inx}
+\]
+met
+\[
+c_n=\frac{1}{2\pi}\int\limits_{-\pi}^\pi f(x){\rm e}^{-inx}dx
+\]
+De {\it Fouriertransformatie} van een functie $f(x)$ levert een
+getransformeerde functie $\hat{f}(\omega)$ op:
+\[
+\hat{f}(\omega)=\frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^\infty f(x){\rm e}^{-i\omega x}dx
+\]
+De inverse transformatie is gegeven door:
+\[
+\frac{1}{2}\left[f(x^+)+f(x^-)\right]=\frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^\infty\hat{f}(\omega){\rm e}^{i\omega x}d\omega
+\]
+waarin $f(x^+)$ en $f(x^-)$ gedefinieerd zijn door de onder- en bovenlimiet:
+\[
+f(a^-)=\lim_{x\uparrow a}f(x)~~,~~f(a^+)=\lim_{x\downarrow a}f(x)
+\]
+Voor continue functies geldt dat $\frac{1}{2}\left[f(x^+)+f(x^-)\right]=f(x)$.
+
+\chapter{Differentiaalvergelijkingen}
+\typeout{Differentiaalvergelijkingen}
+\section{Lineaire differentiaalvergelijkingen}
+\subsection{Eerste orde lineaire DV}
+De algemene oplossing van een lineaire differentiaalvergelijking is
+gegeven door $y_{\rm A}=y_{\rm H}+y_{\rm P}$, waarin $y_{\rm H}$ de oplossing
+van de {\it homogene vergelijking} is en $y_{\rm P}$ een {\it particuliere
+oplossing}.
+\npar
+Een differentiaalvergelijking van de eerste orde is gegeven door:
+$y'(x)+a(x)y(x)=b(x)$. De bijbehorende homogene vergelijking is
+$y'(x)+a(x)y(x)=0$.
+\npar
+De oplossing van de homogene vergelijking is gegeven door
+\[
+y_{\rm H}=k\exp\left(\int a(x)dx\right)
+\]
+Stel dat $a(x)=a=$constant.
+\npar
+Substitutie van $\exp(\lambda x)$ in de homogene vergelijking leidt tot de
+{\it karakteristieke vergelijking} $\lambda+a=0\Rightarrow \lambda=-a$.
+\npar
+Stel dat $b(x)=\alpha\exp(\mu x)$. Dan zijn er twee gevallen:
+\begin{enumerate}
+\item $\lambda\neq\mu$: een particuliere oplossing is: $y_{\rm P}=\exp(\mu x)$
+\item $\lambda=\mu$: een particuliere oplossing is: $y_{\rm P}=x\exp(\mu x)$
+\end{enumerate}
+\npar
+Bij oplossing door {\it variatie van constante} stelt men:
+$y_{\rm P}(x)=y_{\rm H}(x)f(x)$, en lost hieruit $f(x)$ op.
+
+\subsection{Tweede orde lineaire DV}
+Een differentiaalvergelijking van de tweede orde met constante
+co\"effici\"enten is gegeven door: $y''(x)+ay'(x)+by(x)=c(x)$. Indien
+$c(x)=c=$constant bestaat er een particuliere oplossing $y_{\rm P}=c/b$.
+\npar
+Substitutie van $y=\exp(\lambda x)$ leidt tot de karakteristieke vergelijking
+$\lambda^2+a\lambda+b=0$.
+\npar
+Er zijn nu 2 mogelijkheden:
+\begin{enumerate}
+\item $\lambda_1\neq\lambda_2$: dan is $y_{\rm H}=\alpha\exp(\lambda_1 x)+\beta\exp(\lambda_2 x)$.
+\item $\lambda_1=\lambda_2=\lambda$: dan is $y_{\rm H}=(\alpha +\beta x)\exp(\lambda x)$.
+\end{enumerate}
+\npar
+Als $c(x)=p(x)\exp(\mu x)$ met $p(x)$ een polynoom is zijn er 3 mogelijkheden:
+\begin{enumerate}
+\item $\lambda_1,\lambda_2\neq\mu$: $y_{\rm P}=q(x)\exp(\mu x)$.
+\item $\lambda_1=\mu,\lambda_2\neq\mu$: $y_{\rm P}=xq(x)\exp(\mu x)$.
+\item $\lambda_1=\lambda_2=\mu$: $y_{\rm P}=x^2q(x)\exp(\mu x)$.
+\end{enumerate}
+waarin $q(x)$ een polynoom van dezelfde graad is als $p(x)$.
+\npar
+Als gegeven is: $y''(x)+\omega^2y(x)=\omega f(x)$ en $y(0)=y'(0)=0$ volgt:
+$y(x)=\int\limits_0^xf(x)\sin(\omega(x-t))dt$.
+
+\subsection{De Wronskiaan}
+We gaan uit van de LDV $y''(x)+p(x)y'(x)+q(x)y(x)=0$ en de twee beginvoorwaarden
+$y(x_0)=K_0$ en $y'(x_0)=K_1$. Als $p(x)$ en $q(x)$ continu zijn op het open
+interval $I$ is er een unieke oplossing $y(x)$ op dit interval.
+\npar
+De algemene oplossing is dan te schrijven als $y(x)=c_1y_1(x)+c_2y_2(x)$ en
+$y_1$ en $y_2$ zijn lineair onafhankelijk. Dit zijn tevens {\it alle}
+oplossingen van de LDV.
+\npar
+De {\it Wronskiaan} is gedefinieerd als:
+\[
+W(y_1,y_2)=
+\left|\begin{array}{cc}
+y_1&y_2\\
+y'_1&y'_2
+\end{array}\right|=y_1y'_2-y_2y'_1
+\]
+$y_1$ en $y_2$ zijn lineair afhankelijk dan en slechts dan als op interval
+$I$ $\exists x_0\in I$ zodanig dat geldt:\\
+$W(y_1(x_0),y_2(x_0))=0$.
+
+\subsection{Machtreekssubstitutie}
+Wanneer in de LDV met constante co\"effici\"enten $y''(x)+py'(x)+qy(x)=0$ de
+reeks $y=\sum a_nx^n$ ingevuld wordt geeft dit:
+\[
+\sum_n\left[n(n-1)a_nx^{n-2}+pna_nx^{n-1}+qa_nx^n\right]=0
+\]
+Gelijkstellen van gelijke machten van $x$ levert:
+\[
+(n+2)(n+1)a_{n+2}+p(n+1)a_{n+1}+qa_n=0
+\]
+Dit geeft een algemeen verband tussen de co\"effici\"enten. Speciale gevallen
+zijn $n=0,1,2$.
+
+\section{Enkele speciale gevallen}
+\subsection{De methode van Frobenius}
+Gegeven de LDV
+\[
+\frac{d^2y(x)}{dx^2}+\frac{b(x)}{x}\frac{dy(x)}{dx}+\frac{c(x)}{x^2}y(x)=0
+\]
+met $b(x)$ en $c(x)$ analytisch op $x=0$. Deze heeft ten minste \'e\'en
+oplossing van de vorm:
+\[
+y_i(x)=x^{r_i}\sum_{n=0}^\infty a_nx^n~~~\mbox{met}~~i=1,2
+\]
+met $r$ re\"eel of complex en zodanig gekozen dat $a_0\neq0$. Waneer we $b(x)$
+en $c(x)$ dan als volgt expanderen: $b(x)=b_0+b_1x+b_2x^2+...$ en
+$c(x)=c_0+c_1x+c_2x^2+...$ volgt voor $r$:
+\[
+r^2+(b_0-1)r+c_0=0
+\]
+Er kunnen zich nu 3 gevallen voordoen:
+\begin{enumerate}
+\item $r_1=r_2$: dan is $y(x)=y_1(x)\ln|x|+y_2(x)$.
+\item $r_1-r_2\in\NN$: dan is $y(x)=ky_1(x)\ln|x|+y_2(x)$.
+\item $r_1-r_2\neq\ZZ$: dan is $y(x)=y_1(x)+y_2(x)$.
+\end{enumerate}
+
+\subsection{Euler}
+Gegeven de LDV
+\[
+x^2\frac{d^2y(x)}{dx^2}+ax\frac{dy(x)}{dx}+by(x)=0
+\]
+Substitutie van $y(x)=x^r$ geeft een vergelijking voor $r$: $r^2+(a-1)r+b=0$.
+Hieruit volgen twee oplossingen $r_1$ en $r_2$. Er zijn nu 2 mogelijkheden:
+\begin{enumerate}
+\item $r_1\neq r_2$: dan is $y(x)=C_1x^{r1}+C_2x^{r_2}$.
+\item $r_1=r_2=r$: dan is $y(x)=(C_1\ln(x)+C_2)x^r$.
+\end{enumerate}
+
+\subsection{De DV van Legendre}
+Gegeven de LDV 
+\[
+(1-x^2)\frac{d^2y(x)}{dx^2}-2x\frac{dy(x)}{dx}+n(n-1)y(x)=0
+\]
+De oplossingen van deze vergelijking worden gegeven door $y(x)=aP_n(x)+by_2(x)$
+waarin de {\it Legendre polynomen} $P(x)$ gedefinieerd worden door:
+\[
+P_n(x)=\frac{d^n}{dx^n}\left(\frac{(1-x^2)^n}{2^n n!}\right)
+\]
+Hiervoor geldt: $\|P_n\|^2=2/(2n+1)$.
+
+\subsection{De geassocieerde Legendre vergelijking}
+Deze vergelijking volgt uit het $\theta$ afhankelijke deel van de
+golfvergelijking $\nabla^2\Psi=0$ door te substitueren: $\xi=\cos(\theta)$.
+Dan volgt:
+\[
+(1-\xi^2)\frac{d}{d\xi}\left((1-\xi^2)\frac{dP(\xi)}{d\xi}\right)+
+[C(1-\xi^2)-m^2]P(\xi)=0
+\]
+Er bestaan alleen reguliere oplossingen als $C=l(l+1)$. Deze hebben de vorm:
+\[
+P_l^{|m|}(\xi)=(1-\xi^2)^{m/2}\frac{d^{|m|}P^0(\xi)}{d\xi^{|m|}}=
+\frac{(1-\xi^2)^{|m|/2}}{2^ll!}\frac{d^{|m|+l}}{d\xi^{|m|+l}}(\xi^2-1)^l
+\]
+Voor $|m|>l$ is $P_l^{|m|}(\xi)=0$.
+Enkele eigenschappen van $P_l^0(\xi)$ zijn:
+\[
+\int\limits_{-1}^1P_l^0(\xi)P_{l'}^0(\xi)d\xi=\frac{2}{2l+1}\delta_{ll'}~~~,~~~
+\sum_{l=0}^\infty P_l^0(\xi)t^l=\frac{1}{\sqrt{1-2\xi t+t^2}}
+\]
+Dit polynoom is te schrijven als:
+\[
+P_l^0(\xi)=\frac{1}{\pi}\int\limits_0^\pi(\xi+\sqrt{\xi^2-1}\cos(\theta))^ld\theta
+\]
+
+\subsection{Oplossingen van de Besselvergelijking}
+Gegeven de LDV
+\[
+x^2\frac{d^2y(x)}{dx^2}+x\frac{dy(x)}{dx}+(x^2-\nu^2)y(x)=0
+\]
+ook wel de {\it Besselvergelijking} genoemd, en de Besselfuncties van de eerste
+soort
+\[
+J_\nu(x)=x^\nu\sum_{m=0}^\infty\frac{(-1)^mx^{2m}}{2^{2m+\nu}m!\Gamma(\nu+m+1)}
+\]
+voor $\nu:=n\in\NN$ wordt dit:
+\[
+J_n(x)=x^n\sum_{m=0}^\infty\frac{(-1)^mx^{2m}}{2^{2m+n}m!(n+m)!}
+\]
+Als $\nu\neq\ZZ$ is de oplossing gegeven door $y(x)=aJ_\nu(x)+bJ_{-\nu}(x)$.
+Maar omdat voor $n\in\ZZ$ geldt: $J_{-n}(x)=(-1)^nJ_n(x)$, geldt dit niet voor
+gehele getallen. De algemene oplossing van de Besselvergelijking is
+$y(x)=aJ_\nu(x)+bY_\nu(x)$ waarin $Y_\nu$ {\it Besselfuncties van de tweede
+soort} zijn:
+\[
+Y_\nu(x)=\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu\pi)}~~~\mbox{en}~~~
+Y_n(x)=\lim_{\nu\rightarrow n}Y_\nu(x)
+\]
+De vergelijking $x^2y''(x)+xy'(x)-(x^2+\nu^2)y(x)=0$ heeft als oplossingen
+gemodificeerde Besselfuncties van de eerste soort $I_\nu(x)=i^{-\nu}J_\nu(ix)$,
+en oplossingen $K_\nu=\pi[I_{-\nu}(x)-I_\nu(x)]/[2\sin(\nu\pi)]$.
+\npar
+Soms is het handig de oplossingen van de Besselvergelijking te schrijven in
+termen van de Hankelfuncties
+\[
+H^{(1)}_n(x)=J_n(x)+iY_n(x)~~,~~H^{(2)}_n(x)=J_n(x)-iY_n(x)
+\]
+
+\subsection{Eigenschappen van Besselfuncties}
+Besselfuncties zijn orthogonaal wanneer $p(x)=x$ als normeringsfunctie gebruikt
+wordt.
+\npar
+$J_{-n}(x)=(-1)^nJ_n(x)$. De Neumann functies $N_m(x)$ zijn gedefinieerd als:
+\[
+N_m(x)=\frac{1}{2\pi}J_m(x)\ln(x)+\frac{1}{x^m}\sum_{n=0}^\infty \alpha_nx^{2n}
+\]
+Er geldt: $\lim\limits_{x\rightarrow0}J_m(x)=x^m$,
+$\lim\limits_{x\rightarrow0}N_m(x)=x^{-m}$ voor $m\neq0$,
+$\lim\limits_{x\rightarrow0}N_0(x)=\ln(x)$.
+\[
+\lim_{r\rightarrow\infty}H(r)=\frac{{\rm e}^{\pm ikr}{\rm e}^{i\omega t}}{\sqrt{r}}~~,~~
+\lim_{x\rightarrow\infty}J_n(x)=\sqrt{\frac{2}{\pi x}}\cos(x-x_n)~~,~~
+\lim_{x\rightarrow\infty}J_{-n}(x)=\sqrt{\frac{2}{\pi x}}\sin(x-x_n)
+\]
+met $x_n=\half\pi(n+\half)$.
+\[
+J_{n+1}(x)+J_{n-1}(x)=\frac{2n}{x}J_n(x)~~,~~J_{n+1}(x)-J_{n-1}(x)=-2\frac{dJ_n(x)}{dx}
+\]
+Verder gelden de integraalbetrekkingen
+\[
+J_m(x)=\frac{1}{2\pi}\int\limits_0^{2\pi}\exp[i(x\sin(\theta)-m\theta)]d\theta=
+\frac{1}{\pi}\int\limits_0^\pi\cos(x\sin(\theta)-m\theta)d\theta
+\]
+
+\subsection{Laguerre}
+Gegeven de LDV
+\[
+x\frac{d^2y(x)}{dx^2}+(1-x)\frac{dy(x)}{dx}+ny(x)=0
+\]
+Oplossingen hiervan zijn de Laguerre polynomen $L_n(x)$:
+\[
+L_n(x)=\frac{{\rm e}^x}{n!}\frac{d^n}{dx^n}\left(x^n{\rm e}^{-x}\right)=
+\sum_{m=0}^\infty\frac{(-1)^m}{m!}{n\choose m}x^m
+\]
+
+\subsection{De geassocieerde Laguerre vergelijking}
+Gegeven de LDV
+\[
+\frac{d^2y(x)}{dx^2}+\left(\frac{m+1}{x}-1\right)\frac{dy(x)}{dx}+\left(\frac{n+\half(m+1)}{x}\right)y(x)=0
+\]
+Oplossingen hiervan zijn de geassocieerde Laguerre polynomen $L_n^m(x)$:
+\[
+L_n^m(x)=\frac{(-1)^mn!}{(n-m)!}{\rm e}^{-x}x^{-m}\frac{d^{n-m}}{dx^{n-m}}\left({\rm e}^{-x}x^n\right)
+\]
+
+\subsection{Hermite}
+\def\Hn{{\rm H}_n}
+\def\Hen{{\rm He}_n}
+De differentiaalvergelijkingen van Hermite zijn:
+\[
+\frac{d^2\Hn(x)}{dx^2}-2x\frac{d\Hn(x)}{dx}+2n\Hn(x)=0~~\mbox{en}~~
+\frac{d^2\Hen(x)}{dx^2}-x\frac{d\Hen(x)}{dx}+n\Hen(x)=0
+\]
+De oplossingen hiervan zijn de Hermite polynomen, die worden gegeven door:
+\[
+\Hn(x)=(-1)^n\exp\left(\frac{1}{2}x^2\right)\frac{d^n(\exp(-\half x^2))}{dx^n}=2^{n/2}\Hen(x\sqrt{2})
+\]
+\[
+\Hen(x)=(-1)^n(\exp\left(x^2\right)\frac{d^n(\exp(-x^2))}{dx^n}=2^{-n/2}\Hn(x/\sqrt{2})
+\]
+
+\subsection{Chebyshev}
+De LDV
+\[
+(1-x^2)\frac{d^2U_n(x)}{dx^2}-3x\frac{dU_n(x)}{dx}+n(n+2)U_n(x)=0
+\]
+heeft oplossingen
+\[
+U_n(x)=\frac{\sin[(n+1)\arccos(x)]}{\sqrt{1-x^2}}
+\]
+De LDV
+\[
+(1-x^2)\frac{d^2T_n(x)}{dx^2}-x\frac{dT_n(x)}{dx}+n^2T_n(x)=0
+\]
+heeft oplossingen $T_n(x)=\cos(n\arccos(x))$.
+
+\subsection{Weber}
+De LDV $W''_n(x)+(n+\half-\kwart x^2)W_n(x)=0$ heeft oplossingen:
+$W_n(x)={\rm He}_n(x)\exp(-\kwart x^2)$.
+
+\section{Niet-lineaire differentiaalvergelijkingen}
+Enkele niet-lineaire differentiaalvergelijkingen en een oplossing zijn:
+\[
+\begin{array}{lll}
+y'=a\sqrt{y^2+b^2}&~~~~&y=b\sinh(a(x-x_0))\\
+y'=a\sqrt{y^2-b^2}&~~~~&y=b\cosh(a(x-x_0))\\
+y'=a\sqrt{b^2-y^2}&~~~~&y=b\cos(a(x-x_0))\\
+y'=a(y^2+b^2)     &~~~~&y=b\tan(a(x-x_0))\\
+y'=a(y^2-b^2)     &~~~~&y=b\coth(a(x-x_0))\\
+y'=a(b^2-y^2)     &~~~~&y=b\tanh(a(x-x_0))\\
+\displaystyle y'=ay\left(\frac{b-y}{b}\right)&~~~~&\displaystyle y=\frac{b}{1+Cb\exp(-ax)}
+\end{array}
+\]
+
+\section{Sturm-Liouville vergelijkingen}
+Sturm-Liouville vergelijkingen zijn 2e orde LDV's van de vorm:
+\[
+-\frac{d}{dx}\left(p(x)\frac{dy(x)}{dx}\right)+q(x)y(x)=\lambda m(x)y(x)
+\]
+De randvoorwaarden worden zodanig gekozen dat de operator
+\[
+L=-\frac{d}{dx}\left(p(x)\frac{d}{dx}\right)+q(x)
+\]
+Hermitisch is. Van de normeringsfunctie $m(x)$ wordt ge\"eist dat
+\[
+\int\limits_a^bm(x)y_i(x)y_j(x)dx=\delta_{ij}
+\]
+Als $y_1(x)$ en $y_2(x)$ twee lineair onafhankelijke oplossingen zijn kan men
+de Wronskiaan in de volgende vorm schrijven:
+\[
+W(y_1,y_2)=\left|\begin{array}{cc}y_1&y_2\\ y_1'&y_2' \end{array}\right|=
+\frac{C}{p(x)}
+\]
+met $C$ een constante. Door overgang naar een andere afhankelijke variabele
+$u(x)$ die gegeven is door: $u(x)=y(x)\sqrt{p(x)}$ gaat de LDV over in de
+{\it normaalvorm}:
+\[
+\frac{d^2u(x)}{dx^2}+I(x)u(x)=0~~~\mbox{met}~~~
+I(x)=\frac{1}{4}\left(\frac{p'(x)}{p(x)}\right)^2-\frac{1}{2}\frac{p''(x)}{p(x)}-\frac{q(x)-\lambda m(x)}{p(x)}
+\]
+Als $I(x)>0$ is $y''/y<0$ en heeft de oplossing een oscillatoir gedrag, als
+$I(x)<0$ is $y''/y>0$ en heeft de oplossing een exponentieel gedrag.
+
+\section{Lineaire parti\"ele differentiaalvergelijkingen}
+\subsection{Algemeen}
+De {\it normale afgeleide} is gedefinieerd door:
+\[
+\Q{u}{n}=(\vec{\nabla}u,\vec{n})
+\]
+Een veel gebruikte oplossingsmethode voor PDV's is {\it scheiding van
+variabelen}: men neemt aan dat de oplossing $u(x,t)$ geschreven kan worden
+als $u(x,t)=X(x)T(t)$. Uit substitutie volgen dan gewone DV's voor $X(x)$ en
+$T(t)$.
+
+\subsection{Bijzondere gevallen}
+\subsubsection{De golfvergelijking}
+De {\it golfvergelijking} in 1 dimensie is gegeven door
+\[
+\QQ{u}{t}=c^2\QQ{u}{x}
+\]
+Als beginvoorwaarde geldt $u(x,0)=\varphi(x)$ en
+$\partial u(x,0)/\partial t=\Psi(x)$. Dan is de algemene oplossing gegeven
+door:
+\[
+u(x,t)=\frac{1}{2}\left[\varphi(x+ct)+\varphi(x-ct)\right]+\frac{1}{2c}
+\int\limits_{x-ct}^{x+ct}\Psi(\xi)d\xi
+\]
+
+\subsubsection{De diffusievergelijking}
+De {\it diffusievergelijking} is:
+\[
+\Q{u}{t}=D\nabla^2u
+\]
+De oplossingen hiervan zijn uit te drukken met de propagatoren $P(x,x',t)$.
+Deze hebben de eigenschap dat $P(x,x',0)=\delta(x-x')$. In 1 dimensie geldt:
+\[
+P(x,x',t)=\frac{1}{2\sqrt{\pi Dt}}\exp\left(\frac{-(x-x')^2}{4Dt}\right)
+\]
+In 3 dimensies geldt:
+\[
+P(x,x',t)=\frac{1}{8(\pi Dt)^{3/2}}\exp\left(\frac{-(\vec{x}-\vvec{x}')^2}{4Dt}\right)
+\]
+Met beginvoorwaarde $u(x,0)=f(x)$ is de oplossing:
+\[
+u(x,t)=\int\limits_{\cal G}f(x')P(x,x',t)dx'
+\]
+De oplossing van de vergelijking
+\[
+\Q{u}{t}-D\QQ{u}{x}=g(x,t)
+\]
+is gegeven door
+\[
+u(x,t)=\int dt' \int dx'g(x',t')P(x,x',t-t')
+\]
+
+\subsubsection{De vergelijking van Helmholtz}
+De vergelijking van Helmholtz verkrijgt men door substitutie van
+$u(\vec{x},t)=v(\vec{x})\exp(i\omega t)$ in de golfvergelijking. Dit geeft
+voor $v$:
+\[
+\nabla^2v(\vec{x},\omega)+k^2v(\vec{x},\omega)=0
+\]
+Dit geeft als oplossingen voor $v$:
+\begin{enumerate}
+\item In cartesische co\"ordinaten: substitutie van
+$v=A\exp(i\vec{k}\cdot\vvec{x})$ geeft:
+\[
+v(\vvec{x})=\int\cdots\int A(k){\rm e}^{i\vec{k}\cdot\vec{x}}dk
+\]
+met de integralen over $\vvec{k}^2=k^2$.
+\item In poolco\"ordinaten:
+\[
+v(r,\varphi)=\sum_{m=0}^\infty(A_mJ_m(kr)+B_mN_m(kr)){\rm e}^{im\varphi}
+\]
+\item In bolco\"ordinaten:
+\[
+v(r,\theta,\varphi)=\sum_{l=0}^\infty\sum_{m=-l}^l[A_{lm}J_{l+\frac{1}{2}}(kr)+B_{lm}J_{-l-\frac{1}{2}}(kr)]\frac{Y(\theta,\varphi)}{\sqrt{r}}
+\]
+\end{enumerate}
+
+\subsection{Potentiaaltheorie en de stelling van Green}
+Onderwerp van de potentiaaltheorie vormen de {\it Poisson vergelijking}
+$\nabla^2u=-f(\vvec{x})$ met $f$ een gegeven functie, en de {\it Laplace
+vergelijking} $\nabla^2u=0$. De oplossingen hiervan zijn vaak te interpreteren
+als een potentiaal. De oplossingen van de Laplace vergelijking worden
+{\it harmonische functies} genoemd.
+\npar
+Wanneer een vectorveld $\vec{v}$ gegeven is door $\vec{v}={\rm grad}\varphi$
+volgt:
+\[
+\int\limits_a^b(\vec{v},\vvec{t})ds=\varphi(\vvec{b})-\varphi(\vvec{a})
+\]
+In dit geval bestaan er functies $\varphi$ en $\vec{w}$ zodanig dat
+$\vec{v}={\rm grad}\varphi+{\rm rot}\vec{w}$.
+\npar
+De {\it veldlijnen} van het veld $\vec{v}(\vec{x})$ volgen uit:
+\[
+\dot{\vvec{x}}(t)=\lambda\vec{v}(\vvec{x})
+\]
+De {\it eerste identiteit van Green} is:
+\[
+\mathop{\iiint}\limits_{\cal\!\!\! G}[u\nabla^2v+(\nabla u,\nabla v)]d^3V=\mathop{\oiint}\limits_{\cal\!\!\!S}u\Q{v}{n}d^2A
+\]
+De {\it tweede identiteit van Green} is:
+\[
+\mathop{\iiint}\limits_{\cal\!\!\! G}[u\nabla^2v-v\nabla^2u]d^3V=\mathop{\oiint}\limits_{\cal\!\!\!S}\left(u\Q{v}{n}-v\Q{u}{n}\right)d^2A
+\]
+Een harmonische functie die 0 is op de rand van een gebied is 0 binnen dat
+gebied. Een harmonische functie waarvan de normaalafgeleide 0 is op de rand van
+een gebied is constant binnen dat gebied.
+\npar
+Het {\it Dirichlet probleem} is:
+\[
+\nabla^2u(\vvec{x})=-f(\vvec{x})~~,~~\vec{x}\in R~~,~~u(\vvec{x})=g(\vvec{x})~~\mbox{voor alle}~~\vec{x}\in S.
+\]
+De oplossing hiervan is eenduidig.
+\npar
+Het {\it Neumann probleem} is:
+\[
+\nabla^2u(\vvec{x})=-f(\vvec{x})~~,~~\vec{x}\in R~~,~~\Q{u(\vvec{x})}{n}=h(\vvec{x})~~\mbox{voor alle}~~\vec{x}\in S.
+\]
+De oplossing van het Neumann probleem is eenduidig op een constante na. De
+oplossing bestaat als:
+\[
+-\mathop{\iiint}\limits_{\!\!\!R}f(\vvec{x})d^3V=\mathop{\oiint}\limits_{\!\!\!S}h(\vvec{x})d^2A
+\]
+Een {\it fundamentele oplossing} van de Laplace vergelijking voldoet aan:
+\[
+\nabla^2u(\vvec{x})=-\delta(\vvec{x})
+\]
+De oplossing in 2 dimensies hiervan is in poolco\"ordinaten:
+\[
+u(r)=\frac{\ln(r)}{2\pi}
+\]
+De oplossing in 3 dimensies is in bolco\"ordinaten:
+\[
+u(r)=\frac{1}{4\pi r}
+\]
+De vergelijking $\nabla^2v=-\delta(\vec{x}-\vvec{\xi})$ heeft als oplossing
+\[
+v(\vvec{x})=\frac{1}{4\pi|\vec{x}-\vvec{\xi}|}
+\]
+Na substitutie hiervan in de 2e identiteit van Green en toepassing van de
+zeefeigenschap van de $\delta$ functie volgt de 3e identiteit van Green:
+\[
+u(\vvec{\xi})=-\frac{1}{4\pi}\mathop{\iiint}\limits_{\!\!\!R}\frac{\nabla^2u}{r}d^3V+
+\frac{1}{4\pi}\mathop{\oiint}\limits_{\!\!\!S}\left[\frac{1}{r}\Q{u}{n}-u\Q{}{n}\left(\frac{1}{r}\right)\right]d^2A
+\]
+De {\it Greense functie} $G(\vec{x},\vvec{\xi})$ is gedefinieerd door:
+$\nabla^2G=-\delta(\vec{x}-\vvec{\xi})$, en op rand $S$ is $G(\vec{x},\vvec{\xi})=0$.
+Dan is $G$ te schrijven als:
+\[
+G(\vec{x},\vvec{\xi})=\frac{1}{4\pi|\vec{x}-\vvec{\xi}|}+g(\vec{x},\vvec{\xi})
+\]
+Dan is $g(\vec{x},\vvec{\xi})$ een oplossing van het Dirichlet probleem. De
+oplossing van de Poisson vergelijking $\nabla^2u=-f(\vvec{x})$ als op rand $S$
+geldt: $u(\vvec{x})=g(\vvec{x})$, is dan:
+\[
+u(\vvec{\xi})=\mathop{\iiint}\limits_{\!\!\!R}G(\vec{x},\vvec{\xi})f(\vvec{x})d^3V-
+\mathop{\oiint}\limits_{\!\!\!S}g(\vvec{x})\Q{G(\vec{x},\vvec{\xi})}{n}d^2A
+\]
+
+
+\chapter{Lineaire algebra en analyse}
+\typeout{Lineaire algebra en analyse}
+\section{Vectorruimten}
+$\cal G$ is een groep voor de operatie $\otimes$ als:
+\begin{enumerate}
+\item $\forall a,b\in{\cal G}\Rightarrow a\otimes b\in\cal G$: een groep is
+      {\it gesloten}.
+\item $(a\otimes b)\otimes c = a\otimes (b\otimes c)$: een groep is
+      {\it associatief}.
+\item $\exists e\in{\cal G}$ zodanig dat $a\otimes e=e\otimes a=a$: er bestaat
+      een {\it eenheidselement}.
+\item $\forall a\in{\cal G}\exists \overline{a}\in{\cal G}$ zodanig dat $a\otimes\overline{a}=e$:
+      elk element heeft een {\it inverse}.
+\end{enumerate}
+Als\\
+\hspace*{4.5mm}5. $a\otimes b=b\otimes a$
+\npar
+is de groep Abels of commutatief.
+Vectorruimten vormen een Abelse groep voor de optelling en vermenigvuldiging:
+$1\cdot\vec{a}=\vec{a}$, $\lambda(\mu\vec{a})=(\lambda\mu)\vec{a}$,
+$(\lambda+\mu)(\vec{a}+\vec{b})=\lambda\vec{a}+\lambda\vec{b}+\mu\vec{a}+\mu\vec{b}$.
+\npar
+$W$ is een {\it lineaire deelruimte} als $\forall \vec{w}_1,\vec{w}_2\in W$
+geldt: $\lambda\vec{w}_1+\mu\vec{w}_2\in W$.
+\npar
+$W$ is een {\it invariante deelruimte} van $V$ voor de afbeelding $A$ als
+$\forall \vec{w}\in W$ geldt: $A\vec{w}\in W$.
+
+\section{Basis}
+Voor een orthogonale basis geldt: $(\vec{e}_i,\vec{e}_j)=c\delta_{ij}$. Voor
+een orthonormale basis geldt: $(\vec{e}_i,\vec{e}_j)=\delta_{ij}$.
+\npar
+De set vectoren $\{\vec{a}_n\}$ is onafhankelijk als:
+\[
+\sum\limits_i\lambda_i\vec{a}_i=0~~\Leftrightarrow~~\forall_i\lambda_i=0
+\]
+De set $\{\vec{a}_n\}$ is een basis als ze 1. onafhankelijk zijn, en 2.
+$V=<\vec{a}_1,\vec{a_2},...>=\sum\lambda_i\vec{a}_i$.
+
+\section{Matrices}
+\subsection{Basisbewerkingen}
+Voor de matrixvermenigvuldiging van matrices $A=a_{ij}$ en $B=b_{kl}$ geldt:
+met $^r$ de rijindex en $^k$ de kolomindex:
+\[
+A^{r_1k_1}\cdot B^{r_2k_2}=C^{r_1k_2}~~,~~(AB)_{ij}=\sum_ka_{ik}b_{kj}
+\]
+met $^r$ het aantal rijen en $^k$ het aantal kolommen.
+\npar
+De {\it getransponeerde} van $A$ is gedefinieerd door: $a_{ij}^T=a_{ji}$.
+Hiervoor geldt dat $(AB)^T=B^TA^T$, en $(A^T)^{-1}=(A^{-1})^T$. Voor de
+{\it inverse matrix} geldt: $(A\cdot B)^{-1}=B^{-1}\cdot A^{-1}$. De inverse
+matrix $A^{-1}$ heeft de eigenschap dat $A\cdot A^{-1}=\II$ en kan gevonden
+worden door vegen: $(A_{ij}|\II)\sim(\II|A_{ij}^{-1})$.
+\npar
+De inverse van een $2\times2$ matrix is:
+\[
+\left(\begin{array}{cc}a&b\\ c&d\end{array}\right)^{-1}=\frac{1}{ad-bc}
+\left(\begin{array}{cc}d&-b\\ -c&a\end{array}\right)
+\]
+\npar
+De {\it determinant functie} $D=\det(A)$ is gedefinieerd door:
+\[
+\det(A)=D(\vec{a}_{*1},\vec{a}_{*2},...,\vec{a}_{*n})
+\]
+Voor de determinant $\det(A)$ van een matrix $A$ geldt:
+$\det(AB)=\det(A)\cdot\det(B)$. Een $2\times2$ matrix heeft als determinant:
+\[
+\det\left(\begin{array}{cc}a&b\\ c&d \end{array}\right)=ad-cb
+\]
+De afgeleide van een matrix is een matrix met de afgeleiden van de co\"effici\"enten:
+\[
+\frac{dA}{dt}=\frac{da_{ij}}{dt}~~~\mbox{en}~~~\frac{dAB}{dt}=B\frac{dA}{dt}+A\frac{dB}{dt}
+\]
+De afgeleide van de determinant is gegeven door:
+\[
+\frac{d\det(A)}{dt}=D(\frac{d\vec{a}_1}{dt},...,\vec{a}_n)+
+D(\vec{a}_1,\frac{d\vec{a}_2}{dt},...,\vec{a}_n)+...+D(\vec{a}_1,...,\frac{d\vec{a}_n}{dt})
+\]
+Wanneer men de rijen van een matrix als vectoren beschouwd is de {\it rijenrang}
+van deze matrix het aantal onafhankelijke vectoren in deze set. Idem voor de
+{\it kolommenrang}. Voor elke matrix is de rijenrang gelijk aan de kolommenrang.
+\npar
+Laat $\tilde{A}:\tilde{V}\rightarrow\tilde{V}$ de complexe uitbreiding zijn van
+de re\"ele lineaire afbeelding $A:V\rightarrow V$ in een eindig dimensionale
+$V$. Dan hebben $A$ en $\tilde{A}$ dezelfde karakteristieke vergelijking.
+\npar
+Als $A_{ij}\in\RR$ en als $\vec{v}_1+i\vec{v_2}$ een eigenvector van $A$ is
+bij eigenwaarde $\lambda=\lambda_1+i\lambda_2$, dan geldt:
+\begin{enumerate}
+\item $A\vec{v}_1=\lambda_1\vec{v}_1-\lambda_2\vec{v}_2$ en $A\vec{v}_2=\lambda_2\vec{v}_1+\lambda_1\vec{v}_2$.
+\item $\vec{v}^{~*}=\vec{v}_1-i\vec{v}_2$ een eigenwaarde bij $\lambda^*=\lambda_1-i\lambda_2$.
+\item Het lineaire opspansel $<\vec{v}_1,\vec{v}_2>$ is een invariante deelruimte van $A$.
+\end{enumerate}
+Als $\vec{k}_n$ de kolommen van $A$ zijn is de beeldruimte van $A$ gegeven door:
+\[
+R(A)=<A\vec{e}_1,...,A\vec{e}_n>=<\vec{k}_1,...,\vec{k}_n>
+\]
+Als de kolommen $\vec{k}_n$ van een $n\times m$ matrix $A$ onafhankelijk zijn,
+dan is de nulruimte ${\cal N}(A)=\{\vvec{0}\}$.
+
+\subsection{Matrixvergelijkingen}
+We gaan uit van de vergelijking
+\[
+A\cdot\vec{x}=\vec{b}
+\]
+met $\vec{b}\neq\vec{0}$. Als $\det(A)=0$ is de enige oplossing hiervan
+$\vec{0}$. Als $\det(A)\neq0$ is er precies \'e\'en oplossing $\neq\vec{0}$.
+\npar
+De vergelijking
+\[
+A\cdot\vec{x}=\vec{0}
+\]
+heeft precies \'e\'en oplossing $\neq\vec{0}$ als $\det(A)=0$, en als
+$\det(A)\neq0$ is de oplossing $\vec{0}$.
+\npar
+De regel van Cramer voor de oplossingen van stelsels vergelijkingen luidt:
+als de vergelijking te schrijven is als
+\[
+A\cdot\vec{x}=\vec{b}\equiv \vec{a}_1x_1+...+\vec{a}_nx_n=\vec{b}
+\]
+dan is $x_j$ gegeven door:
+\[
+x_j=\frac{D(\vec{a}_1,...,\vec{a}_{j-1},\vec{b},\vec{a}_{j+1},...,\vec{a}_n)}{\det(A)}
+\]
+
+\section{Lineaire afbeeldingen}
+Een afbeelding $A$ is lineair als geldt:
+$A(\lambda\vec{x}+\beta\vvec{y})=\lambda A\vec{x}+\beta A\vec{y}$.
+\npar
+Enkele lineaire afbeeldingen zijn:
+\begin{center}
+\begin{tabular}{||p{7cm}|p{6cm}||}
+\hline
+\bf Soort afbeelding&\bf Formule\\
+\hline
+\hline
+Projectie op de lijn $<\vec{a}>$              &$P(\vvec{x})=(\vec{a},\vvec{x})\vec{a}/(\vec{a},\vvec{a})$\\
+Projectie op het vlak $(\vec{a},\vvec{x})=0$ &$Q(\vvec{x})=\vec{x}-P(\vvec{x})$\\
+Spiegeling in de lijn $<\vec{a}>$             &$S(\vvec{x})=2P(\vvec{x})-\vec{x}$\\
+Spiegeling in het vlak $(\vec{a},\vvec{x})=0$&$T(\vvec{x})=2Q(\vvec{x})-\vec{x}=\vec{x}-2P(\vvec{x})$\\
+\hline
+\end{tabular}
+\end{center}
+Voor een projectie geldt: $\vec{x}-P_W(\vvec{x})\perp P_W(\vvec{x})$ en
+$P_W(\vvec{x})\in W$.
+\npar
+Als voor een afbeelding $A$ geldt: $(A\vec{x},\vvec{y})=(\vec{x},A\vvec{y})=(A\vec{x},A\vvec{y})$
+dan is $A$ een projectie.
+\npar
+Zij $A:W\rightarrow W$ een lineaire afbeelding; we defini\"eren:
+\begin{itemize}
+\item Als $S$ een deelverzameling van $V$ is: $A(S):=\{A\vec{x}\in W|\vec{x}\in S\}$
+\item Als $T$ een deelverzameling van $W$ is: $A^\leftarrow(T):=\{\vec{x}\in V|A(\vvec{x})\in T\}$
+\end{itemize}
+Dan is $A(S)$ een lineaire deelruimte van $W$ en de {\it inverse afbeelding}
+$A^\leftarrow(T)$ een lineaire deelruimte van $V$. Hieruit volgt dat $A(V)$ de
+{\it beeldruimte} van $A$ is, notatie: ${\cal R}(A)$. $A^\leftarrow(\vvec{0})=E_0$
+is een lineaire deelruimte in $V$, de {\it nulruimte} van $A$, notatie:
+${\cal N}(A)$.  Er geldt dat:
+\[
+{\rm dim}({\cal N}(A))+{\rm dim}({\cal R}(A))={\rm dim}(V)
+\]
+
+\section{Vlak en lijn}
+De vergelijking van een lijn door de punten $\vec{a}$ en $\vec{b}$ is:
+\[
+\vec{x}=\vec{a}+\lambda(\vec{b}-\vvec{a})=\vec{a}+\lambda\vec{r}
+\]
+De vergelijking van een vlak is:
+\[
+\vec{x}=\vec{a}+\lambda(\vec{b}-\vvec{a})+\mu(\vec{c}-\vvec{a})=\vec{a}+\lambda\vec{r}_1+\mu\vec{r}_2
+\]
+Indien dit een vlak in $\RR^3$ is, is de {\it normaal} op dit vlak gegeven
+door:
+\[
+\vec{n}_V=\frac{\vec{r}_1\times\vec{r}_2}{|\vec{r}_1\times\vec{r}_2|}
+\]
+Men kan een lijn ook voorstellen door de punten die voldoen aan de vergelijking
+lijn $\ell$: $(\vec{a},\vec{x})+b=0$ en vlak V: $(\vec{a},\vec{x})+k=0$.
+De normaal op V is dan: $\vec{a}/|\vec{a}|$.
+\npar
+De afstand $d$ tussen 2 punten $\vec{p}$ en $\vec{q}$ is gegeven door
+$d(\vec{p},\vvec{q})=\|\vec{p}-\vvec{q}\|$.
+\npar
+In $\RR^2$ geldt:
+De afstand van een punt $\vec{p}$ tot de lijn $(\vec{a},\vvec{x})+b=0$ is:
+\[
+d(\vec{p},\ell)=\frac{|(\vec{a},\vvec{p})+b|}{|\vec{a}|}
+\]
+Analoog in $\RR^3$:
+De afstand van een punt $\vec{p}$ tot het vlak $(\vec{a},\vvec{x})+k=0$ is:
+\[
+d(\vec{p},V)=\frac{|(\vec{a},\vvec{p})+k|}{|\vec{a}|}
+\]
+Dit is te veralgemeniseren voor $\RR^n$ en $\CC^n$ (stelling van Hesse).
+
+\section{Co\"ordinatentransformaties}
+De lineaire afbeelding $A$ van $\KK^n\rightarrow\KK^m$ is gegeven door
+($\KK=\RR$ of $\CC$):
+\[
+\vec{y}=A^{m\times n}\vec{x}
+\]
+waarin een kolom van $A$ het beeld is van een basisvector in het origineel.
+\npar
+De matrix $A_\alpha^\beta$ voert een vector die gegeven is t.o.v. basis
+$\alpha$ over in een vector t.o.v. basis $\beta$. Ze is gegeven door:
+\[
+A_\alpha^\beta=\left(\beta(A\vec{a}_1),...,\beta(A\vec{a}_n)\right)
+\]
+waarin $\beta(\vvec{x})$ de representatie van de vector $\vec{x}$
+t.o.v.\ basis $\beta$ is.
+\npar
+De {\it overgangsmatrix} $S_\alpha^\beta$ voert vectoren van stelsel $\alpha$
+naar co\"ordinatenstelsel $\beta$ over:
+\[
+S_\alpha^\beta:=\II_\alpha^\beta=\left(\beta(\vec{a}_1),...,\beta(\vec{a}_n)\right)
+\]
+Er geldt: $S_\alpha^\beta\cdot S_\beta^\alpha=\II$
+\npar
+De matrix van een afbeelding $A$ is dan gegeven door:
+\[
+A_\alpha^\beta=\left(A_\alpha^\beta\vec{e}_1,...,A_\alpha^\beta\vec{e}_n\right)
+\]
+Voor de transformatie van matrixoperatoren naar een ander co\"ordinatenstelsel
+geldt: $A_\alpha^\delta=S_\lambda^\delta A_\beta^\lambda S_\alpha^\beta$,
+$A_\alpha^\alpha=S_\beta^\alpha A_\beta^\beta S_\alpha^\beta$ en
+$(AB)_\alpha^\lambda=A_\beta^\lambda B_\alpha^\beta$.
+\npar
+Verder is $A_\alpha^\beta=S_\alpha^\beta A_\alpha^\alpha$,
+$A_\beta^\alpha=A_\alpha^\alpha S_\beta^\alpha$. Een vector wordt
+getransformeerd via $X_\alpha=S_\alpha^\beta X_\beta$.
+
+\section{Eigenwaarden}
+De {\it eigenwaarde vergelijking}
+\[
+A\vec{x}=\lambda\vec{x}
+\]
+met {\it eigenwaarden} $\lambda$ is op te lossen met
+$(A-\lambda\II)=\vec{0}\Rightarrow\det(A-\lambda\II)=0$. Uit deze
+karakteristieke vergelijking volgen de eigenwaarden. Er geldt dat
+$\det(A)=\prod\limits_i\lambda_i$ en
+${\rm Tr}(A)=\sum\limits_ia_{ii}=\sum\limits_i\lambda_i$.
+\npar
+De eigenwaarden $\lambda_i$ zijn basisonafhankelijk. Indien $S$ de overgangsmatrix
+is naar een basis van eigenvectoren: $S=(E_{\lambda_1},...,E_{\lambda_n})$, is
+de matrix van $A$ in deze basis gegeven door:
+\[
+\Lambda=S^{-1}AS={\rm diag}(\lambda_1,...,\lambda_n)
+\]
+Als 0 een eigenwaarde is van $A$ dan is $E_0(A)={\cal N}(A)$.
+\npar
+Als $\lambda$ een eigenwaarde is van $A$ geldt: $A^n\vec{x}=\lambda^n\vec{x}$.
+
+\section{Soorten afbeeldingen}
+\subsubsection{Isometrische afbeeldingen}
+Een afbeelding is een {\it isometrie} als geldt: $\|A\vec{x}\|=\|\vec{x}\|$.
+Hieruit volgt dat de eigenwaarden van een isometrie gegeven zijn door
+$\lambda=\exp(i\varphi)\Rightarrow|\lambda|=1$. Tevens geldt dan:
+$(A\vec{x},A\vvec{y})=(\vec{x},\vvec{y})$.
+\npar
+Als $W$ een invariante deelruimte van de isometrie $A$ is met dim$(A)<\infty$
+dan is ook $W^\perp$ een invariante deelruimte.
+
+\subsubsection{Orthogonale afbeeldingen}
+Een afbeelding $A$ is {\it orthogonaal} als $A$ een isometrie is {\it en}
+de inverse $A^\leftarrow$ bestaat. Voor een orthogonale afbeelding $O$ geldt
+$O^TO=\II$, dus geldt: $O^T=O^{-1}$. Als $A$ en $B$ orthogonaal zijn, dan is
+$AB$ en $A^{-1}$ ook orthogonaal.
+\npar
+Laat $A:V\rightarrow V$ orthogonaal zijn met dim$(V)<\infty$. Dan is $A$:
+\npar
+{\bf Direct orthogonaal} als $\det(A)=+1$. $A$ stelt een rotatie voor.
+In $\RR^2$ wordt een rotatie om hoek $\varphi$ gegeven door:
+\[
+R=
+\left(\begin{array}{cc}
+\cos(\varphi)&-\sin(\varphi)\\
+\sin(\varphi)&\cos(\varphi)
+\end{array}\right)
+\]
+De rotatiehoek $\varphi$ is dus bepaald door Tr$(A)=2\cos(\varphi)$ met
+$0\leq\varphi\leq\pi$. Laat $\lambda_1$ en $\lambda_2$ de wortels van de
+karakteristieke vergelijking zijn, dan geldt tevens:
+$\Re(\lambda_1)=\Re(\lambda_2)=\cos(\varphi)$, en $\lambda_1=\exp(i\varphi)$,
+$\lambda_2=\exp(-i\varphi)$.
+\npar
+In $\RR^3$ geldt: $\lambda_1=1$, $\lambda_2=\lambda_3^*=\exp(i\varphi)$. Een
+rotatie om $E_{\lambda_1}$ is gegeven door de matrix
+\[
+\left(\begin{array}{ccc}
+1&0&0\\
+0&\cos(\varphi)&-\sin(\varphi)\\
+0&\sin(\varphi)&\cos(\varphi)
+\end{array}\right)
+\]
+{\bf Gespiegeld orthogonaal} als $\det(A)=-1$. Vectoren uit $E_{-1}$ worden door
+$A$ gespiegeld t.o.v. de invariante deelruimte $E^\perp_{-1}$. In $\RR^2$ wordt
+een spiegeling in $<(\cos(\half\varphi),\sin(\half\varphi))>$ gegeven door:
+\[
+S=
+\left(\begin{array}{cc}
+\cos(\varphi)&\sin(\varphi)\\
+\sin(\varphi)&-\cos(\varphi)
+\end{array}\right)
+\]
+In $\RR^3$ zijn gespiegeld orthogonale afbeeldingen draaispiegelingen: dit is
+een rotatie om as $<\vec{a}_1>$ om hoek $\varphi$ en spiegelvlak
+$<\vec{a}_1>^\perp$. De matrix van deze afbeelding is gegeven door:
+\[
+\left(\begin{array}{ccc}
+-1&0&0\\
+0&\cos(\varphi)&-\sin(\varphi)\\
+0&\sin(\varphi)&\cos(\varphi)
+\end{array}\right)
+\]
+In $\RR^3$ geldt voor alle orthogonale afbeeldingen $O$ dat
+$O(\vvec{x})\times O(\vvec{y})=O(\vec{x}\times\vvec{y})$.
+\npar
+$\RR^n$ $(n<\infty)$ kan men voor een orthogonale afbeelding ontbinden in
+onderling loodrechte invariante deelruimten met dimensie 1 of 2.
+
+\subsubsection{Unitaire afbeeldingen}
+Laat $V$ een complexe inproductruimte zijn, dan is een lineaire afbeelding $U$
+{\it unitair} als $U$ een isometrie is {\it en} de inverse afbeelding
+$A^\leftarrow$ bestaat. Een $n\times n$ matrix heet unitair als $U^HU=\II$.
+Er geldt dat $|\det(U)|=1$.
+Elke isometrie in een eindig dimensionale complexe vectorruimte is unitair.
+\npar
+{\bf Stelling}: voor een $n\times n$ matrix $A$ zijn de volgende uitspraken
+equivalent:
+\begin{enumerate}
+\item $A$ is unitair,
+\item De kolommen van $A$ vormen een orthonormaal stelsel,
+\item De rijen van $A$ vormen een orthonormaal stelsel.
+\end{enumerate}
+
+\subsubsection{Symmetrische afbeeldingen}
+Een afbeelding $A$ op $\RR^n$ is {\it symmetrisch} als
+$(A\vec{x},\vvec{y})=(\vec{x},A\vvec{y})$. Een matrix $A\in\MM^{n\times n}$
+is symmetrisch als $A=A^T$. Een lineaire operator is slechts symmetrisch als
+zijn matrix t.o.v. een willekeurige orthogonale basis symmetrisch is. Voor
+een symmetrische afbeelding zijn alle eigenwaarden $\in\RR$. De eigenvectoren
+bij verschillende eigenwaarden zijn onderling loodrecht.
+Als $A$ symmetrisch is, dan is $A^T=A=A^H$ op een orthogonale basis.
+\npar
+Voor iedere matrix $B\in\MM^{m\times n}$ is $B^TB$ symmetrisch.
+
+\subsubsection{Hermitische afbeeldingen}
+Een afbeelding $H:V\rightarrow V$ met $V=\CC^n$ is {\it Hermitisch} als
+$(H\vec{x},\vvec{y})=(\vec{x},H\vvec{y})$. De {\it Hermitisch geconjugeerde}
+afbeelding $A^H$ van $A$ is: $[a_{ij}]^H=[a_{ji}^*]$. Dit wordt ook wel
+genoteerd als volgt: $A^H=A^\dagger$. Het inproduct van twee vectoren $\vec{x}$
+en $\vec{y}$ is nu als volgt te schrijven: $(\vec{x},\vvec{y})=\vec{x}^H\vec{y}$.
+\npar
+Als de afbeeldingen $A$ en $B$ Hermitisch zijn is hun product $AB$ Hermitisch
+als: $[A,B]=AB-BA=0$. $[A,B]$ heet de {\it commutator} van $A$ en $B$.
+\npar
+De eigenwaarden van een Hermitische afbeelding zijn $\in\RR$.
+\npar
+Aan een Hermitische operator $L$ is een matrixrepresentatie te koppelen.
+Ten opzichte van een basis $\vec{e}_i$ is deze gegeven door
+$L_{mn}=(\vec{e}_m,L\vec{e}_n)$.
+
+\subsubsection{Normale afbeeldingen}
+In een complexe vectorruimte $V$ bestaat er bij iedere lineaire afbeelding $A$
+precies \'e\'en lineaire afbeelding $B$ zodanig dat $(A\vec{x},\vvec{y})=(\vec{x},B\vvec{y})$.
+Deze $B$ heet de {\it geadjungeerde afbeelding} van $A$. Notatie: $B=A^*$. Er
+geldt: $(CD)^*=D^*C^*$. Als $A$ een unitaire afbeelding is, dan is $A^*=A^{-1}$,
+als $A$ Hermitisch is dan is $A^*=A$.
+\npar
+{\bf Definitie}: in een complexe vectorruimte $V$ is de lineaire afbeelding
+$A$ {\it normaal} als $A^*A=AA^*$. Dit is slechts het geval als voor de matrix
+van $S$ t.o.v. een orthonormale basis geldt: $A^\dagger A=AA^\dagger$.
+\npar
+Als $A$ normaal is, dan geldt:
+\begin{enumerate}
+\item Voor alle vectoren $\vec{x}\in V$ en een normale afbeelding $A$ geldt:
+\[
+(A\vec{x},A\vvec{y})=(A^*A\vec{x},\vvec{y})=(AA^*\vec{x},\vvec{y})=(A^*\vec{x},A^*\vvec{y})
+\]
+\item $\vec{x}$ is een eigenvector van $A$ dan en slechts dan als $\vec{x}$ een
+      eigenvector van $A^*$ is.
+\item Eigenvectoren van $A$ die bij verschillende eigenwaarden horen staan
+      onderling loodrecht.
+\item Als $E_\lambda$ een eigenruimte is van $A$ dan is het orthoplement
+      $E_\lambda^\perp$ een invariante deelruimte van $A$.
+\end{enumerate}
+Stel $\beta_i$ zijn de verschillende wortels van de karakteristieke vergelijking van
+$A$ met multipliciteiten $n_i$. Dan is de dimensie van elke eigenruimte $V_i$
+gelijk aan $n_i$. Deze eigenruimten staan onderling loodrecht en iedere vector
+$\vec{x}\in V$ kan op precies \'e\'en manier geschreven worden als
+\[
+\vec{x}=\sum_i\vec{x}_i~~~\mbox{met}~~~\vec{x}_i\in V_i
+\]
+Men kan ook schrijven: $\vec{x}_i=P_i\vec{x}$ met $P_i$ een projectie op $V_i$.
+Dit leidt tot de {\it spectraalstelling}: laat $A$ een normale afbeelding in
+een complexe vectorruimte $V$ zijn met dim$(V)=n$. Dan geldt:
+\begin{enumerate}
+\item Er bestaan projectieafbeeldingen $P_i$, $1\leq i\leq p$, met de
+      eigenschappen:
+      \begin{itemize}
+      \item $P_i\cdot P_j=0$ voor $i\neq j$,
+      \item $P_1+...+P_p=\II$,
+      \item ${\rm dim}P_1(V)+...+{\rm dim}P_p(V)=n$
+      \end{itemize}
+      en complexe getallen $\alpha_1,...,\alpha_p$ zodanig dat
+      $A=\alpha_1P_1+...+\alpha_pP_p$.
+\item Als $A$ unitair is dan geldt $|\alpha_i|=1~\forall i$.
+\item Als $A$ Hermitisch is dan is $\alpha_i\in\RR~\forall i$.
+\end{enumerate}
+
+\subsubsection{Volledige stelsels commuterende Hermitische afbeeldingen}
+Beschouw $m$ Hermitische lineaire afbeeldingen $A_i$ in een $n$ dimensionale
+complexe inproductruimte $V$. Stel deze commuteren onderling.
+\npar
+{\bf Lemma}: als $E_\lambda$ de eigenruimte bij eigenwaarde $\lambda$ is van
+$A_1$, dan is $E_\lambda$ een invariante deelruimte van alle afbeeldingen
+$A_i$. D.w.z. als $\vec{x}\in E_\lambda$, dan $A_i\vec{x}\in E_\lambda$.
+\npar
+{\bf Stelling}. Beschouw $m$ commuterende Hermitische matrices $A_i$. Dan
+bestaat er een unitaire matrix $U$ zodanig dat alle matrices $U^\dagger A_iU$
+diagonaal zijn. De kolommen van $U$ zijn de gemeenschappelijke eigenvectoren
+van alle matrices $A_j$.
+\npar
+Als van een Hermitische lineaire afbeelding in een $n$ dimensionale complexe
+vectorruimte alle $n$ eigenwaarden van elkaar verschillen dan ligt een
+genormeerde eigenvector op een fasefactor $\exp(i\alpha)$ na vast.
+\npar
+{\it Definitie}: een commuterend stelsel Hermitische afbeeldingen heet
+{\it volledig} als bij elk tweetal gemeenschappelijke eigenvectoren $\vec{v}_i,\vec{v}_j$
+er tenminste een afbeelding $A_k$ is zo dat $\vec{v}_i$ en $\vec{v}_j$ eigenvectoren
+met verschillende eigenwaarden van $A_k$ zijn.
+\npar
+Meestal wordt een commuterend stelsel zo klein mogelijk genomen. In de
+quantummechanica spreekt men ook van commuterende observabelen. Het aantal
+dat nodig is is gelijk aan het aantal quantumgetallen die nodig zijn om een
+toestand te karakteriseren.
+
+\section{Homogene co\"ordinaten}
+Wanneer men zowel rotaties als translaties in \'e\'en matrixafbeelding wil
+verwerken worden homogene co\"ordinaten gebruikt. Hierbij wordt een extra
+co\"ordinaat ingevoerd om de niet-lineariteiten te beschrijven. Homogene
+co\"ordinaten worden uit cartesische verkregen door:
+\[
+\left(\begin{array}{c}x\\ y\\ z\end{array}\right)_{\rm cart}=
+\left(\begin{array}{c}wx\\ wy\\ wz\\ w\end{array}\right)_{\rm hom}=
+\left(\begin{array}{c}X\\ Y\\ Z\\ w\end{array}\right)_{\rm hom}
+\]
+dus $x=X/w$, $y=Y/w$ en $z=Z/w$. Afbeeldingen in homogene co\"ordinaten
+worden beschreven door de volgende matrices:
+\begin{enumerate}
+\item Translatie over de vector $(X_0, Y_0, Z_0, w_0)$:
+\[
+T=\left(\begin{array}{cccc}
+w_0&0&0&X_0\\
+0&w_0&0&Y_0\\
+0&0&w_0&Z_0\\
+0&0&0&w_0
+\end{array}\right)
+\]
+\item Rotaties om de $x,y,z$ assen over hoeken resp. $\alpha,\beta,\gamma$:
+\[
+R_x(\alpha)=\left(\begin{array}{cccc}
+1&0&0&0\\
+0&\cos\alpha&-\sin\alpha&0\\
+0&\sin\alpha&\cos\alpha&0\\
+0&0&0&1
+\end{array}\right)~~~~
+R_y(\beta)=\left(\begin{array}{cccc}
+\cos\beta&0&\sin\beta&0\\
+0&1&0&0\\
+-\sin\beta&0&\cos\beta&0\\
+0&0&0&1
+\end{array}\right)~~~~
+\]
+\[
+R_z(\gamma)=\left(\begin{array}{cccc}
+\cos\gamma&-\sin\gamma&0&0\\
+\sin\gamma&\cos\gamma&0&0\\
+0&0&1&0\\
+0&0&0&1
+\end{array}\right)
+\]
+\item Een perspectivistische projectie op beeldvlak $z=c$ met het
+      projectiecentrum in de oorsprong. Deze afbeelding is niet omkeerbaar.
+\[
+P(z=c)=\left(\begin{array}{cccc}
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&1/c&0
+\end{array}\right)
+\]
+\end{enumerate}
+
+\section{Inproductruimten}
+Op complexe vectorruimten wordt een complex inproduct als volgt gedefinieerd:
+\begin{enumerate}
+\item $(\vec{a},\vvec{b})=\overline{(\vec{b},\vvec{a})}$,
+\item $(\vec{a},\beta_1\vec{b}_1+\beta_2\vvec{b}_2)=\beta_1(\vec{a},\vvec{b}_1)+\beta_2(\vec{a},\vvec{b}_2)$
+      voor alle $\vec{a},\vec{b}_1,\vec{b}_2\in V$ en $\beta_1,\beta_2\in\CC$.
+\item $(\vec{a},\vvec{a})\geq0$ voor alle $\vec{a}\in V$,
+      $(\vec{a},\vvec{a})=0$ dan en slechts dan als $\vec{a}=\vec{0}$.
+\end{enumerate}
+Wegens (1) is $(\vec{a},\vvec{a})\in\RR$. De {\it inproductruimte} $\CC^n$ is
+de complexe vectorruimte waarop een complex inproduct gedefinieerd is door:
+\[
+(\vec{a},\vvec{b})=\sum_{i=1}^na_i^*b_i
+\]
+Voor functieruimten geldt:
+\[
+(f,g)=\int\limits_a^bf^*(t)g(t)dt
+\]
+Voor iedere $\vec{a}$ is de lengte $\|\vvec{a}\|$ gedefinieerd door:
+$\|\vvec{a}\|=\sqrt{(\vec{a},\vvec{a})}$. Er geldt:
+$\|\vvec{a}\|-\|\vvec{b}\|\leq\|\vec{a}+\vvec{b}\|\leq\|\vvec{a}\|+\|\vvec{b}\|$,
+en met $\varphi$ de hoek tussen $\vec{a}$ en $\vec{b}$ geldt:
+$(\vec{a},\vvec{b})=\|\vvec{a}\|\cdot\|\vvec{b}\|\cos(\varphi)$.
+\npar
+Laat $\{\vec{a}_1,...,\vec{a}_n\}$ een stelsel vectoren zijn in een inproductruimte
+$V$. Dan is de {\it Grammatrix G} van dit stelsel: $G_{ij}=(\vec{a}_i,\vec{a}_j)$.
+Het stelsel vectoren is onafhankelijk dan en slechts dan als $\det(G)=0$.
+\npar
+Een stelsel is {\it orthonormaal} als $(\vec{a}_i,\vec{a}_j)=\delta_{ij}$.
+Als $\vec{e}_1,\vec{e}_2,...$ een orthonormale rij is in een oneindig
+dimensionale vectorruimte geldt de ongelijkheid van Bessel:
+\[
+\|\vvec{x}\|^2\geq\sum_{i=1}^\infty|(\vec{e}_i,\vvec{x})|^2
+\]
+Het gelijkteken geldt dan en slechts dan als
+$\lim\limits_{n\rightarrow\infty}\|\vec{x}_n-\vvec{x}\|=0$.
+\npar
+De inproductruimte $\ell^2$ is gedefinieerd in $\CC^\infty$ door:
+\[
+\ell^2=\left\{\vec{a}=(a_1,a_2,...)~|~\sum_{n=1}^\infty|a_n|^2<\infty\right\}
+\]
+Als een ruimte $\ell^2$ is en tevens voldoet aan:
+$\lim\limits_{n\rightarrow\infty}|a_{n+1}-a_n|=0$,
+dan is het een {\it Hilbertruimte}.
+
+\section{De Laplace transformatie}
+De klasse LT bestaat uit functies die voldoen aan:
+\begin{enumerate}
+\item Op ieder interval $[0,A]$, $A>0$ zijn niet meer dan eindig veel
+      discontinu\"{\i}teiten en in iedere discontinu\"{\i}teit bestaan de
+      boven- en onder limiet,
+\item $\exists t_0\in[0,\infty>$ en een $a,M\in\RR$ z.d.d. voor $t\geq t_0$
+      geldt: $|f(t)|\exp(-at)<M$.
+\end{enumerate}
+Dan bestaat voor $f$ de Laplace getransformeerde.
+\npar
+De Laplace transformatie is een generalisatie van de Fouriertransformatie.
+Indien $s\in\CC$ en $t\geq0$ is de Laplace getransformeerde
+${\cal L}(f(t))=F(s)$ van een functie $f(t)$ gegeven door:
+\[
+F(s)=\int\limits_0^\infty f(t){\rm e}^{-st}dt
+\]
+De Laplace getransformeerde van een afgeleide functie is gegeven door:
+\[
+{\cal L}\left(f^{(n)}(t)\right)=-f^{(n-1)}(0)-sf^{(n-2)}(0)-...-s^{n-1}f(0)+s^nF(s)
+\]
+De operator $\cal L$ heeft de volgende eigenschappen:
+\begin{enumerate}
+\item Gelijkvormigheid: Als $a>0$ dan
+\[
+{\cal L}\left(f(at)\right)=\frac{1}{a}F\left(\frac{s}{a}\right)
+\]
+\item Demping: ${\cal L}\left({\rm e}^{-at}f(t)\right)=F(s+a)$
+\item Verschuiving: Zij $a>0$ en $g$ gedefinieerd door $g(t)=f(t-a)$ als
+$t>a$ en $g(t)=0$ voor $t\leq a$ dan geldt:
+${\cal L}\left(g(t)\right)={\rm e}^{-sa}{\cal L}(f(t))$.
+\end{enumerate}
+Als $s\in\RR$ geldt dat $\Re(\lambda f)={\cal L}(\Re(f))$ en
+$\Im(\lambda f)={\cal L}(\Im(f))$.
+\npar
+Voor enkele veel voorkomende functies geldt:
+\begin{center}
+\begin{tabular}{||c||c||}
+\hline
+$f(t)=$&$F(s)={\cal L}(f(t))=$\\
+\hline
+\hline
+$\displaystyle\frac{t^n}{n!}{\rm e}^{at}$&$(s-a)^{-n-1}$\rule{0pt}{15pt}\\
+${\rm e}^{at}\cos(\omega t)$&$\displaystyle\frac{s-a}{(s-a)^2+\omega^2}$\rule{0pt}{15pt}\\
+${\rm e}^{at}\sin(\omega t)$&$\displaystyle\frac{\omega}{(s-a)^2+\omega^2}$\rule{0pt}{15pt}\\
+$\delta(t-a)$&$\exp(-as)$\rule{0pt}{13pt}\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{De convolutie}
+De convolutie integraal is gedefinieerd door:
+\[
+(f*g)(t)=\int\limits_0^tf(u)g(t-u)du
+\]
+De convolutie heeft de volgende eigenschappen:
+\begin{enumerate}
+\item $f*g\in$LT
+\item ${\cal L}(f*g)={\cal L}(f)\cdot{\cal L}(g)$
+\item Distributie: $f*(g+h)=f*g+f*h$
+\item Commutatie: $f*g=g*f$
+\item Homogeniteit: $f*(\lambda g)=\lambda f*g$
+\end{enumerate}
+Als ${\cal L}(f)=F_1\cdot F_2$, dan is $f(t)=f_1*f_2$.
+
+\section{Stelsels lineaire differentiaalvergelijkingen}
+We gaan uit van de vergelijking $\dot{\vec{x}}=A\vec{x}$. Stel $\vec{x}=\vec{v}\exp(\lambda t)$,
+dan volgt: $A\vec{v}=\lambda\vec{v}$. In het $2\times2$ geval geldt:
+\begin{enumerate}
+\item $\lambda_1=\lambda_2$: dan is $\vec{x}(t)=\sum\vec{v}_i\exp(\lambda_it)$.
+\item $\lambda_1\neq\lambda_2$: dan is $\vec{x}(t)=(\vec{u}t+\vec{v})\exp(\lambda t)$.
+\end{enumerate}
+Stel dat $\lambda=\alpha+i\beta$ een eigenwaarde is bij eigenvector $\vec{v}$,
+dan is $\lambda^*$ ook een eigenwaarde bij eigenvector $\vvec{v}^*$. Ontbind
+$\vec{v}=\vec{u}+i\vec{w}$, dan zijn de re\"ele oplossingen
+\[
+c_1[\vec{u}\cos(\beta t)-\vec{w}\sin(\beta t)]{\rm e}^{\alpha t}+c_2[\vec{v}\cos(\beta t)+\vec{u}\sin(\beta t)]{\rm e}^{\alpha t}
+\]
+\npar
+Voor de vergelijking $\ddot{\vec{x}}=A\vec{x}$ zijn twee oplossingsstrategie\"en:
+\begin{enumerate}
+\item Stel $\vec{x}=\vec{v}\exp(\lambda t)\Rightarrow\det(A-\lambda^2\II)=0$.
+\item Voer in: $\dot{x}=u$ en $\dot{y}=v$, dat geeft $\ddot{x}=\dot{u}$ en
+      $\ddot{y}=\dot{v}$. Zo wordt een $n$-dimensionaal stelsel van tweede orde
+      omgezet in een $2n$-dimensionaal stelsel van de eerste orde.
+\end{enumerate}
+
+\section{Kwadrieken}
+\subsection{Kwadrieken in $\RR^2$}
+De algemene vergelijking voor een kwadriek is:
+$\vec{x}^TA\vec{x}+2\vec{x}^TP+S=0$. Hierin is $A$ een symmetrische matrix.
+Als $\Lambda=S^{-1}AS={\rm diag}(\lambda_1,...,\lambda_n)$ geldt:
+$\vec{u}^T\Lambda\vec{u}+2\vec{u}^TP+S=0$, zodat alle kruistermen 0 zijn.
+Om dezelfde ori\"entatie te behouden als het stelsel $(x,y,z)$ heeft moet men
+$\vec{u}=(u,v,w)$ zodanig kiezen dat det$(S)=+1$.
+\npar
+Uitgaande van de vergelijking
+\[
+ax^2+2bxy+cy^2+dx+ey+f=0
+\]
+geldt dat $|A|=ac-b^2$. Een ellips heeft $|A|>0$, een parabool $|A|=0$ en
+een hyperbool $|A|<0$. In poolco\"ordinaten is dit te schrijven als:
+\[
+r=\frac{ep}{1-e\cos(\theta)}
+\]
+Een ellips heeft $e<1$, een parabool $e=1$ en een hyperbool $e>1$.
+
+\subsection{Tweedegraads oppervlakken in $\RR^3$}
+Rang 3:
+\[
+p\frac{x^2}{a^2}+q\frac{y^2}{b^2}+r\frac{z^2}{c^2}=d
+\]
+\begin{itemize}
+\item Ellipso\"{\i}de: $p=q=r=d=1$, $a,b,c$ zijn de lengtes van de halve assen.
+\item Eenbladige hyperbolo\"{\i}de: $p=q=d=1$, $r=-1$.
+\item Tweebladige hyperbolo\"{\i}de: $r=d=1$, $p=q=-1$.
+\item Kegel: $p=q=1$, $r=-1$, $d=0$.
+\end{itemize}
+Rang 2:
+\[
+p\frac{x^2}{a^2}+q\frac{y^2}{b^2}+r\frac{z}{c^2}=d
+\]
+\begin{itemize}
+\item Elliptische parabolo\"{\i}de: $p=q=1$, $r=-1$, $d=0$.
+\item Hyperbolische parabolo\"{\i}de: $p=r=-1$, $q=1$, $d=0$.
+\item Elliptische cylinder: $p=q=-1$, $r=d=0$.
+\item Hyperbolische cylinder: $p=d=1$, $q=-1$, $r=0$.
+\item Vlakkenpaar: $p=1$, $q=-1$, $d=0$.
+\end{itemize}
+Rang 1:
+\[
+py^2+qx=d
+\]
+\begin{itemize}
+\item Parabolische cylinder: $p,q>0$.
+\item Evenwijdig vlakkenpaar: $d>0$, $q=0$, $p\neq 0$.
+\item Dubbelvlak: $p\neq 0$, $q=d=0$.
+\end{itemize}
+
+
+\chapter{Complexe functietheorie}
+\typeout{Complexe functietheorie}
+\section{Functies van complexe variabelen}
+Complexe functietheorie beschouwt complexe functies van een complexe variabele.
+Enkele definities:
+\npar
+$f$ is {\it analytisch} op $\cal G$ als $f$ continu en differentieerbaar is
+op $\cal G$.
+\npar
+Een {\it Jordankromme} is een kromme die gesloten en enkelvoudig is.
+\npar
+Als K een boog is in $\CC$ met parametervoorstelling $z=\phi(t)=x(t)+iy(t)$,
+$a\leq t\leq b$, dan is de lengte $L$ van K gelijk aan:
+\[
+L=\int\limits_a^b \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}dt=
+\int\limits_a^b\left|\frac{dz}{dt}\right|dt=\int\limits_a^b|\phi'(t)|dt
+\]
+De afgeleide van $f$ in het punt $z=a$ is:
+\[
+f'(a)=\lim_{z\rightarrow a}\frac{f(z)-f(a)}{z-a}
+\]
+Als $f(z)=u(x,y)+iv(x,y)$ is de afgeleide:
+\[
+f'(z)=\Q{u}{x}+i\Q{v}{x}=-i\Q{u}{y}+\Q{v}{y}
+\]
+Gelijkstellen van beide uitkomsten levert de vergelijkingen van Cauchy-Riemann:
+\[
+\Q{u}{x}=\Q{v}{y}~~~,~~~\Q{u}{y}=-\Q{v}{x}
+\]
+Deze vergelijkingen impliceren dat dan $\nabla^2u=\nabla^2v=0$.
+$f$ is analytisch als $u$ en $v$ voldoen aan deze vergelijkingen.
+
+\section{Integratie}
+\subsection{Hoofdstelling}
+Zij $K$ een boog beschreven door $z=\phi(t)$ op $a\leq t\leq b$ en $f(z)$
+is continu op $K$. Dan is de integraal van $f$ over $K$:
+\[
+\int\limits_Kf(z)dz=\int\limits_a^bf(\phi(t))\dot{\phi}(t)dt
+\stackrel{f\mbox{ continu}}{=}F(b)-F(a)
+\]
+{\bf Lemma}: zij $K$ de cirkel met middelpunt $a$ en straal $r$, in positieve
+richting doorlopen. Dan geldt voor gehele $m$:
+\[
+\frac{1}{2\pi i}\oint\limits_K \frac{dz}{(z-a)^m}=\left\{
+\begin{array}{l}
+0~~\mbox{als}~~m\neq1\\
+1~~\mbox{als}~~m=1
+\end{array}\right.
+\]
+{\bf Stelling}: als $L$ de lengte van kromme $K$ is, en zij $|f(z)|\leq M$ voor
+$z\in K$, dan geldt als de integraal bestaat
+\[
+\left|\int\limits_K f(z)dz\right|\leq ML
+\]
+{\bf Stelling}: zij $f$ continu op een gebied $G$ en $p$ een vast punt van
+$G$. Laat $F(z)=\int_p^zf(\xi)d\xi$ voor alle $z\in G$ alleen afhangen van
+$z$ en niet van de integratieweg. Dan is $F(z)$ analytisch in $G$ met $F'(z)=f(z)$.
+\npar
+Dit leidt tot de twee equivalente formuleringen van de {\it hoofdstelling der
+complexe integratie}: zij de functie $f$ analytisch in een gebied $G$. Laat
+$K$ en $K'$ twee krommen zijn met dezelfde begin- en eindpunten, die door
+continue vervorming binnen $G$ in elkaar zijn over te voeren. Laat $B$ een
+Jordankromme zijn. Dan geldt
+\[
+\int\limits_Kf(z)dz=\int\limits_{K'}f(z)dz\Leftrightarrow\oint\limits_Bf(z)dz=0
+\]
+Door de hoofdstelling toe te passen op ${\rm e}^{iz}/z$ kan men afleiden dat
+\[
+\int\limits_0^\infty\frac{\sin(x)}{x}dx=\frac{\pi}{2}
+\]
+
+\subsection{Residu}
+Een punt $a\in\CC$ is een {\it regulier punt} van een functie $f(z)$ als $f$
+analytisch is in $a$. Anders is $a$ een {\it singulier punt} van $f(z)$. Het
+{\it residu} van $f$ in $a$ wordt gedefinieerd door
+\[
+\mathop{\rm Res}\limits_{z=a}f(z)=\frac{1}{2\pi i}\oint\limits_Kf(z)dz
+\]
+waarin $K$ een Jordankromme is die $a$ in positieve richting omsluit. In
+reguliere punten is het residu 0, in singuliere punten kan het zowel 0 als
+$\neq0$ zijn. De residustelling van Cauchy luidt: zij $f$ analytisch binnen en
+op een Jordankromme $K$ met uitzondering van een eindig aantal singuliere
+punten $a_i$ binnen $K$. Dan geldt als $K$ in positieve richting doorlopen
+wordt:
+\[
+\frac{1}{2\pi i}\oint\limits_Kf(z)dz=\sum_{k=1}^n\mathop{\rm Res}\limits_{z=a_k}f(z)
+\]
+{\bf Lemma}: zij de functie $f$ analytisch in $a$, dan geldt:
+\[
+\mathop{\rm Res}\limits_{z=a}\frac{f(z)}{z-a}=f(a)
+\]
+Dit leidt tot de integraalstelling van Cauchy: als $f$ analytisch is op de in
+positieve richting doorlopen Jordankromme $K$, dan geldt
+\[
+\frac{1}{2\pi i}\oint\limits_K\frac{f(z)}{z-a}dz=\left\{\begin{array}{l}
+f(a)~~\mbox{als}~~a~~\mbox{binnen}~~K\\
+0~~\mbox{als}~~a~~\mbox{buiten}~~K
+\end{array}\right.
+\]
+{\bf Stelling}: zij $K$ een kromme (hoeft niet gesloten te zijn) en zij
+$\phi(\xi)$ continu op $K$. Dan is de functie
+\[
+f(z)=\int\limits_K\frac{\phi(\xi)d\xi}{\xi-z}
+\]
+analytisch met $n$-de afgeleide
+\[
+f^{(n)}(z)=n!\int\limits_K\frac{\phi(\xi)d\xi}{(\xi-z)^{(n+1)}}
+\]
+{\bf Stelling}: zij $K$ een kromme en $G$ een gebied. Zij $\phi(\xi,z)$
+gedefinieerd voor $\xi\in K$, $z\in G$, met de volgende eigenschappen:
+\begin{enumerate}
+\item $\phi(\xi,z)$ is begrensd, d.w.z. $|\phi(\xi,z)|\leq M$ voor $\xi\in K$, $z\in G$,
+\item Voor vaste $\xi\in K$ is $\phi(\xi,z)$ een analytische functie van $z$ in $G$,
+\item Voor vaste $z\in G$ zijn $\phi(\xi,z)$ en $\partial\phi(\xi,z)/\partial z$
+      continue functies van $\xi$ op $K$.
+\end{enumerate}
+Dan is de functie
+\[
+f(z)=\int\limits_K\phi(\xi,z)d\xi
+\]
+analytisch met afgeleide
+\[
+f'(z)=\int\limits_K\Q{\phi(\xi,z)}{z}d\xi
+\]
+{\bf Ongelijkheid van Cauchy}: zij de functie $f(z)$ analytisch binnen en op de
+cirkel $C:|z-a|=R$, en zij $|f(z)|\leq M$ voor $z\in C$. Dan geldt
+\[
+\left|f^{(n)}(a)\right|\leq\frac{Mn!}{R^n}
+\]
+
+\section{Analytische functies gedefinieerd door reeksen}
+De reeks $\sum f_n(z)$ heet puntsgewijs convergent op een gebied $G$ met som
+$F(z)$ als
+\[
+\forall_{\varepsilon>0}\forall_{z\in G}\exists_{N_0\in\RR}\forall_{n>n_0}
+\left[~\left|f(z)-\sum_{n=1}^Nf_n(z)\right|<\varepsilon\right]
+\]
+De reeks heet {\it uniform convergent} als
+\[
+\forall_{\varepsilon>0}\exists_{N_0\in\RR}\forall_{n>n_0}\exists_{z\in G}
+\left[~\left|f(z)-\sum_{n=1}^Nf_n(z)\right|<\varepsilon\right]
+\]
+Uniforme convergentie impliceert puntsgewijze convergentie, omgekeerd hoeft
+dat niet zo te zijn.
+\npar
+{\bf Stelling}: laat de machtreeks $\sum\limits_{n=0}^\infty a_nz^n$ de
+convergentiestraal $R$ hebben. $R$ is de afstand tot de eerste niet-ophefbare
+singulariteit.
+\begin{itemize}
+\item Als $\displaystyle\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}=L$ bestaat, dan is $R=1/L$.
+\item Als $\displaystyle\lim_{n\rightarrow\infty}|a_{n+1}|/|a_n|=L$ bestaat, dan is $R=1/L$.
+\end{itemize}
+Als geen van beide limieten bestaat is $R$ te bepalen met de formule van
+Cauchy-Hadamard:
+\[
+\frac{1}{R}=\lim_{n\rightarrow\infty}{\rm sup}\sqrt[n]{|a_n|}
+\]
+
+\section{Laurent reeksen}
+{\bf Stelling van Taylor}: zij $f$ analytisch in een gebied $G$ en laat punt
+$a\in G$ afstand $r$ tot de rand van $G$ hebben. Dan is $f(z)$ te ontwikkelen
+in de Taylorreeks rond $a$:
+\[
+f(z)=\sum_{n=0}^\infty c_n(z-a)^n~~~\mbox{met}~~~c_n=\frac{f^{(n)}(a)}{n!}
+\]
+geldig voor $|z-a|<r$. De convergentiestraal van de Taylorreeks is $\geq r$.
+Indien $f$ een $k$-voudig nulpunt heeft in $a$ is $c_1,...,c_{k-1}=0$, $c_k\neq0$.
+\npar
+{\bf Stelling van Laurent}: zij $f$ analytisch in het ringgebied
+$G:r<|z-a|<R$. Dan is $f(z)$ te ontwikkelen in een Laurentreeks met
+middelpunt $a$:
+\[
+f(z)=\sum_{n=-\infty}^\infty c_n(z-a)^n~~~\mbox{met}~~~
+c_n=\frac{1}{2\pi i}\oint\limits_K\frac{f(w)dw}{(w-a)^{n+1}}~~,~~n\in\ZZ
+\]
+geldig voor $r<|z-a|<R$ en $K$ een willekeurige Jordankromme in $G$ die het
+punt $a$ in positieve richting omsluit.
+\npar
+Het {\it hoofddeel} van een Laurentreeks is: $\sum\limits_{n=1}^\infty c_{-n}(z-a)^{-n}$.
+Hiermee zijn singuliere punten te classificeren. Er zijn 3 gevallen:
+\begin{enumerate}
+\item Het hoofddeel ontbreekt. Dan is $a$ een ophefbare singulariteit.
+      Definieer $f(a)=c_0$ en de reeksontwikkeling geldt ook voor $|z-a|<R$
+      en $f$ is analytisch in $a$.
+\item Het hoofddeel bevat eindig veel termen. Dan bestaat er een $k\in\NN$ z.d.d.
+      $\lim\limits_{z\rightarrow a}(z-a)^kf(z)=c_{-k}\neq0$. De functie
+      $g(z)=(z-a)^kf(z)$ heeft dan een ophefbare singulariteit in $a$. Men
+      zegt dat $f$ een $k$-voudige pool heeft in $z=a$.
+\item Het hoofddeel bevat oneindig veel termen. Dan is $a$ een essentieel
+      singulier punt van $f$, bv. $\exp(1/z)$ voor $z=0$.
+\end{enumerate}
+Als $f$ en $g$ analytisch zijn, $f(a)\neq0$, $g(a)=0$, $g'(a)\neq0$ dan heeft
+$f(z)/g(z)$ een enkelvoudige pool in $z=a$ met
+\[
+\mathop{\rm Res}\limits_{z=a}\frac{f(z)}{g(z)}=\frac{f(a)}{g'(a)}
+\]
+
+\section{De stelling van Jordan}
+Residuen worden vaak gebruikt bij het berekenen van bepaalde integralen. Met de
+notaties $C_\rho^+=\{z||z|=\rho,\Im(z)\geq0\}$ en $C_\rho^-=\{z||z|=\rho,\Im(z)\leq0\}$
+en $M^+(\rho,f)=\mathop{\rm max}\limits_{z\in C_\rho^+}|f(z)|$,
+$M^-(\rho,f)=\mathop{\rm max}\limits_{z\in C_\rho^-}|f(z)|$. We nemen aan dat
+$f(z)$ analytisch is voor $\Im(z)>0$ met eventuele uitzondering van een eindig
+aantal singuliere punten die niet op de re\"ele as liggen,
+$\lim\limits_{\rho\rightarrow\infty}\rho M^+(\rho,f)=0$ en de integraal bestaat,
+dan is
+\[
+\int\limits_{-\infty}^\infty f(x)dx=2\pi i\sum{\rm Res}f(z)~~~\mbox{in}~~~\Im(z)>0
+\]
+Vervang $M^+$ door $M^-$ in bovenstaande eisen en er volgt:
+\[
+\int\limits_{-\infty}^\infty f(x)dx=-2\pi i\sum{\rm Res}f(z)~~~\mbox{in}~~~\Im(z)<0
+\]
+Het {\it Lemma van Jordan}: zij $f$ continu voor $|z|\geq R$, $\Im(z)\geq0$ en
+$\lim\limits_{\rho\rightarrow\infty}M^+(\rho,f)=0$. Dan geldt voor $\alpha>0$
+\[
+\lim_{\rho\rightarrow\infty}\int\limits_{C_\rho^+}f(z){\rm e}^{i\alpha z}dz=0
+\]
+Zij $f$ continu voor $|z|\geq R$, $\Im(z)\leq0$ en
+$\lim\limits_{\rho\rightarrow\infty}M^-(\rho,f)=0$. Dan geldt voor $\alpha<0$
+\[
+\lim_{\rho\rightarrow\infty}\int\limits_{C_\rho^-}f(z){\rm e}^{i\alpha z}dz=0
+\]
+Laat $z=a$ een enkelvoudige pool zijn van $f(z)$ en zij $C_\delta$ de halve
+cirkel $|z-a|=\delta,0\leq{\rm arg}(z-a)\leq\pi$, doorlopen van $a+\delta$ naar
+$a-\delta$. Dan is
+\[
+\lim_{\delta\downarrow0}\frac{1}{2\pi i}\int\limits_{C_\delta}f(z)dz=\half\mathop{\rm Res}\limits_{z=a}f(z)
+\]
+
+
+\chapter{Tensorrekening}
+\typeout{Tensorrekening}
+\section{Vectoren en covectoren}
+We noteren een eindig dimensionale vectorruimte met $\cal V, W$. De
+vectorruimte van lineaire afbeeldingen van $\cal V$ naar $\cal W$ wordt
+aangegeven met $\cal L(V,W)$. Beschouw ${\cal L(V,}\RR):={\cal V}^*$. We
+noemen $\cal V^*$ de {\it duale ruimte} van $\cal V$. We kunnen nu
+{\it vectoren} in $\cal V$  met basis $\vec{c}$ en {\it covectoren} in 
+$\cal V^*$ met basis $\hat{\vec{c}}$ defini\"eeren. Eigenschappen van beide
+zijn:
+\begin{enumerate}
+\item Vectoren: $\vec{x}=x^i\vec{c}_i$ met de basisvectoren $\vec{c}_i$:
+      \[
+      \vec{c}_i=\Q{}{x^i}
+      \]
+      Overgang van stelsel $i$ naar $i'$ wordt gegeven door:
+      \[
+      \vec{c}_{i'}=A_{i'}^i\vec{c}_i=\partial_i\in{\cal V}~~,~~x^{i'}=A_i^{i'}x^i
+      \]
+\item Covectoren: $\hat{\vec{x}}=x_i\hat{\vec{c}}^{~i}$ met de basisvectoren $\hat{\vec{c}}^{~i}$
+      \[
+      \hat{\vec{c}}^{~i}=dx^i
+      \]
+      Overgang van stelsel $i$ naar $i'$ wordt gegeven door:
+      \[
+      \hat{\vec{c}}^{~i'}=A_i^{i'}\hat{\vec{c}}^{~i}\in{\cal V}^*~~,~~\vec{x}_{i'}=A_{i'}^i\vec{x}_i
+      \]
+\end{enumerate}
+Hierbij is de {\it Einsteinconventie} gebruikt:
+\[
+a^ib_i:=\sum_ia^ib_i
+\]
+De co\"ordinatentransformatie wordt gegeven door:
+\[
+A_{i'}^i=\Q{x^i}{x^{i'}}~~,~~A_i^{i'}=\Q{x^{i'}}{x^i}
+\]
+Hieruit volgt dat $A_k^i\cdot A_l^k=\delta_l^i$ en $A_{i'}^i=(A_i^{i'})^{-1}$.
+\npar
+De co\"ordinatentransformaties zijn in differentiaalnotatie gegeven door:
+\[
+dx^i=\Q{x^i}{x^{i'}}dx^{i'}~~~\mbox{en}~~~\Q{}{x^{i'}}=\Q{x^i}{x^{i'}}\Q{}{x^i}
+\]
+In het algemene geval geldt voor de transformatie van een tensor $T$:
+\[
+T_{s_1...s_m}^{q_1...q_n}=\left|\Q{\vec{x}}{\vec{u}}\right|^\ell
+\Q{u^{q_1}}{x^{p_1}}\cdots\Q{u^{q_n}}{x^{p_n}}\cdot\Q{x^{r_1}}{u^{s_1}}\cdots\Q{x^{r_m}}{u^{s_m}}T_{r_1...r_m}^{p_1...p_n}
+\]
+bij een {\it absolute tensor} is $\ell=0$.
+
+\section{Tensoralgebra}
+Er geldt:
+\[
+a_{ij}(x_i+y_i)\equiv a_{ij}x_i+a_{ij}y_i,~~~\mbox{maar:}~~a_{ij}(x_i+y_j)\not\equiv a_{ij}x_i+a_{ij}y_j
+\]
+en
+\[
+(a_{ij}+a_{ji})x_ix_j\equiv2a_{ij}x_ix_j,~~~\mbox{maar:}~~(a_{ij}+a_{ji})x_iy_j\not\equiv 2a_{ij}x_iy_j
+\]
+en $(a_{ij}-a_{ji})x_ix_j\equiv0$.
+\npar
+De som en verschil van 2 tensoren is een tensor van gelijke rang: $A_q^p\pm
+B_q^p$. Bij het uitwendig tensorproduct is de rang van het resultaat de som
+van de rangen van beide tensoren: $A_q^{pr}\cdot B_s^m=C_{qs}^{prm}$. Bij de
+{\it contractie} worden 2 indices gelijk gesteld en erover gesommeerd. Stel
+we nemen $r=s$ bij tensor $A_{qs}^{mpr}$, dit geeft: $\sum\limits_r
+A_{qr}^{mpr}=B_q^{mp}$. Het {\it inproduct} van twee tensoren is gedefinieerd
+als het uitproduct waarna een contractie over een index volgt.
+
+\section{Inwendig product}
+{\bf Definitie}: de bilineaire afbeelding $B:{\cal V}\times{\cal V}^*\rightarrow\RR$,
+$B(\vec{x},\hat{\vec{y}}\,)=\hat{\vec{y}}(\vvec{x})$ wordt aangegeven met
+$<\vec{x},\hat{\vec{y}}\,>$.
+Voor deze {\it paringsoperator} $<\cdot,\cdot>=\delta$ geldt:
+\[
+\hat{\vec{y}}(\vec{x})=<\vec{x},\hat{\vec{y}}>=y_ix^i~~~,~~~<\hat{\vec{c}^{~i}},\vec{c}_j>=\delta_j^i
+\]
+Zij $G:{\cal V}\rightarrow{\cal V}^*$ een lineaire bijectie. Defini\"eer de
+bilineaire vormen
+\begin{eqnarray*}
+g:{\cal V\times V}\rightarrow\RR&~~~&g(\vec{x},\vvec{y})=<\vec{x},G\vvec{y}>\\
+h:{\cal V^*\times V^*}\rightarrow\RR&~~~&h(\hat{\vec{x}},\hat{\vec{y}}\,)=<G^{-1}\hat{\vec{x}},\hat{\vec{y}}\,>
+\end{eqnarray*}
+Beide zijn niet-gedegenereerd. Er geldt: $h(G\vec{x},G\vvec{y})=<\vec{x},G\vec{y}>=g(\vec{x},\vvec{y})$.
+Als we $\cal V$ en $\cal V^*$ identificeren m.b.v. $G$ dan geeft $g$ (of $h$)
+een inwendig product op $\cal V$.
+\npar
+Het inproduct $(,)_\Lambda$ op $\Lambda^k(\cal V)$ wordt gedefinieerd door:
+\[
+(\Phi,\Psi)_\Lambda=\frac{1}{k!}(\Phi,\Psi)_{T^0_k(\cal V)}
+\]
+Het inproduct van 2 vectoren is dan gegeven door:
+\[
+(\vec{x},\vvec{y})=x^iy^i<\vec{c}_i,G\vec{c}_j>=g_{ij}x^ix^j
+\]
+De matrix $g_{ij}$ van $G$ is gegeven door
+\[
+g_{ij}\hat{\vec{c}}^{~j}=G\vec{c}_i
+\]
+De matrix $g^{ij}$ van $G^{-1}$ is gegeven door:
+\[
+g^{kl}\vec{c}_l=G^{-1}\hat{\vec{c}}^{~k}
+\]
+Voor deze {\it metrische tensor} $g_{ij}$ geldt: $g_{ij}g^{jk}=\delta_i^k$.
+Deze tensor kan indices omhoog of omlaag halen:
+\[
+x_j=g_{ij}x^i~~~,~~~x^i=g^{ij}x_j
+\]
+en $du^i=\hat{\vec{c}}^{~i}=g^{ij}\vec{c}_j$.
+\npar
+
+\section{Tensorproduct}
+{\bf Definitie}: laat $\cal U$ en $\cal V$ twee eindig dimensionale vectorruimten
+zijn met dimensies $m$ resp. $n$. Zij $\cal U^*\times V^*$ het cartesisch
+product van $\cal U$ en $\cal V$. Een functie $t:{\cal U^*\times V^*}\rightarrow\RR$;
+$(\hat{\vec{u}};\hat{\vec{v}}\,)\mapsto t(\hat{\vec{u}};\hat{\vec{v}}\,)=t^{\alpha\beta}u_\alpha u_\beta\in\RR$
+heet een tensor als $t$ lineair is in $\hat{\vec{u}}$ en $\hat{\vec{v}}$.
+De tensoren $t$ vormen een vectorruimte genoteerd met $\cal U\otimes V$.
+De elementen $T\in\cal V\otimes V$ heten contravariante 2-tensoren:
+$T=T^{ij}\vec{c}_i\otimes\vec{c}_j=T^{ij}\partial_i\otimes\partial_j$. De
+elementen $T\in\cal V^*\otimes V^*$ heten covariante 2-tensoren:
+$T=T_{ij}\hat{\vec{c}}^{~i}\otimes\hat{\vec{c}}^{~j}=T_{ij}dx^i\otimes dx^j$.
+De elementen $T\in\cal V^*\otimes V$ heten gemengde 2 tensoren:
+$T=T_i^{.j}\hat{\vec{c}}^{~i}\otimes\vec{c}_j=T_i^{.j}dx^i\otimes\partial_j$,
+en analoog voor $T\in\cal V\otimes V^*$.
+\npar
+De getallen, gegeven door
+\[
+t^{\alpha\beta}=t(\hat{\vec{c}}^{~\alpha},\hat{\vec{c}}^{~\beta}\,)
+\]
+met $1\leq\alpha\leq m$ en $1\leq\beta\leq n$ vormen de componenten of
+kentallen van $t$.
+\npar
+Neem $\vec{x}\in\cal U$ en $\vec{y}\in\cal V$. Dan is de functie
+$\vec{x}\otimes\vec{y}$, gedefinieerd door
+\[
+(\vec{x}\otimes\vec{y})(\hat{\vec{u}},\hat{\vec{v}})=<\vec{x},\hat{\vec{u}}>_U<\vec{y},\hat{\vec{v}}>_V
+\]
+een tensor. De kentallen volgen uit: $(\vec{u}\otimes\vvec{v})_{ij}=u_iv^j$.
+Het tensorproduct van 2 tensoren is gegeven door:
+\begin{eqnarray*}
+{2\choose0}~\mbox{vorm:}~&&(\vec{v}\otimes\vec{w})(\hat{\vec{p}},\hat{\vec{q}})=v^ip_iw^kq_k=T^{ik}p_iq_k\\
+{0\choose2}~\mbox{vorm:}~&&(\hat{\vec{p}}\otimes\hat{\vec{q}})(\vec{v},\vec{w})=p_iv^iq_kw^k=T_{ik}v^iw^k\\
+{1\choose1}~\mbox{vorm:}~&&(\vec{v}\otimes\hat{\vec{p}})(\hat{\vec{q}},\vec{w})=v^iq_ip_kw^k=T_k^iq_iw^k
+\end{eqnarray*}
+
+\section{Symmetrische - en antisymmetrische tensoren}
+Een tensor $t\in{\cal V\otimes V}$ heet symmetrisch resp.\ antisymmetrisch als
+$\forall\hat{\vec{x}},\hat{\vec{y}}\in{\cal V^*}$ geldt:
+$t(\hat{\vec{x}},\hat{\vec{y}}\,)=t(\hat{\vec{y}},\hat{\vec{x}}\,)$ resp.
+$t(\hat{\vec{x}},\hat{\vec{y}}\,)=-t(\hat{\vec{y}},\hat{\vec{x}}\,)$.
+\npar
+Een tensor $t\in{\cal V^*\otimes V^*}$ heet symmetrisch resp. antisymmetrisch
+als $\forall\vec{x},\vec{y}\in{\cal V}$ geldt:
+$t(\vec{x},\vvec{y})=t(\vec{y},\vvec{x})$ resp.
+$t(\vec{x},\vvec{y})=-t(\vec{y},\vvec{x})$. In $\cal V\otimes W$ worden de
+lineaire afbeeldingen $\cal S$ en $\cal A$ gedefinieerd door:
+\begin{eqnarray*}
+{\cal S}t(\hat{\vec{x}},\hat{\vec{y}}\,)&=&\half(t(\hat{\vec{x}},\hat{\vec{y}})+t(\hat{\vec{y}},\hat{\vec{x}}\,))\\
+{\cal A}t(\hat{\vec{x}},\hat{\vec{y}}\,)&=&\half(t(\hat{\vec{x}},\hat{\vec{y}})-t(\hat{\vec{y}},\hat{\vec{x}}\,))
+\end{eqnarray*}
+In $\cal V^*\otimes V^*$ analoog. Als $t$ symmetrisch resp. antisymmetrisch is,
+dan is ${\cal S}t=t$ resp. ${\cal A}t=t$.
+\npar
+De tensoren $\vec{e}_i\vee\vec{e}_j=\vec{e}_i\vec{e}_j=2{\cal S}(\vec{e}_i\otimes\vec{e}_j)$,
+met $1\leq i\leq j\leq n$ vormen een basis in $\cal S(V\otimes V)$ met dimensie
+$\half n(n+1)$.
+\npar
+De tensoren $\vec{e}_i\wedge\vec{e}_j=2{\cal A}(\vec{e}_i\otimes\vec{e}_j)$,
+met $1\leq i\leq j\leq n$ vormen een basis in $\cal A(V\otimes V)$ met dimensie
+$\half n(n-1)$.
+\npar
+De volledig antisymmetrische tensor $\varepsilon$ is gegeven door:
+$\varepsilon_{ijk}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}$.
+\npar
+De permutatie-operatoren $e_{pqr}$ zijn gedefinieerd door:
+$e_{123}=e_{231}=e_{312}=1$, $e_{213}=e_{132}=e_{321}=-1$, voor alle andere
+combinaties is $e_{pqr}=0$. Er is een samenhang met de $\varepsilon$ tensor:
+$\varepsilon_{pqr}=g^{-1/2}e_{pqr}$ en $\varepsilon^{pqr}=g^{1/2}e^{pqr}$.
+
+\section{Uitwendig product}
+Zij $\alpha\in\Lambda^k(\cal V)$ en $\beta\in\Lambda^l(\cal V)$. Dan wordt
+$\alpha\wedge\beta\in\Lambda^{k+l}(\cal V)$ gedefinieerd door:
+\[
+\alpha\wedge\beta=\frac{(k+l)!}{k!l!}{\cal A}(\alpha\otimes\beta)
+\]
+Als $\alpha$ en $\beta\in\Lambda^1(\cal V)={\cal V}^*$, dan geldt:
+$\alpha\wedge\beta=\alpha\otimes\beta-\beta\otimes\alpha$
+\npar
+Het uitproduct is te schrijven als: $(\vec{a}\times\vec{b})_i=\varepsilon_{ijk}a^jb^k$,
+$\vec{a}\times\vec{b}=G^{-1}\cdot*(G\vec{a}\wedge G\vvec{b})$.
+\npar
+Neem $\vec{a},\vec{b},\vec{c},\vec{d}\in\RR^4$. Dan is
+$(dt\wedge dz)(\vec{a},\vvec{b})=a_0b_4-b_0a_4$ de geori\"enteerde oppervlakte
+van de projectie op het $tz$-vlak van het parallellogram opgespannen door
+$\vec{a}$ en $\vec{b}$.
+\npar
+Verder is
+\[
+(dt\wedge dy\wedge dz)(\vec{a},\vec{b},\vec{c})=\det\left|\begin{array}{ccc}
+a_0&b_0&c_0\\ a_2&b_2&c_2\\ a_4&b_4&c_4 \end{array}\right|
+\]
+de geori\"enteerde 3-dimensionale inhoud van de projectie op het $tyz$-vlak
+van het parallellepipedum opgespannen door $\vec{a}$, $\vec{b}$ en $\vec{c}$.
+\npar
+$(dt\wedge dx\wedge dy\wedge dz)(\vec{a},\vec{b},\vec{c},\vec{d})=\det(\vec{a},\vec{b},\vec{c},\vec{d})$
+is de 4-dimensionale inhoud van het hyperparallellepipedum opgespannen door
+$\vec{a}$, $\vec{b}$, $\vec{c}$ en $\vec{d}$.
+
+\section{De Hodge afbeelding}
+Omdat ${n\choose k}={n\choose{n-k}}$ voor $1\leq k\leq n$ hebben
+$\Lambda^k(\cal V)$ en $\Lambda^{n-k}(\cal V)$ dezelfde dimensie.
+Dim$(\Lambda^n({\cal V}))=1$. De keuze van een basis betekent de keuze van een
+geori\"enteerde inhoudsmaat, een volume $\mu$, in $\cal V$. We kunnen $\mu$
+zodanig ijken dat voor een orthonormale basis $\vec{e}_i$ geldt:
+$\mu(\vec{e}_i)=1$. Deze basis heet dan per definitie positief geori\"enteerd
+als $\mu=\hat{\vec{e}}^{~1}\wedge \hat{\vec{e}}^{~2}\wedge...\wedge \hat{\vec{e}}^{~n}=1$.
+\npar
+Vanwege de gelijke dimensies kan men zich afvragen of er een bijectie tussen
+beide ruimten bestaat. Als $\cal V$ geen extra structuur heeft is dit niet
+het geval, echter, als $\cal V$ voorzien is van een inproduct en daarbij
+behorende volumevorm $\mu$, dan bestaat zo'n afbeelding wel en wordt de
+{\it Hodge-ster-afbeelding} genoemd en genoteerd met $*$. Er geldt dat
+\[
+\forall_{w\in\Lambda^k({\cal V})}\exists_{*w\in\Lambda^{k-n}({\cal V})}\forall_{\theta\in\Lambda^k({\cal V})}~~
+\theta\wedge*w=(\theta,w)_\lambda\mu
+\]
+Voor een orthonormale basis in $\RR^3$ geldt: het volume: $\mu=dx\wedge dy\wedge dz$,
+$*dx\wedge dy\wedge dz=1$, $*dx=dy\wedge dz$, $*dz=dx\wedge dy$, $*dy=-dx\wedge dz$,
+$*(dx\wedge dy)=dz$, $*(dy\wedge dz)=dx$, $*(dx\wedge dz)=-dy$.
+\npar
+Voor een Minkowski basis in $\RR^4$ geldt: $\mu=dt\wedge dx\wedge dy\wedge dz$,
+$G=dt\otimes dt-dx\otimes dx-dy\otimes dy-dz\otimes dz$, en
+$*dt\wedge dx\wedge dy\wedge dz=1$ en $*1=dt\wedge dx\wedge dy\wedge dz$. Verder
+$*dt=dx\wedge dy\wedge dz$ en $*dx=dt\wedge dy\wedge dz$.
+
+\section{Differentiaaloperaties}
+\subsection{De richtingsafgeleide}
+De {\it richtingsafgeleide} in het punt $\vec{a}$ is gegeven door:
+\[
+{\cal L}_{\vec{a}}f=<\vec{a},df>=a^i\Q{f}{x^i}
+\]
+
+\subsection{De Lie-afgeleide}
+De {\it Lie-afgeleide} is gegeven door:
+\[
+({\cal L}_{\vec{v}}\vec{w})^j=w^i\partial_iv^j-v^i\partial_iw^j
+\]
+
+\subsection{Christoffelsymbolen}
+Aan ieder kromlijnig co\"ordinatenstelsel $u^i$ voegen we een stelsel van $n^3$
+functies $\Gamma^i_{jk}$ van $\vec{u}$ toe gedefinieerd door
+\[
+\frac{\partial^2\vec{x}}{\partial u^i\partial u^k}=\Gamma_{jk}^i\Q{\vec{x}}{u^i}
+\]
+Dit zijn {\it Christoffelsymbolen van de tweede soort}. Christoffelsymbolen
+zijn geen tensoren. De Christoffelsymbolen van de tweede soort zijn gegeven
+door:
+\[
+\left\{\begin{array}{@{}c@{}}i\\ jk \end{array}\right\}:=\Gamma^i_{jk}=
+\left\langle\frac{\partial^2\vec{x}}{\partial u^k\partial u^j},dx^i\right\rangle
+\]
+Er geldt dat $\Gamma^i_{jk}=\Gamma^i_{kj}$. Hun transformatie naar een ander
+co\"ordinatenstelsel is gegeven door:
+\[
+\Gamma_{j'k'}^{i'}=A_{i'}^iA_{j'}^jA_{k'}^k\Gamma^i_{jk}+A_i^{i'}(\partial_{j'}A_{k'}^i)
+\]
+Als de geaccentueerde co\"ordinaten cartesisch zijn is de eerste term hierin
+gelijk aan 0.
+\npar
+Er is een relatie tussen Christoffelsymbolen en de metriek:
+\[
+\Gamma_{jk}^i=\half g^{ir}(\partial_j g_{kr}+\partial_k g_{rj}-\partial_r g_{jk})
+\]
+en $\Gamma^\alpha_{\beta\alpha}=\partial_\beta(\ln(\sqrt{|g|}))$.
+\npar
+Omlaaghalen van een index geeft de {\it Christoffelsymbolen van de eerste soort}:
+$\Gamma^i_{jk}=g^{il}\Gamma_{jkl}$.
+
+\subsection{De covariante afgeleide}
+De {\it covariante afgeleide} $\nabla_j$ van een vector, covector en van
+tensoren van rang 2 is gegeven door:
+\begin{eqnarray*}
+\nabla_ja^i                  &=&\partial_ja^i+\Gamma^i_{jk}a^k\\
+\nabla_ja_i                  &=&\partial_ja_i-\Gamma^k_{ij}a_k\\
+\nabla_\gamma a^\alpha_\beta &=&\partial_\gamma a^\alpha_\beta -\Gamma^\varepsilon_{\gamma\beta} a^\alpha_\varepsilon+\Gamma^\alpha_{\gamma\varepsilon}a_\beta^\varepsilon\\
+\nabla_\gamma a_{\alpha\beta}&=&\partial_\gamma a_{\alpha\beta}-\Gamma^\varepsilon_{\gamma\alpha}a_{\varepsilon\beta}-\Gamma^\varepsilon_{\gamma\beta}a_{\alpha\varepsilon}\\
+\nabla_\gamma a^{\alpha\beta}&=&\partial_\gamma a^{\alpha\beta}+\Gamma^\alpha_{\gamma\varepsilon}a^{\varepsilon\beta}+\Gamma^\beta_{\gamma\varepsilon}a^{\alpha\varepsilon}
+\end{eqnarray*}
+De stelling van Ricci luidt dat
+\[
+\nabla_\gamma g_{\alpha\beta}=\nabla_\gamma g^{\alpha\beta}=0
+\]
+
+\section{Differentiaaloperatoren}
+\subsubsection{De Gradi\"ent}
+is gegeven door:
+\[
+{\rm grad}(f)=G^{-1}df=g^{ki}\Q{f}{x^i}\Q{}{x^k}
+\]
+
+\subsubsection{De divergentie}
+is gegeven door:
+\[
+{\rm div}(a^i)=\nabla_ia^i=\frac{1}{\sqrt{g}}\partial_k(\sqrt{g}\,a^k)
+\]
+
+\subsubsection{De rotatie}
+is gegeven door:
+\[
+{\rm rot}(a)=G^{-1}\cdot*\cdot d\cdot G\vec{a}=-\varepsilon^{pqr}\nabla_qa_p=\nabla_qa_p-\nabla_pa_q
+\]
+
+\subsubsection{De Laplaciaan}
+is gegeven door:
+\[
+\Delta(f)={\rm div~grad}(f)=*d*df=\nabla_ig^{ij}\partial_jf=g^{ij}\nabla_i\nabla_jf=
+\frac{1}{\sqrt{g}}\frac{\partial}{\partial x^i}\left(\sqrt{g}\,g^{ij}\frac{\partial f}{\partial x^j}\right)
+\]
+
+\section{Differentiaalmeetkunde}
+\subsection{Ruimtekrommen}
+We beperken ons tot $\RR^3$ met een vaste orthonormale basis. Een punt wordt
+voorgesteld door $\vec{x}=(x^1,x^2,x^3)$. Een ruimtekromme is een verzameling
+punten die voldoen aan $\vec{x}=\vec{x}(t)$. De booglengte van een ruimtekromme
+is gegeven door:
+\[
+s(t)=\int\limits_{t_0}^t\sqrt{\left(\frac{dx}{d\tau}\right)^2+\left(\frac{dy}{d\tau}\right)^2+\left(\frac{dz}{d\tau}\right)^2}d\tau
+\]
+De afgeleide van $s$ naar $t$ is de lengte van de vector $d\vec{x}/dt$:
+\[
+\left(\frac{ds}{dt}\right)^2=\left(\frac{d\vec{x}}{dt},\frac{d\vec{x}}{dt}\right)
+\]
+Het {\it osculatievlak} in een punt $P$ van een ruimtekromme is de limietstand
+van het vlak door de raaklijn in punt $P$ en een punt $Q$ wanneer $Q$ langs de
+ruimtekromme nadert tot $P$. Het osculatievlak is evenwijdig aan $\dot{\vec{x}}(s)$.
+De voorstelling van het osculatievlak is, als $\ddot{\vec{x}}\neq0$:
+\[
+\vec{y}=\vec{x}+\lambda\dot{\vec{x}}+\mu\ddot{\vec{x}}~~~\mbox{dus}~~~
+\det(\vec{y}-\vec{x},\dot{\vec{x}},\ddot{\vec{x}}\,)=0
+\]
+In een buigpunt geldt, als $\dddot{\vec{x}}\neq0$:
+\[
+\vec{y}=\vec{x}+\lambda\dot{\vec{x}}+\mu\dddot{\vec{x}}
+\]
+De {\it raaklijn} heeft eenheidsvector $\vec{\ell}=\dot{\vec{x}}$, de
+{\it hoofdnormaal} eenheidsvector $\vec{n}=\ddot{\vec{x}}$ en de
+{\it binormaal} $\vec{b}=\dot{\vec{x}}\times\ddot{\vec{x}}$. De hoofdnormaal
+ligt dus in het osculatievlak, de binormaal staat daar loodrecht op.
+\npar
+Zij $P$ een punt en $Q$ een naburig punt van een ruimtekromme $\vec{x}(s)$. Zij
+$\Delta\varphi$ de hoek tussen de raaklijnen in $P$ en $Q$ en zij $\Delta\psi$
+de hoek tussen de osculatievlakken (binormalen) in $P$ en $Q$. Dan zijn de
+{\it kromming} $\rho$ en de {\it torsie} $\tau$ in $P$ gedefinieerd door:
+\[
+\rho^2=\left(\frac{d\varphi}{ds}\right)^2=\lim_{\Delta s\rightarrow0}\left(\frac{\Delta\varphi}{\Delta s}\right)^2~~~,~~~
+\tau^2=\left(\frac{d\psi}{ds}\right)^2
+\]
+en $\rho>0$. Voor vlakke krommen is $\rho$ de traditionele kromming en is
+$\tau=0$. Er geldt:
+\[
+\rho^2=(\vec{\ell},\vec{\ell})=(\ddot{\vec{x}},\ddot{\vec{x}}\,)~~~\mbox{en}~~~
+\tau^2=(\dot{\vec{b}},\dot{\vec{b}})
+\]
+De formules van Frenet drukken de afgeleiden uit als lineaire combinaties van
+deze vectoren:
+\[
+\dot{\vec{\ell}}=\rho\vec{n}~~,~~\dot{\vec{n}}=-\rho\vec{\ell}+\tau\vec{b}~~,~~
+\dot{\vec{b}}=-\tau\vec{n}
+\]
+Hieruit volgt dat $\det(\dot{\vec{x}},\ddot{\vec{x}},\dddot{\vec{x}}\,)=\rho^2\tau$.
+\npar
+Enkele krommen en hun eigenschappen zijn:
+\begin{center}
+\begin{tabular}{||l@{\hspace*{1cm}}l||}
+\hline
+Schroeflijn      &$\tau/\rho=$constant\\
+Cirkelschroeflijn&$\tau=$constant, $\rho=$constant\\
+Vlakke krommen   &$\tau=0$\\
+Cirkels          &$\rho=$constant, $\tau=0$\\
+Rechten          &$\rho=\tau=0$\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Oppervlakken in $\RR^3$}
+Een oppervlak in $\RR^3$ is de verzameling eindpunten der vectoren $\vec{x}=\vec{x}(u,v)$,
+dus $x^h=x^h(u^\alpha)$. Op het oppervlak liggen 2 stelsels krommen, nl. met
+$u=$constant en met $v=$constant.
+\npar
+Het raakvlak in een punt $P$ aan het oppervlak heeft als basis:
+\[
+\vec{c}_1=\partial_1\vec{x}~~~\mbox{en}~~~\vec{c}_2=\partial_2\vec{x}
+\]
+
+\subsection{De eerste fundamentaaltensor}
+Zij $P$ een punt van het oppervlak $\vec{x}=\vec{x}(u^\alpha)$. Van twee krommen
+door $P$, aan te geven door $u^\alpha=u^\alpha(t)$, $u^\alpha=v^\alpha(\tau)$,
+zijn de raakvectoren in $P$
+\[
+\frac{d\vec{x}}{dt}=\frac{du^\alpha}{dt}\partial_\alpha\vec{x}~~~,~~~
+\frac{d\vec{x}}{d\tau}=\frac{dv^\beta}{d\tau}\partial_\beta\vec{x}
+\]
+De {\it eerste fundamentaaltensor} van het oppervlak in $P$ is het inproduct
+van deze raakvectoren:
+\[
+\left(\frac{d\vec{x}}{dt},\frac{d\vec{x}}{d\tau}\right)=
+(\vec{c}_\alpha,\vec{c}_\beta)\frac{du^\alpha}{dt}\frac{dv^\beta}{d\tau}
+\]
+De covariante componenten t.o.v. de basis $\vec{c}_\alpha=\partial_\alpha\vec{x}$
+zijn:
+\[
+g_{\alpha\beta}=(\vec{c}_\alpha,\vec{c}_\beta)
+\]
+Voor de hoek $\phi$ tussen de parameterkrommen in $P$: $u=t,v=$constant en
+$u=$constant, $v=\tau$ geldt:
+\[
+\cos(\phi)=\frac{g_{12}}{\sqrt{g_{11}g_{22}}}
+\]
+Voor de booglengte $s$ vanuit $P$ langs de kromme $u^\alpha(t)$ geldt:
+\[
+ds^2=g_{\alpha\beta}du^\alpha du^\beta
+\]
+Deze uitdrukking heet het {\it lijnelement}.
+
+\subsection{De tweede fundamentaaltensor}
+De 4 afgeleiden van de raakvectoren $\partial_\alpha\partial_\beta\vec{x}=\partial_\alpha\vec{c}_\beta$
+zijn elk lineair afhankelijk van de vectoren $\vec{c}_1$, $\vec{c}_2$ en $\vec{N}$
+met $\vec{N}$ loodrecht op $\vec{c}_1$ en $\vec{c}_2$. Dit wordt geschreven als:
+\[
+\partial_\alpha\vec{c}_\beta=\Gamma^\gamma_{\alpha\beta}\vec{c}_\gamma+h_{\alpha\beta}\vec{N}
+\]
+Hieruit volgt:
+\[
+\Gamma^\gamma_{\alpha\beta}=(\vec{c}^{~\gamma},\partial_\alpha\vec{c}_\beta)~~~,~~~
+h_{\alpha\beta}=(\vec{N},\partial_\alpha\vec{c}_\beta)=\frac{1}{\sqrt{\det|g|}}\det(\vec{c}_1,\vec{c}_2,\partial_\alpha\vec{c}_\beta)
+\]
+
+\subsection{Geodetische kromming}
+Op het oppervlak $\vec{x}(u^\alpha)$ wordt een kromme gegeven door:
+$u^\alpha=u^\alpha(s)$, dan $\vec{x}=\vec{x}(u^\alpha(s))$ met $s$ de booglengte
+van de kromme. De lengte van $\ddot{\vec{x}}$ is de kromming $\rho$ van de
+kromme in $P$. De projectie van $\ddot{\vec{x}}$ op het raakvlak is een
+vector met componenten
+\[
+p^\gamma=\ddot{u}^\gamma+\Gamma^\gamma_{\alpha\beta}\dot{u}^\alpha\dot{u}^\beta
+\]
+waarvan de lengte de {\it geodetische kromming} heet van de kromme in $p$ en
+blijft hetzelfde als het oppervlak met behoud van het lijnelement wordt
+verbogen. De projectie van $\ddot{\vec{x}}$ op $\vec{N}$ heeft als lengte
+\[
+p=h_{\alpha\beta}\dot{u}^\alpha\dot{u}^\beta
+\]
+die de {\it normale kromming} van de kromme in $P$ heet. De {\it stelling van
+Meusnier} luidt dat verschillende krommen op het oppervlak met dezelfde
+raakvector in $P$ gelijke normale kromming hebben.
+\npar
+Een {\it geodetische lijn} van een oppervlak is een kromme op het oppervlak
+waarvoor in elk punt de hoofdnormaal van de kromme samenvalt met de normaal op
+het oppervlak. Voor een geodetische lijn moet in elk punt $p^\gamma=0$ dus
+\[
+\frac{d^2u^\gamma}{ds^2}+\Gamma^\gamma_{\alpha\beta}\frac{du^\alpha}{ds}\frac{du^\beta}{ds}=0
+\]
+De covariante afgeleide $\nabla/dt$ in $P$ van een vectorveld van een oppervlak
+langs een kromme is de projectie op het raakvlak in $P$ van de gewone afgeleide
+in $P$.
+\npar
+Voor twee vectorvelden $\vec{v}(t)$ en $\vec{w}(t)$ langs dezelfde kromme van
+het oppervlak volgt de regel van Leibniz:
+\[
+\frac{d(\vec{v},\vvec{w})}{dt}=\left(\vec{v},\frac{\nabla\vec{w}}{dt}\right)+\left(\vec{w},\frac{\nabla\vec{v}}{dt}\right)
+\]
+Langs een kromme geldt:
+\[
+\frac{\nabla}{dt}(v^\alpha\vec{c}_\alpha)=\left(\frac{dv^\gamma}{dt}+\Gamma^\gamma_{\alpha\beta}\frac{du^\alpha}{dt}v^\beta\right)\vec{c}_\gamma
+\]
+
+\section{Riemannse meetkunde}
+De {\it Riemann tensor} $R$ is gedefinieerd door:
+\[
+R^\mu_{\nu\alpha\beta}T^\nu=\nabla_\alpha\nabla_\beta T^\mu-\nabla_\beta\nabla_\alpha T^\mu
+\]
+Dit is een $1\choose 3$ tensor met $n^2(n^2-1)/12$ onafhankelijke componenten
+die niet identiek gelijk aan 0 zijn. Deze tensor is een maat voor de kromming
+van de beschouwde ruimte. Als ze 0 is is de ruimte een vlak manifold.
+Ze heeft de volgende symmetrie-eigenschappen:
+\[
+R_{\alpha\beta\mu\nu}=R_{\mu\nu\alpha\beta}=-R_{\beta\alpha\mu\nu}=-R_{\alpha\beta\nu\mu}
+\]
+Er geldt:
+\[
+[\nabla_\alpha,\nabla_\beta]T_\nu^\mu=R_{\sigma\alpha\beta}^\mu T_\nu^\sigma+R_{\nu\alpha\beta}^\sigma T_\sigma^\mu
+\]
+De Riemann tensor hangt samen met de Christoffelsymbolen via
+\[
+R^\alpha_{\beta\mu\nu}=\partial_\mu\Gamma^\alpha_{\beta\nu}-\partial_\nu\Gamma^\alpha_{\beta\mu}+\Gamma^\alpha_{\sigma\mu}\Gamma^\sigma_{\beta\nu}-\Gamma^\alpha_{\sigma\nu}\Gamma^\sigma_{\beta\mu}
+\]
+In een ruimte en co\"ordinatenstelsel waar de Christoffelsymbolen 0 zijn gaat
+dit over in
+\[
+R^\alpha_{\beta\mu\nu}=\half g^{\alpha\sigma}(\partial_\beta\partial_\mu g_{\sigma\nu}-\partial_\beta\partial_\nu g_{\sigma\mu}+\partial_\sigma\partial_\nu g_{\beta\mu}-\partial_\sigma\partial_\mu g_{\beta\nu})
+\]
+De {\it Bianchi identiteiten} zijn: $\nabla_\lambda R_{\alpha\beta\mu\nu}+\nabla_\nu R_{\alpha\beta\lambda\mu} +\nabla_\mu R_{\alpha\beta\nu\lambda}=0$.
+\npar
+De {\it Ricci tensor} verkrijgt men door contractie: $R_{\alpha\beta}\equiv R_{\alpha\mu\beta}^\mu$
+en is symmetrisch in haar indices: $R_{\alpha\beta}=R_{\beta\alpha}$. De
+{\it Einstein tensor} $G$ is gedefinieerd door: $G^{\alpha\beta}\equiv R^{\alpha\beta}-\half g^{\alpha\beta}$.
+Hiervoor geldt: $\nabla_\beta G^{\alpha\beta}=0$. De Ricci scalar is
+$R=g^{\alpha\beta}R_{\alpha\beta}$.
+
+
+\chapter{Numerieke wiskunde}
+\typeout{Numerieke wiskunde}
+\label{chap:num}
+\section{Fouten}
+Als een op te lossen probleem een aantal parameters bevat die niet exact bekend
+zijn zal de oplossing een fout bevatten. De samenhang tussen fouten in gegevens
+en oplossing is uit te drukken in het {\it conditiegetal} $c$. Als het probleem
+gegeven is door $x=\phi(a)$ geldt in eerste orde voor een fout $\delta a$ in
+$a$:
+\[
+\frac{\delta x}{x}=\frac{a\phi'(a)}{\phi(a)}\cdot\frac{\delta a}{a}
+\]
+Het getal $c(a)=|a\phi'(a)|/|\phi(a)|$. Als het probleem goed geconditioneerd
+is dan is $c\ll1$.
+
+\section{Floating point rekenen}
+De floating point representatie hangt af van 4 natuurlijke getallen:
+\begin{enumerate}
+\item Het {\it grondtal} of basis van het getalstelsel $\beta$,
+\item De mantisselengte $t$,
+\item De lengte van de exponent $q$,
+\item Het teken $s$,
+\end{enumerate}
+De representatie van machinegetallen is dan: \fbox{rd$(x)=s\cdot m\cdot\beta^e$}
+waarin mantisse $m$ een getal is met $t$ $\beta$-tallige cijfers dat voldoet
+aan $1/\beta\leq|m|<1$, en $e$ een getal is met $q$ $\beta$-tallige cijfers
+met $|e|\leq\beta^q-1$. Hieraan wordt toegevoegd het getal 0 met bv. $m=e=0$.
+Het grootste machinegetal is
+\[
+a_{\rm max}=(1-\beta^{-t})\beta^{\beta^q-1}
+\]
+en het kleinste positieve machinegetal is
+\[
+a_{\rm min}=\beta^{-\beta^q}
+\]
+De afstand tussen twee opeenvolgende machinegetallen in het interval
+$[\beta^{p-1},\beta^p]$ is $\beta^{p-t}$. Als $x$ re\"eel is en het
+dichtstbijzijnde machinegetal is ${\rm rd}(x)$, dan geldt:
+\begin{eqnarray*}
+{\rm rd}(x)=x(1+\varepsilon) &~~~\mbox{met}~~~&|\varepsilon|\leq\half\beta^{1-t}\\
+x={\rm rd}(x)(1+\varepsilon')&~~~\mbox{met}~~~&|\varepsilon'|\leq\half\beta^{1-t}
+\end{eqnarray*}
+Het getal $\eta:=\half\beta^{1-t}$ heet de machine-nauwkeurigheid waarvoor geldt:
+\[
+\varepsilon,\varepsilon'\leq\eta\left|\frac{x-{\rm rd}(x)}{x}\right|\leq\eta
+\]
+Een veelgebruikt 32 bits float formaat is: 1 bit voor $s$, 8 voor de exponent
+en $23$ voor de mantisse. Het grondtal hierin is 2.
+
+\section{Stelsels vergelijkingen}
+We willen de matrixvergelijking $A\vec{x}=\vec{b}$ oplossen voor een
+niet-singuliere $A$, hetgeen equivalent is aan het vinden van de inverse matrix
+$A^{-1}$. Oplossing van een $n\times n$ matrix via de regel van Cramer vereist
+te veel vermenigvuldigingen $f(n)$ met $n!\leq f(n)\leq (e-1)n!$, dus zijn
+andere methoden wenselijk.
+
+\subsection{Driehoeksstelsels}
+Beschouw de vergelijking $U\vec{x}=\vec{c}$ waarin $U$ een rechtsboven matrix
+is, d.w.z. $U_{ij}=0$ voor alle $j<i$, en alle $U_{ii}\neq0$. Dan is:
+\begin{eqnarray*}
+x_n    &=&c_n/U_{nn}\\
+x_{n-1}&=&(c_{n-1}-U_{n-1,n}x_n)/U_{n-1,n-1}\\
+\vdots & &\vdots\\
+x_1    &=&(c_1-\sum_{j=2}^nU_{1j}x_j)/U_{11}
+\end{eqnarray*}
+In code:
+\begin{verbatim}
+for (k = n; k > 0; k--)
+{
+  S = c[k];
+  for (j = k + 1; j < n; j++)
+  {
+    S -= U[k][j] * x[j];
+  }
+  x[k] = S / U[k][k];
+}
+\end{verbatim}
+Dit algoritme vereist $\frac{1}{2}n(n+1)$ floating point berekeningen.
+
+\subsection{De eliminatiemethode van Gauss}
+Beschouw een algemeen stelsel $A\vec{x}=\vec{b}$. Dit is via de eliminatiemethode
+van Gauss tot een driehoeksvorm te brengen door de eerste vergelijking
+vermenigvuldigd met $A_{i1}/A_{11}$ van alle anderen af te trekken; nu is de
+eerste kolom, op $A_{11}$ na, allemaal 0. Daarna wordt de 2e vergelijking zodanig
+van de anderen afgetrokken dat alle elementen onder $A_{22}$ 0 zijn, etc.
+In code:
+\begin{verbatim}
+for (k = 1; k <= n; k++)
+{
+  for (j = k; j <= n; j++) U[k][j] = A[k][j];
+  c[k] = b[k];
+
+  for (i = k + 1; i <= n; i++)
+  {
+    L = A[i][k] / U[k][k];
+    for (j = k + 1; j <= n; j++)
+    {
+      A[i][j] -= L * U[k][j];
+    }
+    b[i] -= L * c[k];
+  }
+}
+\end{verbatim}
+Dit algoritme vereist $\frac{1}{3}n(n^2-1)$ floating point vermenigvuldigingen
+en delingen voor bewerking van de co\"effici\"entenmatrix en $\frac{1}{2}n(n-1)$
+vermenigvuldigingen voor de bewerking van de rechterleden, waarna ook het
+driehoeksstelsel moet worden opgelost met $\frac{1}{2}n(n+1)$ berekeningen.
+
+\subsection{Pivot strategie}
+Als de hoekelementen $A_{11}, A^{(1)}_{22},...$ niet alle $\neq0$ zijn zullen
+er vergelijkingen verwisseld moeten worden om Gauss eliminatie te laten werken
+($A^{(n)}$ is het element na de $n$-de iteratieslag).
+Een methode is: als $A^{(k-1)}_{kk}=0$, dan zoek een element $A^{(k-1)}_{pk}$
+met $p>k$ dat $\neq0$ is en verwissel de $p$-de en $k$-de vergelijking. Deze
+strategie mislukt alleen indien het stelsel singulier is en dus geen oplossing
+heeft.
+
+\section{Nulpunten van functies}
+\subsection{Successieve substitutie}
+Het doel is het oplossen van de vergelijking $F(x)=0$, dus het vinden van het
+nulpunt $\alpha$, met $F(\alpha)=0$.
+\npar
+Veel oplossingsmethoden komen neer op het volgende:
+\begin{enumerate}
+\item Schrijf de vergelijking om in de vorm $x=f(x)$ z.d.d. een oplossing
+      hiervan ook een oplossing van $F(x)=0$ is. Bovendien mag $f(x)$ in de
+      buurt van $\alpha$ niet te sterk van $x$ afhangen.
+\item Neem een beginschatting $x_0$ voor $\alpha$, en bepaal de rij $x_n$
+      met $x_n=f(x_{n-1})$ en hoop dat $\lim\limits_{n\rightarrow\infty}x_n=\alpha$.
+\end{enumerate}
+Een voorbeeld: kies
+\[
+f(x)=\beta-\varepsilon\frac{h(x)}{g(x)}=x-\frac{F(x)}{G(x)}
+\]
+dan is te verwachten dat de rij $x_n$ met
+\begin{eqnarray*}
+x_0&=&\beta\\
+x_n&=&x_{n-1}-\varepsilon\frac{h(x_{n-1})}{g(x_{n-1})}
+\end{eqnarray*}
+naar $\alpha$ convergeert.
+
+\subsection{De lokale convergentiestelling}
+Zij $\alpha$ een oplossing van $x=f(x)$ en zij $x_n=f(x_{n-1})$ bij gegeven
+$x_0$. Zij $f'(x)$ continu in een omgeving van $\alpha$. Zij $f'(\alpha)=A$
+met $|A|<1$. Dan is er een $\delta>0$ z.d.d. voor iedere
+$x_0$ met $|x_0-\alpha|\leq\delta$ geldt:
+\begin{enumerate}
+\item $\lim\limits_{n\rightarrow\infty}n_n=\alpha$,
+\item Als voor zekere $k$ geldt: $x_k=\alpha$, dan geldt voor iedere $n\geq k$
+      dat $x_n=\alpha$. Als $x_n\neq\alpha$ voor alle $n$ dan geldt
+\[
+\lim_{n\rightarrow\infty}\frac{\alpha-x_n}{\alpha-x_{n-1}}=A~~~,~~~
+\lim_{n\rightarrow\infty}\frac{x_n-x_{n-1}}{x_{n-1}-x_{n-2}}=A~~~,~~~
+\lim_{n\rightarrow\infty}\frac{\alpha-x_n}{x_n-x_{n-1}}=\frac{A}{1-A}
+\]
+\end{enumerate}
+De grootheid $A$ wordt de {\it asymptotische convergentiefactor} genoemd, de
+grootheid $B=-{}^{10}\log|A|$ de {\it asymptotische convergentiesnelheid}.
+
+\subsection{Extrapolatie volgens Aitken}
+We stellen
+\[
+A=\lim_{n\rightarrow\infty}\frac{x_n-x_{n-1}}{x_{n-1}-x_{n-2}}
+\]
+$A$ convergeert naar $f'(a)$. Dan zal de rij
+\[
+\alpha_n=x_n+\frac{A_n}{1-A_n}(x_n-x_{n-1})
+\]
+convergeren naar $\alpha$.
+
+\subsection{De iteratiemethode van Newton}
+Het omvormen van $F(x)=0$ in $x=f(x)$ kan op meerdere manieren. Een
+essenti\"ele voorwaarde daarbij is dat in een omgeving van een wortel
+$\alpha$ geldt dat $|f'(x)|<1$, en hoe kleiner $f'(x)$ is, hoe sneller
+de reeks convergeert. Een algemene manier om $f(x)$ te construeren is
+\[
+f(x)=x-\Phi(x)F(x)
+\]
+met $\Phi(x)\neq0$ in een omgeving van $\alpha$. Als men kiest:
+\[
+\Phi(x)=\frac{1}{F'(x)}
+\]
+dan geeft dit de methode van Newton. De iteratieformule wordt dan:
+\[
+x_n=x_{n-1}-\frac{F(x_{n-1})}{F'(x_{n-1})}
+\]
+Enkele eigenschappen:
+\begin{itemize}
+\item Dit resultaat is ook m.b.v. Taylorreeksen af te leiden.
+\item De globale convergentie is vaak moeilijk te onderzoeken.
+\item Als $x_n$ ver van $\alpha$ af ligt kan de convergentie soms erg traag zijn.
+\item De aanname $F'(\alpha)\neq0$ betekent dat $\alpha$ een enkelvoudig
+      nulpunt is.
+\end{itemize}
+Voor $F(x)=x^k-a$ wordt de reeks:
+\[
+x_n=\frac{1}{k}\left((k-1)x_{n-1}+\frac{a}{x_{n-1}^{k-1}}\right)
+\]
+Dit is een bekende methode om wortels te berekenen.
+\npar
+De volgende code vindt het nulpunt van een functie via de methode van Newton.
+Het nulpunt ligt binnen het interval {\tt [x1, x2]}. De waarde wordt
+aangepast totdat de nauwkeurigheid beter is dan {\tt$\pm$eps}. De functie
+{\tt funcd} is een routine die zowel de functie en de eerste afgeleide in
+punt {\tt x} teruggeeft en pointers daarnaartoe invult.
+\begin{verbatim}
+float SolveNewton(void (*funcd)(float, float*, float*), float x1, float x2, float eps)
+{
+  int   j, max_iter = 25;
+  float df, dx, f, nulpunt;
+
+  nulpunt = 0.5 * (x1 + x2);
+  for (j = 1; j <= max_iter; j++)
+  {
+    (*funcd)(nulpunt, &f, &df);
+    dx  = f/df;
+    nulpunt = -dx;
+    if ( (x1 - nulpunt)*(nulpunt - x2) < 0.0 )
+    {
+      perror("Jumped out of brackets in SolveNewton.");
+      exit(1);
+    }
+    if ( fabs(dx) < eps ) return nulpunt; /* Convergence */
+  }
+  perror("Maximum number of iterations exceeded in SolveNewton.");
+  exit(1);
+  return 0.0;
+}
+\end{verbatim}
+
+\subsection{De secant methode}
+Dit is, i.t.t. de vorige methoden, een tweetraps methode. Als men twee
+benaderingen $x_n$ en $x_{n-1}$ voor een nulpunt heeft dan kan men als
+volgende benadering nemen het snijpunt
+\[
+x_{n+1}=x_n-F(x_n)\frac{x_n-x_{n-1}}{F(x_n)-F(x_{n-1})}
+\]
+Er is sprake van interpolatie als $F(x_n)$ en $F(x_{n-1})$ een verschillend
+teken hebben, anders van extrapolatie.
+
+\section{Polynoom interpolatie}
+Een basis voor polynomen van graad $n$ is gegeven door de
+{\it interpolatiepolynomen van Lagrange}:
+\[
+L_j(x)=\prod_{{l=0}\atop{l\neq j}}^n\frac{x-x_l}{x_j-x_l}
+\]
+Er geldt dat:
+\begin{enumerate}
+\item Iedere $L_j(x)$ heeft graad $n$,
+\item $L_j(x_i)=\delta_{ij}$ voor $i,j=0,1,...,n$,
+\item Ieder polynoom $p(x)$ is op eenduidige wijze te schrijven als
+\[
+p(x)=\sum_{j=0}^n c_jL_j(x)~~~\mbox{met}~~~c_j=p(x_j)
+\]
+\end{enumerate}
+Dit is geen geschikte wijze om de waarde van een polynoom in een gegeven punt
+$x=a$ te berekenen. Hiervoor is het Horner algoritme beter geschikt: de
+waarde $s=\sum_k c_kx^k$ in $x=a$ is als volgt te berekenen:
+\begin{verbatim}
+float GetPolyValue(float c[], int n)
+{
+  int i; float s = c[n];
+  for (i = n - 1; i >= 0; i--)
+  {
+    s = s * a + c[i];
+  }
+  return s;
+}
+\end{verbatim}
+dan heeft {\tt s} na afloop de waarde $p(a)$.
+
+\section{Bepaalde integralen}
+Vrijwel alle numerieke integratie methoden zijn gebaseerd op een formule van
+de vorm:
+\[
+\int\limits_a^bf(x)dx=\sum_{i=0}^nc_if(x_i)+R(f)
+\]
+met $n$, $c_i$ en $x_i$ onafhankelijk van $f(x)$ en $R(f)$ de restfout die
+voor alle gebruikelijke methoden de vorm $R(f)=Cf^{(q)}(\xi)$ heeft met
+$\xi\in(a,b)$ en $q\geq n+1$. Vaak worden de punten $x_i$ equidistant gekozen.
+Enkele gebruikelijke formules zijn:
+\begin{itemize}
+\item De trapeziumregel: $n=1$, $x_0=a$, $x_1=b$, $h=b-a$:
+\[
+\int\limits_a^bf(x)dx=\frac{h}{2}[f(x_0)+f(x_1)]-\frac{h^3}{12}f''(\xi)
+\]
+\item Regel van Simpson: $n=2$, $x_0=a$, $x_1=\half(a+b)$, $x_2=b$, $h=\half(b-a)$:
+\[
+\int\limits_a^bf(x)dx=\frac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]-\frac{h^5}{90}f^{(4)}(\xi)
+\]
+\item De midpoint regel: $n=0$, $x_0=\half(a+b)$, $h=b-a$:
+\[
+\int\limits_a^bf(x)dx=hf(x_0)+\frac{h^3}{24}f''(\xi)
+\]
+\end{itemize}
+Als $f$ sterk varieert binnen het interval zal men dit interval gewoonlijk
+opsplitsen en de integratieformules op de deelintervallen toepassen.
+\npar
+Als men zowel de co\"effici\"enten $c_j$ als de punten $x_j$ in een
+integratieformule zodanig wil bepalen dat de integratieformule exact geldt
+voor polynomen van een zo hoog mogelijke graad, dan krijgt men een
+integratieformule van Gauss. Twee voorbeelden hiervan zijn:
+\begin{enumerate}
+\item De tweepuntsformule:
+\[
+\int\limits_{-h}^hf(x)dx=h\left[f\left(\frac{-h}{\sqrt{3}}\right)+f\left(\frac{h}{\sqrt{3}}\right)\right]+\frac{h^5}{135}f^{(4)}(\xi)
+\]
+\item De driepuntsformule:
+\[
+\int\limits_{-h}^hf(x)dx=\frac{h}{9}\left[5f\left(-h\sqrt{\mbox{$\frac{3}{5}$}}\right)+8f(0)+5f\left(h\sqrt{\mbox{$\frac{3}{5}$}}\right)\right]+\frac{h^7}{15750}f^{(6)}(\xi)
+\]
+\end{enumerate}
+
+\section{Differenti\"eren}
+Voor de numerieke berekening van $f'(x)$ staan verschillende
+differentiatieformules ter beschikking:
+\begin{itemize}
+\item Voorwaartse differentiatie:
+\[
+f'(x)=\frac{f(x+h)-f(x)}{h}-\half hf''(\xi)
+\]
+\item Achterwaartse differentiatie:
+\[
+f'(x)=\frac{f(x)-f(x-h)}{h}+\half hf''(\xi)
+\]
+\item Centrale differentiatie:
+\[
+f'(x)=\frac{f(x+h)-f(x-h)}{2h}-\frac{h^2}{6}f'''(\xi)
+\]
+\item Als meer functiewaarden gebruikt worden is de benadering beter:
+\[
+f'(x)=\frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}+\frac{h^4}{30}f^{(5)}(\xi)
+\]
+\end{itemize}
+Ook voor hogere afgeleiden bestaan er formules:
+\[
+f''(x)=\frac{-f(x+2h)+16f(x+h)-30f(x)+16f(x-h)-f(x-2h)}{12h^2}+\frac{h^4}{90}f^{(6)}(\xi)
+\]
+
+\section{Differentiaalvergelijkingen}
+We gaan uit van de eerste orde DV $y'(x)=f(x,y)$ voor $x>x_0$ en beginvoorwaarde
+$y(x_0)=x_0$. Stel dat we benaderingen $z_1,z_2,...,z_n$ voor $y(x_1)$,
+$y(x_2)$,..., $y(x_n)$ gevonden hebben. Dan kunnen we ter bepaling van
+$z_{n+1}$ als benadering voor $y(x_{n+1})$ enkele formules afleiden:
+\begin{itemize}
+\item Euler (eenstaps, expliciet):
+\[
+z_{n+1}=z_n+hf(x_n,z_n)+\frac{h^2}{2}y''(\xi)
+\]
+\item Midpointregel (tweestaps, expliciet):
+\[
+z_{n+1}=z_{n-1}+2hf(x_n,z_n)+\frac{h^3}{3}y'''(\xi)
+\]
+\item Trapeziumregel (eenstaps, impliciet):
+\[
+z_{n+1}=z_n+\half h(f(x_n,z_n)+f(x_{n+1},z_{n+1}))-\frac{h^3}{12}y'''(\xi)
+\]
+\end{itemize}
+Runge-Kutta methoden zijn een belangrijke klasse van eenstaps methoden. Ze
+worden gemotiveerd doordat de oplossing $y(x)$ voldoet aan:
+\[
+y_{n+1}=y_n+hf(\xi_n,y(\xi_n))~~~\mbox{met}~~~\xi_n\in(x_n,x_{n+1})
+\]
+Omdat $\xi_n$ onbekend is worden er enkele ``metingen'' gedaan van de
+incrementfunctie $k=hf(x,y)$ in goed gekozen punten nabij de oplossingskromme
+en vervolgens neemt men voor $z_{n+1}-z_n$ een gewogen gemiddelde van de
+meetwaarden. Zo geldt voor \'e\'en van de mogelijke 3e orde Runge-Kutta methoden:
+\begin{eqnarray*}
+k_1&=&hf(x_n,z_n)\\
+k_2&=&hf(x_n+\half h,z_n+\half k_1)\\
+k_3&=&hf(x_n+\mbox{$\frac{3}{4}$}h,z_n+\mbox{$\frac{3}{4}$}k_2)\\
+z_{n+1}&=&z_n+\mbox{$\frac{1}{9}$}(2k_1+3k_2+4k_3)
+\end{eqnarray*}
+en de klassieke 4e orde methode is:
+\begin{eqnarray*}
+k_1&=&hf(x_n,z_n)\\
+k_2&=&hf(x_n+\half h,z_n+\half k_1)\\
+k_3&=&hf(x_n+\half h,z_n+\half k_2)\\
+k_4&=&hf(x_n+h,z_n+k_3)\\
+z_{n+1}&=&z_n+\mbox{$\frac{1}{6}$}(k_1+2k_2+2k_3+k_4)
+\end{eqnarray*}
+Vaak wordt de nauwkeurigheid nog vergroot door de stapgrootte per stap aan
+te passen aan de geschatte afrondingsfout. Bij 4e orde Runge-Kutta is
+stapverdubbeling de meest voor de hand liggende methode.
+
+\section{De fast Fourier transformatie}
+We kunnen de Fouriertransformatie van een functie benaderen als we een aantal
+discrete punten hebben. Stel we hebben $N$ opeenvolgende samples $h_k=h(t_k)$,
+$t_k=k\Delta$, $k=0,1,2,...,N-1$. De discrete Fourier transformatie is dan
+gegeven door:
+\[
+H_n=\sum_{k=0}^{N-1}h_k{\rm e}^{2\pi ikn/N}
+\]
+en de inverse Fouriertransformatie door
+\[
+h_k=\frac{1}{N}\sum_{n=0}^{N-1}H_n{\rm e}^{-2\pi ikn/N}
+\]
+Deze operatie is van orde $N^2$. Dit kan sneller, orde $N\cdot^2\log(N)$,
+met de Fast Fourier transformatie. Hiertoe ziet men in dat een discrete
+Fouriertransformatie met lengte $N$ recursief opgedeeld kan worden in de som
+van 2 discrete transformaties met lengte $N/2$, \'e\'en gevormd van de even
+punten, de ander van de oneven.
+\npar
+Dit is als volgt te implementeren.
+Het array {\tt data[1..2*nn]} bevat op de oneven plaatsen het re\"ele en
+op de even plaatsen de imaginaire delen van de invoerwaarden: {\tt data[1]}
+is het re\"ele deel en {\tt data[2]} het imaginaire deel van $f_0$, etc. De
+volgende routine vervangt de waarden in {\tt data} door hun discreet Fourier
+getransformeerden als {\tt isign} $=1$, en door hun invers getransformeerde
+elementen als {\tt isign} $=-1$. {\tt nn} moet een macht van 2 zijn.
+\begin{verbatim}
+#include <math.h>
+#define SWAP(a,b) tempr=(a);(a)=(b);(b)=tempr
+
+void FourierTransform(float data[], unsigned long nn, int isign)
+{
+  unsigned long n, mmax, m, j, istep, i;
+  double        wtemp, wr, wpr, wpi, wi, theta;
+  float         tempr, tempi;
+
+  n = nn << 1;
+  j = 1;
+  for (i = 1; i < n; i += 2)
+  {
+    if ( j > i )
+    {
+      SWAP(data[j], data[i]);
+      SWAP(data[j+1], data[i+1]);
+    }
+    m = n >> 1;
+    while ( m >= 2 && j > m )
+    {
+      j -= m;
+      m >>= 1;
+    }
+    j += m;
+  }
+  mmax = 2;
+  while ( n > mmax ) /* Buitenste loop, wordt log2(nn) maal uitgevoerd */
+  {
+    istep = mmax << 1;
+    theta = isign * (6.28318530717959/mmax);
+    wtemp = sin(0.5 * theta);
+    wpr   = -2.0 * wtemp * wtemp;
+    wpi   = sin(theta);
+    wr    = 1.0;
+    wi    = 0.0;
+    for (m = 1; m < mmax; m += 2)
+    {
+      for (i = m; i <= n; i += istep) /* Danielson-Lanczos formule */
+      {
+        j          = i + mmax;
+        tempr      = wr * data[j]   - wi * data[j+1];
+        tempi      = wr * data[j+1] + wi * data[j];
+        data[j]    = data[i]   - tempr;
+        data[j+1]  = data[i+1] - tempi;
+        data[i]   += tempr;
+        data[i+1] += tempi;
+      }
+      wr = (wtemp = wr) * wpr - wi * wpi + wr;
+      wi = wi * wpr + wtemp * wpi + wi;
+    }
+    mmax=istep;
+  }
+}
+\end{verbatim}
+
+\end{document}
+

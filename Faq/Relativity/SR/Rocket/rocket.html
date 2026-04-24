@@ -1,0 +1,572 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>The Relativistic Rocket</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../../index.html">[Physics FAQ]</a> -
+   <a href="../../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Thanks to Alan R. Wilson for correcting a two-word typo involving GPS satellites.<br>
+Thanks to Aron Yoffe for suggesting the newtonian comparison.<br>
+Thanks to Tom Fuchs for suggesting the analogy to the stone thrown upwards.<br>
+Fuel numbers added by Don Koks, 2004.<br>
+Updated by Phil Gibbs, 1998.<br>
+Thanks to Bill Woods for correcting the fuel equation.<br>
+Original by Philip Gibbs, 1996.</p>
+<br>
+
+
+
+<h1>The Relativistic Rocket</h1>
+
+<p>The theory of relativity sets a severe limit to our ability to explore the galaxy in space ships.&nbsp; As an
+object approaches the speed of light, more and more energy is needed to maintain its acceleration, with the result
+that to reach the speed of light, an infinite amount of energy would be required.&nbsp; It seems that the speed of
+light is an absolute barrier which cannot be reached or surpassed by massive objects (see the FAQ article
+on <a href="../../SpeedOfLight/FTL.html">faster than light travel</a>).&nbsp; Given that our galaxy is about 80,000
+light years across, there seems little hope for us to get very far in galactic terms.</p>
+
+<p>Science fiction writers might make use of worm holes or warp drives to overcome this restriction, but it is not
+clear that such things can ever be made to work in reality.&nbsp; Another way to get around the problem may be to
+use the relativistic effects of time dilation and length contraction to cover large distances within a reasonable
+time span for those aboard a space ship.&nbsp; When a rocket accelerates at $1\;\text{g}$ (9.81 m/s$^2$),
+its crew experiences the equivalent of a gravitational field with the same strength as that on Earth.&nbsp; If this
+acceleration could be maintained for long enough, the crew would eventually reap the benefits of the relativistic
+effects that increase the effective rate of travel.</p>
+
+<p>What then, are the appropriate equations for the relativistic rocket?</p>
+
+<p>First of all, we need to be clear what we mean by continuous acceleration at $1\;\text{g}$.&nbsp; The
+acceleration of the rocket must be measured at any given instant in a non-accelerating frame of reference
+travelling at the same instantaneous speed as the rocket (see the FAQ article
+on <a href="../clock.html">accelerating clocks</a>), because this is the acceleration that its occupants would
+physically feel&mdash;and we want them to accelerate at a comfortable rate that has the effect of mimicking their
+weight on Earth.&nbsp; We'll call this acceleration $a$.&nbsp; The proper time measured by the crew of the
+rocket (i.e. how much they age) is called $T$, and the time measured in the non-accelerating frame of
+reference in which they started (e.g. Earth) is $t$.&nbsp; We assume that the stars are essentially at rest
+in this Earth frame.&nbsp; The distance covered by the rocket as measured in this frame of reference is $d$,
+and the rocket's velocity is $v$.&nbsp; The time dilation or length-contraction factor at any instant is the
+gamma factor $\gamma$.</p>
+
+<p>The relativistic equations for a rocket with constant positive acceleration $a > 0$ are the
+following.&nbsp; First, define the hyperbolic trigonometric functions sh, ch, and th (also known as sinh, cosh, and
+tanh):
+\begin{align}
+\text{sh } x &= (e^x - e^{-x})/2 \,,\\
+\text{ch } x &= (e^x + e^{-x})/2 \,,\\
+\text{th } x &= \text{sh } x/\text{ch } x \,.
+\end{align}
+Using these, the rocket equations are</p>
+\begin{align}
+t &= {c\over a} \text{sh}{aT\over c} = \sqrt{(d/c)^2 + 2d/a\,} \,,\\[1ex]
+T &= {c\over a} \text{sh}^{-1}{at\over c} = {c\over a} \text{ch}^{-1} (ad/c^2 + 1) \,,\\[1ex]
+d &= {c^2\over a} \left(\text{ch}{aT\over c} - 1\right) =  {c^2\over a} \left(\sqrt{1 + (at/c)^2\,} - 1\right) \,,\\[1ex]
+v &= c\; \text{th}{aT\over c} = {at\over \sqrt{1 + (at/c)^2}\,} \,,\\[1ex]
+\gamma &= \text{ch}{aT\over c} = \sqrt{1 + (at/c)^2\,} = ad/c^2 + 1 \,.
+\end{align}
+</p>
+
+<p>These equations are valid in any consistent system of units, such as seconds for time, metres for distance, metres
+per second for speeds and metres per second squared for accelerations.&nbsp; In these units $c\simeq 3 \times 10^8$
+m/s.&nbsp; To do some example calculations, it's easier to use units of years for time and light years ("ly") for
+distance.&nbsp; Then $c = 1$ ly/yr and $g\simeq 1.03$ ly/yr$^2$.&nbsp; Here are some typical values of the various
+parameters for $a = 1$ g.
+\begin{array}{lllll}
+\hline
+T\text{ (years)} & t\text{ (years)} & d\text{ (ly)} & v/c & \gamma\\
+\hline
+1  &  1.19       & 0.56       & 0.77          & 1.58 \\ 
+2  &  3.75       & 2.90       & 0.97          & 3.99 \\
+5  &  83.7       & 82.7       & 0.99993       & 86.2 \\
+8  &  1840       & 1839       & 0.9999998     & 1895 \\
+12 &  113,\!243  & 113,\!242  & 0.99999999996 & 116,\!641 \\
+\hline
+\end{array}
+</p>
+
+<p>In theory, then, you can travel across the galaxy in just 12 years of your own time.&nbsp; If you want to arrive at
+your destination and stop, then let's say you turn your rocket around at the halfway point and decelerate at 1
+g.&nbsp; In that case it will take nearly twice as long in terms of proper time $T$ for the longer journeys; the
+elapsed time $t$ on Earth will be only a little longer, since in both cases the rocket is spending most of its time at
+a speed near that of light.&nbsp; We can still use the above equations to work this out, since although the
+acceleration is now negative, we can "run the film backwards" to reason that they must still apply.&nbsp; Here's the
+general formula:
+$$
+T = {2c\over g}\, \text{ch}^{-1}\left({gd\over 2c^2} + 1\right) .
+$$
+Here are some of the times you will age when journeying to a few well known space marks, arriving at low speed:
+\begin{array}{lll}
+\hline
+d\text{ (ly)} & \text{Stopping at:} & T\text{ (years)} \\
+\hline
+4.3           & \text{Nearest star}         & 3.6 \\
+27            & \text{Vega}                 & 6.6 \\
+30,\!000      & \text{Centre of our galaxy} & 20 \\
+2,\!000,\!000 & \text{Andromeda Galaxy}     & 28 \\
+n             & \text{Anywhere, but see}    & 1.94\, \text{ch}^{-1}(n/1.94 + 1) \\[-1ex]
+              & \text{next sentence}        & \\  
+\hline
+\end{array}
+For distances greater than about a thousand million light years, the formulae given here are inadequate because
+the universe is expanding.&nbsp; General Relativity would have to be used to work out those cases.</p>
+
+<p>If you wish to pass by a distant star and return to Earth, but you don't need to stop there, then a looping
+route is better than a straight-out-and-back route.&nbsp; A good course might be to head out at constant
+acceleration in a direction at about 45&deg; to that of your destination.&nbsp; At the appropriate point, you start
+a long arc such that the centrifugal acceleration you experience is also equivalent to Earth's gravity.&nbsp; After
+3/4 of a circle, you decelerate in a straight line until you arrive home.</p>
+
+<p>To experiment with the quantities above, see David Wright's
+  <a href=http://www.zitterbug.net/future/future815.html>INTO THE FUTURE</a> web page.</p>
+<br>
+
+
+
+<h4>What if the universe were newtonian?</h4>
+<p>As a comparison to the above values of $T$, what if relativity didn't apply: that is, how would $T$ depend on $d$
+in a fully newtonian universe, so that the rocket could accelerate at $1\;\text{g}$ forever?&nbsp; We'll call the
+elapsed time $T'$ here so as not to confuse it with the $T$ above that we are going to compare it with.&nbsp; Begin
+with the usual equation for constant acceleration from a standing start, "$\text{displacement} = 1/2 \times
+\text{acceleration} \times \text{time}^2$".&nbsp; Consider that, by symmetry, $T'/2$ is the time to get to the
+half-way point, so
+$$
+d/2 = 1/2 \,\; a \, (T'/2)^2 \,,
+$$
+which means that
+$$
+T' = 2 \sqrt{d/a\,} \,. 
+$$
+With $d = n$ light years and $a = 1\;\text{g} = 1.03$ ly/yr$^2$, this becomes
+$$
+T' = 1.97\sqrt{n\,}\;\text{years}.
+$$
+</p>
+
+<p>Here is the above table amended to include comparison values of $T'$:
+\begin{array}{llll}
+\hline
+d\text{ (ly)} & \text{Stopping at:} & T\text{ [relativistic universe] (years)} & T'\text{ [newtonian universe] (years)} \\
+\hline
+4.3           & \text{Nearest star}         & 3.6 & 4.1 \\
+27            & \text{Vega}                 & 6.6 & 10.2 \\
+30,\!000      & \text{Centre of our galaxy} & 20  & 341 \\
+2,\!000,\!000 & \text{Andromeda Galaxy}     & 28  & 2786 \\
+n             & \text{Anywhere}             & 1.94\, \text{ch}^{-1}(n/1.94 + 1) & 1.97 \sqrt{n\,}\\
+\hline
+\end{array}
+You can see that in our relativistic universe, even though the rocket's speed is limited to the speed of light (unlike
+in the newtonian universe, which has no speed limit), the very high values attained by the time-dilation factor
+$\gamma$ on long trips ensure that the relativistic rocket passengers still age far, far less than do the newtonian
+passengers undergoing the same trip.</p>
+<br>
+
+
+
+
+
+<h2>Below the rocket, something strange is happening...</h2>
+<p>But now, back to the relativistic rocket...</p>
+
+<p>In the rocket, you can make measurements of the world around you.&nbsp; One thing you might do is ask how the
+distance to an interesting star you are headed towards changes with $T$, the time on your clock.&nbsp; At blast-off
+($t = T = 0$) the rocket is at rest, so this distance initially equals the distance $D$ to the star in the
+non-accelerating frame.&nbsp; But once you are moving, however you choose to measure this distance, at each moment it
+will be reduced by your current distance $d$ travelled in the non-accelerating frame, as well as the whole lot
+contracted by the current factor of $\gamma$.&nbsp; Eventually you will pass the star and it will recede behind
+you.&nbsp; The distance you measure to it at time $T$ is
+\begin{equation}\label{D-d-on-gamma}
+{D - d\over \gamma} = {D + c^2/a\over \text{ch}(aT/c)} - {c^2\over a} \,.
+\end{equation}
+A plot of this distance as a function of $T$ shows that, as expected, it starts at $D$, then reduces to zero as you
+pass the star.&nbsp; Then it becomes negative as the star moves behind you.&nbsp; As $T$ goes to infinity, the
+distance asymptotes to a value of $-c^2/a$.&nbsp; That means that from your vantage point in the rocket, everything in
+the universe is falling from "above" to "below" the rocket, but never receding any farther than a distance of $-c^2/a$
+as measured by you.&nbsp; It all piles up just short of this distance, asymptoting to a plane called
+a <em>horizon</em>.&nbsp; You see this horizon actually form as the rocket accelerates, because there comes a time
+when no signal emitted from "below" the horizon can ever reach you.&nbsp; Everything falls towards that plane, and as
+each object approaches that plane you see it begin to redden and fade, due to the increasing red shift of its light,
+because you are accelerating.&nbsp; Finally it fades out of visibility.&nbsp; In fact, as anything gets closer to the
+horizon, its rate of ageing as measured by you slows more and more; time comes to a complete halt on the
+horizon.&nbsp; The horizon is a dark plane that appears to be swallowing everything in the universe!&nbsp; But of
+course, nothing strange is noticed by the non-accelerating Earth observers.&nbsp; There is no horizon anywhere for
+them.</p>
+<br>
+
+
+
+<h2>And inside the rocket, something strange is also happening...</h2>
+
+<p>Whereas time slows to a stop a certain distance below the rocket, it speeds up above the rocket (that is, in the
+direction in which it's travelling from Earth's perspective).&nbsp; This effect could, in principle, be measured
+inside the rocket too: a clock attached to the rocket's ceiling (i.e. in the rocket's "nose") ages faster than a
+clock attached to its floor.</p>
+
+<p>For a standard-sized rocket with a survivable acceleration, this difference in how fast things age within its cabin is very
+small.&nbsp; Even so, it tells us something fundamental about gravity, via Einstein's <em>equivalence principle</em>.&nbsp;
+Einstein postulated that any experiment done in a real gravitational field&mdash;provided that experiment has a "small" extent
+in space and time&mdash;will give a result indistinguishable from the same experiment done in the above "uniformly
+accelerating" rocket.&nbsp; These space and time extents must be small so that no "tidal" effect due to the inhomogeneous
+nature of the real gravity field will be apparent.&nbsp; Analogously, even though Earth is not flat, we can treat it as being
+flat on a small patch of ground: by this we mean that as we consider smaller and smaller patches of ground, the error we make
+by treating each patch as flat grows smaller at a faster rate than the size of the patch decreases.&nbsp; In a similar way, the
+errors we make by treating the gravity in a sequence of ever-smaller regions of spacetime as equivalent to the interior of a
+uniformly accelerated rocket in the absence of gravity decrease at a faster rate than do the sizes of those spacetime
+regions.&nbsp; So the idea that the rocket's ceiling ages faster than its floor (and that includes the ageing of any bugs
+sitting on these) transfers to gravity: the ceiling of the room in which you now sit is ageing faster than its floor; and your
+head is ageing faster than your feet.&nbsp; This has nothing to do with your centripetal acceleration as Earth turns; it is
+purely about Earth's gravitational field.</p>
+
+<p>This difference in ageing rates on Earth has been verified experimentally.&nbsp; It is the content of Einstein's <i>general
+theory of relativity</i>, and for the weak gravity that exists in Earth's vicinity, we can get quite a good precision by
+calling in the analogy of the rocket and invoking the equivalence principle.&nbsp; And general relativity goes on to make
+itself felt in the GPS satellite system.&nbsp; Because the satellites that broadcast data to your GPS receiver are ageing
+quickly compared to clocks on Earth, they must be set to "tick" slightly slowly in the factory by the same factor, before they
+are sent up to orbit.&nbsp; That way, once they are in orbit, they will tick at the same rate as clocks on Earth.</p>
+<br>
+
+
+
+<h2>The Equivalence Principle</h2>
+
+<p>We can use the above equation for the distance $(D - d)/\gamma$ that you measure to your destination star to
+illustrate the equivalence principle.&nbsp; As you accelerated from Earth and headed towards that star, it was as if
+the star began falling towards you with an acceleration of $a$.&nbsp; After a time measured by you as $T$, the
+distance you measure to the star is equation \eqref{D-d-on-gamma} above.&nbsp; Suppose that either your acceleration $a$ is
+small enough, or the time interval $T$ is small enough, so that the quantity $aT$ is much less than the speed of light
+$c$; in other words, $aT/c \ll 1$.&nbsp; Now consider that for any $x$, the hyperbolic cosine can be written as a
+series
+$$
+\text{ch}\; x = 1 + {x^2\over 2\textit{!}} + {x^4\over 4\textit{!}} + {x^6\over 6\textit{!}} + \dots \,.
+$$
+Set $x = aT/c$ and, because $x$ is small, drop all terms in the expansion of the hyperbolic cosine higher than
+$x^2$.&nbsp; Further, remember that for all $|x| < 1$ we can write
+$$
+{1\over 1+x} = 1 - x + x^2 - x^3 + \dots \,,
+$$
+in which case
+$$
+{1\over \text{ch}\;x} \simeq 1 - x^2/2 \quad \text{for } |x| < 1 \,.
+$$
+In that case, we can approximate the distance you measure to the star as
+\begin{align}
+{D - d\over \gamma} &= {D + c^2/a \over \text{ch}(aT/c)} - {c^2\over a} \\[1ex]
+&\simeq \left(D + {c^2\over a}\right) \left[1 - {a^2 T^2\over 2c^2}\right] - {c^2\over a} \\[1ex]
+&=  D + {c^2\over a} - {D a^2 T^2\over 2c^2} - {aT^2\over 2} - {c^2\over a} \\[1ex]
+&=  D - {D a^2 T^2\over 2c^2} - {aT^2\over 2} .
+\end{align}
+The second term in the last line divided by the third term equals $Da/c^2$.&nbsp; When $D$
+and $a$ aren't too large (meaning $Da/c^2$ is much less than 1), we can then ignore
+the second term, to write the distance you measure to the star as
+$$
+\text{distance to star} \simeq D - aT^2/2 \,.
+$$
+Now, what would Newton say?&nbsp; He'd say that the star had been falling towards you for a time $T$ with acceleration
+$a$, in which case it must've covered a distance of $aT^2/2$ from its original distance from you of $D$; he'd thus
+conclude its distance from you is $D - aT^2/2$ exactly.&nbsp; So you can see that his non-relativistic result agrees
+with the relativistic one when the combinations of the various parameters are much less than the speed of light.&nbsp;
+That's how the equivalence principle works.</p>
+<br>
+
+
+
+<h2>How much fuel is needed?</h2>
+
+<p>Sadly, there are a few technical difficulties you will have to overcome before you can head off into space.&nbsp;
+One of these difficulties is creating your propulsion system and generating fuel.&nbsp; The most efficient theoretical
+way to propel the rocket is to use a "photon drive".&nbsp; This would convert mass to photons or other massless
+particles which shoot out the back of the rocket.&nbsp; Perhaps this may even be technically feasible if we ever
+produce an antimatter-driven "graser" (gamma-ray laser).</p>
+
+<p>Remember that energy is equivalent to mass, so provided mass can be converted to 100% radiation by means of
+matter&ndash;antimatter annihilation, we just want to find the mass $M$ of the fuel required to accelerate the payload
+$m$.&nbsp; The answer is most easily worked out by conservation of energy and momentum.</p>
+
+<h4>First: conservation of energy</h4>
+
+The total energy before blast-off is (in the Earth frame)
+$$
+E_\text{initial} = (M+m)c^2 .
+$$
+At the end of the trip the fuel has all been converted to light with energy $E_L$, so the total energy is now
+$$
+E_\text{final} = \gamma\, mc^2 + E_L \,.
+$$
+By conservation of energy these must be equal, so here is our first conservation equation:
+\begin{equation}\label{old-1}
+(M+m)c^2 = \gamma\, mc^2 + E_L \,.
+\end{equation}
+</p>
+
+
+
+
+<h4>Second: conservation of momentum</h4>
+
+<p>The total momentum before blast-off is zero in the Earth frame:
+$$
+p_\text{initial} = 0 \,.
+$$
+At the trip's end the fuel has all been converted to light with momentum of magnitude $E_L/c$, but in the opposite
+direction to the rocket.&nbsp; So the final momentum is 
+$$
+p_\text{final} = \gamma\, mv - E_L/c \,.
+$$
+By conservation of momentum these two momentua must be equal, so our second conservation equation is:
+\begin{equation}\label{old-2}
+0 = \gamma\, mv - E_L/c \,. 
+\end{equation}
+Eliminating $E_L$ from equations \eqref{old-1} and \eqref{old-2} gives
+$$
+(M+m)c^2 - \gamma\, mc^2 = \gamma \,mvc \,,
+$$
+so that the fuel-to-payload ratio is
+$$
+M/m = \gamma (1 + v/c) - 1 \,.
+$$
+This equation is true irrespective of how the ship accelerates to velocity $v$, but if it accelerates at a constant
+apparent rate $a$, then
+\begin{align}
+M/m &= \gamma (1 + v/c) - 1\\[1ex]
+&= \text{ch}(aT/c)\,[1 + \text{th}(aT/c)] - 1\\[1ex]
+&= \exp(aT/c) - 1 \,.
+\end{align}
+</p>
+
+<p>How much fuel is this?&nbsp; The next chart shows the amount of fuel needed ($M$) for every kilogramme of
+payload ($m = 1$ kg).
+\begin{array}{lll}
+\hline
+d\text{ (ly)} & \text{Sailing past} & M \\[-1ex]
+              & \text{without stopping} & \\
+\hline
+4.3           & \text{Nearest star}         & 10\; \text{kg} \\
+27            & \text{Vega}                 & 57\; \text{kg} \\
+30,\!000      & \text{Centre of our galaxy} & 62\; \text{tonnes} \\
+2,\!000,\!000 & \text{Andromeda Galaxy}     & 4100\; \text{tonnes} \\
+\hline
+\end{array}
+This is a lot of fuel&mdash;and remember, we are using a motor that is 100% efficient!</p>
+
+<p>What if we prefer to stop at the destination?&nbsp; We accelerate to the half-way point at $1\;\text{g}$ and then
+immediately switch the direction of our rocket so that we now decelerate at $1\;\text{g}$ for the second half of the
+trip.&nbsp; The calculations here are just a little more involved since the trip is now in two distinct halves (and
+the equations at the top assume a positive acceleration only).&nbsp; Even so, the answer turns out to have exactly the
+same form: $M/m = \exp(aT/c) - 1$, except that the proper time $T$ is now almost twice as large as for the non-stop
+case, since the slowing-down rocket is losing the ageing benefits of relativistic speed.&nbsp; This dramatically
+increases the amount of fuel needed:</p>
+\begin{array}{lll}
+\hline
+d\text{ (ly)} & \text{Stopping at} & M \\
+\hline
+4.3           & \text{Nearest star}         & 38\; \text{kg} \\
+27            & \text{Vega}                 & 886\; \text{kg} \\
+30,\!000      & \text{Centre of our galaxy} & 955,\!000\; \text{tonnes} \\
+2,\!000,\!000 & \text{Andromeda Galaxy}     & 4.2\; \text{thousand million tonnes} \\
+\hline
+\end{array}
+Compare these numbers to the previous case: they are hugely different!&nbsp; Why should that be?&nbsp; Let's
+take the case of Laurel and Hardy, two astronauts travelling to Vega.&nbsp; Laurel speeds past without stopping,
+and so only needs 57 kg of fuel for every 1 kg of payload.&nbsp; Hardy wishes to stop at Vega, and so needs 886 kg
+of fuel for every 1 kg of payload.&nbsp; Laurel takes almost 28 Earth years for the trip, while Hardy takes 29
+Earth years.&nbsp; (They both take roughly the same amount of Earth time because they are both travelling close to
+speed $c$ for most of the journey.)&nbsp; They travel neck and neck until they've both gone half way to Vega, at
+which point Hardy begins to decelerate.</p>
+
+<p>It's useful to think of the problem in terms of relativistic mass, since this is what each rocket motor "feels"
+as it strives to maintain a $1\;\text{g}$ acceleration or deceleration.&nbsp; The relativistic mass of each
+traveller's rocket is continually decreasing throughout their trip (since it's being converted to exhaust
+energy).&nbsp; It turns out that at the half-way point, Laurel's total relativistic mass (for fuel plus payload) is
+about $28m$, and from here until the trip's end, this relativistic mass only decreases by a tiny amount, so
+that Laurel's rocket needs to do very little work.&nbsp; So at the halfway point his fuel-to-payload ratio turns
+out to be about 1.</p>
+
+<p>For Hardy, things are different.&nbsp; He needs to decrease his relativistic mass to $m$ at the end where
+he is to stop.&nbsp; If his rocket's total relativistic mass at the halfway point were the same as Laurel's
+($28m$), with a fuel-to-payload ratio of 1, Hardy would need to decrease the relativistic mass all the way
+down to $m$ at the end, which would require more fuel than Laurel had needed.&nbsp; But Hardy wouldn't have
+this much fuel on board&mdash;unless he ensures that he takes it with him initially.&nbsp; This extra fuel that he
+must carry from the start becomes more payload (a lot more), which needs yet more fuel again to carry that.&nbsp;
+So suddenly his fuel requirement has increased enormously.&nbsp; It turns out that at the half-way point, all this
+extra fuel gives Hardy's rocket a total relativistic mass of about $442m$, and his fuel-to-payload ratio
+turns out to be about 29.</p>
+
+<p>Another way of looking at this odd situation is that both travellers know that they must take fuel on board
+initially to push them at $1\;\text{g}$ for the total trip time.&nbsp; They don't care about what's happening
+outside.&nbsp; In that case, Laurel travels for 28 Earth years but ages just 3.9 years, while Hardy travels for 29
+Earth years but ages 6.6 years.&nbsp; So Hardy has had to sit at his controls and burn his rocket for almost twice
+as long as Laurel, and that has required more fuel, with even more fuel required because of the
+fuel-becomes-payload situation that we mentioned above.</p>
+
+<p>This fuel-becomes-payload problem is well known in the space programme: part of the reason the Saturn V moon
+rocket was so big was that it needed yet more fuel just to carry the fuel that it was already carrying.</p>
+<br>
+
+
+<h2>Other fuel options</h2>
+
+<p>Well, this is probably all just too much fuel to contemplate.&nbsp; There are a limited number of solutions that
+don't violate energy&ndash;momentum conservation or require hypothetical entities such as tachyons or worm
+holes.</p>
+
+<p>It may be possible to scoop up hydrogen as the rocket goes through space, using fusion to drive the
+rocket.&nbsp; This would have big benefits because the fuel would not have to be carried along from the
+start.&nbsp; Another possibility would be to push the rocket away using an Earth-bound graser directed onto the
+back of the rocket.&nbsp; There are a few extra technical difficulties but expect NASA to start looking at the
+possibilities soon :-).</p>
+
+<p>You might also consider using a large rotating black hole as a gravitational catapult, but aside from whether
+such a thing actually exists, it would have to be <em>very</em> big to avoid the rocket being torn apart by tidal
+forces or spun at high angular speed.&nbsp; If there is a black hole at the centre of the Milky Way, as some
+astronomers think, then perhaps if you can get that far, you can use this effect to shoot you off to the next
+galaxy.</p>
+
+<p>One major problem you would have to solve is the need for shielding.&nbsp; As you approach the speed of light
+you will be heading into an increasingly energetic and intense bombardment of cosmic rays and other
+particles.&nbsp; After only a few years of $1\;\text{g}$ acceleration, even the cosmic background radiation is
+Doppler shifted into a lethal heat bath that's hot enough to melt all known materials.</p>
+<br>
+
+
+
+<h2>The Equivalence Principle and a Stone Thrown Upwards</h2>
+
+The equations for the rocket's motion can be used to show something quite non-intuitive about accelerating
+frames.&nbsp; Begin by realising that whereas the scenario above describes the rocket accelerating towards a distant
+star while also moving towards that star, the same equations hold irrespective of the rocket's velocity.&nbsp; So we
+can arrange for the rocket to be initially moving away from the star while always accelerating towards it.&nbsp; So
+initially the rocket measures the star to be getting farther away, then slowing to a stop, and then falling towards
+the rocket.&nbsp; From the rocket's viewpoint (frame), it's as if the star were a stone that had been thrown upwards:
+in the rocket's frame the star (stone) rises to some height, slows to a stop, then falls back down.&nbsp; Let's remind
+ourselves of what Newton would say about such a stone.&nbsp; You stand on Earth or some other planet, where the
+acceleration due to gravity has some value $g > 0$, and throw a stone upwards to a maximum height $H$.&nbsp; Newton
+says that its height at any time $t$ is
+$$
+h(t) = \sqrt{2gH}\, t - gt^2/2 .
+$$
+(You can prove that easily using the standard textbook equations for constant acceleration, $s = s_0 + ut + at^2/2$
+and $v^2 - u^2 = 2as$.)</p>
+
+<p>The equivalence principle suggests that provided we don't throw the star "too far" from a region that can be
+considered to have uniform gravity, we can treat the motion of this stone moving up and coming back down as identical
+to that of the above star.&nbsp; So let's use the rocket equations, but now think of the star as a stone and the
+rocket as a human observer, and alter the equations so that the observer moves "downwards" through the stone at time
+$t = 0$ (but always accelerating upwards with some $g > 0$), then slows to a stop at a distance $H$ "below" the stone,
+then moves back up towards the stone.&nbsp; A plot of the observer's motion in spacetime is still the same hyperbola
+that the rocket has at the top of this page, so we can mostly use the rocket equations from there; but in this new
+scenario the hyperbola has been shifted somewhat on the spacetime diagram relative to its origin, so we'll need to
+tweak the equations to produce that shift.</p>
+
+<p> To do that, first consider the stone to be at a distance $H$ from the uniformly accelerated observer, who is
+momentarily at rest, then starts to move towards the stone (while always accelerating towards it).&nbsp; The stone is
+reached by the observer after a time $t_0 = \sqrt{H^2/c^2 + 2H/g}$.&nbsp; We'll offset the graph of $d$ versus $t$ so
+that the observer passes with negative velocity "through" the stone at $t = 0$.&nbsp; This only requires adding the
+appropriate constants to $t$ and $d$ in the expression for $d$ at the top of this page.&nbsp; We'll write the
+acceleration as $g$ to emphasise that it's a positive number:
+$$
+d = {c^2\over g} \left(\sqrt{1 + {g^2(t-t_0)^2\over c^2}} - 1\right) - H .
+$$
+The "height" $h$ of the stone from the observer should be computed at the observer's proper time by contracting $-d$
+by $\gamma$, so $h = -d/\gamma$, where $\gamma$ here is the $\gamma$ at the top of this page evaluated at $t -
+t_0$.&nbsp; Setting the observer's proper time to be zero at his initial coincidence with the stone means using a new
+$T$ given by shifting the $T$ at the top of this page appropriately, giving
+\begin{align}
+T &= {c\over g} \text{sh}^{-1}{g(t-t_0)\over c} - {c\over g} \text{sh}^{-1}{-gt_0\over c}\nonumber\\[1ex]
+  &= {c\over g} \text{sh}^{-1}{g(t-t_0)\over c} + {c\over g} \text{sh}^{-1}{gt_0\over c} \label{T-expression}.
+\end{align}
+So the height of the stone above the observer at his proper time $T$ is
+\begin{equation}\label{h-expression}
+h = {-1\over\gamma}\left[{c^2\over g} \left(\sqrt{1 + {g^2(t-t_0)^2\over c^2}} - 1\right) - H\right] ,
+\end{equation}
+where $t$ is effectively now just a parameter, with $T$ given in terms of $t$ in \eqref{T-expression}.&nbsp;  You'll
+need
+\begin{align}
+t_0 &= \sqrt{{H^2\over c^2} + {2H\over g}}\;,\\
+\gamma &= \sqrt{1 + {g^2(t-t_0)^2\over c^2}}\;.\label{gamma-for-t-t0}
+\end{align}
+</p>
+So to plot $h$ versus $T$, the easiest thing is to select as many values of $t$ as you need, then compute the
+corresponding values of $h$ and $T$.&nbsp; Alternatively, if you really want to select your values of $T$ first,
+invert the expression for $T$ in \eqref{T-expression} to write
+$$
+{g(t-t_0)\over c} = \text{sh}\left({gT\over c} - \text{sh}^{-1}{gt_0\over c}\right) ,
+$$
+then insert this $g(t-t_0)/c$ into the expression for $\gamma$ in \eqref{gamma-for-t-t0}, and then insert the values of
+$g(t-t_0)/c$ and $\gamma$ into the expression for $h$ in \eqref{h-expression}.</p>
+
+<p>You can show that this height $h(T)$ reduces to the newtonian limit by supposing that \eqref{old-1} gravity is
+weak: $gt_0 /c \ll 1$, and (2) we don't consider times too far outside the scenario: $g(t-t_0)/c \ll 1$.&nbsp; (For
+example, $g = 10$ m/s$^2$ while $t_0$ and $t$ equal a few seconds.)&nbsp; In this limit you'll find that $T \to t$, and
+$$
+\gamma \simeq 1 + {g^2(t-t_0)^2\over 2c^2} .</em>
+$$
+Use the fact that $\text{sh} x \simeq x$ when $x \ll 1$, and you'll recover the newtonian limit $h(t) = \sqrt{2gH}\; t
+- gt^2/2$.</p>
+
+<p>Now the point here is to plot $h$ versus $T$, and compare it to the usual newtonian expression for the stone's
+motion in space and time&mdash;which is of course a parabola.&nbsp; The figure shows a plot of $h$ versus $T$ for $g
+= 1$ light year/year$^2$, $c = 1$ light year/year (of course), and $H = 10$ light years.</p>
+
+<img src="rocket.png" align=left border=0 height=420 hspace=0 vspace=10>
+
+You can see that from the observer's point of view, the stone initially <em>accelerates</em> upwards, then slows to a
+stop at a distance above the observer of 10 light years (there is no Lorentz contraction on this value as the relative
+motion of observer and stone is zero here), and finally the stone falls back towards the observer but <em>slows
+down</em> as it draws nearer.</p>
+
+<p>Why this apparently anomalous acceleration and deceleration?&nbsp; Remember that the stone is not really
+accelerating in an inertial frame; instead, the observer is accelerating in an inertial frame.&nbsp; As the observer
+accelerates, his standard of simultaneity changes in a non-trivial way (see the FAQ article on
+<a href="../movingClocks.html">Do moving clocks <em>always</em> run slowly?</a>).&nbsp; As he moves down past the
+stone, his "line of simultaneity" coincides with the recent past of the stone's world line and mostly translates
+through spacetime; then as he slows to a stop, his line of simultaneity begins to rotate in spacetime, sweeping
+quickly along the stone's world line until it intersects that world line in his future.&nbsp; Then as he picks up
+speed, his line of simultaneity mostly stops rotating in spacetime and simply translates again.&nbsp; The effect of
+this is that he measures the stone initially to <em>accelerate</em> upwards, then slow for a time, stop, accelerate
+back down, and then slow down shortly before it hits him.&nbsp; This motion might be non-intuitive, but most things
+in relativity are non-intuitive!</p>
+
+<p>We can find the values of the parameters that will make this non-intuitive behaviour appear: just demand that the
+curve of $h$ versus $T$ be concave up at $T = 0$.&nbsp; So calculate the second derivative $h''(T)$ and demand it be
+positive at $T = 0$.&nbsp; The requirement for this to happen turns out to be $g > (\sqrt{2} - 1) c^2/H$.&nbsp; This
+means that if you want to perform such an experiment, either $g$ or $H$ will have to be very large.&nbsp; But uniform
+gravitational fields don't seem to exist in the universe, so in either case we might well depart too far from the
+assumptions of the equivalence principle to see the above behaviour.</p>
+
+<p>This motion of objects is suggestive of current ideas in cosmology.&nbsp; Cosmology is built on the simplest
+picture of why galaxies are observed to be rushing away from us: rather than assume they really are rushing away from
+us, it is perhaps simpler to posit that they are all in a sense "at rest" in a universe whose very fabric (spacetime)
+is itself expanding, as dictated by Einstein's equations of General Relativity.&nbsp; In other words, if the galaxies
+are represented by raisins in a pudding, then we needn't imagine that the raisins are somehow racing outwards through
+the pudding; instead, they can be "locally at rest" in the pudding, while the entire pudding expands as it
+bakes.&nbsp; Recent observations of galactic recession have been interpreted as a sign that the universe's rate of
+expansion is increasing, but the above description of free fall in which an object thrown up can actually accelerate
+upwards demonstrates that what might at first be seen as an anomalous acceleration is actually fully in keeping with
+relativity.&nbsp; The catch, of course, is that cosmology does <em>not</em> treat galaxies as "objects thrown upward
+[or outward]".&nbsp; Even so, perhaps we don't need to invoke new ideas such as dark energy to explain the universe's
+expansion: the above scenario shows that in certain situations, an object thrown upwards can accelerate up.&nbsp; Our
+ideas of simultaneity are not always up to the job of finding these behaviours to be intuitive.</p>
+
+<p><em>For a derivation of the rocket equations, see "Gravitation" by Misner, Thorne, and Wheeler, Section 6.2.</em></p>
+
+<p><br></p>
+
+</body>
+</html>

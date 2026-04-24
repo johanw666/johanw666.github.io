@@ -1,0 +1,314 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Mathematical Formulary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+ol>li { 
+  counter-increment: item;
+}
+ol>li::before { 
+  content: counters(item, '.') '  '; 
+}
+</style>
+
+</head>
+<body>
+
+<p align="center">
+<h1>Mathematical Formulary</h1>
+</p>
+<p>Dear reader,</p>
+<p>
+This document contains 66 pages with mathematical equations intended for
+physicists and engineers. It is intended to be a short reference for anyone
+who often needs to look up mathematical equations.
+</p>
+<p>
+This, and a Dutch version of this file, can be obtained from the author,
+Johan Wevers <a href="mailto:johanw@xs4all.nl">johanw@xs4all.nl</a>.</p>
+<p>
+It can also be obtained on the WWW. See
+<a href="http://www.xs4all.nl/~johanw/index.html">http://www.xs4all.nl/~johanw/index.html</a>, where \(\rm\LaTeX\), html, Postscript
+and PDF versions are available.</p>
+<p>
+If you find any errors or have any comments, please let me know. I am always
+open for suggestions and possible corrections to the physics formulary.</p>
+<p>
+This work is licenced under the Creative Commons Attribution 3.0 License.
+To view a copy of this licence, visit <a href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</a> or send
+a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA. which contains a lot equations
+in physics. It is written at advanced undergraduate/postgraduate level. It is
+intended to be a short reference for anyone who works with physics and often
+needs to look up equations.</p>
+<p>
+The C code for the rootfinding via Newtons method and the FFT in chapter
+8 are from ``<em>Numerical Recipes in C</em>'', 2nd Edition, ISBN 0-521-43108-5.</p>
+<p>
+ir. J.C.A. Wevers</p>
+
+<h1>Contents</h1>
+<ol>
+  <li><a href="01-Basics.html#1">Basics</a>
+  <ol>
+  <li><a href="01-Basics.html#1.1">Goniometric functions</a></li>
+  <li><a href="01-Basics.html#1.2">Hyperbolic functions</a></li>
+  <li><a href="01-Basics.html#1.3">Calculus</a></li>
+  <li><a href="01-Basics.html#1.3">Limits</a></li>
+  <li><a href="01-Basics.html#1.5">Complex numbers and quaternions</a>
+  <ol>
+    <li><a href="01-Basics.html#1.5.1">Complex numbers</a></li>
+    <li><a href="01-Basics.html#1.5.2">Quaternions</a></li>
+  </ol>
+  </li>
+  <li><a href="01-Basics.html#1.6">Geometry</a>
+  <ol>
+    <li><a href="01-Basics.html#1.6.1">Triangles</a></li>
+    <li><a href="01-Basics.html#1.6.2">Curves</a></li>
+  </ol>
+  </li>
+  <li><a href="01-Basics.html#1.7">Vectors</a></li>
+  <li><a href="01-Basics.html#1.8">Series</a>
+  <ol>
+    <li><a href="01-Basics.html#1.8.1">Expansion</a></li>
+    <li><a href="01-Basics.html#1.8.2">Convergence and divergence of series</a></li>
+    <li><a href="01-Basics.html#1.8.3">Convergence and divergence of functions</a></li>
+  </ol>
+  </li>
+  <li><a href="01-Basics.html#1.9">Products and quotients</a></li>
+  <li><a href="01-Basics.html#1.10">Logarithms</a></li>
+  <li><a href="01-Basics.html#1.11">Polynomials</a></li>
+  <li><a href="01-Basics.html#1.12">Primes</a></li>
+  </ol>
+<p>
+  <li><a href="02-Probability_and_statistics.html#2">Probability and statistics</a>
+  <ol>
+   <li><a href="02-Probability_and_statistics.html#2.1">Combinations</a></li>
+   <li><a href="02-Probability_and_statistics.html#2.2">Probability theory</a></li>
+   <li><a href="02-Probability_and_statistics.html#2.3">Statistics</a>
+   <ol>
+     <li><a href="02-Probability_and_statistics.html#2.3.1">General</a></li>
+     <li><a href="02-Probability_and_statistics.html#2.3.2">Distributions</a></li>
+   </ol>
+   </li>
+   <li><a href="02-Probability_and_statistics.html#2.4">Regression analyses</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="03-Calculus.html#3">Calculus</a>
+  <ol>
+    <li><a href="03-Calculus.html#3.1">Integrals</a>
+    <ol>
+      <li><a href="03-Calculus.html#3.1.1">Arithmetic rules</a></li>
+      <li><a href="03-Calculus.html#3.1.2">Arc lengs, surfaces and volumes</a></li>
+      <li><a href="03-Calculus.html#3.1.3">eparation of quotients</a></li>
+      <li><a href="03-Calculus.html#3.1.4">Special functions</a>
+      <ol>
+        <li><a href="03-Calculus.html#3.1.4.1">Elliptic functies</a></li>
+        <li><a href="03-Calculus.html#3.1.4.2">The Gamma function</a></li>
+        <li><a href="03-Calculus.html#3.1.4.3">The Beta function</a></li>
+        <li><a href="03-Calculus.html#3.1.4.4">The Delta function</a></li>
+      </ol>
+      </li>
+      <li><a href="03-Calculus.html#3.1.5">Goniometric integrals</a></li>
+    </ol>
+    </li>
+    <li><a href="03-Calculus.html#3.2">Functions with more variables</a>
+    <ol>
+       <li><a href="03-Calculus.html#3.2.1">Derivatives</a></li>
+       <li><a href="03-Calculus.html#3.2.2">Taylor series</a></li>
+       <li><a href="03-Calculus.html#3.2.3">Extrema</a></li>
+       <li><a href="03-Calculus.html#3.2.4">The nabla-operator</a></li>
+       <li><a href="03-Calculus.html#3.2.5">Integral theorems</a></li>
+       <li><a href="03-Calculus.html#3.2.6">Multiple integrals</a></li>
+       <li><a href="03-Calculus.html#3.2.7">Coordinate transformations</a></li>
+    </ol>
+    </li>
+  <li><a href="03-Calculus.html#3.3">Orthogonality of functions</a></li>
+  <li><a href="03-Calculus.html#3.4">Fourier series</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="04-Differential_equations.html#4">4. Differential equations</a>
+  <ol>
+    <li><a href="04-Differential_equations.html#4.1">Linear differential equations</a>
+    <ol>
+      <li><a href="04-Differential_equations.html#4.1.1">First order linear DE</a></li>
+      <li><a href="04-Differential_equations.html#4.1.2">Second order linear DE</a></li>
+      <li><a href="04-Differential_equations.html#4.1.3">The Wronskian</a></li>
+      <li><a href="04-Differential_equations.html#4.1.4">Power series substitution</a></li>
+    </ol>
+    </li>
+    <li><a href="04-Differential_equations.html#4.2">Some special cases</a>
+    <ol>
+      <li><a href="04-Differential_equations.html#4.2.1">Frobenius' method</a></li>
+      <li><a href="04-Differential_equations.html#4.2.2">Euler</a></li>
+      <li><a href="04-Differential_equations.html#4.2.3">Legendre's DE</a></li>
+      <li><a href="04-Differential_equations.html#4.2.4">The associated Legendre equation</a></li>
+      <li><a href="04-Differential_equations.html#4.2.5">Solutions for Bessel's equation</a></li>
+      <li><a href="04-Differential_equations.html#4.2.6">Properties of Bessel functions</a></li>
+      <li><a href="04-Differential_equations.html#4.2.7">Laguerre's equation</a></li>
+      <li><a href="04-Differential_equations.html#4.2.8">The associated Laguerre equation</a></li>
+      <li><a href="04-Differential_equations.html#4.2.9">Hermite</a></li>
+      <li><a href="04-Differential_equations.html#4.2.10">Chebyshev</a></li>
+      <li><a href="04-Differential_equations.html#4.2.11">Weber</a></li>
+    </ol>
+    </li>
+    <li><a href="04-Differential_equations.html#4.3">Non-linear differential equations</a></li>
+    <li><a href="04-Differential_equations.html#4.4">Sturm-Liouville equations</a></li>
+    <li><a href="04-Differential_equations.html#4.5">Linear partial differential equations</a>
+    <ol>
+      <li><a href="04-Differential_equations.html#4.5.1">General</a></li>
+      <li><a href="04-Differential_equations.html#4.5.2">Special cases</a>
+      <ol>
+        <li><a href="04-Differential_equations.html#4.5.2.1">The wave equation</a></li>
+        <li><a href="04-Differential_equations.html#4.5.2.2">The diffusion equation</a></li>
+        <li><a href="04-Differential_equations.html#4.5.2.3">The equation of Helmholtz</a></li>
+      </ol>
+      </li>
+      <li><a href="04-Differential_equations.html#4.5">Potential theory and Green's theorem</a></li>
+    </ol>
+    </li>
+  </ol>
+  </li>
+<p>
+  <li><a href="05-Linear_algebra.html#5">Linear algebra</a>
+  <ol>
+    <li><a href="05-Linear_algebra.html#5.1">Vector spaces</a></li>
+    <li><a href="05-Linear_algebra.html#5.2">Basis</a></li>
+    <li><a href="05-Linear_algebra.html#5.3">Matrix calculus</a>
+    <ol>
+       <li><a href="05-Linear_algebra.html#5.3.1">Basic operations</a></li>
+       <li><a href="05-Linear_algebra.html#5.3.2">Matrix equations</a></li>
+    </ol>
+    </li>
+    <li><a href="05-Linear_algebra.html#5.4">Linear transformations</a></li>
+    <li><a href="05-Linear_algebra.html#5.5">Plane and line</a></li>
+    <li><a href="05-Linear_algebra.html#5.6">Coordinate transformations</a></li>
+    <li><a href="05-Linear_algebra.html#5.7">Eigen values</a></li>
+    <li><a href="05-Linear_algebra.html#5.8">Transformation types</a>
+    <ol>
+       <li><a href="05-Linear_algebra.html#5.8.1">Isometric transformations</a></li>
+       <li><a href="05-Linear_algebra.html#5.8.2">Orthogonal transformations</a></li>
+       <li><a href="05-Linear_algebra.html#5.8.3">Unitary transformations</a></li>
+       <li><a href="05-Linear_algebra.html#5.8.4">Symmetric transformations</a></li>
+       <li><a href="05-Linear_algebra.html#5.8.5">Hermitian transformations</a></li>
+       <li><a href="05-Linear_algebra.html#5.8.6">Normal transformations</a></li>
+       <li><a href="05-Linear_algebra.html#5.8.7">Complete systems of commuting Hermitian transformations</a></li>
+    </ol>
+    </li>
+    <li><a href="05-Linear_algebra.html#5.9">Homogeneous coordinates</a></li>
+    <li><a href="05-Linear_algebra.html#5.10">Inner product spaces</a></li>
+    <li><a href="05-Linear_algebra.html#5.11">The Laplace transformation</a></li>
+    <li><a href="05-Linear_algebra.html#5.12">The convolution</a></li>
+    <li><a href="05-Linear_algebra.html#5.13">Systems of linear differential equations</a></li>
+    <li><a href="05-Linear_algebra.html#5.14">Quadratic forms</a>
+    <ol>
+      <li><a href="05-Linear_algebra.html#5.14.1">Quadratic forms in $I\hspace{-1mm}R^2$</a></li>
+      <li><a href="05-Linear_algebra.html#5.14.2">Quadratic surfaces in $I\hspace{-1mm}R^3$</a></li>
+    </ol>
+  </ol>
+  </li>
+<p>
+  <li><a href="06-Complex_function_theory.html#6">Complex function theory</a>
+  <ol>
+    <li><a href="06-Complex_function_theory.html#6.1">Functions of complex variables</a></li>
+    <li><a href="06-Complex_function_theory.html#6.2">Complex integration</a>
+    <ol>
+      <li><a href="06-Complex_function_theory.html#6.2.1">Cauchy's integral formula</a></li>
+      <li><a href="06-Complex_function_theory.html#6.2.2">Residue</a></li>
+    </ol>
+    </li>
+    <li><a href="06-Complex_function_theory.html#6.2">Analytical functions definied by series</a></li>
+    <li><a href="06-Complex_function_theory.html#6.3">Laurent series</a></li>
+    <li><a href="06-Complex_function_theory.html#6.4">Jordan's theorem</a></li>
+   </ol>
+   </li>
+<p>
+  <li><a href="07-Tensor_calculus.html#7">Tensor calculus</a>
+  <ol>
+    <li><a href="07-Tensor_calculus.html#7.1">Vectors and covectors</a></li>
+    <li><a href="07-Tensor_calculus.html#7.2">Tensor algebra</a></li>
+    <li><a href="07-Tensor_calculus.html#7.3">Inner product</a></li>
+    <li><a href="07-Tensor_calculus.html#7.4">Tensor product</a></li>
+    <li><a href="07-Tensor_calculus.html#7.5">Symmetric and antisymmetric tensors</a></li>
+    <li><a href="07-Tensor_calculus.html#7.6">Outer product</a></li>
+    <li><a href="07-Tensor_calculus.html#7.7">The Hodge star operator</a></li>
+    <li><a href="07-Tensor_calculus.html#7.8">Differential operations</a>
+    <ol>
+      <li><a href="07-Tensor_calculus.html#7.8.1">The directional derivative</a></li>
+      <li><a href="07-Tensor_calculus.html#7.8.2">The Lie-derivative</a></li>
+      <li><a href="07-Tensor_calculus.html#7.8.3">Christoffel symbols</a></li>
+      <li><a href="07-Tensor_calculus.html#7.8.4">The covariant derivative</a></li>
+    </ol>
+    </li>
+    <li><a href="07-Tensor_calculus.html#7.9">Differential operators</a>
+    <ol>
+      <li><a href="07-Tensor_calculus.html#7.9.1">The Gradient</a></li>
+      <li><a href="07-Tensor_calculus.html#7.9.2">The divergence</a></li>
+      <li><a href="07-Tensor_calculus.html#7.9.3">The curl</a></li>
+      <li><a href="07-Tensor_calculus.html#7.9.4">The Laplacian</a></li>
+    </ol>
+    </li>
+    <li><a href="07-Tensor_calculus.html#7.10">Differential geometry</a>
+    <ol>
+      <li><a href="07-Tensor_calculus.html#7.10.1">Space curves</a></li>
+      <li><a href="07-Tensor_calculus.html#7.10.2">Surfaces in $I\hspace{-1mm}R$</a></li>
+      <li><a href="07-Tensor_calculus.html#7.10.3">The first fundamental tensor</a></li>
+      <li><a href="07-Tensor_calculus.html#7.10.4">The second fundamental tensor</a></li>
+      <li><a href="07-Tensor_calculus.html#7.10.5">Geodetic curvature</a></li>
+    </ol>
+    </li>
+    <li><a href="07-Tensor_calculus.html#7.11">Riemannian geometry</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="08-Numerical_mathematics.html#8">Numerical mathematics</a>
+  <ol>
+    <li><a href="08-Numerical_mathematics.html#8.1">Errors</a></li>
+    <li><a href="08-Numerical_mathematics.html#8.2">Floating point representations</a></li>
+    <li><a href="08-Numerical_mathematics.html#8.3">Systems of equations</a>
+    <ol>
+      <li><a href="08-Numerical_mathematics.html#8.3.1">Triangular matrices</a></li>
+      <li><a href="08-Numerical_mathematics.html#8.3.2">Gauss elimination</a></li>
+      <li><a href="08-Numerical_mathematics.html#8.3.3">Pivot strategy</a></li>
+    </ol>
+    </li>
+    <li><a href="08-Numerical_mathematics.html#8.4">Roots of functions</a>
+    <ol>
+      <li><a href="08-Numerical_mathematics.html#8.4.1">Successive substitution</a></li>
+      <li><a href="08-Numerical_mathematics.html#8.4.2">Local convergence</a></li>
+      <li><a href="08-Numerical_mathematics.html#8.4.3">Aitken extrapolation</a></li>
+      <li><a href="08-Numerical_mathematics.html#8.4.4">Newton iteration</a></li>
+      <li><a href="08-Numerical_mathematics.html#8.4.5">The secant method</a></li>
+    </ol>
+    </li>
+    <li><a href="08-Numerical_mathematics.html#8.5">Polynomal interpolation</a></li>
+    <li><a href="08-Numerical_mathematics.html#8.6">Definite integrals</a></li>
+    <li><a href="08-Numerical_mathematics.html#8.7">Derivatives</a></li>
+    <li><a href="08-Numerical_mathematics.html#8.8">Differential equations</a></li>
+    <li><a href="08-Numerical_mathematics.html#8.9">The fast Fourier transform</a></li>
+  </ol>
+  </li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+*** truecrypt-4.3-source-code/Linux/Cli/Cli.c	Mon Mar 19 11:42:42 2007
+--- truecrypt-4.3/Linux/Cli/Cli.c	Tue Mar 27 20:58:50 2007
+***************
+*** 3096,3107 ****
+  			break;
+  
+  		case 'M':
+- 			if (RealUserId != 0)
+- 			{
+- 				error ("--mount-options can be specified only by an administrator (see options -r, -u)\n");
+- 				return 1;
+- 			}
+- 
+  			MountOpts = optarg;
+  			break;
+  			
+--- 3096,3101 ----

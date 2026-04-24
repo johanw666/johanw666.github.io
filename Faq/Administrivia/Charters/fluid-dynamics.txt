@@ -1,0 +1,30 @@
+Newsgroups: news.announce.newgroups,news.groups,sci.aeronautics,sci.engr.mech,sci.math,sci.math.num-analysis,sci.physics,sci.geo.fluids,sci.math.research,sci.engr.mech
+Date: 1994
+
+
+CHARTER
+
+Newsgroups line:
+sci.physics.computational.fluid-dynamics	Computational fluid dynamics.
+
+sci.physics.computational.fluid-dynamics is a forum for the discussion
+of all issues relating to computational fluid dynamics (CFD).
+
+	Discussion on all aspects of CFD are welcome, including,
+but not limited to:
+ 
+        * grid generation - elliptic, algebraic, adaptive, structured,
+                unstructured, 2D, 3D,
+        * Specific flow problems: plasmas, real gases, MHD
+        * Multigrid methods
+        * Finite difference methods
+        * Finite volume methods
+        * Finite element methods
+        * Panel methods
+        * Solution issues: explicit vs. implicit, structured grids vs.
+                      unstructured, ADI vs. SLOR, etc.
+        * Higher order numerical methods (TVD, ENO)
+        * Turbulence Modeling
+        * Commercial codes - problems, issues, limitations
+        * Visualization
+        * Code validation

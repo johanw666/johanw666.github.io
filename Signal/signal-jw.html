@@ -1,0 +1,245 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<title>Signal-JW manual</title>
+
+<style>
+.screenshot {
+  width: 360px;
+  height: 640px;
+}
+</style>
+
+</head>
+<body background="equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#990099" alink="#9999ff">
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+
+<h1>Changes in this custom Signal build</h1>
+Signal-JW is a custom build of Signal for Android. In the following I will explain the changes I made compared to standard Signal.
+<ul>
+<li><strong>Added encrypted and plaintext backup / restore.</strong>
+<p>
+In the main menu, choose Import / Export. Also, added import SMS database and an option to import a WhatsApp database.
+This option is still experimental and requires some access to the unencrypted WhatsApp messages database. The WhatsApp
+import is described <a href="signal-jw-wa-import.html">here in more detail</a>.
+<p>
+These backup / restore actions can be performed at all times, not just when setting Signal up. However, the encrypted backup
+overwrites the current database completely. The plaintext import adds messages to the current database (there is no check if they
+already exist so you might end up with double messages) but it does not deal with any media. The WhatsApp import works the same,
+it adds messages to the database.
+
+<p align="center">
+<img alt="Signal import / export screen" class="screenshot" src="Signal-eport.jpg" border="0" hight="50%"></a>
+</p>
+
+<li><strong>Added a choice for the backup location.</strong>
+<p>
+This option works different depending on the Android version. As of version 5.23.1.1-JW, Signal-JW on Android 11 can use almost any
+directory to store its backups. This requires a new permission for the plaintext and full backups, because they require the use of full
+path names Signal-JW will ask for the new all-files access permission that was introduced in Android 11 to store its backups in the
+chosen directory. If Signal-JW does not have the permission it will ask for it if you make a plaintext or full backup.
+<p>
+For Android 10 and lower, the default location for the backups is the same as with standard Signal, in the internal storage card. However,
+sometimes this is not preferable, mostly if internal storage is too low. Therefore there is an option to save the backups on removable
+storage. However, due to access restrictions on unrooted devices, the location used will be wiped when Signal is uninstalled so be sure to
+copy the backups to a safe place before you do that.
+<p>
+Af of Signal 4.74.0, on Android 10 and higher Signal uses a location picker to choose a backup location and this option is no longer
+needed or available. It remains available for older Android versions.
+<p>
+The base location of the backups on Android 10 and below is:
+<ol>
+<li>Internal storage: <tt>[root of internal storage]/Signal</tt>
+<li>Removable storage: <tt>[root of removable storage]/Android/data/org.thoughtcrime.securesms/files/Signal</tt>
+</ol>
+<p>
+And the several types of backups are stored in their own subdirectories:
+<ol>
+<li>Standard backups: <tt>Backups</tt>
+<li>Encrypted backups: <tt>FullBackups</tt>
+<li>Plaintext backups: <tt>PlaintextBackups</tt>
+</ol>
+<p>
+The full backup is a plain dump of the (encrypted) database and attachments. Due to the changes made in Signal 4.16, the encryption key is stored in the
+Android keystore on devices running Android 6 or higher. Therefore it is necessary to store the unencrypted database keys with the backup to be able to
+restore it. Because this is a security risk for data at rest access when the device gets compromised, there is an option added to store the entire
+backup in an encrypted zipfile (encrypted with AES-256), which uses the same password of as the standard backup. To use this the standard backup has
+to be configured, otherwise the zipfile will be unencrypted.
+<p>
+For Android 10 and below, the options screen looks like this:
+<p align="center">
+<img alt="Signal backup options" class="screenshot" src="Signal-backup-options-android10.jpg" border="0" hight="50%"></a>
+</p>
+For Android 11 and up, the options screen looks like this. Instead of the generic storage description it shows the backup path.
+A tap on the path will show an option to change the backup location.
+<p align="center">
+<img alt="Signal backup options" class="screenshot" src="Signal-backup-options-android11.jpg" border="0" hight="50%"></a>
+</p>
+
+<li><strong>Removed apk expire. A Signal-JW build will never complain that the apk is expired.</strong>
+<p>
+However, a build that is too old might not work smoothly with the Signal server, or might not
+work at all with the server.
+
+<li><strong>Added the choice between passphrase protection and the Android screenlock.</strong>
+<p>
+The app access control of standard Signal is the same as the Android lockscreen, and can be a code, a pattern or biometrics like a fingerprint.
+A 4rth method was added: a passphrase exclusively used for Signal. Note that this is a soft lock: the passphrase is not used to encrypt the
+database, like it was in Signal 4.15 and before. It is just used to access the database (to unlock the mastersecret).
+<p>
+The standard situation is the same as with standard Signal:
+<p align="center">
+<img alt="Signal system lock" class="screenshot" src="Signal-systemlock.png" border="0" hight="50%"></a>
+</p>
+However, when the passphrase option is selected:
+<p align="center">
+<img alt="Signal passphrase" class="screenshot" src="Signal-passphrase.png" border="0" hight="50%"></a>
+</p>
+the user is asked to enter a passphrase
+<p align="center">
+<img alt="Signal passphrase" class="screenshot" src="Signal-enter-passphrase.png" border="0" hight="50%"></a>
+</p>
+
+<!-- these options are no longer available
+<li><strong>Added more conversation colors</strong>
+<p align="center">
+<img alt="Signal colors" class="screenshot" src="Signal-colors.png" border="0"></a>
+</p>
+
+<li><strong>Added more themes</strong>
+<p align="center">
+<img alt="Signal themes" class="screenshot" src="Signal-themes.png" border="0"></a>
+</p>
+-->
+
+<li><strong>Added an option to treat view-once messages as normal messages.</strong>
+<p>
+When this option is set, incoming view-once media messages will be treated as normal media messages that can be viewed as
+often as you like and can be saved to storage. Changing this option does not convert already received view-once media,
+they will remain view-once or normal in your conversation as they were.
+<p>
+Messages that were sent as view-once will get a reaction to indicate they were sent as view once:
+<p align="center">
+<img alt="Signal disable view once and remote delete" class="screenshot" src="Signal-delete_options.png" border="0"></a>
+</p>
+<p align="center">
+<img alt="Signal view once indicator" class="screenshot" src="signal-viewonce.jpg" border="0"></a>
+</p>
+
+<li><strong>Added an option to ignore remote deletes.</strong>
+<p>
+If you don't like it that others can remove messages they sent from your conversation, you can use the following option.
+Remote delete requests will be ignored if this option is set.
+<p>
+Messages that are remote deleted will get a reaction to indicate the sender tried to remote-delete it:
+<p align="center">
+<img alt="Signal remote delete indicator" class="screenshot" src="signal-remotedelete.jpg" border="0"></a>
+</p>
+
+<li><strong>Added an option to delete ony media when deleting media from the All media screen.</strong>
+<p>
+One major issue I have with Signal is that when you clean up room when deleting large media files, it also deletes the
+associated message which you might want to keep. This option makes Signal only delete the media, not the message text.
+
+<li><strong>Added an option to select which map type to get when using location messages.</strong>
+<p>
+The standard version of Signal only supports the "normal" type when sending Google Map images. This option
+lets you choose between all available options. Changing this option does not convert already received locations,
+<p align="center">
+<img alt="Signal maptype" class="screenshot" src="Signal-maptype.png" border="0"></a>
+</p>
+You can also switch between normal, satellite and terrain view within the place selector:
+<p align="center">
+<img alt="Signal maptype" class="screenshot" src="Signal-maptype2.png" border="0"></a>
+</p>
+
+<li><strong>Added an option to disallow some contacts to add you to groups.</strong>
+<p>
+This option will give you the choice who can add you to a group. The available options are:
+<p>
+<ol>
+<li><strong>Anyone</strong>: anyone can add you to a group, the current situation with the standard Signal client.
+<li><strong>All non-blocked persons</strong>: only blocked contacts can not add you to a group, all others can.
+<li><strong>Only contacts</strong>: all contacts where you have had a key exchange with (generally this means you have exchanged messages) can add you to a group.
+<li><strong>Only non-blocked system contacts</strong>: all non-blocked system contacts can add you to a group.
+<li><strong>Nobody</strong>: nobody can add you to a group.
+</ol>
+<p align="center">
+<img alt="Signal group add options" class="screenshot" src="signal-group-block.jpg" border="0" hight="50%"></a>
+</p>
+
+prevent a blocked contact to add you to a group. It will also prevent you seeing the kind of
+group spam that consists of repeated join request / cancel request messages in a group from this contact.
+
+<li><strong>Added an option to select which notification mechanism to use.</strong>
+<p>
+If your phone has the Google Play Services installed, notifications go over Firebase Cloud Messaging (FCM). If your device has no
+Google Play Services, a websocket connection to the Signal server will be kept open (and a background notification icon will be shown).
+This might consume a little more power than using FCM.
+<p>
+Sometimes FCM this works unreliable and messages only arrive when Signal is opened. In these cases I added an option to manually switch
+between websockets  and FCM (of course, if your device does not contain Google Play Services you can't select FCM).
+<p align="center">
+<img alt="Signal notification type" class="screenshot" src="Signal-fcm.png" border="0"></a>
+</p>
+
+
+<li>There used to be a fixed library for battery loss on devices that do not have Google Play Services installed during activation
+    of Signal but these patches are now in the main Signal repository.
+</ul>
+
+<h1>Building this fork it yourself:</h1>
+<ul>
+<li>Download the source (check the correct branch or download from the release release), or clone the repo: <tt>git clone https://github.com/johanw666/Signal-Android</tt>
+<li>If you cloned, do a <tt>git checkout "branchname"</tt>, e.g. <tt>git checkout "4.58.5.1-JW"</tt>
+<li>You might want to change the Google Maps API key in Androidmanifest.xml if you want location sharing to work (otherwise the app will build but
+    location sharing will not work). This is because this API key is tied to the apk signing key. See
+    <a href="https://developers.google.com/maps/documentation/android-sdk/get-api-key">Google</a> for an explaination how to do this.
+<!-- No longer the case
+<li>When building in Android Studio 4 and up, you need to install a JDK 8 version and tell Android Studio to use this. Android Studio
+    has upgraded its JDK to 11 but that version causes runtime crashes when Signal is built with them.
+-->
+<!-- very old versiopns, not really relevant any more
+<li>When building versions between 4.49.15.0-JW and 4.50.1.0-JW, some patches (code from thanks to <a href="https://github.com/theBoatman">theBoatman</a>) to the signal-service-java library are required
+    to increase battary life on devices without Google Play Services installed.
+    A local version of this changed library is required to build Signal-JW.
+    To install a local version of the libsignal-service-java library with these changes:
+  <ul>
+  <li><tt>git clone https://github.com/johanw666/libsignal-service-java</tt>
+  <li><tt>git checkout "2.15.3.0-JW"</tt> (select the <a href="#library">branch</a> used in your build).
+  <li><tt>gradlew tasks installArchives</tt>
+</ul>
+-->
+<li>Build Signal in Android Studio, or run <tt>gradlew assemblePlayRelease</tt> and sign the apk manually. If you have the Java SDK installed you can
+    issue v1 signatures with the command
+<tt>jarsigner -verbose  -sigalg MD5withRSA -digestalg SHA1 -keystore keyfile.jks Signal-Android-play-armeabi-v7-4.58.5.apk "signing key name"</tt>
+</ul>
+
+<!--
+<h1><a name="library">Signal-service-java version used</a></h1>
+<table align="center" border=1>
+<tr>
+<th align="center">Signal version<th align="center">Signal-service-Android version
+<tr>
+<td align="center">4.49.15.0-JW</td> <td align="center">2.13.9.0-JW</td>
+<tr>
+<td align="center">4.49.17.0-JW</td> <td align="center">2.13.9.1-JW</td>
+<tr>
+<td align="center">4.49.18.0-JW</td> <td align="center">2.13.9.1-JW</td>
+<tr>
+<td align="center">4.50.0.0-JW</td> <td align="center">2.15.1.0-JW</td>
+<tr>
+<td align="center">4.50.1.0-JW</td> <td align="center">2.15.3.0-JW</td>
+<tr>
+<td align="center">4.50.2.0-JW</td> <td align="center">No longer required, the fix got merged.</td>
+<tr>
+</table>
+-->
+
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+</body>
+</html>

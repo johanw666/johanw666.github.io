@@ -1,0 +1,487 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Physics Formulary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+ol>li { 
+  counter-increment: item;
+}
+ol>li::before { 
+  content: counters(item, '.') '  '; 
+}
+</style>
+
+</head>
+<body>
+
+<p align="center">
+<h1>Physics Formulary</h1>
+</p>
+<p>Dear reader,</p>
+<p>
+This document contains a 108 page \(\rm\LaTeX\) file which contains a lot equations
+in physics. It is written at advanced undergraduate/postgraduate level. It is
+intended to be a short reference for anyone who works with physics and often
+needs to look up equations.</p>
+<p>
+This, and a Dutch version of this file, can be obtained from the author,
+Johan Wevers <a href="mailto:johanw@xs4all.nl">johanw@xs4all.nl</a>.</p>
+<p>
+It can also be obtained on the WWW. See
+<a href="http://www.xs4all.nl/~johanw/index.html">http://www.xs4all.nl/~johanw/index.html</a>, where \(\rm\LaTeX\), html, Postscript
+and PDF versions are available.</p>
+<p>
+If you find any errors or have any comments, please let me know. I am always
+open for suggestions and possible corrections to the physics formulary.</p>
+<p>
+This work is licenced under the Creative Commons Attribution 3.0 License.
+To view a copy of this licence, visit <a href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</a> or send
+a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA. which contains a lot equations
+in physics. It is written at advanced undergraduate/postgraduate level. It is
+intended to be a short reference for anyone who works with physics and often
+needs to look up equations.</p>
+<p>
+ir. J.C.A. Wevers</p>
+
+<h1>Contents</h1>
+<a href="Physical_constants.html">Physical Constants</a>
+<p>
+<ol>
+  <li><a href="01-Mechanics.html#1">Mechanics</a>
+  <ol>
+    <li><a href="01-Mechanics.html#1.1">Point-kinetics in a fixed coordinate system</a>
+    <ol>
+      <li><a href="01-Mechanics.html#1.1.1">Definitions</a></li>
+      <li><a href="01-Mechanics.html#1.1.2">Polar coordinates</a></li>
+    </ol>
+    </li>
+    <li><a href="01-Mechanics.html#1.2">Relative motion</a></li>
+    <li><a href="01-Mechanics.html#1.3">Point-dynamics in a fixed coordinate system</a>
+    <ol>
+      <li><a href="01-Mechanics.html#1.3.1">Force, (angular)momentum and energy</a></li>
+      <li><a href="01-Mechanics.html#1.3.2">Conservative force fields</a></li>
+      <li><a href="01-Mechanics.html#1.3.3">Gravitation</a></li>
+      <li><a href="01-Mechanics.html#1.3.4">Orbital equations</a>
+      <ol>
+        <li><a href="01-Mechanics.html#1.3.4.1">Kepler's equations</a></li>
+      </ol>
+      </li>
+      <li><a href="01-Mechanics.html#1.3.5">The virial theorem</a></li>
+    </ol>
+    </li>
+  <li><a href="01-Mechanics.html#1.4">Point dynamics in a moving coordinate system</a>
+  <ol>
+    <li><a href="01-Mechanics.html#1.4.1">Apparent forces</a></li>
+    <li><a href="01-Mechanics.html#1.4.2">Tensor notation</a></li>
+  </ol>
+  </li>
+  <li><a href="01-Mechanics.html#1.5">Dynamics of masspoint collections</a>
+  <ol>
+    <li><a href="01-Mechanics.html#1.5.1">The centre of mass</a></li>
+    <li><a href="01-Mechanics.html#1.5.2">Collisions</a></li>
+  </ol>
+  </li>
+  <li><a href="01-Mechanics.html#1.6">Dynamics of rigid bodies</a>
+  <ol>
+    <li><a href="01-Mechanics.html#1.6.1">Moment of Inertia</a></li>
+    <li><a href="01-Mechanics.html#1.6.2">Principal axes</a></li>
+    <li><a href="01-Mechanics.html#1.6.3">Time dependence</a></li>
+  </ol>
+  </li>
+  <li><a href="01-Mechanics.html#1.7">Variational Calculus, Hamilton and Lagrange mechanics</a>
+  <ol>
+    <li><a href="01-Mechanics.html#1.7.1">Variational Calculus</a></li>
+    <li><a href="01-Mechanics.html#1.7.2">Hamilton mechanics</a></li>
+    <li><a href="01-Mechanics.html#1.7.3">Motion around an equilibrium, linearization</a></li>
+    <li><a href="01-Mechanics.html#1.7.4">Phase space, Liouville's equation</a></li>
+    <li><a href="01-Mechanics.html#1.7.5">Generating functions</a></li>
+  </ol>
+  </li>
+  </li>
+</ol>
+<p>
+  <li><a href="02-Electricity_and_Magnetism.html#2">Electricity & Magnetism</a>
+  <ol>
+    <li><a href="02-Electricity_and_Magnetism.html#2.1">The Maxwell equations</a></li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.2">Force and potential</a></li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.3">Gauge transformations</a></li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.4">Energy of the electromagnetic field</a></li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.5">Electromagnetic waves</a>
+    <ol>
+      <li><a href="02-Electricity_and_Magnetism.html#2.5.1">Electromagnetic waves in vacuum</a></li>
+      <li><a href="02-Electricity_and_Magnetism.html#2.5.2">Electromagnetic waves in matter</a></li>
+    </ol>
+    </li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.6">Multipoles</a></li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.7">Electric currents</a></li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.8">Depolarizing field</a></li>
+    <li><a href="02-Electricity_and_Magnetism.html#2.9">Mixtures of materials</a></li>
+  </li>
+  </ol>
+<p>
+  <li><a href="03-Relativity.html#3">Relativity</a>
+  <ol>
+   <li><a href="03-Relativity.html#3.1">Special relativity</a>
+   <ol>
+     <li><a href="03-Relativity.html#3.1.1">The Lorentz transformation</a></li>
+     <li><a href="03-Relativity.html#3.1.2">Red and blue shift</a></li>
+     <li><a href="03-Relativity.html#3.1.3">The stress-energy tensor and the field tensor</a></li>
+   </ol>
+   </li>
+   <li><a href="03-Relativity.html#3.2">General relativity</a>
+   <ol>
+     <li><a href="03-Relativity.html#3.2.1">Riemannian geometry, the Einstein tensor</a></li>
+     <li><a href="03-Relativity.html#3.2.2">The line element</a></li>
+     <li><a href="03-Relativity.html#3.2.3">Planetary orbits and the perihelion shift</a></li>
+     <li><a href="03-Relativity.html#3.2.4">The trajectory of a photon</a></li>
+     <li><a href="03-Relativity.html#3.2.5">Gravitational waves</a></li>
+     <li><a href="03-Relativity.html#3.2.6">Cosmology</a></li>
+  </ol>
+  </ol>
+  </li>
+  </li>
+<p>
+  <li><a href="04-Oscillations.html#4">Oscillations</a>
+  <ol>
+    <li><a href="04-Oscillations.html#4.1">Harmonic oscillations</a></li>
+    <li><a href="04-Oscillations.html#4.2">Mechanic oscillations</a></li>
+    <li><a href="04-Oscillations.html#4.3">Electric oscillations</a></li>
+    <li><a href="04-Oscillations.html#4.4">Waves in long conductors</a></li>
+    <li><a href="04-Oscillations.html#4.5">Coupled conductors and transformers</a></li>
+    <li><a href="04-Oscillations.html#4.6">Pendulums</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="05-Waves.html#5">Waves</a>
+  <ol>
+    <li><a href="05-Waves.html#5.1">The wave equation</a></li>
+    <li><a href="05-Waves.html#5.2">Solutions of the wave equation</a>
+    <ol>
+      <li><a href="05-Waves.html#5.2.1">Plane waves</a></li>
+      <li><a href="05-Waves.html#5.2.2">Spherical waves</a></li>
+      <li><a href="05-Waves.html#5.2.3">Cylindrical waves</a></li>
+      <li><a href="05-Waves.html#5.2.4">The general solution in one dimension</a></li>
+    </ol>
+    </li>
+    <li><a href="05-Waves.html#5.3">The stationary phase method</a></li>
+    <li><a href="05-Waves.html#5.4">Green functions for the initial-value problem</a></li>
+    <li><a href="05-Waves.html#5.5">Waveguides and resonating cavities</a></li>
+    <li><a href="05-Waves.html#5.6">Non-linear wave equations</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="06-Optics.html#6">Optics</a>
+  <ol>
+  <li><a href="06-Optics.html#6.1">The bending of light</a></li>
+  <li><a href="06-Optics.html#6.2">Paraxial geometrical optics</a>
+  <ol>
+    <li><a href="06-Optics.html#6.2.1">Lenses</a></li>
+    <li><a href="06-Optics.html#6.2.2">Mirrors</a></li>
+    <li><a href="06-Optics.html#6.2.3">Principal planes</a></li>
+    <li><a href="06-Optics.html#6.2.4">Magnification</a></li>
+  </ol>
+  </li>
+  <li><a href="06-Optics.html#6.3">Matrix methods</a></li>
+  <li><a href="06-Optics.html#6.4">Aberrations</a></li>
+  <li><a href="06-Optics.html#6.5">Reflection and transmission</a></li>
+  <li><a href="06-Optics.html#6.6">Polarization</a></li>
+  <li><a href="06-Optics.html#6.7">Prisms and dispersion</a></li>
+  <li><a href="06-Optics.html#6.8">Diffraction</a></li>
+  <li><a href="06-Optics.html#6.9">Special optical effects</a></li>
+  <li><a href="06-Optics.html#6.10">The Fabry-Perot interferometer</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="07-Statistical_physics.html#7">Statistical physics</a>
+  <ol>
+    <li><a href="07-Statistical_physics.html#7.1">Degrees of freedom</a></li>
+    <li><a href="07-Statistical_physics.html#7.2">The energy distribution function</a></li>
+    <li><a href="07-Statistical_physics.html#7.3">Pressure on a wall</a></li>
+    <li><a href="07-Statistical_physics.html#7.4">The equation of state</a></li>
+    <li><a href="07-Statistical_physics.html#7.5">Collisions between molecules</a></li>
+    <li><a href="07-Statistical_physics.html#7.6">Interaction between molecules</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="08-Thermodynamics.html#8">Thermodynamics</a>
+  <ol>
+    <li><a href="08-Thermodynamics.html#8.1">Mathematical introduction</a></li>
+    <li><a href="08-Thermodynamics.html#8.2">Definitions</a></li>
+    <li><a href="08-Thermodynamics.html#8.3">Thermal heat capacity</a></li>
+    <li><a href="08-Thermodynamics.html#8.4">The laws of thermodynamics</a></li>
+    <li><a href="08-Thermodynamics.html#8.5">State functions and Maxwell relations</a></li>
+    <li><a href="08-Thermodynamics.html#8.6">Processes</a></li>
+    <li><a href="08-Thermodynamics.html#8.7">Maximal work</a></li>
+    <li><a href="08-Thermodynamics.html#8.8">Phase transitions</a></li>
+    <li><a href="08-Thermodynamics.html#8.9">Thermodynamic potential</a></li>
+    <li><a href="08-Thermodynamics.html#8.10">Ideal mixtures</a></li>
+    <li><a href="08-Thermodynamics.html#8.11">Conditions for equilibrium</a></li>
+    <li><a href="08-Thermodynamics.html#8.12">Statistical basis for thermodynamics</a></li>
+    <li><a href="08-Thermodynamics.html#8.13">Application to other systems</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="09-Transport_Phenomena.html#9">Transport phenomena</a>
+  <ol>
+    <li><a href="09-Transport_Phenomena.html#9.1">Mathematical introduction</a></li>
+    <li><a href="09-Transport_Phenomena.html#9.2">Conservation laws<a></li>
+    <li><a href="09-Transport_Phenomena.html#9.3">Bernoulli's equations<a></li>
+    <li><a href="09-Transport_Phenomena.html#9.4">Characterising of flows with dimensionless numbers<a></li>
+    <li><a href="09-Transport_Phenomena.html#9.5">Tube flows<a></li>
+    <li><a href="09-Transport_Phenomena.html#9.6">Potential theory<a></li>
+    <li><a href="09-Transport_Phenomena.html#9.7">Boundary layers<a>
+    <ol>
+      <li><a href="09-Transport_Phenomena.html#9.7.1">Flow boundary layers<a></li>
+      <li><a href="09-Transport_Phenomena.html#9.7.2">Temperature boundary layers<a></li>
+    </ol>
+    </li>
+    <li><a href="09-Transport_Phenomena.html#9.8">Heat conductance<a></li>
+    <li><a href="09-Transport_Phenomena.html#9.9">Turbulence<a></li>
+    <li><a href="09-Transport_Phenomena.html#9.10">Self organization<a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="10-Quantum_physics.html#10">Quantum physics</a>
+  <ol>
+    <li><a href="10-Quantum_physics.html#10.1">Introduction to quantum physics</a>
+    <ol>
+      <li><a href="10-Quantum_physics.html#10.1.1">Black body radiation<a></li>
+      <li><a href="10-Quantum_physics.html#10.1.2">The Compton effect<a></li>
+      <li><a href="10-Quantum_physics.html#10.1.3">Electron diffraction<a></li>
+    </ol>
+    </li>
+    <li><a href="10-Quantum_physics.html#10.2">Wave functions<a></li>
+    <li><a href="10-Quantum_physics.html#10.3">Operators in quantum physics<a></li>
+    <li><a href="10-Quantum_physics.html#10.4">The uncertainty principle<a></li>
+    <li><a href="10-Quantum_physics.html#10.5">The Schr&ouml;dinger equation<a></li>
+    <li><a href="10-Quantum_physics.html#10.6">Parity<a></li>
+    <li><a href="10-Quantum_physics.html#10.7">The tunnel effect<a></li>
+    <li><a href="10-Quantum_physics.html#10.8">The harmonic oscillator<a></li>
+    <li><a href="10-Quantum_physics.html#10.9">Angular momentum<a></li>
+    <li><a href="10-Quantum_physics.html#10.10">Spin<a></li>
+    <li><a href="10-Quantum_physics.html#10.11">The Dirac formalism<a></li>
+    <li><a href="10-Quantum_physics.html#10.12">Atomic physics</a>
+    <ol>
+      <li><a href="10-Quantum_physics.html#10.12.1">Solutions<a></li>
+      <li><a href="10-Quantum_physics.html#10.12.2">Eigenvalue equations<a></li>
+      <li><a href="10-Quantum_physics.html#10.12.3">Spin-orbit interaction<a></li>
+      <li><a href="10-Quantum_physics.html#10.12.4">Selection rules<a></li>
+    </ol>
+    </li>
+    <li><a href="10-Quantum_physics.html#10.13">Interaction with electromagnetic fields<a></li>
+    <li><a href="10-Quantum_physics.html#10.14">Perturbation theory</a>
+    <ol>
+      <li><a href="10-Quantum_physics.html#10.14.1">Time-independent perturbation theory<a></li>
+      <li><a href="10-Quantum_physics.html#10.14.2">Time-dependent perturbation theory<a></li>
+    </ol>
+    </li>
+    <li><a href="10-Quantum_physics.html#10.15">N-particle systems</a>
+    <ol>
+      <li><a href="10-Quantum_physics.html#10.15.1">General<a></li>
+      <li><a href="10-Quantum_physics.html#10.15.2">Molecules<a></li>
+    </ol>
+    </li>
+    <li><a href="10-Quantum_physics.html#10.16">Quantum statistics<a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="11-Plasma_physics.html#11">Plasma physics</a>
+  <ol>
+    <li><a href="11-Plasma_physics.html#11.1">Introduction</a></li>
+    <li><a href="11-Plasma_physics.html#11.2">Transport</a></li>
+    <li><a href="11-Plasma_physics.html#11.3">Elastic collisions</a>
+    <ol>
+      <li><a href="11-Plasma_physics.html#11.3.1">General</a></li>
+      <li><a href="11-Plasma_physics.html#11.3.2">The Coulomb interaction</a></li>
+      <li><a href="11-Plasma_physics.html#11.3.3">The induced dipole interaction</a></li>
+      <li><a href="11-Plasma_physics.html#11.3.4">The centre of mass system</a></li>
+      <li><a href="11-Plasma_physics.html#11.3.5">Scattering of light</a></li>
+    </ol>
+    </li>
+    <li><a href="11-Plasma_physics.html#11.4">Thermodynamic equilibrium and reversibility</a></li>
+    <li><a href="11-Plasma_physics.html#11.5">Inelastic collisions</a>
+    <ol>
+      <li><a href="11-Plasma_physics.html#11.5.1">Types of collisions</a></li>
+      <li><a href="11-Plasma_physics.html#11.5.2">Cross sections</a></li>
+    </ol>
+    </li>
+    <li><a href="11-Plasma_physics.html#11.6">Radiation</a></li>
+    <li><a href="11-Plasma_physics.html#11.7">The Boltzmann transport equation</a></li>
+    <li><a href="11-Plasma_physics.html#11.8">Collision-radiative models</a></li>
+    <li><a href="11-Plasma_physics.html#11.9">Waves in plasma's</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="12-Solid_state_physics.html#12">Solid state physics</a>
+  <ol>
+    <li><a href="12-Solid_state_physics.html#12.1">Crystal structure</a></li>
+    <li><a href="12-Solid_state_physics.html#12.2">Crystal binding</a></li>
+    <li><a href="12-Solid_state_physics.html#12.3">Crystal vibrations</a>
+    <ol>
+      <li><a href="12-Solid_state_physics.html#12.3.1">A lattice with one kind of atoms</a></li>
+      <li><a href="12-Solid_state_physics.html#12.3.2">A lattice with two kinds of atoms</a></li>
+      <li><a href="12-Solid_state_physics.html#12.3.3">Phonons</a></li>
+      <li><a href="12-Solid_state_physics.html#12.3.4">Thermal heat capacity</a></li>
+    </ol>
+    </li>
+    <li><a href="12-Solid_state_physics.html#12.4">Magnetic field in the solid state</a>
+    <ol>
+      <li><a href="12-Solid_state_physics.html#12.4.1">Dielectrics</a></li>
+      <li><a href="12-Solid_state_physics.html#12.4.2">Paramagnetism</a></li>
+      <li><a href="12-Solid_state_physics.html#12.4.3">Ferromagnetism</a></li>
+    </ol>
+    </li>
+    <li><a href="12-Solid_state_physics.html#12.5">Free electron Fermi gas</a>
+    <ol>
+      <li><a href="12-Solid_state_physics.html#12.5.1">Thermal heat capacity</a></li>
+      <li><a href="12-Solid_state_physics.html#12.5.2">Electric conductance</a></li>
+      <li><a href="12-Solid_state_physics.html#12.5.3">The Hall-effect</a></li>
+      <li><a href="12-Solid_state_physics.html#12.5.4">Thermal heat conductivity</a></li>
+    </ol>
+    </li>
+    <li><a href="12-Solid_state_physics.html#12.6">Energy bands</a></li>
+    <li><a href="12-Solid_state_physics.html#12.7">Semiconductors</a></li>
+    <li><a href="12-Solid_state_physics.html#12.8">Superconductivity</a>
+    <ol>
+      <li><a href="12-Solid_state_physics.html#12.8.1">Description</a></li>
+      <li><a href="12-Solid_state_physics.html#12.8.2">The Josephson effect</a></li>
+      <li><a href="12-Solid_state_physics.html#12.8.3">Flux quantisation in a superconducting ring</a></li>
+      <li><a href="12-Solid_state_physics.html#12.8.4">Macroscopic quantum interference</a></li>
+      <li><a href="12-Solid_state_physics.html#12.8.5">The London equation</a></li>
+      <li><a href="12-Solid_state_physics.html#12.8.6">The BCS model</a></li>
+    </ol>
+    </li>
+  </ol>
+  </li>
+<p>
+  <li><a href="13-Theory_of_groups.html#13">Theory of groups</a>
+  <ol>
+    <li><a href="13-Theory_of_groups.html#13.1">Introduction</a>
+    <ol>
+      <li><a href="13-Theory_of_groups.html#13.1.1">Definition of a group</a></li>
+      <li><a href="13-Theory_of_groups.html#13.1.2">The Cayley table</a></li>
+      <li><a href="13-Theory_of_groups.html#13.1.3">Conjugated elements, subgroups and classes</a></li>
+      <li><a href="13-Theory_of_groups.html#13.1.4">Isomorfism and homomorfism; representations</a></li>
+      <li><a href="13-Theory_of_groups.html#13.1.5">Reducible and irreducible representations</a></li>
+    </ol>
+    </li>
+    <li><a href="13-Theory_of_groups.html#13.2">The fundamental orthogonality theorem</a>
+    <ol>
+      <li><a href="13-Theory_of_groups.html#13.2.1">Schur's lemma</a></li>
+      <li><a href="13-Theory_of_groups.html#13.2.2">The fundamental orthogonality theorem</a></li>
+      <li><a href="13-Theory_of_groups.html#13.2.3">Character</a></li>
+    </ol>
+    </li>
+    <li><a href="13-Theory_of_groups.html#13.3">The relation with quantum mechanics</a>
+    <ol>
+      <li><a href="13-Theory_of_groups.html#13.3.1">Representations, energy levels and degeneracy</a></li>
+      <li><a href="13-Theory_of_groups.html#13.3.2">Breaking of degeneracy with a perturbation</a></li>
+      <li><a href="13-Theory_of_groups.html#13.3.3">The construction of a basefunction</a></li>
+      <li><a href="13-Theory_of_groups.html#13.3.4">The direct product of representations</a></li>
+      <li><a href="13-Theory_of_groups.html#13.3.5">Clebsch-Gordan coefficients</a></li>
+      <li><a href="13-Theory_of_groups.html#13.3.6">Symmetric transformations of operators, irreducible tensor operators</a></li>
+      <li><a href="13-Theory_of_groups.html#13.3.7">The Wigner-Eckart theorem</a></li>
+    </ol>
+    </li>
+    <li><a href="13-Theory_of_groups.html#13.4">Continuous groups</a>
+    <ol>
+      <li><a href="13-Theory_of_groups.html#13.4.1">The 3-dimensional translation group</a></li>
+      <li><a href="13-Theory_of_groups.html#13.4.2">The 3-dimensional rotation group</a></li>
+      <li><a href="13-Theory_of_groups.html#13.4.3">Properties of continuous groups</a></li>
+    </ol>
+    </li>
+    <li><a href="13-Theory_of_groups.html#13.5">The group SO(3)</a></li>
+    <li><a href="13-Theory_of_groups.html#13.6">Applications to quantum mechanics</a>
+    <ol>
+      <li><a href="13-Theory_of_groups.html#13.6.1">Vectormodel for the addition of angular momentum</a></li>
+      <li><a href="13-Theory_of_groups.html#13.6.2">Irreducible tensoroperators, matrixelements and selection rules</a>
+      <ol>
+        <li><a href="13-Theory_of_groups.html#13.6.2.1">Some examples of the behaviour of operators under SO(3)</a></li>
+        <li><a href="13-Theory_of_groups.html#13.6.2.2">Selection rules for dipole transitions</a></li>
+        <li><a href="13-Theory_of_groups.html#13.6.2.3">Land&eacute;-equation for the anomalous Zeeman splitting</a></li>
+      </ol>
+      </li>
+    </ol>
+    </li>
+    <li><a href="13-Theory_of_groups.html#13.7">Applications to particle physics</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="14-Nuclear_physics.html#14">Nuclear physics</a>
+  <ol>
+    <li><a href="14-Nuclear_physics.html#14.1">Nuclear forces</a></li>
+    <li><a href="14-Nuclear_physics.html#14.2">The shape of the nucleus</a></li>
+    <li><a href="14-Nuclear_physics.html#14.3">Radioactive decay</a></li>
+    <li><a href="14-Nuclear_physics.html#14.4">Scattering and nuclear reactions</a>
+    <ol>
+      <li><a href="14-Nuclear_physics.html#14.4.1">Kinetic model</a></li>
+      <li><a href="14-Nuclear_physics.html#14.4.2">Quantum mechanical model for n-p scattering</a></li>
+      <li><a href="14-Nuclear_physics.html#14.4.3">Conservation of energy and momentum in nuclear reactions</a></li>
+    </ol>
+    </li>
+    <li><a href="14-Nuclear_physics.html#14.5">Radiation dosimetry</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="15-Quantum_field_theory_particle_physics.html#15">Quantum field theory & Particle physics</a>
+  <ol>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.1">Creation and annihilation operators</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.2">Vlassical and quantum fields</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.3">The interaction picture</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.4">Real scalar field in the interaction picture</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.5">Charged spin-0 particles, conservation of charge</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.6">Field functions for 1/2-particles</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.7">Quantization of spin-1/2 fields</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.8">Quantization of the electromagnetic field</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.9">Interacting fields and the S-matrix</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.10">Divergences and renormalization</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.11">Classification of elementary particles</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.12">P and CP-violation</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.13">The standard model</a>
+    <ol>
+      <li><a href="15-Quantum_field_theory_particle_physics.html#15.13.1">The electroweak theory</a></li>
+      <li><a href="15-Quantum_field_theory_particle_physics.html#15.13.2">Spontaneous symmetry breaking: the Higgs mechanism</a></li>
+      <li><a href="15-Quantum_field_theory_particle_physics.html#15.13.3">Quantumchromodynamics</a></li>
+    </ol>
+    </li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.14">Path integrals</a></li>
+    <li><a href="15-Quantum_field_theory_particle_physics.html#15.15">Unification and quantum gravity</a></li>
+  </ol>
+  </li>
+<p>
+  <li><a href="16-Astrophysics.html#16">Astrophysics</a>
+  <ol>
+    <li><a href="16-Astrophysics.html#16.1">Determination of distances</a></li>
+    <li><a href="16-Astrophysics.html#16.2">Brightness and magnitudes</a></li>
+    <li><a href="16-Astrophysics.html#16.3">Radiation and stellar atmospheres</a></li>
+    <li><a href="16-Astrophysics.html#16.4">Composition and evolution of stars</a></li>
+    <li><a href="16-Astrophysics.html#16.5">Energy production in stars</a></li>
+  </ol>
+  </li>
+</ol>
+<p>
+<a href="The_nabla_operator.html">The Nabla operator</a>
+<p>
+<a href="SI_units.html">The SI units</a>
+</p>
+</body>
+</html>

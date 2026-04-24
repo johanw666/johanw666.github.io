@@ -1,0 +1,719 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Linear algebra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="5">5. Linear algebra</a></h1>
+<h2><a name="5.1">5.1 Vector spaces</a></h2>
+$\cal G$ is a group for the operation $\otimes$ if:
+<ol>
+<li>$\forall a,b\in{\cal G}\Rightarrow a\otimes b\in\cal G$: a group is <em>closed</em>.</li>
+<li>$(a\otimes b)\otimes c = a\otimes (b\otimes c)$: a group is <em>associative</em>.</li>
+<li>$\exists e\in{\cal G}$ so that $a\otimes e=e\otimes a=a$: there exists a <em>unit element</em>.</li>
+<li>$\forall a\in{\cal G}\;\exists\; \overline{a}\in{\cal G}$ so that $a\otimes\overline{a}=e$: each element has an <em>inverse</em>.</li>
+<p>
+If
+<p>
+<li>$a\otimes b=b\otimes a$</li>
+</ol>
+<p>
+the group is called <em>Abelian</em> or <em>commutative</em>.
+Vector spaces form an Abelian group for addition and multiplication:
+$1\cdot\vec{a}=\vec{a}$, $\lambda(\mu\vec{a})=(\lambda\mu)\vec{a}$,
+$(\lambda+\mu)(\vec{a}+\vec{b})=\lambda\vec{a}+\lambda\vec{b}+\mu\vec{a}+\mu\vec{b}$.
+<p>
+$W$ is a <em>linear subspace</em> if $\forall \vec{w}_1,\vec{w}_2\in W$
+holds: $\lambda\vec{w}_1+\mu\vec{w}_2\in W$.
+<p>
+$W$ is an <em>invariant subspace</em> of $V$ for the operator $A$ if
+$\forall\vec{w}\in W$ holds: $A\vec{w}\in W$.
+
+<h2><a name="5.2">5.2 Basis</a></h2>
+For an orthogonal basis holds: $(\vec{e}_i,\vec{e}_j)=c\delta_{ij}$. For an
+orthonormal basis holds:  $(\vec{e}_i,\vec{e}_j)=\delta_{ij}$.
+<p>
+The set vectors $\{\vec{a}_n\}$ is linear independent if:
+\[
+\sum\limits_i\lambda_i\vec{a}_i=0~~\Leftrightarrow~~\forall_i\lambda_i=0
+\]
+The set $\{\vec{a}_n\}$ is a basis if it is 1. independent and 2.
+$V=<\vec{a}_1,\vec{a_2},...>=\sum\lambda_i\vec{a}_i$.
+
+<h2><a name="5.3">5.3 Matrix calculus</a></h2>
+<h3><a name="5.3.1">5.3.1 Basic operations</a></h3>
+For the matrix multiplication of matrices $A=a_{ij}$ and $B=b_{kl}$ holds
+with $^r$ the row index and $^k$ the column index:
+\[
+A^{r_1k_1}\cdot B^{r_2k_2}=C^{r_1k_2}~~,~~(AB)_{ij}=\sum_ka_{ik}b_{kj}
+\]
+where $^r$ is the number of rows and $^k$ the number of columns.
+<p>
+The <em>transpose</em> of $A$ is defined by: $a_{ij}^T=a_{ji}$.
+For this holds $(AB)^T=B^TA^T$ and $(A^T)^{-1}=(A^{-1})^T$. For the
+<em>inverse matrix</em> holds: $(A\cdot B)^{-1}=B^{-1}\cdot A^{-1}$. The inverse
+matrix $A^{-1}$ has the property that $A\cdot A^{-1}=I\hspace{-1mm}I$ and can be found by
+diagonalization: $(A_{ij}|I\hspace{-1mm}I)\sim(I\hspace{-1mm}I |A_{ij}^{-1})$.
+<p>
+The inverse of a $2\times2$ matrix is:
+\[
+\left(\begin{array}{cc}a&b\\ c&d\end{array}\right)^{-1}=\frac{1}{ad-bc}
+\left(\begin{array}{cc}d&-b\\ -c&a\end{array}\right)
+\]
+<p>
+The <em>determinant function</em> $D=\det(A)$ is defined by:
+\[
+\det(A)=D(\vec{a}_{*1},\vec{a}_{*2},...,\vec{a}_{*n})
+\]
+For the determinant $\det(A)$ of a matrix $A$ holds:
+$\det(AB)=\det(A)\cdot\det(B)$. Een $2\times2$ matrix has determinant:
+\[
+\det\left(\begin{array}{cc}a&b\\ c&d \end{array}\right)=ad-cb
+\]
+The derivative of a matrix is a matrix with the derivatives of the coefficients:
+\[
+\frac{dA}{dt}=\frac{da_{ij}}{dt}~~~\mbox{and}~~~\frac{dAB}{dt}=B\frac{dA}{dt}+A\frac{dB}{dt}
+\]
+The derivative of the determinant is given by:
+\[
+\frac{d\det(A)}{dt}=D(\frac{d\vec{a}_1}{dt},...,\vec{a}_n)+
+D(\vec{a}_1,\frac{d\vec{a}_2}{dt},...,\vec{a}_n)+...+D(\vec{a}_1,...,\frac{d\vec{a}_n}{dt})
+\]
+When the rows of a matrix are considered as vectors the <em>row rank</em> of a
+matrix is the number of independent vectors in this set. Similar for the
+<em>column rank</em>. The row rank equals the column rank for each matrix.
+<p>
+Let $\tilde{A}:\tilde{V}\rightarrow\tilde{V}$ be the complex extension of the
+real linear operator $A:V\rightarrow V$ in a finite dimensional $V$.
+Then $A$ and $\tilde{A}$ have the same caracteristic equation.
+<p>
+When $A_{ij}\in I\hspace{-1mm}R$ and $\vec{v}_1+i\vec{v_2}$ is an eigenvector of $A$
+at eigenvalue $\lambda=\lambda_1+i\lambda_2$, than holds:
+<p>
+<ol>
+<li>$A\vec{v}_1=\lambda_1\vec{v}_1-\lambda_2\vec{v}_2$ and $A\vec{v}_2=\lambda_2\vec{v}_1+\lambda_1\vec{v}_2$.</li>
+<li>$\vec{v}^{~*}=\vec{v}_1-i\vec{v}_2$ is an eigenvalue at $\lambda^*=\lambda_1-i\lambda_2$.</li>
+<li>The linear span $<\vec{v}_1,\vec{v}_2>$ is an invariant subspace of $A$.</li>
+</ol>
+<p>
+If $\vec{k}_n$ are the columns of $A$, than the transformed space of $A$ is given by:
+\[
+R(A)=<A\vec{e}_1,...,A\vec{e}_n>=<\vec{k}_1,...,\vec{k}_n>
+\]
+If the columns $\vec{k}_n$ of a $n\times m$ matrix $A$ are independent, than
+the nullspace ${\cal N}(A)=\{\vec{0}\}$.
+
+<h3><a name="5.3.2">5.3.2 Matrix equations</a></h3>
+We start with the equation
+\[
+A\cdot\vec{x}=\vec{b}
+\]
+and $\vec{b}\neq\vec{0}$. If $\det(A)=0$ the only solution is $\vec{0}$. If
+$\det(A)\neq0$ there exists exactly one solution $\neq\vec{0}$.
+<p>
+The equation
+\[
+A\cdot\vec{x}=\vec{0}
+\]
+has exactly one solution $\neq\vec{0}$ if $\det(A)=0$, and if
+$\det(A)\neq0$ the solution is $\vec{0}$.
+<p>
+Cramer's rule for the solution of systems of linear equations is: let the
+system be written as
+\[
+A\cdot\vec{x}=\vec{b}\equiv\vec{a}_1x_1+...+\vec{a}_nx_n=\vec{b}
+\]
+then $x_j$ is given by:
+\[
+x_j=\frac{D(\vec{a}_1,...,\vec{a}_{j-1},\vec{b},\vec{a}_{j+1},...,\vec{a}_n)}{\det(A)}
+\]
+
+<h2><a name="5.4">5.4 Linear transformations</a></h2>
+A transformation $A$ is linear if:
+$A(\lambda\vec{x}+\beta\vec{y})=\lambda A\vec{x}+\beta A\vec{y}$.
+<p>
+Some common linear transformations are:
+<p align="center">
+<table align="center" border=1>
+<tr>
+<th align="center"><strong>Transformation type</strong><th align="center"><strong>Equation</strong>
+<tr>
+<td>Projection on the line $<\vec{a}>$</td> <td>$P(\vec{x})=(\vec{a},\vec{x})\vec{a}/(\vec{a},\vec{a})$</td>
+<tr>
+<td>Projection on the plane $(\vec{a},\vec{x})=0$</td> <td>$Q(\vec{x})=\vec{x}-P(\vec{x})$</td>
+<tr>
+<td>Mirror image in the line $<\vec{a}>$</td> <td>$S(\vec{x})=2P(\vec{x})-\vec{x}$</td>
+<tr>
+<td>Mirror image in the plane $(\vec{a},\vec{x})=0$</td> <td>$T(\vec{x})=2Q(\vec{x})-\vec{x}=\vec{x}-2P(\vec{x})$</td>
+<tr>
+</table>
+<p>
+For a projection holds: $\vec{x}-P_W(\vec{x})\perp P_W(\vec{x})$ and $P_W(\vec{x})\in W$.
+<p>
+If for a transformation $A$ holds: $(A\vec{x},\vec{y})=(\vec{x},A\vec{y})=(A\vec{x},A\vec{y})$,
+than $A$ is a projection.
+<p>
+Let $A:W\rightarrow W$ define a linear transformation; we define:
+<p>
+<ol>
+<li>If $S$ is a subset of $V$: $A(S):=\{A\vec{x}\in W|\vec{x}\in S\}$</li>
+<li>If $T$ is a subset of $W$: $A^\leftarrow(T):=\{\vec{x}\in V|A(\vec{x})\in T\}$</li>
+</ol>
+<p>
+Than $A(S)$ is a linear subspace of $W$ and the {\it inverse transformation}
+$A^\leftarrow(T)$ is a linear subspace of $V$. From this follows that $A(V)$ is
+the {\it image space} of $A$, notation: ${\cal R}(A)$. $A^\leftarrow(\vec{0})=E_0$
+is a linear subspace of $V$, the {\it null space} of $A$, notation:
+${\cal N}(A)$. Then the following holds:
+\[
+{\rm dim}({\cal N}(A))+{\rm dim}({\cal R}(A))={\rm dim}(V)
+\]
+
+<h2><a name="5.5">5.5 Plane and line</a></h2>
+The equation of a line that contains the points $\vec{a}$ and $\vec{b}$ is:
+\[
+\vec{x}=\vec{a}+\lambda(\vec{b}-\vec{a})=\vec{a}+\lambda\vec{r}
+\]
+The equation of a plane is:
+\[
+\vec{x}=\vec{a}+\lambda(\vec{b}-\vec{a})+\mu(\vec{c}-\vec{a})=\vec{a}+\lambda\vec{r}_1+\mu\vec{r}_2
+\]
+When this is a plane in $I\hspace{-1mm}R^3$, the <em>normal vector</em> to this plane is given
+by:
+\[
+\vec{n}_V=\frac{\vec{r}_1\times\vec{r}_2}{|\vec{r}_1\times\vec{r}_2|}
+\]
+A line can also be described by the points for which the line equation
+$\ell$: $(\vec{a},\vec{x})+b=0$ holds, and for a plane V: $(\vec{a},\vec{x})+k=0$.
+The normal vector to V is than: $\vec{a}/|\vec{a}|$.
+<p>
+The distance $d$ between 2 points $\vec{p}$ and $\vec{q}$ is given by
+$d(\vec{p},\vec{q})=\|\vec{p}-\vec{q}\|$.
+<p>
+In $I\hspace{-1mm}R^2$ holds:
+The distance of a point $\vec{p}$ to the line $(\vec{a},\vec{x})+b=0$ is
+\[
+d(\vec{p},\ell)=\frac{|(\vec{a},\vec{p})+b|}{|\vec{a}|}
+\]
+Similarly in $I\hspace{-1mm}R^3$:
+The distance of a point $\vec{p}$ to the plane $(\vec{a},\vec{x})+k=0$ is
+\[
+d(\vec{p},V)=\frac{|(\vec{a},\vec{p})+k|}{|\vec{a}|}
+\]
+This can be generalized for $I\hspace{-1mm}R^n$ and $\mathbb{C}^n$ (theorem from Hesse).
+
+<h2><a name="5.6">5.6 Coordinate transformations</a></h2>
+The linear transformation $A$ from $I\hspace{-1mm}K^n\rightarrow I\hspace{-1mm}K^m$ is given by
+($I\hspace{-1mm}K=I\hspace{-1mm}R$ or $\mathbb{C}$):
+\[
+\vec{y}=A^{m\times n}\vec{x}
+\]
+where a column of $A$ is the image of a base vector in the original.
+<p>
+The matrix $A_\alpha^\beta$ transforms a vector given w.r.t. a basis
+$\alpha$ into a vector w.r.t. a basis $\beta$. It is given by:
+\[
+A_\alpha^\beta=\left(\beta(A\vec{a}_1),...,\beta(A\vec{a}_n)\right)
+\]
+where $\beta(\vec{x})$ is the representation of the vector $\vec{x}$
+w.r.t. basis $\beta$.
+<p>
+The <em>transformation matrix</em> $S_\alpha^\beta$ transforms vectors from
+coordinate system $\alpha$ into coordinate system $\beta$:
+\[
+S_\alpha^\beta:=I\hspace{-1mm}I_\alpha^\beta=\left(\beta(\vec{a}_1),...,\beta(\vec{a}_n)\right)
+\]
+and $S_\alpha^\beta\cdot S_\beta^\alpha=I\hspace{-1mm}I$
+<p>
+The matrix of a transformation $A$ is than given by:
+\[
+A_\alpha^\beta=\left(A_\alpha^\beta\vec{e}_1,...,A_\alpha^\beta\vec{e}_n\right)
+\]
+For the transformation of matrix operators to another coordinate system holds:
+$A_\alpha^\delta=S_\lambda^\delta A_\beta^\lambda S_\alpha^\beta$,
+$A_\alpha^\alpha=S_\beta^\alpha A_\beta^\beta S_\alpha^\beta$ and
+$(AB)_\alpha^\lambda=A_\beta^\lambda B_\alpha^\beta$.
+<p>
+Further is $A_\alpha^\beta=S_\alpha^\beta A_\alpha^\alpha$,
+$A_\beta^\alpha=A_\alpha^\alpha S_\beta^\alpha$. A vector is transformed via
+$X_\alpha=S_\alpha^\beta X_\beta$.
+
+<h2><a name="5.7">5.7 Eigen values</a></h2>
+The <em>eigenvalue equation</em>
+\[
+A\vec{x}=\lambda\vec{x}
+\]
+with <em>eigenvalues</em> $\lambda$ can be solved with
+$(A-\lambda I\hspace{-1mm}I)=\vec{0}\Rightarrow\det(A-\lambda I\hspace{-1mm}I)=0$. The eigenvalues
+follow from this characteristic equation. The following is true:
+$\det(A)=\prod\limits_i\lambda_i$ and
+${\rm Tr}(A)=\sum\limits_ia_{ii}=\sum\limits_i\lambda_i$.
+<p>
+The eigen values $\lambda_i$ are independent of the chosen basis.
+The matrix of $A$ in a basis of eigenvectors, with $S$ the transformation matrix
+to this basis, $S=(E_{\lambda_1},...,E_{\lambda_n})$, is given by:
+\[
+\Lambda=S^{-1}AS={\rm diag}(\lambda_1,...,\lambda_n)
+\]
+When 0 is an eigen value of $A$ than $E_0(A)={\cal N}(A)$.
+<p>
+When $\lambda$ is an eigen value of $A$ holds: $A^n\vec{x}=\lambda^n\vec{x}$.
+
+<h2><a name="5.8">5.8 Transformation types</a></h2>
+<h3><a name="5.8.1">5.8.1 Isometric transformations</a></h3>
+A transformation is <em>isometric</em> when: $\|A\vec{x}\|=\|\vec{x}\|$. This
+implies that the eigen values of an isometric transformation are given by
+$\lambda=\exp(i\varphi)\Rightarrow|\lambda|=1$. Than also holds:
+$(A\vec{x},A\vec{y})=(\vec{x},\vec{y})$.
+<p>
+When $W$ is an invariant subspace if the isometric transformation $A$ with
+dim$(A)<\infty$, than also $W^\perp$ is an invariante subspace.
+
+<h3><a name="5.8.2">5.8.2 Orthogonal transformations</a></h3>
+A transformation $A$ is {\it orthogonal} if $A$ is isometric <em>and</em>
+the inverse $A^\leftarrow$ exists. For an orthogonal transformation $O$ holds
+$O^TO=I\hspace{-1mm}I$, so: $O^T=O^{-1}$. If $A$ and $B$ are orthogonal, than $AB$ and
+$A^{-1}$ are also orthogonal.
+<p>
+Let $A:V\rightarrow V$ be orthogonal with dim$(V)<\infty$. Than $A$ is:
+<p>
+<strong>Direct orthogonal</strong> if $\det(A)=+1$. $A$ describes a rotation.
+A rotation in $I\hspace{-1mm}R^2$ through angle $\varphi$ is given by:
+\[
+R=
+\left(\begin{array}{cc}
+\cos(\varphi)&-\sin(\varphi)\\
+\sin(\varphi)&\cos(\varphi)
+\end{array}\right)
+\]
+So the rotation angle $\varphi$ is determined by Tr$(A)=2\cos(\varphi)$
+with $0\leq\varphi\leq\pi$. Let $\lambda_1$ and $\lambda_2$ be the roots of
+the characteristic equation, than also holds:
+$\Re(\lambda_1)=\Re(\lambda_2)=\cos(\varphi)$, and $\lambda_1=\exp(i\varphi)$,
+$\lambda_2=\exp(-i\varphi)$.
+<p>
+In $I\hspace{-1mm}R^3$ holds: $\lambda_1=1$, $\lambda_2=\lambda_3^*=\exp(i\varphi)$. A
+rotation over $E_{\lambda_1}$ is given by the matrix
+\[
+\left(\begin{array}{ccc}
+1&0&0\\
+0&\cos(\varphi)&-\sin(\varphi)\\
+0&\sin(\varphi)&\cos(\varphi)
+\end{array}\right)
+\]
+<strong>Mirrored orthogonal</strong> if $\det(A)=-1$. Vectors from $E_{-1}$ are mirrored
+by $A$ w.r.t. the invariant subspace $E^\perp_{-1}$. A mirroring in $I\hspace{-1mm}R^2$
+in $<(\cos(\frac{1}{2}\varphi),\sin(\frac{1}{2}\varphi))>$ is given by:
+\[
+S=
+\left(\begin{array}{cc}
+\cos(\varphi)&\sin(\varphi)\\
+\sin(\varphi)&-\cos(\varphi)
+\end{array}\right)
+\]
+Mirrored orthogonal transformations in $I\hspace{-1mm}R^3$ are rotational mirrorings:
+rotations of axis $<\vec{a}_1>$ through angle $\varphi$ and mirror plane
+$<\vec{a}_1>^\perp$. The matrix of such a transformation is given by:
+\[
+\left(\begin{array}{ccc}
+-1&0&0\\
+0&\cos(\varphi)&-\sin(\varphi)\\
+0&\sin(\varphi)&\cos(\varphi)
+\end{array}\right)
+\]
+For all orthogonal transformations $O$ in $I\hspace{-1mm}R^3$ holds that
+$O(\vec{x})\times O(\vec{y})=O(\vec{x}\times\vec{y})$.
+<p>
+$I\hspace{-1mm}R^n$ $(n<\infty)$ can be decomposed in invariant subspaces with dimension
+1 or 2 for each orthogonal transformation.
+
+<h3><a name="5.8.3">5.8.3 Unitary transformations</a></h3>
+Let $V$ be a complex space on which an inner product is defined. Than a linear
+transformation $U$ is {\it unitary} if $U$ is isometric {\it and} its inverse
+transformation $A^\leftarrow$ exists. A $n\times n$ matrix is unitary if
+$U^HU=I\hspace{-1mm}I$. It has determinant $|\det(U)|=1$. Each isometric transformation
+in a finite-dimensional complex vector space is unitary.
+<p>
+<strong>Theorem</strong>: for a $n\times n$ matrix $A$ the following statements are
+equivalent:
+<ol>
+<li>$A$ is unitary,</li>
+<li>The columns of $A$ are an orthonormal set,</li>
+<li>The rows of $A$ are an orthonormal set.</li>
+</ol>
+
+<h3><a name="5.8.4">5.8.4 Symmetric transformations</a></h3>
+A transformation $A$ on $I\hspace{-1mm}R^n$ is <em>symmetric</em> if
+$(A\vec{x},\vec{y})=(\vec{x},A\vec{y})$. A matrix $A\in I\hspace{-1mm}M^{n\times n}$
+is symmetric if $A=A^T$. A linear operator is only symmetric if its matrix
+w.r.t. an arbitrary basis is symmetric. All eigenvalues of a symmetric
+transformation belong to $I\hspace{-1mm}R$. The different eigenvectors are mutually
+perpendicular. If $A$ is symmetric, than $A^T=A=A^H$ on an orthogonal basis.
+<p>
+For each matrix $B\in I\hspace{-1mm}M^{m\times n}$ holds: $B^TB$ is symmetric.
+
+<h3><a name="5.8.5">5.8.5 Hermitian transformations</a></h3>
+A transformation $H:V\rightarrow V$ with $V=\mathbb{C}^n$ is <em>Hermitian</em> if
+$(H\vec{x},\vec{y})=(\vec{x},H\vec{y})$. The <em>Hermitian conjugated</em>
+transformation $A^H$ of $A$ is: $[a_{ij}]^H=[a_{ji}^*]$. An alternative
+notation is: $A^H=A^\dagger$. The inner product of two vectors $\vec{x}$ and
+$\vec{y}$ can now be written in the form: $(\vec{x},\vec{y})=\vec{x}^H\vec{y}$.
+<p>
+If the transformations $A$ and $B$ are Hermitian, than their product $AB$ is
+Hermitian if: $[A,B]=AB-BA=0$. $[A,B]$ is called the <em>commutator</em> of $A$
+and $B$.
+<p>
+The eigenvalues of a Hermitian transformation belong to $I\hspace{-1mm}R$.
+<p>
+A matrix representation can be coupled with a Hermitian operator $L$.
+W.r.t. a basis $\vec{e}_i$ it is given by $L_{mn}=(\vec{e}_m,L\vec{e}_n)$.
+
+<h3><a name="5.8.6">5.8.6 Normal transformations</a></h3>
+For each linear transformation $A$ in a complex vector space $V$ there exists
+exactly one linear transformation $B$ so that $(A\vec{x},\vec{y})=(\vec{x},B\vec{y})$.
+This $B$ is called the <em>adjungated transformation</em> of $A$. Notation:
+$B=A^*$.  The following holds: $(CD)^*=D^*C^*$. $A^*=A^{-1}$ if $A$ is unitary
+and $A^*=A$ if $A$ is Hermitian.
+<p>
+<strong>Definition</strong>: the linear transformation $A$ is <em>normal</em> in a complex
+vector space $V$ if $A^*A=AA^*$. This is only the case if for its matrix $S$
+w.r.t. an orthonormal basis holds: $A^\dagger A=AA^\dagger$.
+<p>
+If $A$ is normal holds:
+<p>
+<ol>
+<li>For all vectors $\vec{x}\in V$ and a normal transformation $A$ holds:
+\[
+(A\vec{x},A\vec{y})=(A^*A\vec{x},\vec{y})=(AA^*\vec{x},\vec{y})=(A^*\vec{x},A^*\vec{y})
+\]
+</li>
+<li>$\vec{x}$ is an eigenvector of $A$ if and only if $\vec{x}$ is an eigenvector of $A^*$.</li>
+<li>Eigenvectors of $A$ for different eigenvalues are mutually perpendicular.</li>
+<li>If $E_\lambda$ if an eigenspace from $A$ than the orthogonal complement $E_\lambda^\perp$ is an invariant subspace of $A$.</li>
+</ol>
+<p>
+Let the different roots of the characteristic equation of $A$ be $\beta_i$ with
+multiplicities $n_i$. Than the dimension of each eigenspace $V_i$ equals
+$n_i$. These eigenspaces are mutually perpendicular and each vector
+$\vec{x}\in V$ can be written in exactly one way as
+\[
+\vec{x}=\sum_i\vec{x}_i~~~\mbox{with}~~~\vec{x}_i\in V_i
+\]
+This can also be written as: $\vec{x}_i=P_i\vec{x}$ where $P_i$ is a projection
+on $V_i$. This leads to the {\it spectral mapping theorem}: let $A$ be a normal
+transformation in a complex vector space $V$ with dim$(V)=n$. Than:
+<p>
+<ol>
+<li>There exist projection transformations $P_i$, $1\leq i\leq p$, with the
+      properties
+      <ul>
+      <li>$P_i\cdot P_j=0$ for $i\neq j$,</li>
+      <li>$P_1+...+P_p=I\hspace{-1mm}I$,</li>
+      <li>${\rm dim}P_1(V)+...+{\rm dim}P_p(V)=n$</li>
+      </ul>
+      and complex numbers $\alpha_1,...,\alpha_p$ so that
+      $A=\alpha_1P_1+...+\alpha_pP_p$.
+      </li>
+<li>If $A$ is unitary than holds $|\alpha_i|=1~\forall i$.</li>
+<li>If $A$ is Hermitian than $\alpha_i\in I\hspace{-1mm}R~\forall i$.</li>
+</ol>
+
+<h3><a name="5.8.7">5.8.7 Complete systems of commuting Hermitian transformations</a></h3>
+Consider $m$ Hermitian linear transformations $A_i$ in a $n$ dimensional
+complex inner product space $V$. Assume they mutually commute.
+<p>
+<strong>Lemma</strong>: if $E_\lambda$ is the eigenspace for eigenvalue $\lambda$ from
+$A_1$, than $E_\lambda$ is an invariant subspace of all transformations
+$A_i$. This means that if $\vec{x}\in E_\lambda$, than $A_i\vec{x}\in E_\lambda$.
+<p>
+<strong>Theorem</strong>. Consider $m$ commuting Hermitian matrices $A_i$. Than there
+exists a unitary matrix $U$ so that all matrices $U^\dagger A_iU$ are diagonal.
+The columns of $U$ are the common eigenvectors of all matrices $A_j$.
+<p>
+If all eigenvalues of a Hermitian linear transformation in a $n$-dimensional
+complex vector space differ, than the normalized eigenvector is known except
+for a phase factor $\exp(i\alpha)$.
+<p>
+<strong>Definition</strong>: a commuting set Hermitian transformations is called
+<em>complete</em> if for each set of two common eigenvectors $\vec{v}_i,\vec{v}_j$
+there exists a transformation $A_k$ so that $\vec{v}_i$ and $\vec{v}_j$ are
+eigenvectors with different eigenvalues of $A_k$.
+<p>
+Usually a commuting set is taken as small as possible. In quantum physics one
+speaks of commuting observables. The required number of commuting observables
+equals the number of quantum numbers required to characterize a state.
+
+<h2><a name="5.9">5.9 Homogeneous coordinates</a></h2>
+Homogeneous coordinates are used if one wants to combine both rotations and
+translations in <em>one</em>} matrix transformation. An extra coordinate is
+introduced to describe the non-linearities. Homogeneous coordinates are derived
+from cartesian coordinates as follows:
+\[
+\left(\begin{array}{c}x\\ y\\ z\end{array}\right)_{\rm cart}=
+\left(\begin{array}{c}wx\\ wy\\ wz\\ w\end{array}\right)_{\rm hom}=
+\left(\begin{array}{c}X\\ Y\\ Z\\ w\end{array}\right)_{\rm hom}
+\]
+so $x=X/w$, $y=Y/w$ and $z=Z/w$. Transformations in homogeneous coordinates
+are described by the following matrices:
+<p>
+<ol>
+<li>Translation along vector $(X_0, Y_0, Z_0, w_0)$:
+\[
+T=\left(\begin{array}{cccc}
+w_0&0&0&X_0\\
+0&w_0&0&Y_0\\
+0&0&w_0&Z_0\\
+0&0&0&w_0
+\end{array}\right)
+\]
+</li>
+<li>Rotations of the $x,y,z$ axis, resp. through angles $\alpha,\beta,\gamma$:
+\[
+R_x(\alpha)=\left(\begin{array}{cccc}
+1&0&0&0\\
+0&\cos\alpha&-\sin\alpha&0\\
+0&\sin\alpha&\cos\alpha&0\\
+0&0&0&1
+\end{array}\right)~~~~
+R_y(\beta)=\left(\begin{array}{cccc}
+\cos\beta&0&\sin\beta&0\\
+0&1&0&0\\
+-\sin\beta&0&\cos\beta&0\\
+0&0&0&1
+\end{array}\right)~~~~
+R_z(\gamma)=\left(\begin{array}{cccc}
+\cos\gamma&-\sin\gamma&0&0\\
+\sin\gamma&\cos\gamma&0&0\\
+0&0&1&0\\
+0&0&0&1
+\end{array}\right)
+\]
+</li>
+<li>A perspective projection on image plane $z=c$ with the center of
+    projection in the origin. This transformation has no inverse.
+\[
+P(z=c)=\left(\begin{array}{cccc}
+1&0&0&0\\
+0&1&0&0\\
+0&0&1&0\\
+0&0&1/c&0
+\end{array}\right)
+\]
+</li>
+</ol>
+
+<h2><a name="5.10">5.10 Inner product spaces</a></h2>
+A complex inner product on a complex vector space is defined as follows:
+<p>
+<ol>
+<li>$(\vec{a},\vec{b})=\overline{(\vec{b},\vec{a})}$,</li>
+<li>$(\vec{a},\beta_1\vec{b}_1+\beta_2\vec{b}_2)=\beta_1(\vec{a},\vec{b}_1)+\beta_2(\vec{a},\vec{b}_2)$
+    for all $\vec{a},\vec{b}_1,\vec{b}_2\in V$ and $\beta_1,\beta_2\in\mathbb{C}$.</li>
+<li>$(\vec{a},\vec{a})\geq0$ for all $\vec{a}\in V$,
+    $(\vec{a},\vec{a})=0$ if and only if $\vec{a}=\vec{0}$.</li>
+</ol>
+<p>
+Due to (1) holds: $(\vec{a},\vec{a})\in I\hspace{-1mm}R$. The <em>inner product space</em> $\mathbb{C}^n$ is
+the complex vector space on which a complex inner product is defined by:
+\[
+(\vec{a},\vec{b})=\sum_{i=1}^na_i^*b_i
+\]
+For function spaces holds:
+\[
+(f,g)=\int\limits_a^bf^*(t)g(t)dt
+\]
+For each $\vec{a}$ the length $\|\vec{a}\|$ is defined by:
+$\|\vec{a}\|=\sqrt{(\vec{a},\vec{a})}$. The following holds:
+$\|\vec{a}\|-\|\vec{b}\|\leq\|\vec{a}+\vec{b}\|\leq\|\vec{a}\|+\|\vec{b}\|$,
+and with $\varphi$ the angle between $\vec{a}$ and $\vec{b}$ holds:
+$(\vec{a},\vec{b})=\|\vec{a}\|\cdot\|\vec{b}\|\cos(\varphi)$.
+<p>
+Let $\{\vec{a}_1,...,\vec{a}_n\}$ be a set of vectors in an inner product space
+$V$. Than the {\it Gramian G} of this set is given by: $G_{ij}=(\vec{a}_i,\vec{a}_j)$.
+The set of vectors is independent if and only if $\det(G)=0$.
+<p>
+A set is {\it orthonormal} if $(\vec{a}_i,\vec{a}_j)=\delta_{ij}$.
+If $\vec{e}_1,\vec{e}_2,...$ form an orthonormal row in an infinite dimensional
+vector space Bessel's inequality holds:
+\[
+\|\vec{x}\|^2\geq\sum_{i=1}^\infty|(\vec{e}_i,\vec{x})|^2
+\]
+The equal sign holds if and only if
+$\lim\limits_{n\rightarrow\infty}\|\vec{x}_n-\vec{x}\|=0$.
+<p>
+The inner product space $\ell^2$ is defined in $\mathbb{C}^\infty$ by:
+\[
+\ell^2=\left\{\vec{a}=(a_1,a_2,...)~|~\sum_{n=1}^\infty|a_n|^2<\infty\right\}
+\]
+A space is called a {\it Hilbert space} if it is $\ell^2$ and if also holds:
+$\lim\limits_{n\rightarrow\infty}|a_{n+1}-a_n|=0$.
+
+<h2><a name="5.11">5.11 The Laplace transformation</a></h2>
+The class LT exists of functions for which holds:
+<p>
+<ol>
+<li>On each interval $[0,A]$, $A>0$ there are no more than a finite number of
+    discontinuities and each discontinuity has an upper - and lower limit,</li>
+<li>$\exists t_0\in[0,\infty>$ and $a,M\in I\hspace{-1mm}R$ so that for $t\geq t_0$ holds: $|f(t)|\exp(-at)<M$.</li>
+</ol>
+<p>
+Than there exists a Laplace transform for $f$.
+<p>
+The Laplace transformation is a generalisation of the Fourier transformation.
+The Laplace transform of a function $f(t)$ is, with $s\in\mathbb{C}$ and $t\geq0$:
+\[
+F(s)=\int\limits_0^\infty f(t){\rm e}^{-st}dt
+\]
+The Laplace transform of the derivative of a function is given by:
+\[
+{\cal L}\left(f^{(n)}(t)\right)=-f^{(n-1)}(0)-sf^{(n-2)}(0)-...-s^{n-1}f(0)+s^nF(s)
+\]
+The operator $\cal L$ has the following properties:
+<p>
+<ol>
+<li>Equal shapes: if $a>0$ than
+\[
+{\cal L}\left(f(at)\right)=\frac{1}{a}F\left(\frac{s}{a}\right)
+\]
+</li>
+<li>Damping: ${\cal L}\left({\rm e}^{-at}f(t)\right)=F(s+a)$</li>
+<li>Translation: If $a>0$ and $g$ is defined by $g(t)=f(t-a)$ if
+      $t>a$ and $g(t)=0$ for $t\leq a$, than holds:
+      ${\cal L}\left(g(t)\right)={\rm e}^{-sa}{\cal L}(f(t))$.</li>
+</ol>
+<p>
+If $s\in I\hspace{-1mm}R$ than holds $\Re(\lambda f)={\cal L}(\Re(f))$ and
+$\Im(\lambda f)={\cal L}(\Im(f))$.
+<p>
+For some often occurring functions holds:
+<p align="center">
+<table align="center" border=1>
+<tr>
+<th align="center">$f(t)=$<th align="center">$F(s)={\cal L}(f(t))=$
+<tr>
+<td>$\displaystyle\frac{t^n}{n!}{\rm e}^{at}$</td> <td>$(s-a)^{-n-1}$</td>
+<tr>
+<td>${\rm e}^{at}\cos(\omega t)$</td> <td>$\displaystyle\frac{s-a}{(s-a)^2+\omega^2}$</td>
+<tr>
+<td>${\rm e}^{at}\sin(\omega t)$</td> <td>$\displaystyle\frac{\omega}{(s-a)^2+\omega^2}$</td>
+<tr>
+<td>$\delta(t-a)$</td> <td>$\exp(-as)$</td>
+<tr>
+</table>
+</p>
+<p>
+
+<h2><a name="5.12">5.12 The convolution</a></h2>
+The convolution integral is defined by:
+\[
+(f*g)(t)=\int\limits_0^tf(u)g(t-u)du
+\]
+The convolution has the following properties:
+<p>
+<ol>
+<li>$f*g\in$LT</li>
+<li>${\cal L}(f*g)={\cal L}(f)\cdot{\cal L}(g)$</li>
+<li>Distribution: $f*(g+h)=f*g+f*h$</li>
+<li>Commutative: $f*g=g*f$</li>
+<li>Homogenity: $f*(\lambda g)=\lambda f*g$</li>
+</ol>
+<p>
+If ${\cal L}(f)=F_1\cdot F_2$, than is $f(t)=f_1*f_2$.
+
+<h2><a name="5.13">5.13 Systems of linear differential equations</a></h2>
+We start with the equation $\dot{\vec{x}}=A\vec{x}$. Assume that
+$\vec{x}=\vec{v}\exp(\lambda t)$, than follows: $A\vec{v}=\lambda\vec{v}$.
+In the $2\times2$ case holds:
+<p>
+<ol>
+<li>$\lambda_1=\lambda_2$: than $\vec{x}(t)=\sum\vec{v}_i\exp(\lambda_it)$.</li>
+<li>$\lambda_1\neq\lambda_2$: than $\vec{x}(t)=(\vec{u}t+\vec{v})\exp(\lambda t)$.</li>
+</ol>
+<p>
+Assume that $\lambda=\alpha+i\beta$ is an eigenvalue with eigenvector $\vec{v}$,
+than $\lambda^*$ is also an eigenvalue for eigenvector $\vec{v}^*$. Decompose
+$\vec{v}=\vec{u}+i\vec{w}$, than the real solutions are
+\[
+c_1[\vec{u}\cos(\beta t)-\vec{w}\sin(\beta t)]{\rm e}^{\alpha t}+c_2[\vec{v}\cos(\beta t)+\vec{u}\sin(\beta t)]{\rm e}^{\alpha t}
+\]
+<p>
+There are two solution strategies for the equation $\ddot{\vec{x}}=A\vec{x}$:
+<p>
+<ol>
+<li>Let $\vec{x}=\vec{v}\exp(\lambda t)\Rightarrow\det(A-\lambda^2 I\hspace{-1mm}I)=0$.</li>
+<li>Introduce: $\dot{x}=u$ and $\dot{y}=v$, this leads to $\ddot{x}=\dot{u}$ and
+    $\ddot{y}=\dot{v}$. This transforms a $n$-dimensional set of second order
+    equations into a $2n$-dimensional set of first order equations.</li>
+</ol>
+
+<h2><a name="5.14">5.14 Quadratic forms</a></h2>
+<h3><a name="5.14.1">5.14.1 Quadratic forms in $I\hspace{-1mm}R^2$</a></h3>
+The general equation of a quadratic form is:
+$\vec{x}^TA\vec{x}+2\vec{x}^TP+S=0$. Here, $A$ is a symmetric matrix.
+If $\Lambda=S^{-1}AS={\rm diag}(\lambda_1,...,\lambda_n)$ holds:
+$\vec{u}^T\Lambda\vec{u}+2\vec{u}^TP+S=0$, so all cross terms are 0.
+$\vec{u}=(u,v,w)$ should be chosen so that det$(S)=+1$,
+to maintain the same orientation as the system $(x,y,z)$.
+<p>
+Starting with the equation
+\[
+ax^2+2bxy+cy^2+dx+ey+f=0
+\]
+we have $|A|=ac-b^2$. An ellipse has $|A|>0$, a parabola $|A|=0$ and
+a hyperbole $|A|<0$. In polar coordinates this can be written as:
+\[
+r=\frac{ep}{1-e\cos(\theta)}
+\]
+An ellipse has $e<1$, a parabola $e=1$ and a hyperbola $e>1$.
+
+<h3><a name="5.14.2">5.14.2 Quadratic surfaces in $I\hspace{-1mm}R^3$</a></h3>
+Rank 3:
+\[
+p\frac{x^2}{a^2}+q\frac{y^2}{b^2}+r\frac{z^2}{c^2}=d
+\]
+<ol>
+<li>Ellipsoid: $p=q=r=d=1$, $a,b,c$ are the lengths of the semi axes.</li>
+<li>Single-bladed hyperboloid: $p=q=d=1$, $r=-1$.</li>
+<li>Double-bladed hyperboloid: $r=d=1$, $p=q=-1$.</li>
+<li>Cone: $p=q=1$, $r=-1$, $d=0$.</li>
+</ol>
+<p>
+Rank 2:
+\[
+p\frac{x^2}{a^2}+q\frac{y^2}{b^2}+r\frac{z}{c^2}=d
+\]
+<ol>
+<li>Elliptic paraboloid: $p=q=1$, $r=-1$, $d=0$.</li>
+<li>Hyperbolic paraboloid: $p=r=-1$, $q=1$, $d=0$.</li>
+<li>Elliptic cylinder: $p=q=-1$, $r=d=0$.</li>
+<li>Hyperbolic cylinder: $p=d=1$, $q=-1$, $r=0$.</li>
+<li>Pair of planes: $p=1$, $q=-1$, $d=0$.</li>
+</ol>
+<p>
+Rank 1:
+\[
+py^2+qx=d
+\]
+<ol>
+<li>Parabolic cylinder: $p,q>0$.</li>
+<li>Parallel pair of planes: $d>0$, $q=0$, $p\neq 0$.</li>
+<li>Double plane: $p\neq 0$, $q=d=0$.</li>
+</ol>
+
+</body>
+</head>

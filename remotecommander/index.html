@@ -1,0 +1,133 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<title>Remote service control center</title>
+<meta name="description" content="Remote Commander">
+<meta name="keywords" content="remote command execution, service client, service manager, windows NT">
+</head>
+<body background="../equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#9999ff">
+
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+<h1 align="center">Remote Commander</h1>
+<hr>
+<strong>Current version is 2.1.</strong>
+<h2>What it is</h2>
+After developing a <a href="../rscc/index.html">remote management tool</a> for
+the <a href="http://www.distributed.net/">distributed.net</a> client, I thought
+it would be practical for a system administrator who has to manage several
+Windows NT or 2000 workstations to have a tool to remotely execute an arbitrary
+command on any workstation in the domain he would like. All that would be
+required for this is an NT service program that can execute a command, and
+a tool to remotely manage those services over the network. This resulted in
+Remote Commander.
+<p>
+Remote Commander is designed to operate together with Remote Service, an NT
+service that can execute any command that it is passed via a command file.
+This file can be remotely edited by Remote Commander. The executed commands,
+and the error messages if a commond cannot be executed, can be saved in a
+remote logfile.
+<p>
+The command file and the logfile are encrypted with RC5 with a fixed key in
+case you don't want users to see which commands are executed. This should be
+replaced with public key cryptography for better security since now still
+anyone who can download Remote Commander can read the command- and log files.
+If you want more security you can recompile both Remote Commander and Remote
+Service with another key, as long as the key is the same for both Remote
+Commander and Remote Service. For this you have to change the variable
+<tt>EncryptionPassword</tt> in <tt>common.cpp</tt> in both source packages
+and recompile.
+<p>
+You can install remote service also on itself by running the executable with
+the <tt>-i</tt> or <tt>-install</tt> flag. In that case, the command file
+should be placed in the same directory as the service executable and have the
+same name, with the <tt>.exe</tt> extension replaced by <tt>.ini</tt>.
+<p>
+Both programs are written with Borland C++ Builder version 3.0 and come with
+full source code.
+<p>
+The program is distributed under the terms of the
+<a href="../rscc/COPYING">GNU General Public License</a>.
+
+<h1>How it works</h1>
+The main screen of Remote Commander is shown in the following picture.
+<img src="remcom.gif">
+<p>
+If you check a checkbox in front of a computername it will try to connect
+with its service manager and display status information, or, if it can't
+find any status information, it will tell you that.
+<p>
+Now you can enter the default settings, like where the service should be
+installed on the remote computers, which command to execute, and which service
+executable and command file to use. You can also choose an optional extra
+file to copy to the destination directory, for example program you want to
+install remotely.
+<p>
+<img src="remcomdefault.gif">
+<p>
+Once installed you can change the configuration of a running client.
+<p>
+<img src="remcomconfig.gif">
+<p>
+and add computernames manually if required.
+<p>
+<img src="remcomaddpc.gif">
+<p>
+If you normally don't login with a domain administrator account and
+therefore can't change the configuration on remote computers, the program
+has a feature to run under another user account. Your current account
+requires the right "to run as a part of the operating system" (for NT4, see
+the checkbox advanced user options in the NT user manager; for Windows 2000,
+add the account under which you will be running rscc under this privilige
+in Administrative tools -> Local security policy -> Local policies ->
+User rights -> User rights Assignment). If you have insufficient rights the
+program will tell you if you try to run it with another user's priviliges.
+<p>
+<img src="../rscc/account.gif">
+<p>
+The username, password and domain name will be stored in the program ini file.
+By default they will be encrypted with RC5 with a fixed key so no password will
+be asked at program start. This is of course a <em>security risk</em>, anyone
+who can read the program source can also decrypt the password if he can get the
+inifile.
+<p>
+Therefore you can also supply a user-defined pssword for the RC5 encryption of
+these data. If you choose this the program will ask this password when it
+starts.
+<p>
+The login data is never saved in plain text and is written out with the maximum
+field lengths to prevent anyone from finding the password length by just
+looking at the inifile (usefull for very short passwords that can be
+brute-forced).
+<p>
+If you feel that even this is too unsafe, you can always type in the login
+information each time you start the program. But remember that NT saves this
+info with a much weaker encryption than RC5 (see
+<a href="http://www.l0pht.com/">http://www.l0pht.com/</a> for more information
+on this subject).
+
+<h2>Download</h2>
+Here you can download the current version 2.1 of the program.
+<p>
+<ul>
+<li><a href="remcom-src-2.1.zip">remcom-src-2.1.zip</a> (93kb):
+    Source code for Remote Commander.
+<li><a href="remsrv-src-1.3.zip">remsrv-src-1.3.zip</a> (19kb):
+    Source code for Remote Service.
+<li><a href="remote-bin-latest.zip">remote-bin-latest.zip</a> (290kb):
+    Executables for Remote Commander and Remote Service. Unzip and run <tt>remcom.exe</tt>.
+</ul>
+The source code packages require Borland C++ Builder 3 or higher to compile.
+
+<h2>Version history</h2>
+A <a href="versions.html">list of changes, improvements and bugfixes</a>
+can be found here.
+
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+
+</body>
+</html>
+

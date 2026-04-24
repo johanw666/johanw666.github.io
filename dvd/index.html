@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>How do you want to play your DVD today?</title>
+<meta name="description" content="Physics and Science Fiction information">
+<meta name="keywords" content="dvd, css, decss, player, content scrambling system">
+</head>
+<body background="../equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#990099" alink="#9999ff">
+
+<hr>
+<a href="http://www.opendvd.org/">
+<img alt="OpenDVD" src="opendvd-1.gif" height="80" width="150" border="4" vspace="4" hspace="4" align="right"></a>
+<a href="../index.html"><= Back to the main index</a><br><br>
+This page is last changed on <strong>22 july 2004.</strong><br>
+This page is placed on-line on <strong>18 january 2000.</strong><br clear="all">
+<hr>
+
+<h2>DVD encryption broken: How do you want to play your DVD today?</h2>
+
+<h1 align="center">Introduction</h1>
+If you bought a DVD and want to make a backup copy, something that is your
+legal right in many countries including The Netherlands, no matter what
+licence "agreements" some companies use, you will find this can be quite
+difficult.
+<p>
+If you bought a DVD and want to play it on your Linux of FreeBSD machine,
+you'll have a hard time finding software to do it. No large companies seem
+to be interested of marketing such a product. Well, what about open source
+developments then? There is being worked on, but it's difficult.
+<p>
+Movies recorded on DVD's are encrypted by the so-called <em>Content
+Scrambling System (CSS)</em>. This is done only to prevent legal owners of a
+copy to prevent making a backup copy and to prevent making anyone who doesn't
+pay the designers a large sum of money to make a DVD player. It won't stop
+large pirates anyway, a DVD can still be copied bit-wise. Eric S. Raymond,
+a well-known open source advocate, wrote about this (see <a href="http://www.opendvd.org/esr.html">
+http://www.opendvd.org/esr.html</a> for the full article):
+<p>
+<dir>
+<em>
+"The real story here, though, is that the DVDCA's [DVD Control Association] central
+complaint is fraudulent. DVD encryption does nothing to prevent content piracy.
+A pirate doesn't have to know how to decode DVDs to make bit-for-bit
+copies of them by the thousands. And no DVD player can distinguish
+between a legally distributed original and a pirated bit-for-bit copy.
+The amount of protection content producers get from DVD is exactly zero.
+<p>
+[...]
+<p>
+The DVDCA's real issue isn't protection of the market for DVD films, it's
+control of the market for DVD <strong>*players*</strong>."
+</em>
+</dir>
+<p>
+The code to decrypt DVD's can be obtained, but you have to pay a large license
+fee and sign a non-disclosure agreement. This effectively prevented any
+development of Linux players.
+
+<hr>
+
+<h1 align="center">About security through obscurity</h1>
+Fortunately, enrcyption that obtains its security by keeping the algorithm
+secret while applications that use the algorithm are available are flawed by
+design. It was only a matter of time before it would be cracked, and so it
+happened. A Norwegian group, Masters of Reverse Engineering (MoRE), cracked
+the Xing player to find the key it used, and found as a bonus the encryption
+algorithm, which turned out to be embarasissingly weak. It is described
+<a href="http://crypto.gq.nu">here</a> (see <a href="css/index.html">here</a>
+for a local copy of this site).
+<p>
+One of the reasons it is so weak is the problems the US government makes about
+the export of strong encryption. For once these stupid export laws have worked
+in the advantage of the public.
+<p>
+But even if the algorithm was strong, it would stil have been broken sooner
+or later. Bruce Schneier, a well-known expert in the field of cryptography and
+author of the standard work "Applied Cryptography", wrote about this:
+<p>
+<dir>
+<em>
+"The flaw is in the security model. The software player eventually gets the
+decryption key, decrypts the DVD, and displays it on the screen. That decrypted
+DVD data is on the computer. It has to be; there's no other way to display it
+on the screen. No matter how good the encryption scheme is, the DVD data is
+available in plaintext to anyone who can write a computer program to take it. 
+<p>
+And so is the decryption key. The computer has to decrypt the DVD. The decryption
+key has to be in the computer. So the decryption key is available, in the clear,
+to anyone who knows where to look. It's protected by an unlock key, but the reader
+has to unlock it."
+</em>
+</dir>
+<p>
+See the <a href="http://www.schneier.com/crypto-gram-9911.html#DVDEncryptionBroken">
+full story that appeared in Crypto-Gram</a>, his periodic newsletter about encryption
+issues.
+<p>
+For music DVD's, the industry is now developing an "improved" algorithm.
+It won't work. It will be broken too, probably sooner than later.
+
+<hr>
+
+<h1 align="center">Open-source players</h1>
+The reverse engineering of the CSS algorithm made the development of
+freeware DVD players for Linux possible. The Linux program
+<a href="http://xinehq.de/index.php/home">Xine</a> can play encrypted DVD's
+when you install
+<a href="http://developers.videolan.org/libdvdcss/">libdvdcss</a>.
+<p>
+I have a <a href="libdvdcss-1.2.8.tar.bz2">A local copy of the libdvdcss source</a> available.
+<p>
+There are also free tools to save a DVD movie as an unencrypted <tt>.vob</tt>
+file to your harddisk (quite a bit of free harddisk space is needed of course.
+A <a href="css-auth.tar.gz">linux version</a> (source code, for 2.2 kernels
+it requires also a <a href="dvd-2.2.13-5.diff.tar.gz">kernel patch</a> to work),
+and a windows version (both <a href="DeCSS.zip">binary</a> and
+<a href="DeCSS-src.zip">source</a>) are available.
+<p>
+This player has also another big advantage (except for running under Linux
+instead of windows): it ignores the
+<a href="http://www.opendvd.org/regioncode.html">region codes</a> the
+entertainment industry uses to prevent free trade between the continents.
+Normally, a DVD from the US can not be played in Europe and vice versa unless
+you hack your DVD player. So the entertainment industry can make extra
+profits by selling it under different conditions:
+<p>
+<dir>
+<em>
+"Since this would mean that either European consumers could order DVDs of
+movies that weren't in the cinema yet or buy their movies at the (much lower)
+American prices, this would mean a serious cut in the profits of the movie
+industry, or an increase in the risk they take (since they'd have to begin
+marketing their movie in multiple continents at the same time).
+<p>
+To counter this ``competitive threat'' (what? a company can't even compete
+with itself?!) the movie industry came up with the idea of encrypting the
+DVDs and adding a ``region code''. DVD players would be locked to one region
+(1 for America, 2 for Europe, etc.) and would not be able to play other DVD
+movies. That way they could continue to:
+<ul>
+<li>Release the European (and Australian) versions of their movie 6 months
+    later than the American version. Make it impossible for consumers to play
+    that movie that they bought on holiday, or over the internet. The movie
+    they legitimately bought and paid for!
+<li>Overcharge consumers, asking the maximum amount of money for their
+    product that's viable in that particular market.
+<li>Facilitate censorship: US based consumers can't see certain scenes that
+    are there in the European version,
+<li>Europeans can't see US movies that were never exported to the rest of the
+    world (but they can buy them!). Maximize their profits at the consumers'
+    cost."
+</ul>
+</em>
+</dir>
+<p>
+This strategy is now circumvented. However, the reaction of the copyright
+maffia (which includes the entertainment industry) has turned into what was
+to be expected...
+
+<hr>
+
+<h1 align="center">Legal threats</h1>
+Since the algorithm was developed in secrecy, the industry seems to think
+they have a right to keep it secret. And because they lobbied for a law
+against reverse-engineering that made it in the USA, and now even threats
+Europe now that some of our leaders play doggy to the US, they think they can
+apply that law world-wide (more US organizations have this strange habit).
+So now they're sueing website owners who keep this information on their site.
+Read the stories <http://www.cnn.com/>CNN</a> brought on this subject:
+<p>
+<ul>
+<li><a href="http://www.cnn.com/1999/TECH/ptech/12/28/dvd.crack/">Hundreds of
+    defendants named in lawsuit over DVD hacking</a>
+    (<a href="dvd_sue.html">local copy</a>)
+<li><a href="http://www.cnn.com/TECH/computing/9911/05/dvd.hack.idg/index.html">DVD encryption hacked</a>
+    (<a href="dvd_hacked.html">local copy</a>)
+<li><a href="http://www.cnn.com/TECH/computing/9911/08/dvd.hack2.idg/index.html">Activist defends DVD hack</a>
+    (<a href="dvd_defend.html">local copy</a>)
+</ul>
+<p>
+This sort of actions usually work counterproductive on the internet:
+<a href="../CoS/index.html">scientology</a> is beginning to learn that you
+can't sue criticism away, now it is time for other copyright maffia bosses
+to learn this lesson. That's the reason I made this webpage and placed it here.
+<p>
+<hr>
+<p>
+The DVD hardware sellers can be thankfull for this hack, it increases their
+market. Personally, I didn't want to buy a DVD player until this region code
+nonsense and the encryption stuff was solved. The same will hold for future
+blue-ray or HDDVD players. I want to be able to use the data I buy the way
+I like, not the way some marketing bozo wants me to.
+<p>
+Johan Wevers
+<hr>
+<p>
+<h2>Other links</h2>
+<ul>
+<li>Tord Jansson, project maintainer of the free MP3 encoder BladeEnc has also
+    explained some of the technicalities in detail
+    <a href="http://bladeenc.mp3.no/">here</a>.
+</ul>
+<hr>
+
+</body>
+</html>
+

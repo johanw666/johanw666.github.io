@@ -1,0 +1,289 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Is Energy Conserved in General Relativity?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Updated by Michael Weiss, 2017.<br>
+Original by Michael Weiss and John Baez.</P>
+
+<h1>Is Energy Conserved in General Relativity?</h1>
+
+<p>In special cases, yes.&nbsp; In general, it depends on what you mean by "energy", and what you mean by
+"conserved".</p>
+
+<p>In flat spacetime (the backdrop for special relativity), you can phrase energy conservation in two ways: as a
+differential equation, or as an equation involving integrals (gory details below).&nbsp; The two formulations are
+mathematically equivalent.&nbsp; But when you try to generalize this to curved spacetimes (the arena for general
+relativity), this equivalence breaks down.&nbsp; The differential form extends with nary a hiccup; not so the integral
+form.</p>
+
+<p>The differential form says, loosely speaking, that no energy is created in any infinitesimal piece of
+spacetime.&nbsp; The integral form says the same for a non-infinitesimal piece.&nbsp; (This may remind you of the
+"divergence" and "flux" forms of Gauss's law in electrostatics, or the equation of continuity in fluid dynamics.&nbsp;
+Hold on to that thought!)</p>
+
+<p>An infinitesimal piece of spacetime "looks flat", meaning that even a non-zero curvature is hard to detect on an
+infinitesimal piece of spacetime; but the effects of curvature <em>do</em> become more evident in a non-infinitesimal
+piece.&nbsp; (The same holds for curved surfaces in space, of course.)&nbsp; In GR, the curvature of spacetime is
+"felt" by us as gravity.&nbsp; Now, even in newtonian physics, you must include gravitational potential energy to get
+energy conservation.&nbsp; And GR introduces the new phenomenon of gravitational waves; perhaps these carry energy as
+well?&nbsp; Perhaps we need to include gravitational energy in some fashion, to arrive at a law of energy conservation
+for non-infinitesimal pieces of spacetime?</p>
+
+<p>Casting about for a mathematical expression of these ideas, physicists came up with something called an energy
+pseudo-tensor.&nbsp; (In fact, several of 'em!)&nbsp; Now, GR takes pride in treating all coordinate systems
+equally.&nbsp; Mathematicians invented tensors precisely to meet this sort of demand: if a tensor equation holds in
+one coordinate system, it holds in all.&nbsp; Pseudo-tensors are not tensors (surprise!), and this alone raises
+eyebrows in some circles.&nbsp; In GR, one must always guard against mistaking artifacts of a particular coordinate
+system for real physical effects.&nbsp; (See the FAQ entry <a href="../BlackHoles/black_holes.html">What is a black
+hole, really?</a> for some examples.)</p>
+
+<p>These pseudo-tensors have some rather strange properties.&nbsp; If you choose the "wrong" coordinates, they are
+non-zero even in flat empty spacetime.&nbsp; By another choice of coordinates, they can be made zero at any chosen
+point, even in a spacetime full of gravitational radiation.&nbsp; For these reasons, most physicists who work in
+general relativity do not believe the pseudo-tensors give a good <em>local</em> definition of energy density,
+although their integrals are sometimes useful as a measure of total energy.</p>
+
+<p>One other complaint about the pseudo-tensors deserves mention.&nbsp; Einstein argued that all energy has mass,
+and all mass acts gravitationally.&nbsp; Does "gravitational energy" itself act as a source of gravity?&nbsp; Now,
+the Einstein field equations are
+$$
+	G_{\mu\nu} = 8\pi T_{\mu\nu} \;.
+$$
+Here $G_{\mu\nu}$ is the Einstein curvature tensor, which encodes information about the curvature of spacetime,
+and $T_{\mu\nu}$ is the so-called stress&ndash;energy tensor, which we will meet again below.&nbsp; $T_{\mu\nu}$
+represents the energy due to matter and electromagnetic fields, but includes <em>no</em> contribution from
+"gravitational energy".&nbsp; So one can argue that "gravitational energy" does <em>not</em> act as a source of
+gravity.&nbsp; On the other hand, the Einstein field equations are non-linear; this implies that gravitational
+waves interact with each other (unlike light waves in Maxwell's (linear) theory).&nbsp; So one can argue that
+"gravitational energy" <em>is</em> a source of gravity.</p>
+
+<p>In certain special cases, energy conservation works out with fewer caveats.&nbsp; The two main examples are
+static spacetimes and asymptotically flat spacetimes.</p>
+
+<p>Let's look at three examples before plunging deeper into the mathematics.</p>
+
+<h2>Very massive objects emitting light</h2>
+
+<p>Light from the Sun appears redshifted to an Earth bound astronomer.&nbsp; In quasi-newtonian terms, we might say
+that light loses kinetic energy as it climbs out of the gravitational well of the Sun, but gains potential
+energy.&nbsp; General relativity looks at it differently.&nbsp; In GR, gravity is described not by a potential but
+by the metric of spacetime.&nbsp; No problem: the Schwarzschild metric describes spacetime around a massive object,
+if the object is spherically symmetrical, uncharged, and "alone in the universe".&nbsp; The Schwarzschild metric is
+both static and asymptotically flat, and energy conservation holds without major pitfalls.&nbsp; For more details,
+consult MTW, chapter 25.</p>
+
+<h2>Gravitational waves</h2>
+
+<p>A binary pulsar emits gravitational waves, according to GR, and one expects (innocent word!) that these waves
+will carry away energy.&nbsp; So its orbital period should change.&nbsp; Einstein derived a formula for the rate of
+change (known as the quadrapole formula), and in the centenary of Einstein's birth, Russell Hulse and Joseph Taylor
+reported that the binary pulsar PSR1913+16 bore out Einstein's predictions within a few percent.&nbsp; Hulse and
+Taylor were awarded the Nobel prize in 1993.</p>
+
+<p>Despite this success, Einstein's formula remained controversial for many years, partly because of the subtleties
+surrounding energy conservation in GR.&nbsp; The need to understand this situation better has kept GR theoreticians
+busy over the last few years.&nbsp; Einstein's formula now seems well-established, both theoretically and
+observationally.</p>
+
+<h2>Expansion of the universe leading to cosmological redshift</h2>
+
+<p>The Cosmic Background Radiation (CBR) has red-shifted over thousands of millions of years.&nbsp; Each photon gets redder and
+redder.&nbsp; What happens to this energy?&nbsp; Cosmologists model the expanding universe with
+Friedmann-Robertson-Walker (FRW) spacetimes.&nbsp; (The familiar "expanding balloon speckled with galaxies" belongs
+to this class of models.)&nbsp; The FRW spacetimes are neither static nor asymptotically flat.&nbsp; Those who
+harbor no qualms about pseudo-tensors will say that radiant energy becomes gravitational energy.&nbsp; Others will
+say that the energy is simply lost.</p>
+
+<h2>Divergence and Integration</h2>
+
+<p>It's time to look at mathematical fine points.&nbsp; There are many to choose from!&nbsp; The definition of
+asymptotically flat, for example, calls for some care (see Stewart); one worries about "boundary conditions at
+infinity".&nbsp; (In fact, both spatial infinity and "null infinity" clamor for attention&mdash;leading to
+different kinds of total energy.)&nbsp; The static case has close connections with Noether's theorem (see Goldstein
+or Arnold).&nbsp; If the catch-phrase "time translation symmetry implies conservation of energy" rings a bell
+(perhaps from quantum mechanics), then you're on the right track.&nbsp; (Check out "Killing vector" in the index of
+MTW, Wald, or Sachs and Wu.)</p>
+
+<p>But two issues call for more discussion.&nbsp; Why does the equivalence between the two forms of energy
+conservation break down?&nbsp; How do the pseudo-tensors slide around this difficulty?</p>
+
+<p>First point: in relativity, energy is not a scalar, but the time component of the energy&ndash;momentum
+4-vector.&nbsp; If you already know what that means, skip the next paragraph.</p>
+
+<p>In ordinary high-school analytic geometry, a (two-dimensional) vector $\boldsymbol{v}$ has components, say
+$(v_1,v_2)$.&nbsp; While $\boldsymbol{v}$ is a geometrical object, existing free from the confines of any coordinate system,
+the same is not true for the components $v_1$ and $v_2$&mdash;they depend on the choice of the axes and their scales.&nbsp; If
+you change the coordinate system&mdash;say you rotate the axes&mdash;then the components change according to a standard
+formula.&nbsp; We say that $\boldsymbol{v}$ has an <i>invariant meaning</i>, while the components are <i>coordinate
+dependent</i>.&nbsp; Now in relativity, neither energy nor momentum by themselves have invariant meaning, just like time and
+space.&nbsp; But if we weld the energy and momentum together, we get a geometric object called a 4-vector that <em>is</em>
+invariant.&nbsp; That is, if $E$ is the energy and $\boldsymbol{p}=(p_1,p_2,p_3)$ is the momentum, then $(E,p_1,p_2,p_3)$ is
+the <i>energy&ndash;momentum 4-vector</i>.&nbsp; The energy&ndash;momentum 4-vector basks in celebrity, being
+the <em>second</em> most famous 4-vector; the top spot is held by the <em>spacetime-displacement 4-vector</em>, $(\Delta
+t,\Delta x,\Delta y,\Delta z)$.&nbsp; That's why we say that the energy is the <i>time component</i> of the
+energy&ndash;momentum 4-vector: it occupies the same slot that time does in the spacetime-displacement 4-vector.</p>
+
+<p>If we want to conserve something, it must have an invariant meaning.&nbsp; The energy&ndash;momentum 4-vector
+$p$ fits the bill.&nbsp; Let's consider first the case of flat Minkowski spacetime.&nbsp; Recall from your
+favorite text on relativity that that the notion of "inertial frame" corresponds to a special kind of coordinate
+system (Minkowski coordinates, a.k.a. Lorentz coordinates), in which the metric takes the form
+$-\mathrm{d}t^2+\mathrm{d}x^2+\mathrm{d}y^2+\mathrm{d}z^2$.</p>
+
+<p>Pick an inertial reference frame.&nbsp; Pick a volume $V$ in this frame, and pick two times $t=t_0$ and
+$t=t_1$.&nbsp; One formulation of energy&ndash;momentum conservation says that the energy&ndash;momentum inside $V$
+changes only because of energy&ndash;momentum flowing across the boundary surface (call it $S$).&nbsp; It is
+"conceptually difficult, mathematically easy" to define a quantity $T$ so that the captions on equation
+\eqref{equation-1} below are correct.&nbsp; (The quoted phrase comes from Sachs and Wu.)<br><br>
+<i>Valid in flat Minkowski spacetime, when Minkowskian coordinates are used (where $p$ is the energy&ndash;momentum
+  4-vector),</i>
+\begin{equation}\label{equation-1}
+\begin{array}{ccccl}
+\int_{V,\,t\,=\,t_0} T\,\mathrm{d}V & - & \int_{V,\,t\,=\,t_1} T\,\mathrm{d}V & = & \int_{t_0}^{t_1} T\,\mathrm{d}t\,\mathrm{d}S
+\;.\\
+\\
+p\text{ in vol }V & - & p\text{ in vol }V & = & p\text{ flowing out through }\\
+\text{at time }t_0 & &\text{at time }t_1 & & \text{boundary }S\text{ of }V\\
+ & & & &\text{from }t_0\text{ to }t_1\;.
+\end{array}
+\end{equation}
+$T$ is called the stress&ndash;energy tensor.&nbsp; You don't need to know what that means!&mdash;just that you can
+integrate $T$, as shown, to get 4-vectors.&nbsp; Equation \eqref{equation-1} may remind you of Gauss's theorem, which
+deals with flux across a boundary.&nbsp; If you look at \eqref{equation-1} in the right 4-dimensional frame of mind,
+you'll discover it really says that the flux across the boundary of a certain 4-dimensional hypervolume is zero.&nbsp;
+(The hypervolume is swept out by $V$ during the interval $t=t_0$ to $t=t_1$.)&nbsp; Misner, Thorne, and Wheeler,
+chapter 7, explains this with pictures galore.&nbsp; (See also Wheeler.)</p>
+
+<p>A 4-dimensional analogue to Gauss's theorem shows that \eqref{equation-1} is equivalent to the following:<br><br>
+<i>Valid in flat Minkowski spacetime, with Minkowskian coordinates,</i>
+\begin{equation}\label{equation-2}
+\nabla_\text{coord}\cdot T = \sum_\mu {\partial T\over\partial x_\mu} = 0 \;.
+\end{equation}
+We write $\nabla_\text{coord}\cdot T$ for the divergence, for we will meet another divergence in a moment.&nbsp;
+Proof?&nbsp; Quite similar to Gauss's theorem: if the divergence is zero throughout the hypervolume, then the flux
+across the boundary must also be zero.&nbsp; On the other hand, the flux out of an infinitesimally small
+hypervolume turns out to be the divergence times the measure of the hypervolume.</p>
+
+<p>Pass now to the general case of any spacetime satisfying Einstein's field equation.&nbsp; It is easy to
+generalize the differential form of energy&ndash;momentum conservation, \eqref{equation-2}:<br><br>
+<i>Valid in any GR spacetime,</i>
+\begin{equation}\label{equation-3}
+	\nabla_\text{cov}\cdot T = \sum_\mu \nabla_\mu T= 0 \;.
+\end{equation}
+$\nabla_\mu$ is the covariant derivative, and $\nabla_\text{cov}\cdot T$ is the covariant divergence.&nbsp;
+[Side comment: \eqref{equation-3} is the correct generalization of \eqref{equation-1} for SR when non-Minkowski
+coordinates are used.]</p>
+
+<p>GR relies heavily on the covariant derivative, because the covariant derivative of a tensor is a tensor, and, as
+we've seen, GR loves tensors.&nbsp; Equation \eqref{equation-3} follows from Einstein's field equation (because
+something called Bianchi's identity says that $\nabla_\text{cov}\cdot G=0$).&nbsp; But \eqref{equation-3} is no longer
+equivalent to \eqref{equation-1}!</p>
+
+<p>Why not?&nbsp; Well, the familiar form of Gauss's theorem (from electrostatics) holds for any spacetime, because
+essentially you are summing fluxes over a partition of the volume into infinitesimally small pieces.&nbsp; The sum
+over the faces of one infinitesimal piece is a divergence.&nbsp; But the total contribution from an interior face
+is zero, since what flows out of one piece flows into its neighbor.&nbsp; So the integral of the divergence over
+the volume equals the flux through the boundary.&nbsp; "QED".</p>
+
+<p>But for the equivalence of \eqref{equation-1} and \eqref{equation-3}, we would need an extension of Gauss's
+theorem.&nbsp; Now the flux through a face is not a scalar, but a vector (the flux of energy&ndash;momentum through
+the face).&nbsp; The argument just sketched involves adding these vectors, which are defined at different points in
+spacetime.&nbsp; Such "remote vector comparison" runs into trouble precisely for curved spacetimes.</p>
+
+<p>The mathematician Levi-Civita invented the standard solution to this problem, and dubbed it "parallel
+transport".&nbsp; It's easy to picture parallel transport: just move the vector along a path, keeping its direction
+"as constant as possible".&nbsp; (Naturally, some non-trivial mathematics lurks behind the phrase in quotation
+marks.&nbsp; But even pop-science expositions of GR do a good job explaining parallel transport.)&nbsp; The
+parallel transport of a vector depends on the transportation path; for the canonical example, imagine parallel
+transporting a vector on a sphere.&nbsp; But parallel transportation over an "infinitesimal distance" suffers no
+such ambiguity.&nbsp; (It's not hard to see the connection with curvature.)</p>
+
+<p>To compute a divergence, we need to compare quantities (here vectors) on opposite faces.&nbsp; Using parallel
+transport for this leads to the covariant divergence.&nbsp; This is well defined, because we're dealing with an
+infinitesimal hypervolume.&nbsp; But to add up fluxes all over a non-infinitesimal hypervolume (as in the contemplated
+extension of Gauss's theorem) runs smack into the dependence on transportation path.&nbsp; So the flux integral is not
+well defined, and we have no analogue for Gauss's theorem.</p>
+
+<p>One way to get round this is to pick one coordinate system, and transport vectors so their <em>components</em>
+stay constant.&nbsp; Partial derivatives replace covariant derivatives, and Gauss's theorem is restored.&nbsp; The
+energy pseudo-tensors take this approach (at least some of them do).&nbsp; If you can wrangle \eqref{equation-3},
+$\nabla_\text{cov}\cdot T= 0$, into the form:
+$$
+\nabla_\text{coord}\cdot\Theta = 0 \;,
+$$
+then you can get an "energy conservation law" in integral form.&nbsp; Einstein was the first to do this; Dirac,
+Landau and Lifshitz, and Weinberg all came up with variations on this theme.&nbsp; We've said enough already on the
+pros and cons of this approach.</p>
+
+<p>We will not delve into definitions of energy in general relativity such as the hamiltonian (amusingly, the energy
+of a closed universe always works out to be zero according to this definition), various kinds of energy one hopes to
+obtain by "deparametrizing" Einstein's equations, or "quasilocal energy".&nbsp; There's quite a bit to say about this
+sort of thing!&nbsp; Indeed, the issue of energy in general relativity has a lot to do with the notorious "problem of
+time" in quantum gravity... but that's another can of worms.</p>
+
+<p>References (vaguely in order of difficulty):
+<ul>
+<li> Clifford Will, <em>The renaissance of general relativity</em>, in <em>The New Physics</em> (ed. Paul Davies)
+     gives a semi-technical discussion of the controversy over gravitational radiation.
+
+<li> Wheeler, <em>A Journey into Gravity and Spacetime</em>.&nbsp; Wheeler's try at a "pop-science" treatment of
+     GR.&nbsp; Chapters 6 and 7 are a tour de force: Wheeler tries for a non-technical explanation of Cartan's
+     formulation of Einstein's field equation.&nbsp; (It might be easier just to read MTW!)
+
+<li> Taylor and Wheeler, <em>Spacetime Physics</em>.
+
+<li> Goldstein, <em>Classical Mechanics</em>.
+
+<li> Arnold, <em>Mathematical Methods in Classical Mechanics</em>.
+
+<li> Misner, Thorne, and Wheeler (MTW), <em>Gravitation</em>, chapters 7, 20, and 25
+
+<li> Wald, <em>General Relativity</em>, Appendix E.&nbsp; This has the Hamiltonian formalism and a bit about
+     deparametrizing, and chapter 11 discusses energy in asymptotically flat spacetimes.
+
+<li> H. A. Buchdahl, <em>Seventeen Simple Lectures on General Relativity Theory</em> Lecture 15 derives the
+     energy-loss formula for the binary star, and criticizes the derivation.
+
+<li> Sachs and Wu, <em>General Relativity for Mathematicians</em>, chapter 3.
+
+<li> John Stewart, <em>Advanced General Relativity</em>.&nbsp; Chapter 3 (<em>Asymptopia</em>) shows just how
+     careful one has to be in asymptotically flat spacetimes to recover energy conservation.&nbsp; Stewart also
+     discusses the Bondi&ndash;Sachs mass, another contender for "energy".
+
+<li> Damour, in <em>300 Years of Gravitation</em> (ed. Hawking and Israel).&nbsp; Damour heads the "Paris group",
+     which has been active in the theory of gravitational radiation.
+
+<li> Penrose and Rindler, <em>Spinors and Spacetime</em>, vol II, chapter 9.&nbsp; The Bondi-Sachs mass
+     generalized.
+
+<li> J. David Brown and James York Jr., <em>Quasilocal energy in general relativity</em>, in <em>Mathematical
+     Aspects of Classical Field Theory</em>.
+
+</ul>
+</p>
+
+<p><br></p>
+
+</body>
+</html>

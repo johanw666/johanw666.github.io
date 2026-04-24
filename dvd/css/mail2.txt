@@ -1,0 +1,231 @@
+
+From frank@funcom.com Tue Nov  9 13:23:29 1999
+Date: Thu, 28 Oct 1999 12:57:37 +0200 (CEST)
+From: Frank Andrew Stevenson <frank@funcom.com>
+To: livid-dev@livid.on.openprojects.net
+Subject: [Livid-dev] Working PlayerKey cracker
+
+
+In response to feedback from yesterdays post I have now refined
+my attack in the following ways:
+
+The CSSdecrypt key can now be recoverd with only 5 bytes of
+known output. Sometimes multiple keys will be found to a
+single output, due to colissions in the mixing stage. But
+this is not a problem when recovering KEKs ( Key encryption
+Keys ), as all keys found will be equivalent / interchangable.
+
+There has been some debate around the 'hash function'. I choose
+to view it as a very simple encryption function. With 5 byte
+input, 5 byte output and 5 byte key. When searching for a
+player key, the input / output is known. The cipher can then be
+attacked with a complexity of 2^8. Code for the key recovery
+is given below. This cipher has many colissions, and some
+input outup pairs have no keys, while others have multiple.
+The latter is a concern when searching for Player keys, as
+they have to be eliminted by checking agains other discs.
+
+I have attached a program that works as follows:
+
+hippopotamus:~/tmp> time ./keyrec 22 e1 67 83 72 0f c1 7a 96 98
+Recovering Key
+Possible mangling key: af c9 07 42 1f
+  Possible Player key 51 67 67 c5 e0
+  Possible Player key 69 d2 e3 92 ae
+5.000u 0.010s 0:05.44 92.0%     0+0k 0+0io 87pf+0w
+
+Here 2 equivalent player keys are recovered from the
+input:  22 e1 67 83 72   - Disc key
+output: 0f c1 7a 96 98   - intermediate key, common for all player keys
+
+The process takes 5.5 seconds on a PPro200, somewhat slower
+now that only 5 bytes are known in the keystream. 
+
+If this works, as I hope it will, I will leave it as an exersice
+to the reader to recover all player keys :-)
+
+  frank
+
+
+-------------- This is how to recover the 'hashing key' --------
+
+static int unmangle ( unsigned char* in , unsigned char *out ) {
+  unsigned char A[5];
+  unsigned char B[5];
+  unsigned char C[5];
+  unsigned char k[6];
+  int i,j;
+
+  /* Recover mangling key */
+  memcpy( A, in, 5 );
+  memcpy( C, out, 5 );
+  k[5] = 0;
+
+  for( i=0 ; i < 256 ; i++ ) {
+    k[4] = i;
+    for( j = 4 ; j >= 2 ; j-- ) {
+      B[j] = k[j] ^ CSStab1[ A[j] ] ^ A[j-1];
+      B[j-1] = CSStab1[ B[j] ] ^ k[j] ^ C[j];
+      k[j-1] = A[j-2] ^ CSStab1[ A[j-1] ] ^ B[j-1];
+    }
+    B[0] = CSStab1[ B[1] ] ^ k[1] ^ C[1];
+    k[0] = B[0] ^ CSStab1[ A[0] ] ^ B[4];
+
+    if( ( CSStab1[ B[0] ] ^ k[0]  )== C[0] ) {
+      printf( "Possible mangling key: %02x %02x %02x %02x %02x\n", k[0],
+k[1], k[2], k[3], k[4] );
+    }
+  }
+  return 0;
+}
+
+----------- The following is the complete sourec for  ------
+---------------- player key cracker ------------------------ 
+
+begin 640 keyrec.c.Z
+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
+G[ZMI>,[VO0&Z!P5EG&XK?4X0[_TCX[?C,A^ULH/C$""1MKHEHBP*
+`
+end
+
+
+This sentence is unique in this respect; it can safely
+be attributed to my employer, Funcom Oslo AS.
+E3D2BCADBEF8C82F A5891D2B6730EA1B PGPmail preferred, finger for key
+There is no place like N59 50.558' E010 50.870'. (WGS84)
+ 
+
+
+
+_______________________________________________
+Livid-dev maillist  -  Livid-dev@livid.on.openprojects.net
+http://livid.on.openprojects.net/mailman/listinfo/livid-dev

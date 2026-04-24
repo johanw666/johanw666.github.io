@@ -1,0 +1,362 @@
+<html>
+<head>
+<title>The Rigid Rotating Disk in Relativity</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>Updated by Michael Weiss, 2017.<br>
+Original by Michael Weiss.
+</p>
+
+
+<h1>The Rotating Disk in Relativity</h1>
+
+<p>Two questions arose in the first few decades after the birth of relativity: (a) What would a rotating disk look
+like, particularly a rigid disk?&nbsp; (b) What is a good set of spacetime coordinates for life on a rotating
+platform?&nbsp; In other words, we can enquire into the physics of a rotating physical disk, and we can do likewise
+for systems of rotating coordinates.</p>
+
+<p>This page is about an actual disk.&nbsp; (To spoil the surprise: there is no such beast as a <em>rigid</em> disk
+in relativity, but some related concepts do make sense and can illuminate the theory.)&nbsp; Rotating coordinates have
+increased in importance in the era of GPS; the page <a href="rotatingCoordinates.html">Rotating Coordinates in
+Relativity</a> addresses that topic.&nbsp; The two topics have less to do with other than you might guess, although
+of course they are related.</p>
+
+<h2>Born rigidity</h2> 
+
+<p>As special relativity started to filter through the physics community in the early 1900s, people realized the
+need to re-examine all the traditional concepts of Newtonian mechanics.&nbsp; Idealized rigid bodies pervade
+elementary mechanics.&nbsp; In 1909, Max Born took a fresh look at the idea of rigidity.</p>
+
+<p>Born proposed a Lorentz-invariant definition of a "rigid body".&nbsp; Pauli's monograph <a href="#pauli">[1]</a>
+gives a nice summary of Born's idea, and the responses it drew from Ehrenfest, Herglotz, Noether, and von
+Laue.&nbsp; (Pais's Einstein bio suggests that Born's 1909 paper may have helped set Einstein on the road to
+Riemannian geometry <a href="#pais">[2]</a>.)</p>
+
+<p>We know already that rigidity and SR don't mix&mdash;just think of the <a href="barn_pole.html">barn and the
+pole</a>!&nbsp; How could a physicist like Born, mathematically sophisticated, have made such an elementary
+error?&nbsp; A simple remark by Pauli clarifies things considerably:</p>
+<blockquote>
+    If thus the concept of a RIGID BODY has no place in relativistic mechanics, it is nevertheless useful and
+    natural to introduce the concept of a RIGID MOTION of a body.&nbsp; We shall denote those motions as rigid for
+    which Born's condition <a href="#star">(*)</a> [see below] is satisfied.
+</blockquote>
+</p>
+
+<p>Born <em>thought</em> he was defining a rigid body, but Pauli's rephrasing saves the mathematics while improving
+the physics.&nbsp; We have no rigid rods in SR, but if you accelerate every atom of an ordinary rod in just the
+right way, you can move the rod rigidly.&nbsp; (In fact, this was realized shortly after Ehrenfest's paper (see
+below) by a number of physicists.)&nbsp; And Born's definition is Lorentz invariant.</p>
+
+<p>I won't plunge right into Born's definition (as Pauli does).&nbsp; Instead I'll approach it by thinking
+atomistically.&nbsp; Imagine our solid as made up of a large number of atoms <em>A<sub>1</sub>, ...,
+A<sub>n</sub></em>.&nbsp; Between any two nearby atoms <em>A<sub>i</sub></em> and <em>A<sub>j</sub></em> there is a
+"natural distance" <em>d<sub>ij</sub></em>, natural in the sense that if <em>A<sub>i</sub></em> and
+<em>A<sub>j</sub></em> are pushed together or pulled apart, stresses result, trying to restore the
+distance <em>d<sub>ij</sub></em>.&nbsp; Of course there are propagation delays, but if we start with the solid at
+rest in some inertial frame, and accelerate it <em>gently</em>, the resulting elastic waves in the solid should die
+out pretty quickly.&nbsp; (To use the right jargon, we wait until the transients have subsided.)&nbsp; Or we can
+pretend that exactly the right force is applied to each atom at all times, so that natural distances are
+preserved.&nbsp; Let the number of atoms tend to infinity (continuum approximation), let the stress/strain ratio
+tend to infinity, and apply forces gently enough so that the elastic waves can be ignored.&nbsp; In such a case we
+arrive at Born's definition.&nbsp; Born used coordinates, but I'll try for a coordinate-free rephrasing.</p>
+
+<p>First, what is a solid?&nbsp; Is it just a swath in spacetime?&nbsp; This is not enough: the atomistic viewpoint
+suggests we should be able to "mark" a point inside the solid (call it a particle) and follow its world line.&nbsp;
+An "event", as usual, is a point in spacetime.&nbsp; The events along a particle's world line are parametrized by
+&tau;, the time on that particle's clock.</p>
+<blockquote>
+    <p><a name="star">(*)</a> Pick a particle (call it <em>A</em>) in the solid.&nbsp; Pick an event <em>p</em> at
+    time &tau; on the world line of <i>A</i>.&nbsp; Draw the spatial plane orthogonal to the world line at <em>p</em>
+    (i.e., the plane of simultaneity at that event).</p>
+
+    <p>Now pick another particle <em>B</em>.&nbsp; The plane of simultaneity intersects the world lines of these
+    two particles <em>A</em> and <em>B</em> at two events; let
+    <em>s</em>(&tau;,<em>A</em>,<em>B</em>) be the interval between these two events.</p>
+
+    <p>Suppose that for any <em>A</em> and <em>B</em> infinitesimally close to one another,
+    d<em>s</em>(&tau;)/d&tau; = 0 for all &tau;.&nbsp; Then we say the body MOVES RIGIDLY.</p>
+</blockquote>
+
+<p>If you don't like the notion of "infinitesimally close", there are ways to get around it, but I won't go into
+that.&nbsp; (The basic idea is that we are using particle world lines to transport the metric from one tangent
+plane to another.)</p>
+
+<p>OK, now what?&nbsp; First, it should be pretty clear that Born's definition captures the idea that the body moves
+without internal stresses.&nbsp; Or if you prefer, you can say that we have nearly rigid motion when Young's modulus
+is large enough, and the accelerations are gentle enough, so that infinitesimal pieces of the body are barely
+deformed, when viewed in the momentarily comoving inertial frame of reference (see below for the definition of
+this).&nbsp; Born rigidity is then the limiting case.</p>
+
+<p>If we accelerate a rod rigidly in the longitudinal direction, then the rod suffers the usual Lorentz contraction
+(in the original rest frame).&nbsp; More generally, rigid motion without any twisting corresponds to so-called
+Fermi&ndash;Walker transport (see <a href="#mtw">[3, page 170]</a>).&nbsp; The acceleration of the front of the rod is
+less than the acceleration of the rear; this is a variation on Bell's Spaceship Paradox</a>
+(see <a href="#bell">[4]</a> and the <a href="BellSpaceships/spaceship_puzzle.html">Relativity FAQ entry</a>.)<p>
+
+<p>In a two-page note in 1909, Paul Ehrenfest noted that a disk cannot be brought from rest into a state of
+rotation without violating Born's condition.&nbsp; Integrating &tau; out of Born's condition, we see that
+infinitesimally close particles must keep the same proper distance.&nbsp; So in the original rest frame, they
+suffer Lorentz contraction in the transverse direction but none in the radial direction.&nbsp; The circumference
+contracts but the radius doesn't.&nbsp; But in the original rest frame, the circumference is a circle, sitting in a
+spatial slice (<em>t</em> = constant) of ordinary flat Minkowski spacetime.&nbsp; In other words, we would have a
+"non-euclidean circle" sitting in ordinary euclidean space.&nbsp; This is a contradiction.</p>
+
+<p>I emphasize that Ehrenfest's argument is a proof by contradiction.&nbsp; We <em>assume</em> it is possible to
+"spin up" the disk, maintaining Born rigidity all the time.&nbsp; We conclude that we have a non-euclidean circle
+sitting in ordinary euclidean space.&nbsp; Contradiction, QED!&nbsp; The argument does not say that a spinning disk
+actually has a circumference less than 2&pi;<i>r</i>.&nbsp; Nor does it say that it is impossible to spin up a
+stationary disk, just that this can't be done without violating Born rigidity at some point.&nbsp; Once the
+disk <em>has</em> been spun up, it can keep spinning merrily along, Born-rigidly, forever.</p>
+
+<p>Ehrenfest's argument involves making a complete circuit about the center.&nbsp; The argument also has a local
+version.&nbsp; Say we have a ball bearing a light-year from the Sun.&nbsp; We cannot put the ball bearing in orbit
+around the Sun, keeping one face to the Sun, without violating Born's condition.&nbsp; The proof is not hard, but
+I'll omit the details.&nbsp; The key point: the Lorentz contraction factor is not uniform throughout the ball,
+because some particles have a larger radial distance from the Sun than others.&nbsp; The assumption of
+Born rigidity implies that, once in motion, all tangential distances will be Lorentz-contracted as measured in the
+original rest frame, while the radial distances will be unaffected.&nbsp; This is enough to give us a little
+"pocket of non-euclideaness" sitting in ordinary euclidean space.</p>
+
+<p>Pauli states: "It was further proved, independently, by Herglotz and Noether that a rigid body in the Born sense
+has only three degrees of freedom...&nbsp; Apart from exceptional cases, the motion of the body is completely
+determined when the motion of a single of its points is prescribed."&nbsp; I haven't looked up the papers by
+Herglotz and Noether, but I dare say it's similar to the argument above.</p>
+
+<p>Max von Laue pointed out that a body made up of <em>n</em> point particles must have at least 3<i>n</i> degrees
+of freedom.&nbsp; Say we give an impulse to each particle at <em>t</em> = 0.&nbsp; Because of the finite speed of
+light, there can be no constraints relating the velocities of different particles.&nbsp; Rigid motion can occur in
+SR only through a conspiracy of forces.</p>
+
+<p>So much for the rotating <em>rigid</em> disk in SR.</p>
+
+<h2>Einstein's argument</h2> 
+
+<p>OK, let's say we start with a disk at rest.&nbsp; We spin it up (not Born-rigidly).&nbsp;  Once it's spinning nicely
+and all temporary distortions have had time to settle down (transients have died out), what can we say about
+it?</p>
+
+<p>Einstein started looking at this in 1909; a letter from 1910 shows he was familiar with Herglotz's
+results.&nbsp; Some context: Einstein had a research program based on the Principle of General Relativity: "All
+reference frames are equally valid."&nbsp; His famous elevator argument had already paid dividends in his Principle of
+Equivalence, which resulted in his discoveries of gravitational time dilation and his first (incorrect) computation
+of the bending of light.&nbsp; The elevator argument dealt with a <em>linearly accelerated</em> frame; naturally,
+he turned next to uniform circular motion.&nbsp; By the Equivalence Principle, this should be the same as a
+stationary frame plus some kind of "gravitational field".&nbsp; Einstein asked, what would life be like to
+inhabitants of the rotating disk?</p>
+
+<p>As a side note, most experts today regard the Principle of General Relativity as formally vacuous: <em>any</em>
+law of physics can be expressed in <em>any</em> reference frame if you're willing to add in "fudge forces".&nbsp;
+The history of science has shown, time and time again, that guiding ideas don't have to stand up to strict logical
+scrutiny to prove fruitful.&nbsp; Einstein's famous 1916 paper on GR <a href="#dover">[5]</a> makes no
+mention of elevators; instead, he introduces the Equivalence Principle via the rotating disk.&nbsp; The issue
+continued to absorb him and probably played a decisive role on his road to general
+relativity <a href="#stachel1">[6,7,8]</a>.</p>
+
+<p>Einstein's argument for the rotating disk covers similar ground to Ehrenfest's, but with different
+conclusions.&nbsp; First, Einstein asserts that the circumference of the rotating disk will be <em>greater</em>
+than 2&pi;<i>r</i>.&nbsp; Second, the non-euclidean geometry does not faze him; instead, he invokes the Equivalence
+Principle to conclude that the geometry of a gravitational field will also be non-euclidean.</p>
+
+<p>Can we make any sense of Einstein's argument?&nbsp; It takes some unpacking.&nbsp; His description in the 1916
+paper could have been clearer; he did better in a letter in 1919 <a href="#gron2">[10, page 289]</a>.&nbsp; Imagine an
+army of observers spread out across the disk ("disk observers").&nbsp; Each is equipped with a meter stick.&nbsp;
+Crucial assumption: the dimensions of the sticks are <em>unaffected by the acceleration</em>.&nbsp; To make this
+precise, we need the notion of a <em>momentarily comoving inertial observer (or frame)</em>.&nbsp; That's an observer
+at rest in an inertial (i.e., unaccelerated) frame, who matches velocity with a disk observer for an instant.&nbsp;
+Speaking in spacetime diagrams, this inertial observer's worldline is a straight line tangent to the disk observer's
+worldline.&nbsp; Our crucial assumption is that the momentarily comoving observer agrees that the disk guy's "meter
+stick" is really a meter long.</p>
+
+<p>Now, any <em>real</em> meter stick would be at least a little bit affected by acceleration.&nbsp; But we can
+idealize.&nbsp; If you make your stick out of rubber, well, that's bad.&nbsp; The stiffer the material, the better the
+stick.&nbsp; Or we can use more abstract sticks, say, 1,650,763.73 wavelengths of the orange-red emission line of the
+krypton-86 atom in a vacuum, as was the SI standard between 1960 and 1982.&nbsp; Anyway, say the momentarily comoving
+observer deems the stick to be a true meter long.&nbsp; If the stick is radial, the folks in the original rest frame
+agree: Lorentz contraction doesn't affect transverse motion.&nbsp; If the stick is tangential to the circumference,
+the rest frame observers say it's Lorentz contracted.&nbsp; So more of them would fit around the rim!&nbsp; Just to be
+concrete, let's say the contraction factor is 1/3; then the disk observers will measure a radius <i>r</i> and a
+circumference 6&pi;<i>r</i>.&nbsp; That's Einstein's argument for a non-euclidean geometry.</p>
+
+<p>It's worth mentioning two things right off the bat.&nbsp; First, in the original rest frame, the geometry of the
+disk <em>remains euclidean</em>.&nbsp; According to rest frame observers, the spinning disk occupies a perfectly
+normal cylindrical volume.&nbsp; If you like, picture the disk as enclosed in a snug-fitting, motionless, but
+infinitely slippery case (zero friction).&nbsp; The geometry of the case is, of course, euclidean.</p>
+
+<p>Second, Gr&oslash;n <a href="#gron2">[10, page 288]</a> has given a pithy summation of the difference between
+Ehrenfest's and Einstein's arguments:</p>
+<blockquote>
+Ehrenfest considered a hypothetical, but impossible situation where a disc had been put into rotational motion in a
+Born-rigid way, while Einstein considered a situation in which the disk had been put into rotation in an arbitrary
+way, but the measuring rods were required to be Born rigid.
+</blockquote>
+
+<p>People raised (and occasionally still raise) various objections to Einstein's argument.&nbsp; One such objection
+cannot be denied: Einstein has proposed <em>a</em> definition of a spinning disk geometry, but not the <em>only
+possible</em> definition.&nbsp; This objection applies to <em>every possible</em> definition.&nbsp; Einstein's
+definition has this in its favor: it's an operational answer to the question, what is the geometry as observed by
+the spinning disk's inhabitants?&nbsp; Let's look at more specific complaints.</p>
+
+<p>First, we have the matter of simultaneity.&nbsp; Let's say the disk observers try to use the famous Einstein
+synchronization procedure to settle on a common definition of simultaneity.&nbsp; They will fail!&nbsp; In
+mathematical terms, if we try to set up a rotating coordinate system adapted to the disk observers, we inevitably
+find we can't have all the properties we'd like.&nbsp; For something like the GPS system, this issue has to be
+faced, but for Einstein's argument, it's a red herring!&nbsp; Once the disk is in steady-state rotation, things
+are <em>time independent</em>.&nbsp;  To quote one recent paper <a href="#weber">[13, page 144]</a> :
+<blockquote>
+It may be objected that measurements around the periphery of the disk are not done simultaneously in the standard
+way.&nbsp; But an observer on the disk need not measure any lengths simultaneously; he merely lays a standard rod
+of length much smaller than [the radius of the disk] on the surface and marks off the ends, say, with a piece of
+chalk.&nbsp; The chalk marks on either end of the rod can be made at any time since the rod is at rest with respect
+to the surface.&nbsp; Repeating the procedure, the circumference of the disk is measured.
+</blockquote>
+
+<p>Second, we have the assumption that the momentarily comoving observer and the disk observer agree about length
+measurements at the instant they match velocities.&nbsp; This is sometimes called the <i>locality hypothesis</i> or
+the <a href="clock.html">generalized clock postulate</a>, and is fundamental to relativity.&nbsp; You could also say
+it's the definition of an ideal measuring stick; <a href="#mtw">[3, section 16.4]</a> has a nice discussion.&nbsp;
+Without this hypothesis, it's hard see what real-world significance SR could have, since <em>some</em> acceleration
+is ubiquitous.&nbsp; A full discussion would involve talking about "agreement to first order".</p>
+
+<p>Finally, what does Einstein's argument <em>prove</em>, mathematically speaking?&nbsp; It would be nice to have a
+rigorous mathematical definition of the "space" of Einstein's disk, whose geometry is supposed to be
+non-euclidean.&nbsp; It's natural to think about a spatial slice.&nbsp; That runs into difficulties, because of the
+synchronization issue.&nbsp; A better solution builds on time independence.&nbsp; Replace each disk observer with
+a <em>point</em>.&nbsp; Formally speaking, we are defining a manifold whose elements (called points) correspond to
+the worldlines of the disk observers.&nbsp; Still more formally, we are constructing a <em>quotient manifold</em>
+of a part of Minkowski spacetime.&nbsp; We define the metric on the manifold using the Born recipe: if Aragorn and
+Boromir are neighbors on the disk, then <a href="#star">(*)</a> defines <i>s</i>(&tau;, Aragorn, Boromir), the
+interval from Aragorn to Boromir.&nbsp; But once the disk is in steady-state Born-rigid rotation, <i>s</i> is
+independent of &tau;.&nbsp; So we have a definition of the distance <i>s</i>(Aragorn, Boromir).&nbsp; Now to cross
+all the t's we have to take limits and stuff, but when the dust settles, we have a perfectly nicely defined
+Riemannian manifold.&nbsp; Its geometry turns out to be non-euclidean, just like Einstein said.</p>
+
+<p>I should emphasize that this is not rocket science for a differential geometer.&nbsp; The idea of a manifold
+whose "points" are really geometric figures of some sort goes back to the 19th century.&nbsp; The quotient
+construction is also not super-sophisticated.&nbsp; I am not sure who first did this construction explicitly for
+Einstein's rotating disk, but <a href="#gron2">[10, page 306]</a> cites <a href="#rizzi-ruggiero">[11]</a>.</p>
+
+<p>Let me return very briefly to the genesis of GR.&nbsp; A potted summary of Stachel <a href="#stachel3">[8]</a>:
+Einstein had "the happiest thought of [his] life" (the elevator argument) in 1907.&nbsp; The full theory didn't
+arrive until 1915.&nbsp; What took him so long?&nbsp; Two quotes from Stachel:
+<blockquote>
+It is worth emphasizing that Einstein attributed his success in formulating the special theory in 1905 in no small
+measure to his insistence on physically defining coordinate systems that allow one to attach direct physical
+significance to coordinate differences:
+<blockquote>
+The theory to be developed&mdash;like every other electrodynamics&mdash;rests upon on the kinematics of rigid
+bodies, since the assertions of each such theory concern relations between rigid bodies (coordinate systems),
+clocks and electromagnetic processes.&nbsp; Taking this into account insufficiently is the root of the
+difficulties, with which the electrodynamics of moving bodies currently has to contend.
+</blockquote>
+Little wonder that Einstein was "tormented" by the problem of "just what coordinates
+are actually supposed to mean in physics" once they lose their direct physical significance!
+</blockquote>
+A litte further on:
+<blockquote>
+<p>[T]he aim of interpreting rotation as rest-plus-a-gravitational-field appears to have loomed large in Einstein's
+motivation.&nbsp; This motive led him to consider uniformly rotating systems of reference soon after his 1907
+treatment of uniformly linearly accelerated systems.&nbsp; But only after the clarification of the question of
+rigid motions [by Born and Herglotz] do we find any signs of progress on the rotation problem.</p>
+<p>The study of uniformly rotating reference systems then led him to the conclusion that, in this case, the spatial
+coordinates cannot be given a direct physical meaning.</p>
+</blockquote>
+Uniformly linear acceleration was just a bit too easy: it got Einstein partway down the path, but didn't force him
+to reconsider some hampering assumptions.&nbsp; The rotating disk problem offered just enough additional
+resistance.</p>
+
+<p>Stachel mentions a more technical aspect.&nbsp; Einstein noted the analogy between the Coriolis force and
+magnetism, which are both forces that depend on velocity.&nbsp; Now, the Newtonian potential is (to use the proper
+jargon) a scalar; the electromagnetic potential is a vector; the potential in GR is a symmetric rank-2 tensor
+(see <a href="#mtw">[3, sec. 7.1]</a>).&nbsp; Once again, studying the rotating disk pushed Einstein towards the
+right kind of complexity.</p>
+
+<h2>Elastic disks</h2>
+
+<p>Physicists continued to write papers about relativity and rotating disks.&nbsp; Gr&oslash;n's
+paper <a href="#gron2">[10]</a> provides an extensive survey; the bibliography includes items up through
+2002.&nbsp; From this large literature I select just two more items.</p>
+
+<p>Lorentz and later Eddington <a href="#eddington">[11]</a> asked about a disk made of "incompressible"
+material.&nbsp; Eddington put it this way:
+<blockquote>
+Now the meaning of the term <i>incompressible</i> is that no stress-system can make any difference in the closeness
+of packing of the molecules; hence the particle-density &sigma; (referred to proper-measure) is the same as for an
+element of the non-rotating disk.&nbsp; But the particle-density &sigma;' referred to axes fixed in space may be
+different.
+</blockquote>
+Eddington's idea is that the Lorentz contraction acts as a kind of tension acting on each concentric ring of disk
+material; just as tightening a belt makes the diameter smaller, so too the Lorentz contraction.&nbsp; By crowding
+in closer to the center, the disk particles relieve some of this "Lorentz tension".&nbsp; Not <em>all</em> of
+it&mdash;that's impossible, as shown by Ehrenfest's argument.&nbsp; The upshot, in Eddington's words: "We see that
+the contraction is one quarter of that predicted by a crude application of the FitzGerald formula to the
+circumference."&nbsp; The geometry of the disk remains euclidean.</p>
+
+<p>It's a bit strange that Eddington took into account the "Lorentz stress", but ignored centrifugal force.&nbsp;
+After all, if we rotate a disk at ordinary non-relativistic speeds, we expect it to stretch out, not contract!&nbsp;
+How much depends on the stiffness of the material, which (as it happens) also helps determine the speed of sound
+<i>c</i><sub>sound</sub> for that material.&nbsp; G.L. Clark obtained a formula taking both effects into
+account.&nbsp; It turns out that you get Eddington's result if you take <i>c</i><sub>sound</sub> to be infinite; if
+you let <i>c</i><sub>sound</sub> be the speed of light, then the two effects cancel out and the radius of the disk
+doesn't change at all.</p>
+
+<p>Finally, in GR you would expect the tensions in the disk to contribute to the stress&ndash;energy tensor and so
+curve spacetime.&nbsp; I am not aware of any work that has been done on this.</p>
+
+<h3>References:</h3>
+
+<p><a name="pauli">[1]</a>
+Wolfgang Pauli, <em>Theory of Relativity</em>, pages 130&ndash;134, Pergamon Press, 1958.</p>
+
+<p><a name="pais">[2]</a>
+Abraham Pais, <em>Subtle is the Lord: the Science and Life of Albert Einstein</em>, page 214.</p>
+
+<p><a name="mtw">[3]</a>
+Misner, Thorne, and Wheeler, <em>Gravitation</em>.</p>
+
+<p><a name="bell">[4]</a>
+J.S. Bell, <em>Speakable and Unspeakable in Quantum Mechanics</em>, page 67, Cambridge University Press, 1987.</p>
+
+<p><a name="dover">[5]</a>
+A. Einstein, <em>The Principle of Relativity</em>, Dover.</p>
+
+<p><a name="stachel1">[6]</a>
+John Stachel, "Einstein and the Rigidly Rotating Disk", in <i>General Relativity and Gravitation One Hundred Years
+After the Birth of Albert Einstein</i>, pages 1&ndash;15, editor A. Held, 1980.<br>
+Note: I haven't yet gotten a hold of this or [7]; my remarks are based on [8].</p>
+
+<p><a name="stachel2">[7]</a>
+John Stachel, "The Rigidly Rotating Disk as the 'Missing Link' in the History of General Relativity",
+in <i>Einstein and the History of General Relativity</i>, editors D. Howard and J. Stachel, 1989.</p>
+
+<p><a name="stachel3">[8]</a>
+John Stachel, "The First Two Acts", in <i>The Genesis of General Relativity</i>, vol 1, pages 81&ndash;111, editor
+J&uuml;rgen Renn, 2007</p>
+
+<p><a name="gron1">[9]</a>
+&Oslash;. Gr&oslash;n, AJP Vol. <b>43</b> No. 10 page 869 (1975)</p>
+
+<p><a name="gron2">[10]</a>
+&Oslash;. Gr&oslash;n, "Space Geometry in rotating reference frames: A historical appraisal", in <i>Relativity in
+Rotating Frames</i>, edited by Guido Rizzi and Matteo Luca Ruggiero, pages 285&ndash;325 (2004).</p>
+
+<p><a name="rizzi-ruggiero">[11]</a>
+Guido Rizzi and Matteo Luca Ruggiero, "Space geometry of rotating platforms: an operational approach", in
+the <a href="https://arxiv.org/abs/gr-qc/0207104">arXiv</a>.
+
+<p><a name="eddington">[12]</a>
+Eddington, <em>The Mathematical Theory of Relativity</em>, Cambridge University Press, 1924.
+Sec.50, pages 112&ndash;113.</p>
+
+<p><a name="weber">[13]</a>
+Thomas A. Weber, "Elementary Considerations of the Time and Geometry of Rotating Frames", in 
+<i>Relativity in Rotating Frames</i>, edited by Guido Rizzi and Matteo Luca Ruggiero, pages 139&ndash;153 (2004).</p>
+
+</body>
+</html>

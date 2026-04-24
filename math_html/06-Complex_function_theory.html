@@ -1,0 +1,253 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Complex function theory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="6">6. Complex function theory</a></h1>
+<h2><a name="6.1">6.1 Functions of complex variables</a></h2>
+Complex function theory deals with complex functions of a complex variable.
+Some definitions:
+<p>
+$f$ is <em>analytical</em> on $\cal G$ if $f$ is continuous and differentiable on $\cal G$.
+<p>
+A <em>Jordan curve</em> is a curve that is closed and singular.
+<p>
+If K is a curve in $\mathbb{C}$ with parameter equation $z=\phi(t)=x(t)+iy(t)$,
+$a\leq t\leq b$, than the length $L$ of K is given by:
+\[
+L=\int\limits_a^b \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}dt=
+\int\limits_a^b\left|\frac{dz}{dt}\right|dt=\int\limits_a^b|\phi'(t)|dt
+\]
+The derivative of $f$ in point $z=a$ is:
+\[
+f'(a)=\lim_{z\rightarrow a}\frac{f(z)-f(a)}{z-a}
+\]
+If $f(z)=u(x,y)+iv(x,y)$ the derivative is:
+\[
+f'(z)=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}=-i\frac{\partial u}{\partial y}+\frac{\partial v}{\partial y}
+\]
+Setting both results equal yields the equations of Cauchy-Riemann:
+\[
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}~~~,~~~\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}
+\]
+These equations imply that $\nabla^2u=\nabla^2v=0$. $f$ is analytical if $u$ and $v$ satisfy these equations.
+
+<h2><a name="6.2">6.2 Complex integration</a></h2>
+<h3><a name="6.2.1">6.2.1 Cauchy's integral formula</a></h3>
+Let $K$ be a curve described by $z=\phi(t)$ on $a\leq t\leq b$ and $f(z)$
+is continuous on $K$. Than the integral of $f$ over $K$ is:
+\[
+\int\limits_Kf(z)dz=\int\limits_a^bf(\phi(t))\dot{\phi}(t)dt
+\stackrel{f\;\mbox{continuous}}{=}F(b)-F(a)
+\]
+<strong>Lemma</strong>: let $K$ be the circle with center $a$ and radius $r$ taken in a
+positive direction. Than holds for integer $m$:
+\[
+\frac{1}{2\pi i}\oint\limits_K \frac{dz}{(z-a)^m}=\left\{
+\begin{array}{l}
+0~~\mbox{if}~~m\neq1\\
+1~~\mbox{if}~~m=1
+\end{array}\right.
+\]
+<strong>Theorem</strong>: if $L$ is the length of curve $K$ and if $|f(z)|\leq M$ for
+$z\in K$, than, if the integral exists, holds:
+\[
+\left|\int\limits_K f(z)dz\right|\leq ML
+\]
+<strong>Theorem</strong>: let $f$ be continuous on an area $G$ and let $p$ be a fixed
+point of $G$. Let $F(z)=\int_p^zf(\xi)d\xi$ for all $z\in G$ only depend on
+$z$ and not on the integration path. Than $F(z)$ is analytical on $G$ with
+$F'(z)=f(z)$.
+<p>
+This leads to two equivalent formulations of the <em>main theorem of
+complex integration</em>: let the function $f$ be analytical on an area $G$. Let
+$K$ and $K'$ be two curves with the same starting - and end points, which can be
+transformed into each other by continous deformation within $G$. Let $B$ be
+a Jordan curve. Than holds
+\[
+\int\limits_Kf(z)dz=\int\limits_{K'}f(z)dz\Leftrightarrow\oint\limits_Bf(z)dz=0
+\]
+By applying the main theorem on ${\rm e}^{iz}/z$ one can derive that
+\[
+\int\limits_0^\infty\frac{\sin(x)}{x}dx=\frac{\pi}{2}
+\]
+
+<h3><a name="6.2.2">6.2.2 Residue</a></h3>
+A point $a\in\mathbb{C}$ is a <em>regular point</em> of a function $f(z)$ if $f$ is
+analytical in $a$. Otherwise $a$ is a <em>singular point</em> or <em>pole</em> of
+$f(z)$. The <em>residue</em> of $f$ in $a$ is defined by
+\[
+\mathop{\rm Res}\limits_{z=a}f(z)=\frac{1}{2\pi i}\oint\limits_Kf(z)dz
+\]
+where $K$ is a Jordan curve which encloses $a$ in positive direction. The
+residue is 0 in regular points, in singular points it can be both 0 and $\neq0$.
+Cauchy's residue proposition is: let $f$ be analytical within and on a Jordan
+curve $K$ except in a finite number of singular points $a_i$ within $K$. Than,
+if $K$ is taken in a positive direction, holds:
+\[
+\frac{1}{2\pi i}\oint\limits_Kf(z)dz=\sum_{k=1}^n\mathop{\rm Res}\limits_{z=a_k}f(z)
+\]
+<strong>Lemma</strong>: let the function $f$ be analytical in $a$, than holds:
+\[
+\mathop{\rm Res}\limits_{z=a}\frac{f(z)}{z-a}=f(a)
+\]
+This leads to Cauchy's integral theorem: if $F$ is analytical on the Jordan
+curve $K$, which is taken in a positive direction, holds:
+\[
+\frac{1}{2\pi i}\oint\limits_K\frac{f(z)}{z-a}dz=\left\{\begin{array}{l}
+f(a)~~\mbox{if}~~a~~\mbox{inside}~~K\\
+0~~\mbox{if}~~a~~\mbox{outside}~~K
+\end{array}\right.
+\]
+<strong>Theorem</strong>: let $K$ be a curve ($K$ need not be closed) and let
+$\phi(\xi)$ be continuous on $K$. Than the function
+\[
+f(z)=\int\limits_K\frac{\phi(\xi)d\xi}{\xi-z}
+\]
+is analytical with $n$-th derivative
+\[
+f^{(n)}(z)=n!\int\limits_K\frac{\phi(\xi)d\xi}{(\xi-z)^{n+1}}
+\]
+<strong>Theorem</strong>: let $K$ be a curve and $G$ an area. Let $\phi(\xi,z)$ be
+defined for $\xi\in K$, $z\in G$, with the following properties:
+<p>
+<ol>
+<li>$\phi(\xi,z)$ is limited, this means $|\phi(\xi,z)|\leq M$ for $\xi\in K$, $z\in G$,</li>
+<li>For fixed $\xi\in K$, $\phi(\xi,z)$ is an analytical function of $z$ on $G$,</li>
+<li>For fixed $z\in G$ the functions $\phi(\xi,z)$ and $\partial\phi(\xi,z)/\partial z$ are continuous functions of $\xi$ on $K$.</li>
+</ol>
+<p>
+Than the function
+\[
+f(z)=\int\limits_K\phi(\xi,z)d\xi
+\]
+is analytical with derivative
+\[
+f'(z)=\int\limits_K\frac{\partial\phi(\xi,z)}{\partial z}d\xi
+\]
+<strong>Cauchy's inequality</strong>: let $f(z)$ be an analytical function within and on
+the circle $C:|z-a|=R$ and let $|f(z)|\leq M$ for $z\in C$. Than holds
+\[
+\left|f^{(n)}(a)\right|\leq\frac{Mn!}{R^n}
+\]
+
+<h2><a name="6.3">6.3 Analytical functions definied by series</a></h2>
+The series $\sum f_n(z)$ is called <em>pointwise convergent</em> on an area $G$
+with sum $F(z)$ if
+\[
+\forall_{\varepsilon>0}\forall_{z\in G}\exists_{N_0\in I\hspace{-1mm}R}\forall_{n>n_0}
+\left[~\left|f(z)-\sum_{n=1}^Nf_n(z)\right|<\varepsilon\right]
+\]
+The series is called <em>uniform convergent</em> if
+\[
+\forall_{\varepsilon>0}\exists_{N_0\in I\hspace{-1mm}R}\forall_{n>n_0}\exists_{z\in G}
+\left[~\left|f(z)-\sum_{n=1}^Nf_n(z)\right|<\varepsilon\right]
+\]
+Uniform convergence implies pointwise convergence, the opposite is not necessary.
+<p>
+<strong>Theorem</strong>: let the power series $\sum\limits_{n=0}^\infty a_nz^n$ have
+a radius of convergence $R$. $R$ is the distance to the first non-essential
+singularity.
+<p>
+<ul>
+<li>If $\displaystyle\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}=L$ exists, than $R=1/L$.</li>
+<li>If $\displaystyle\lim_{n\rightarrow\infty}|a_{n+1}|/|a_n|=L$ exists, than $R=1/L$.</li>
+</ul>
+<p>
+If these limits both don't exist one can find $R$ with the formula of Cauchy-Hadamard:
+\[
+\frac{1}{R}=\lim_{n\rightarrow\infty}{\rm sup}\sqrt[n]{|a_n|}
+\]
+
+<h2><a name="6.4">6.4 Laurent series</a></h2>
+<strong>Taylor's theorem</strong>: let $f$ be analytical in an area $G$ and let point
+$a\in G$ has distance $r$ to the boundary of $G$. Than $f(z)$ can be expanded
+into the Taylor series near $a$:
+\[
+f(z)=\sum_{n=0}^\infty c_n(z-a)^n~~~\mbox{with}~~~c_n=\frac{f^{(n)}(a)}{n!}
+\]
+valid for $|z-a| < r$. The radius of convergence of the Taylor series is $\geq r$.
+If $f$ has a pole of order $k$ in $a$ than $c_1,...,c_{k-1}=0$, $c_k\neq0$.
+<p>
+<strong>Theorem of Laurent</strong>: let $f$ be analytical in the circular area
+$G:r < |z-a| < R$. Than $f(z)$ can be expanded into a Laurent series with center
+$a$:
+\[
+f(z)=\sum_{n=-\infty}^\infty c_n(z-a)^n~~~\mbox{with}~~~
+c_n=\frac{1}{2\pi i}\oint\limits_K\frac{f(w)dw}{(w-a)^{n+1}}~~,~~n\in Z\hspace{-1ex}Z
+\]
+valid for $r<|z-a|<R$ and $K$ an arbitrary Jordan curve in $G$ which encloses
+point $a$ in positive direction.
+<p>
+The <em>principal part</em> of a Laurent series is: $\sum\limits_{n=1}^\infty c_{-n}(z-a)^{-n}$.
+One can classify singular points with this. There are 3 cases:
+<p>
+<ol>
+<li>There is no principal part. Than $a$ is a non-essential singularity.
+    Define $f(a)=c_0$ and the series is also valid for $|z-a| < R$ and
+    $f$ is analytical in $a$.</li>
+<li>The principal part contains a finite number of terms. Than there exists
+    a $k\in I\hspace{-1mm}N$ so that $\lim\limits_{z\rightarrow a}(z-a)^kf(z)=c_{-k}\neq0$.
+    Than the function $g(z)=(z-a)^kf(z)$ has a non-essential singularity in
+    $a$. One speaks of a pole of order $k$ in $z=a$.</li>
+<li>The principal part contains an infinite number of terms. Then, $a$ is an
+    essential singular point of $f$, such as $\exp(1/z)$ for $z=0$.</li>
+</ol>
+<p>
+If $f$ and $g$ are analytical, $f(a)\neq0$, $g(a)=0$, $g'(a)\neq0$ than
+$f(z)/g(z)$ has a simple pole (i.e. a pole of order 1) in $z=a$ with
+\[
+\mathop{\rm Res}\limits_{z=a}\frac{f(z)}{g(z)}=\frac{f(a)}{g'(a)}
+\]
+
+<h2><a name="6.5">6.5 Jordan's theorem</a></h2>
+Residues are often used when solving definite integrals. We define the notations
+$C_\rho^+=\{z||z|=\rho,\Im(z)\geq0\}$ and $C_\rho^-=\{z||z|=\rho,\Im(z)\leq0\}$
+and $M^+(\rho,f)=\mathop{\rm max}\limits_{z\in C_\rho^+}|f(z)|$,
+$M^-(\rho,f)=\mathop{\rm max}\limits_{z\in C_\rho^-}|f(z)|$. We assume that
+$f(z)$ is analytical for $\Im(z)>0$ with a possible exception of a finite number
+of singular points which do not lie on the real axis,
+$\lim\limits_{\rho\rightarrow\infty}\rho M^+(\rho,f)=0$ and that the integral
+exists, than
+\[
+\int\limits_{-\infty}^\infty f(x)dx=2\pi i\sum{\rm Res}f(z)~~~\mbox{in}~~~\Im(z)>0
+\]
+Replace $M^+$ by $M^-$ in the conditions above and it follows that:
+\[
+\int\limits_{-\infty}^\infty f(x)dx=-2\pi i\sum{\rm Res}f(z)~~~\mbox{in}~~~\Im(z)<0
+\]
+<em>Jordan's lemma</em>: let $f$ be continuous for $|z|\geq R$, $\Im(z)\geq0$ and
+$\lim\limits_{\rho\rightarrow\infty}M^+(\rho,f)=0$. Than holds for $\alpha>0$
+\[
+\lim_{\rho\rightarrow\infty}\int\limits_{C_\rho^+}f(z){\rm e}^{i\alpha z}dz=0
+\]
+Let $f$ be continuous for $|z|\geq R$, $\Im(z)\leq0$ and
+$\lim\limits_{\rho\rightarrow\infty}M^-(\rho,f)=0$. Than holds for $\alpha<0$
+\[
+\lim_{\rho\rightarrow\infty}\int\limits_{C_\rho^-}f(z){\rm e}^{i\alpha z}dz=0
+\]
+Let $z=a$ be a simple pole of $f(z)$ and let $C_\delta$ be the half circle
+$|z-a|=\delta,0\leq{\rm arg}(z-a)\leq\pi$, taken from $a+\delta$ to
+$a-\delta$. Than is
+\[
+\lim_{\delta\downarrow0}\frac{1}{2\pi i}\int\limits_{C_\delta}f(z)dz=\frac{1}{2}\mathop{\rm Res}\limits_{z=a}f(z)
+\]
+
+</body>
+</head>

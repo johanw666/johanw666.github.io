@@ -1,0 +1,7 @@
+"Hack Value" -- best high-tech entry 
+Most of the entries in this category were based on hiding the DVD source code in an image or sound file. If you
+use the World Wide Web, you might have a copy of the source code in your browser cache right now. The judges
+decided to give the award to Andrea Gnesutta's entry at http://members.xoom.com/e98/ because of the quality of
+the concealment and the ease of distribution. (To extract css-auth.tar.gz from dvd_scdc_tst.png, go to byte
+00002428 and save in a file the next 547E bytes.) 
+

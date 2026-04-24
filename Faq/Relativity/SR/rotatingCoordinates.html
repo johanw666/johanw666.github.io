@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Rotating Coordinates in Relativity</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../../index.html">[Physics FAQ]</a> -
+   <a href="../../Administrivia/copyright.html">[Copyright]</a></p>
+
+<p>By Don Koks, 2017.</p>
+
+
+<h1>Rotating Coordinates in Relativity</h1>
+
+<p>Relativity is built on the existence of inertial frames.&nbsp; Suppose you hold a mass in front of you and let
+it go.&nbsp; If it floats without moving, then you inhabit an inertial frame.&nbsp; If the mass falls or moves
+somewhere else, then you don't inhabit an inertial frame.&nbsp; The first thing relativity does with an inertial
+frame is define coordinates for it.&nbsp; These coordinates are meaningful: in particular, the time coordinate is
+constructed such that two events in the frame that have the same time coordinate will be measured by all
+inhabitants of the frame to occur at the same time.&nbsp; Other coordinates can be constructed that don't obey this
+idea.&nbsp; These other coordinates have limited value because, in particular, two events that occur simultaneously
+might be allocated different values of such a time coordinate.&nbsp; Coordinates that don't respect simultaneity
+are misleading; after all, if my plane takes off at 7 p.m., then I would like to think that I could aim to be at
+the airport at 6 p.m. on my watch.&nbsp; But if my watch's time is not set to agree with the airport's time, then
+things fall apart very quickly and the practical use of time becomes pointless.</p>
+
+<p>A global time coordinate that is well behaved in the above sense of respecting simultaneity can be constructed
+for an inertial frame.&nbsp; It can also be constructed in a slightly limited sense for a "uniformly accelerated
+frame".&nbsp; This is the frame of a rocket that accelerates in such a way that its occupants (a) feel a constant
+acceleration (a constant weight if they are in deep space far from any sources of gravity), and (b) measure each
+other as stationary with respect to themselves.&nbsp; (It turns out that when measured in an <em>inertial</em>
+frame, the tail of this rocket has to accelerate more strongly than the head of the rocket.&nbsp; As the rocket
+accelerates to ever-higher speed, this stronger acceleration of the tail compresses the rocket, and in fact the
+compression factor is precisely the "gamma factor" of special relativity, if we make allowance for the more
+complicated kinematics of the situation.)&nbsp; Two observers onboard such a rocket will agree on the simultaneity
+of all events, and they will also be able to give the same time coordinate to all simultaneous events.</p>
+
+<p>A natural and very old question in relativity is: can such a global and meaningful time coordinate be
+constructed for the observers sitting on a disk that rotates at, say, constant angular velocity?&nbsp; It turns out
+that it cannot.&nbsp; The observers sitting on such a disk cannot agree with each other on the simultaneity of
+events.&nbsp; In a real sense, this means that no matter how perfect the clocks might be that we use on our
+rotating Earth, they will still disagree on the simultaneity of events.&nbsp; In fact, this disagreement amounts to
+tens of nanoseconds, globally.&nbsp; (But that doesn't mean GPS suffers, as I'll explain later on.)</p>
+
+<p>The question of constructing rotating coordinates is tied historically to the question of the relativistic
+physics of a rotating disk.&nbsp; You can find the physical rotating disk discussed in the FAQ
+entry <a href="rigid_disk.html">The Rigid Rotating Disk in Relativity</a>.&nbsp; Picturing a rotating disk can help
+us think about rotating coordinates, but it ceases to be helpful if taken too literally.&nbsp; Discussion of how
+the disk rotates, how it gets accelerated and so on, are completely irrelevant to the analysis of any sort of
+rotating frame within the context of special relativity.&nbsp; That analysis looks at what is simultaneous with
+what; and for that, we must appeal to the <a href=clock.html>Clock Postulate</a> to construct a plane of
+simultaneity at each event of interest.&nbsp; This, by the way, has nothing to do with the generally accepted
+meaning of <em>general</em> relativity as a theory of gravity.&nbsp; If one draws planes of simultaneity at various
+events in a rotating system, then one can form a halfway coherent picture of those events.&nbsp; It turns out to be
+impossible to construct a proper set of coordinates, but we can at least analyse the events in some way.&nbsp; That
+analysis simply has nothing to do with questions of the disk's structure and how it got spun up.&nbsp; To keep
+this distinction clear, we'll avoid the word <i>disk</i> for the rest of this page, and use "platform" instead.</p>
+
+<p>This idea of not worrying about the physics of creating a moving platform is universally taken for granted in
+the standard Lorentz transform studied throughout special relativity.&nbsp; There too, just how the "primed frame"
+was made to move is never discussed, and never has to be discussed if we wish only to discuss how the world appears
+from the platform's final state of motion.&nbsp; The platform is simply taken to have always been moving,
+forever.&nbsp; Any other treatment of its motion would only mask and complicate the underlying ideas, which concern
+the Lorentz transform and not questions of how to accelerate physical objects.&nbsp; We are content to treat a
+constant-velocity primed frame as having had its state of motion forever, so we do likewise for the rotating
+platform.&nbsp; We also don't demand that a constant-velocity frame must be associated with a massive object (such
+as a train) that might be moving so quickly that its momentum will contribute to the energy&ndash;momentum tensor
+to curve spacetime.&nbsp; Such a discussion applies to moving masses, but not to frames.&nbsp; A study of
+accelerating physical objects certainly has its place in special relativity, and there's nothing wrong with asking
+how a platform has been accelerated.&nbsp; But that is an advanced question of dynamics.</p>
+
+<p>One question with rotation involves the idea of the speed of light.&nbsp; Does rotation give problems with this
+speed?&nbsp; If we spin around on the spot, we see the Moon move around us in a huge circle, so isn't it travelling
+faster than light in our frame?&nbsp; It <em>is</em> travelling faster than the tabulated value of "<i>c</i>", but
+it is <em>not</em> travelling faster than light in its locality; after all, we agree that light is still escaping
+from its surface.&nbsp; In the language of special relativity, the Moon's world line always remains within its
+local light cone; it remains "timelike".&nbsp; In fact, this behaviour is no different to the well-accepted and
+well-understood behaviour of light in a uniformly accelerated frame, where the measured speed of light depends upon
+where in that frame it currently is.&nbsp; This speed can in fact have any value, from zero to infinity.&nbsp; (See
+the FAQ entry <a href="movingClocks.html">Do moving clocks always run slowly?</a> for further discussion of
+this.)&nbsp; It's only in <em>inertial</em> frames that light's speed is postulated to have the value
+"<i>c</i>".</p>
+
+<p>A construction of a rotating platform that treats its points the most "democratically" gives the same helical
+shape in spacetime to the world lines of all points that lie at equal radii from the centre of rotation.&nbsp; In
+that case, the circumference of any circle of radius <i>r</i> is then <i>2&pi;r</i> by construction.&nbsp; If you
+draw various planes of simultaneity at a selection of events on the circumference of such a circle, you'll find
+that these planes are inclined, and are themselves spinning around.&nbsp; The result is that observers stationed at
+each of those events&mdash;fixed to points on the platform&mdash;measure their neighbours to be farther away than
+would be the case if the platform were not spinning.&nbsp; Those neighbours are measured as pushed somewhat toward
+the opposite side of the circle from the viewpoint of each observer.&nbsp; Also, each observer measures that
+observers immediately to his "east" (by which I mean those situated in the direction of rotation) are older than
+himself, neighbours to his immediate "west" are younger than himself, and observers on the opposite side to him
+from the centre of rotation have the same age as himself.&nbsp; This all means that the observers at rest on the
+platform cannot agree on the simultaneity of events.&nbsp; They can never construct a time coordinate that has the
+real meaning of time in the way that it does in an inertial frame.&nbsp; And this means that those observers simply
+don't constitute a frame.&nbsp; So the phrase "relativistic rotating frame" is a contradiction in terms; no such
+frame can exist.</p>
+
+<p>The non-existence of a relativistic rotating frame is recognised in the field of GPS, the Global Positioning
+System that is used ubiquitously in our modern world to run both our positioning systems and our clocks.&nbsp; Our
+modern Greenwich Mean Time is provided by GPS.&nbsp; This modern version of GMT is defined a little more
+stringently than GMT was, and so has been given the new name "UTC" (the acronym's meaning isn't relevant
+here).&nbsp; UTC is a valid global time for the "Earth-Centred Inertial Frame" (ECI) in which Earth spins, because
+inertial frames <em>do</em> admit a global time.&nbsp; UTC is <em>not</em> a global time for the "Earth-Centred
+Earth-Fixed frame" (ECEF) in which we live our daily lives, because the ECEF is a rotating frame in the
+non-relativistic sense of the word, and so cannot support a global time coordinate with the same meaning as the
+time used in an inertial frame.&nbsp; That is, when two events have the same UTC time, they are simultaneous for
+all observers at rest in the ECI, but they are not necessarily simultaneous for any observers in the ECEF, and in
+fact those two events can be off by as many as 30 nanoseconds in the ECEF.&nbsp; The operation of the GPS location
+algorithm isn't affected by this, because that algorithm with its global time coordinate is based on the ECI.</p>
+
+<p>You can appreciate that the time shown by a GPS receiver, while being an ECI time, is <em>not</em> a true ECEF
+time, when you ask what the famous twins of the "Twin Paradox" would see if they each carried such a receiver with
+them on their separate trips, as well as ideal wrist watches.&nbsp; Before parting, their receivers and wrist
+watches would show identical times, as they should.&nbsp; The stay-at-home twin then sits for a year, while the
+other twin goes travelling at high speed (either in space or on Earth).&nbsp; When they re-unite, the stay-at-home
+twin is older and his wrist watch shows a later time than his sibling, as expected.&nbsp; But the twins will say
+that the same amount of UTC elapsed for each, because this time is what is shown on their GPS receivers, which take
+their time from satellites.&nbsp; So elapsed UTC time is not a real time for the twins in the way that their wrist
+watches and ageing bodies show real time (proper time).</p>
+
+<p>The Born metric that you'll find in discussions of rotation in relativity sets the time coordinate <i>t'</i> on the
+rotating platform to equal the time coordinate <i>t</i> of the surrounding inertial frame.&nbsp; This is akin to using
+UTC in the ECEF: it has not "correct" relativistically, even if it might be as good as we can do in practice.&nbsp;
+Such "rotating coordinates" can be trivially defined for an <em>inertial frame</em>, but they don't create
+a <em>rotating frame</em>; they do nothing more than describe the inertial frame in rotating coordinates.&nbsp; Of
+course, one can always <em>define</em> a coordinate <i>t'</i> in that way, but that coordinate has no relativistic
+significance, just as the Galilei transform <i>t' = t</i> doesn't give you a real time for an inertial frame.&nbsp;
+Obviously you have to use the Lorentz transform <i>t' = &gamma; (t &minus; vx/c<sup>2</sup>) + constant</i> to do
+that.&nbsp; That's the whole point of special relativity!</p>
+
+<p>The unfortunate fact is that many in the precision-timing world think that creating a set of rotating coordinates
+that describe an inertial frame actually produces a relativistic rotating frame.&nbsp; This misconception highlights
+the increasing need for a proper awareness of time on a rotating platform in modern physics, as our (rotating) world's
+timing requirements become ever more exacting.&nbsp; Some of the many papers written in response to the 2012 OPERA
+neutrino experiment's suggestion of faster-than-light neutrinos discussed the time measurements that may or may not
+have been involved.&nbsp; Whatever their conclusions, these discussions showed that an understanding of UTC in
+high-precision experiments can be lacking in cases where its importance should be paramount.&nbsp; This is not a fault
+of experimenters; rather, it's a fault of the modern language of precision timing, which can easily suggest that UTC
+time is a meaningful time for the ECEF.&nbsp; Although UTC is <em>not</em> a meaningful time for the ECEF, we currently
+use it because we have nothing better.</p>
+
+<p>In discussions of rotation that relate to spinning disks, there are some who would represent spacetime on the
+edge of such a disk by a cylinder (which is certainly valid as far as simple pictures go), then cut the cylinder on
+a line parallel to the time axis, flatten the cylinder out, draw lines through events, and call those "lines of
+simultaneity".&nbsp; But this procedure mis-applies standard one-space-dimension ideas of simultaneity to two space
+dimensions, and that is not a meaningful thing to do; it's certainly not consistent with ideas of simultaneity
+already established by the Lorentz transform.&nbsp; We don't have the freedom to re-arrange spacetime into pieces
+that suit any arbitrary definition of simultaneity such as this one.&nbsp; Instead, the cylinder should be cut by
+a <em>plane</em> of simultaneity, and that plane certainly doesn't intersect the cylinder in a helix.&nbsp;
+Simultaneity's definition and its application (such as using this plane) was established by Einstein in accordance
+with the principles of relativity.&nbsp; And while in principle it's straightforward to analyse on a rotating
+platform, in practice the details are difficult.</p>
+
+<p><br></p>
+
+
+</body>
+</html>

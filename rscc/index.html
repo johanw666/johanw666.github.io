@@ -1,0 +1,164 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+<html>
+<head>
+<title>Remote service control center</title>
+<meta name="description" content="Remote service control center">
+<meta name="keywords" content="distributed.net, service client, service manager, windows NT">
+</head>
+<body background="../equation.gif" bgcolor="#ffffff" text="#000000" link="#0000ff" alink="#9999ff">
+
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+<h1 align="center">Remote service control center</h1>
+<hr>
+<strong>The current version is 6.3.</strong>
+<h2>What it is</h2>
+If you think it is a pain to maintain the Windows NT/2000/XP/2003 service
+client for the <a href="http://www.distributed.net/">distributed.net</a>
+efforts on many computers maybe I have the right tool for you. A remote
+management/monitoring tool for Windows NT, 2000 and XP: Remote Service Control
+Center - client for the NT Service Control manager. Install, configure, start
+and stop services across the network. The program is tested on NT 4, Win2000
+and XP professional. I <strong>don't know</strong> if it works on XP home.
+It <strong>should</strong> work on Vista as long as you don't mess with the
+Program Files directory.
+<p>
+This program is currently configured to handle Distributed.net clients and
+personal proxies but it can be modified for other services easily. The program
+is written with Borland C++ Builder version 3.0 and comes with full source code.
+Compiling on later BCB versions requires a minor modification in the source
+(this change is already commented in the code, just see where compilation
+fails).
+<p>
+The program is distributed under the terms of the <a href="COPYING">GNU General
+Public License</a>.
+
+<h2>Why and how</h2>
+I came to this idea after seeing the remote cows util by Magnus Logi Magnusson.
+However, I wanted more functionality than this tool could offer, like the
+ability to manage both clients and personal proxies, and more options to
+change client settings.
+<p>
+However, since Magnus had contributed only a binary version without source,
+and didn't answer mail (my mail to him returned with error "mailbox quotum
+exceeded") I decided to rewrite this tool from scratch, but with the original
+user interface in mind.
+<p>
+I've sent my first version to Jeff Lawson from Distributed.net, and after
+some discussions I present here the current version. Full source code is
+supplied, and I distribute this under the GNU General Public License.
+
+<h2>How to use</h2>
+The program is easy to use. Simply unpack the binary distribution in a
+directory, or compile the source and place rscc.exe somewhere. The program
+will create an ini file so you need write permission in that directory.
+<p>
+When the program is started you can add computer names by hand, or you can have
+the program scan the windows network and place all computer names it finds on
+the main screen (this can be rather slow on large or segmented networks).
+Right-clicking on a computer name brings up a context-sensitive popup menu.
+<p>
+<img src="mainform.gif">
+<p>
+If you check a checkbox in front of a computername it will try to connect
+with its service manager and display status information, or, if it can't
+find any status information or service manager, it will tell you that.
+<p>
+Now you can enter the default settings, like where the clients should be
+installed on the remote computers and which client executable and inifile
+to use. The program maintains two sets of settings, one for the client and
+one for the personal proxy.
+<p>
+<img src="defsetup.gif">
+<p>
+Once installed you can change the configuration of a running client.
+<p>
+<img src="config.gif">
+<p>
+and add computernames manually if required.
+<p>
+<img src="addpc.gif">
+<p>
+You can also edit remote configuration files:
+<p>
+<img src="edit.gif">
+<p>
+and view logfiles. The program can do some analyzing of proxy logfiles (it
+can calculate how much RC5 blocks and/or OGR stubs are sent) but for extensive
+logfile analyzing other programs are better suited.
+<p>
+<img src="logfile.gif">
+<p>
+If you normally don't login with a domain administrator account and
+therefore can't change the configuration on remote computers, the program
+has a feature to run under another user account. Your current account
+requires the right "to run as a part of the operating system". Usually
+accounts don't have this right (even administrator accounts don't have it
+by default), and if you have sufficient rights the program will try to add
+this privilege to your account. Otherwise you should log in under an
+administrator account and set it manually (for NT4, see the checkbox advanced
+user options in the NT user manager; for Windows 2000, add the account under
+which you will be running rscc under this privilige in Administrative tools
+-> Local security policy -> Local policies -> User rights -> User rights
+Assignment). If you have insufficient rights the program will tell you if
+you try to run it in another user context.
+<p>
+<img src="account.gif">
+<p>
+The username, password and domain name will be stored in the program ini file.
+By default they will be encrypted with RC5 with a fixed key so no password will
+be asked at program start. This is of course a <em>security risk</em>, anyone
+who can read the program source can also decrypt the password if he can get the
+inifile.
+<p>
+Therefore you can also supply a user-defined pssword for the RC5 encryption of
+these data. If you choose this the program will ask this password when it
+starts.
+<p>
+The login data is never saved in plain text and is written out with the maximum
+field lengths to prevent anyone from finding the password length by just
+looking at the inifile (usefull for very short passwords that can be
+brute-forced).
+<p>
+If you feel that even this is too unsafe, you can always type in the login
+information each time you start the program. But remember that NT saves this
+info with a much weaker encryption than RC5 (see
+<a href="http://www.l0pht.com/">http://www.l0pht.com/</a> for more information
+on this subject).
+
+<h2>Download</h2>
+Here you can download the current version of the program. If you store
+login information in the inifile and you're upgrading from version 3.0 or
+below you should reenter this information.
+<p>
+Note: the specific client commands (fetch, fluch, update and connect) work
+with client 468 and up. The proxy commands are not yet implemented in
+proxy 341, except the commands for the <strong>local</strong> proxy. The
+reload configuration option does not work with proxy up to and including 341.
+When they will be integrated is still unsure. These commands will silently
+fail when applied to a service that does not support them.
+<ul>
+<li><a href="rscc-src-6.3.zip">rscc-src-6.3.zip</a> (111kb):
+    Source code (requires Borland C++ Builder 3 or higher to compile.
+<li><a href="rscc-bin-6.3.zip">rscc-bin-6.3.zip</a> (240kb):
+    Binary version: unpack and run.
+</ul>
+
+<h2>Version history</h2>
+A <a href="versions.html">list of changes, improvements and bugfixes</a>
+can be found here.
+
+<h2>Teams</h2>
+If you like this program, please consider to join team
+<a href="http://stats.distributed.net/rc5-64/tsearch.php3?st=knights+of+xenu">
+Knights of Xenu - exposing scientology</a>. For information about why you
+should oppose $cientology, see <a href="../CoS/index.html">Scientology versus
+the net</a>.
+<hr>
+<a href="../index.html"><-- Return to the main page</a>
+<hr>
+
+</body>
+</html>
+

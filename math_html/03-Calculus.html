@@ -1,0 +1,411 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Calculus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="3">3. Calculus</a></h1>
+<h2><a name="3.1">3.1 Integrals</a></h2>
+<h3><a name="3.1.1">3.1.1 Arithmetic rules</a></h3>
+The primitive function $F(x)$ of $f(x)$ obeys the rule $F'(x)=f(x)$. With
+$F(x)$ the primitive of $f(x)$ holds for the definite integral
+\[
+\int\limits_a^bf(x)dx=F(b)-F(a)
+\]
+If $u=f(x)$ holds:
+\[
+\int\limits_a^bg(f(x))df(x)=\int\limits_{f(a)}^{f(b)}g(u)du
+\]
+<strong>Partial integration</strong>: with $F$ and $G$ the primitives of $f$ and $g$
+holds:
+\[
+\int f(x)\cdot g(x)dx=f(x)G(x)-\int G(x)\frac{df(x)}{dx}dx
+\]
+A derivative can be brought under the intergral sign (see <a href="01-Basics.html#1.8.3">section 1.8.3</a> for the required conditions):
+\[
+\frac{d}{dy}\left[\int\limits_{x=g(y)}^{x=h(y)}f(x,y)dx\right]=
+\int\limits_{x=g(y)}^{x=h(y)}\frac{\partial f(x,y)}{\partial y}dx-f(g(y),y)\frac{dg(y)}{dy}+f(h(y),y)\frac{dh(y)}{dy}
+\]
+
+<h3><a name="3.1.2">3.1.2 Arc lengts, surfaces and volumes</a></h3>
+The arc length $\ell$ of a curve $y(x)$ is given by:
+\[
+\ell=\int\sqrt{1+\left(\frac{dy(x)}{dx}\right)^2}dx
+\]
+The arc length $\ell$ of a parameter curve $F(\vec{x}(t))$ is:
+\[
+\ell=\int Fds=\int F(\vec{x}(t))|\dot{\vec{x}}(t)|dt
+\]
+with
+\[
+\vec{t}=\frac{d\vec{x}}{ds}=\frac{\dot{\vec{x}}(t)}{|\dot{\vec{x}}(t)|}~~~,~~|\vec{t}~|=1
+\]
+\[
+\int(\vec{v},\vec{t})ds=\int(\vec{v},\dot{\vec{t}}(t))dt=\int(v_1dx+v_2dy+v_3dz)
+\]
+The surface $A$ of a solid of revolution is:
+\[
+A=2\pi\int y\sqrt{1+\left(\frac{dy(x)}{dx}\right)^2}dx
+\]
+The volume $V$ of a solid of revolution is:
+\[
+V=\pi\int f^2(x)dx
+\]
+
+<h3><a name="3.1.3">3.1.3 Separation of quotients</a></h3>
+Every rational function $P(x)/Q(x)$ where $P$ and $Q$ are polynomials can be
+written as a linear combination of functions of the type $(x-a)^k$ with
+$k\in\mathbb{Z}$, and of functions of the type
+\[
+\frac{px+q}{((x-a)^2+b^2)^n}
+\]
+with $b>0$ and $n\in I\hspace{-1mm}N$. So:
+\[
+\frac{p(x)}{(x-a)^n}=\sum_{k=1}^n\frac{A_k}{(x-a)^k}~~,~~~
+\frac{p(x)}{((x-b)^2+c^2)^n}=\sum_{k=1}^n \frac{A_kx+B}{((x-b)^2+c^2)^k}
+\]
+Recurrent relation: for $n\neq0$ holds:
+\[
+\int\frac{dx}{(x^2+1)^{n+1}}=\frac{1}{2n}\frac{x}{(x^2+1)^n}+\frac{2n-1}{2n}\int\frac{dx}{(x^2+1)^n}
+\]
+
+<h3><a name="3.1.4">3.1.4 Special functions</a></h3>
+<h4><a name="3.1.4.1">3.1.4.1 Elliptic functions</a></h4>
+Elliptic functions can be written as a power series as follows:
+\[
+\sqrt{1-k^2\sin^2(x)}=1-\sum_{n=1}^\infty\frac{(2n-1)!!}{(2n)!!(2n-1)}k^{2n}\sin^{2n}(x)
+\]
+\[
+\frac{1}{\sqrt{1-k^2\sin^2(x)}}=1+\sum_{n=1}^\infty\frac{(2n-1)!!}{(2n)!!}k^{2n}\sin^{2n}(x)
+\]
+with $n!!=n(n-2)!!$.
+
+<h4><a name="3.1.4.2">3.1.4.2 The Gamma function<a></h4>
+The gamma function $\Gamma(y)$ is defined by:
+\[
+\Gamma(y)=\int\limits_0^\infty{\rm e}^{-x}x^{y-1}dx
+\]
+One can derive that $\Gamma(y+1)=y\Gamma(y)=y!$. This is a way to define
+faculties for non-integers. Further one can derive that
+\[
+\Gamma(n+\frac{1}{2})=\frac{\sqrt{\pi}}{2^n}(2n-1)!!~~\mbox{and}~~
+\Gamma^{(n)}(y)=\int\limits_0^\infty{\rm e}^{-x}x^{y-1}\ln^n(x)dx
+\]
+
+<h4><a name="3.1.4.3">3.1.4.3 The Beta function<a></h4>
+The betafunction $\beta(p,q)$ is defined by:
+\[
+\beta(p,q)=\int\limits_0^1x^{p-1}(1-x)^{q-1}dx
+\]
+with $p$ and $q$ $>0$. The beta and gamma functions are related by the
+following equation:
+\[
+\beta(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}
+\]
+
+<h4><a name="3.1.4.4">3.1.4.4 The Delta function<a></h4>
+The delta function $\delta(x)$ is an infinitely thin peak function with
+surface 1. It can be defined by:
+\[
+\delta(x)=\lim_{\varepsilon\rightarrow0}P(\varepsilon,x)~~\mbox{with}~~
+P(\varepsilon,x)=\left\{
+\begin{array}{l}
+0~~~\mbox{for}~|x|>\varepsilon\\
+\displaystyle\frac{1}{2\varepsilon}~~~\mbox{when}~|x|<\varepsilon
+\end{array}\right.
+\]
+Some properties are:
+\[
+\int\limits_{-\infty}^\infty\delta(x)dx=1~~,~~~
+\int\limits_{-\infty}^\infty F(x)\delta(x)dx=F(0)
+\]
+
+<h3><a name="3.1.5">3.1.5 Goniometric integrals</a></h3>
+When solving goniometric integrals it can be useful to change variables. The
+following holds if one defines $\tan(\frac{1}{2}x):=t$:
+\[
+dx=\frac{2dt}{1+t^2}~,~~\cos(x)=\frac{1-t^2}{1+t^2}~,~~\sin(x)=\frac{2t}{1+t^2}
+\]
+Each integral of the type $\int R(x,\sqrt{ax^2+bx+c})dx$ can be converted into
+one of the types that were treated in <a href="#3.1.3"><strong>section 3.1.3</strong></a>.
+After this conversion one can substitute in the integrals of the type:
+\begin{eqnarray*}
+\int R(x,\sqrt{x^2+1})dx&~:~~&x=\tan(\varphi)          ~,dx=\frac{d\varphi}{\cos(\varphi)}               ~~\mbox{or}~~\sqrt{x^2+1}=t+x\\
+\int R(x,\sqrt{1-x^2})dx&~:~~&x=\sin(\varphi)          ~,dx=\cos(\varphi)d\varphi                        ~~\mbox{or}~~\sqrt{1-x^2}=1-tx\\
+\int R(x,\sqrt{x^2-1})dx&~:~~&x=\frac{1}{\cos(\varphi)}~,dx=\frac{\sin(\varphi)}{\cos^2(\varphi)}d\varphi~~\mbox{or}~~\sqrt{x^2-1}=x-t
+\end{eqnarray*}
+These definite integrals are easily solved:
+\[
+\int\limits_0^{\pi/2}\cos^n(x)\sin^m(x)dx=\frac{(n-1)!!(m-1)!!}{(m+n)!!}\cdot
+\left\{\begin{array}{l}
+\pi/2\;\;\mbox{when $m$ and $n$ are both even}\\
+1\;\;\;\;\mbox{in all other cases}
+\end{array}\right.
+\]
+Some important integrals are:
+\[
+\int\limits_0^\infty\frac{xdx}{{\rm e}^{ax}+1}=\frac{\pi^2}{12a^2}~~,~~
+\int\limits_{-\infty}^\infty\frac{x^2dx}{({\rm e}^x+1)^2}=\frac{\pi^2}{3}~~,~~
+\int\limits_0^\infty\frac{x^3dx}{{\rm e}^x-1}=\frac{\pi^4}{15}
+\]
+
+<h2><a name="3.2">3.2 Functions with more variables</a></h2>
+<h3><a name="3.2.1">3.2.1 Derivatives</a></h3>
+The <em>partial derivative</em> with respect to $x$ of a function $f(x,y)$ is defined by:
+\[
+\left(\frac{\partial f}{\partial x}\right)_{x_0}=\lim_{h\rightarrow0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h}
+\]
+The <em>directional derivative</em> in the direction of $\alpha$ is defined by:
+\[
+\frac{\partial f}{\partial\alpha}=\lim_{r\downarrow0}\frac{f(x_0+r\cos(\alpha),y_0+r\sin(\alpha))-f(x_0,y_0)}{r}=
+(\vec{\nabla}f,(\sin\alpha,\cos\alpha))=\frac{\nabla f\cdot\vec{v}}{|\vec{v}|}
+\]
+When one changes to coordinates $f(x(u,v),y(u,v))$ holds:
+\[
+\frac{\partial f}{\partial u}=\frac{\partial f}{\partial x}\frac{\partial x}{\partial u}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial u}
+\]
+If $x(t)$ and $y(t)$ depend only on one parameter $t$ holds:
+\[
+\frac{\partial f}{\partial t}=\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}
+\]
+The <em>total differential</em> $df$ of a function of 3 variables is given by:
+\[
+df=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz
+\]
+So
+\[
+\frac{df}{dx}=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}\frac{dy}{dx}+\frac{\partial f}{\partial z}\frac{dz}{dx}
+\]
+The <em>tangent</em> in point $\vec{x}_0$ at the surface $f(x,y)=0$ is given by
+the equation $f_x(\vec{x}_0)(x-x_0)+f_y(\vec{x}_0)(y-y_0)=0$.
+<p>
+The <em>tangent plane</em> in $\vec{x}_0$ is given by:
+$f_x(\vec{x}_0)(x-x_0)+f_y(\vec{x}_0)(y-y_0)=z-f(\vec{x}_0)$.
+
+<h3><a name="3.2.2">3.2.2 Taylor series</a></h3>
+A function of two variables can be expanded as follows in a Taylor series:
+\[
+f(x_0+h,y_0+k)=\sum\limits_{p=0}^n \frac{1}{p!}
+\left(h\frac{\partial^p}{\partial x^p}+k\frac{\partial^p}{\partial y^p}\right)f(x_0,y_0)+R(n)
+\]
+with $R(n)$ the residual error and
+\[
+\left(h\frac{\partial^p}{\partial x^p}+k\frac{\partial^p}{\partial y^p}\right)f(a,b)=\sum\limits_{m=0}^p{p\choose m}
+h^mk^{p-m}\frac{\partial^pf(a,b)}{\partial x^m\partial y^{p-m}}
+\]
+
+<h3><a name="3.2.3">3.2.3 Extrema</a></h3>
+When $f$ is continuous on a compact boundary $V$ there exists a global
+maximum and a global minumum for $f$ on this boundary. A boundary is called
+compact if it is limited and closed.
+<p>
+Possible extrema of $f(x,y)$ on a boundary $V\in I\hspace{-1mm}R^2$ are:
+<ol>
+<li>Points on $V$ where $f(x,y)$ is not differentiable,</li>
+<li>Points where $\vec{\nabla}f=\vec{0}$,</li>
+<li>If the boundary $V$ is given by $\varphi(x,y)=0$, than all points where
+      $\vec{\nabla}f(x,y)+\lambda\vec{\nabla}\varphi(x,y)=0$ are possible
+      for extrema. This is the multiplicator method of Lagrange, $\lambda$
+      is called a multiplicator.</li>
+</ol>
+<p>
+The same as in $I\hspace{-1mm}R^2$ holds in $I\hspace{-1mm}R^3$ when the area to be searched is
+constrained by a compact $V$, and $V$ is defined by $\varphi_1(x,y,z)=0$ and
+$\varphi_2(x,y,z)=0$ for extrema of $f(x,y,z)$ for points (1) and (2).
+Point (3) is rewritten as follows: possible extrema are points where
+$\vec{\nabla}f(x,y,z)+\lambda_1\vec{\nabla}\varphi_1(x,y,z)+\lambda_2\vec{\nabla}\varphi_2(x,y,z)=0$.
+
+<h3><a name="3.2.4">3.2.4 The $\nabla$-operator</a></h3>
+In cartesian coordinates $(x,y,z)$ holds:
+\begin{eqnarray*}
+\vec{\nabla}     &=&\frac{\partial}{\partial x}\vec{e}_{x}+\frac{\partial}{\partial y}\vec{e}_{y}+\frac{\partial}{\partial z}\vec{e}_{z}\\
+{\rm grad}f      &=&\frac{\partial f}{\partial x}\vec{e}_{x}+\frac{\partial f}{\partial y}\vec{e}_{y}+\frac{\partial f}{\partial z}\vec{e}_{z}\\
+{\rm div}~\vec{a}&=&\frac{\partial a_x}{\partial x}+\frac{\partial a_y}{\partial y}+\frac{\partial a_z}{\partial z}\\
+{\rm curl}~\vec{a}&=&\left(\frac{\partial a_z}{\partial y}-\frac{\partial a_y}{\partial z}\right)\vec{e}_{x}+
+                    \left(\frac{\partial a_x}{\partial z}-\frac{\partial a_z}{\partial x}\right)\vec{e}_{y}+
+                    \left(\frac{\partial a_y}{\partial x}-\frac{\partial a_x}{\partial y}\right)\vec{e}_{z}\\
+\nabla^2 f       &=&\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}+\frac{\partial^2f}{\partial z^2}
+\end{eqnarray*}
+<p>
+In cylindrical coordinates $(r,\varphi,z)$ holds:
+\begin{eqnarray*}
+\vec{\nabla}     &=&\frac{\partial}{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial}{\partial\varphi}\vec{e}_{\varphi}+\frac{\partial}{\partial z}\vec{e}_{z}\\
+{\rm grad}f      &=&\frac{\partial f}{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial f}{\partial\varphi}\vec{e}_{\varphi}+\frac{\partial f}{\partial z}\vec{e}_{z}\\
+{\rm div}~\vec{a}&=&\frac{\partial a_r}{\partial r}+\frac{a_r}{r}+\frac{1}{r}\frac{\partial a_\varphi}{\partial\varphi}+\frac{\partial a_z}{\partial z}\\
+{\rm curl}~\vec{a}&=&\left(\frac{1}{r}\frac{\partial a_z}{\partial\varphi}-\frac{\partial a_\varphi}{\partial z}\right)\vec{e}_{r}+
+                    \left(\frac{\partial a_r}{\partial z}-\frac{\partial a_z}{\partial r}\right)\vec{e}_{\varphi}+
+                    \left(\frac{\partial a_\varphi}{\partial r}+\frac{a_\varphi}{r}-\frac{1}{r}\frac{\partial a_r}{\partial\varphi}\right)\vec{e}_{z}\\
+\nabla^2 f       &=&\frac{\partial^2f}{\partial r^2}+\frac{1}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2}\frac{\partial^2f}{\partial\varphi^2}+\frac{\partial^2f}{\partial z^2}
+\end{eqnarray*}
+<p>
+In spherical coordinates $(r,\theta,\varphi)$ holds:
+\begin{eqnarray*}
+\vec{\nabla}     &=&\frac{}\partial{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial}{\partial\theta}\vec{e}_{\theta}+\frac{1}{r\sin\theta}\frac{\partial}{\partial\varphi}\vec{e}_{\varphi}\\
+{\rm grad}f      &=&\frac{\partial f}{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial f}{\partial\theta}\vec{e}_{\theta}+\frac{1}{r\sin\theta}\frac{\partial f}{\partial\varphi}\vec{e}_{\varphi}\\
+{\rm div}~\vec{a}&=&\frac{\partial a_r}{\partial r}+\frac{2a_r}{r}+\frac{1}{r}\frac{\partial a_\theta}{\partial\theta}+\frac{a_\theta}{r\tan\theta}+\frac{1}{r\sin\theta}\frac{\partial a_\varphi}{\partial\varphi}\\
+{\rm curl}~\vec{a}&=&\left(\frac{1}{r}\frac{\partial a_\varphi}{\partial\theta}+\frac{a_\theta}{r\tan\theta}-\frac{1}{r\sin\theta}\frac{\partial a_\theta}{\partial\varphi}\right)\vec{e}_{r}+
+                    \left(\frac{1}{r\sin\theta}\frac{\partial a_r}{\partial\varphi}-\frac{\partial a_\varphi}{\partial r}-\frac{a_\varphi}{r}\right)\vec{e}_{\theta}+
+                    \left(\frac{\partial a_\theta}{\partial r}+\frac{a_\theta}{r}-\frac{1}{r}\frac{\partial a_r}{\partial\theta}\right)\vec{e}_{\varphi}\\
+\nabla^2 f       &=&\frac{\partial^2f}{\partial r^2}+\frac{2}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2}\frac{\partial^2f}{\partial\theta^2}+\frac{1}{r^2\tan\theta}\frac{\partial f}{\partial\theta}+\frac{1}{r^2\sin^2\theta}\frac{\partial^2f}{\partial\varphi^2}
+\end{eqnarray*}
+<p>
+General orthonormal curvilinear coordinates $(u,v,w)$ can be derived from
+cartesian coordinates by the transformation $\vec{x}=\vec{x}(u,v,w)$. The unit
+vectors are given by:
+\[
+\vec{e}_{u}=\frac{1}{h_1}\frac{\partial\vec{x}}{\partial u}~,~~ \vec{e}_{v}=\frac{1}{h_2}\frac{\partial\vec{x}}{\partial v}~,~~
+\vec{e}_{w}=\frac{1}{h_3}\frac{\partial\vec{x}}{\partial w}
+\]
+where the terms $h_i$ give normalization to length 1. The differential operators are than given by:
+\begin{eqnarray*}
+{\rm grad}f      &=&\frac{1}{h_1}\frac{\partial f}{\partial u}\vec{e}_{u}+\frac{1}{h_2}\frac{\partial f}{\partial v}\vec{e}_{v}+\frac{1}{h_3}\frac{\partial f}{\partial w}\vec{e}_{w}\\
+{\rm div}~\vec{a}&=&\frac{1}{h_1h_2h_3}\left(\frac{\partial}{\partial u}(h_2h_3a_u)+\frac{\partial}{\partial v}(h_3h_1a_v)+\frac{\partial}{\partial w}(h_1h_2a_w)\right)\\
+{\rm curl}~\vec{a}&=&\frac{1}{h_2h_3}\left(\frac{\partial(h_3a_w)}{\partial v}-\frac{\partial(h_2a_v)}{\partial w}\right)\vec{e}_{u}+
+                    \frac{1}{h_3h_1}\left(\frac{\partial(h_1a_u)}{\partial w}-\frac{\partial(h_3a_w)}{\partial u}\right)\vec{e}_{v}+
+                    \frac{1}{h_1h_2}\left(\frac{\partial(h_2a_v)}{\partial u}-\frac{\partial(h_1a_u)}{\partial v}\right)\vec{e}_{w}\\
+\nabla^2 f       &=&\frac{1}{h_1h_2h_3}\left[\frac{\partial}{\partial u}\left(\frac{h_2h_3}{h_1}\frac{\partial f}{\partial u}\right)+
+                    \frac{\partial}{\partial v}\left(\frac{h_3h_1}{h_2}\frac{\partial f}{\partial v}\right)+
+                    \frac{\partial}{\partial w}\left(\frac{h_1h_2}{h_3}\frac{\partial f}{\partial w}\right)\right]
+\end{eqnarray*}
+<p>
+Some properties of the $\nabla$-operator are:
+\[
+\begin{array}{l@{~~~~~}l@{~~~~~}l}
+{\rm div}(\phi\vec{v})=\phi{\rm div}\vec{v}+{\rm grad}\phi\cdot\vec{v}&
+{\rm curl}(\phi\vec{v})=\phi{\rm curl}\vec{v}+({\rm grad}\phi)\times\vec{v}&{\rm curl~grad}\phi=\vec{0}\\
+{\rm div}(\vec{u}\times\vec{v})=\vec{v}\cdot({\rm curl}\vec{u})-\vec{u}\cdot({\rm curl}\vec{v})&
+{\rm curl~curl}\vec{v}={\rm grad~div}\vec{v}-\nabla^2\vec{v}&{\rm div~curl}\vec{v}=0\\
+{\rm div~grad}\phi=\nabla^2\phi&\nabla^2\vec{v}\equiv(\nabla^2v_1,\nabla^2v_2,\nabla^2v_3)
+\end{array}
+\]
+Here, $\vec{v}$ is an arbitrary vectorfield and $\phi$ an arbitrary scalar field.
+
+<h3><a name="3.2.5">3.2.5 Integral theorems</a></h3>
+Some important integral theorems are:
+<p align="center">
+<table align="center" border=0>
+<tr>
+<td>Gauss:</td> <td>$\displaystyle\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc (\vec{v}\cdot\vec{n})d^2A=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int({\rm div}\vec{v})d^3V$</td>
+<tr>
+<td>Stokes for a scalar field:</td> <td>$\displaystyle\oint(\phi\cdot\vec{e}_t)ds=\int\hspace{-1.5ex}\int(\vec{n}\times{\rm grad}\phi)d^2A$</td>
+<tr>
+<td>Stokes for a vector field:</td> <td>$\displaystyle\oint(\vec{v}\cdot\vec{e}_t)ds=\iint({\rm curl}\vec{v}\cdot\vec{n})d^2A$</td>
+<tr>
+<td>this gives:</td> <td>$\displaystyle\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc({\rm curl}\vec{v}\cdot\vec{n})d^2A=0$</td>
+<tr>
+<td>Ostrogradsky:</td> <td>$\displaystyle\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc(\vec{n}\times\vec{v})d^2A=\iiint({\rm curl}\vec{v})d^3A$</td>
+<tr>
+<td></td> <td>$\displaystyle\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc(\phi\vec{n})d^2A=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int({\rm grad}\phi)d^3V$</td>
+</table>
+</p>
+Here the orientable surface $\int\hspace{-1mm}\int d^2A$ is bounded by the Jordan curve $s(t)$.
+
+<h3><a name="3.2.6">3.2.6 Multiple integrals</a></h3>
+Let $A$ be a closed curve given by $f(x,y)=0$, than the surface $A$ inside
+the curve in $I\hspace{-1mm}R^2$ is given by
+\[
+A=\int\hspace{-1.5ex}\int d^2A=\int\hspace{-1.5ex}\int dxdy
+\]
+Let the surface $A$ be defined by the function $z=f(x,y)$. The volume $V$
+bounded by $A$ and the $xy$ plane is than given by:
+\[
+V=\int\hspace{-1.5ex}\int f(x,y)dxdy
+\]
+The volume inside a closed surface defined by $z=f(x,y)$ is given by:
+\[
+V=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int d^3V=\iint f(x,y)dxdy=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int dxdydz
+\]
+
+<h3><a name="3.2.7">3.2.7 Coordinate transformations</a></h3>
+The expressions $d^2A$ and $d^3V$ transform as follows when one changes
+coordinates to $\vec{u}=(u,v,w)$ through the transformation $x(u,v,w)$:
+\[
+V=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int f(x,y,z)dxdydz=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int f(\vec{x}(\vec{u}))\left|\frac{\partial\vec{x}}{\partial\vec{u}}\right|dudvdw
+\]
+In $I\hspace{-1mm}R^2$ holds:
+\[
+\frac{\partial\vec{x}}{\partial\vec{u}}=\left|\begin{array}{cc}x_u&x_v\\ y_u&y_v\end{array}\right|
+\]
+Let the surface $A$ be defined by $z=F(x,y)=X(u,v)$. Than the volume bounded by
+the $xy$ plane and $F$ is given by:
+\[
+\int\hspace{-1.5ex}\int\limits_Sf(\vec{x})d^2A=\int\hspace{-1.5ex}\int\limits_Gf(\vec{x}(\vec{u}))
+\left|\frac{\partial X}{\partial u}\times\frac{\partial X}{\partial v}\right|dudv=
+\int\hspace{-1.5ex}\int\limits_Gf(x,y,F(x,y))\sqrt{1+\partial_xF^2+\partial_yF^2}dxdy
+\]
+
+<h2><a name="3.3">3.3 Orthogonality of functions</a></h2>
+The inner product of two functions $f(x)$ and $g(x)$ on the interval $[a,b]$ is given by:
+\[
+(f,g)=\int\limits_a^bf(x)g(x)dx
+\]
+or, when using a weight function $p(x)$, by:
+\[
+(f,g)=\int\limits_a^bp(x)f(x)g(x)dx
+\]
+The <em>norm</em> $\|f\|$ follows from: $\|f\|^2=(f,f)$. A set functions $f_i$
+is <em>orthonormal</em> if $(f_i,f_j)=\delta_{ij}$.
+<p>
+Each function $f(x)$ can be written as a sum of orthogonal functions:
+\[
+f(x)=\sum_{i=0}^\infty c_ig_i(x)
+\]
+and $\sum c_i^2\leq\|f\|^2$. Let the set $g_i$ be orthogonal, than it follows:
+\[
+c_i=\frac{(f,g_i)}{(g_i,g_i)}
+\]
+
+<h2><a name="3.4">3.4 Fourier series</a></h2>
+Each function can be written as a sum of independent base functions. When one
+chooses the orthogonal basis $(\cos(nx),\sin(nx))$ we have a Fourier series.
+<p>
+A periodical function $f(x)$ with period $2L$ can be written as:
+\[
+f(x)=a_0+\sum_{n=1}^\infty\left[a_n\cos\left(\frac{n\pi x}{L}\right)+b_n\sin\left(\frac{n\pi x}{L}\right)\right]
+\]
+Due to the orthogonality follows for the coefficients:
+\[
+a_0=\frac{1}{2L}\int\limits_{-L}^Lf(t)dt~~,~~
+a_n=\frac{1}{L}\int\limits_{-L}^Lf(t)\cos\left(\frac{n\pi t}{L}\right)dt~~,~~
+b_n=\frac{1}{L}\int\limits_{-L}^Lf(t)\sin\left(\frac{n\pi t}{L}\right)dt
+\]
+A Fourier series can also be written as a sum of complex exponents:
+\[
+f(x)=\sum_{n=-\infty}^\infty c_n{\rm e}^{inx}
+\]
+with
+\[
+c_n=\frac{1}{2\pi}\int\limits_{-\pi}^\pi f(x){\rm e}^{-inx}dx
+\]
+The <em>Fourier transform</em> of a function $f(x)$ gives the transformed function
+$\hat{f}(\omega)$:
+\[
+\hat{f}(\omega)=\frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^\infty f(x){\rm e}^{-i\omega x}dx
+\]
+The inverse transformation is given by:
+\[
+\frac{1}{2}\left[f(x^+)+f(x^-)\right]=\frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^\infty\hat{f}(\omega){\rm e}^{i\omega x}d\omega
+\]
+where $f(x^+)$ and $f(x^-)$ are defined by the lower - and upper limit:
+\[
+f(a^-)=\lim_{x\uparrow a}f(x)~~,~~f(a^+)=\lim_{x\downarrow a}f(x)
+\]
+For continuous functions is $\frac{1}{2}\left[f(x^+)+f(x^-)\right]=f(x)$.
+
+</body>
+</head>

@@ -1,0 +1,106 @@
+diff -r -C4 truecrypt-4.3a/Linux/Cli/Cli.c truecrypt-4.3a-source-code/Linux/Cli/Cli.c
+*** truecrypt-4.3a/Linux/Cli/Cli.c	Sun Apr 29 11:51:32 2007
+--- truecrypt-4.3a-source-code/Linux/Cli/Cli.c	Thu May 10 22:59:25 2007
+***************
+*** 121,153 ****
+  
+  
+  static BOOL CheckAdminPrivileges (int argc, char **argv)
+  {
+! 	char *env;
+  
+! 	if (getuid () != 0)
+! 	{
+! 		char *args[128];
+! 		int i;
+! 
+! 		args[0] = "sudo";
+! 		args[1] = "-p";
+! 		args[2] = "Enter %u's or root's system password: ";
+! 
+! 		for (i = 0; i < argc && i < 127; i++)
+! 			args[i + 3] = argv[i];
+! 
+! 		args[i + 3] = NULL;
+! 
+! 		execvp ("sudo", args);
+! 		perror ("Executing sudo failed");
+! 
+! 		error ("Administrator (root) privileges required\n");
+! 		return FALSE;
+! 	}
+  
+! 	setenv ("PATH", "/usr/sbin:/sbin:/usr/bin:/bin", 1);
+! 	return TRUE;
+  }
+  
+  
+  static BOOL LockMemory ()
+--- 121,146 ----
+  
+  
+  static BOOL CheckAdminPrivileges (int argc, char **argv)
+  {
+!         char *env;
+  
+!         if (getuid () != 0 && geteuid () != 0)
+!         {
+!                 error ("Administrator (root) privileges required\n");
+!                 return FALSE;
+!         }
+! 
+!         if (getuid () != 0)
+!         {
+!                 // Impersonate root to support execution of commands like mount
+!                 setuid (0);
+! 
+!                 // Allow execution of system binaries only
+!                 setenv ("PATH", "/usr/sbin:/sbin:/usr/bin:/bin", 1);
+!         }
+  
+!         return TRUE;
+  }
+  
+  
+  static BOOL LockMemory ()
+***************
+*** 2991,3004 ****
+  		{"version", 0, 0, 'V'},
+  		{0, 0, 0, 0}
+  	};
+  
+- 	if (getuid () != 0 && geteuid () == 0)
+- 	{
+- 		error ("Running with effective user id 0 (set-euid root) is not supported.\n");
+- 		return FALSE;
+- 	}
+- 
+  	// Make sure pipes will not use file descriptors <= STDERR_FILENO
+  	f = fdopen (STDIN_FILENO, "r");
+  	if (f == NULL)
+  		open ("/dev/null", 0);
+--- 2984,2991 ----
+diff -r -C4 truecrypt-4.3a/Linux/install.sh truecrypt-4.3a-source-code/Linux/install.sh
+*** truecrypt-4.3a/Linux/install.sh	Thu May  3 09:31:58 2007
+--- truecrypt-4.3a-source-code/Linux/install.sh	Thu May 10 23:02:04 2007
+***************
+*** 11,19 ****
+  MAN_DIR=/usr/share/man
+  SHARE_DIR=/usr/share/truecrypt
+  SHARE_DIR_DEF=$SHARE_DIR
+  MOD_DIR=/lib/modules/$(uname -r)/extra
+! BIN_PERM=755
+  
+  umask 022
+  
+  error ()
+--- 11,19 ----
+  MAN_DIR=/usr/share/man
+  SHARE_DIR=/usr/share/truecrypt
+  SHARE_DIR_DEF=$SHARE_DIR
+  MOD_DIR=/lib/modules/$(uname -r)/extra
+! BIN_PERM=4755
+  
+  umask 022
+  
+  error ()

@@ -1,0 +1,89 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Oscillations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="4">4. Oscillations</a></h1>
+<h2><a name="4.1">4.1 Harmonic oscillations</a></h2>
+
+<p>The general form of a harmonic oscillation is: \(\Psi(t)=\hat{\Psi}{\rm e}^{i(\omega t\pm\varphi)}\equiv\hat{\Psi}\cos(\omega t\pm\varphi)\),</p>
+
+<p>where \(\hat{\Psi}\) is the <em>amplitude</em>. A superposition of several harmonic oscillations <em>with the same frequency</em> results in another harmonic oscillation: \[\sum_i \hat{\Psi}_i\cos(\alpha_i\pm\omega t)=\hat{\Phi}\cos(\beta\pm\omega t)\] with:</p>
+
+<p>\[\tan(\beta)=\frac{\sum\limits_i\hat{\Psi}_i\sin(\alpha_i)}{\sum\limits_i\hat{\Psi}_i\cos(\alpha_i)}~~~\mbox{and}~~~ \hat{\Phi}^2=\sum_i\hat{\Psi}^2_i+2\sum_{j&gt;i}\sum_i\hat{\Psi}_i\hat{\Psi}_j\cos(\alpha_i-\alpha_j)\]</p>
+
+<p>For harmonic oscillations: \(\displaystyle\int x(t)dt=\frac{x(t)}{i\omega}\) and \(\displaystyle\frac{d^nx(t)}{dt^n}=(i\omega)^n x(t)\).</p>
+
+<h2><a name="4.2">4.2 Mechanic oscillations</a></h2>
+
+<p>For a construction with a spring with constant \(C\) parallel to a damping \(k\) which is connected to a mass \(M\), to which a periodic force \(F(t)=\hat{F}\cos(\omega t)\) is applied&nbsp;the equation of motion is \(m\ddot{x}=F(t)-k\dot{x}-Cx\). With complex amplitudes, this becomes \(-m\omega^2 x=F-Cx-ik\omega x\). With \(\omega_0^2=C/m\) follows:</p>
+
+<p>\[x=\frac{F}{m(\omega_0^2-\omega^2)+ik\omega}~~,\mbox{and for the velocity:}~~ \dot{x}=\frac{F}{i\sqrt{Cm}\delta+k}\]</p>
+
+<p>where \(\displaystyle\delta=\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\). The quantity \(Z=F/\dot{x}\) is called the <em>impedance</em> of the system. The <em>quality</em> of the system is given by \(\displaystyle Q=\frac{\sqrt{Cm}}{k}\).</p>
+
+<p>The frequency with minimal \(|Z|\) is called the&nbsp;<em>velocity resonance frequency</em>. This is equal to \(\omega_0\). In the <em>resonance curve</em> \(|Z|/\sqrt{Cm}\) is plotted against \(\omega/\omega_0\). The width of this curve is characterized by the points where \(|Z(\omega)|=|Z(\omega_0)|\sqrt{2}\). At these points: \(R=X\) and \(\delta=\pm Q^{-1}\), and the width is \(2\Delta\omega_{\rm B}=\omega_0/Q\).</p>
+
+<p>The <em>stiffness</em> of an oscillating system is given by \(F/x\). The <em>amplitude resonance frequency</em> \(\omega_{\rm A}\) is the frequency where \(i\omega Z\) is a minimum. This is the case for \(\omega_{\rm A}=\omega_0\sqrt{1-\frac{1}{2}Q^2}\).</p>
+
+<p>The <em>damping frequency</em> \(\omega_{\rm D}\) is a measure for the time in which an oscillating system comes to rest. It is given by \(\displaystyle\omega_{\rm D}=\omega_0\sqrt{1-\frac{1}{4Q^2}}\). A weak damped oscillation \((k^2&lt;4mC)\) dies out after \(T_{\rm D}=2\pi/\omega_{\rm D}\). For a <em>critically&nbsp;damped</em> oscillation \((k^2=4mC)\)&nbsp;\(\omega_{\rm D}=0\) holds. A strong damped oscillation \((k^2&gt;4mC)\) drops like (if \(k^2\gg 4mC\)) \(x(t)\approx x_0\exp(-t/\tau)\).</p>
+
+<h2><a name="4.3">4.3 Electric oscillations</a></h2>
+
+<p>The <em>impedance</em> is given by: \(Z=R+iX\). The phase angle is \(\varphi:=\arctan(X/R)\). The impedance of a resistor is \(R\), of a capacitor \(1/i\omega C\) and of a self inductor \(i\omega L\). The quality of a coil is \(Q=\omega L/R\). The total impedance in case several elements are positioned is given by:</p>
+
+<ol>
+    <li>Series connection: \(V=IZ\),&nbsp; &nbsp;<br />
+    \[Z_{\rm tot}=\sum_i Z_i~,~~L_{\rm tot}=\sum_i L_i~,~~ \frac{1}{C_{\rm tot}}=\sum_i\frac{1}{C_i}~,~~Q=\frac{Z_0}{R}~,~~ Z=R(1+iQ\delta)\]</li>
+    <li>Parallel connection: \(V=IZ\),&nbsp;<br />
+    \[\frac{1}{Z_{\rm tot}}=\sum_i\frac{1}{Z_i}~,~~ \frac{1}{L_{\rm tot}}=\sum_i\frac{1}{L_i}~,~~ C_{\rm tot}=\sum_i C_i~,~~Q=\frac{R}{Z_0}~,~~ Z=\frac{R}{1+iQ\delta}\] Here, \(\displaystyle Z_0=\sqrt{\frac{L}{C}}\) and \(\displaystyle\omega_0=\frac{1}{\sqrt{LC}}\).</li>
+</ol>
+
+<p>The power given by a source is given by \(P(t)=V(t)\cdot I(t)\), so \(\left\langle P \right\rangle_t=\hat{V}_{\rm eff}\hat{I}_{\rm eff}\cos(\Delta\phi)\)<br />
+\(=\frac{1}{2}\hat{V}\hat{I}\cos(\phi_v-\phi_i)=\frac{1}{2}\hat{I}^2{\rm Re}(Z)= \frac{1}{2}\hat{V}^2{\rm Re}(1/Z)\), where \(\cos(\Delta\phi)\) is the work factor.</p>
+
+<h2><a name="4.4">4.4 Waves in long conductors</a></h2>
+
+<p>If cables are used for signal transfer, e.g. coax cables then: \(\displaystyle Z_0=\sqrt{\frac{dL}{dx}\frac{dx}{dC}}\).<br />
+The transmission velocity is given by \(\displaystyle v=\sqrt{\frac{dx}{dL}\frac{dx}{dC}}\).</p>
+
+<h2><a name="4.5">4.5 Coupled conductors and transformers</a></h2>
+
+<p>For two coils enclosing each others flux&nbsp;if \(\Phi_{12}\) is the part of the flux originating from \(I_2\) through coil 2 which is enclosed by coil 1, then&nbsp;\(\Phi_{12}=M_{12}I_2\), \(\Phi_{21}=M_{21}I_1\). For the coefficients of mutual induction \(M_{ij}\) is given by:</p>
+
+<p>\[M_{12}=M_{21}:=M=k\sqrt{L_1L_2}=\frac{N_1\Phi_1}{I_2}=\frac{N_2\Phi_2}{I_1}\sim N_1N_2\]</p>
+
+<p>where \(0\leq k\leq1\) is the <em>coupling factor</em>. For a transformer &nbsp;\(k\approx1\). At full load:</p>
+
+<p>\[\frac{V_1}{V_2}=\frac{I_2}{I_1}=-\frac{i\omega M}{i\omega L_2+R_{\rm load}}\approx-\sqrt{\frac{L_1}{L_2}}=-\frac{N_1}{N_2}\]</p>
+
+<h2><a name="4.6">4.6 Pendulums</a></h2>
+
+<p>The oscillation time \(T=1/f\), and for different types of pendulums is given by:</p>
+
+<ul>
+    <li>Oscillating spring: \(T=2\pi\sqrt{m/C}\) if the spring force is given by \(F=C\cdot\Delta l\).</li>
+    <li>Physical pendulum: \(T=2\pi\sqrt{I/\tau}\) with \(\tau\) the moment of force and \(I\) the moment of inertia.</li>
+    <li>Torsion pendulum: \(T=2\pi\sqrt{I/\kappa}\) where \(\displaystyle\kappa=\frac{2lm}{\pi r^4\Delta\varphi}\) is the constant of torsion and \(I\) the moment of inertia.</li>
+    <li>Mathematical pendulum: \(T=2\pi\sqrt{l/g}\) with \(g\) the acceleration of gravity and \(l\) the length of the pendulum.</li>
+</ul>
+</div>
+
+</body>
+</html>

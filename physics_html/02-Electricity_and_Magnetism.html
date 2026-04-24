@@ -1,0 +1,189 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Electricity and Magnetism</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="2">2. Electricity and Magnetism</a></h1>
+<h2><a name="2.1">2.1 The Maxwell equations</a></h2>
+
+<p>The classical electromagnetic field can be described by the <span><em>Maxwell equations</em></span>. Those can be written both as differential and integral equations:</p>
+
+<p>\[\begin{array}{ll} \displaystyle\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~(\vec{D}\cdot\vec{n}\,)d^2A=Q_{\rm free,included}~~~~~~~~~~~~~ &amp;\displaystyle\nabla\cdot\vec{D}=\rho_{\rm free}\\ \displaystyle\int\hspace{-2ex}\int\hspace{-2.8ex}\bigcirc~(\vec{B}\cdot\vec{n}\,)d^2A=0 &amp;\displaystyle\nabla\cdot\vec{B}=0\\ \displaystyle\oint\vec{E}\cdot d\vec{s}=-\frac{d\Phi}{dt} &amp;\displaystyle\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\ \displaystyle\oint\vec{H}\cdot d\vec{s}=I_{\rm free,included}+\frac{d\Psi}{dt} &amp;\displaystyle\nabla\times\vec{H}=\vec{J}_{\rm free}+\frac{\partial \vec{D}}{\partial t} \end{array}\]</p>
+
+<p>For the fluxes: \[\displaystyle \Psi=\int\hspace{-1.5ex}\int(\vec{D}\cdot\vec{n}\,)d^2A\;, \;\;\displaystyle\Phi=\int\hspace{-1.5ex}\int(\vec{B}\cdot\vec{n}\,)d^2A\].</p>
+
+<p>The electric displacement \(\vec{D}\), polarization \(\vec{P}\) and electric field strength \(\vec{E}\) depend on each other according to:</p>
+
+<p>\[\vec{D}=\varepsilon_0\vec{E}+\vec{P}=\varepsilon_0\varepsilon_{\rm r}\vec{E} \;, \;\;\vec{P}=\sum\vec{p}_0/{\rm Vol}\;, \;\;\varepsilon_{\rm r}=1+\chi_{\rm e}\;, \textrm{with} \;\;\displaystyle\chi_{\rm e}=\frac{np_0^2}{3\varepsilon_0kT}\]</p>
+
+<p>The magnetic field strength \(\vec{H}\), the magnetization \(\vec{M}\) and the magnetic flux density \(\vec{B}\) depend on each other according to:</p>
+
+<p>\[\vec{B}=\mu_0(\vec{H}+\vec{M})=\mu_0\mu_{\rm r}\vec{H}\;, \;\vec{M}=\sum\vec{m}/{\rm Vol}\;, \;\mu_{\rm r}=1+\chi_{\rm m}\;, \textrm{with} \;\;\displaystyle\chi_{\rm m}=\frac{\mu_0nm_0^2}{3kT}\]</p>
+
+<h2><a name="2.2">2.2 Force and potential</a></h2>
+
+<p>The force and the electric field between 2 point charges are given by:</p>
+
+<p>\[\vec{F}_{12}=\frac{Q_1Q_2}{4\pi\varepsilon_0\varepsilon_{\rm r}r^2}\vec{e}_{r} ~;~~~\vec{E}=\frac{\vec{F}}{Q}\]</p>
+
+<p>The Lorentz force is the force which is felt by a charged particle that moves through a magnetic field. The origin of this force is a relativistic transformation of the Coulomb force: \(\vec{F}_{\rm L}=Q(\vec{v}\times\vec{B}\,)=l(\vec{I}\times\vec{B}\,)\).</p>
+
+<p>The magnetic field in point \(P\) which results from an electric current is given by the <span><em>law of Biot-Savart</em></span>, also known as the<em> law of Laplace.</em> In here, \(d\vec{l}\parallel\vec{I}\) and \(\vec{r}\) points from \(d\vec{l}\) to \(P\):</p>
+
+<p>\[d\vec{B}_P=\frac{\mu_0I}{4\pi r^2}d\vec{l}\times\vec{e}_{r}\]</p>
+
+<p>If the current is time-dependent one has to take <span><em>retardation</em></span> into account: the substitution \(I(t)\rightarrow I(t-r/c)\) has to be applied.</p>
+
+<p>The potentials are given by: \(\displaystyle V_{12}=-\int\limits_1^2\vec{E}\cdot d\vec{s}\) and \(\vec{A}=\frac{1}{2}\vec{B}\times\vec{r}\).</p>
+
+<p>Here, the freedom remains to apply a <span><em>gauge transformation</em></span>. The fields can be derived from the potentials as follows:</p>
+
+<p>\[\vec{E}=-\nabla V-\frac{\partial \vec{A}}{\partial t}~,~~~\vec{B}=\nabla\times\vec{A}\]</p>
+
+<p>Further the relation: \(c^2\vec{B}=\vec{v}\times\vec{E}\) holds.</p>
+
+<h2><a name="2.3">2.3 Gauge transformations</a></h2>
+
+<p>The potentials of the electromagnetic fields transform as follows when a gauge transformation is applied:</p>
+
+<p>\[\left\{\begin{array}{l} \vec{A}'=\vec{A}-\nabla f\\ \displaystyle V'=V+\frac{\partial f}{\partial t} \end{array}\right.\]</p>
+
+<p>so the fields \(\vec{E}\) and \(\vec{B}\) do not change. This results in a canonical transformation of the Hamiltonian. Further, the freedom remains to apply a limiting condition. Two common choices are:</p>
+
+<ol>
+    <li>Lorentz-gauge: \(\displaystyle\nabla\cdot\vec{A}+\frac{1}{c^2}\frac{\partial V}{\partial t}=0\). This separates the differential equations for \(\vec{A}\) and \(V\): \(\displaystyle\Box V=-\frac{\rho}{\varepsilon_0}\), \(\Box\vec{A}=-\mu_0\vec{J}\).</li>
+    <li>Coulomb gauge: \(\nabla\cdot\vec{A}=0\). If \(\rho=0\) and \(\vec{J}=0\),&nbsp;\(V=0\) and it follows&nbsp;that \(\vec{A}\) can be determined from&nbsp;\(\Box\vec{A}=0\).</li>
+</ol>
+
+<h2><a name="2.4">2.4 Energy of the electromagnetic field</a></h2>
+
+<p>The energy density of the electromagnetic field is:</p>
+
+<p>\[\frac{dW}{d{\rm Vol}}=w=\int HdB+\int EdD\]</p>
+
+<p>The energy density can be expressed in the potentials and currents as follows:</p>
+
+<p>\[w_{\rm mag}=\mbox{$\frac{1}{2}$}\int\vec{J}\cdot\vec{A}\,d^3x~~,~~w_{\rm el}=\mbox{$\frac{1}{2}$}\int\rho Vd^3x\]</p>
+
+<h2><a name="2.5">2.5 Electromagnetic waves</a></h2>
+<h3><a name="2.5.1">2.5.1 Electromagnetic waves in vacuum</a></h3>
+
+<p>The wave equation \(\Box\Psi(\vec{r},t)=-f(\vec{r},t)\) has the general solution, with \(c=(\varepsilon_0\mu_0)^{-1/2}\): \</p>
+
+<p>\[\vec{D}=\varepsilon_0\vec{E}+\vec{P}=\varepsilon_0\varepsilon_{\rm r}\vec{E} \;, \;\;\vec{P}=\sum\vec{p}_0/{\rm Vol}\;, \;\;\varepsilon_{\rm r}=1+\chi_{\rm e}\;, \textrm{with}\;\displaystyle\chi_{\rm e}=\frac{np_0^2}{3\varepsilon_0kT}\]</p>
+
+<p>If this is written as: \(\vec{J}(\vec{r},t)=\vec{J}(\vec{r}\,)\exp(-i\omega t)\) and \(\vec{A}(\vec{r},t)=\vec{A}(\vec{r}\,)\exp(-i\omega t)\) with:</p>
+
+<p>\[\vec{A}(\vec{r}\,)=\frac{\mu}{4\pi}\int\vec{J}(\vec{r}\,')\frac{\exp(ik|\vec{r}-\vec{r}\,'|)}{|\vec{r}-\vec{r}\,'|}d^3\vec{r}\,'~~,~~~ V(\vec{r}\,)=\frac{1}{4\pi\varepsilon}\int\rho(\vec{r}\,')\frac{\exp(ik|\vec{r}-\vec{r}\,'|)}{|\vec{r}-\vec{r}\,'|}d^3\vec{r}\,'\]</p>
+
+<p>a derivation via multipole expansion will show that for the radiated energy, if \(d,\lambda\gg r\):</p>
+
+<p>\[\frac{dP}{d\Omega}=\frac{k^2}{32\pi^2\varepsilon_0c}\left|\int J_\perp(\vec{r}\,'){\rm e}^{i\vec{k}\cdot\vec{r}}d^3r'\right|^2\]</p>
+
+<p>The energy density of the electromagnetic wave of a vibrating dipole at a large distance is:</p>
+
+<p>\[w=\varepsilon_0E^2=\frac{p^2_0\sin^2(\theta)\omega^4}{16\pi^2\varepsilon_0r^2c^4}\sin^2(kr-\omega t)~,~~~ \left\langle w \right\rangle_t=\frac{p^2_0\sin^2(\theta)\omega^4}{32\pi^2\varepsilon_0r^2c^4}~,~~ P=\frac{ck^4|\vec{p}\,|^2}{12\pi\varepsilon_0}\]</p>
+
+<p>The radiated energy can be derived from the <span><em>Poynting vector</em></span> \(\vec{S}\): \(\vec{S}=\vec{E}\times\vec{H}=cW\vec{e}_v\). The <span><em>irradiance</em></span> is the time-averaged of the Poynting vector: \(I=\langle|\vec{S}\,|\rangle_t\). The radiation pressure \(p_{\rm s}\) is given by \(p_{\rm s}=(1+R)|\vec{S}\,|/c\), where \(R\) is the coefficient of reflection.</p>
+
+<h3><a name="2.5.2">2.5.2 Electromagnetic waves in matter</a></h3>
+
+<p>The wave equations in matter, with \(c_{\rm mat}=(\varepsilon\mu)^{-1/2}\) the lightspeed in matter, are:</p>
+
+<p>\[\left(\nabla^2-\varepsilon\mu\frac{\partial^2 }{\partial t^2}-\frac{\mu}{\rho}\frac{\partial }{\partial t}\right)\vec{E}=0~,~~ \left(\nabla^2-\varepsilon\mu\frac{\partial^2 }{\partial t^2}-\frac{\mu}{\rho}\frac{\partial }{\partial t}\right)\vec{B}=0\]</p>
+
+<p>which after substitution of monochromatic plane waves: \(\vec{E}=E\exp(i(\vec{k}\cdot\vec{r}-\omega t))\) and \(\vec{B}=B\exp(i(\vec{k}\cdot\vec{r}-\omega t))\) yields the dispersion relation:</p>
+
+<p>\[k^2=\varepsilon\mu\omega^2+\frac{i\mu\omega}{\rho}\]</p>
+
+<p>The first term arises from the displacement current, the second from the conductance current. If \(k\) is written in the form \(k:=k'+ik''\) it follows that:</p>
+
+<p>\[k'=\omega\sqrt{\mbox{$\frac{1}{2}$}\varepsilon\mu}\sqrt{1+\sqrt{1+\frac{1}{(\rho\varepsilon\omega)^2}}}~~~\mbox{and}~~~ k''=\omega\sqrt{\mbox{$\frac{1}{2}$}\varepsilon\mu}\sqrt{-1+\sqrt{1+\frac{1}{(\rho\varepsilon\omega)^2}}}\]</p>
+
+<p>This results in a damped wave: \(\vec{E}=E\exp(-k''\vec{n}\cdot\vec{r}\,)\exp(i(k'\vec{n}\cdot\vec{r}-\omega t))\). If the material is a good conductor, the wave vanishes after approximately one wavelength, \(\displaystyle k=(1+i)\sqrt{\frac{\mu\omega}{2\rho}}\).</p>
+
+<h2><a name="2.6">2.6 Multipoles</a></h2>
+
+<p>Because \(\displaystyle \frac{1}{|\vec{r}-\vec{r}\,'|}=\frac{1}{r}\sum_0^\infty\left(\frac{r'}{r}\right)^lP_l(\cos\theta)\) the potential can be written as: \(\displaystyle V=\frac{Q}{4\pi\varepsilon}\sum_n\frac{k_n}{r^n}\)</p>
+
+<p>For the lowest-order terms this results in:</p>
+
+<ul>
+    <li>Monopole: \(l=0\), \(k_0=\int\rho dV\)</li>
+    <li>Dipole: \(l=1\), \(k_1=\int r\cos(\theta)\rho dV\)</li>
+    <li>Quadrupole: \(l=2\), \(k_2=\frac{1}{2}\sum\limits_i(3z^2_i-r^2_i)\)</li>
+</ul>
+
+<ol>
+    <li>The electric dipole: dipole moment: \(\vec{p}=Ql\vec{e}_{\rm }\), where \(\vec{e}_{\rm }\) goes from \(\oplus\) to \(\ominus\), and \(\vec{F}=(\vec{p}\cdot\nabla)\vec{E}_{\rm ext}\), and \(W=-\vec{p}\cdot\vec{E}_{\rm out}\).<br />
+    <br />
+    Electric field: \(\displaystyle \vec{E}\approx\frac{Q}{4\pi\varepsilon r^3}\left(\frac{3\vec{p}\cdot\vec{r}}{r^2}-\vec{p}\right)\). The torque is: \(\vec{\tau}=\vec{p}\times\vec{E}_{\rm out}\)</li>
+    <li>The magnetic dipole: dipole moment: if \(r\gg\sqrt{A}\): \(\vec{\mu}=\vec{I}\times(A\vec{e}_{\perp})\), \(\vec{F}=(\vec{\mu}\cdot\nabla)\vec{B}_{\rm out}\)<br />
+    <br />
+    \(\displaystyle|\mu|=\frac{mv^2_\perp}{2B}\), \(W=-\vec{\mu}\times\vec{B}_{\rm out}\)<br />
+    <br />
+    Magnetic field: \(\displaystyle\vec{B}=\frac{-\mu}{4\pi r^3}\left(\frac{3\mu\cdot\vec{r}}{r^2}-\vec{\mu}\right)\). The moment is: \(\vec{\tau}=\vec{\mu}\times\vec{B}_{\rm out}\)</li>
+</ol>
+
+<h2><a name="2.7">2.7 Electric currents</a></h2>
+
+<p>The continuity equation for charge is: \(\displaystyle\frac{\partial \rho}{\partial t}+\nabla\cdot\vec{J}=0\). The <span><em>electric current</em></span> is given by:</p>
+
+<p>\[I=\frac{dQ}{dt}=\int\hspace{-1.5ex}\int(\vec{J}\cdot\vec{n}\,)d^2A\]</p>
+
+<p>For most conductors: \(\vec{J}=\vec{E}/\rho\), where \(\rho\) is the <span><em>resistivity</em></span>.</p>
+
+<p>If the flux enclosed by a conductor changes this results in an <span><em>induced voltage</em></span></p>
+
+<p>\[\displaystyle V_{\rm ind}=-N\frac{d\Phi}{dt}\]&nbsp;</p>
+
+<p>If the current flowing&nbsp;through a conductor changes, this results in a self-inductance which opposes the original change: \(\displaystyle V_{\rm selfind}=-L\frac{dI}{dt}\). If a conductor encloses a flux \(\Phi\): \(\Phi=LI\).</p>
+
+<p>The magnetic induction within a coil is approximated by:</p>
+
+<p>\[\displaystyle B=\frac{\mu NI}{\sqrt{l^2+4R^2}}\]</p>
+
+<p>where \(l\) is the length, \(R\) the radius and \(N\) the number of coils. The energy contained within a coil is given by \(W=\frac{1}{2}LI^2\) and \(L=\mu N^2A/l\).</p>
+
+<p>The <span><em>capacitance</em></span> is defined by:\(C=Q/V\). For a capacitor \(C=\varepsilon_0\varepsilon_{\rm r}A/d\) where \(d\) is the distance between the plates and \(A\) the surface of one plate. The electric field strength between the plates is \(E=\sigma/\varepsilon_0=Q/\varepsilon_0A\) where \(\sigma\) is the surface charge. The accumulated energy is given by \(W=\frac{1}{2}CV^2\). The current through a capacitor is given by \(\displaystyle I=-C\frac{dV}{dt}\).</p>
+
+<p>For most PTC resistors \(R=R_0(1+\alpha T)\) holds approximately, where \(R_0=\rho l/A\). For a NTC: \(R(T)=C\exp(-B/T)\) where \(B\) and \(C\) depend only on the material.</p>
+
+<p>If a current flows through two different, connecting conductors \(x\) and \(y\), the contact area will heat up or cool down, depending on the direction of the current: the <span><em>Peltier effect</em></span>. The generated or removed heat is given by: \(W=\Pi_{xy}It\). This effect can be amplified with semiconductors.</p>
+
+<p>The <span><em>thermionic voltage</em></span> between two metals is given by: \(V=\gamma(T-T_0)\). For a Cu-Konstantane connection: \(\gamma\approx0.2-0.7\) mV/K.</p>
+
+<p>In an electrical circuit&nbsp;with only stationary currents, <span><em>Kirchhoff&rsquo;s</em></span> equations apply: for a &nbsp;: \(\sum I_n=0\), for a closed loop series path: \(\sum V_n=\sum I_nR_n=0\).</p>
+
+<h2><a name="2.8">2.8 Depolarizing field</a></h2>
+
+<p>If a dielectric material is placed in an electric or magnetic field, the field strength within and outside the material will change because the material will be polarized or magnetized. If the medium has an ellipsoidal shape and one of the principal axes is parallel with the external field \(\vec{E}_0\) or \(\vec{B}_0\) then the depolarizing is field homogeneous.</p>
+
+<p>\[\begin{aligned} \vec{E}_{\rm dep}=\vec{E}_{\rm mat}-\vec{E}_0=- \frac{\cal N&nbsp;\vec{&nbsp;\rm P}}{\varepsilon_0}\\ \vec{H}_{\rm dep}=\vec{H}_{\rm mat}-\vec{H}_0=-{\cal N}\vec{M}\end{aligned}\]</p>
+
+<p>\(\cal N\) is a constant depending only on the shape of the object placed in the field, with \(0\leq{\cal N}\leq1\). For a few limiting cases of an ellipsoid one finds that for&nbsp;a thin plane: \({\cal N}=1\), a long, thin bar: \({\cal N}=0\), and a sphere: \({\cal N}=\frac{1}{3}\).</p>
+
+<h2><a name="2.9">2.9 Mixtures of materials</a></h2>
+
+<p>The average electric displacement in a material which is inhomogenious on a mesoscopic scale is given by: \(\left\langle D \right\rangle=\left\langle \varepsilon E \right\rangle=\varepsilon^*\left\langle E \right\rangle\) where \(\displaystyle \varepsilon^*=\varepsilon_1\left(1-\frac{\phi_2(1-x)}{\Phi(\varepsilon^*/\varepsilon_2)}\right)^{-1}\) and \(x=\varepsilon_1/\varepsilon_2\). For a sphere: \(\Phi=\frac{1}{3}+\frac{2}{3}x\). Further holds:</p>
+
+<p>\[\left(\sum_i \frac{\phi_i}{\varepsilon_i}\right)^{-1}\leq\varepsilon^*\leq\sum_i \phi_i\varepsilon_i\]</p>
+
+</body>
+</html>

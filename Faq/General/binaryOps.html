@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>What is 1 / 2 (3 + 4)?</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a>
+
+<p>Original by Don Koks, 2022.</p>
+<p><br></p>
+
+
+<h1>What is 1 / 2 (3 + 4)?</h1>
+
+<p>This question has caused much fighting on the web.&nbsp; Some people say it's 7/2.&nbsp; Others say it's 1/14.&nbsp; The
+"right answer" can only be set by some mathematical convention that everyone accepts; but no such convention is accepted by
+all.&nbsp; And yet it turns out that physics has something to say on the subject.</p>
+
+<p>The combatants cite all manner of rules to support their preferred answer to the question.&nbsp; More on that later, but for
+now, we'll encapsulate the arguments in two rules:
+<ul>
+<li>Presumably, those who say that the answer is 7/2 have applied the following rule (which we'll call rule A): "The operations
++, &minus;, &times;, &div; are implemented from left to right, with &times; and &div; implemented before &plus; and &minus;
+are.&nbsp; Juxtaposition is interpreted as the presence of &times;.&nbsp; Expressions in parentheses are evaluated
+independently of everything else".&nbsp; Rule A says that 1 / 2 (3 + 4) = 1 / 2 &times; 7 = (1 / 2 ) &times; 7 = 7/2.</li><br>
+
+<li>Presumably, those who say that the answer is 1/14 have applied the following rule (which we'll call rule B): "The
+operations +, &minus;, &times;, &div; are implemented from left to right, with &times; and &div; implemented before &plus; and
+&minus; are.&nbsp; Juxtaposition represents a multiplication that is implemented before anything else.&nbsp; Expressions in
+parentheses are evaluated independently of everything else".&nbsp; Rule B says that 1 / 2 (3 + 4) = 1 / (2 &times; 7) = 1/14.</li>
+</ul>
+</p>
+
+<p>Rule A is clearly simpler than rule B.&nbsp; Irrespective of that, can we determine if one of the rules is <em>more
+consistent</em> than the other, by appealing to something that <em>everyone</em> agrees with?&nbsp; It turns out that we
+can.&nbsp; Consider that juxtaposing a number with a unit, such as "2 seconds", can be (and is) routinely treated
+mathematically as multiplication by that unit; namely, "2 &times; (one second)".&nbsp; (For more on that, see the FAQ entry
+<a href="logs.html">Can you take the logarithm of a dimensioned quantity?</a>)&nbsp; In the same way, "1/2 second" is routinely
+treated as "(1/2) &times; (one second)".</p>
+
+<ul>
+<li>Rule A interprets "2 seconds" to mean 2 seconds, and "1/2 second" to mean 1 / 2 &times; (one second), which is (1 / 2)
+&times; (one second), which is 0.5 seconds.</li><br>
+<li>Rule B interprets "2 seconds" to mean 2 seconds, and "1/2 second" to mean 1 / (2 &times; (one second)), which is 1 / (2
+seconds), which is 0.5 hertz.</li>
+</ul>
+
+<p>Independently of these rules, <em>everyone</em> agrees that "1/2 second" denotes 0.5 seconds, and not 0.5 hertz.&nbsp; This
+is only consistent with applying rule A.&nbsp; That is, everyone accepts rule A's interpretation of "1/2 second" and rejects
+rule B's interpretation of the same.&nbsp; Because that's about the one thing that everyone does agree on, it makes sense to
+base a convention on that agreement, and thus accept rule A.&nbsp; So, if you want consistency in your application of binary
+operators, follow rule A, and not rule B.&nbsp; Consistency is a core principle of mathematics, and applying it forces us to
+conclude that 1 / 2 (3 + 4) equals 7/2.</p>
+
+<p>Assorted variations on rule B exist that put <em>all</em> multiplications before divisions, or perhaps <em>all</em>
+divisions before multiplications.&nbsp; Such rules probably owe their origin to a mis-reading of an acronym.&nbsp; Rule A has
+traditionally been represented by some choice of simple acronym whose letters denote the operations in order of
+precedence.&nbsp; "M" denotes multiplication, "D" division, and so on.&nbsp; Both "MD" <em>and</em> "DM" that appear in such
+acronyms have traditionally been given a single meaning: "do the multiplications and divisions, with neither taking precedence
+over the other, apart from the usual left-to-right order".&nbsp; (The same applies to "AS" and "SA".)&nbsp; But such an acronym
+with, say, an "MD" is sometimes read completely literally, and it ends up being interpreted incorrectly as "do <em>all</em>
+multiplications first, and <em>all</em> divisions afterwards".&nbsp; That was never the acronym's intent, but no simple acronym
+is capable of indicating that multiplication and division have rule A's <em>equal</em> order of precedence.&nbsp; These
+acronyms should be understood for their original meaning, and should not be interpreted completely literally.&nbsp; A better
+approach is not to use them at all.&nbsp; It's really not difficult to learn an order of precedence without requiring an
+acronym.</p>
+
+<p>Programming languages and modern calculators (but not some older ones) use rule A.&nbsp; But rule B's practice of writing
+"<em>a/bc</em>" to mean <em>a/(bc)</em> appears widely in physics textbooks and some journals&mdash;it might even be sometimes
+introduced against authors' wishes or their knowledge by journal typesetters, because modern typesetters often have little
+maths knowledge.&nbsp; Keep that in mind when reading journals.</p>
+
+<br><br>
+
+</body>
+</html>
+

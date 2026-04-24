@@ -1,0 +1,852 @@
+Organisaties
+XS4all Scientology Planet Internet
+19 Bijdragen
+
+In 1995 brak een internationaal conflict uit op het toen nog prille internet. De inzet: wie is aansprakelijk voor wat gebruikers online doen? In Nederland hielp Karin Spaink die kwestie te definiëren. De tien jaar durende rechtszaak die Scientology tegen haar en XS4all voerde over wat zij op internet publiceerde, heeft grote invloed gehad op het internetrecht in Nederland. Vijfentwintig jaar na dato doet Spaink verslag van de zaak. In dit deel: kan een machtige tegenstander je zomaar de mond snoeren op internet, of heb je er rechten?
+
+In 1994 en ’95 speelde ik graag Doom, een computerspel waarbij je jezelf een weg langs steeds imposanter monsters moest banen, meestal schietend. Je kon Doom in je eentje spelen – jij tegen je computer – maar op internet kon je met wildvreemden een team vormen en samen tegen de monsters optrekken. Of, nog spannender: je kon met een ander team concurreren en kijken wie zich het beste kon handhaven.
+
+Ergens in 1995, toen KPN net zijn eigen internet service provider had opgezet (ze noemden ’m Planet Internet), werd Francisco van Jole er aangesteld om een dagelijkse internetkrant te maken: The Daily Planet. Francisco kende ik goed, we hadden vaak Doom gespeeld, en hij speelde dat op zijn beurt geregeld met schrijver Marcel Möring. Gedrieën gaven we ooit een demonstratie op een avond over internet in Rotterdam. We schoten er lustig op los, terwijl het publiek op een groot scherm kon meekijken. Ik geloof niet dat ze snapten wat ze zagen.
+
+Kort nadat Francisco bij Planet Internet kwam werken, daagden zijn collega’s hem uit voor een potje Doom. Leuk hoor, al zijn meta-verhalen over dat internet, but let’s cut to the chase. Zo kwam het dat Marcel Möring, Francisco van Jole en ik – team ‘schrijvers’ – op een avond in het hoofdkantoor van Planet Internet ten strijde trokken tegen een team van systeembeheerders, codekloppers en andere techies, onder leiding van de baas van Planet Internet: Michiel Frackers.
+
+We hakten ze in de pan: team schrijvers won met vlag en wimpel. Zonder dat potje Doom had het Nederlandse internetrecht er mogelijk heel anders uitgezien.
+Waarom deze serie?
+
+    Toen internet begin jaren ’90 opkwam – in Nederland mede dankzij XS4all, de eerste publieke internetprovider in Nederland – drong al snel tot me door dat dit medium de boel stevig op zijn kop zou zetten. Het kon zelfs onze grondwettelijke rechten raken.
+    Neem het briefgeheim: dat is grondwettelijk gewaarborgd. Maar wat nu als we elkaar voortaan zouden mailen? Het briefgeheim was gebonden aan ouderwetse communicatiemiddelen – een papiertje met een envelop eromheen – en niet onafhankelijk van het medium geformuleerd. Zodoende gold: geen brief, geen grondwettelijk gewaarborgd geheim.
+    Om die reden heb ik me ingezet voor de bescherming van digitale rechten, die wat mij betreft onlosmakelijk verbonden zijn met onze andere grondrechten. Zo heb ik, samen met anderen, in 2000 Bits of Freedom opgericht, de Nederlandse digitale burgerrechtenorganisatie.
+    Om de vrijheid van meningsuiting op internet te verdedigen, heb ik me in 1995 doelbewust gemengd in het gevecht dat de Scientology-sekte op internet voerde. Dat leidde tot een serie rechtszaken van de sekte tegen mij en XS4all. Die duurde tien jaar. Scientology verloor keer op keer, maar ging telkens in beroep, tot aan de Hoge Raad toe.
+    Dit is mijn tweede serie verhalen bij Follow the Money over het ontstaan van het publieke internet, en hoe dat in Nederland vorm kreeg. In 2019 schreef ik over hackers: ze zijn een geliefde vijand van wetgevers en handhavers, maar juist van hen heb ik geleerd dat technologie vaak minder efficiënt en betrouwbaar is dan beleidsmakers en softwarebedrijven zeggen. Die serie kun je hier lezen.
+
+Toen internet nog nieuw was
+
+Internet was krap anderhalf jaar eerder doorgebroken: het had de stap gemaakt van universiteiten, onderzoeksinstituten en grote bedrijven naar gewone mensen. Zelf had ik sinds najaar 1994 een account bij XS4all, de eerste internet service provider (isp) waar je als privépersoon een ‘abonnement’ op internet kon nemen. Ik werd kspaink@xs4all.nl.
+
+Mijn eerste ontdekking op dat prille internet: het stikte er van de niches, die verdomd solide informatie bleken te bieden. Ik hield van obscure muziek – industrieel, metal en post punk – en ontdekte al snel The Ultimate Band List. Tot mijn verbazing bevatte die locatie zowat elke groep die me lief was, en de informatie over hen was daar bovendien vollediger dan elders. Deze site haalde de indertijd gelauwerde Popencyclopedie van Oor links en rechts in.
+
+De tweede ontdekking: e-mail was helemaal mijn ding. Telefoons heb ik altijd gehaat, brieven sturen voelde vaak te gewichtig, en dit medium gaf me de gelegenheid om kattenbelletjes te sturen. Ik kon die conversaties nu bovendien – nerd alert – in een ommezien archiveren.
+
+De derde ontdekking: Usenet.
+
+Vier of vijf jaar eerder had ik rondgehangen op bulletin boards (bbs’en), digitale prikborden waarop je via een modem kon inbellen. Die bbs’en richtten zich meestal op specifieke onderwerpen, bijvoorbeeld kunstmatige intelligentie, schaken of hacken. Maar alle bbs’en met hetzelfde onderwerp leken op elkaar. Bovendien waren ze nogal hiërarchisch: je moest credentials binnen de groep hebben opgebouwd wilde je vraag of bijdrage er serieus worden genomen. Na een jaar fanatiek inbellen haakte ik af.
+
+Usenet was anders: een immense verzameling van nieuwsgroepen, op heldere wijze georganiseerd naar discipline, onderwerp en land of taal. Het was voor iedereen toegankelijk, vrijwel ongemodereerd, en elk onderwerp was er vertegenwoordigd. Je kon op Usenet groepen vinden over whisky (en over whiskey), over films, gemeentepolitiek, feminisme, internet zelf, economische theorie, het buitenlandbeleid van de VS of de ins and outs van microchips.
+
+Elke groep kende vaste bezoekers: mensen die uitgebreide analyses en opinies posten, mensen die links naar relevant nieuws deelden, en mensen die daarop reageerden – de een wat doordachter dan de ander.
+
+Het was alsof je stamkroeg werd overvallen door een horde vreemdelingen
+
+En er was nl.eeuwig.september.
+
+Die groep dankte haar naam aan het feit dat elk jaar in september een nieuw cohort studenten via hun universiteit voor het eerst internettoegang kreeg, en Usenet dan werd overstelpt door newbies. Deze novices vielen geregeld ergens enthousiast binnen zonder de lokale mores te kennen of te respecteren. Het was alsof je stamkroeg werd overvallen door een horde vreemdelingen. Nu internet gemeengoed begon te worden, deed dat fenomeen zich vaker voor. Sterker: het hield niet meer op. Het was op Usenet ineens altijd september.
+
+Van nl.eeuwig.september – nes voor intimi – was ik lid vanaf het prille begin. Ik leerde daar dat je mensen die je nog nooit in het echt (in real life – irl) had gezien, soms toch op het bot kon vertrouwen, en dat de gemeenschapszin die er zich ontvouwde, serieus was. Nes organiseerde geregeld irl-meetings, die altijd hilarisch verliepen: ‘O, jij bent Pietje? Echt?’ De groep bracht hechte vriendschappen voort, en er ontsproten tal van relaties die online waren begonnen.
+
+Toen ik in juli 1995 na een hersenbloeding een paar weken in het ziekenhuis belandde, deed ik daarvan verslag in nes. Tot mijn ontroering zochten mensen van nes me in het ziekenhuis op en stuurden ze bloemen, cadeautjes en tientallen kaartjes. Hun medeleven was zo massaal en oprecht dat ik me daar geen raad mee wist. Ik dacht, waarschijnlijk net als veel anderen, stiekem dat ‘online’ verbleekte bij the real deal: de betrokkenheid van mensen die je analoog had ontmoet.
+De implicaties van internet
+
+Mede dankzij de mensen die ik op Usenet sprak, en de discussies daar, realiseerde ik me dat internet best wel eens een ‘ding’ kon worden. Ik was opgetogen toen in een Nederlandse krant, in het wetenschapskatern, voor het eerst naar een website werd verwezen: ‘Heeft u internet? Dan kunt u het besproken onderzoek hier nalezen,’ of iets dergelijks.
+
+Ik realiseerde me dat double blind medisch onderzoek nooit meer hetzelfde zou zijn. Zulk onderzoek gaat ervan uit dat patiënten onderling geen enkel contact hebben en de onderzoekers als enigen over alle relevante informatie beschikken. Maar op Usenet zag ik patiënten onderling informatie uitwisselen, en zoeken naar lotgenoten die meededen aan dezelfde test als zij. Dat was het einde van de formele double blind-opzet, leek me: een probleem voor onderzoekers. En wat zou internet betekenen voor de informatieachterstand van patiënten ten opzichte van hun behandelaars?
+
+Niet alleen dokters, ook politici, ambtenaren, wetenschappers en journalisten waren ineens benaderbaar: wanneer je hun e-mailadres had, kon je ze aanschrijven. Sommigen van hen zaten inmiddels zelf op Usenet. Gemeenten en overheden begonnen via internet beleidsstukken met burgers te delen, of vroegen er om inspraak op plannen. Ik postte mijn columns uit Het Parool voortaan op Usenet en kreeg daar meer reacties, waaronder veel zinnig commentaar, dan ik ooit via de krant had ontvangen.
+
+Vrijheid van meningsuiting is een verticaal recht: de overheid mag burgers niet censureren. Maar geldt dat recht ook horizontaal?
+
+Veel mensen deden internet toen af als onzin, hooguit een hype. Ik schatte dat anders in. En ik vroeg me af: het briefgeheim is in de grondwet vastgelegd, maar wat als we elkaar over een paar jaar geen papieren post meer zouden sturen, maar e-mails? Vallen die ook onder dat briefgeheim?
+
+En hoe zit het met de vrijheid van meningsuiting op internet? Die vrijheid is een verticaal recht, van de burger tegenover de overheid: de overheid mag burgers niet censureren. Maar werkt dat recht ook horizontaal? Mag een internet service provider (isp) je wel censureren, en zo ja, wanneer, en op welke gronden? En kun je je daar dan tegen verzetten, anders dan door elders een abonnement af te sluiten?
+
+Eind 1994 besloot ik in mijn columns in Het Parool een jaar lang over niets anders dan internet te schrijven: deels om dat nieuwe terrein voor mezelf te verkennen, deels om anderen er vertrouwder mee te maken. En inmiddels bestonden er browsers, zodat je je artikelen beter kon presenteren, dus ik leerde mezelf html en begon mijn ‘eigen’ website, waarop ik al mijn stukjes bundelde.
+Februari 1995: anon.penet.fi
+
+Op nl.eeuwig.september had ik M. leren kennen. Toen hij een avondje langs kwam, vertelde hij over iets dat hem zorgen baarde. M. gebruikte regelmatig een pseudonymous remailer, een dienst die anonieme communicatie op internet mogelijk maakt. Het ging om anon.penet.fi: een Finse dienst, gerund door Julf Helsingius. Maar de integriteit van de dienst was in gevaar.
+
+Dat zat zo: ene -AB- had via de remailer van Helsingius regelmatig stukken op de nieuwsgroep alt.religion.scientology gepost. Recent had -AB- er een intern document van de sekte gepost dat verband hield met een politiezaak, en nu wilde de sekte weten wie -AB- was. Scientology vroeg Helsingius om de gegevens van de gebruiker. Helsingius weigerde: hij wilde de privacy van zijn gebruikers beschermen.
+
+Nu moest Helsingius de gegevens van al zijn gebruikers – indertijd zo’n 300 duizend mensen – aan de sekte overhandigen
+
+Scientology nam contact op met Interpol, die weer schakelde met de Finse politie, die vervolgens bij de rechter aanklopte. Uiteindelijk kwam Scientology langs die weg met een opsporingsbevel op de proppen. Nu moest Helsingius de gegevens van al zijn gebruikers – indertijd zo’n 300 duizend mensen – aan de sekte overhandigen.
+
+M. zat in de piepzak. Niet dat hij -AB- was, maar M. had een seksuele voorliefde die hij liever niet zag uitlekken: hij wisselde via anon.penet.fi met andere afficionado’s plaatjes en verhalen over spanking uit, zowel per e-mail als in een nieuwsgroep. M. was als de dood dat ook zijn identiteit bekend zou worden.
+
+Het was de eerste keer dat ik hoorde over de strapatsen van Scientology op internet. Veel wist ik niet van de sekte. Eigenlijk wist ik alleen dat L. Ron Hubbard, de oprichter ervan, slechte science fiction had geschreven – mijn vader is een groot sf-kenner, en had een riante bibliotheek verzameld. Ook wist ik dat aanhangers van de sekte in de Kalverstraat in Amsterdam mensen aanklampten om ze een gratis ‘persoonlijkheidstest’ te laten invullen, en ze daarvoor meetroonden naar hun hoofdkwartier aan de Nieuwezijds Voorburgwal.
+alt.religion.scientology
+
+Wat ik niet wist: Scientology had al herhaaldelijk geprobeerd om alt.religion.scientology, een nieuwsgroep waar critici en oud-leden van de sekte zich hadden verzameld en onderling informatie uitwisselden, rigoureus de nek om te draaien.
+
+Voordat internet bestond, was er eigenlijk nooit een plaats geweest waar critici van de sekte elkaar konden ontmoeten – laat staan dat ex-leden dat konden. Scientology beheerst het spel van ‘verdeel en heers’ tot in de puntjes: de hele organisatie is op die leest geschoeid. Oud-leden die bij de rechter hun beklag deden over hoe ze waren behandeld, wonnen vaak, maar moesten vrijwel altijd een non-disclosure agreement tekenen. Die verhinderde hen tot in lengte der dagen om hun kritiek, hun wedervaren en hun kennis over de sekte wereldkundig te maken – inclusief de details van hun eigen rechtszaak.
+
+De consequentie daarvan – of nee: het oogmerk ervan – was dat anderen, die in exact hetzelfde schuitje zaten, geen toegang hadden tot eerdere rechtszaken. Niet tot de feiten die daarin waren vastgesteld, noch tot de gerechtelijke uitspraken zelf. Iedereen die een gevecht met de sekte aanging, moest zodoende weer helemaal op nul beginnen.
+
+Voor het eerst in de geschiedenis van de sekte hadden oud-leden en critici een plek waar ze publiekelijk informatie konden delen
+
+Usenet veranderde dat, en deed dat tamelijk radicaal. Voor het eerst in de geschiedenis van de sekte hadden oud-leden, via deze ene nieuwsgroep, een plek waar ze publiekelijk informatie konden delen, elkaar op de hoogte konden houden van hun rechtszaken, en vooral: waar ze onderling contact konden leggen en ervaringen konden uitwisselen. Voor het eerst wisten ze dat ze er niet alleen voor stonden, en konden ze elkaar helpen.
+
+Dat beviel Scientology niet. De sekte was gewend haar zin door te drijven, en is er hoogst bedreven in om kritiek in de kiem te smoren. Ze kent een uitgebreide geschiedenis van censuur, rechtszaken over publicaties, infiltratie van kritische organisaties (en zelfs van overheidsinstellingen), van intimidatie en belastering van journalisten, en van net zo lang procederen totdat ze iemand er eindelijk onder hadden – al was het maar door ze failliet te krijgen.
+-rm group
+
+De sekte dacht ook op Usenet met zulk gedrag weg te kunnen komen. Dus stuurden leden van Scientology vervalste cancel messages voor hen onwelgevallige berichten van critici en ex-leden. Maar zo werkt Usenet niet: je kunt je eigen berichten wissen, niet die van een ander. Dat laatste kan alleen een super user doen, iemand die door de gemeenschap is aangewezen. Aan dat laatste gaat (meestal) een democratisch proces vooraf, met regels, debat, beroep en transparantie.
+
+Omdat Usenet een publiek medium was, gebaseerd op openheid, trok Scientology daarmee de aandacht. Mensen die zich druk maakten over de vrijheid van meningsuiting kregen ineens grote interesse in de sekte, zuiver vanwege Scientology’s – voor Usenet – ronduit bizarre gedrag.
+
+De advocaat van Scientology stelde dat de nieuwsgroep alleen al door haar naam de handelsrechten van Scientology schond
+
+Het werd een heuse rel toen Scientology in januari 1995 probeerde om via een cancel message de complete nieuwsgroep alt.religion.scientology te wissen. De afzender: Scientology-advocaat Helena Kobrin. In de toelichting op haar cancelbericht stelde Kobrin dat de nieuwsgroep alleen al door haar naam de handelsrechten van Scientology schond. Ook zouden er auteursrechtelijk beschermde teksten van de sekte in de groep zijn gepost.
+
+Een poging om een nieuwsgroep te wissen betekende in internet-termen weinig minder dan censuur. En een sekte die inbreuk op haar handelsrechten claimde? Er ging een schokgolf door Usenet. Als je nieuwsgroepen over de producten van Microsoft kon hebben en het bedrijf in de naam van de groep kon vermelden, moest je toch zeker een nieuwsgroep kunnen voeren die vernoemd was naar een omstreden sekte? Zou je Kobrins argument tolereren, dan betekende dat de facto dat je in de naam van een nieuwsgroep nooit meer naar een merk of een bedrijf kon verwijzen, zelfs niet als dat het onderwerp ervan was.
+
+Het netto-effect: allerlei mensen en organisaties die zich nooit eerder om Scientology hadden bekommerd, raakten door het wangedrag van de sekte op Usenet buitengewoon in hen geïnteresseerd en wilden weten wat voor een club dat eigenlijk was. Niet per se omdat ze Scientology zelf op de korrel wilden nemen, maar zuiver omdat ze bezorgd raakten dat Scientology met haar optreden een onwelkom precedent op internet zou scheppen.
+
+Scientology stuitte kortom op een nieuw cohort opponenten – een dat ze eigenhandig in het leven had geroepen.
+
+
+ Scientology versus internet, deel 2: Inval bij XS4all
+Karin Spaink
+9 Connecties
+Relaties
+NautaDutilh
+Personen
+Rop Gonggrijp Michiel Frackers Felipe Rodriquez Francisco van Jole Jan Peter Mante
+Organisaties
+XS4all Scientology Planet Internet
+11 Bijdragen
+
+In 1995 brak een internationaal conflict uit op het toen nog prille internet. De inzet: wie is aansprakelijk voor wat gebruikers online doen? In Nederland hielp Karin Spaink die kwestie te definiëren. De tien jaar durende rechtszaak die Scientology tegen haar en XS4all voerde over wat zij op internet publiceerde, heeft grote invloed gehad op het internetrecht in Nederland. Vijfentwintig jaar na dato doet Spaink verslag van de zaak. In dit deel: Scientology doet een inval bij XS4all en claimt auteursrechtschending.
+Over deze serie
+
+    Dit is deel 2 van een serie. In de eerste aflevering (‘Doom’) beschreef ik de opkomst van het publieke internet, een dan nog vrijwel ongereguleerd medium. Het beviel Scientology totaal niet dat critici en oud-leden daar vrijuit hun kennis over en hun ervaringen met de sekte konden delen. Toen er bovendien delen van ‘geheime’ cursussen van de sekte op nieuwsgroepen werden gedeeld, sloeg Scientology hard terug – zo hard, dat ze daar vooral nieuwe vijanden mee schiep. In dit deel beschrijf ik hoe die internationale ruzie oversloeg naar Nederland.
+    Er volgen nog vier afleveringen; op 1 januari publiceert Follow the Money het laatste deel.
+
+Lees verder
+Was dit kader nuttig?
+Zijn we blij mee!
+Balen!
+Vertel ons wat beter kan:
+Meld je aan voor onze nieuwsbrief en krijg een maand gratis Follow the Money.
+
+Op 5 september 1995 verscheen een onrustbarend bericht van Rop Gonggrijp, een van de oprichters van XS4all, op de nieuwsgroep nl.hacktic.heibel:
+
+‘Op dit moment vindt ten kantore van XS4ALL in Amsterdam een gerechtelijke beslaglegging door gerechtsdeurwaarder (Dhr. Braan) plaats. Deze beslaglegging houdt verband met een vermeende inbreuk op het auteursrecht en geschiedt met verlof van de president van de rechtbank en wordt onderbouwd door artikel 444 lid 1 van het wetboek van burgerlijke rechtsvordering. De eiser is de Scientology-sekte die claimt dat er copyright schendingen plaatshebben, onder andere in de WWW-directory van de gebruiker “fonss”.
+Meer nieuws volgt snel.....’
+
+In gewone taal: een abonnee van XS4all had volgens Scientology stukken van de sekte op zijn website staan. Daarom was er nu een inval bij de provider, en liet de sekte beslag leggen op de boedel van XS4all. Minder gewoon: Amerikaanse vertegenwoordigers van de sekte vergezelden de deurwaarder en waren bij de inval aanwezig.
+
+Terwijl de deurwaarder serienummers noteerde, begon Scientology zelf alvast de stekkers uit de computers van medewerkers te trekken
+
+Later hoorde ik hoe die beslaglegging was verlopen. Noch de deurwaarder, noch de vertegenwoordigers van Scientology wisten hoe een internetprovider feitelijk in elkaar steekt. Nadat iedereen was binnengelaten en het doel van het ‘bezoek’ was toegelicht, noteerde de deurwaarder braaf alle serienummers van de computers van de kantoormedewerkers. (Niemand sloeg acht op de aanpalende serverruimte, die het hart van XS4all vormde, en waar het werkelijke kapitaal van de isp zacht zoemend zijn werk deed.)
+
+Terwijl de deurwaarder serienummers noteerde, begon Scientology zelf – vermoedelijk ingegeven door hun gewenning aan de Amerikaanse justitiële mores – alvast de stekkers uit de computers van medewerkers te trekken, met het plan die mee te nemen. De deurwaarder moest ze tegenhouden: dit was een conservatoir beslag, ze konden alleen een inventaris laten opmaken. Verder was het devies: handen thuis.
+De steen des aanstoots: het Fishman Affidavit
+
+Net als veel andere Nederlandse internetters keek ik na Gonggrijps alarmerende bericht subiet wat voor vreselijks er op de website van die Fonss stond. Het bleek te gaan om een deel van de FACTnet kit, een verzameling documenten van en over Scientology. Die had ik op internet inmiddels al vaker voorbij zien komen, na de poging van de sekte in januari 1995 om de nieuwsgroep over hen om zeep te helpen.
+
+FACTnet was een vrij jonge Amerikaanse organisatie van voormalig Scientology-leden, die anderen wilden waarschuwen en informeren over de tactieken van de sekte. FACTnet vreesde een inval van Scientology en verspreidde haar archief over de sekte uit voorzorg via internet. Iedereen die dat wilde, kon dat downloaden, en desgewenst zelf publiceren. 
+
+Onderdeel van de FACTnet-kit was het zogeheten Fishman Affidavit. Oud-sektelid Steven Fishman had bij een notaris een beëdigde verklaring afgelegd over zijn behandeling door de sekte – hij claimde er te zijn ‘gehersenspoeld’ – en had ter adstructie delen van interne stukken van de sekte toegevoegd, die tot het cursusmateriaal voor de elite binnen Scientology behoorden. Wie zich dat materiaal terdege had eigen gemaakt, werd Operating Thetan (OT): iemand die tijd, ruimte, materie en energie naar believen kon manipuleren.
+
+Fun fact 1: Het Fishman Affidavit was onderdeel van een rechtbankdossier, en daarmee publiek toegankelijk. Maar de sekte deed er alles aan om die toegankelijkheid te dwarsbomen. Ze zette jarenlang een mannetje bij de betreffende rechtbank, die elke ochtend het dossier opvroeg om dat vervolgens de hele dag niet te gaan lezen, puur om te voorkomen dat anderen er toegang toe kregen.
+
+Maar het was etalagepolitiek: je kon het dossier gewoon schriftelijk opvragen bij het secretariaat. Voor het luttele bedrag van 36,50 dollar kreeg je dan een kopie thuisgestuurd. Langs die weg had FACTnet een kopie van het Fishman Affidavit in handen gekregen, die het op kleine schaal verspreidde. Waarna iemand het op internet postte – einde geheim.
+Ook bij een Zweedse rechtbank werd hoger cursusmateriaal van de sekte ingediend; ook daar vroeg een lid van de sekte elke ochtend het dossier op. Intussen kon je gewoon schriftelijk een kopie aanvragen.
+Ook bij een Zweedse rechtbank werd hoger cursusmateriaal van de sekte ingediend; ook daar vroeg een lid van de sekte elke ochtend het dossier op. Intussen kon je gewoon schriftelijk een kopie aanvragen. © Karin Spaink, mei 1998
+
+Fun fact 2: Steven Fishman citeerde in zijn verklaring een aantal pagina’s uit de OT-cursussen. Wie alle acht OT-cursussen met goed gevolg wilde afleggen, was bij elkaar ten minste 365 duizend dollar kwijt, volgens Scientology’s prijslijst uit de winter van 1994/95. Geen wonder dat de sekte koste wat kost wilde voorkomen dat delen van dit materiaal gratis uitlekten.
+
+Fun fact 3: Terwijl Scientology openlijk belijdt dat haar doel is mensen te leren beter te functioneren en hun hersens en mentale capaciteiten beter te gebruiken – ‘scientology’ betekent volgens de sekte: ‘de wetenschap van kennis en van het leren zelf’ – claimt ze ook een kerk te zijn, met een eigen geloof. De inhoud van dat geloof wordt echter pas duidelijk bij de studie van de OT-cursussen. Wie nog niet zover is, weet van niets. Het is alsof de Rooms-Katholieke Kerk mensen lokt met de belofte van wierook en mooie psalmen, en je pas na tien jaar (en tegen betaling van een paar ton) voor het eerst hoort over God, de Heilige Drie-eenheid, de schepping en hemel en hel.
+
+OT3, de belangrijkste en meest gelauwerde van de acht OT-cursussen, vertelt in tweehonderd handgeschreven pagina’s een bizar scheppingsverhaal. Zo bizar, dat veel leden die eindelijk aan OT3 toekomen, grandioos afknappen wanneer ze de tekst eenmaal onder ogen krijgen. OT3 zou ze immers tot een verlicht en bovenmenselijk wezen maken en hun brein bevrijden, zo was ze jarenlang voorgehouden.
+
+Maar OT3 leert ze dat Xenu, de dictator van de Galactische Confederatie, met overbevolking in zijn planetenstelsel kampte. 75 miljoen jaar geleden propte hij daarom een deel van zijn volk in vliegtuigen (om precies te zijn: in DC-8-achtige ‘space crafts’) en liet ze daarmee naar de aarde (‘Teegeeack’) vervoeren, waar ze in vulkanen werden opgesloten. Daarin werden vervolgens waterstofbommen tot ontploffing gebracht. De miljarden zielen van deze mensen (‘Thetanen’) werden daarna gevangen, en 36 dagen voor grote tv-achtige schermen gezet om ze te indoctrineren met implants.
+
+OT3 leert je vervolgens dat je al die body thetans de komende jaren stuk voor stuk via ‘auditing’ moet weg-therapieën, in dure cursussen
+
+Sindsdien zwerven die zielen, nu totaal gedegenereerd, doelloos rond en nestelden zich als een soort regressieve bacteriën in en op ons lichaam, in de vorm van body thetans. Deze body thetans houden ons dom en klein.
+
+OT3 leert je vervolgens dat je, nu je dat weet, al die body thetans de komende jaren stuk voor stuk via ‘auditing’ moet weg-therapieën, in dure cursussen, om weer de fully operating thetan te worden die je ooit was, op de planeet waar wij mensen volgens Hubbard oorspronkelijk vandaan komen.
+
+Xenu zelf werd uiteindelijk door een groep loyale officieren afgezet. Hij werd gevangen genomen en verblijft sindsdien in een ‘elektronisch beveiligde berg’. De locatie daarvan is onbekend.
+
+Inderdaad: slechte science fiction.
+
+Not-so-much-fun fact 4: Scientology claimt dat de OT-cursussen nooit zijn gepubliceerd en angstvallig worden bewaakt, zodat zelfs een paar woorden eruit citeren volgens hen al als auteursrechtinbreuk kwalificeert. Voor niet-gepubliceerd materiaal geldt namelijk geen citaatrecht. The Washington Post citeerde ooit in een lang artikel tweeëneenhalve zin uit de tweehonderd pagina’s tekst van OT3, een passage waarin Xenu wordt geïntroduceerd, en kreeg prompt een auteursrechtszaak aan de broek. (De sekte verloor.)
+
+De stukken waarin het verhaal over Xenu en de body thetans wordt verteld, zaten in de FACTnet kit – en Fonss had die op zijn website bij XS4all staan.
+
+Op 21 augustus 1995 deed Scientology een inval bij de twee FACTnet-oprichters thuis en nam hun computers mee (een kantoor had de organisatie niet). Kennelijk was Scientology nu ook buiten de Verenigde Staten op jacht naar exemplaren van de FACTnet kit. Vandaar de inval bij XS4all, nog geen twee weken na die bij FACTnet.
+‘Onder andere’
+
+Maar dat was niet de enige reden waarom Scientology het op XS4all had voorzien. Er zwierven immers andere exemplaren van de FACTnet kit rond op internet, zowel in Europa als elders, die Scientology ongemoeid liet. Rop Gonggrijp zei het al in zijn usenet-bericht: ‘…de Scientology-sekte [..] claimt dat er copyright schendingen plaatshebben, onder andere in de WWW-directory van de gebruiker “fonss”.’
+
+Scientology was bovenal op jacht naar remailers. Ook bij XS4all draaiden er twee: Utopia en Replay, beide beheerd door cryptografie-kenner Alex de Joode. Anders dan penet.fi was Utopia volledig anoniem: zelfs de beheerder kon niet achterhalen wie wat had gepost of gemaild. Ook Utopia en Replay werden door critici gebruikt om stukken op alt.religion.scientology te posten. Er lagen inmiddels al diverse advocatenbrieven over Utopia en Replay bij XS4all op de mat, die steeds dringender van toon werden.
+
+Gonggrijp vermoedde dat de remailers de werkelijke aanleiding voor de inval waren, en dat het Fishman Affidavit vooral een handige fall-back optie voor de sekte was
+
+Kort voor de inval had De Joode besloten zijn remailer bij XS4all weg te halen; hij draaide die sindsdien elders. Maar dat wist niemand, buiten De Joode en XS4all – en zij waren niet van plan dat Scientology aan de neus te hangen. Rop Gonggrijp vertelde me jaren later dat hij vermoedde dat de remailers de werkelijke aanleiding voor de inval waren, en dat de aanwezigheid van het Fishman Affidavit op de systemen van XS4all vooral een handige fall-back optie voor de sekte was.
+Grenzen aan burgerrechten
+
+Tegen die tijd kende ik zowel Rop Gonggrijp als Felipe Rodriquez, de beide oprichters van XS4all, al enigszins. Ik mailde ze na de inval of ik wellicht kon helpen. Ze reageerden vriendelijk maar terughoudend. ‘Je verzint vast wel iets,’ schreef Rop, of woorden van gelijke strekking. Ik mailde ook Fonss, maar die gaf geen sjoege.
+
+Inmiddels had een andere gebruiker van XS4all, Johan Wevers (een stamgast van nl.eeuwig.september), een mirror van de FACTnet-kit op zijn website bij XS4all gezet. En iemand die vroeger actief was op het oude Hacktic-bbs, Newkid, had een mirror op zijn website bij Cistron gezet, een kleine isp uit Alphen aan de Rijn die in april 1995 was begonnen. Fonss had zijn pagina bij XS4all inmiddels verwijderd, kennelijk geschrokken van de dreiging.
+
+Pas een paar dagen later drong tot me door wat ik kon doen. Scientology’s inval bij XS4all had uitgebreid het nieuws gehaald, maar werd steevast beschreven als een dispuut tussen een vrijheidslievende isp en een boze sekte. Maar dit ging niet alleen over een mogelijke auteursrechtenschending versus de vraag of auteursrecht hier werd ingezet als middel om anderen te censureren. Dit ging ook over welke rechten internetgebruikers hebben inzake hun vrijheid van meningsuiting. En dat is een kwestie die het belang van een individuele isp of gebruiker verre overstijgt.
+
+Juist om de rechten van gebruikers te beschermen, was het belangrijk dat de gebruiker verantwoordelijk werd gesteld, en niet diens isp
+
+Want inmiddels snapte ik dat, wanneer bedrijven (of sektes) providers verantwoordelijk konden houden voor wat hun abonnees op internet deden, de marges voor individuele gebruikers akelig smal zouden worden. Onder zo’n stelsel zouden isp’s zich immers genoodzaakt voelen om hun abonnees te beknotten, al was het maar uit voorzorg en zelfbescherming. Ze zouden de grenzen van de vrijheid van meningsuiting van gebruikers een stuk nauwer trekken dan het wetboek of de grondwet deed, simpelweg om te voorkomen dat zijzelf de ene rechtszaak na de andere moesten verduren.
+
+Deze zaak raakte zodoende aan iets groters: juist om de rechten van gebruikers te beschermen, was het – het lijkt paradoxaal – belangrijk dat de gebruiker verantwoordelijk werd gesteld, in plaats van diens isp. Want die laatste optie zou leiden tot angstige en behoudende providers, die de grenzen van de vrijheid van meningsuiting van hun abonnees zo beperkt mogelijk zouden interpreteren. 
+
+Deze zaak betrof dus ook de rol van providers op internet: waren ze een soort van high tech uitgeverij, die aansprakelijk is voor alles wat er op haar servers gebeurt, of waren ze – net als telefoonmaatschappijen – common carriers?
+
+Common carriers zijn in principe gevrijwaard van rechtszaken. In nauw omschreven gevallen – en door een vooraf vastgelegde procedure te doorlopen – kan een gedupeerde de naam van een zich misdragende klant bij een telefoonmaatschappij opvragen. De klager moest het vervolgens zelf uitzoeken met die klant, desnoods via de rechter. De telefoonprovider ging vrijuit: die was slechts doorgeefluik. Voor internetproviders was zo’n set regels er niet: niemand wist wie aansprakelijk was voor wat.
+
+Ineens moest ik terugdenken aan dat potje Doom. Ik vroeg Francisco het rechtstreekse telefoonnummer van zijn baas, de directeur van Planet Internet.
+Een nieuwe bondgenoot
+
+‘Ha Michiel, Karin hier. Ik wilde je iets vragen. Ik zou graag een account bij Planet Internet willen.’
+
+‘Dat kan natuurlijk, maar waarom bel je mij daarvoor?’ zei Frackers.
+
+‘Om je te vertellen wat ik met dat account van plan ben. Ik wil mijn website bij jullie gebruiken om daar die stukken van Scientology op te zetten.’
+
+Frackers viel even stil. Na tien of vijftien seconden schraapte hij zijn keel en zei: ‘Hm. Tsja. Oké.’ Weer een pauze, korter ditmaal. Toen: ‘Ik denk dat je wel een gratis account bij ons kunt krijgen.’
+
+En dat was dat: de grootste internetprovider van Nederland had me zojuist toestemming gegeven hen in het dispuut te betrekken, wetend dat een rechtszaak ophanden was. Nu was het niet langer een fittie tussen Scientology en XS4all, maar een gevecht tussen Scientology en het Nederlandse deel van internet.
+
+Op 18 september zette ik de stukken op mijn nieuwbakken website bij Planet. Francisco schreef daags erna in The Daily Planet dat het gevecht zich had verbreed. Een paar dagen later maakte ik een soortement van persbericht dat ik in een paar Nederlandse nieuwsgroepen postte, en vroeg daar of anderen mijn voorbeeld wilden volgen.
+
+Haast nooit durfde iemand door te zetten na de eerste aanschrijving door de sekte. Maar in Nederland was, na de inval bij XS4all, precies het omgekeerde gebeurd
+
+Andere deelnemers meldden zich – waaronder veel mensen uit nl.eeuwig.september – en zetten het Fishman Affidavit op hun website. Iemand bij XS4all maakte een scriptje dat je alleen maar hoefde aan te roepen om het Affidavit op je website te plaatsen. Op 25 september meldde ik in alt.religion.scientology dat er iets gaande was in Nederland.
+
+Daar wisten ze niet wat ze hoorden. In Engeland en de Verenigde Staten was de reputatie van Scientology van dien aard dat zowat iedereen bleek om de neus werd bij de eerste aanschrijving door de sekte. Slechts een enkeling durfde door te zetten. Maar in Nederland was, na de inval bij XS4all, precies het omgekeerde gebeurd: de provider gaf geen krimp en andere internetters sloten zich in de weken daarna aan. Weekblad De Groene Amsterdammer zette na mijn oproep de stukken op zijn website, omroeporganisatie TROS deed dat ook, en er deed zelfs een Kamerlid mee: Oussama Cherribi, lid van de VVD. Alt.religion.scientology stond paf. ‘Even a member of parliament is participating!?’
+
+Ik begon een (aanvankelijk dagelijkse) mailinglijst voor alle deelnemers om ze de laatste ontwikkelingen te melden en hield alt.religion.scientology op de hoogte. Pas na een week had ik voor het eerst tijd om dat Fishman Affidavit – de kern van de FACTnet kit – zelf eens goed te lezen.
+Een kerk met een eigen inlichtingendienst
+
+Al na twee pagina’s van om het even welk Scientology-document uit dat Fishman Affidavit duizelde het me. Niet alleen was elk stuk vergeven van afkortingen (die ik geen van alle kende), ook barstte het van ondoordringbaar jargon – alles leek expliciet bedoeld te zijn om een strikt gesloten gemeenschap te bedienen. Dit was een wereld waarin men doelbewust in code sprak. Er werd een taal gebezigd die als oogmerk had om de bokken van de geiten te scheiden: het waren de insiders tegen de outsiders. Wie iets niet snapte, hoorde er niet bij: U gaat terug naar af, U bent geen OT.
+
+Vervolgens probeerde ik eromheen te lezen: wat was de geschiedenis van die club, hoe gingen ze te werk, hoe waren andere zaken verlopen die Scientology over haar auteursrechtenclaims had gevoerd, en welke argumenten gebruikten ze daarin? Hadden ze zelf eigenlijk iets op hun kerfstok? Klopten die naargeestige berichten over de sekte?
+
+Alt.religion.scientology – in de wandeling: ars – werd mijn toevluchtsoord, vraagbaak en bibliotheek. Wat ik daar leerde, was niet mis. Scientology had een eigen inlichtingendienst, het Office of Special Affairs (OSA). De woordvoerder van de Nederlandse afdeling van Scientology, Julia Rijnvis, was er lid van. OSA was een behoorlijk grote en doortrapte organisatie; Rop Gonggrijp concludeerde al snel dat een gemiddeld Oostblokland jaloers op een inlichtingendienst van die omvang zou zijn geweest.
+
+OSA had allerlei perfide acties op touw gezet. Er waren er twee waarvan mijn mond openviel: Operation Snow White en Operation Freakout.
+
+Leden van Scientology wisten zich binnen te werken bij ten minste 136 overheidsinstanties, ambassades en consulaten in zeker dertig landen
+
+In de jaren ’70 vatte Scientology het plan op om ‘iets te doen’ aan het negatieve beeld dat overheden van hen hadden. OSA – toen nog het Guardian’s Office geheten – besloot tot een omvangrijke operatie: het zou infiltreren bij tal van overheidsinstanties om daar negatieve informatie te laten verdwijnen. De operatie kreeg de naam Snow White: het blazoen zou worden schoongepoetst. Het was een immense onderneming.
+
+Leden van Scientology wisten zich binnen te werken bij ten minste 136 overheidsinstanties, ambassades en consulaten in zeker dertig landen. In de Verenigde Staten infiltreerden ze onder meer bij de Belastingdienst en het ministerie van Justitie. Hun opdracht: ‘foutieve’ informatie over Scientology ‘corrigeren’. De order voor Operation Snow White kwam rechtstreeks van Hubbard zelf. De infiltranten plaatsten er telefoontaps, ze stalen, kopieerden en vernietigden documenten, en voegden hun eigen versies aan archieven of dossiers toe.
+
+Het was de grootste infiltratie-operatie die de Verenigde Staten ooit hebben meegemaakt. De toenmalige echtgenote van L. Ron Hubbard, Mary Sue, werd uiteindelijk met zeven andere hooggeplaatste sekteleden veroordeeld en verdween achter de tralies; Hubbard zelf, die inmiddels was gevlucht, werd in het vonnis beschreven als een ‘unindicted co-conspirator’.
+
+Door de invallen bij verschillende hoofdkwartieren van de sekte die volgden nadat de Amerikaans overheid doorhad wat er speelde, kwam een andere affaire boven tafel: Operation Freakout.
+
+Journalist Paulette Cooper had in 1968 een scherp artikel over de sekte gepubliceerd, later gevolgd door een boek, The Scandal of Scientology (1971). Cooper werd het onderwerp van een grootscheepse laster- en intimidatiecampagne en werd meermaals door Scientology gedaagd wegens smaad.
+Fragment van het omslag van The Unbreakable Miss Lovely: How the Church of Scientology tried to destroy Paulette Cooper, dat journalist Tony Ortega in 2015 publiceerde.
+Fragment van het omslag van The Unbreakable Miss Lovely: How the Church of Scientology tried to destroy Paulette Cooper, dat journalist Tony Ortega in 2015 publiceerde.
+
+Op zeker moment beschuldigde Scientology haar er zelfs van dat ze de kerk – nota bene schriftelijk – met bomaanslagen had gedreigd. Haar vingerafdrukken werden op het briefpapier gevonden. Cooper werd door de politie opgepakt, er volgde een inval bij haar thuis, en ze kwam enige tijd vast te zitten.
+
+In de herfst van 1977, nadat de FBI een inval bij Scientology had gedaan, ontdekte die het interne dossier over Operation Freakout. De man die Cooper na de publicatie van haar boek had ontmoet, op wie ze verliefd was geworden en met wie ze inmiddels samenwoonde, was lid van de sekte en was door de organisatie op haar afgestuurd om haar een loer te draaien. Haar eigen vrijer had haar niet alleen jarenlang bespioneerd, maar was ook instrumenteel geweest in de fabricage van al het ‘bewijs’ tegen Cooper.
+
+De manier waarop Scientology Cooper te grazen had genomen, bleek geen incident te zijn: het was beleid. Wie door de sekte tot ‘vijand’ wordt verklaard – een enemy of Suppressive Person – is vogelvrij: met of tegen SP’s en ‘enemies’ mag elk Scientology-lid straffeloos werkelijk alles doen. De kerk schrijft dat een vijand ‘may be deprived of property or injured by any means by any Scientologist without any discipline of the Scientologist. May be tricked, sued or lied to or destroyed.’ De praktijk staat intern bekend als Fair Game: wild waar je rechtmatig op mag jagen.
+
+Van alt.religion.scientology leerde ik dat ook ik inmiddels een SP was, en Scientology had me al herhaaldelijk (en openlijk) een copyright terrorist genoemd. Ik besloot de remmen van mijn gehandicaptenautootje voortaan goed te controleren voordat ik erin wegreed.
+
+
+ Scientology versus internet, deel 3: De rechtszaak
+Karin Spaink
+6 Connecties
+Personen
+Rop Gonggrijp Felipe Rodriquez Jan Peter Mante
+Organisaties
+XS4all Scientology Planet Internet
+12 Bijdragen
+
+In 1995 brak een internationaal conflict uit op het toen nog prille internet. De inzet: wie is aansprakelijk voor wat gebruikers online doen? In Nederland hielp Karin Spaink die kwestie te definiëren. De tien jaar durende rechtszaak die Scientology tegen haar en XS4all voerde over wat zij op internet publiceerde, heeft grote invloed gehad op het internetrecht in Nederland. Vijfentwintig jaar na dato doet Spaink verslag van de zaak. In dit deel: Scientology begint een rechtszaak, zegt ’m op het nippertje af, en start een nieuwe zaak.
+Over deze serie
+
+    Dit is deel 3 van een serie.
+    In de eerste aflevering (‘Doom’) beschreef ik de opkomst van het publieke internet, een dan nog vrijwel ongereguleerd medium. Het beviel Scientology totaal niet dat critici en oud-leden daar vrijuit hun kennis over en hun ervaringen met de sekte konden delen.
+    In de tweede aflevering (‘Inval bij XS4all’) beschreef ik hoe die internationale ruzie oversloeg naar Nederland. Scientology deed – met een deurwaarder – een inval bij XS4all en liet beslag leggen op de computers. Steen des aanstoots: een Amerikaans rechtbankstuk met daarin hoger cursusmateriaal van de sekte.
+    Er volgen nog drie afleveringen; op 1 januari publiceert Follow the Money de laatste.
+
+Lees verder
+Was dit kader nuttig?
+Zijn we blij mee!
+Balen!
+Vertel ons wat beter kan:
+Meld je aan voor onze nieuwsbrief en krijg een maand gratis Follow the Money.
+
+Op 28 september 1995, anderhalve week nadat ik mijn website bij Planet had opgezet, bespraken we met een aantal mensen een plan de campagne. Aanwezig: Rop Gonggrijp en Felipe Rodriquez van XS4all; Alex de Joode (van de remailer); Newkid, die nog voor mij de FACTnet kit op zijn site had gezet, maar dan bij internetaanbieder Cistron; iemand van Cistron, en ik. We gingen eten in Centra.
+
+Centra was een Spaans restaurant op de Wallen, in de Lange Niezel. Het was in 1946 geopend en fungeerde aanvankelijk als toevluchtsoord voor Spaanse zeelieden. Behalve Spanjaarden kwamen er inmiddels veel journalisten, tv-mensen en aardig wat lieden uit de penoze. Drugsbaron Klaas Bruinsma en zijn coterie behoorden tot de stamgasten, maar ook pater Theo Beusink, beter bekend als padre Boes, die al vanaf de jaren ’60 de Spaanstalige ‘gastarbeiders’ in de stad bijstond.
+
+In 1962 nam het echtpaar Rodriquez het restaurant over. Ze gingen erboven wonen en kregen een zoon. Felipes vader stierf jong, zijn moeder helaas ook: in 1987, op zijn achttiende, werd Felipe eigenaar van Centra. De plannen voor de oprichting van XS4all werden er gesmeed, en de aanloopkosten daarvoor werden deels gefinancierd met zwart geld uit het restaurant.
+Spaink en Felipe in Centra, december 1995
+Spaink en Felipe in Centra, december 1995 © Privé-archief Spaink
+
+Inmiddels waren er circa vijftien websites met de FACTnet-kit en het Fishman Affidavit. Een deel van de betrokkenen – of hun providers – had al telefoontjes en mail van Scientology gehad. Cistron had een standaardantwoord voor betrokken providers opgesteld; XS4all had een advocaat ingeschakeld, Pieter Bakker Schut.
+
+Felipe had alle deelnemers op het hart gedrukt: ‘Als mensen in (juridische) problemen komen, laat ze dan contact opnemen met mij, voordat mensen zichzelf helemaal inwerken in deze zaak en advocaten gaan inhuren. De kennis die we hebben verzameld is voor eenieder beschikbaar.’ 
+
+We dachten sterk te staan. Het Fishman Affidavit, het deel van de FACTnet-kit waarop Scientology haar pijlen richtte, kwam uit een rechtbankdossier en was daardoor formeel openbaar. Waarschijnlijk was artikel 15b van de Auteurswet, dat het auteursrecht inperkt, de doodsteek voor de claim van de sekte: documenten die door de overheid (ook buitenlandse) zijn gepubliceerd, behoren tot het publieke domein – tenzij de overheid het auteursrecht erop uitdrukkelijk heeft voorbehouden.
+
+In mijn eentje durfde ik een rechtszaak niet goed aan. De onvoorwaardelijke steun die XS4all bood, gaf de doorslag
+
+Maar recht was één, intimidatie was twee. Op dat laatste gebied had Scientology een naam hoog te houden, en dat maakte dat dit geen gewone zaak was. Het was voorts niet duidelijk wie zou doorzetten als het tot sommaties kwam, laat staan wanneer er een dagvaarding bij hen aan huis zou worden bezorgd. Alex mailde me: ‘Er moet [..] iemand bereid zijn om de rechtszaak aan te gaan [en die] moet ook de intimidatiepogingen van Co$ kunnen weerstaan. [..] Wat we zoeken is kortom een hero.’ 
+
+Ik aarzelde. In mijn eentje durfde ik het niet goed aan. Als Newkid en Kamerlid Oussama Cherribi nu meededen, en beloofden hun site onder geen beding te verwijderen, zou dat helpen. Newkid bleek Snorri Helgarsson te heten en was een klein mannetje met (jawel) een snor, een baard en een mopsneus; hij zei dat-ie van origine IJslands was. Newkid hield een slag om de arm: hij wilde wel, maar zei geen ja, al was hij een der eersten die een mirror van de FACTnet-kit op zijn site had gezet.
+
+De onvoorwaardelijke steun die XS4all bood, gaf de doorslag. Ik besloot door te zetten. Wat hielp was de wetenschap dat ik een zekere bekendheid had, plus een column in de krant: ik had toegang tot de media en kon me makkelijker verweren indien de sekte iets mals zou uithalen. Ik kon me meer risico veroorloven dan veel andere deelnemers.
+
+We dronken er een borrel op. Daags erna kreeg ik mail van Helena Kobrin, de advocaat van het hoofdkantoor van Scientology. Ze eiste dat ik het ‘gestolen materiaal’ per direct van mijn website verwijderde en wilde dat ik mijn oproep aan anderen om mee te doen publiekelijk introk. Een paar dagen later, op 3 oktober, sommeerde advocatenkantoor NautaDutilh me de teksten van mijn website te verwijderen. Ook Kamerlid Oussama Cherribi kreeg zo’n brief. Ruprecht Hermans trad op als raadsman voor de sekte. Zijn vader, de schrijver W.F. Hermans, zou zich in zijn graf hebben omgedraaid.
+Het Fishman Affidavit als affiche
+Het Fishman Affidavit als affiche © Bron: website Felipe Rodriquez
+
+Prompt verschenen er affiches in Amsterdam met daarop de volledige tekst – in echt heel kleine lettertjes – van het Fishman Affidavit, vooral rondom Scientology’s hoofdkantoor op de Nieuwezijds Voorburgwal.
+
+Op 8 november viel de dagvaarding op de mat. De gedaagden: XS4all, De Digitale Stad, Dataweb, Cistron en ik. Opmerkelijk genoeg had Scientology Planet Internet niet gedaagd. Maar Planet liet niet over zich heen lopen: een week later meldde de internetprovider dat hij zich vrijwillig zou voegen. We werden op 14 december bij de rechtbank in Den Haag verwacht.
+Hoog bezoek
+
+XS4all, nooit te beroerd voor een stunt, besloot om vlak voordat het kort geding zou dienen, Steven Fishman – de oorspronkelijke bron van het Affidavit – naar Nederland te halen. Hij kon dan zijn verhaal in de Nederlandse pers doen. Iemand kwam met het plan een openbare avond te organiseren in de Melkweg, met Fishman als hoofdgast.
+
+Binnen een paar dagen knutselden we een avondvullend programma in elkaar. Jan Lenferink, de roemruchte presentator van RUR, was gastheer. Hij interviewde Fishman, onze advocaat Pieter Bakker Schut, Felipe en mij. Allerlei min of meer bekende Nederlanders lazen om de beurt stukken voor uit getuigenverklaringen, geschriften van ex-leden en gerechtelijke vonnissen. Het doel: duidelijk maken dat we met een ‘vieze’ tegenstander van doen hadden, die auteursrecht als wapen gebruikte. 
+Fragment openingspagina interview Steven Fishman, Nieuwe Revu, december 1995
+Fragment openingspagina interview Steven Fishman, Nieuwe Revu, december 1995 © Interview: Hélène Sschilders, foto: Frans Schellekens
+
+Er hing een rare sfeer. Veel deelnemers – inmiddels beliep hun aantal bijna honderd – kwamen die avond, en dat voelde feestelijk. De deelnemers kregen T-shirts met daarop een beleidsbrief van Hubbard waarin-ie uitlegde dat leugen en bedrog geoorloofd zijn om je doel te bereiken, de affiches met het complete Fishman Affidavit werden uitgedeeld, en half nl.eeuwig.september was er.
+
+Er was ook ander bezoek: een Amerikaanse delegatie van Scientology kwam naar de Melkweg. Allan Cartwright, hoofd legal affairs van Scientology International, was al een week of drie eerder uit Californië ingevlogen, en belde sindsdien de ene provider na de andere. Nu was ook Leisa Goodman gearriveerd, hoofd woordvoering van Scientology International en lid van het Office of Special Affairs, de inlichtingendienst van de sekte. Ze had een paar secondanten bij zich. Ook Julia Rijnvis, woordvoerder van de Nederlandse tak, was meegekomen. Rop overhandigde ze vriendelijk een paar consumptiebonnetjes.
+
+    Felipe Rodriquez vs. Leisa Goodman, Melkweg 11 dec. 1995
+    Jan Lenferink en Steven Fishman, Melkweg 11 dec. 1995
+    Francisco van Jole, Julia Rijnvis, Alex de Joode, Mischa Peters, Melkweg 11 dec. 1995
+    Spaink vs Leisa Goodman, Melkweg 11 dec. 1995
+    Etentje in Centra, voorafgaand aan de avond in de Melkweg. Vlnr Spaink, Felipe Rodriquez, Cor Bosman, Steven Fishman, Rop Gonggrijp
+
+Felipe Rodriquez vs. Leisa Goodman, Melkweg 11 dec. 1995 © Privé-archief Spaink
+
+De delegatie eiste ter plekke met Felipe, Fishman en mij te spreken. Goodman stond daarbij steevast net iets te dicht bij je, en keek je doordringend aan. (Later ontdekte ik dat je volgens de sekteleer met die houding je gesprekspartner kunt vloeren. Het lukte niet.)
+
+Het allervreemdste: alle machtsvertoon ten spijt had Scientology juist die dag bekend gemaakt dat ze de rechtszaak afblies. Het ging om ‘uitstel’, bezwoer advocaat Hermans; zijn cliënt overwoog om in plaats van een kort geding een bodemprocedure tegen ons te beginnen, compleet met getuigenverhoren. Hermans stuurde onze advocaat tevens al diens stukken en brieven terug – alles ongeopend.
+Close reading, met kleurtjes
+
+Bijna twee maanden later, begin februari 1996, ontvingen we de tweede dagvaarding. Toch weer een kort geding, maar nu met een sterk uitgebreide lijst gedaagden; bij elkaar veertien providers. Weer was ik de enige gebruiker. De zitting zou op 26 februari plaatsvinden.
+
+We hadden Scientology steeds gevraagd of we de originelen konden inzien van de OT-stukken waarop de sekte auteursrecht claimde. Er was namelijk veel verwarring over de status van de pagina’s die in het Fishman Affidavit waren opgenomen. Door minutieus andere rechtszaken van de sekte over OT-materiaal uit te pluizen, en met hulp van alt.religion.scientology, had ik bijvoorbeeld ontdekt dat Scientology de ene keer auteursrecht claimde op de citaten uit OT8 in het Fishman Affidavit, maar de andere keer beweerde dat die citaten een vervalsing waren.
+
+Hoe kun je controleren of je Scientology’s auteursrecht schendt, als je het origineel onder geen beding kunt inzien?
+
+OT8 was door tegenstanders gefabriceerd, zo verklaarde Scientology dan, om een wig tussen christenen en Scientologen te drijven. In OT8 staan onder meer zinsneden waarin Jezus tot een ‘implant’ wordt verklaard, waarin Hubbard zichzelf vergelijkt met de antichrist en Jezus als een ‘opvliegende pedofiel’ beschrijft.
+
+De kern van het probleem: hoe kun je, als buitenstaander, controleren of je Scientology’s auteursrecht met je citaten schendt, indien je het origineel onder geen beding kunt inzien? De tweede dagvaarding onderstreepte dat probleem: de sekte liet daarin ook haar auteursrechtclaim op OT4 tot en met OT7 grotendeels vallen. Scientology beloofde voor OT2 en OT3 een geoormerkte vergelijking te produceren: een notaris zou hun originelen vergelijken met de passages op mijn website. (OT1 verdween op de een of andere manier van het toneel.)
+
+Op 19 februari, een week voordat het kort geding zou dienen, ontvingen we eindelijk die vergelijking. De notaris had op gemaskeerde kopieën van de originele OT’s met geel aangegeven welke passages woordelijk op mijn website stonden, en met blauw wat er in gewijzigde vorm stond. Er stond best veel geel op de kopieën.
+Notariële vergelijking tussen de originele tekst van OT3 en mijn website. Blauw is afwijkende tekst, geel is een letterlijk citaat. Herkenbare woorden zijn door de notaris gezwart.
+Notariële vergelijking tussen de originele tekst van OT3 en mijn website. Blauw is afwijkende tekst, geel is een letterlijk citaat. Herkenbare woorden zijn door de notaris gezwart.
+
+Dat klonk als slecht nieuws. Maar nadat Bakker Schut, Felipe en ik hadden overlegd, concludeerden we dat we op de goede weg waren. We hadden immers een aantal argumenten aangevoerd om Scientology’s claims te betwisten.
+
+Ten eerste: Scientology had een inval gedaan bij XS4all op grond van een auteursrechtclaim die ze systematisch weigerde te toe te lichten: een disproportioneel grote stap. We hadden ze nu zo ver dat ze hun stelling onderbouwden. Dat had de sekte nu in elk geval deels gedaan. Dat daarbij bleek dat ze een deel van hun claims niet wisten waar te maken, onderstreepte het belang van ons verzet.
+
+Ten tweede zou de rechter nu oordelen over de vraag of een ‘gedupeerde’ zijn claim linea recta bij de isp van een internetabonnee kon neerleggen, dan wel eerst de gebruiker in kwestie op zijn uitlatingen moest aanspreken. En: kon een isp verplicht worden de persoonsgegevens van zo’n abonnee klakkeloos door te geven, of moest de claim van de eiser eerst worden onderbouwd?
+
+En ten derde: het Fishman Affidavit was een rechtbankstuk, en daarmee openbaar. (Hoewel dit document inmiddels door de Amerikaanse rechter sub rosa was verklaard.) Bleef staan dat een groep die claimt een religie te zijn, haar volgelingen op voorhand (ten minste op grote lijnen) dient in te lichten over de aard van dat geloof, zodat aspirant-leden zich kunnen verdiepen in de overtuigingen en gewoontes van de groep waarbij ze zich mogelijk zouden aansluiten.
+
+Bakker Schut had overlegd met de advocaten van Planet Internet, Wouter Pors en Joris van Manen. Alle drie vonden ze het beter de zaak niet op de spits te drijven: ze vroegen me de delen van OT2 en OT3 uit het Fishman Affidavit te vervangen door een samenvatting.
+OT2 en OT3 herschreven
+
+Ik herschreef de passages uit OT2 en OT3.
+
+OT2 was makkelijk, dat bestond vooral uit een lange lijst permutaties, van het type ‘You must survive. You mustn’t survive. You should survive. You shouldn’t survive. You can survive. You can’t survive.’ – en dan de hele riedel opnieuw, maar dan met ‘he’, en daarna met ‘they’, dan ‘we’, en tot slot met ‘all’. Of: ‘Create shock. Create no shock. Destroy shock. Destroy no shock. Love shock. Love no shock. Hate shock. Hate no shock.’ Iemand had daarvan al eens een samenvatting gemaakt voor alt.religion.scientology, en die nam ik nu integraal over.
+
+Voor OT3 paste ik een truc toe. Margery Wakefield, ooit lid van de sekte en al jong vrij hoog opgeklommen – ze was toegetreden tot de Sea Org, de ‘marine’ van Scientology, en had Hubbard zelf nog meegemaakt – was compleet afgeknapt op de kerk nadat ze OT3 eindelijk mocht bestuderen. In haar biografie The Road to Xenu (1993) beschrijft ze die episode. Kennelijk had ze een deel uit haar hoofd geleerd, want in dat boek stond zo ongeveer hetzelfde als in OT3 uit het Fishman Affidavit. Ik citeerde nu Wakefield, en ontleedde en becommentarieerde haar tekst paragraaf voor paragraaf.
+
+Voor het commentaar beriep ik me deels op de Brit Jon Atack, eveneens een voormalig lid. Hij zou Hubbards biografie schrijven en knapte af toen hij tijdens zijn research ontdekte hoeveel flagrante leugens Scientology en de grote leider zelf over het verleden van deze ‘poet, inventor and humanitarian’ hadden gedebiteerd. Buiten een zeer kritisch boek over Scientology, A Piece of Blue Sky (1990), schreef Atack ook OT3 rewritten for beginners. Daar putte ik rijkelijk uit. Het resultaat: een kritische beschouwing van OT3, met her en der citaten uit Hubbards origineel.
+Lees verder Inklappen
+Met gouden koffertjes bij de rechter
+
+Op 26 februari diende de zaak. Het was bomvol: er was pers, er waren mensen die het Fishman Affidavit op hun website hadden staan, er waren veel isp’s, er waren mensen van nl.eeuwig.september. Er was tevens een fikse delegatie van Scientology zelf, inclusief een delegatie uit Amerika. Die laatste werd geleid door Warren McShane, hoofd van het Religious Technology Center (RTC), een van de eisers in de zaak. RTC is de divisie van Scientology waar de auteurs- en licentierechten van de sekte zijn ondergebracht en waar de advocaten het voor het zeggen hebben (ze zijn uiteraard allemaal trouw lid).
+
+Nog voordat de advocaten van eisers of gedaagden hun pleidooi konden houden, had Scientology een punt van orde. Mochten de heren van RTC wellicht even naar voren komen? Ze wilden de edelachtbare graag iets laten zien. De rechter die de zaak behandelde, Van Delden, knikte.
+
+Een kleine optocht toog door het gangpad naar de tafel van de rechter, McShane voorop. Achter hem liepen vier of vijf mannen: ze droegen allemaal een goedkoop, donker pak en trokken ieder een klein formaat rolkoffer voort. Samsonites. Goudkleurige Samsonites. Elke koffer zat met handboeien vastgeklonken aan de pols van de man die het ding onder zijn hoede had. Van Delden, een tengere man met een scherp gesneden gelaat, zette zijn elleboog op tafel, vouwde zijn hand onder zijn kin, en leunde zwijgend iets naar voren.
+
+McShane maakte de sloten van het koffertje open, vouwde het deksel behoedzaam opzij, en tilde de inhoud eerbiedig tot ooghooogte op
+
+McShane nam een van de koffertjes van zijn gevolg over en rommelde met sloten. Rupert Hermans legde plechtig uit wat er stond te gebeuren: in deze koffertjes bevond zich het strikt geheime, hogere cursusmateriaal van Scientology: dit waren de originele, door Hubbard met de hand geschreven OT-cursussen. Die zouden nu aan de president van de rechtbank worden getoond. McShane maakte de sloten van het koffertje open, vouwde het deksel behoedzaam opzij, en tilde de inhoud eerbiedig tot op Van Deldens ooghoogte. Dit was de schat van Scientology. In de zaal werd gegiecheld.
+
+Van Delden nam de tijd om de handel te bekijken. Meer dan een stapel papieren zal hij niet hebben gezien. Hij knikte opnieuw, en leunde naar achteren. ‘Mooi koffertje,’ zei hij droogjes. Nog een knikje, nu iets dwingender. McShane kon gaan.
+
+De advocaten staken hun pleidooien af. De zaal luisterde. Toen Hermans iets moest zeggen over Xenu, staken de Scientology-leden die zich achterin de zaal hadden verzameld, demonstratief hun vingers in hun oren: dit mochten ze niet horen, ze waren nog niet zo ver. 
+
+In de pauze raakte ik aan de praat met Wouter Pors, een van Planets advocaten. ‘Wat bijzonder dat Planet zichzelf heeft gevoegd,’ zei ik. ‘Ach,’ zei Pors, ‘je kon erop wachten dat zich een rechtszaak zou aandienen over de vraag wie wettelijk aansprakelijk is voor een website. Die kwestie vechten we liever uit met Scientology als eiser, dan met pakweg ABN Amro. Scientology is een ideale tegenstander: de linies zijn scherp, de inzet is helder. Dit gaat over de vrijheid van meningsuiting van onze klanten.’
+
+Bij thuiskomst vond ik een nieuwe dagvaarding in de brievenbus, ditmaal voor een bodemprocedure. De eisen waren hetzelfde als die in kort geding.
+Gedaagde sub 23
+
+Op 12 maart was de uitspraak. Weer togen we naar Den Haag. Tot mijn immense opluchting wonnen we op alle fronten. 
+
+Van Delden vonniste over gedaagde sub 23 – dat was ik – dat het Fishman Affidavit in Amerika door de rechtbank openbaar was gemaakt: ik mocht er daarom uit citeren. Dat ik mijn website had omgewerkt nadat was vastgesteld dat ik wellicht veel citeerde, strekte tot mijn voordeel: meteen nadat ik bewijs had gezien, had ik mijn website aangepast. De rechtbank wees alle eisen tegen mij af.
+Na de uitspraak, in een internetcafé, posten mensen van nl.eeuwig.september het goede nieuws.
+Na de uitspraak, in een internetcafé, posten mensen van nl.eeuwig.september het goede nieuws. © Karin Spaink
+
+Over de providers oordeelde Van Delden:
+
+‘Wat betreft [isp’s] moet worden aangenomen dat zij niet meer doen dan gelegenheid geven tot openbaarmaking en dat zij in beginsel geen invloed kunnen uitoefenen op of zelfs maar kennis dragen’ van wat hun abonnees doen. ‘In beginsel is er daarom geen aanleiding hen aansprakelijk te houden voor onrechtmatige – bijvoorbeeld op auteursrechten van derden inbreuk makende – handelingen van gebruikers.’
+
+Hij formuleerde één uitzondering: ‘een situatie waarin onmiskenbaar duidelijk is dat een publicatie van een gebruiker onrechtmatig is en waarin redelijkerwijs mag worden aangenomen dat zulks ook bij de access provider bekend is’. In dat geval ‘zou wellicht van de access provider verlangd kunnen worden dat hij tegen de betrokken gebruiker optreedt’. Maar, zo vervolgde Van Delden, dat was hier niet aan de orde: ‘door eisers [is] echter niet aannemelijk gemaakt dat een van de gedaagden 1 tot en met 22 handelend had behoren op te treden’.
+
+Internetproviders zijn common carriers, oordeelde Van Delden, en wie gebruikers de mond wil snoeren, moet eerst degelijk bewijs voor zijn of haar claims aanleveren voordat iemand hoeft in te grijpen. De eerste slag was voor ons – Team Internet had Team Scientology met vlag en wimpel verslagen. Ook alt.religion.scientology juichte.
+
+Dit is deel 3 van een serie. Op maandag 27 december  verscheen de eerste aflevering (‘Doom’); gisteren verscheen de tweede aflevering (‘Inval bij XS4all’). Morgen verschijnt deel 4, een intermezzo over intriges en vuil spel gedurende de tien jaar durende rechtszaken.
+
+
+ Scientology versus internet, deel 4: Intriges en vuil spel [intermezzo]
+Karin Spaink
+4 Connecties
+Personen
+Felipe Rodriquez Jan Peter Mante
+Organisaties
+XS4all Scientology
+21 Bijdragen
+
+In 1995 brak een internationaal conflict uit op het toen nog prille internet. De inzet: wie is aansprakelijk voor wat gebruikers online doen? In Nederland hielp Karin Spaink die kwestie te definiëren. De tien jaar durende rechtszaak die Scientology tegen haar en XS4all voerde over wat zij op internet publiceerde, heeft grote invloed gehad op het internetrecht in Nederland. Vijfentwintig jaar na dato doet Spaink verslag van de zaak. In dit deel: wat je allemaal kan overkomen wanneer je de strijd met Scientology aanbindt.
+Over deze serie
+
+    Dit is deel 4 van een serie.
+    In de eerste aflevering (‘Doom’) beschreef ik de opkomst van het publieke internet, een dan nog vrijwel ongereguleerd medium. Het beviel Scientology totaal niet dat critici en oud-leden daar vrijuit hun kennis over en hun ervaringen met de sekte konden delen.
+    In de tweede aflevering (‘Inval bij XS4all’) beschreef ik hoe die internationale ruzie oversloeg naar Nederland. Scientology deed – met een deurwaarder – een inval bij XS4all en liet beslag leggen op de computers. Steen des aanstoots: een Amerikaans rechtbankstuk met daarin hoger cursusmateriaal van de sekte.
+    In de derde aflevering (‘De rechtszaak’) bescheef ik de aanloop naar het kort geding dat de sekte aanspande. XS4all haalde Steven Fishman naar Nederland – de man die de verklaring had ingediend waar de ruzie mee begonnen was – en Scientology bracht goudkleurige koffertjes naar de zitting. Wij wonnen.
+    Er volgen nog twee afleveringen; op 1 januari publiceert Follow the Money de laatste.
+
+Lees verder
+Was dit kader nuttig?
+Zijn we blij mee!
+Balen!
+Vertel ons wat beter kan:
+Meld je aan voor onze nieuwsbrief en krijg een maand gratis Follow the Money.
+
+Dat we nu in een rechtszaak waren verwikkeld, betekende niet dat Scientology uitsluitend met open vizier opereerde. Deelnemers aan wat alt.religion.scientology ‘the Dutch protest’ noemde, werden getraceerd. Mensen werden door de sekte thuis opgebeld, soms bar vroeg, ook nadat de dagvaardingen al waren verstuurd. Het was een onvriendelijke herinnering dat niet gedaagd worden, niet betekende dat je niets te duchten had.
+
+Ook isp’s kregen herhaaldelijk telefoontjes. De ene deelnemer of isp reageerde daar minder laconiek op dan de andere, en dat was begrijpelijk: wat betreft tegenstanders het leven zuur maken, had Scientology een akelige reputatie hoog te houden.
+
+De meest onschuldige ontdekking: alles wat ik publiekelijk over de sekte zei en schreef, werd ogenblikkelijk in het Engels vertaald en naar het Amerikaanse hoofdkwartier verstuurd, in de hoop me in diskrediet te kunnen brengen. Tevens plukte Scientology, zo hoorde ik later, zeker een jaar lang ’s nachts mijn vuilniszakken van straat, in hun zoektocht naar compromitterend materiaal. Ze vonden alleen afval, peuken en kattenbakgrit.
+
+Het was duidelijk dat de inlichtingendienst van de sekte hier actief werd. Al snel nadat de Nederlandse actie opbloeide, kwamen allerlei kopstukken van Scientology International naar Nederland. Na Allan Cartwright in november en Leisa Goodman in december 1995, arriveerde Kurt Weiland in januari 1996 in Amsterdam. Net als de anderen was Weiland lid van het Office of Special Affairs, de inlichtingendienst van de sekte. Ook Martin Weightman, directeur ‘human rights’ van Scientology in Europa, was plotseling vaak hier.
+
+In een vroeg stadium had Snorri ons verteld dat hij als systeembeheerder bij de Amerikaanse ambassade werkte
+
+In november bleek er iets aan de hand te zijn. Het betrof Newkid / Snorri Helgarsson, die steeds een slag om de arm had gehouden wat betreft het doorzetten van de rechtszaak. Hij zei steeds stellig dat hij best gedaagd wilde worden, maar er was altijd wel een of andere hindernis.
+
+In een vroeg stadium had hij ons verteld dat hij als systeembeheerder bij de Amerikaanse ambassade werkte. Hij claimde dat hij daar ‘full privileges’ had en dat hij als zodanig niet gedaagd kon worden, of dat zulks Scientology ten minste met een diplomatiek conflict zou opzadelen. Die redenering begreep ik nooit helemaal, want dit was privaatrecht, geen strafrecht.
+
+Toen Allan Cartwright in Nederland allerlei providers opbelde om hen onder druk te zetten, besloot Snorri met hem te gaan praten. Hij deed nadien verslag aan Felipe en mij: Cartwright was – geheel volgens de leer van de sekte – overtuigd dat er een internationaal complot tegen Scientology gaande was. De Duitse deelstaat Beieren onderzocht in die periode of Scientology de status van ‘kerk’ wellicht moest worden ontnomen; dat was volgens Cartwright onderdeel van een en hetzelfde complot als ons protest, net als de poging van FACTnet om de auteursrechten van de sekte te ‘stelen’.
+Snorri heeft een plan
+
+Helgarsson besloot Cartwright te gaan uitmelken en maakte een nieuwe afspraak. Hij wilde hem, zo vertelde hij mij en Felipe, bovendien een worst voor de neus hangen: hij zou laten doorschemeren dat hij, als systeembeheerder bij de Amerikaanse ambassade, wel eens kon kijken welke documenten er daar over de sekte bestonden.
+
+Snorri was van plan dat gesprek stiekem op te nemen. Hij hoopte Cartwright zover te krijgen dat die hem openlijk geld zou beloven als ‘tegemoetkoming’ voor het risico dat hij nam. Dan had hij bewezen dat Scientology bereid was mensen om te kopen om illegaal aan informatie te komen.
+
+Felipe en ik bespraken de kwestie onderling. We waren absoluut geen voorstander van Snorri’s plan: we deden alles met open vizier, juist omdat er een publiek belang met de kwestie gemoeid was. Wat Snorri deed, kon volkomen contraproductief zijn. Maar hij was niet te houden. Hij liet bovendien doorschemeren dat zijn actie ‘gedekt’ werd door de ambassade. Ik maakte me niettemin zorgen om zijn veiligheid, zodat ik hem vroeg me na elke meeting met Cartwright te mailen of te bellen.
+Snorri Helgarsson (midden) na afloop van de uitspraak in kort geding, 12 maart 1996
+Snorri Helgarsson (midden) na afloop van de uitspraak in kort geding, 12 maart 1996 © Karin Spaink
+
+Met de tijd werden de verslagen van Snorri complexer. Inmiddels was er ook ene Frank Marshall bij de gesprekken betrokken, een kompaan van Cartwright. Snorri nam op zijn beurt Jennifer mee: een collega van de ambassade, zei hij. Ik kon er geen touw meer aan vastknopen.
+
+Ineens kregen Felipe en ik allebei telefoontjes van Jennifer, die vertelde dat Snorri ons belazerde en met Scientology onder een hoedje speelde. Ze had tapes, claimde ze. Jennifer wilde ons ontmoeten, maar niet op een openbare plaats, en al helemaal niet bij onze advocaat. Toen Snorri ons kort daarna meldde dat hij was ontslagen bij de ambassade omdat hij er documenten zou hebben gestolen, vond Felipe het welletjes.
+
+Op 8 november 1995 stuurde Felipe een uitgebreide mail over de kwestie naar Harry Onderwater, een oude kennis, om hem te waarschuwen dat er iets vreemds speelde. Onderwater was een hacker, een oud-politieman en inmiddels werkzaam bij de toenmalige CRI, de Criminele Recherche Informatiedienst. Op het Hacktic-bbs had Onderwater jarenlang een oogje in het zeil gehouden en overmoedige hackers geregeld bijgestuurd. ‘[Karin en ik] hebben Newkid verschillende malen gezegd dat er voor hem enorme risico’s zijn. Het is nergens voor nodig om [Scientology] op deze manier uit de tent te lokken,’ besloot Felipe zijn mail.
+
+Onderwater bedankte Felipe voor zijn mail. Jaren later, toen ik hem interviewde, bevestigde hij dat-ie Newkid al langer in de gaten hield.
+‘Ontmaskerd’
+
+Een week na Felipes melding, op 15 november 1995, verscheen een groot stuk in de Leeuwarder Courant met de titel ‘Zwendelaar achter Internet-actie tegen Scientology’. De opening van het stuk: ‘​​De Nederlandse actie op het computernetwerk Internet tegen de Scientology Kerk is mede het werk van een zwendelaar. De man, die op het Internet de naam “Newkid” gebruikt, was werkzaam op de Amerikaanse ambassade. Hij probeerde de scientologen voor grof geld het verhaal te verkopen dat hij in opdracht van de Amerikaanse regering de kerk zwart moet maken. Zo “moest” hij onder andere auteursrechtelijk beschermde documenten van de kerk op Internet plaatsen. De man werd vorige week door de ambassade ontmaskerd en ontslagen.’
+
+Kort daarna kwamen de landelijke kranten. Newkid bleek geen Snorri Helgarsson te heten, maar Jan Peter Mante, en was gewoon een Nederlander. Volgens hem had Jennifer hem aan Scientology verraden. Trouw, dat erin geslaagd was Mante zelf te spreken, opende er op 18 november mee: ‘Man ontmaskerd die dossiers VS aan scientology wilde verkopen’. In een tweede artikel, verderop in diezelfde krant, wierp Trouw terecht de vraag op: ‘Het gaat om de vraag “wie bedondert wie?”’
+
+Mante verklaarde dat hij in december 1995 door twee hoge omes van Scientology drie dagen in een hotelkamer was ‘vastgehouden’ voor een ‘kruisverhoor’
+
+Vanaf dat moment werd alles alleen maar onduidelijker. Mante speelde eerst de vermoorde onschuld en legde uit dat hij zich had laten ‘meevoeren’: ‘I have been stupid, overzealous, and blind on top of that.’ Maar verder was hij vooral slachtoffer, vond hij. Zowel Felipe als ik dachten inmiddels aan een ingewikkeld opzetje, waarin Scientology de kans schoon had gezien om Newkid uit te rangeren en tegelijkertijd Felipe en mij in een kwalijk daglicht te zetten: het regende die dagen persberichten van Scientology waarin we als Mantes partners in crime werden afgeschilderd.
+
+Ruim een jaar later, in februari 1997, publiceerde Trouw een nieuw artikel over de kwestie. Mante verklaarde daarin dat hij in december 1995 door twee hoge omes van Scientology drie dagen was ‘vastgehouden’ in een hotelkamer, en onder druk was gezet – hij sprak van een ‘kruisverhoor’.
+
+Trouw meldde: ‘Uiteindelijk heeft hij verklaard dat alle bestrijders van scientology op Internet één groep vormen – een voor de sekte belangrijk juridisch argument in de rechtszaken die zij heeft aangespannen tegen haar vijanden op het Internet. [..] Samen met top-scientoloog Cartwright is Mante aan het einde van de derde dag naar het Amerikaanse consulaat gegaan om de verklaring te laten beëdigen, zodat die dienst kan doen bij rechtszaken in de Verenigde Staten. Woordvoerster Rijnvis van scientology bevestigt dat Mante drie dagen is verhoord en een verklaring heeft afgelegd.’
+
+Terugblikkend weet ik oprecht niet wie wie indertijd heeft belazerd. Was alles een opzetje van Scientology om Felipe en mij in een kwalijk licht te stellen? Leefde Mante in een zelfgeschapen spionnenwereld, onderwijl links en rechts brokken makend? Of troffen een gek en een sekte elkaar, waarna ze de weg kwijtraakten in elkaars fantasie? Hoe dan ook: de man heeft er zijn carrière van gemaakt om ergens te infiltreren, en vervolgens gesnapt te worden – net als de sekte.
+Jan Peter Mante in andere rollen
+
+Dat artikel in Trouw over Mantes ‘kruisverhoor’ vormde de blauwdruk voor de rollen die hij later zou aannemen. Vast ingrediënt: Mante als intrigant en stokebrand, die in complexe verhalen excelleerde. (Onderwater noemde hem later een ‘pathologisch obstakel’.)
+
+Uit Trouw: ‘Mante [..] zegt nu dat hij gehandeld heeft in opdracht van Bill Parker, de chef van de afdeling Mission Plans and Projects (MPP), wat een andere naam voor CIA zou zijn. De afdeling MPP wil geen enkel commentaar geven. Mante: “In Nederland was een groep zeer handige computerkrakers actief. Die konden inbreken in Navo-computersystemen. Ze spookten zelfs rond in de F-16 department-base, de database met onderdelen voor deze straalvliegtuigen. Parker droeg mij op om op Internet de radicale actievoerder te gaan uithangen. Zo moest ik het vertrouwen winnen van de harde kern.”’
+
+Nog jarenlang kreeg ik mail van mensen die navraag over hem deden; dan was Mante weer met een of andere ‘operatie’ bezig
+
+Dat laatste aspect van zijn verhaal werkte Mante al in mei en juni 1996 uit in vier ellenlange berichten op Usenet, onder de titel My Story. De essentie: hij zou in opdracht van de CIA werken. Het verhaal dat Nederlandse hackers zouden hebben ingebroken in NAVO-systemen (of in computers van Defensie in de VS) was niet nieuw: dat deed al sinds eind jaren ’80 de ronde. Mante voegde daar een nieuwe beschuldiging aan toe: de ‘daders’ zouden de informatie aan Irak hebben verkocht, en met dat geld later XS4all hebben gefinancierd.
+
+Aangezien ik de kwestie-Mante uitgebreid had beschreven, ook op mijn eigen website, kreeg ik nog jarenlang mail van mensen die navraag over hem deden; dan was Mante weer met een of andere ‘operatie’ of activiteit bezig. Mante (Zeist, 1957) deed zich afwisselend voor als lid van buitenlandse inlichtingendiensten, Fortuyn-complotdenker, neonazi, boeddhist, healer, Vietnamveteraan en Amerikaans patriot. Hier staat een bloemlezing uit zijn vele theateropvoeringen, op een aparte pagina.
+Lees verder Inklappen
+Andere ‘verrassingen’: Zenon Panoussis
+
+Na ‘Snorrigate’ was er weinig meer dat me kon verrassen, dacht ik. Maar dat viel mee.
+
+In augustus 1996 meldde ene Zenon Panoussis zich in alt.religion.scientology, een Griek die al jaren in Stockholm woonde. Net als veel anderen had hij over het conflict tussen de sekte en internet gehoord en zich in de kwestie verdiept. Zenon postte vervolgens hoger cursusmateriaal van de sekte op de nieuwsgroep. Alleen betrof het ditmaal niet de OT-cursussen, maar de serie die daarna was verschenen: de NOTs, de New Operating Thetan levels. Zenons berichten werden prompt gewist door de sekte. Zenon postte ze weer, Scientology cancelde weer.
+
+Hij postte een toelichting op alt.religion.scientology, met een cc’tje aan Scientology-advocaat Helena Kobrin persoonlijk. Hij stelde onder meer: ‘Scientology schendt het eigendomsrecht door mensen via bedrog en pressie van hun geld te beroven. Tevens misbruikt ze het auteursrecht om de kritiek van haar tegenstanders te smoren [..]. Kortom, Scientology wendt de pijlers van de democratie, zoals het recht, aan om de centrale waarden van de democratie te ondermijnen.’
+
+Scientology deed – na toestemming van een rechter – een inval bij Zenon thuis, nam zijn computer in beslag (die versleuteld was), en begon een rechtszaak tegen hem.
+
+Zenon leverde een uitdraai van de NOTs in bij de rechtbank en bij het Zweedse parlement. Dat maakte ze voor iedereen opvraagbaar
+
+Maar de sekte had buiten de waard gerekend. In Zweden geldt het Offentlighetsprincipen, dat grondwettelijk is verankerd: alle communicatie binnen de overheid zelf, benevens die tussen burgers en de overheid, is per definitie openbaar. Zeg maar: hoe de Wet openbaarheid van bestuur in Nederland eruit had moeten zien. Zenon leverde een uitdraai van de NOTs in bij de rechtbank en bij het Zweedse parlement. Dat maakte ze voor iedereen opvraagbaar: de NOTs waren nu – althans wat Zweden betreft – onderdeel van het publieke domein.
+
+Scientology vroeg ogenblikkelijk of deze stukken sub rosa konden worden verklaard, zoals ze eerder bij het Fishman Affidavit had gedaan, maar dat stond het Zweedse recht niet toe. Kort daarna, op 1 oktober 1996, bleek dat het exemplaar van de NOTs dat bij het Zweedse parlement lag, was gestolen. Hoe (en door wie) is nooit opgehelderd, maar het parlement kon niet langer kopieën aan geïnteresseerden verstrekken. Zenon leverde een nieuwe set in, die tien dagen later niet alleen eveneens gestolen bleek te zijn, maar zelfs was vervangen door ander (irrelevant) materiaal.
+
+Bij de rechtbank kon je de kopieën overigens nog gewoon opvragen. Maar ook daar kwam uiteindelijk een eind aan. Zweden paste, na veel druk van de sekte – de Amerikaanse ambassade kwam eraan te pas – in 2000 de grondwet aan en maakte specifiek voor de NOTs een uitzondering. Dat gebeurde ondanks uitgebreid protest van juristen. Ongeacht in welke zaak en in welke communicatie met de overheid dan ook: de NOTs kon je nadien niet meer bij de Zweedse overheid opvragen.
+
+Bij mijn weten is Scientology tot op heden de enige sekte die erin is geslaagd een land zover te krijgen dat het zijn grondwet naar haar grillen aanpaste.
+Power couple
+
+Zenons zaken in Zweden verliepen aanvankelijk voorspoedig: hij won de eerste slagen. Op alt.religion.scientology waren hij en ik inmiddels flink aan de praat geraakt over onze wederzijdse strategie, en we wisselden veel informatie uit. Eind 1997 bezocht hij Nederland; we spraken af. Hij bleek bezig te zijn naar Amsterdam te verhuizen.
+
+We zagen elkaar na zijn verhuizing een paar keer, en voor ik het wist was ik verliefd – en hij ook. Rond maart 1998 kregen we een verhouding, en nog een paar maanden later trok hij bij me in. We waren plots alt.religion.scientology’s power couple.
+Zenon Panoussis, 2003
+Zenon Panoussis, 2003 © Karin Spaink
+
+Voor Scientology bewees dat hun stelling: zie je wel, alle critici waren onderdeel van één en hetzelfde complot. Ik was geïnstrueerd door FACTnet, en Zenon door mij. En doordat we nu samenwoonden, waren we een extra aantrekkelijk doelwit: twee vijanden voor de prijs van één. Klein probleem voor de sekte: zowel Zenon als ik waren nogal van de openheid. We vertelden bij voorkeur publiekelijk wat we van plan waren, en waarom.
+
+Toch was ik verrast over wat er in januari 2001 gebeurde nadat we terugkwamen uit Stockholm, waar het beroep in Zenons zaak had gediend. Nadat we op Schiphol onze paspoorten hadden laten zien, kwam een man in burger op ons af. ‘Douane, opiumwet. Wilt u meekomen?’
+
+In een zijkamertje stonden nog vier douanebeambten klaar. Al onze bagage – twee gewone tassen, een koffer met 25 kilo dossiers, een doos met 10 kilo dossiers, mijn computertas – werd op tafels gelegd en moest open voor een grondige controle. Een douanier maakte een opmerking over de grote stapels papier. ‘We zijn allebei in rechtszaken met Scientology verwikkeld,’ zeiden we. ‘We komen net terug van zo’n zaak.’ Zenon liet een Zweedse krant zien met een paginagroot artikel over zijn zaak. Meteen veranderde de houding van de vijf douaniers. Vijf minuten later waren ze klaar en mochten we weg.
+
+Eenmaal thuis belden we rond. Binnen de kortste keren werd duidelijk wat er aan de hand was: de Nederlandse douane had eerder die dag twee verschillende tips gekregen, ‘onafhankelijk’ van elkaar, waarin Zenon en ik in groot detail werden beschreven, met vluchtnummer en al. De tipgevers deelden mee dat wij cocaïne van Zweden naar Nederland zouden smokkelen. En uiteraard is de douane gehouden om elke tip te onderzoeken, al vonden ze die zelf wat vreemd. Dat zou ik ook denken. Cocaïne van Stockholm naar Amsterdam smokkelen? Dat is water naar de zee dragen.
+Inval bij mij thuis
+
+Op 12 september 2002 werd er bij me aangebeld: zes mannen. Of ze binnen mochten komen. Veel keus heb je niet wanneer je bezoek een huiszoekingsbevel bij zich heeft. Het waren twee (gewapende) agenten, iemand van het Openbaar Ministerie, iemand van auteursrechtenwaakhond Buma/Stemra, plus twee computerexperts.
+
+Het OM had, via advocatenkantoor NautaDutilh, herhaaldelijk klachten ontvangen van Scientology: Zenon en ik zouden vanuit mijn huis de OTs en NOTs verspreiden. Het OM had de klachten steeds, na kort onderzoek, terzijde gelegd.
+
+Toen ik vroeg op grond waarvan ze nu dan wel waren gekomen, toonden ze een print van een webpagina die Zenon onderhield. Daarop stond: ‘Hier zul je de “heilige” geschriften van Scientology niet vinden; wil je die hebben, dan kun je het beste een berichtje op alt.religion.scientology posten waarin je naar de OTs en NOTs vraagt; goede kans dat je ze dan krijgt opgestuurd.’ Maar dat is geen strafbaar feit; het is hooguit een instructie, vergelijkbaar met ‘als je heroïne wilt kopen, kun je dat het beste op de pillenbrug vragen’.
+
+Gelukkig hoefden ze niet met lege handen weg: ik gaf ze allemaal een T-shirtje met een quote uit OT3 erop
+
+Volgend probleem: onze computers waren versleuteld. Als ze die meenamen, zouden ze niet ver komen. We kwamen overeen dat ze de boel ter plekke zouden doorzoeken. Wij zouden waar nodig toelichting geven, en zij zouden dingen als belastingaangiftes en liefdesbrieven overslaan. Ik meldde tevens dat ik allerlei Scientology-documenten op mijn harde schijf had staan: documentatie voor mijn rechtszaak en voor die van Zenon, meest berichten die publiekelijk gepost zijn en die in mijn nieuwsgroep-folders stonden. Dat begrepen ze.
+
+Ze vonden geen enkele aanwijzing dat vanaf onze computers OTs en/of NOTs waren verspreid. Gelukkig hoefden ze niet met lege handen weg: ik gaf ze allemaal een T-shirtje met een quote uit OT3 erop.
+
+Een aantal juristen en geïnformeerde journalisten verzekerden me dat het hoogst ongebruikelijk is dat het OM een inval doet bij een individu op grond van een enkele auteursrechtenclaim. Invallen bij bedrijven zijn iets gewoner, net als invallen op verdenking van systematische verspreiding van mp3’tjes of films. Een paar deskundigen waren apert furieus.
+
+
+ Scientology versus internet, deel 5: Verlies op verlies
+Karin Spaink
+4 Connecties
+Relaties
+NautaDutilh
+Personen
+Felipe Rodriquez
+Organisaties
+XS4all Scientology
+17 Bijdragen
+
+In 1995 brak een internationaal conflict uit op het toen nog prille internet. De inzet: wie is aansprakelijk voor wat gebruikers online doen? In Nederland hielp Karin Spaink die kwestie te definiëren. De tien jaar durende rechtszaak die Scientology tegen haar en XS4all voerde over wat zij op internet publiceerde, heeft grote invloed gehad op het internetrecht in Nederland. Vijfentwintig jaar na dato doet Spaink verslag van de zaak. In dit deel: Xenu komt naar Nederland, en tien jaar rechtszaken worden eindelijk afgesloten.
+Over deze serie
+
+    Dit is deel 5 van een serie.
+    In de eerste aflevering (‘Doom’) beschreef ik de opkomst van het publieke internet, een dan nog vrijwel ongereguleerd medium. Het beviel Scientology totaal niet dat critici en oud-leden daar vrijuit hun kennis over en hun ervaringen met de sekte konden delen.
+    In de tweede aflevering (‘Inval bij XS4all’) beschreef ik hoe die internationale ruzie oversloeg naar Nederland. Scientology deed – met een deurwaarder – een inval bij XS4all en liet beslag leggen op de computers. Steen des aanstoots: een Amerikaans rechtbankstuk met daarin hoger cursusmateriaal van de sekte.
+    In de derde aflevering (‘De rechtszaak’) bescheef ik de aanloop naar het kort geding dat de sekte aanspande. XS4all haalde Steven Fishman naar Nederland – de man die de verklaring had ingediend waar de ruzie mee begonnen was – en Scientology bracht goudkleurige koffertjes naar de zitting. Wij wonnen.
+    In de vierde aflevering (‘Intriges en vuil spel’) beschreef ik waarmee je zoal te maken kunt krijgen als je de strijd met deze sekte aanbindt. Over gestolen vuilnis, een inval bij mij thuis, ‘tips’ voor de douane en een intrigant. (Die intrigant trad later in andere rollen op, hij kreeg een aparte pagina.)
+    Morgen volgt de laatste aflevering.
+
+Lees verder
+Was dit kader nuttig?
+Zijn we blij mee!
+Balen!
+Vertel ons wat beter kan:
+Meld je aan voor onze nieuwsbrief en krijg een maand gratis Follow the Money.
+
+Mijn zaak duurde en duurde, en werd almaar complexer. Na het eerste (afgezegde) kort geding begon de sekte een tweede kort geding; op de dag dat dat diende, 26 februari 1996, liet Scientology een bodemprocedure betekenen. Die liet ze vervolgens bungelen. Daarna ging de sekte in hoger beroep tegen de uitspraak in kort geding. Ook die zaak werd steeds uitgesteld.
+
+Inmiddels kon ik me goed voorstellen dat NautaDutilh Scientology graag als klant had: de sekte leverde een schier onuitputtelijke bron van werk op, en NautaDutilh is niet goedkoop.
+
+Twee jaar lang deed ik weinig anders dan rechtszaken lezen, discrepanties tussen getuigenverklaringen van het hogere echelon van Scientology in kaart brengen, met hulp van alt.religion.scientology uitzoeken wat dat betekende, en nagaan of iemand daar iets aan had. Ik las alles; ik was als de dood iets te missen dat me later zou opbreken.
+
+Toen ik eindelijk weer eens naar de sneak preview in de bioscoop ging, draaiden ze er tot mijn afgrijzen Pulp Fiction, met John Travolta in de hoofdrol. Ik vloekte hardop. Alwéér een Scientoloog.
+
+Met de sekte ging het intussen niet zo goed. Ze waren al niet bijster populair, en nu brak internet ze ook nog eens op. In Nederland kampte de organisatie met geldgebrek: van journalisten hoorde ik dat fax- en telefoonlijnen het niet meer deden, en ’s avonds waren de lichten vaak uit op het hoofdkantoor aan de Nieuwezijds.
+
+Sekteleden hoorden gaandeweg meer over de conflicten rond de kerk op internet. Ze stelden vragen, of gingen zelf op zoek. Dat was niet de bedoeling
+
+Later hoorde ik dat Scientology Nederland, geheel tegen de regels in, geruime tijd financiële steun kreeg van het Amerikaanse hoofdkantoor. Scientology kon zich niet permitteren dat de Nederlandse divisie midden in onze rechtsgang, die internationaal veel aandacht kreeg, failliet zou gaan.
+
+Ook gewone leden hoorden gaandeweg meer over de conflicten rond de kerk op internet. Ze stelden vragen, of gingen zelf op zoek. Dat was niet de bedoeling. Scientology stuurde haar leden daarom in de zomer van 1998 een cd toe, die ze werd aangesmeerd als onderdeel van een wervende campagne om de leer via internet te verspreiden.
+
+Op die cd stond een programma – eigenlijk niet meer dan een template – waarmee leden makkelijk zelf een website konden bouwen. Daarop konden ze dan online allemaal de loftrompet over de sekte steken. (Buitenstaanders vermoedden dat het achterliggende doel was kritiek op de sekte moeilijker vindbaar te maken.) Maar onder de motorkap bleek dat programma censorware te installeren: de software blokkeerde kritische websites en nieuwsgroepen op de computers van de leden. Scientology verdedigde zich door het ‘niet meer dan een spamfilter’ te noemen.
+
+Veel hielp het niet – internet was inmiddels simpelweg te groot en te alomtegenwoordig geworden. Scientology kon de kritiek op zichzelf niet langer inperken.
+
+Andreas met een opblaas-Xenu (2002) © Karin Spaink
+Operation Clambake
+
+In 1996 begon Andreas Heldal-Lund – een Noor die, ongeveer tegelijkertijd met Zenon, belangstelling voor de sekte opvatte door haar gekrakeel op internet – een kritische website over Scientology. De url: www.xenu.net.
+
+Hij noemde zijn site Operation Clambake. ‘Clambake’ is een traditionele zeevruchtenschotel met mosselen – zeg maar een Amerikaanse variant op paella – maar de naam is tevens een plaagstoot naar een wilde theorie van L. Ron Hubbard, de oprichter van de sekte.
+
+In zijn boek A History of Man (1952) verklaart Hubbard dat in het menselijk lichaam twee ‘entiteiten’ huizen. De ene is de machtige thetaan die we ooit waren, de tweede een gedegenereerde ziel die oude ‘incidenten’ in zich meedraagt en daardoor wordt beheerst (tenzij Scientology hem weet te bevrijden).
+
+Een van die incidenten: onze onderbewuste herinneringen aan ons vroegere leven als mossel. Vandaar ook dat wij mensen zo vaak moeten geeuwen, aldus Hubbard: dan speelt een oud incident ons parten.
+
+Andreas zette op zeker moment, net als ik eerder had gedaan, de delen van OT3 uit het Fishman Affidavit op zijn website. Na klachten van de sekte werd Operation Clambake prompt uit zoekmachines verwijderd. Bij zijn isp stapelden de advocatenbrieven zich op; nadat die koudwatervrees kreeg, moest Andreas zijn heil elders zoeken.
+
+Anders dan Zenon, die de provocatie verkoos, opereerde Andreas in de luwte. Hij postte aanvankelijk niet op alt.religion.scientology, hij stuurde geen persberichten rond; eigenlijk wist niemand wie er achter Xenu.net stak.
+
+Gaandeweg ontstonden er toch contacten tussen Andreas en andere mensen die het juridische wapengekletter van de sekte poogden te weerstaan. In 2001, toen Andreas weer eens van het net dreigde te worden gegooid, vond hij onderdak bij Xtended Internet in Nijmegen, een kleine isp met uitsluitend zakelijke klanten.
+In mei 2002 kwam Andreas naar Amsterdam. Zenon, hij en ik gingen eten (niet in Centra).
+In mei 2002 kwam Andreas naar Amsterdam. Zenon, hij en ik gingen eten (niet in Centra). © Privé-archief Spaink
+
+Xtended werd gerund door Paul Wouters; hij had eerder gedonder met de sekte gehad. Een vriend van hem had indertijd een mirror van het Fishman Affidavit op zijn universiteitswebsite gezet. Toen de universiteit die in 1996 verwijderde, op aandringen van Scientology, klopte de vriend bij Paul aan. Mocht hij ’m bij Xtended neerzetten? Paul ging akkoord. De vriend koos de url xenu.xtdnet.nl.
+
+De sekte wilde in 1999 plotseling weten wie daar achter zat, mogelijk omdat ze dacht dat het om de beheerder van Operation Clambake ging, en eiste dat Xtended de naam van deze gebruiker zou vrijgeven. Paul weigerde. Het kwam tot een rechtszaak, waarin Paul moest getuigen wie zijn gebruiker was. Maar de pagina was uit voorzorg van eigenaar gewisseld en stond nu op naam van Zenon. De vriend was veilig, Scientology ving in zijn plaats een oude tegenstander.
+
+Omdat Paul Scientology al eens had weerstaan, vroeg Andreas in 2001 of hij Operation Clambake bij Xtended Internet kon onderbrengen. Paul hield Xenu.net nadien vijf paar jaar in de lucht, totdat hij Xtended Internet verkocht. Operation Clambake was tegen die tijd groot en alom gerespecteerd – Andreas had er zelfs een prijs voor ontvangen — en was inmiddels overal veilig. Xenu.net verhuisde weer.
+Xenu.net als vrijhaven
+
+Andreas was een van de eersten die zich realiseerden dat nieuwsgroepen, zoals alt.religion.scientology, obscuur zouden worden nu websites ingeburgerd raakten. Hij maakte van Operation Clambake een plek waar niet alleen kritiek op Scientology een plaats kreeg, maar ook ex-leden en slachtoffers hun verhaal konden doen.
+
+Daar gebeurde iets bijzonders. Er waren nogal wat mensen die Scientology hadden verlaten omdat ze de interne kadaverdiscipline en de steeds hoger wordende tarieven voor cursussen en auditing-sessies niet langer acceptabel vonden. Maar een deel van hen geloofde nog wel in de methodieken en theorieën van de club – zolang ze die maar met een korreltje zout mochten nemen.
+
+Zo kreeg de Free Zone vaste voet aan de grond: een groep ex-leden die de organisatie verwierpen maar de leer en de methodiek behielden
+
+Zij hadden, net als de critici van de sekte eerder, nooit een plek gehad waar ze elkaar konden vinden. Zulke mensen – geen lid meer maar wel ‘gelovig’ – hadden al eerder pogingen gedaan zich te organiseren, maar dat was lastig: de groepjes vielen telkens als los zand uit elkaar. Daarnaast waren ze verstoken van cursusmateriaal: Scientology schermde dat immers streng af voor iedereen die geen lid was of er niet voor betaalde.
+
+Via Operation Clambake vond een deel van deze ex-leden elkaar. Zo kreeg de Free Zone vaste voet aan de grond: een groep ex-leden die de organisatie verwierpen maar de leer en de methodiek behield. Ze deelden materiaal, ze ‘auditen’ elkaar voor een vriendenprijsje (of voor niets), en ze hadden werkelijk geen enkel probleem met kritiek van buitenstaanders. Je zou het een kerkscheuring kunnen noemen. Hoe dan ook is het bestaan van de Free Zone een eminent voorbeeld van de vrijheid van religie die Scientology zegt voor te staan, maar in werkelijkheid bestrijdt.
+Salomonsoordeel
+
+Op 8 maart 1999, bijna drie jaar na de uitspraak in kort geding, diende eindelijk het hoger beroep. Dat was al in maart 1996 aangekondigd, maar kort daarna zei Scientology een schikking te willen bespreken – en zette vervolgens geen enkele stap.
+
+In Zenons zaak, die in mei 1998 in Stockholm diende, was intussen iets interessants gebeurd. Zenon had een juridische achtergrond en verdedigde zichzelf. Ik ging mee, en werd op zijn verzoek officieel door de rechtbank aangesteld als z’n secondant: zijn biträde. Dat betekende dat ik naast hem in het bankje zat en we onderling overleg konden voeren. Ook kon ik in de rechtszaal blijven zitten bij de besloten delen van de zaak (en dat waren er veel: Scientology wilde zo min mogelijk in de openbaarheid hebben).
+
+Volgens Zweeds recht weegt alleen wat in de rechtszaal zelf wordt aangevoerd. Hoewel partijen op voorhand stukken moeten inleveren, opdat de rechters zich kunnen voorbereiden, telt alleen de mondelinge bijdrage van de partijen. Dat betekende in dit geval onder meer een stoet getuigen. Een van hen was Warren McShane, de directeur van Scientology’s auteursrechtenorganisatie: de man van de goudkleurige Samsonites.
+
+Warren McShane en Zenon Panoussis, rechtbank Stockholm, mei 1998 © Privé-archief Spaink
+
+Toen Zenon hem onder ede verhoorde over de status van de OT-cursussen – Scientology claimt dat ze niet gepubliceerd zijn, en dat derden er dus niet uit mogen citeren – vroeg hij McShane hoeveel mensen OT2 en OT3 precies hebben bestudeerd. Na wat gepalaver antwoordde McShane dat het om 20 tot 25 duizend mensen ging.
+
+Dat gebruikten we prompt in het hoger beroep van mijn rechtszaak. Naar Nederlands recht kan er geen sprake zijn van ‘verspreiding in kleine kring’, noch kan iets ‘ongepubliceerd’ heten, wanneer de auteursrechthouder zelf duizenden mensen toegang tot dat werk heeft verleend. Dan geldt zo’n werk zonder pardon als gepubliceerd. En dan mogen anderen er vrijelijk uit citeren. McShanes Zweedse getuigenis had ons een prachtig argument tegen zijn eigen claim opgeleverd.
+
+In haar uitspraak op 9 juni 1999 nam de rechtbank in Den Haag die redenering over. ‘CoS heeft de cursussen, waarop de OT-werken betrekking hebben, op grote schaal onder haar leden – naar gedaagden onweersproken stellen minimaal 25.000 mensen – verspreid. Daaruit volgt dat de werken met toestemming van de maker in druk zijn verschenen. Nu de uitgave aldus is geschied met toestemming van de rechthebbende, is de rechtmatigheid van de openbaarmaking, ongeacht de plaats daarvan, gegeven [..]’.
+
+Wat tegenviel in dit vonnis, was het oordeel over hyperlinks: Scientology had geëist dat alle links naar hun materiaal illegaal verklaard zouden worden. Een hyperlink is zo’n ding waarop je kunt klikken en dan beland je meteen op de bron ervan. Alsof je, in een boek, meteen via de voetnoot de tekst zou kunnen zien waarop de auteur zich baseert. Hyperlinks zijn veredelde voetnoten: ze verenigen de vindplaats met een instructie. ‘Dit gebruikte ik, zo kom je er.’
+
+De rechtbank besloot in mijn zaak dat links naar inbreukmakend materiaal onwettig zijn. Dat klinkt heel rechtschapen
+
+De rechtbank besloot in mijn zaak dat links naar inbreukmakend materiaal onwettig zijn. Dat klinkt heel rechtschapen: als een pagina niet mag, is een verwijzing daarnaar – een aanklikbare link die je meteen op de plek des onheils brengt – zelf ook onwettig. Maar in de praktijk is dat aanzienlijk lastiger, en potentieel fnuikend voor het net. Dat hangt immers van links aan elkaar.
+
+Bovendien: zo’n verbod legt strengere restricties op aan internet dan aan andere media. De krant mag schrijven dat dit-en-dat een ingeburgerde manier is om geld wit te wassen: zoiets is een beschrijving van een strafbaar feit, of een halve instructie, maar niet strafbaar. Alleen het daadwerkelijk witwassen van geld is dat: er is een cruciaal verschil tussen daad en woord. In deze uitspraak werd dat verschil van tafel geveegd.
+
+Voor het overige viel de uitspraak in ons voordeel uit. Ja, Scientology had aangetoond auteursrecht te hebben op sommige stukken uit het Fishman Affidavit (maar had dat bij andere stukken niet of onvoldoende onderbouwd). Ja, ik had aanvankelijk hun auteursrecht geschonden, maar had dat braaf hersteld nadat ik bewijs van de claim had gezien. Ja, isp’s moeten stukken verwijderen als evident is dat die onrechtmatig zijn. Nee, dat waren de betwiste webpagina’s niet. Nee, mijn citaten waren geen auteursrechtinbreuk.
+
+Mijn website was opnieuw in orde bevonden. Het was 2-0 voor Team Internet.
+Plotwending bij het hoger beroep
+
+Natuurlijk ging Scientology in beroep tegen de uitspraak van juni 1999. Eerst via een zogeheten spoedappèl, waarna ze uitstel vroegen, waarna het een gewoon beroep werd, waarna ze uitstel vroegen, waarna… tot in het absurde. De zaak werd liefst zes keer uitgesteld, uiteindelijk mede door het hof zelf (reden voor XS4all om een aanvraag te doen voor een nominatie in het Guinness Book of Records).
+
+Op 4 september 2003 deed het hof eindelijk uitspraak. Anders dan zijn voorgangers meende het hof dat er volgens de Auteurswet geen sprake was geweest van rechtmatige openbaarmaking, zodat het citaatrecht niet van toepassing was. Dat leek in het voordeel van Scientology. Maar toen kwam de plottwist: het hof beriep zich op artikel 10 uit het Europees Verdrag voor de Rechten van de Mens (EVRM).
+
+Artikel 10 EVRM beschrijft, zo vatte het hof samen, ‘beperkingen die in een democratische samenleving nodig zijn ter bescherming van onder meer de rechten van anderen. Onder die rechten valt in beginsel mede het auteursrecht [..]. Denkbaar is dat er bijzondere gevallen zijn waarin de handhaving van het auteursrecht, zoals een inbreukverbod, moet wijken voor de informatievrijheid.’
+
+Het belang van de vrije informatieverschaffing en van de bescherming van de democratie oversteeg het auteursrecht van de sekte, oordeelde het hof
+
+Uit onze processtukken blijkt volgens het hof dat mijn citaten uit OT2 en OT3 ‘de door [Spaink] beoogde informatieverstrekking over de Scientology-leer en de gang van zaken bij de Scientology-organisatie ondersteunen en geloofwaardig maken. Gesteld noch gebleken is dat zij daarmee (mede) een commercieel doel heeft beoogd.’
+
+En in de zin daarna deelde het hof een mokerslag uit: ‘Uit de hiervoor [..] vermelde teksten blijkt dat Scientology c.s. met hun leer en organisatie de verwerping van democratische waarden niet schuwen. Uit die teksten volgt tevens dat met de geheimhouding van OT II en OT III mede wordt beoogd macht uit te oefenen over leden van de Scientology-organisatie en discussie over de leer en praktijken van de Scientology-organisatie te verhinderen.’
+
+In gewone taal: niet het citaatrecht, maar het belang van de vrije informatieverschaffing en van de bescherming van de democratie oversteeg volgens het hof het auteursrecht van de sekte. Daarom mocht ik citeren uit OT2 en OT.
+
+Het was nu 3-0.
+Koekjes van Verkade
+
+Uiteraard ging Scientology weer in beroep. In dit stadium heet dat ‘cassatie’: de zaak ging naar de Hoge Raad. In maart 2005, anderhalf jaar na de uitspraak in hoger beroep, kwam advocaat-generaal Feer Verkade met zijn conclusie.
+Feer Verkade
+Feer Verkade © KNAW
+
+Die was onverdeeld gunstig voor ons. Al op bladzijde 3 van zijn 80 pagina’s tellende betoog kondigde Verkade aan dat hij ‘...bij de beoordeling van het principale beroep van Scientology c.s tégen ’s hofs erkenning van het beroep van Spaink en de Providers op art. 10 EVRM [zal] concluderen tot verwerping van die klachten’. Oftewel: ook Verkade stelde de vrijheid van informatie in dit geval boven het auteursrecht. De kans dat de Hoge Raad zijn conclusies zou overnemen, was groot – Verkade is een autoriteit op auteursrechtgebied.
+
+De uitspraak van de Hoge Raad werd (surprise!) een paar keer uitgesteld, en kort voordat zij eindelijk vonnis zou vellen, trok Scientology de zaak in. Wij tekenden bezwaar daartegen aan, op grond van de principiële aspecten van de zaak, maar de Hoge Raad besliste anders. Op 16 december 2005 deed ze uitspraak over de procedure: het vonnis in hoger beroep hield stand. De processen waren ten einde.
+
+Aanvankelijk had ik enorm de pest in. Juist nu de hoogste rechter over de zaak zou oordelen, rende Scientology met de staart tussen de benen weg – de lafaards. Het duurde een dag voordat ik me realiseerde dat me hierdoor veel bespaard was gebleven: had de Hoge Raad uitspraak gedaan, dan had Scientology weer in beroep kunnen gaan, nu bij het Europees Hof. Zo’n zaak kon met gemak acht jaar duren. Maar doordat de sekte zelf was afgedropen, kon ze het vonnis nu nergens aanvechten.
+
+Het was 4-0. De wedstrijd had tien jaar geduurd, en nu was hij voorbij.
+
+    Bij XS4all, met T-shirt, nat van de champagne
+    Systeem- en netbeheerders in T-shirt
+
+Bij XS4all, met T-shirt, nat van de champagne © XS4all
+
+Xs4all vierde feest en liet 5000 T-shirts drukken – in de huiskleur geel, alles in voetbalstijl, compleet met het vignet ‘XS4all Spaink vs. Scientology‘ rechtsboven – die aan abonnees werden uitgedeeld.
+
+Ook Fonss – de abonnee van XS4all waarmee het in september 1995 allemaal was begonnen, om hem had de sekte een inval bij XS4all gedaan – was opgelucht. Ik was inmiddels goed met hem bevriend, al had ik dat in eerste instantie niet door. Pas toen Felipe Rodriquez en ik al dik twee jaar bezig waren ons samen te verdedigen tegen die rotsekte, vertelde Felipe me dat hij Fonss was.
+Felipe Rodriquez, de oprichter van XS4all, in 1997 op de conferentie Hacking in Progress. Hij overleed op 6 oktober 2015 aan de gevolgen van multiple sclerose. Hij was pas 46. Ik sprak op zijn begrafenis.
+Felipe Rodriquez, de oprichter van XS4all, in 1997 op de conferentie Hacking in Progress. Hij overleed op 6 oktober 2015 aan de gevolgen van multiple sclerose. Hij was pas 46. Ik sprak op zijn begrafenis. © Karin Spaink
+Overzicht rechtszaken en relevant materiaal
+
+Overzicht rechtszaken: 
+
+    Dagvaarding in kort geding (8 november 1995)
+    Scientology laat de zaak vallen (11 december 1995)
+    Tweede dagvaarding in kort geding (26 februari 1996)
+    Mijn verweer (tweede versie)
+    Uitspraak in kort geding (12 maart 1996)
+    Scientology start bodemprocedure, niet doorgezet (12 maart 1996)
+    Scientology start spoedappel tegen de uitspraak in kort geding (26 maart 1996) (werd bodemprocedure)
+    Uitspraak in bodemprocedure (10 juni 1999)
+    Scientology gaat in beroep tegen de uitspraak in bodemprocedure
+    Uitspraak in beroep bodemprocedure (4 september 2003)
+    Scientology gaat in cassatie bij de Hoge Raad
+    Conclusie Verkade voor de Hoge Raad (18 maart 2005)
+    Scientology laat de zaak vallen (december 2005)
+    Hoge Raad bevestigt uitspraak in hoger beroep (16 december 2005)
+
+Het materiaal in dispuut:
+
+    Fishman Affidavit, introductie
+    Fishman Affidavit, overzicht stukken 
+    OT II, commentaar en beschrijving
+    OT III, commentaar en beschrijving
+
+
+ Scientology versus internet, deel 6: Implosie
+Karin Spaink
+2 Connecties
+Relaties
+ANBI
+Organisaties
+Scientology
+24 Bijdragen
+
+In 1995 brak een internationaal conflict uit op het toen nog prille internet. De inzet: wie is aansprakelijk voor wat gebruikers online doen? In Nederland hielp Karin Spaink die kwestie te definiëren. De tien jaar durende rechtszaak die Scientology tegen haar en XS4all voerde over wat zij op internet publiceerde, heeft grote invloed gehad op het internetrecht in Nederland. Vijfentwintig jaar na dato doet Spaink verslag van de zaak. In dit deel: hoe ging het verder met Scientology, na die tien jaar strijd?
+Over deze serie
+
+    Dit is het slotdeel van deze serie.
+    In de eerste aflevering (‘Doom’) beschreef ik de opkomst van het publieke internet, een dan nog vrijwel ongereguleerd medium. Het beviel Scientology totaal niet dat critici en oud-leden daar vrijuit hun kennis over en hun ervaringen met de sekte konden delen.
+    In de tweede aflevering (‘Inval bij XS4all’) beschreef ik hoe die internationale ruzie oversloeg naar Nederland. Scientology deed – met een deurwaarder – een inval bij XS4all en liet beslag leggen op de computers. Steen des aanstoots: een Amerikaans rechtbankstuk met daarin hoger cursusmateriaal van de sekte.
+    In de derde aflevering (‘De rechtszaak’) bescheef ik de aanloop naar het kort geding dat de sekte aanspande. XS4all haalde Steven Fishman naar Nederland – de man die de verklaring had ingediend waar de ruzie mee begonnen was – en Scientology bracht goudkleurige koffertjes naar de zitting. Wij wonnen.
+    In de vierde aflevering (‘Intriges en vuil spel’) beschreef ik waarmee je zoal te maken kunt krijgen als je de strijd met deze sekte aanbindt. Over gestolen vuilnis, een inval bij mij thuis, ‘tips’ voor de douane en een intrigant. (Die intrigant trad later in andere rollen op, hij kreeg een aparte pagina.)
+    In de vijfde aflevering (‘Verlies op verlies’) beschreef ik de rest van de tien jaar durende serie zaken die Scientology tegen mij en XS4all aanspande. Het werd een eclatante overwinning: Team Internet won met 4-0.
+
+Lees verder
+Was dit kader nuttig?
+Zijn we blij mee!
+Balen!
+Vertel ons wat beter kan:
+Meld je aan voor onze nieuwsbrief en krijg een maand gratis Follow the Money.
+
+In oktober 2003 kreeg Het Parool lucht van een uittocht van leden bij de Amsterdamse ‘Org’. De Scientology Kerk Amsterdam had publiekelijk altijd verklaard dat zij ‘minstens’ zo’n achtduizend leden telde. Dat was eigenlijk best weinig, zeker voor een sekte die als ‘kerk’ allerlei rechten opeiste – waaronder een licht belastingregime en het recht om eigen scholen op te richten.
+
+Na uitvoerige gesprekken met kersverse ex-leden constateerde Het Parool dat er ‘volgens voormalige kopstukken van de sekte [..] de laatste maanden zeker vijftig van de circa 150 actieve kernleden [zijn] uitgetreden. De leiding spreekt in interne stukken van “muiterij”, zoals altijd bij de geringste twijfel aan de leer van oprichter L. Ron Hubbard. Hoge scientologen zijn uit het buitenland ingevlogen om de crisis in Amsterdam te bezweren.’
+
+Honderdvijftig ‘kernleden’? Trouw meldde twee weken later dat de sekte die zomer in totaal ‘ruim driehonderd’ leden telde, waarvan er inmiddels 75 waren vertrokken.
+
+Het Parool vervolgde: ‘...er [is] langzaam maar zeker een scheiding ontstaan tussen [..] rechtlijnige gelovigen die vinden dat de Scientology Kerk het monopolie heeft op Hubbards gedachtegoed, en de Independents: scientologen die tot de ontdekking komen dat dat buiten het sektarische keurslijf van de kerk veel beter, gezelliger en vooral goedkoper kan.’
+
+De Nederlanders hadden zich kennelijk niet aangesloten bij de Free Zone, maar waren een eigen tak begonnen: Ron’s Org, die zichzelf aanprijst als ‘Scientology zonder de Scientology-Kerk’. Daar werd afvalligen bovendien uitgelegd hoe ze cursusgelden en donaties konden terugvorderen. Dat viel niet lekker. Trouw: ‘Vijf scientologen die werkten bij Silhouet management in Weesp, de tak van scientology die zich op het bedrijfsleven richt, zouden zijn ontslagen omdat ze Ronsorg steunen.’
+
+Bart Middelburg lag niet wakker van het zwartboek dat de sekte over hem verspreidde. Als misdaadjournalist had hij wel erger meegemaakt
+
+Dan speelde er nog een fraudeschandaal, een tweede reden voor de uittocht: ‘...een aantal gelovigen [heeft] de “Org” aan de Nieuwezijds [..] de rug toegekeerd vanwege een fraudeschandaal. Scientologen hebben daarbij, via maatschappijtjes in binnen- en buitenland, collega-gelovigen en niet-kerkelijken opgelicht voor tonnen. Een groot deel van dat geld is, volgens gedupeerden, via-via uiteindelijk in de kas van Scientology beland.’
+
+Het Parool publiceerde in een paar maanden tijd tien artikelen over de kwestie, wat de sekte de krant niet in dank afnam. Leden kwamen op de parkeerplaats van Het Parool demonstreren en de sekte verspreidde een zwartboek over journalist Bart Middelburg, die een deel van de stukken schreef. Middelburg lag er niet wakker van. Als misdaadjournalist had hij wel erger meegemaakt: hij had op de executielijst van drugsbaron Klaas Bruinsma gestaan.
+
+In december 2003 bleek dat de Nederlandse Org onder curatele van de hoofdkantoren in Kopenhagen en Los Angeles was geplaatst. De baas van de sekte in Nederland, Maria Beekmans-Koster, was met onmiddellijke ingang uit haar functie ontheven. De aanleiding, aldus Het Parool: ‘de ernstige crisis’ waarin de Amsterdamse Org was beland. ‘De sekte lijdt daarbij grote verliezen (oplopend tot miljoenen euro’s), en de Hoge Raad deelde [de Scientology Kerk Amsterdam] onlangs een forse klap uit: giften aan de kerk (cursusgelden en donaties) zijn niet langer fiscaal aftrekbaar.’
+
+Het Parool interviewde Casper de Rijk, Kosters voorganger als directeur en een van de oprichters van de Nederlandse poot van de sekte. Ook hij had zich aangesloten bij Ron’s Org. Een aantal afvalligen was inmiddels tot Suppressive Person (SP) bestempeld. ‘Het aantal banvloeken wordt om strategische redenen overigens beperkt: het is intern toch lastig uit te leggen dat ruim eenderde van het actieve ledenbestand plotsklaps “suppressief” is.’
+‘Niet solvabel’
+
+De vraag is of de Amsterdamse Org zal opkrabbelen. Buiten het afgekalfde ledenbestand kampt ze eeuwig met geldproblemen. Hoewel de Scientology Kerk Amsterdam voor de buitenwereld de schijn aardig weet op te houden, staat ze bij het hoofdkantoor in Los Angeles te boek als een ‘small and failing org’, kortweg ‘SFO’ (de sekte houdt erg van afkortingen).
+
+Dat laatste vertelde Jenna Miscavige Hill in maart 2013 aan Het Parool. Ze is de nicht van David Miscavige, die Hubbard als ‘kerkleider’ opvolgde. Jenna was de sekte inmiddels ontvlucht en schreef een boek over haar leven daar. Buitenlandse Scientology-organisaties, zegt zij, moeten 10 procent van hun winst (uit cursusgelden en donaties) afstaan aan de moederkerk. ‘Maar Amsterdam haalt dat niet, omdat ze niet solvabel zijn.’
+Money, money, money
+
+Scientology draaide overal de duimschroeven aan. De internationale organisaties – ook daar heeft de sekte er veel van, zoals de Internationale Association of Scientology (IAS), waar je met donaties een hogere rang kunt kopen, en het World Institute of Scientology Enterprises (WISE) – bedelen bij de leden om geld. Ook de lokale Orgs doen dat permanent, en dringen er voorts op aan dat zij steeds nieuwe cursussen volgen, waarvan de Orgs weer een deel verplicht afdragen aan het hoofdkantoor.
+
+Al het geld van leden kruipt gestaag naar boven – Scientology heeft haar eigen versie van ‘the 1 percent’. RTC, de baas van het spul, is extreem rijk, terwijl de Orgs bloeden en de huur of hypotheek met moeite kunnen opbrengen.
+
+Een prominent lid eiste dat Miscavige zou toelichten wat hij met Scientology’s vermogen van ruim een miljard dollar deed. Ze werd uit de sekte gezet.
+
+Op 1 januari 2012 stuurde Debbie Cook, voormalig hoofd van Scientology Clearwater, en behorend tot de ‘inner circle’ van de sekte, een lange mail aan zo’n 12 duizend leden. Ze eiste daarin dat kerkleider David Miscavige zou toelichten wat de kerk eigenlijk met haar vermogen deed: Scientology beschikte indertijd over circa 1 miljard dollar. Cook verweet Miscavige that hij ‘een tijdvak van permanente geldinzamelingen’ had ingeluid, maar nimmer openheid gaf over de uitgaven. Ze bond leden op het hart niets meer te doneren totdat er schoon schip was gemaakt. Ze werd uit de kerk gezet.
+Almaar duurdere panden
+
+Eens in de zoveel tijd kondigt Scientology International een nieuwe campagne aan om de Orgs naar ‘the next level’ te krijgen. Daar hoort dan vaak een nieuw, prestigieus pand bij – ook als je dat niet kunt betalen, zoals de Amsterdamse Org.
+
+John Leemhuis, die bijna tien jaar lang mensen uit de Kalverstraat plukte om ze voor een persoonlijkheidstest mee te tronen naar de burelen van de sekte, vertelde in november 2003 aan Het Parool waar dat toe leidt. ‘Eerst zaten we op de Nieuwezijds in een pand van De Slegte, tegen een huur van tienduizend gulden per maand, en zelfs dat konden ze af en toe niet betalen. Daar moesten we weg, en nu zitten ze even verderop in een pand van 40.000 per maand! De telefoon wordt regelmatig afgesloten, want dan is er weer geen geld.’
+
+De remedie: geld inzamelen bij de leden, die moeten ‘helpen’ om de Org ‘next level’ te krijgen. Sinds circa 2010 verordonneert de moederkerk in de VS dat in alle Europese hoofdsteden ‘ideale organisaties’ moeten komen: hoofdkantoren die de indruk wekken dat het de sekte voor de wind gaat. Het leidde tot een forse groei in de vastgoedportefeuille van de sekte.
+
+Scientology gebruikte de stichting Nabesa als fiscale sluiproute voor de financiering van het nieuwe hoofdkantoor
+
+Scientology Amsterdam probeerde in maart 2012 een pand in Slotervaart te kopen, een voormalig bedrijfsverzamelgebouw. Ze vroeg leden daarvoor niet aan de kerk zelf te doneren, maar aan de stichting Nabesa, ‘Naar een Betere Samenleving’. Nabesa had bij de Belastingdienst een anbi-status weten los te peuteren op grond van haar ‘maatschappelijke’ doel. Kort daarna publiceerde Het Parool over die constructie: Scientology gebruikte de stichting als fiscale sluiproute voor de financiering van het nieuwe hoofdkantoor. In juni 2012 trok de fiscus de anbi-status van Nabesa in. De koop ging niet door.
+
+In december 2013 meldde Het Parool dat de Amsterdamse Org voor ruim vijf miljoen euro een groot complex had gekocht in de Wibautstraat, ‘dat moet worden omgetoverd tot de nieuwe “Ideale Org” [..] Het complex [..] is niet aangekocht op naam van de Scientology Kerk zelf, maar op die van de stichting Naar een Betere Samenleving (Nabesa). Die stichting geldt als een mantelorganisatie van de sekte.’
+
+Die constructie leidt tot een verschuiving van het vastgoed, dat steeds hoger in de piramide terechtkomt
+
+Hoe Nabesa voldoende geld wist in te zamelen om het pand te kopen, is niet bekend. Het pand is nog steeds in bezit van de stichting. In het buitenland zijn diverse panden van Orgs na verloop van tijd voor een vriendenprijs overgedaan aan het hoofdkwartier van de sekte, waarna de lokale Org het pand tegen stevige prijzen van Scientology International terug huurde. Die constructie leidt enerzijds tot een verschuiving van het vastgoed, dat steeds hoger in de piramide terechtkomt, en anderzijds tot groeiende lasten voor de lokale Orgs – en dus: de leden.
+South Park
+
+Na al het gedruis op internet in de jaren ’90 vatten de ‘gewone’ media, die eerder nogal schuw waren geworden om kritische artikelen over de sekte te publiceren, weer moed. De grote klapper werd echter niet geproduceerd door een krant of actualiteitenprogramma, maar door een tekenserie: South Park.
+
+In de aflevering Trapped in the Closet, uitgezonden op 16 november 2005, doet Stan een gratis persoonlijkheidstest bij de sekte en wordt lid. Hij blijkt de reïncarnatie van Hubbard te zijn. Een groep Scientologen, waaronder John Travolta, vieren de wederkomst van Hubbard voor Stans huis. Miscavige arriveert per helikopter en wil Stan meenemen. Dat mag niet van zijn ouders, die hem naar zijn kamer sturen. Daar zit Tom Cruise, die in de kast kruipt (pun intended) wanneer Stan zegt dat hij een minder goede acteur is dan Di Caprio. Travolta en Nicole Kidman soebatten vergeefs met Cruise, en Travolta kruipt uiteindelijk ook in de kast.
+
+Beneden legt Miscavige Stan en diens ouders uit wat het geloof behelst, en vertelt over Xenu en thetanen. Hij smeekt Stan verder te gaan waar Hubbard moest ophouden. Stan begint meteen. Miscaviige legt hem uit dat er wel geld mee verdiend moet worden, dat is het doel van de hele affaire; Stan lijkt akkoord te gaan. Als Stan en Miscavige naar buiten komen om de geëxalteerde leden te begroeten, legt Stan ze uit dat ze allemaal bedrogen zijn: ‘Scientology is just a big fat global scam!’
+Stan in de betreffende episode
+Stan in de betreffende episode © South Park
+
+De aflevering sloeg in als een bom: niet eerder had iemand het aangedurfd zo scherp en zo publiekelijk de spot te drijven met de sekte. Alt.religion.scientology kreeg bijkans een appelflauwte.
+
+Maar critici buiten de Verenigde Staten konden de uitzending niet zien. Andreas vroeg de makers van South Park toestemming om de aflevering op Operation Clambake te zetten. Dat mocht. Paul Wouters, bij wiens bedrijf de site indertijd draaide, memoreert: ‘Alleen vertelde hij me dat niet. Duizenden mensen probeerden het te downloaden en mijn hele bedrijfsnetwerk lag plat. Bittorrent was net populair aan het worden, en ik verving de download door een torrent file. Ik geloof dat het door 50 duizend mensen werd gedownload.’
+
+Scientology zette een beproefd recept in tegen de makers van South Park: spioneren en intimideren. De sekte vlooide hun leven volledig uit, hopend op ‘zwakheden’ die ze kon ‘uitbuiten’. Hun vuilnis werd gestolen, vrienden en vijanden werden benaderd, zakenrelaties nagetrokken: the whole shebang. Die man die jaren later (in oktober 2011) met deze onthulling kwam, was de voormalige tweede man van de kerk: Marty Rathbun.
+Kopstukken klappen uit de school
+
+Want ook hoge ‘church officials’ en beroemdheden liepen inmiddels weg bij de kerk. Een enkele keer was dat omdat ze zich de publieke kritiek – die nu gemeengoed begon te worden – ter harte hadden genomen, maar meestal deden ze dat omdat ze zelf uitermate slecht behandeld waren door de organisatie waar ze zo trouw aan waren.
+
+Wie hoog is binnen de kerk, is bijna altijd lid van de Sea Org, het elitekorps van de kerk. Daar is het beleid nog strikter en strenger dan elders binnen de organisatie. Een Sea Org-lid dat de regels heeft geschonden, beland in de RPF: de Rehabilitation Project Force. Casper de Rijk, een van de oprichters van Scientology NL, belandde er ook en beschreef zijn verblijf daar als ‘internering in een soort heropvoedingskamp’.
+
+In de RPF kreeg je restjes en keukenafval te eten, moest je op de grond slapen, mocht je met niemand spreken en moest je minstens 16 uur zware arbeid verrichten. Ook Jenna, het nichtje van sektebaas Miscavige, had er gezeten.
+David Miscavige
+David Miscavige © Going Clear / Alex Gibney
+
+In 2004 bedacht Miscavige, een schriel mannetje dat de reputatie heeft een driftkikker te zijn, ‘the Hole’: een strafkamp speciaal voor het hoogste echelon van de sekte. The Hole bestond uit twee trailers: daar werden mensen opgesloten, soms maandenlang. Er zaten tralies voor de ramen en er stond gewapend personeel voor de deur. Af en toe kwam Miscavige langs om iemand hoogstpersoonlijk in elkaar te trappen. Niemand durfde iets te doen.
+
+Debbie Cook, die vrouw die in 2012 openheid van Miscavige over de financiën eiste, heeft er in de zomer van 2007 zeven weken gezeten, met ‘zeker honderd anderen’. Nadien verliet ze de kerk, met een afkoopsom en zwijgplicht. Jaren later vertelde ze er alsnog over. Marty Rathbun, voorheen Miscaviges ‘Special Inspector’ en Scientology’s tweede man, heeft er gezeten, net als Mike Rinder. Rinder was bestuurslid van de Church of Scientology International en hoofd van het Office of Special Affairs, de inlichtingendienst van de sekte.
+
+Via Mark Bunker, een Amerikaanse journalist die zich erop toelegt de sekte grondig in kaart te brengen, kwamen veel van deze hoge ex-leden onderling in contact. Dat leidde uiteindelijk tot een van de meest indringende en vernietigende documentaires die ooit over Scientology zijn gemaakt: Going Clear: Scientology and the Prison of Belief (2015), geregisseerd door Alex Gibney.
+
+De oud-leden vertelden over manipulatie, uitbuiting, mishandeling, wangedrag, oplichterij, chantage, dwangarbeid en zelfs opsluiting
+
+Gibney geeft een historisch overzicht van de sekte en doorspekt dat met de verhalen van ex-leden. Zij hebben stuk voor stuk lang meegedraaid en velen hebben zeer hoog in de organisatie gezeten: Mike Rinder, Marty Rathbun, Hanna Whitfield – voor wie langere tijd op alt.religion.scientology had meegedraaid, waren het allemaal vertrouwde namen.
+
+De meesten van deze leden waren recent vertrokken. Ze kennen de club als hun broekzak, en ze klapten nu flink uit de school. Ze vertelden over manipulatie, uitbuiting, mishandeling, wangedrag, oplichterij, chantage, dwangarbeid en zelfs opsluiting. En het meest pijnlijke: ze vertelden over het bedrog (en zelfbedrog) dat zijzelf tijdens hun verblijf bij de sekte pleegden.
+Afvallige acteurs
+
+Scientology heeft altijd enorm haar best gedaan bekende mensen binnen te halen: dat is de beste pr denkbaar. Maar ook die lopen weg. Een daarvan is Jason Beghe, onder meer bekend van de serie Californication. Beghe werd in 1994 lid van de sekte, doneerde bij elkaar naar eigen zeggen ongeveer een miljoen dollar aan de sekte en was een van hun publieke gezichten. In 2007 stapte hij eruit; in 2008 nam hij contact op met Andreas Heldal-Lund van Operation Clambake. Na veel e-mailverkeer wist Andreas Beghe te overtuigen met andere critici te spreken. Beghe verscheen later in Going Clear.
+
+Regisseur, scenarioschrijver en filmproducent Paul Haggis was ook zo iemand. Hij kreeg een Oscar voor Million Dollar Baby en een voor Crash. Na 35 jaar lidmaatschap verliet Haggis de sekte in 2009, met name vanwege haar verzet tegen een wet die het huwelijk zou openstellen voor homoseksuelen. Ook hij verscheen later in Going Clear.
+
+Leah Remini in 2018 © Wikipedia
+
+De meest fascinerende ‘afvallige’ beroemdheid is Leah Remini. Ze is bekend als comedy-actrice en was, net als David Miscavige, het kind van sekteleden: ze groeide zodoende op als Scientoloog en wist lang niet beter.
+
+In 2013 – ze was toen 43 – verliet ze de sekte. Haar motief: ze vond het bizar dat leden de leiding niet mochten bekritiseren. Ze verzette zich tegen de ‘disconnects’ die Scientology haar leden oplegde: je mocht geen contact meer hebben met leden die vertrokken waren, zelfs niet als ze familie waren. Op die manier was ze haar eigen zus kwijtgeraakt, die de sekte al eerder had verlaten.
+
+Remini schreef een boek over haar ervaringen en begon in 2016 met de tv-serie Leah Remini: Scientology and the Aftermath. Daarin interviewt ze andere uitgetreden leden; het zijn prachtige, diepgaande en soms emotionele gesprekken. De serie heeft vier seizoenen gelopen (37 afleveringen). Remini kreeg er een Emmy voor, een Amerikaanse prijs voor de beste tv-programma’s.
+
+•••
+
+Hubbard zei ooit, nog voor hij Scientology begon: ‘The best way to get rich is to start a religion.’
+
+De reputatie van de sekte is zelden zo slecht geweest als tegenwoordig, de kritiek nimmer zo wijdverspreid en grondig, haar invloed zo getaand – en internet heeft een immens grote rol in die teloorgang gespeeld. Maar inderdaad: rijk zijn ze.

@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Kill Files</title>
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.weburbia.com/safe/ratings.htm" l r (s 0))'>
+<meta name="copyright" content="this document is copyright
+as described in the copyright notice">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="copyright.html">[Copyright]</a></p>
+
+<p>
+Updated 1993 by SIC.<br>
+Original by Scott Chase.</p>
+<p><br></p>
+
+<h1>The Care and Feeding of Kill Files</h1>
+
+<p>With most news readers, it is possible for you to selectively ignore articles with
+certain title words, or by a certain author.&nbsp; This feature is implemented as a "kill
+file", that contains instructions to your news reader about how to filter out unwanted
+articles.&nbsp; The exact details on how to specify articles you want to ignore varies
+from program to program, so you should check the documentation for your particular
+news reader.&nbsp; Some examples are given below for a few common news readers.&nbsp; If
+your news reader does not support kill files, you may want to consider upgrading to one
+that does.&nbsp; Some of the more popular news readers that support kill files are rn, trn,
+nn, xrn, gnews, and gnus.</p>
+
+<p>Let's say that you wish to `kill' all posts made by a certain user.&nbsp; Using the
+`rn' or `trn' news reader, you would type a [CTRL]-K while in read mode to begin editing
+the kill file, and then type the following:
+<pre style="font-size: 24px">
+     /From: username@sitename.com/h:j
+</pre>
+This will look for articles that come with "From: username@sitename.com" in the header,
+junk them, and then display the subject lines of titles that just got zapped.</p>
+
+<p>To kill articles by Subject titles, you would type something like this:
+<pre style="font-size: 24px">
+     /: *The Big Bang Never Happened/:j
+     /: *Space Potatoes Have Inertia/:j
+</pre>
+When finished, save the kill file in the normal manner for the editor you're using.</p>
+ 
+<p>In trn 3.0 and higher you can use the faster command
+<pre style="font-size: 24px">
+     /username@sitename\.com/f:j
+</pre>
+to kill all of username's postings.&nbsp; In trn change the 'j' to ',' to kill all the
+replies as well.&nbsp; Note the '\' to escape the '.'.&nbsp; This is needed in any search
+string in a kill file (although they usually work if you forget).&nbsp; Also in [t]rn you
+can simply hit K to automatically killfile the current subject without directly editing
+the file.</p>
+
+<p>For the `nn' news reader, type a capital K when viewing the contents of a
+newsgroup.&nbsp; nn will then ask you a few questions on whether it is a Subject or a
+Name, duration of time that the posts are to be killed, etc.&nbsp; Simply answer the
+questions accordingly.</p>
+
+<p>There's a lot more to it, of course, when you become proficient.&nbsp; You can kill all
+articles cross-posted to specific groups, for example, or kill any article with a
+particular name or phrase appearing anywhere in the header.&nbsp; A good primer is in the
+"rn KILL file FAQ" which appears periodically in news.answers.&nbsp; You should also check
+the man pages for your particular news reader.</p>
+
+<p><br></p>
+
+</body>
+</html>

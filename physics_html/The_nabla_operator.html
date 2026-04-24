@@ -1,0 +1,31 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>The nabla operator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="nabla">The \(\nabla\) operator</a></h1>
+
+<p>In cartesian coordinates \((x,y,z)\) holds: \[\vec{\nabla}=\frac{\partial }{\partial x}\vec{e}_{x}+\frac{\partial }{\partial y}\vec{e}_{y}+\frac{\partial }{\partial z}\vec{e}_{z}~~,~~ {\rm grad}f=\vec{\nabla}f=\frac{\partial f}{\partial x}\vec{e}_{x}+\frac{\partial f}{\partial y}\vec{e}_{y}+\frac{\partial f}{\partial z}\vec{e}_{z}\] \[{\rm div}~\vec{a}=\vec{\nabla}\cdot\vec{a}=\frac{\partial a_x}{\partial x}+\frac{\partial a_y}{\partial y}+\frac{\partial a_z}{\partial z}~~,~~ \nabla^2 f=\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}+\frac{\partial^2 f}{\partial z^2}\] \[{\rm rot}~\vec{a}=\vec{\nabla}\times\vec{a}= \left(\frac{\partial a_z}{\partial y}-\frac{\partial a_y}{\partial z}\right)\vec{e}_{x}+ \left(\frac{\partial a_x}{\partial z}-\frac{\partial a_z}{\partial x}\right)\vec{e}_{y}+ \left(\frac{\partial a_y}{\partial x}-\frac{\partial a_x}{\partial y}\right)\vec{e}_{z}\] In cylinder coordinates \((r,\varphi,z)\) holds: \[\vec{\nabla}=\frac{\partial }{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial }{\partial \varphi}\vec{e}_{\varphi}+\frac{\partial }{\partial z}\vec{e}_{z}~~,~~ {\rm grad}f=\frac{\partial f}{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial f}{\partial \varphi}\vec{e}_{\varphi}+\frac{\partial f}{\partial z}\vec{e}_{z}\] \[{\rm div}~\vec{a}=\frac{\partial a_r}{\partial r}+\frac{a_r}{r}+\frac{1}{r}\frac{\partial a_\varphi}{\partial \varphi}+\frac{\partial a_z}{\partial z}~~,~~ \nabla^2 f=\frac{\partial^2 f}{\partial r^2}+\frac{1}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2}\frac{\partial^2 f}{\partial \varphi^2}+\frac{\partial^2 f}{\partial z^2}\] \[{\rm rot}~\vec{a}=\left(\frac{1}{r}\frac{\partial a_z}{\partial \varphi}-\frac{\partial a_\varphi}{\partial z}\right)\vec{e}_{r}+ \left(\frac{\partial a_r}{\partial z}-\frac{\partial a_z}{\partial r}\right)\vec{e}_{\varphi}+ \left(\frac{\partial a_\varphi}{\partial r}+\frac{a_\varphi}{r}-\frac{1}{r}\frac{\partial a_r}{\partial \varphi}\right)\vec{e}_{z}\\\]</p>
+
+<p>In spherical coordinates \((r,\theta,\varphi)\) holds: \[\begin{aligned} \vec{\nabla} &amp;=&amp;\frac{\partial }{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial }{\partial \theta}\vec{e}_{\theta}+\frac{1}{r\sin\theta}\frac{\partial }{\partial \varphi}\vec{e}_{\varphi}\\ {\rm grad}f &amp;=&amp;\frac{\partial f}{\partial r}\vec{e}_{r}+\frac{1}{r}\frac{\partial f}{\partial \theta}\vec{e}_{\theta}+\frac{1}{r\sin\theta}\frac{\partial f}{\partial \varphi}\vec{e}_{\varphi}\\ {\rm div}~\vec{a}&amp;=&amp;\frac{\partial a_r}{\partial r}+\frac{2a_r}{r}+\frac{1}{r}\frac{\partial a_\theta}{\partial \theta}+\frac{a_\theta}{r\tan\theta}+\frac{1}{r\sin\theta}\frac{\partial a_\varphi}{\partial \varphi}\\ {\rm rot}~\vec{a}&amp;=&amp;\left(\frac{1}{r}\frac{\partial a_\varphi}{\partial \theta}+\frac{a_\theta}{r\tan\theta}-\frac{1}{r\sin\theta}\frac{\partial a_\theta}{\partial \varphi}\right)\vec{e}_{r}+ \left(\frac{1}{r\sin\theta}\frac{\partial a_r}{\partial \varphi}-\frac{\partial a_\varphi}{\partial r}-\frac{a_\varphi}{r}\right)\vec{e}_{\theta}+\\ &amp;&amp;\left(\frac{\partial a_\theta}{\partial r}+\frac{a_\theta}{r}-\frac{1}{r}\frac{\partial a_r}{\partial \theta}\right)\vec{e}_{\varphi}\\ \nabla^2 f &amp;=&amp;\frac{\partial^2 f}{\partial r^2}+\frac{2}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2}\frac{\partial^2 f}{\partial \theta^2}+\frac{1}{r^2\tan\theta}\frac{\partial f}{\partial \theta}+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 f}{\partial \varphi^2}\end{aligned}\]</p>
+
+<p>General orthonormal curvelinear coordinates \((u,v,w)\) can be obtained from cartesian coordinates by the transformation \(\vec{x}=\vec{x}(u,v,w)\). The unit vectors are then given by: \[\vec{e}_{u}=\frac{1}{h_1}\frac{\partial \vec{x}}{\partial u}~,~~\vec{e}_{v}=\frac{1}{h_2}\frac{\partial \vec{x}}{\partial v}~,~~ \vec{e}_{w}=\frac{1}{h_3}\frac{\partial \vec{x}}{\partial w}\] where the factors \(h_i\) set the norm to 1. Then holds: \[\begin{aligned} {\rm grad}f &amp;=&amp;\frac{1}{h_1}\frac{\partial f}{\partial u}\vec{e}_{u}+\frac{1}{h_2}\frac{\partial f}{\partial v}\vec{e}_{v}+\frac{1}{h_3}\frac{\partial f}{\partial w}\vec{e}_{w}\\ {\rm div}~\vec{a}&amp;=&amp;\frac{1}{h_1h_2h_3}\left(\frac{\partial }{\partial u}(h_2h_3a_u)+\frac{\partial }{\partial v}(h_3h_1a_v)+\frac{\partial }{\partial w}(h_1h_2a_w)\right)\\ {\rm rot}~\vec{a}&amp;=&amp;\frac{1}{h_2h_3}\left(\frac{\partial (h_3a_w)}{\partial v}-\frac{\partial (h_2a_v)}{\partial w}\right)\vec{e}_{u}+ \frac{1}{h_3h_1}\left(\frac{\partial (h_1a_u)}{\partial w}-\frac{\partial (h_3a_w)}{\partial u}\right)\vec{e}_{v}+\\ &amp;&amp;\frac{1}{h_1h_2}\left(\frac{\partial (h_2a_v)}{\partial u}-\frac{\partial (h_1a_u)}{\partial v}\right)\vec{e}_{w}\\ \nabla^2 f &amp;=&amp;\frac{1}{h_1h_2h_3}\left[\frac{\partial }{\partial u}\left(\frac{h_2h_3}{h_1}\frac{\partial f}{\partial u}\right)+ \frac{\partial }{\partial v}\left(\frac{h_3h_1}{h_2}\frac{\partial f}{\partial v}\right)+ \frac{\partial }{\partial w}\left(\frac{h_1h_2}{h_3}\frac{\partial f}{\partial w}\right)\right]\end{aligned}\]</p>
+
+</body>
+</html>

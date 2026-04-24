@@ -1,0 +1,386 @@
+<html>
+<head>
+   <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+   </script>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Quantum physics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1><a name="10">10. Quantum physics</a></h1>
+<h2><a name="10.1">10.1 Introduction to quantum physics</a></h2>
+<h3><a name="10.1.1">10.1.1 Black body radiation</a></h3>
+
+<p><em>Planck's law</em> for the energy distribution for the radiation of a black body is:</p>
+
+<p>\[w(f)=\frac{8\pi hf^3}{c^3}\frac{1}{{\rm e}^{hf/kT}-1}~~,~~~ w(\lambda)=\frac{8\pi hc}{\lambda^5}\frac{1}{{\rm e}^{hc/\lambda kT}-1}\]</p>
+
+<p><em>Stefan-Boltzmann's law</em> for the total power density can be derived from this: \(P=A\sigma T^4\). Wien's law for the maximum can also be derived from this: \(T\lambda_{\rm max}=k_{\rm W}\).</p>
+
+<h3><a name="10.1.2">10.1.2 The Compton effect</a></h3>
+
+<p>The wavelength of scattered light, if light is considered to consist&nbsp;of particles, can be derived:</p>
+
+<p>\[\lambda'=\lambda+\frac{h}{mc}(1-\cos\theta)=\lambda+\lambda_{\rm C}(1-\cos\theta)\]</p>
+
+<h3><a name="10.1.3">10.1.3 Electron diffraction</a></h3>
+
+<p>Diffraction of electrons at a crystal can be explained by assuming that particles have a wave character with wavelength \(\lambda=h/p\). This wavelength is called the <em>deBroglie</em>-<em>wavelength</em>.</p>
+
+<h2><a name="10.2">10.2 Wave functions</a></h2>
+
+<p>The wave character of particles is described by a wavefunction \(\psi\). This wavefunction can be described in normal or momentum space. Both definitions are each others Fourier transform:</p>
+
+<p>\[\Phi(k,t)=\frac{1}{\sqrt{h}}\int\Psi(x,t){\rm e}^{-ikx}dx~~~\mbox{and}~~~ \Psi(x,t)=\frac{1}{\sqrt{h}}\int\Phi(k,t){\rm e}^{ikx}dk\]</p>
+
+<p>These waves define a particle with group velocity \(v_{\rm g}=p/m\) and energy \(E=\hbar\omega\).</p>
+
+<p>The wavefunction can be interpreted as a measure for the probability \(P\) to find a particle somewhere (<em>Born</em>): \(dP=|\psi|^2d^3V\). The expectation value \(\left\langle f \right\rangle\) of a quantity \(f\) of a system is given by:</p>
+
+<p>\[\left\langle f(t) \right\rangle=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int\Psi^* f\Psi d^3V~~,~~\left\langle f_p(t) \right\rangle=\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int\Phi^*f\Phi d^3V_p\]</p>
+
+<p>This is also written as \(\left\langle f(t) \right\rangle=\left\langle \Phi|f|\Phi \right\rangle\). The normalizing condition for wavefunctions follows from this: \(\left\langle \Phi|\Phi \right\rangle=\left\langle \Psi|\Psi \right\rangle=1\).</p>
+
+<h2><a name="10.3">10.3 Operators in quantum physics</a></h2>
+
+<p>In quantum mechanics, classical quantities are translated into operators. These operators are hermitian because their eigenvalues must be real:</p>
+
+<p>\[\int\psi_1^*A\psi_2d^3V=\int\psi_2(A\psi_1)^*d^3V\]</p>
+
+<p>When \(u_n\) is the eigenfunction of the eigenvalue equation \(A\Psi=a\Psi\) for eigenvalue \(a_n\), \(\Psi\) can be expanded into a basis of eigenfunctions: \(\Psi=\sum\limits_nc_nu_n\). If this basis is taken orthonormal, then it follows for the coefficients: \(c_n=\left\langle u_n|\Psi \right\rangle\). If the system is in a state described by \(\Psi\), the chance to find eigenvalue \(a_n\) when measuring \(A\) is given by \(|c_n|^2\) in the discrete part of the spectrum and \(|c_n|^2da\) in the continuous part of the spectrum between \(a\) and \(a+da\). The <em>matrix element</em> \(A_{ij}\) is given by: \(A_{ij}=\left\langle u_i|A|u_j \right\rangle\). Because \((AB)_{ij}=\left\langle u_i|AB|u_j \right\rangle=\langle u_i|A\sum\limits_n|u_n\rangle\left\langle u_n|B|u_j \right\rangle\) therefore: \(\sum\limits_n|u_n\rangle\langle u_n|=1\).</p>
+
+<p>The time-dependence of an operator is given by (<em>Heisenberg</em>):</p>
+
+<p>\[\frac{dA}{dt}=\frac{\partial A}{\partial t}+\frac{[A,H]}{i\hbar}\]</p>
+
+<p>with \([A,B]\equiv AB-BA\) the <em>commutator</em> of \(A\) and \(B\). For hermitian operators the commutator is always complex. If \([A,B]=0\), the operators \(A\) and \(B\) have a common set of eigenfunctions. By applying this to \(p_x\) and \(x\) follows (<em>Ehrenfest</em>): \(md^2\left\langle x \right\rangle_t/dt^2=-\left\langle dU(x)/dx \right\rangle\).</p>
+
+<p>The first order approximation \(\left\langle F(x) \right\rangle_t\approx F(\left\langle x \right\rangle)\), with \(F=-dU/dx\) represents the classical equation.</p>
+
+<p>Before the addition of quantum mechanical operators which are a product of other operators, they should be made symmetrical: a classical product \(AB\) becomes \(\frac{1}{2}(AB+BA)\).</p>
+
+<h2><a name="10.4">10.4 The uncertainty principle</a></h2>
+
+<p>If the uncertainty \(\Delta A\) in \(A\) is defined as: \((\Delta A)^2=\left\langle \psi|A_{\rm op}-\left\langle A \right\rangle|^2\psi \right\rangle=\left\langle A^2 \right\rangle-\left\langle A \right\rangle^2\) it follows:</p>
+
+<p>\[\Delta A\cdot\Delta B\geq\mbox{$\frac{1}{2}$}|\left\langle \psi|[A,B]|\psi \right\rangle|\]</p>
+
+<p>From this follows: \(\Delta E\cdot\Delta t\geq\frac{1}{2}\hbar\), and because \([x,p_x]=i\hbar\): \(\Delta p_x\cdot\Delta x\geq\frac{1}{2}\hbar\), and \(\Delta L_x\cdot\Delta L_y\geq\frac{1}{2}\hbar L_z\).</p>
+
+<h2><a name="10.5">10.5 The Schr&ouml;dinger equation</a></h2>
+
+<p>The momentum operator is given by: \(p_{\rm op}=-i\hbar\nabla\). The position operator is: \(x_{\rm op}=i\hbar\nabla_p\). The energy operator is given by: \(E_{\rm op}=i\hbar\partial/\partial t\). The Hamiltonian of a particle with mass \(m\), potential energy \(U\) and total energy \(E\) is given by: \(H=p^2/2m+U\). From \(H\psi=E\psi\) then follows the <em>Schr&ouml;dinger equation</em>:</p>
+
+<p>\[-\dfrac{\hbar^{2}}{2m}\bigtriangledown ^{2} \psi +U\psi=E\psi = i\hbar \dfrac{\partial \psi}{\partial t}\]</p>
+
+<p>The linear combination of the solutions of this equation give the general solution. In one dimension it is:</p>
+
+<p>\[\psi(x,t)=\left(\sum+\int dE\right)c(E)u_E(x)\exp\left(-\frac{iEt}{\hbar}\right)\]</p>
+
+<p>The current density \(J\) is given by: \(\displaystyle J=\frac{\hbar}{2im}(\psi^*\nabla\psi-\psi\nabla\psi^*)\)</p>
+
+<p>The following conservation law holds: \(\displaystyle\frac{\partial P(x,t)}{\partial t}=-\nabla J(x,t)\)</p>
+
+<h2><a name="10.6">10.6 Parity</a></h2>
+
+<p>The parity operator in one dimension is given by \({\cal P}\psi(x)=\psi(-x)\). If the wavefunction is split in even and odd functions, it can be expanded into eigenfunctions of \(\cal P\):</p>
+
+<p>\[\psi(x)= \underbrace{\mbox{$\frac{1}{2}$}(\psi(x)+\psi(-x))}_{\rm even:~\hbox{$\psi^+$}}+ \underbrace{\mbox{$\frac{1}{2}$}(\psi(x)-\psi(-x))}_{\rm odd:~\hbox{$\psi^-$}}\] \([{\cal P},H]=0\).</p>
+
+<p>The functions \(\psi^+=\frac{1}{2}(1+{\cal P})\psi(x,t)\) and \(\psi^-=\frac{1}{2}(1-{\cal P})\psi(x,t)\) both satisfy the Schr&ouml;dinger equation. Hence, parity is a conserved quantity.</p>
+
+<h2><a name="10.7">10.7 The tunnel effect</a></h2>
+
+<p>The wavefunction of a particle in an \(\infty\) high potential step from \(x=0\) to \(x=a\) is given by \(\psi(x)=a^{-1/2}\sin(kx)\). The energy levels are given by \(E_n=n^2h^2/8a^2m\).</p>
+
+<p>If the wavefunction with energy \(W\) meets a potential well of \(W_0&gt;W\) the wavefunction will, unlike the classical case, be non-zero within the potential well. If 1, 2 and 3 are the areas in front, within and behind the potential well, then:</p>
+
+<p>\[\psi_1=A{\rm e}^{ikx}+B{\rm e}^{-ikx}~~,~~~ \psi_2=C{\rm e}^{ik'x}+D{\rm e}^{-ik'x}~~,~~~\psi_3=A'{\rm e}^{ikx}\]</p>
+
+<p>with \(k'^2=2m(W-W_0)/\hbar^2\) and \(k^2=2mW\). Using the boundary conditions requiring continuity: \(\psi=\)continuous and \(\partial\psi/\partial x=\)continuous at \(x=0\) and \(x=a\) gives \(B\), \(C\) and \(D\) and \(A'\) expressed in \(A\). The amplitude \(T\) of the transmitted wave is defined by \(T=|A'|^2/|A|^2\). If \(W&gt;W_0\) and \(2a=n\lambda'=2\pi n/k'\) yielding: \(T=1\).</p>
+
+<h2><a name="10.8">10.8 The harmonic oscillator</a></h2>
+
+<p>For a harmonic oscillator where: \(U=\frac{1}{2}bx^2\) and \(\omega_0^2=b/m\) the Hamiltonian \(H\) is given by:</p>
+
+<p>\[H=\frac{p^2}{2m}+\mbox{$\frac{1}{2}$}m\omega^2 x^2=\mbox{$\frac{1}{2}$}\hbar\omega+\omega A^\dagger A\]</p>
+
+<p>with</p>
+
+<p>\[A=\sqrt{\mbox{$\frac{1}{2}$}m\omega}x+\frac{ip}{\sqrt{2m\omega}}~~\mbox{and}~~ A^\dagger=\sqrt{\mbox{$\frac{1}{2}$}m\omega}x-\frac{ip}{\sqrt{2m\omega}}\]</p>
+
+<p>\(A\neq A^\dagger\) is non hermitian. \([A,A^\dagger]=\hbar\) and \([A,H]=\hbar\omega A\). \(A\) is a so called <em>raising ladder operator</em>, \(A^\dagger\) a <em>lowering ladder operator</em>. \(HAu_E=(E-\hbar\omega)Au_E\). There is an eigenfunction \(u_0\) for which \(Au_0=0\) holds. The energy in this ground state is \(\frac{1}{2}\hbar\omega\): the zero point energy. For the normalized eigenfunctions it follows that:</p>
+
+<p>\[u_n=\frac{1}{\sqrt{n!}}\left(\frac{A^\dagger}{\sqrt{\hbar}}\right)^nu_0~~\mbox{with}~~ u_0=\sqrt[4]{\frac{m\omega}{\pi\hbar}}\exp\left(-\frac{m\omega x^2}{2\hbar}\right)\]</p>
+
+<p>with \(E_n=(\frac{1}{2}+n)\hbar\omega\).</p>
+
+<h2><a name="10.9">10.9 Angular momentum</a></h2>
+
+<p>For the angular momentum operators \(L\): \([L_z,L^2]=[L_z,H]=[L^2,H]=0\). However, cyclically: \([L_x,L_y]=i\hbar L_z\). Not all components of \(L\) can be known at the same time with arbitrary accuracy. For \(L_z\):</p>
+
+<p>\[L_z=-i\hbar\frac{\partial }{\partial \varphi}=-i\hbar\left(x\frac{\partial }{\partial y}-y\frac{\partial }{\partial x}\right)\]</p>
+
+<p>The ladder operators \(L_\pm\) are defined by: \(L_\pm=L_x\pm iL_y\). Now&nbsp;\(L^2=L_+L_-+L_z^2-\hbar L_z\). Further,</p>
+
+<p>\[L_\pm=\hbar{\rm e}^{\pm i\varphi}\left(\pm\frac{\partial }{\partial \theta}+i\cot(\theta)\frac{\partial }{\partial \varphi}\right)\]</p>
+
+<p>From \([L_+,L_z]=-\hbar L_+\) it follows that: \(L_z(L_+Y_{lm})=(m+1)\hbar(L_+Y_{lm})\).</p>
+
+<p>From \([L_-,L_z]=\hbar L_-\) it follows that: \(L_z(L_-Y_{lm})=(m-1)\hbar(L_-Y_{lm})\).</p>
+
+<p>From \([L^2,L_\pm]=0\) it follows that: \(L^2(L_\pm Y_{lm})=l(l+1)\hbar^2(L_\pm Y_{lm})\).</p>
+
+<p>Because \(L_x\) and \(L_y\) are hermitian (this implies \(L_\pm^\dagger=L_\mp\)) and \(|L_\pm Y_{lm}|^2&gt;0\) thus: \(l(l+1)-m^2-m\geq0\Rightarrow-l\leq m\leq l\). Further ir follows that \(l\) has to be integral or half-integral. Half-odd integral values give no unique solution \(\psi\) and are therefore dismissed.</p>
+
+<h2><a name="10.10">10.10 Spin</a></h2>
+
+<p>For the spin operators are defined by their commutation relations: \([S_x,S_y]=i\hbar S_z\). Because the spin operators do not act in the physical space \((x,y,z)\) the uniqueness of the wavefunction is not a criterium here: also half odd-integer values are allowed for the spin. Because \([L,S]=0\) spin and angular momentum operators do not have a common set of eigenfunctions. The spin operators are given by \(\vec{\vec{S}}=\frac{1}{2}\hbar\vec{\vec{\sigma}}\), with</p>
+
+<p>\[\vec{\vec{\sigma}}_x=\left(\begin{array}{cc}0&amp;1\\1&amp;0\end{array}\right)~~,~~ \vec{\vec{\sigma}}_y=\left(\begin{array}{cc}0&amp;-i\\i&amp;0\end{array}\right)~~,~~ \vec{\vec{\sigma}}_z=\left(\begin{array}{cc}1&amp;0\\0&amp;-1\end{array}\right)\]</p>
+
+<p>The eigenstates of \(S_z\) are called <em>spinors</em>: \(\chi=\alpha_+\chi_++\alpha_-\chi_-\), where \(\chi_+=(1,0)\) represents the state with spin up (\(S_z=\frac{1}{2}\hbar\)) and \(\chi_-=(0,1)\) represents the state with spin down (\(S_z=-\frac{1}{2}\hbar\)). Then the probability to find spin up after a measurement is given by \(|\alpha_+|^2\) and the chance to find spin down is given by \(|\alpha_-|^2\). Of course &nbsp;\(|\alpha_+|^2+|\alpha_-|^2=1\).</p>
+
+<p>The electron will have an intrinsic magnetic dipole moment \(\vec{M}\) due to its spin, given by \(\vec{M}=-eg_S\vec{S}/2m\), with \(g_S=2(1+\alpha/2\pi+\cdots)\) the gyromagnetic ratio. In the presence of an external magnetic field this gives a potential energy \(U=-\vec{M}\cdot\vec{B}\). The Schr&ouml;dinger equation then becomes (because \(\partial\chi/\partial x_i\equiv0\)):</p>
+
+<p>\[i\hbar\frac{\partial \chi(t)}{\partial t}=\frac{eg_S\hbar}{4m}\vec{\sigma}\cdot\vec{B}\chi(t)\]</p>
+
+<p>with \(\vec{\sigma}=(\vec{\vec{\sigma}}_x,\vec{\vec{\sigma}}_y,\vec{\vec{\sigma}}_z)\). If \(\vec{B}=B\vec{e}_z\) there are two eigenvalues for this problem: \(\chi_\pm\) for \(E=\pm eg_S\hbar B/4m=\pm\hbar\omega\). So the general solution is given by \(\chi=(a{\rm e}^{-i\omega t},b{\rm e}^{i\omega t})\). From this can be derived: \(\left\langle S_x \right\rangle=\frac{1}{2}\hbar\cos(2\omega t)\) and \(\left\langle S_y \right\rangle=\frac{1}{2}\hbar\sin(2\omega t)\). Thus the spin precesses about the \(z\)-axis with frequency \(2\omega\). This causes the normal <em>Zeeman splitting</em> of spectral lines.</p>
+
+<p>The potential operator for two particles with spin \(\pm\frac{1}{2}\hbar\) is given by:</p>
+
+<p>\[V(r)=V_1(r)+\frac{1}{\hbar^2}(\vec{S}_1\cdot\vec{S_2})V_2(r)= V_1(r)+\mbox{$\frac{1}{2}$}V_2(r)[S(S+1)-\mbox{$\frac{3}{2}$}]\]</p>
+
+<p>This makes it possible for two states to exist: \(S=1\) (triplet) or \(S=0\) (Singlet).</p>
+
+<h2><a name="10.11">10.11 The Dirac formalism</a></h2>
+
+<p>If the operators for \(p\) and \(E\) are substituted in the relativistic equation \(E^2=m_0^2c^4+p^2c^2\), the <em>Klein-Gordon</em> equation is found:</p>
+
+<p>\[\displaystyle \left(\nabla^2-\frac{1}{c^2}\frac{\partial^2 }{\partial t^2}-\frac{m_0^2c^2}{\hbar^2}\right)\psi(\vec{x},t)=0 \]</p>
+
+<p>The operator \(\Box-m_0^2c^2/\hbar^2\) can be separated:</p>
+
+<p>\[\nabla^2-\frac{1}{c^2}\frac{\partial^2 }{\partial t^2}-\frac{m_0^2c^2}{\hbar^2}= \left\{\gamma_\lambda\frac{\partial }{\partial x_\lambda}-\frac{m_0c}{\hbar}\right\} \left\{\gamma_\mu\frac{\partial }{\partial x_\mu}+\frac{m_0c}{\hbar}\right\}\]</p>
+
+<p>where the Dirac matrices \(\gamma\) are given by: \(\{\gamma_\lambda,\gamma_\mu\}= \gamma_\lambda\gamma_\mu+\gamma_\mu\gamma_\lambda=2\delta_{\lambda\mu}\) (In general relativity this becomes \(2g_{\lambda\mu}\)). From this it can be derived that the \(\gamma\) are hermitian \(4\times4\) matrices given by:</p>
+
+<p>\[\gamma_k=\left(\begin{array}{cc}0&amp;-i\sigma_k\\i\sigma_k&amp;0\end{array}\right)~~,~~ \gamma_4=\left(\begin{array}{cc}I&amp;0\\0&amp;-I\end{array}\right)\]</p>
+
+<p>With this, the Dirac equation becomes:</p>
+
+<p>\[\mbox{$\displaystyle \left(\gamma_\lambda\frac{\partial }{\partial x_\lambda}+\frac{m_0c}{\hbar}\right)\psi(\vec{x},t)=0 $}\]</p>
+
+<p>where \(\psi(x)=(\psi_1(x),\psi_2(x),\psi_3(x),\psi_4(x))\) is a spinor.</p>
+
+<h2><a name="10.12">10.12 Atomic physics</a></h2>
+<h3><a name="10.12.1">10.12.1 Solutions</a></h3>
+
+<p>The solutions of the Schr&ouml;dinger equation in spherical coordinates if the potential energy is a function of \(r\) alone can be written as: \(\psi(r,\theta,\varphi)=R_{nl}(r)Y_{l,m_l}(\theta,\varphi)\chi_{m_s}\), with</p>
+
+<p>\[Y_{lm}=\frac{C_{lm}}{\sqrt{2\pi}}P_l^m(\cos\theta){\rm e}^{im\varphi}\]</p>
+
+<p>For an atom or ion with one electron : \(\displaystyle R_{lm}(\rho)=C_{lm}{\rm e}^{-\rho/2}\rho^l L_{n-l-1}^{2l+1}(\rho)\)</p>
+
+<p>with \(\rho=2rZ/na_0\) and \(a_0=\varepsilon_0 h^2/\pi m_{e}e^2\). The \(L_i^j\) are the associated Laguere functions and the \(P_l^m\) are the associated Legendre polynomials:</p>
+
+<p>\[P_l^{|m|}(x)=(1-x^2)^{m/2}\frac{d^{|m|}}{dx^{|m|}}\left[(x^2-1)^l\right]~~,~~ L_n^m(x)=\frac{(-1)^mn!}{(n-m)!}{\rm e}^{-x}x^{-m}\frac{d^{n-m}}{dx^{n-m}}({\rm e}^{-x}x^n)\]</p>
+
+<p>The parity of these solutions is \((-1)^l\). The functions are \(2\sum\limits_{l=0}^{n-1}(2l+1)=2n^2\)-folded degenerated.</p>
+
+<h3><a name="10.12.3">10.12.2 Eigenvalue equations</a></h3>
+
+<p>The eigenvalue equations for an atom or ion with with one electron are:</p>
+
+<p>
+<table align="center" border=1>
+<tr>
+<th align="center">Equation<th align="center">Eigenvalue<th align="center">Range
+<tr>
+<td>\(H_{\rm op}\psi=E\psi\)</td> <td>\(E_n=\mu e^4Z^2/8\varepsilon_0^2h^2n^2\)</td><td>\(n\geq1\)</td>
+<tr>
+<td>\(L_{z\rm op}Y_{lm}=L_zY_{lm}\)</td> <td>\(L_z=m_l\hbar\)</td><td>\(-l\leq m_l\leq l\)</td>
+<tr>
+<td>\(L^2_{\rm op}Y_{lm}=L^2Y_{lm}\)</td> <td>\(L^2=l(l+1)\hbar^2\)</td><td>\(l&lt;n\)</td>
+<tr>
+<td>\(S_{z\rm op}\chi=S_z\chi\)</td> <td>\(S_z=m_s\hbar\)</td><td>\(m_s=\pm\frac{1}{2}\)</td>
+<tr>
+<td>\(S^2_{\rm op}\chi=S^2\chi\)</td> <td>\(S^2=s(s+1)\hbar^2\)</td><td>\(s=\frac{1}{2}\)</td>
+<tr>
+</table>
+</p>
+
+<h3><a name="10.12.3">10.12.3 Spin-orbit interaction</a></h3>
+
+<p>The total momentum is given by \(\vec{J}=\vec{L}+\vec{M}\). The total magnetic dipole moment of an electron is then \(\vec{M}=\vec{M}_L+\vec{M}_S=-(e/2m_{\rm e})(\vec{L}+g_S\vec{S})\) where \(g_S=2.0023\) is the gyromagnetic ratio of the electron. Further: \(J^2=L^2+S^2+2\vec{L}\cdot\vec{S}=L^2+S^2+2L_zS_z+L_+S_-+L_-S_+\). \(J\) has quantum numbers \(j\) with possible values \(j=l\pm\frac{1}{2}\), with \(2j+1\) possible \(z\)-components (\(m_J\in\{-j,..,0,..,j\}\)). If the interaction energy between \(S\) and \(L\) is small it can be stated that: \(E=E_n+E_{SL}=E_n+a\vec{S}\cdot\vec{L}\). It can then be derived that:</p>
+
+<p>\[a=\frac{|E_n|Z^2\alpha^2}{\hbar^2nl(l+1)(l+\mbox{$\frac{1}{2}$})}\]</p>
+
+<p>After a relativistic correction this becomes:</p>
+
+<p>\[E=E_n+\frac{|E_n|Z^2\alpha^2}{n}\left(\frac{3}{4n}-\frac{1}{j+\mbox{$\frac{1}{2}$}}\right)\]</p>
+
+<p>The <em>fine structure</em> in atomic spectra arises from this. With \(g_S=2\) follows for the average magnetic moment: \(\vec{M}_{\rm av}=-(e/2m_{\rm e})g\hbar\vec{J}\), where \(g\) is the <em>Land&eacute;-g factor</em>:</p>
+
+<p>\[g=1+\frac{\vec{S}\cdot\vec{J}}{J^2}=1+\frac{j(j+1)+s(s+1)-l(l+1)}{2j(j+1)}\]</p>
+
+<p>For atoms with more than one electron the following limiting situations occur:</p>
+
+<ol>
+    <li>\(L-S\) coupling: for small atoms the electrostatic interaction is dominant and the state can be characterized by \(L,S,J,m_J\). \(J\in\{|L-S|,...,L+S-1,L+S\}\) and \(m_J\in\{-J,...,J-1,J\}\). The spectroscopic notation for this interaction is: \(^{2S+1}L_J\). \(2S+1\) is the multiplicity of a multiplet.</li>
+    <li>\(j-j\) coupling: for larger atoms the electrostatic interaction is smaller than the \(L_i\cdot s_i\) interaction of an electron. The state is characterized by \(j_i...j_n,J,m_J\) where only the \(j_i\) of the not completely filled subshells are to be taken into account.</li>
+</ol>
+
+<p>The energy difference for larger atoms when placed in a magnetic field is: \(\Delta E=g\mu_{\rm B}m_JB\) where \(g\) is the Land&eacute; factor. For a transition between two singlet states the line splits in 3 parts, for \(\Delta m_J=-1,0+1\). This results in the normal Zeeman effect. At higher \(S\) the line splits up in more parts: the anomalous Zeeman effect.</p>
+
+<p>Interaction with the spin of the nucleus gives the hyperfine structure.</p>
+
+<h3><a name="10.12.4">10.12.4 Selection rules</a></h3>
+
+<p>For the dipole transition matrix elements it&nbsp;follows that: \(p_0\sim|\langle l_2m_2|\vec{E}\cdot\vec{r}\,|l_1m_1\rangle|\). Conservation of angular momentum demands that for the transition of an electron&nbsp;that \(\Delta l=\pm1\).</p>
+
+<p>For an atom where \(L-S\) coupling is dominant further: \(\Delta S=0\) (but not strictly), \(\Delta L=0,\pm1\), \(\Delta J=0,\pm1\) except for \(J=0\rightarrow J=0\) transitions, \(\Delta m_J=0,\pm1\), but \(\Delta m_J=0\) is forbidden if \(\Delta J=0\).</p>
+
+<p>For an atom where \(j-j\) coupling is dominant except for the jumping electron&nbsp;&nbsp;\(\Delta l=\pm1\), and \(\Delta j=0,\pm1\), For all other electrons: \(\Delta j=0\). For all of the electrons in the atom: \(\Delta J=0,\pm1\) but no \(J=0\rightarrow J=0\) transitions are allowed and \(\Delta m_J=0,\pm1\), but \(\Delta m_J=0\) is forbidden if \(\Delta J=0\).</p>
+
+<h2><a name="10.13">10.13 Interaction with electromagnetic fields</a></h2>
+
+<p>The Hamiltonian of an electron in an electromagnetic field is given by:</p>
+
+<p>\[H=\frac{1}{2\mu}(\vec{p}+e\vec{A})^2-eV=-\frac{\hbar^2}{2\mu}\nabla^2+ \frac{e}{2\mu}\vec{B}\cdot\vec{L}+\frac{e^2}{2\mu}A^2-eV\]</p>
+
+<p>where \(\mu\) is the reduced mass of the system. The term \(\sim A^2\) can usually be neglected, except for very strong fields or macroscopic motions. For \(\vec{B}=B\vec{e}_z\) it is given by \(e^2B^2(x^2+y^2)/8\mu\).</p>
+
+<p>When a gauge transformation \(\vec{A}'=\vec{A}-\nabla f\), \(V'=V+\partial f/\partial t\) is applied to the potentials the wavefunction is also transformed according to \(\psi'=\psi{\rm e}^{iqef/\hbar}\) with \(qe\) the charge of the particle. Because \(f=f(x,t)\), this is called a <em>local</em> gauge transformation, in contrast with a <em>global</em> gauge transformation which can always be applied.</p>
+
+<h2><a name="10.14">10.14 Perturbation theory</a></h2>
+<h3><a name="10.14.1">10.14.1 Time-independent perturbation theory</a></h3>
+
+<p>To solve the equation \((H_0+\lambda H_1)\psi_n=E_n\psi_n\) one has to find the eigenfunctions of \(H=H_0+\lambda H_1\). Suppose that \(\phi_n\) is a complete set of eigenfunctions of the non-perturbed Hamiltonian \(H_0\): \(H_0\phi_n=E_n^0\phi_n\). Because \(\phi_n\) is a complete set :</p>
+
+<p>\[\psi_n=N(\lambda)\left\{\phi_n+\sum_{k\neq n}c_{nk}(\lambda)\phi_k\right\}\]</p>
+
+<p>When \(c_{nk}\) and \(E_n\) are being expanded into \(\lambda\):&nbsp;\( \begin{array}{l} c_{nk}=\lambda c_{nk}^{(1)} + \lambda ^{2} &nbsp;c_{nk}^{(2)} + .\; . \;.&nbsp;<br />
+\\ E_{n}=E_{n}^{0}+\lambda E_{n}^{(1)}+\lambda ^{2} &nbsp;E_{n}^{(2)} + .\; .\; .&nbsp;<br />
+\end{array} \)</p>
+
+<p>and this is put into the Schr&ouml;dinger equation the result is: \(E_n^{(1)}=\left\langle \phi_n|H_1|\phi_n \right\rangle\) and<br />
+\(\displaystyle c_{nm}^{(1)}=\frac{\left\langle \phi_m|H_1|\phi_n \right\rangle}{E_n^0-E_m^0}\) if \(m\neq n\). The second-order correction of the energy is then given by:<br />
+\(\displaystyle E^{(2)}_n=\sum_{k\neq n}\frac{|\left\langle \phi_k|H_1|\phi_n \right\rangle|^2}{E^0_n-E^0_k}\). So to first order: \(\displaystyle\psi_n=\phi_n+\sum_{k\neq n} \frac{\left\langle \phi_k|\lambda H_1|\phi_n \right\rangle}{E_n^0-E_k^0}~\phi_k\).</p>
+
+<p>In case the levels are degenerated the above does not hold. In that case an orthonormal set eigenfunctions \(\phi_{ni}\) is chosen for each level \(n\), so that \(\left\langle \phi_{mi}|\phi_{nj} \right\rangle=\delta_{mn}\delta_{ij}\). Now \(\psi\) is expanded as:</p>
+
+<p>\[\psi_n=N(\lambda)\left\{\sum_i\alpha_i\phi_{ni}+\lambda\sum_{k\neq n} c_{nk}^{(1)}\sum_i\beta_i\phi_{ki}+\cdots\right\}\] \(E_{ni}=E_{ni}^0+\lambda E_{ni}^{(1)}\) is approximated by \(E_{ni}^0:=E_n^0\).</p>
+
+<p>Substitution in the Schr&ouml;dinger equation and taking dot product with \(\phi_{ni}\) gives: \(\sum\limits_i\alpha_i\left\langle \phi_{nj}|H_1|\phi_{ni} \right\rangle=E_n^{(1)}\alpha_j\). Normalization requires that \(\sum\limits_i|\alpha_i|^2=1\).</p>
+
+<h3><a name="10.14.2">10.14.2 Time-dependent perturbation theory</a></h3>
+
+<p>From the Schr&ouml;dinger equation \(\displaystyle i\hbar\frac{\partial \psi(t)}{\partial t}=(H_0+\lambda V(t))\psi(t)\)</p>
+
+<p>and the expansion \(\displaystyle\psi(t)=\sum_nc_n(t)\exp\left(\frac{-iE_n^0t}{\hbar}\right)\phi_n\) with \(c_n(t)=\delta_{nk}+\lambda c_n^{(1)}(t)+\cdots\)</p>
+
+<p>follows: \(\displaystyle c_n^{(1)}(t)=\frac{\lambda}{i\hbar}\int\limits_0^t\left\langle \phi_n|V(t')|\phi_k \right\rangle \exp\left(\frac{i(E_n^0-E_k^0)t'}{\hbar}\right)dt'\)</p>
+
+<h2><a name="10.15">10.15 N-particle systems</a></h2>
+<h3><a name="10.15.1">10.15.1 General</a></h3>
+
+<p>Identical particles are indistinguishable. For the total wavefunction of a system of identical indistinguishable particles:</p>
+
+<ol>
+    <li>Particles with a half-odd integer spin (Fermions): \(\psi_{\rm total}\) must be antisymmetric w.r.t. interchange of the coordinates (spatial and spin) of each pair of particles. The Pauli principle results from this: two Fermions cannot exist in an identical state because then \(\psi_{\rm total}=0\).</li>
+    <li>Particles with an integer spin (Bosons): \(\psi_{\rm total}\) must be symmetric w.r.t. interchange of the coordinates (spatial and spin) of each pair of particles.</li>
+</ol>
+
+<p>For a system of two electrons there are 2 possibilities for the spatial wavefunction. When \(a\) and \(b\) are the quantum numbers of electron 1 and 2 :</p>
+
+<p>\[\psi_{\rm S}(1,2)=\psi_a(1)\psi_b(2)+\psi_a(2)\psi_b(1)~~,~~ \psi_{\rm A}(1,2)=\psi_a(1)\psi_b(2)-\psi_a(2)\psi_b(1)\]</p>
+
+<p>Because the particles do not approach each other closely the repulsion energy at \(\psi_{\rm A}\) in this state is smaller. The following spin wavefunctions are possible:</p>
+
+<p>\[\chi_{\rm A}= \begin{array}{ll} \mbox{$\frac{1}{2}$}\sqrt{2}[\chi_+(1)\chi_-(2)-\chi_+(2)\chi_-(1)]&amp;m_s=0 \end{array}\]</p>
+
+<p>\[\chi_{\rm S}= \left\{\begin{array}{ll} \chi_+(1)\chi_+(2)&amp;m_s=+1\\ \mbox{$\frac{1}{2}$}\sqrt{2}[\chi_+(1)\chi_-(2)+\chi_+(2)\chi_-(1)]&amp;m_s=0\\ \chi_-(1)\chi_-(2)&amp;m_s=-1 \end{array}\right.\]</p>
+
+<p>Because the total wavefunction must be antisymmetric it follows: \(\psi_{\rm total}=\psi_{\rm S}\chi_{\rm A}\) or \(\psi_{\rm total}=\psi_{\rm A}\chi_{\rm S}\).</p>
+
+<p>For \(N\) particles the symmetric spatial function is given by:</p>
+
+<p>\[\psi_{\rm S}(1,...,N)=\sum\psi(\mbox{all permutations of }1..N)\]</p>
+
+<p>The antisymmetric wavefunction is given by the determinant \(\displaystyle\psi_{\rm A}(1,...,N)=\frac{1}{\sqrt{N!}}|u_{E_i}(j)|\)</p>
+
+<h3><a name="10.15.2">10.15.2 Molecules</a></h3>
+
+<p>The wavefunctions of atom \(a\) and \(b\) are \(\phi_a\) and \(\phi_b\). If the 2 atoms approach each other there are two possibilities: the total wavefunction approaches the bonding function with lower total energy \(\psi_{\rm B}=\frac{1}{2}\sqrt{2}(\phi_a+\phi_b)\) or approaches the anti-bonding function with higher energy \(\psi_{\rm AB}=\frac{1}{2}\sqrt{2}(\phi_a-\phi_b)\). If a molecular-orbital is symmetric w.r.t. the connecting axis, like a combination of two s-orbitals it is called a \(\sigma\)-orbital, otherwise a \(\pi\)-orbital, like the combination of two p-orbitals along two axes.</p>
+
+<p>The energy of a system is: \(\displaystyle E=\frac{\left\langle \psi|H|\psi \right\rangle}{\left\langle \psi|\psi \right\rangle}\).</p>
+
+<p>The energy calculated with this method is always <em>higher</em> than the real energy if \(\psi\) is only an approximation for the solutions of \(H\psi=E\psi\). Also, if there are more functions to be chosen, the function which gives the lowest energy is the best approximation. Applying this to the function \(\psi=\sum c_i\phi_i\) one finds: \((H_{ij}-ES_{ij})c_i=0\). This equation has only solutions if the <em>secular determinant</em> \(|H_{ij}-ES_{ij}|=0\). Here, \(H_{ij}=\left\langle \phi_i|H|\phi_j \right\rangle\) and \(S_{ij}=\left\langle \phi_i|\phi_j \right\rangle\). \(\alpha_i:=H_{ii}\) is the <em>Coulomb integral </em>and \(\beta_{ij}:=H_{ij}\) the exchange integral. \(S_{ii}=1\) and \(S_{ij}\) is the <em>overlap integral</em>.</p>
+
+<p>The first approximation in the molecular-orbital theory is to place both electrons of a chemical bond in the bonding orbital: \(\psi(1,2)=\psi_{\rm B}(1)\psi_{\rm B}(2)\). This results in a large electron density between the nuclei and therefore a repulsion. A better approximation is: \(\psi(1,2)=C_1\psi_{\rm B}(1)\psi_{\rm B}(2)+C_2\psi_{\rm AB}(1)\psi_{\rm AB}(2)\), with \(C_1=1\) and \(C_2\approx0.6\).</p>
+
+<p>In some atoms, such as C, it is energetically more suitable to form orbitals which are a linear combination of the s, p and d states. There are three ways of hybridization in C:</p>
+
+<ol>
+    <li>SP-hybridization: \(\psi_{\rm sp}=\frac{1}{2}\sqrt{2}(\psi_{\rm 2s}\pm\psi_{{\rm 2p}_z})\). There are 2 hybrid orbitals which are placed on one line under \(180^\circ\). Further the 2p\(_x\) and 2p\(_y\) orbitals remain.</li>
+    <li>SP\(^2\) hybridization: \(\psi_{\rm sp^2}=\psi_{\rm 2s}/\sqrt{3}+c_1\psi_{{\rm 2p}_z}+c_2\psi_{{\rm 2p}_y}\), where \((c_1,c_2)\in\{(\sqrt{2/3},0),(-1/\sqrt{6},1/\sqrt{2})\) \(,(-1/\sqrt{6},-1/\sqrt{2})\}\). The 3 SP\(^2\) orbitals lay in one plane, with symmetry axes which are at an angle of \(120^\circ\).</li>
+    <li>SP\(^3\) hybridization: \(\psi_{\rm sp^3}=\frac{1}{2}(\psi_{\rm 2s}\pm\psi_{{\rm 2p}_z}\pm\psi_{{\rm 2p}_y}\pm\psi_{{\rm 2p}_x})\). The 4 SP\(^3\) orbitals form a tetraheder with the symmetry axes at an angle of \(109^\circ 28'\).</li>
+</ol>
+
+<h2><a name="10.16">10.16 Quantum statistics</a></h2>
+
+<p>If a system exists in a state in which one has not the disposal of the maximal amount of information about the system, it can be described by a <em>density matrix</em> \(\rho\). If the probability that the system is in state \(\psi_i\) is given by \(a_i\), one can write for the expectation value \(a\) of \(A\): \(\left\langle a \right\rangle=\sum\limits_ir_i\langle\psi_i|A|\psi_i\rangle\).</p>
+
+<p>If \(\psi\) is expanded into an orthonormal basis \(\{\phi_k\}\) as: \(\psi^{(i)}=\sum\limits_k c_k^{(i)}\phi_k\), then:</p>
+
+<p>\[\left\langle A \right\rangle=\sum_k(A\rho)_{kk}={\rm Tr}(A\rho)\]</p>
+
+<p>where \(\rho_{lk}=c_k^*c_l\). \(\rho\) is Hermitian, with Tr\((\rho)=1\). Further \(\rho=\sum r_i|\psi_i\rangle\langle\psi_i|\). The probability to find eigenvalue \(a_n\) when measuring \(A\) is given by \(\rho_{nn}\) if one uses a basis of eigenvectors of \(A\) for \(\{\phi_k\}\). For the time-dependence&nbsp;(in the Schr&ouml;dinger image operators are not explicitly time-dependent):</p>
+
+<p>\[i\hbar\frac{d\rho}{dt}=[H,\rho]\]</p>
+
+<p>For a macroscopic system in equilibrium&nbsp;\([H,\rho]=0\). If all quantum states with the same energy are equally probable: \(P_i=P(E_i)\), one can obtain the distribution:</p>
+
+<p>\[ P_n(E)=\rho_{nn}=\dfrac{e^{-E_n/kT}}{Z} \;\;\textrm{with the state sum}\;\;Z=\sum_n e^{-E_n/kT} \]&nbsp;&nbsp;&nbsp;</p>
+
+<p>The thermodynamic quantities are related to these definitions as follows: \(F=-kT\ln(Z)\), \(U=\left\langle H \right\rangle=\sum\limits_np_nE_n=\displaystyle-\frac{\partial }{\partial kT}\ln(Z)\), \(S=-k\sum\limits_nP_n\ln(P_n)\). For a mixed state of \(M\) orthonormal quantum states with probability \(1/M\) follows: \(S=k\ln(M)\).</p>
+
+<p>The distribution function for the internal states for a system in thermal equilibrium is the most probable function. This function can be found by taking the maximum of the function which gives the number of states with Stirling&rsquo;s equation: \(\ln(n!)\approx n\ln(n)-n\), and the conditions \(\sum\limits_kn_k=N\) and \(\sum\limits_kn_kW_k=W\). For identical, indistinguishable particles which obey the Pauli exclusion principle the possible number of states is given by:</p>
+
+<p>\[P=\prod_k\frac{g_k!}{n_k!(g_k-n_k)!}\]</p>
+
+<p>This results in <em>Fermi-Dirac statistics</em>. For indistinguishable particles which <em>do not</em> obey the exclusion principle the possible number of states is given by:</p>
+
+<p>\[P=N!\prod_k\frac{g_k^{n_k}}{n_k!}\]</p>
+
+<p>This results in &nbsp;<em>Bose-Einstein statistics</em>. So the distribution functions which explain how particles are distributed over the different one-particle states \(k\) which are each \(g_k\)-fold degenerate depend on the spin of the particles. They are given by:</p>
+
+<ol>
+    <li>Fermi-Dirac statistics: integer spin. \(n_k\in\{0,1\}\), \(\displaystyle n_k=\frac{N}{Z_g}\frac{g_k}{\exp((E_k-\mu)/kT)+1}\)<br />
+    with \(\ln(Z_{\rm g})=\sum g_k\ln[1+\exp((E_i-\mu)/kT)]\).</li>
+    <li>Bose-Einstein statistics: half odd-integer spin. \(n_k\in I\hspace{-1mm}N\), \(\displaystyle n_k=\frac{N}{Z_g}\frac{g_k}{\exp((E_k-\mu)/kT)-1}\)<br />
+    with \(\ln(Z_{\rm g})=-\sum g_k\ln[1-\exp((E_i-\mu)/kT)]\).</li>
+</ol>
+
+<p>Here, \(Z_{\rm g}\) is the large-canonical state sum and \(\mu\) the chemical potential. It is found by requiring&nbsp;\(\sum n_k=N\): \(\displaystyle\lim\limits_{T\rightarrow0}\mu=E_{\rm F}\), the Fermi-energy. \(N\) is the total number of particles. The Maxwell-Boltzmann distribution can be derived from this in the limit \(E_k-\mu\gg kT\): \[n_k=\frac{N}{Z}\exp\left(-\frac{E_k}{kT}\right)~~\mbox{with}~~ Z=\sum_kg_k\exp\left(-\frac{E_k}{kT}\right)\] In terms of the Fermi-energy, <em>Fermi-Dirac </em>and <em>Bose-Einstein</em> statistics can be written as:</p>
+
+<ol>
+    <li>Fermi-Dirac statistics: \(\displaystyle n_k=\frac{g_k}{\exp((E_k-E_{\rm F})/kT)+1}\).</li>
+    <li>Bose-Einstein statistics: \(\displaystyle n_k=\frac{g_k}{\exp((E_k-E_{\rm F})/kT)-1}\).</li>
+</ol>
+
+</body>
+</head>

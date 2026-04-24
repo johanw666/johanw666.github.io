@@ -1,0 +1,234 @@
+<html>
+<head>
+   <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+<title>Can you take the logarithm of a dimensioned quantity?</title>
+<meta name="copyright" content="this document is copyright as described in the copyright notice">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p><a href="../index.html">[Physics FAQ]</a> -
+   <a href="../Administrivia/copyright.html">[Copyright]</a>
+
+<p>Original by Don Koks, 2017.</p>
+<p><br></p>
+
+
+<h1>Can you take the logarithm of a dimensioned quantity?</h1>
+
+<p>No, you can't.</p>
+
+<p>This question has caused some angst in physics forums.&nbsp; Functions such as $\log$, $\exp$, and $\sin$ are
+not defined for dimensioned quantities, and yet you will find expressions such as "$\log$ temperature" in physics text
+books.&nbsp; Apparently <em>somebody</em> is taking the log of a dimensioned quantity, so what is going on?</p>
+
+<p>Let's assume that maybe it's possible to take the logarithm of a dimensioned quantity.&nbsp; First, we go back
+to first principles to see how a logarithm is defined.&nbsp; The natural logarithm $\ln X$ is defined as the
+area under the curve $y = 1/x$ from $x = 1$ to $X$:
+$$
+\ln X \equiv \int_{x\,=\,1}^X {\mathrm{d}x\over x}\,.
+$$
+This integral is the sum of an infinite number of terms "$\mathrm{d}x/x$", each of which is dimensionless.&nbsp;
+That means the logarithm is also dimensionless.</p>
+
+<p>Now suppose we set about attempting to take the logarithm of, say, 2 kilometres.&nbsp; We presume that this is
+the area under the curve $y = 1/x$ from $x = 1$ km to $x = 2$ km.&nbsp; Draw this curve by constructing an $x$ axis
+with its units in kilometres, and a $y$ axis with its units in kilometres$^{-1}$.&nbsp; Now think "Riemann sum":
+draw two vertical bars (rectangles) across the interval from $x = $1 km to 2 km: a short bar of height 0.5
+km$^{-1}$ , and a tall bar of height 1 km$^{-1}$.&nbsp; Calculating their (dimensionless!) areas will show you
+straight away that the area under the curve is less than that of the tall bar ($1\text{ km}^{-1} \times 1\text{ km}
+= 1$), and more than that of the short bar ($0.5\text{ km}^{-1} \times 1\text{ km} = 0.5$).&nbsp; Performing the
+relevant integral tells you that the dimensionless area is in fact $\ln 2 \simeq 0.69$.</p>
+
+<p>How about we now try taking the logarithm of 2000 metres in the same way?&nbsp; We presume that this is the area
+under the curve $y = 1/x$ from $x = 1$ metre to 2000 metres.&nbsp; Draw this curve by constructing an $x$ axis with
+units of metres and a $y$ axis with units of metres$^{-1}$, and then calculate the area as above: draw a short bar
+and a tall bar across the interval from $x = 1$ m to 2000 m, and notice immediately that the area is less than that
+of the tall bar ($1\text{ m}^{-1} \times 1999\text{ m} = 1999$), and more than that of the short bar ($1/2000\text{
+m}^{-1} \times 1999\text{ m} \simeq 1$).&nbsp; Performing the relevant integral tells you that the dimensionless
+area is $\ln 2000 \simeq 7.6$, which certainly does lie between 1 and 1999.</p>
+
+<p>We have ended up with $\ln (2\text{ km}) \simeq 0.69$ and $\ln (2000\text{ m}) \simeq 7.6$.</p>
+
+<p>You might expect $\ln (2\text{ km})$ to equal $\ln (2000\text{ m})$, but apparently that's not the case.&nbsp;
+This tells us immediately that taking the log of a dimensioned quantity as above is not useful, because the
+process doesn't respect a simple conversion from 2 km to 2000 m.&nbsp; What happened here?&nbsp; If we are to convert
+kilometres to metres, then shouldn't we really be saying that the area under $y = 1/x$ from $x = 1$ km to 2 km in
+fact equals the area under $y = 1/x$ from $x = 1000$ m to 2000 m?&nbsp; Yes: the area from $x = 1000$ m to 2000 m is
+$\ln 2000 - \ln 1000 = \ln 2 \simeq 0.69$, just as we found when using kilometres.</p>
+
+<p>The simple fact is that the definition of the logarithm as an integral is a definition using dimensionless
+numbers.&nbsp; It doesn't "know" about dimensions, and so when we try to take the log of a dimensioned quantity,
+something is bound to break, as it did above.</p>
+
+<p>The same ideas apply to other functions.&nbsp; What about the exponential: can we give meaning to $\exp$ (2 km)?
+If we could, then we would notice that because the logarithm is dimensionless, we would have
+$$
+\ln \left(e^{2\text{ km}}\right)\text{ is dimensionless,}
+$$
+and taking the $\exp$ of this (which we surely can do for dimensionless numbers!) would lead to $e^{2\text{ km}}$
+being dimensionless.&nbsp; But if $e^{2\text{ km}}$ is dimensionless, then apparently the exponential function
+cannot distinguish between $e^{2\text{ km}}$ and $e^{2\text{ m}}$.&nbsp; That means it also can't distinguish
+between $e^{2000\text{ km}}$ and $e^{2000\text{ m}}$.&nbsp; And that means we can expect $e^{2\text{ km}}$ to
+differ from $e^{2000\text{ m}}$: so, again, something has broken.&nbsp; Just like the logarithm, the exponential
+function doesn't "know" about dimensions, and so when we try to include dimensions, things fall apart.</p>
+
+<p>You might come across the following argument: "$e^{2\text{ m}}$ can make no sense, because it must be writable as
+the exponential series
+$$
+\exp (2\text{ m}) = 1 + 2\text{ m} + {2^2\text{ m}^2\over 2\textit{!}} +
+  {2^3\text{ m}^3\over 3\textit{!}} + \dots\,,
+$$
+and since we cannot add 1 to a metre to a square metre and so on, the series is undefined."&nbsp; This looks
+reasonable, but in fact the situation is more complicated because the exponential series is a Taylor series, and
+each term of a Taylor series <em>must</em> have the same dimension.&nbsp; For example, write
+$$
+\exp x = \exp 0 + \exp'(0) x + {\exp''(0) x^2\over 2\textit{!}} + \dots\,,
+$$
+and now notice that $\exp'(x) = \mathrm{d}\exp x/\mathrm{d}x$, whose dimension is that of $\exp x$ divided by the
+dimension of length.&nbsp; Similarly, the dimension of $\exp''(x) = \mathrm{d}\exp'(x)/\mathrm{d}x$ is the
+dimension of $\exp x$ divided by the dimension of length$^2$.&nbsp; So if we insist on including dimensions
+everywhere, we are no longer able to say "$\exp'(x) = \exp x$".&nbsp; The bottom line is that if we insist on
+allowing $\exp$ to be taken of dimensioned quantities, the calculus that we are so familiar with starts to
+crumble.</p>
+
+<p>With all of that said, you will sometimes find the logarithm of a dimensioned quantity taken in textbooks.&nbsp;
+Here's what is going on there.&nbsp; Suppose we have some set-up involving heat flow in one dimension that's
+governed by the following differential equation:
+$$
+{\mathrm{d}T\over \mathrm{d}x} = {c\over x}\,, \tag{1}
+$$
+where $T$ is temperature, $x$ is distance from some origin, and <em>c</em> is a constant to be
+determined.&nbsp; Write the above equation as
+$$
+\mathrm{d}T = c {\mathrm{d}x\over x}\,.\tag{2}
+$$
+Now integrate both sides.&nbsp; We cannot write "$T = c\ln x + \text{constant}$" because we cannot take the
+logarithm of $x$, since $x$ has dimension (of length).&nbsp; In what follows, we will always only write the
+logarithm of a quantity that is dimensionless.&nbsp; So notice that for any $x_0$ (with dimension of length),
+$$
+{\mathrm{d}\over \mathrm{d}x} \ln {x\over x_0} = {x_0\over x}\times {1\over x_0} = {1\over x}\,.\tag{3}
+$$
+That lets us integrate (2) to give
+$$
+T(x) = c \ln {x\over x_0} + c_1\,,\tag{4}
+$$
+for some constant $c_1$.&nbsp; Now set $x = x_0$ in (4):
+$$
+T(x_0) = c_1\,,
+$$
+in which case (4) can be written as
+$$
+T(x) = c \ln {x\over x_0} + T(x_0)\,.\tag{5}
+$$
+</p>
+
+<p>Now, suppose we measure the temperature at $x = 10$ m to be $T = 10$ K.&nbsp;
+Set $x_0 = 10$ m in (5):
+$$
+T(x) = c \ln {x\over 10\text{ m}} + 10\text{ K}\,.\tag{6}
+$$
+We don't yet know the value of $c$, so we make another measurement: e.g. we measure the temperature at $x = 20$ m
+to be $T = 20$ K.&nbsp; Substitute these into (6) to give
+\begin{align}
+20\text{ K} &= c\ln{20\text{ m}\over 10\text{ m}} + 10\text{ K}\\[1ex]
+&= c\ln 2 + 10\text{ K}\,,
+\end{align}
+in which case
+$$
+c = {10\text{ K}\over \ln 2} \simeq 14.4\text{ K}\,.
+$$
+Now substitute this value of $c$ into (6) to give the sought-after expression for temperature $T$ as
+a function of position $x$:
+$$
+T(x) = \left(14.4 \ln{x\over 10\text{ m}}+10\right)\text{ K}\,.\tag{7}
+$$
+We can divide both sides of (7) by 1 kelvin to write
+$$
+{T(x)\over 1\text{ K}} = 14.4\ln {x\over 10\text{ m}}+10\,.\tag{8}
+$$
+</p>
+
+<p>Equations (7) or (8) are the solution to the original problem of calculating the temperature $T(x)$.&nbsp; But notice
+what we can do next.&nbsp; Always ensuring we take the logarithm only of dimensioned quantities, (8) can be written
+as
+\begin{align}
+{T(x)\over 1\text{ K}} &= 14.4\ln{x/(1\text{ m})\over 10\text{ m}/(1\text{ m})} + 10\\[1ex]
+&= 14.4\ln{x\over 1\text{ m}} - 14.4 \ln 10 + 10\\[1ex]
+&= 14.4\ln{x\over 1\text{ m}} - 23.2\,.\tag{9}
+\end{align}
+</p>
+
+<p>Now, think of what division means: just as the expression 6/2 denotes the number of 2s in 6 (i.e. 3), so also
+$x/(1\text{ m})$ means "the number of metres in $x$", i.e. "$x$ expressed in metres".&nbsp; Similarly, $T/(1\text{
+K})$ means "$T$ expressed in kelvins".&nbsp; So (9) can be written as
+$$
+T\text{ expressed in kelvins} = 14.4 \ln (x\text{ expressed in metres}) - 23.2\,.\tag{10}
+$$
+</p>
+
+<p>Now if we agree to use the above units&mdash;that is, SI units (but we could've used any other system of units
+instead)&mdash;then we can all agree to abbreviate (10) to
+$$
+T = 14.4 \ln x - 23.2\,.\tag{11}
+$$
+</p>
+
+<p>This is how the solution to (1) [for the two data points we mentioned above, ($x = 10$ m, $T = 10$ K) and ($x =
+20$ m, $T = 20$ K)] would be written in many physics books, where the caveat "where $T$ and $x$ are expressed in SI
+units" may or may not be added.&nbsp; So the $x$ in (11) really means "$x$ expressed in metres", which is a pure
+number: the number of metres in $x$, so it's <em>dimensionless</em>.&nbsp; And likewise, the $T$ in (11) really
+means "$T$ expressed in kelvins".&nbsp; So although it looks as if we are taking the log of a dimensioned quantity $x$,
+in fact we are not, because $x$ is no longer a length; rather, it's the number of metres in the length that we
+started out calling $x$.&nbsp; If that's confusing, I'm not defending it here; it's just what some books do.&nbsp; But
+provided we all know the game that's being played, there's no real problem.</p>
+
+<p>You can also see that if you return to (2) and integrate it by pretending that $T$ and $x$ are
+pure numbers, you will get
+$$
+T = c \ln x + c_1\,.
+$$
+If you now mandate that $T$ and $x$ are to be expressed in SI units and make use of the two measured data points,
+you will eventually arrive at (11) again.&nbsp; This is, in fact, what most (if not all) textbooks actually
+do.&nbsp; And maybe it's a pity they do that, because whereas that approach is quick and direct, it leaves many
+readers thinking, incorrectly, that the logarithm has been taken of a dimensioned quantity.</p>
+
+<p>Now suppose you have some data of $(x, T)$, and you wish to test the validity of the theory that produced the
+differential equation (1).&nbsp; Referring to (9), you wish to plot $T/(1\text{ K})$ versus $\ln [x/(1\text{ m})]$,
+then measure the slope to find that it has value 14.4 (dimensionless!), with a "$y$-intercept" of $-23.2$
+(dimensionless!).&nbsp; How will you label your axes?</p>
+
+<p>Your horizontal axis is $\ln [x/(1\text{ m})]$, which is dimensionless.&nbsp; Just label it as "$\ln [x/(1\text{
+m})]$", and there are no units needing to be written here.&nbsp; Your vertical axis is $T/(1\text{ K})$.&nbsp;
+That's dimensionless too, and you can label it "$T/(1\text{ K})$".&nbsp; You can also label it "$T$ (kelvins)",
+while realising that now you are plotting $T$, which has a dimension&mdash;in which case your slope will now have
+units of kelvins.&nbsp; You have this freedom in what to plot on the vertical axis, but <em>don't</em> label your
+horizontal axis with anything like "$\ln x$ (log metres)", because this is simply wrong: (a) "$\ln x$" for $x$
+dimensioned is not defined, and (b) there is no such unit as a "log metre".&nbsp; Unfortunately, you will find
+occurrences of similar wrong units in some place or other, written by someone who doesn't realise that they are
+really plotting $\ln [x/(1\text{ m})]$ and not $\ln x$.&nbsp; (If you look carefully, you can even see "log kelvins"
+next to a plot on a whiteboard in an episode of the TV series "The Big Bang Theory".)</p>
+
+<p>The take-home message here is that the correct way to convert the sentence "$A$ is measured in metres" (or
+whatever unit you wish to write here) into maths is to write the dimensionless quantity "$A/(1\text{ m})$".&nbsp;
+That's a fraction like any other, and it can be treated completely analytically.&nbsp; Try using it to convert
+something from metres to, say, inches.</p>
+
+<p>Finally, don't waste any time trying to extend the definition of the logarithm by experimenting with statements
+such as "$\ln (2\text{ m}) = \ln 2 + \ln (\text{m})$", as some try to do.&nbsp; Once you have finished getting
+nowhere with that, how will you then tackle "$\sin (1\text{ m})$"?&nbsp; The simple fact is that no function needs
+its definition extended to cope with units, because the functions that we have, which act on dimensionless numbers,
+are always sufficient for any job involving units, just as the logarithm was, above.</p>
+
+<p><br></p>
+
+</body>
+</html>

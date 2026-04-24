@@ -1,0 +1,15 @@
+Newsgroups line: 
+sci.physics.electromag	Electromagnetic theory and applications.
+
+
+CHARTER
+
+Sci.physics.electromag will be dedicated to the discussion of topics
+pertaining to electromagnetics.  These include, but are not limited to:
+
+  electromagnetic wave theory           computational EM modeling
+  microwave devices and circuits        antenna design
+  electromagnetic interference          biological effects
+  ELF and VLF fields                    EM measurements
+  wave propagation                      shielding
+  electrostatic discharge               new RF devices and technology
